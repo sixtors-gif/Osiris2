@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seguridad: caducidad, renovación y revocación</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🚨</span>Seguridad: caducidad, renovación y revocación</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Sabrás cuánto dura tu certificado, cómo renovarlo, cómo anularlo si algo va mal, y cómo evitar el fraude relacionado con la FNMT.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:93%"></div></div>
+    <div class="progress-text">Certificados digitales, firma electrónica y FNMT · Módulo 14 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Seguridad: caducidad, renovación y revocación</h2>
+
+<h3>Caducidad y renovación</h3>
+<p>El certificado de persona física de la FNMT tiene una validez de <b>4 años</b> desde que se emite. Se puede <b>renovar por Internet una sola vez</b>, dentro de los <b>60 días anteriores</b> a la fecha de caducidad, sin necesidad de volver a acreditar tu identidad. Pasado ese plazo, o tras esa primera renovación, hay que <b>solicitar uno nuevo</b> repitiendo el proceso completo (incluida una nueva acreditación de identidad).</p>
+<div class="lab"><h3>🧪 Comprobador de validez</h3>
+<div class="grid">
+<div><label>Fecha de emisión del certificado</label><input type="date" id="vF" value="2024-03-15" oninput="vUpd()"></div>
+<div><label>Fecha de hoy (para la prueba)</label><input type="date" id="vH" oninput="vUpd()"></div>
+</div>
+<div class="out" id="vOut"></div>
+<p class="figure-caption">Los certificados FNMT de persona física tienen una validez de 4 años desde su emisión.</p></div>
+<script>
+function addYears(d,n){var r=new Date(d.getTime());r.setFullYear(r.getFullYear()+n);return r;}
+function fmt(d){var p=function(n){return String(n).padStart(2,'0')};return p(d.getDate())+'/'+p(d.getMonth()+1)+'/'+d.getFullYear();}
+function vUpd(){
+ var f=document.getElementById('vF').value; if(!f)return;
+ var emision=new Date(f+'T00:00:00'); var caduca=addYears(emision,4);
+ var hEl=document.getElementById('vH'); if(!hEl.value){var n=new Date();hEl.value=n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0');}
+ var hoy=new Date(hEl.value+'T00:00:00');
+ var dias=Math.round((caduca-hoy)/86400000);
+ var out=document.getElementById('vOut'); var msg='Caduca el <b>'+fmt(caduca)+'</b>. ';
+ if(dias<0){out.style.color='#9b2c20';msg+='Han pasado '+(-dias)+' días desde la caducidad: está <b>caducado</b>, hay que solicitar uno nuevo.';}
+ else if(dias<=60){out.style.color='#8a6a1f';msg+='Quedan '+dias+' días: ya se puede <b>renovar electrónicamente</b> (la renovación se permite en los 60 días antes de caducar).';}
+ else{out.style.color='#1f6a1f';msg+='Quedan '+dias+' días: el certificado está <b>vigente</b>.';}
+ out.innerHTML=msg;
+}
+window.addEventListener('load',vUpd);
+</script>
+
+<h3>Revocar el certificado (anularlo antes de que caduque)</h3>
+<p><b>Revocar</b> significa anular la validez de tu certificado antes de su fecha de caducidad. Debes hacerlo <b>en cuanto sospeches</b> que tu clave privada ha podido quedar expuesta: se te ha perdido o robado el dispositivo donde estaba instalada, crees que alguien conoce tu contraseña o PIN, etc.</p>
+<div class="card-grid"><div class="mini-card"><div class="ico">💻</div><b>Online</b>Desde sede.fnmt.gob.es, identificándote con el propio certificado (mientras aún funcione) y firmando la solicitud de anulación con AutoFirma.</div><div class="mini-card"><div class="ico">☎️</div><b>Por teléfono, 24 horas</b>Con el Código de Solicitud y tu NIF, puedes revocarlo llamando al servicio de revocación telefónica de la FNMT.</div><div class="mini-card"><div class="ico">🏢</div><b>En una oficina</b>Si no conservas el Código de Solicitud (por pérdida o robo), puedes acudir a una Oficina de Acreditación de Identidad a firmar la solicitud de anulación.</div></div>
+<div class="danger-box">🚫 <b>Cuidado:</b> Si sospechas que tu certificado está comprometido, <b>revócalo cuanto antes</b>: mientras siga activo, cualquiera que tuviera acceso a tu clave privada y su contraseña podría firmar documentos o identificarse como si fuera tú.</div>
+
+<h3>Cuidado con el fraude relacionado con la FNMT</h3>
+<p>Al ser un trámite muy solicitado, es también uno de los más suplantados por estafadores. Antes de introducir cualquier dato:</p>
+<div class="exercise"><h3>🧩 La web real</h3><p>¿Cuál de estas es la dirección real de la Sede Electrónica de la FNMT?</p>
+<div class="options" id="opt_e14a"><div class="option" onclick="pickc(this,'e14a',1)">sede.fnmt.gob.es</div><div class="option" onclick="pickc(this,'e14a',0)">fnmt-tramites-oficial.com</div><div class="option" onclick="pickc(this,'e14a',0)">sede.fnmt.certificados-online.info</div></div>
+<div id="fb_e14a" class="feedback-box" data-exp="El dominio oficial de la Administración termina en .gob.es; los otros son dominios que imitan el nombre pero no son de la FNMT."></div></div>
+<ul class="key-points"><li>🔗 <span>Escribe tú mismo/a la dirección <b>sede.fnmt.gob.es</b> (o <b>fnmt.es</b> / <b>cert.fnmt.es</b>) en el navegador, en vez de hacer clic en enlaces recibidos por correo o SMS.</span></li><li>📵 <span>La FNMT no te va a pedir por teléfono, correo o WhatsApp que le <b>envíes tu certificado (.pfx)</b> ni su contraseña. Nadie legítimo te lo pedirá nunca así.</span></li><li>💳 <span>Desconfía si te piden <b>pagar</b> por un trámite que, según este curso, es <b>gratuito</b>: es un indicio claro de fraude.</span></li><li>🧾 <span>Revisa siempre el candado y la dirección exacta de la barra del navegador antes de escribir tu DNI o tu contraseña.</span></li></ul>
+<div class="alert-box">⚠️ <b>Error típico:</b> Este tipo de fraude se llama <i>phishing</i> (o su variante telefónica, <i>vishing</i>). Si tienes dudas sobre un mensaje o una llamada, cuelga o ciérralo y entra tú mismo/a en la web oficial para comprobarlo.</div>
+
+<div class="exercise"><h3>🧩 Cuándo revocar</h3><p>¿En qué situación deberías revocar tu certificado de inmediato?</p>
+<div class="options" id="opt_e14b"><div class="option" onclick="pickc(this,'e14b',1)">Si sospechas que alguien más ha podido acceder a tu clave privada</div><div class="option" onclick="pickc(this,'e14b',0)">Cuando falten 3 años para que caduque</div><div class="option" onclick="pickc(this,'e14b',0)">Cuando cambies de navegador</div></div>
+<div id="fb_e14b" class="feedback-box" data-exp="La revocación es para anular un certificado comprometido, no una acción rutinaria por cambiar de navegador."></div></div>
+<div class="exercise"><h3>🧩 Nunca lo compartas</h3><p>Recibes un correo de «FNMT Soporte» pidiéndote que envíes tu archivo .pfx y su contraseña para «verificar tu cuenta». ¿Qué haces?</p>
+<div class="options" id="opt_e14c"><div class="option" onclick="pickc(this,'e14c',1)">No lo envías: es phishing. Compruebas todo entrando tú mismo/a en sede.fnmt.gob.es</div><div class="option" onclick="pickc(this,'e14c',0)">Se lo envías, ya que dice ser de la FNMT</div><div class="option" onclick="pickc(this,'e14c',0)">Le respondes pidiendo más información antes de decidir</div></div>
+<div id="fb_e14c" class="feedback-box" data-exp="Ninguna entidad seria pide tu clave privada y su contraseña por correo. Es una señal inequívoca de fraude."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="window.location='modulo13.html'">⬅️ Anterior</button><button class="nav-btn" onclick="window.location='modulo15.html'">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

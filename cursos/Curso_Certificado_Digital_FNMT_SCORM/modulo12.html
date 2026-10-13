@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instalar el certificado en otro dispositivo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🔁</span>Instalar el certificado en otro dispositivo</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Aprenderás a llevar tu certificado a otro ordenador o navegador a partir de la copia de seguridad, y sus límites.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+    <div class="progress-text">Certificados digitales, firma electrónica y FNMT · Módulo 12 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Instalar el certificado en otro dispositivo</h2>
+
+<div class="activity"><h3>🔁 De un archivo a otro navegador</h3>
+<p>El certificado FNMT «software» vive, por defecto, en <b>un único navegador de un único equipo</b>: el que usaste para descargarlo. Si necesitas usarlo también en tu portátil, en otro navegador, o en el ordenador de tu gestoría (con tu permiso, siempre bajo tu control), tienes que <b>importar</b> la copia de seguridad que exportaste en el módulo anterior.</p></div>
+
+<h3>Pasos generales para importar un certificado</h3>
+<ol class="steps"><li>Copia el archivo <code>.pfx</code> (o <code>.p12</code>) de tu copia de seguridad al nuevo equipo, por un medio seguro (un USB propio, o una nube con contraseña).</li><li>Abre el gestor de certificados del navegador o del sistema operativo de ese equipo (los mismos menús que viste en el módulo anterior para exportar).</li><li>Elige <b>Importar</b> y selecciona el archivo <code>.pfx</code>.</li><li>Introduce la <b>contraseña de exportación</b> que le pusiste al archivo (no la del paso 2 de la solicitud).</li><li>Comprueba que el certificado aparece ya en el almacén de certificados de ese navegador.</li></ol>
+<div class="alert-box">⚠️ <b>Error típico:</b> Borra el archivo <code>.pfx</code> de cualquier soporte que no controles (un USB prestado, un ordenador público) en cuanto termines de importarlo.</div>
+
+<h3>Qué NO puedes hacer</h3>
+<ul class="key-points"><li>🚫 <span>No puedes «descargarlo de nuevo» desde la web de la FNMT en otro equipo sin más: la descarga original solo funciona una vez, en el equipo donde se generó la clave. Para tenerlo en otro sitio, siempre hace falta la copia de seguridad.</span></li><li>🔐 <span>Si perdiste el certificado sin haber hecho copia de seguridad, no hay atajo: hay que solicitar uno nuevo desde el paso 1.</span></li></ul>
+
+<h3>Una alternativa: el certificado en la nube</h3>
+<p>Si prevés necesitar el certificado desde varios dispositivos a menudo, recuerda la opción que viste en el módulo 7: el <b>certificado en la nube</b> de la FNMT. En ese caso la clave privada no se instala en ningún equipo: queda custodiada por la FNMT y cada firma se autoriza desde el móvil, sin necesidad de exportar ni importar nada.</p>
+
+<div class="exercise"><h3>🧩 Usarlo en otro ordenador</h3><p>Quieres usar tu certificado en un segundo ordenador. ¿Qué necesitas?</p>
+<div class="options" id="opt_e12a"><div class="option" onclick="pickc(this,'e12a',1)">El archivo de la copia de seguridad (.pfx) y su contraseña de exportación</div><div class="option" onclick="pickc(this,'e12a',0)">Volver a hacer la solicitud entera desde el paso 1</div><div class="option" onclick="pickc(this,'e12a',0)">Nada, se sincroniza solo</div></div>
+<div id="fb_e12a" class="feedback-box" data-exp="Basta con importar la copia de seguridad en el nuevo equipo; no hace falta repetir todo el trámite."></div></div>
+<div class="exercise"><h3>🧩 Sin copia de seguridad</h3><p>Se te estropea el ordenador y no habías exportado el certificado. ¿Qué puedes hacer para recuperarlo?</p>
+<div class="options" id="opt_e12b"><div class="option" onclick="pickc(this,'e12b',1)">Nada: hay que solicitar un certificado nuevo desde el principio</div><div class="option" onclick="pickc(this,'e12b',0)">Descargarlo de nuevo con el mismo Código de Solicitud</div><div class="option" onclick="pickc(this,'e12b',0)">Pedirlo por teléfono a la FNMT</div></div>
+<div id="fb_e12b" class="feedback-box" data-exp="Sin la copia de seguridad no hay forma de recuperar la clave privada generada en aquel equipo."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="window.location='modulo11.html'">⬅️ Anterior</button><button class="nav-btn" onclick="window.location='modulo13.html'">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

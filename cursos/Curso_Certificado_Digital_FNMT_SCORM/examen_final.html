@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Examen final</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🏁</span>Examen final</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Demuestra que entiendes la criptografía básica, la firma digital y el proceso del certificado FNMT.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    <div class="progress-text">Certificados digitales, firma electrónica y FNMT · Examen final</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Examen final</h2>
+
+<p>Responde las <b>33 preguntas</b> con calma. Al terminar verás tu resultado al instante. Se recomienda acertar al menos el <b>70 %</b>.</p>
+<div class="summary-box">🎯 <b>Consejo:</b> piensa en cada paso del proceso FNMT tal y como lo has practicado, y en las analogías (candado y llave, huella digital) para las preguntas de fundamentos.</div>
+<div id="exam"></div>
+<div class="navigation"><button class="nav-btn" onclick="window.location='modulo15.html'">⬅️ Repasar el reto final</button><button class="nav-btn" onclick="finishExam()">Finalizar</button></div>
+<div id="result" class="certificate" style="display:none;margin-top:25px"></div>
+<script>
+const qs=[["Un certificado digital es, sobre todo, el equivalente electrónico de…", "Tu DNI y tu firma manuscrita, juntos en un fichero", "Una contraseña más larga", "Un antivirus", "Un navegador de Internet"], ["¿Cuál de estas NO es una utilidad típica de un certificado digital?", "Aumentar la velocidad de tu conexión a Internet", "Presentar la declaración de la renta", "Firmar un documento PDF", "Identificarte en una sede electrónica"], ["En el cifrado César, si cifras con una clave de 5, ¿qué clave necesitas para descifrar?", "También 5", "25 menos 5, es decir 20", "No hace falta ninguna clave", "El doble, 10"], ["¿Cuál es el gran problema del cifrado simétrico?", "Hay que hacer llegar la clave secreta a la otra persona sin que nadie la intercepte", "Es demasiado lento para usarse en Internet", "No se puede usar con números, solo con letras", "No existen programas que lo apliquen"], ["Quieres enviarle a Bruno un mensaje que solo él pueda leer. ¿Con qué clave lo cifras?", "Con la clave pública de Bruno", "Con tu propia clave privada", "Con la clave pública tuya", "Con la clave privada de Bruno"], ["Quieres que cualquiera pueda comprobar que un mensaje lo has escrito tú. ¿Con qué clave lo firmas?", "Con tu clave privada", "Con la clave pública del destinatario", "Con tu clave pública", "Con la clave privada del destinatario"], ["¿Cuál de las dos claves debe permanecer siempre en secreto y nunca compartirse?", "La clave privada", "La clave pública", "Las dos, por igual", "Ninguna, ambas son públicas"], ["Calculas el hash del mismo documento dos veces, sin cambiar nada. ¿Qué obtienes?", "Exactamente el mismo hash las dos veces", "Un hash distinto cada vez", "Un hash solo la primera vez", "Un error, no se puede repetir"], ["Añades un simple punto al final de un documento. ¿Qué le pasa a su hash?", "Cambia por completo", "Cambia solo el último carácter", "No cambia", "Se hace más largo"], ["En una firma digital real, ¿qué es exactamente lo que se cifra con la clave privada?", "El hash (resumen) del documento", "El documento completo, letra por letra", "La clave pública del firmante", "La fecha de la firma únicamente"], ["Firmas un documento y después alguien le cambia una cifra. ¿Qué pasará al verificar la firma?", "La firma dejará de ser válida", "La firma seguirá siendo válida, porque ya se firmó una vez", "No se puede saber", "El documento se bloqueará automáticamente"], ["¿Cuál de estas NO es una garantía que ofrece una firma digital válida?", "Que el contenido del documento es correcto o verdadero", "Que el documento no se ha modificado desde que se firmó", "Que lo firmó quien dice haberlo firmado", "Que el firmante no puede negar después haber firmado"], ["¿Qué entidad firma y avala tu certificado digital, comprobando antes tu identidad?", "Una Autoridad de Certificación (por ejemplo, la FNMT)", "Tu proveedor de Internet", "El fabricante de tu ordenador", "Tu banco"], ["Ves el candado 🔒 en una página web. ¿Qué te garantiza con seguridad?", "Que la conexión está cifrada y el dominio es quien dice ser", "Que el contenido de la página es legal y fiable", "Que la página no tiene publicidad", "Que la página es gratuita"], ["¿Qué organismo emite el certificado digital de persona física que vamos a tramitar en este curso?", "La FNMT-RCM, a través de CERES", "La Agencia Tributaria", "Tu banco", "El Ministerio del Interior"], ["¿Qué diferencia principal tiene el certificado «en la nube» respecto al certificado software?", "La clave privada no se instala en tu ordenador, la custodia la FNMT", "Es de pago", "Solo sirve para una gestión y luego caduca", "No necesita acreditar identidad"], ["¿Qué paso va inmediatamente después de «Solicitar el certificado»?", "Acreditar tu identidad", "Descargar el certificado", "Configuración previa", "Firmar el primer documento"], ["Entre que solicitas el certificado y lo descargas, ¿qué NO debes hacer?", "Formatear el ordenador o cambiarlo por otro", "Usar el mismo navegador otra vez", "Anotar el código de solicitud", "Esperar a que llegue el correo"], ["Has olvidado la contraseña que creaste al solicitar el certificado. ¿Qué puedes hacer?", "Nada: hay que iniciar una nueva solicitud desde el principio", "Llamar para que te la recuerden", "Usar el Código de Solicitud en su lugar", "Restablecerla desde tu correo"], ["¿Para qué sirve el «Configurador FNMT-RCM»?", "Para generar el par de claves pública/privada en tu equipo", "Para firmar documentos PDF", "Para hacer una copia de seguridad del certificado", "Para pedir cita previa"], ["¿Para qué sirve acreditar tu identidad ante la FNMT?", "Para comprobar de verdad que quien solicita el certificado es esa persona", "Para elegir el color del certificado", "Para acelerar la descarga", "Para registrar tu firma manuscrita"], ["Vas a acreditarte de forma presencial. ¿Qué es imprescindible llevar?", "Tu DNI/NIE en vigor y el Código de Solicitud", "Solo el DNI, el código no hace falta", "El certificado ya instalado", "Un justificante de domicilio"], ["Nada más descargar el certificado, ¿cuál es la recomendación más importante?", "Hacer una copia de seguridad exportándolo a un archivo", "Borrar el correo con el Código de Solicitud", "Cambiar de navegador", "Desinstalar el Configurador"], ["Al exportar tu certificado con su clave privada, ¿qué debes hacer para protegerlo?", "Ponerle una contraseña de exportación", "Nada, ya viene protegido", "Compartirlo con varias personas por si acaso", "Convertirlo a formato PDF"], ["Quieres usar tu certificado en un segundo ordenador. ¿Qué necesitas?", "El archivo de la copia de seguridad (.pfx) y su contraseña de exportación", "Volver a hacer la solicitud entera desde el paso 1", "Nada, se sincroniza solo", "Formatear ese segundo ordenador antes"], ["Se te estropea el ordenador y no habías exportado el certificado. ¿Qué puedes hacer para recuperarlo?", "Nada: hay que solicitar un certificado nuevo desde el principio", "Descargarlo de nuevo con el mismo Código de Solicitud", "Pedirlo por teléfono a la FNMT", "Recuperarlo desde el DNIe automáticamente"], ["Vas a acceder a una sede electrónica con tu certificado. ¿Qué te puede pedir el navegador?", "Que elijas qué certificado usar, y quizá su PIN", "Que te descargues el certificado de nuevo", "Que crees una cuenta nueva", "Que instales un antivirus"], ["¿Qué aplicación oficial se usa habitualmente para firmar documentos con tu certificado desde el ordenador?", "AutoFirma", "Un editor de imágenes", "El propio navegador, sin ningún programa adicional", "El Configurador FNMT-RCM"], ["¿Cuántos años de validez tiene el certificado de persona física de la FNMT?", "4 años", "1 año", "10 años", "No caduca nunca"], ["¿Cuándo se puede renovar electrónicamente el certificado, sin volver a acreditar la identidad?", "En los 60 días anteriores a su caducidad", "En cualquier momento de su vigencia", "Solo el mismo día que caduca", "No se puede renovar, hay que pedir uno nuevo siempre"], ["¿Cuál de estas es la dirección real de la Sede Electrónica de la FNMT?", "sede.fnmt.gob.es", "fnmt-tramites-oficial.com", "sede.fnmt.certificados-online.info", "fnmt.tramitesgratis.net"], ["¿En qué situación deberías revocar tu certificado de inmediato?", "Si sospechas que alguien más ha podido acceder a tu clave privada", "Cuando falten 3 años para que caduque", "Cuando cambies de navegador", "Cuando renueves tu DNI"], ["Recibes un correo de «FNMT Soporte» pidiéndote que envíes tu archivo .pfx y su contraseña para «verificar tu cuenta». ¿Qué haces?", "No lo envías: es phishing. Compruebas todo entrando tú mismo/a en sede.fnmt.gob.es", "Se lo envías, ya que dice ser de la FNMT", "Le respondes pidiendo más información antes de decidir", "Le reenvías también tu DNI escaneado"]];
+let answers={};
+const root=document.getElementById('exam');
+qs.forEach(function(x,i){
+  const box=document.createElement('div');box.className='quiz';
+  const h=document.createElement('h4');h.textContent=(i+1)+'. '+x[0];box.appendChild(h);
+  const opts=document.createElement('div');opts.className='options';
+  x.slice(1).map(function(o){return [Math.random(),o]}).sort(function(a,b){return a[0]-b[0]}).forEach(function(p){
+    const d=document.createElement('div');d.className='option';d.textContent=p[1];
+    d.onclick=function(){opts.querySelectorAll('.option').forEach(function(z){z.classList.remove('selected')});d.classList.add('selected');answers[i]=p[1];};
+    opts.appendChild(d);
+  });
+  box.appendChild(opts);root.appendChild(box);
+});
+function finishExam(){
+  let score=0;qs.forEach(function(x,i){if(answers[i]===x[1])score++;});
+  const pct=Math.round(score/qs.length*100);const r=document.getElementById('result');r.style.display='block';
+  r.innerHTML='<h2>'+(pct>=70?'🎉 ¡Muy bien!':'💪 Buen intento')+'</h2><p>Resultado: <b>'+score+'/'+qs.length+' ('+pct+'%)</b></p><p>'+(pct>=70?'Dominas los fundamentos de la firma electrónica y sabes cómo obtener y usar tu certificado FNMT con seguridad.':'Repasa los módulos y vuelve a intentarlo. Presta especial atención al proceso de la FNMT y a las medidas de seguridad.')+'</p>';
+  if(window.scorm)scorm.complete(pct);window.scrollTo({top:r.offsetTop,behavior:'smooth'});
+}
+</script>
+      
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

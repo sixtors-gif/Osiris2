@@ -1,0 +1,355 @@
+// Curso de certificados digitales, firma electrónica y FNMT
+// Autor: Sixto Rodríguez de Sepúlveda
+// Formato GIFT para Moodle. Codificación UTF-8. Una única respuesta correcta por pregunta.
+
+$CATEGORY: Curso Certificado Digital/Módulo 1 - ¿Qué es un certificado digital?
+
+::CERT01-1::Un certificado digital es, sobre todo, el equivalente electrónico de… {
+=Tu DNI y tu firma manuscrita, juntos en un fichero
+~Una contraseña más larga
+~Un antivirus
+~Un navegador de Internet
+}
+
+::CERT01-2::¿Cuál de estas NO es una utilidad típica de un certificado digital? {
+=Aumentar la velocidad de tu conexión a Internet
+~Presentar la declaración de la renta
+~Firmar un documento PDF
+~Identificarte en una sede electrónica
+}
+
+::CERT01-3::¿Qué Administración es un ejemplo típico de uso del certificado digital? {
+=La Agencia Tributaria
+~Ninguna, solo sirve para empresas privadas
+~Solo se usa en el extranjero
+~Solo sirve para votar
+}
+
+$CATEGORY: Curso Certificado Digital/Módulo 2 - El problema: proteger la información
+
+::CERT02-1::En el cifrado César, si cifras con una clave de 5, ¿qué clave necesitas para descifrar? {
+=También 5
+~25 menos 5, es decir 20
+~No hace falta ninguna clave
+~El doble, 10
+}
+
+::CERT02-2::¿Cuál es el gran problema del cifrado simétrico? {
+=Hay que hacer llegar la clave secreta a la otra persona sin que nadie la intercepte
+~Es demasiado lento para usarse en Internet
+~No se puede usar con números, solo con letras
+~No existen programas que lo apliquen
+}
+
+::CERT02-3::En cifrado simétrico, la clave que cifra y la que descifra son… {
+=La misma
+~Distintas siempre
+~No hace falta clave
+~Una pública y otra privada
+}
+
+$CATEGORY: Curso Certificado Digital/Módulo 3 - Clave pública y clave privada
+
+::CERT03-1::Quieres enviarle a Bruno un mensaje que solo él pueda leer. ¿Con qué clave lo cifras? {
+=Con la clave pública de Bruno
+~Con tu propia clave privada
+~Con la clave pública tuya
+~Con la clave privada de Bruno
+}
+
+::CERT03-2::Quieres que cualquiera pueda comprobar que un mensaje lo has escrito tú. ¿Con qué clave lo firmas? {
+=Con tu clave privada
+~Con la clave pública del destinatario
+~Con tu clave pública
+~Con la clave privada del destinatario
+}
+
+::CERT03-3::¿Cuál de las dos claves debe permanecer siempre en secreto y nunca compartirse? {
+=La clave privada
+~La clave pública
+~Las dos, por igual
+~Ninguna, ambas son públicas
+}
+
+$CATEGORY: Curso Certificado Digital/Módulo 4 - La huella digital de un documento: funciones hash
+
+::CERT04-1::Calculas el hash del mismo documento dos veces, sin cambiar nada. ¿Qué obtienes? {
+=Exactamente el mismo hash las dos veces
+~Un hash distinto cada vez
+~Un hash solo la primera vez
+~Un error, no se puede repetir
+}
+
+::CERT04-2::Añades un simple punto al final de un documento. ¿Qué le pasa a su hash? {
+=Cambia por completo
+~Cambia solo el último carácter
+~No cambia
+~Se hace más largo
+}
+
+::CERT04-3::Si alguien solo tiene el hash de un documento, ¿puede recuperar el documento original a partir de él? {
+=No, el hash no se puede invertir
+~Sí, siempre
+~Solo si el documento es muy corto
+~Solo con un ordenador muy potente
+}
+
+$CATEGORY: Curso Certificado Digital/Módulo 5 - La firma digital: firmar y verificar
+
+::CERT05-1::En una firma digital real, ¿qué es exactamente lo que se cifra con la clave privada? {
+=El hash (resumen) del documento
+~El documento completo, letra por letra
+~La clave pública del firmante
+~La fecha de la firma únicamente
+}
+
+::CERT05-2::Firmas un documento y después alguien le cambia una cifra. ¿Qué pasará al verificar la firma? {
+=La firma dejará de ser válida
+~La firma seguirá siendo válida, porque ya se firmó una vez
+~No se puede saber
+~El documento se bloqueará automáticamente
+}
+
+::CERT05-3::¿Cuál de estas NO es una garantía que ofrece una firma digital válida? {
+=Que el contenido del documento es correcto o verdadero
+~Que el documento no se ha modificado desde que se firmó
+~Que lo firmó quien dice haberlo firmado
+~Que el firmante no puede negar después haber firmado
+}
+
+$CATEGORY: Curso Certificado Digital/Módulo 6 - El certificado digital: contenido y confianza
+
+::CERT06-1::¿Qué entidad firma y avala tu certificado digital, comprobando antes tu identidad? {
+=Una Autoridad de Certificación (por ejemplo, la FNMT)
+~Tu proveedor de Internet
+~El fabricante de tu ordenador
+~Tu banco
+}
+
+::CERT06-2::Ves el candado 🔒 en una página web. ¿Qué te garantiza con seguridad? {
+=Que la conexión está cifrada y el dominio es quien dice ser
+~Que el contenido de la página es legal y fiable
+~Que la página no tiene publicidad
+~Que la página es gratuita
+}
+
+::CERT06-3::¿Qué guarda, entre otras cosas, un certificado digital? {
+=La clave pública del titular y los datos de quien lo emitió
+~Tu contraseña de correo
+~El historial de tu navegador
+~Tu número de cuenta bancaria
+}
+
+$CATEGORY: Curso Certificado Digital/Módulo 7 - Tipos de certificados y la FNMT
+
+::CERT07-1::¿Qué organismo emite el certificado digital de persona física que vamos a tramitar en este curso? {
+=La FNMT-RCM, a través de CERES
+~La Agencia Tributaria
+~Tu banco
+~El Ministerio del Interior
+}
+
+::CERT07-2::¿Qué diferencia principal tiene el certificado «en la nube» respecto al certificado software? {
+=La clave privada no se instala en tu ordenador, la custodia la FNMT
+~Es de pago
+~Solo sirve para una gestión y luego caduca
+~No necesita acreditar identidad
+}
+
+::CERT07-3::¿Qué es Cl@ve? {
+=Un sistema de identificación alternativo (PIN o Permanente), no un certificado en sí
+~Otro nombre para el certificado FNMT
+~Un antivirus del Gobierno
+~Un tipo de tarjeta criptográfica
+}
+
+$CATEGORY: Curso Certificado Digital/Módulo 8 - El proceso FNMT en 4 pasos
+
+::CERT08-1::¿Qué paso va inmediatamente después de «Solicitar el certificado»? {
+=Acreditar tu identidad
+~Descargar el certificado
+~Configuración previa
+~Firmar el primer documento
+}
+
+::CERT08-2::Entre que solicitas el certificado y lo descargas, ¿qué NO debes hacer? {
+=Formatear el ordenador o cambiarlo por otro
+~Usar el mismo navegador otra vez
+~Anotar el código de solicitud
+~Esperar a que llegue el correo
+}
+
+::CERT08-3::Has olvidado la contraseña que creaste al solicitar el certificado. ¿Qué puedes hacer? {
+=Nada\: hay que iniciar una nueva solicitud desde el principio
+~Llamar para que te la recuerden
+~Usar el Código de Solicitud en su lugar
+~Restablecerla desde tu correo
+}
+
+$CATEGORY: Curso Certificado Digital/Módulo 9 - Pasos 1 y 2: configuración previa y solicitud
+
+::CERT09-1::¿Para qué sirve el «Configurador FNMT-RCM»? {
+=Para generar el par de claves pública/privada en tu equipo
+~Para firmar documentos PDF
+~Para hacer una copia de seguridad del certificado
+~Para pedir cita previa
+}
+
+::CERT09-2::Al final de la solicitud, ¿qué dos elementos debes guardar con cuidado? {
+=El Código de Solicitud (por correo) y la contraseña que has creado
+~Tu número de cuenta bancaria
+~La fecha de caducidad del certificado
+~El nombre de tu navegador
+}
+
+$CATEGORY: Curso Certificado Digital/Módulo 10 - Paso 3: acreditar tu identidad
+
+::CERT10-1::¿Para qué sirve acreditar tu identidad ante la FNMT? {
+=Para comprobar de verdad que quien solicita el certificado es esa persona
+~Para elegir el color del certificado
+~Para acelerar la descarga
+~Para registrar tu firma manuscrita
+}
+
+::CERT10-2::Vas a acreditarte de forma presencial. ¿Qué es imprescindible llevar? {
+=Tu DNI/NIE en vigor y el Código de Solicitud
+~Solo el DNI, el código no hace falta
+~El certificado ya instalado
+~Un justificante de domicilio
+}
+
+::CERT10-3::¿Cuáles son las dos formas de acreditar la identidad ante la FNMT que se explican en el curso? {
+=Presencial en una oficina, u online por vídeo identificación
+~Solo por teléfono
+~Solo enviando el DNI escaneado por correo
+~Solo a través de un notario
+}
+
+$CATEGORY: Curso Certificado Digital/Módulo 11 - Paso 4: descargar el certificado y hacer copia de seguridad
+
+::CERT11-1::Nada más descargar el certificado, ¿cuál es la recomendación más importante? {
+=Hacer una copia de seguridad exportándolo a un archivo
+~Borrar el correo con el Código de Solicitud
+~Cambiar de navegador
+~Desinstalar el Configurador
+}
+
+::CERT11-2::Al exportar tu certificado con su clave privada, ¿qué debes hacer para protegerlo? {
+=Ponerle una contraseña de exportación
+~Nada, ya viene protegido
+~Compartirlo con varias personas por si acaso
+~Convertirlo a formato PDF
+}
+
+::CERT11-3::¿Cuánto se suele tardar en poder descargar el certificado tras acreditar la identidad? {
+=Aproximadamente una hora
+~Una semana
+~Un mes
+~Un año
+}
+
+$CATEGORY: Curso Certificado Digital/Módulo 12 - Instalar el certificado en otro dispositivo
+
+::CERT12-1::Quieres usar tu certificado en un segundo ordenador. ¿Qué necesitas? {
+=El archivo de la copia de seguridad (.pfx) y su contraseña de exportación
+~Volver a hacer la solicitud entera desde el paso 1
+~Nada, se sincroniza solo
+~Formatear ese segundo ordenador antes
+}
+
+::CERT12-2::Se te estropea el ordenador y no habías exportado el certificado. ¿Qué puedes hacer para recuperarlo? {
+=Nada\: hay que solicitar un certificado nuevo desde el principio
+~Descargarlo de nuevo con el mismo Código de Solicitud
+~Pedirlo por teléfono a la FNMT
+~Recuperarlo desde el DNIe automáticamente
+}
+
+$CATEGORY: Curso Certificado Digital/Módulo 13 - Usar el certificado: sedes electrónicas y AutoFirma
+
+::CERT13-1::Vas a acceder a una sede electrónica con tu certificado. ¿Qué te puede pedir el navegador? {
+=Que elijas qué certificado usar, y quizá su PIN
+~Que te descargues el certificado de nuevo
+~Que crees una cuenta nueva
+~Que instales un antivirus
+}
+
+::CERT13-2::¿Qué aplicación oficial se usa habitualmente para firmar documentos con tu certificado desde el ordenador? {
+=AutoFirma
+~Un editor de imágenes
+~El propio navegador, sin ningún programa adicional
+~El Configurador FNMT-RCM
+}
+
+::CERT13-3::AutoFirma, para firmar, utiliza… {
+=Los certificados que ya tienes instalados en tu navegador o sistema
+~Un certificado propio que genera ella misma
+~Tu contraseña de correo electrónico
+~Una tarjeta de crédito
+}
+
+$CATEGORY: Curso Certificado Digital/Módulo 14 - Seguridad: caducidad, renovación y revocación
+
+::CERT14-1::¿Cuántos años de validez tiene el certificado de persona física de la FNMT? {
+=4 años
+~1 año
+~10 años
+~No caduca nunca
+}
+
+::CERT14-2::¿Cuándo se puede renovar electrónicamente el certificado, sin volver a acreditar la identidad? {
+=En los 60 días anteriores a su caducidad
+~En cualquier momento de su vigencia
+~Solo el mismo día que caduca
+~No se puede renovar, hay que pedir uno nuevo siempre
+}
+
+::CERT14-3::¿Cuál de estas es la dirección real de la Sede Electrónica de la FNMT? {
+=sede.fnmt.gob.es
+~fnmt-tramites-oficial.com
+~sede.fnmt.certificados-online.info
+~fnmt.tramitesgratis.net
+}
+
+::CERT14-4::¿En qué situación deberías revocar tu certificado de inmediato? {
+=Si sospechas que alguien más ha podido acceder a tu clave privada
+~Cuando falten 3 años para que caduque
+~Cuando cambies de navegador
+~Cuando renueves tu DNI
+}
+
+::CERT14-5::Recibes un correo de «FNMT Soporte» pidiéndote que envíes tu archivo .pfx y su contraseña para «verificar tu cuenta». ¿Qué haces? {
+=No lo envías\: es phishing. Compruebas todo entrando tú mismo/a en sede.fnmt.gob.es
+~Se lo envías, ya que dice ser de la FNMT
+~Le respondes pidiendo más información antes de decidir
+~Le reenvías también tu DNI escaneado
+}
+
+::CERT14-6::¿Cuál de estas formas de revocar el certificado ofrece la FNMT? {
+=Online, por teléfono 24 horas, o presencialmente en una oficina
+~Solo enviando un email sin identificarte
+~Solo dejando que caduque solo
+~Solo a través de una app de terceros
+}
+
+$CATEGORY: Curso Certificado Digital/Módulo 15 - Reto final: repaso y caso práctico
+
+::CERT15-1::Acabas de descargar tu certificado. ¿Cuál es el siguiente paso, antes de cerrar el navegador? {
+=Exportarlo a un archivo .pfx protegido con contraseña
+~Borrar el correo con el Código de Solicitud
+~Formatear el ordenador para «limpiarlo»
+~Compartirlo con un compañero de trabajo
+}
+
+::CERT15-2::Se te ha caducado el DNI justo antes de acreditar tu identidad ante la FNMT. ¿Qué debes hacer? {
+=Renovar primero el DNI\: la acreditación exige un documento en vigor
+~Continuar igualmente, no importa
+~Usar el DNI de un familiar
+~Esperar a que la FNMT te avise
+}
+
+::CERT15-3::Te llega un SMS con un enlace que dice «Tu certificado FNMT va a caducar, haz clic aquí para renovarlo y paga 5 €». ¿Qué haces? {
+=No hacer clic\: el trámite es gratuito y entrarías tú mismo/a en sede.fnmt.gob.es
+~Pagar rápido para no perder el certificado
+~Reenviar el SMS a tus contactos para avisarles
+~Hacer clic para ver de qué se trata
+}

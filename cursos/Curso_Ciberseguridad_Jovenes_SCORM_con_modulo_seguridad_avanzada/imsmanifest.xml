@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="ciberseguridad-jovenes-16" version="1.0"
+ xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+ xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+<metadata><schema>ADL SCORM</schema><schemaversion>1.2</schemaversion></metadata>
+<organizations default="org1">
+<organization identifier="org1">
+<title>Ciberseguridad para jóvenes</title>
+<item identifier="item_course" identifierref="res_course">
+<title>Ciberseguridad para jóvenes</title>
+</item>
+</organization>
+</organizations>
+<resources>
+<resource identifier="res_course" type="webcontent" adlcp:scormtype="sco" href="index.html">
+<file href="index.html"/>
+<file href="modulo1.html"/>
+<file href="modulo2.html"/>
+<file href="modulo3.html"/>
+<file href="modulo4.html"/>
+<file href="modulo5.html"/>
+<file href="modulo6.html"/>
+<file href="modulo7.html"/>
+<file href="modulo8.html"/>
+<file href="modulo9.html"/>
+<file href="modulo10.html"/>
+<file href="modulo11.html"/>
+<file href="modulo12.html"/>
+<file href="modulo13.html"/>
+<file href="modulo14.html"/>
+<file href="modulo15.html"/>
+<file href="modulo16.html"/>
+<file href="examen_final.html"/>
+<file href="style.css"/>
+<file href="scorm.js"/>
+<file href="img/logo-centro.png"/>
+</resource>
+</resources>
+</manifest>

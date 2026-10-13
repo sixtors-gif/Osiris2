@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>¿Qué es un certificado digital?</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🪪</span>¿Qué es un certificado digital?</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Descubrirás qué es un certificado digital, para qué sirve en el día a día y qué vas a aprender en este curso.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:7%"></div></div>
+    <div class="progress-text">Certificados digitales, firma electrónica y FNMT · Módulo 1 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>¿Qué es un certificado digital?</h2>
+
+<div class="activity"><h3>🪪 Tu DNI, pero para Internet</h3>
+<p>Cuando haces una gestión en persona, enseñas tu <b>DNI</b> para demostrar quién eres y firmas con tu <b>puño y letra</b> para dar validez a un documento. El <b>certificado digital</b> hace lo mismo, pero en Internet: es un <b>fichero electrónico</b> que demuestra tu identidad ante una web y te permite <b>firmar documentos</b> con la misma validez legal que una firma manuscrita.</p></div>
+
+<h3>¿Para qué sirve en la práctica?</h3>
+<div class="card-grid"><div class="mini-card"><div class="ico">🏛️</div><b>Trámites con la Administración</b>Presentar la declaración de la renta, pedir un certificado de empadronamiento, solicitar una ayuda o una beca, sin colas ni papel.</div><div class="mini-card"><div class="ico">✍️</div><b>Firmar documentos</b>Dar validez legal a un PDF (un contrato, una factura, una solicitud) sin imprimirlo ni escanearlo.</div><div class="mini-card"><div class="ico">🔒</div><b>Demostrar quién eres</b>Identificarte de forma segura en una sede electrónica, en lugar de usar usuario y contraseña.</div><div class="mini-card"><div class="ico">🧾</div><b>Consultar tus datos</b>Ver tu vida laboral, tus datos fiscales o el estado de un expediente desde casa.</div></div>
+
+<h3>Lo que vas a aprender</h3>
+<p>Este curso tiene dos partes. En la primera entenderás <b>por qué funciona</b> un certificado digital: los principios de criptografía y firma electrónica que hay detrás. En la segunda aplicarás eso a un caso real: <b>obtener, configurar y usar tu Certificado digital de persona física de la FNMT</b> (Fábrica Nacional de Moneda y Timbre), el más usado en España.</p>
+<ol class="steps"><li><b>Fundamentos (módulos 2 a 7):</b> cifrado, clave pública y privada, funciones hash, firma digital y qué contiene un certificado.</li><li><b>El certificado FNMT (módulos 8 a 13):</b> el proceso oficial en 4 pasos, cómo acreditar tu identidad, descargarlo, hacer copia de seguridad y usarlo.</li><li><b>Seguridad y reto final (módulos 14 y 15):</b> caducidad, revocación, cómo protegerte de fraudes y un caso práctico completo.</li></ol>
+
+<h3>Antes de empezar</h3>
+<ul class="key-points"><li>🔐 <span>No hace falta saber matemáticas ni programación: usaremos analogías y pequeñas simulaciones interactivas para entender las ideas clave.</span></li><li>🖥️ <span>Para el proceso real de la FNMT necesitarás tu <b>DNI o NIE en vigor</b> y, llegado el momento, hacerlo desde <b>el mismo ordenador</b> de principio a fin (lo explicamos en el módulo 8).</span></li><li>🌐 <span>Toda la información oficial sobre el certificado FNMT está en <b>sede.fnmt.gob.es</b>. Los procedimientos pueden actualizarse: ante cualquier duda, esa es siempre la fuente de referencia.</span></li></ul>
+
+<div class="exercise"><h3>🧩 Comprueba lo aprendido</h3><p>Un certificado digital es, sobre todo, el equivalente electrónico de…</p>
+<div class="options" id="opt_e1a"><div class="option" onclick="pickc(this,'e1a',1)">Tu DNI y tu firma manuscrita, juntos en un fichero</div><div class="option" onclick="pickc(this,'e1a',0)">Una contraseña más larga</div><div class="option" onclick="pickc(this,'e1a',0)">Un antivirus</div></div>
+<div id="fb_e1a" class="feedback-box" data-exp="Un certificado digital demuestra tu identidad (como el DNI) y permite firmar con validez legal (como tu firma)."></div></div>
+<div class="exercise"><h3>🧩 Casos de uso</h3><p>¿Cuál de estas NO es una utilidad típica de un certificado digital?</p>
+<div class="options" id="opt_e1b"><div class="option" onclick="pickc(this,'e1b',1)">Aumentar la velocidad de tu conexión a Internet</div><div class="option" onclick="pickc(this,'e1b',0)">Presentar la declaración de la renta</div><div class="option" onclick="pickc(this,'e1b',0)">Firmar un documento PDF</div><div class="option" onclick="pickc(this,'e1b',0)">Identificarte en una sede electrónica</div></div>
+<div id="fb_e1b" class="feedback-box" data-exp="El certificado sirve para identificarte y firmar; no tiene relación con la velocidad de la conexión."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="window.location='index.html'">⬅️ Anterior</button><button class="nav-btn" onclick="window.location='modulo2.html'">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reto final: repaso y caso práctico</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🏆</span>Reto final: repaso y caso práctico</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Repasarás todo el proceso con una checklist completa y resolverás un caso práctico antes de pasar al examen.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    <div class="progress-text">Certificados digitales, firma electrónica y FNMT · Módulo 15 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Reto final: repaso y caso práctico</h2>
+
+<div class="activity"><h3>🏁 Lo que ya sabes</h3>
+<p>Has recorrido el camino completo: por qué hace falta cifrar la información, cómo la clave pública y la privada resuelven el problema del reparto de claves, cómo un hash resume un documento, cómo se construye una firma digital a partir de esas dos piezas, qué es y qué garantiza un certificado, y cómo se solicita, se acredita, se descarga, se protege y se usa el certificado de persona física de la FNMT.</p></div>
+
+<h3>Checklist completa del proceso FNMT</h3>
+<table class="tbl"><tr><th>✔</th><th>Tarea</th><th>Módulo</th></tr>
+<tr><td>☐</td><td>Instalar el Configurador FNMT-RCM</td><td>9</td></tr>
+<tr><td>☐</td><td>Rellenar la solicitud con tus datos y crear la contraseña</td><td>9</td></tr>
+<tr><td>☐</td><td>Guardar el Código de Solicitud recibido por correo</td><td>9</td></tr>
+<tr><td>☐</td><td>Acreditar tu identidad (presencial o vídeo identificación)</td><td>10</td></tr>
+<tr><td>☐</td><td>Esperar aproximadamente 1 hora y descargar el certificado, desde el mismo equipo</td><td>11</td></tr>
+<tr><td>☐</td><td>Exportar de inmediato una copia de seguridad (.pfx) con su propia contraseña</td><td>11</td></tr>
+<tr><td>☐</td><td>Guardar esa copia en un lugar seguro, fuera del navegador</td><td>11-12</td></tr>
+<tr><td>☐</td><td>Anotar la fecha de caducidad (emisión + 4 años) para poder renovarlo a tiempo</td><td>14</td></tr>
+<tr><td>☐</td><td>Saber cómo y cuándo revocarlo si algo va mal</td><td>14</td></tr></table>
+
+<h3>Caso práctico: ¿qué harías?</h3>
+<div class="exercise"><h3>🧩 Caso 1</h3><p>Acabas de descargar tu certificado. ¿Cuál es el siguiente paso, antes de cerrar el navegador?</p>
+<div class="options" id="opt_e15a"><div class="option" onclick="pickc(this,'e15a',1)">Exportarlo a un archivo .pfx protegido con contraseña</div><div class="option" onclick="pickc(this,'e15a',0)">Borrar el correo con el Código de Solicitud</div><div class="option" onclick="pickc(this,'e15a',0)">Formatear el ordenador para «limpiarlo»</div></div>
+<div id="fb_e15a" class="feedback-box" data-exp="La copia de seguridad debe hacerse cuanto antes, justo después de descargar el certificado."></div></div>
+<div class="exercise"><h3>🧩 Caso 2</h3><p>Se te ha caducado el DNI justo antes de acreditar tu identidad ante la FNMT. ¿Qué debes hacer?</p>
+<div class="options" id="opt_e15b"><div class="option" onclick="pickc(this,'e15b',1)">Renovar primero el DNI: la acreditación exige un documento en vigor</div><div class="option" onclick="pickc(this,'e15b',0)">Continuar igualmente, no importa</div><div class="option" onclick="pickc(this,'e15b',0)">Usar el DNI de un familiar</div></div>
+<div id="fb_e15b" class="feedback-box" data-exp="El documento de identidad debe estar en vigor para poder acreditarte."></div></div>
+<div class="exercise"><h3>🧩 Caso 3</h3><p>Vas a firmar un documento oficial desde tu ordenador y el navegador te pide instalar un programa. ¿Cuál es, casi con toda seguridad?</p>
+<div class="options" id="opt_e15c"><div class="option" onclick="pickc(this,'e15c',1)">AutoFirma</div><div class="option" onclick="pickc(this,'e15c',0)">Un antivirus cualquiera</div><div class="option" onclick="pickc(this,'e15c',0)">El Configurador FNMT-RCM</div></div>
+<div id="fb_e15c" class="feedback-box" data-exp="AutoFirma es la aplicación oficial que gestiona la firma de documentos con el certificado ya instalado."></div></div>
+<div class="exercise"><h3>🧩 Caso 4</h3><p>Pierdes el móvil y el ordenador donde tenías instalado el certificado, sin copia de seguridad. ¿Qué opción es correcta?</p>
+<div class="options" id="opt_e15d"><div class="option" onclick="pickc(this,'e15d',1)">Revocar el certificado (si aún puedes) y solicitar uno nuevo desde el paso 1</div><div class="option" onclick="pickc(this,'e15d',0)">Esperar a que caduque solo, dentro de 4 años</div><div class="option" onclick="pickc(this,'e15d',0)">No hace falta hacer nada</div></div>
+<div id="fb_e15d" class="feedback-box" data-exp="Ante la posible pérdida de control de la clave privada, lo prudente es revocar cuanto antes y tramitar uno nuevo."></div></div>
+<div class="exercise"><h3>🧩 Caso 5</h3><p>Te llega un SMS con un enlace que dice «Tu certificado FNMT va a caducar, haz clic aquí para renovarlo y paga 5 €». ¿Qué haces?</p>
+<div class="options" id="opt_e15e"><div class="option" onclick="pickc(this,'e15e',1)">No hacer clic: el trámite es gratuito y entrarías tú mismo/a en sede.fnmt.gob.es</div><div class="option" onclick="pickc(this,'e15e',0)">Pagar rápido para no perder el certificado</div><div class="option" onclick="pickc(this,'e15e',0)">Reenviar el SMS a tus contactos para avisarles</div></div>
+<div id="fb_e15e" class="feedback-box" data-exp="Es un fraude típico: trámite gratuito suplantado, con urgencia y pago falso."></div></div>
+
+<div class="summary-box">🎓 <b>¡Enhorabuena!</b> Has completado los contenidos del curso. Pasa ahora al examen final para comprobar todo lo que has aprendido, desde la criptografía hasta el uso real del certificado FNMT.</div>
+
+      <div class="navigation"><button class="nav-btn" onclick="window.location='modulo14.html'">⬅️ Anterior</button><button class="nav-btn" onclick="window.location='examen_final.html'">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

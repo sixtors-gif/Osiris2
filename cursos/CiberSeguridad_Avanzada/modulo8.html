@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 8: Respuesta ante incidentes y forense digital básica</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🚨</span>Módulo 8: Respuesta ante incidentes y forense digital básica</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Cuando algo sale mal: actúa con orden y conserva las pruebas.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:73%"></div></div>
+    <div class="progress-text">Ciberseguridad Avanzada · Módulo 8 de 10</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>Un incidente no es el fin del mundo</h2>
+      <p>Una cuenta robada, un móvil infectado o un chantaje pueden ocurrirle a cualquiera. Lo importante es <b>actuar rápido y con método</b>.</p>
+      <h3>1. Ciclo de respuesta ante incidentes</h3>
+      <div class="flow"><div class="flow-step">🔍 Detectar</div><span class="flow-arrow">➜</span><div class="flow-step">🧯 Contener</div><span class="flow-arrow">➜</span><div class="flow-step">🧹 Erradicar</div><span class="flow-arrow">➜</span><div class="flow-step">♻️ Recuperar</div><span class="flow-arrow">➜</span><div class="flow-step">📚 Aprender</div></div>
+      <h3>2. Contención inmediata</h3>
+      <ul class="key-points"><li>🧯 <span><b>Aísla</b> el equipo afectado: desconecta Wi‑Fi y cable de red para evitar que se propague.</span></li><li>🧯 <span><b>No lo apagues de golpe</b> si se va a hacer un análisis forense (la memoria RAM contiene pruebas).</span></li><li>🧯 <span>Desde <b>otro dispositivo limpio</b>: cambia contraseñas, cierra todas las sesiones abiertas y revoca accesos de apps.</span></li><li>🧯 <span>Avisa a tu banco si hay datos bancarios implicados.</span></li></ul>
+      <h3>3. Preservar evidencias</h3>
+      <p>La <b>forense digital</b> analiza los dispositivos para saber qué ocurrió. Tú puedes ayudar conservando pruebas:</p>
+      <ul class="key-points"><li>🗂️ <span>Capturas de pantalla con <b>fecha, hora y URL</b> o número del remitente.</span></li><li>🗂️ <span>No borres mensajes, correos ni perfiles del agresor.</span></li><li>🗂️ <span>Guarda los archivos sospechosos sin abrirlos.</span></li><li>🗂️ <span>Anota una <b>cronología</b>: qué pasó, cuándo y qué hiciste.</span></li><li>🗂️ <span>Para procesos judiciales se puede pedir una <b>certificación</b> de las pruebas (por ejemplo, ante notario o con servicios de evidencia digital).</span></li></ul>
+      <div class="alert-box"><b>Nunca</b> pagues un chantaje ni negocies con el atacante, y no intentes «hackear de vuelta».</div>
+      <h3>4. ¿A quién acudir?</h3>
+      <div class="help-box"><b>¿Necesitas ayuda?</b><span class="phone">017</span>Línea de Ayuda en Ciberseguridad de INCIBE: gratuita y confidencial (teléfono, WhatsApp 900 116 117 y <a href="https://www.incibe.es/linea-de-ayuda-en-ciberseguridad" target="_blank" rel="noopener">incibe.es</a>).</div>
+      <p class="small">También puedes denunciar en la Policía Nacional, Guardia Civil o la policía autonómica, y en España solicitar la retirada de contenido sexual o violento difundido sin consentimiento mediante el <a href="https://www.aepd.es/canalprioritario" target="_blank" rel="noopener">Canal Prioritario de la AEPD</a>.</p>
+      <div class="quiz"><h4>🧩 Tu portátil muestra una nota de rescate y está conectado al Wi‑Fi de casa. ¿Primera acción?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m8a')">A. Reiniciarlo varias veces.</button><button class="option" onclick="checkAnswer(this,true,'m8a')">B. Desconectarlo de la red para que no se propague.</button><button class="option" onclick="checkAnswer(this,false,'m8a')">C. Formatearlo inmediatamente.</button></div><p class="feedback" id="fb-m8a" data-ok="Aislar el equipo es la prioridad de la contención."></p></div>
+      <div class="quiz"><h4>🧩 ¿Cuál es la mejor forma de conservar pruebas de acoso en una red social?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m8b')">A. Borrar los mensajes para no verlos.</button><button class="option" onclick="checkAnswer(this,true,'m8b')">B. Capturas con fecha, hora y perfil, sin borrar nada, y denunciar.</button><button class="option" onclick="checkAnswer(this,false,'m8b')">C. Responder al agresor.</button></div><p class="feedback" id="fb-m8b" data-ok="Las pruebas completas permiten a la plataforma y a la policía actuar."></p></div>
+      <div class="activity"><h3>✍️ Actividad: tu cronología</h3><p>Imagina que te roban la cuenta de Instagram. Escribe los 5 pasos que darías, en orden.</p><textarea placeholder="1. ... 2. ... 3. ... 4. ... 5. ..."></textarea><p class="small">No escribas contraseñas ni datos personales reales en este cuadro.</p></div>
+      <div class="summary-box"><b>Resumen:</b> detecta, contén, erradica, recupera y aprende. Conserva pruebas y pide ayuda: no estás solo/a.</div>
+
+      <div style="text-align:center;margin-top:25px"><button class="btn" onclick="completar(this)">Marcar módulo como completado</button></div>
+      <div class="navigation">
+        <button class="nav-btn" onclick="window.location='modulo7.html'">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="window.location='modulo9.html'">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso 2: Ciberseguridad Avanzada y Defensa Digital · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function checkAnswer(btn,correct,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(correct?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=correct?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es la mejor opción. Vuelve a leer el apartado e inténtalo de nuevo.';}
+function completar(btn){if(window.scorm)scorm.complete(100);btn.disabled=true;btn.textContent='✅ Módulo completado';}
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 5: Malware avanzado y ransomware</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🦠</span>Módulo 5: Malware avanzado y ransomware</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Conoce al enemigo: cómo funciona el malware moderno y cómo frenarlo.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:45%"></div></div>
+    <div class="progress-text">Ciberseguridad Avanzada · Módulo 5 de 10</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>El malware de hoy</h2>
+      <p>El malware actual es un negocio: se vende «como servicio» y busca sobre todo <b>datos y dinero</b>. Conocer sus tipos te ayuda a protegerte.</p>
+      <h3>1. Tipologías modernas</h3>
+      <div class="card-grid"><div class="mini-card"><div class="ico">🔐</div><b>Ransomware de doble extorsión</b><span class="small">Cifra tus archivos y amenaza con publicar los datos robados.</span></div><div class="mini-card"><div class="ico">🍪</div><b>Infostealers</b><span class="small">Roban contraseñas guardadas, cookies de sesión y carteras de criptomonedas.</span></div><div class="mini-card"><div class="ico">👻</div><b>Fileless</b><span class="small">Se ejecuta en memoria usando herramientas legítimas del sistema.</span></div><div class="mini-card"><div class="ico">🏦</div><b>Troyanos bancarios</b><span class="small">Superponen pantallas falsas sobre apps de banca.</span></div><div class="mini-card"><div class="ico">🤖</div><b>Botnets</b><span class="small">Convierten tu equipo en un «zombi» para atacar a otros.</span></div></div>
+      <h3>2. Robo de sesión: por qué los infostealers son tan peligrosos</h3>
+      <p>Si un infostealer roba tu <b>cookie de sesión</b>, el atacante puede entrar en tu cuenta <b>sin contraseña ni 2FA</b>, porque el servicio cree que ya estás identificado. Por eso, tras una infección hay que <b>cerrar todas las sesiones</b> y cambiar contraseñas desde un equipo limpio.</p>
+      <div class="alert-box"><b>Vía de entrada típica:</b> «cracks» de juegos, trucos o cheats, programas pirata, extensiones de navegador dudosas y anuncios que imitan descargas oficiales.</div>
+      <h3>3. Cadena de un ataque de ransomware</h3>
+      <div class="flow"><div class="flow-step">📧 Entrada (phishing, crack)</div><span class="flow-arrow">➜</span><div class="flow-step">⚙️ Ejecución</div><span class="flow-arrow">➜</span><div class="flow-step">🔎 Movimiento por la red</div><span class="flow-arrow">➜</span><div class="flow-step">📤 Robo de datos</div><span class="flow-arrow">➜</span><div class="flow-step">🔐 Cifrado y nota de rescate</div></div>
+      <h3>4. Defensa</h3>
+      <ul class="key-points"><li>🧰 <span><b>Copias de seguridad 3-2-1:</b> 3 copias, en 2 soportes distintos, 1 fuera de casa o desconectada.</span></li><li>🧰 <span>Antivirus/EDR activo y sistema actualizado.</span></li><li>🧰 <span>No descargar software pirata ni cracks.</span></li><li>🧰 <span>Analizar archivos sospechosos en entornos aislados (<i>sandbox</i>) o con servicios como VirusTotal, sin abrirlos en tu equipo.</span></li><li>🧰 <span>No pagar rescates: no garantiza recuperar los datos y financia el delito.</span></li></ul>
+      <div class="quiz"><h4>🧩 ¿Por qué un infostealer puede saltarse tu 2FA?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m5a')">A. Porque adivina el código.</button><button class="option" onclick="checkAnswer(this,true,'m5a')">B. Porque roba la cookie de sesión ya autenticada.</button><button class="option" onclick="checkAnswer(this,false,'m5a')">C. Porque desactiva el móvil.</button></div><p class="feedback" id="fb-m5a" data-ok="Con la cookie de sesión el atacante «hereda» tu inicio de sesión."></p></div>
+      <div class="quiz"><h4>🧩 ¿Qué regla de copias de seguridad protege mejor frente al ransomware?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m5b')">A. Una sola copia en el mismo disco.</button><button class="option" onclick="checkAnswer(this,true,'m5b')">B. La regla 3-2-1, con una copia desconectada.</button><button class="option" onclick="checkAnswer(this,false,'m5b')">C. Guardar las fotos solo en el móvil.</button></div><p class="feedback" id="fb-m5b" data-ok="Una copia desconectada no puede ser cifrada por el ransomware."></p></div>
+      <div class="activity"><h3>✍️ Actividad: tu plan de copias</h3><p>Describe dónde guardas hoy tus archivos importantes y cómo aplicarías la regla 3-2-1.</p><textarea placeholder="Mis copias..."></textarea><p class="small">No escribas contraseñas ni datos personales reales en este cuadro.</p></div>
+      <div class="summary-box"><b>Resumen:</b> evita cracks y descargas dudosas, mantén copias 3-2-1 y, tras una infección, cierra sesiones y cambia contraseñas desde un equipo limpio.</div>
+
+      <div style="text-align:center;margin-top:25px"><button class="btn" onclick="completar(this)">Marcar módulo como completado</button></div>
+      <div class="navigation">
+        <button class="nav-btn" onclick="window.location='modulo4.html'">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="window.location='modulo6.html'">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso 2: Ciberseguridad Avanzada y Defensa Digital · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function checkAnswer(btn,correct,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(correct?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=correct?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es la mejor opción. Vuelve a leer el apartado e inténtalo de nuevo.';}
+function completar(btn){if(window.scorm)scorm.complete(100);btn.disabled=true;btn.textContent='✅ Módulo completado';}
+</script>
+</body>
+</html>

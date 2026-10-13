@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clave pública y clave privada</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🔑</span>Clave pública y clave privada</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Descubrirás la criptografía asimétrica: una pareja de claves distintas que resuelve el problema del reparto de claves.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
+    <div class="progress-text">Certificados digitales, firma electrónica y FNMT · Módulo 3 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Clave pública y clave privada</h2>
+
+<div class="activity"><h3>💡 Dos claves en vez de una</h3>
+<p>La <b>criptografía asimétrica</b> genera, para cada persona, una <b>pareja de claves matemáticamente relacionadas</b>: una <b>clave pública</b>, que se reparte libremente, y una <b>clave privada</b>, que nunca se comparte con nadie. Lo que se cifra con una de las dos, <b>solo se puede descifrar con la otra</b>.</p></div>
+<div class="figure"><svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Candado con dos llaves distintas">
+<g transform="translate(80,30)">
+<rect x="0" y="60" width="110" height="90" rx="10" fill="#f2f5fb" stroke="#8a6a1f" stroke-width="3"/>
+<path d="M20 60 V35 a35 35 0 0 1 70 0 V60" fill="none" stroke="#8a6a1f" stroke-width="10"/>
+<circle cx="55" cy="105" r="10" fill="#8a6a1f"/><rect x="50" y="105" width="10" height="25" fill="#8a6a1f"/>
+<text x="55" y="185" text-anchor="middle" font-size="15" font-weight="700" fill="#1f3a63">Candado (clave pública)</text>
+<text x="55" y="203" text-anchor="middle" font-size="12" fill="#55618a">la reparte tu contacto: todos pueden cerrarlo</text>
+</g>
+<g transform="translate(430,30)">
+<rect x="0" y="70" width="90" height="18" rx="6" fill="#c9962c"/><circle cx="0" cy="79" r="26" fill="none" stroke="#c9962c" stroke-width="16"/>
+<rect x="55" y="82" width="14" height="14" fill="#c9962c"/><rect x="75" y="82" width="14" height="20" fill="#c9962c"/>
+<text x="45" y="150" text-anchor="middle" font-size="15" font-weight="700" fill="#1f3a63">Llave (clave privada)</text>
+<text x="45" y="168" text-anchor="middle" font-size="12" fill="#55618a">solo la tiene su dueño: solo ella lo abre</text>
+</g>
+<path d="M195 105 h205" stroke="#b9c6e3" stroke-width="3" stroke-dasharray="6 6" marker-end="url(#arrC)"/>
+<defs><marker id="arrC" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#b9c6e3"/></marker></defs>
+</svg>
+<p class="figure-caption">Cualquiera puede cerrar el candado (cifrar con la clave pública), pero solo el dueño de la llave (clave privada) puede abrirlo.</p></div>
+
+<h3>Dos usos, según qué clave se use primero</h3>
+<h4>1. Para que un mensaje sea confidencial (solo lo lea el destinatario)</h4>
+<p>Se cifra con la clave <b>pública</b> del destinatario. Como su clave privada es la única capaz de descifrarlo, <b>solo él podrá leerlo</b>, aunque el mensaje cifrado viaje por un canal inseguro.</p>
+<div class="pipe"><div class="pbox"><b>Ana escribe</b>un mensaje para Bruno</div><div class="parrow">➜</div><div class="pbox"><b>Ana cifra</b>con la clave <u>pública</u> de Bruno</div><div class="parrow">➜</div><div class="pbox warn"><b>Viaja cifrado</b>por Internet</div><div class="parrow">➜</div><div class="pbox res"><b>Bruno descifra</b>con su clave <u>privada</u></div></div>
+
+<h4>2. Para demostrar que un mensaje es tuyo (autenticidad)</h4>
+<p>Se cifra —en realidad, como verás en el módulo 5, se «firma»— con la clave <b>privada</b> del autor. Como solo él tiene esa clave, y su clave pública es conocida por todos, <b>cualquiera puede comprobar que el mensaje es suyo</b>.</p>
+<div class="pipe"><div class="pbox"><b>Ana escribe</b>un mensaje</div><div class="parrow">➜</div><div class="pbox"><b>Ana firma</b>con su clave <u>privada</u></div><div class="parrow">➜</div><div class="pbox warn"><b>Viaja</b>el mensaje + la firma</div><div class="parrow">➜</div><div class="pbox res"><b>Cualquiera comprueba</b>con la clave <u>pública</u> de Ana</div></div>
+
+<h3>Por qué resuelve el problema anterior</h3>
+<ul class="key-points"><li>📬 <span>La clave pública <b>se puede enviar por cualquier canal</b>, incluso inseguro: no sirve de nada si alguien la intercepta, porque solo permite cifrar, no descifrar.</span></li><li>🔑 <span>La clave privada <b>nunca viaja</b>: se queda siempre con su dueño (en el certificado digital, protegida por una contraseña o un PIN).</span></li><li>⚖️ <span>Es mucho más lenta que el cifrado simétrico, así que en la práctica (por ejemplo, en HTTPS) se usa para acordar de forma segura una clave simétrica temporal, y esa es la que cifra el resto de la conversación.</span></li></ul>
+<div class="tip-box">💡 <b>Consejo:</b> Este es exactamente el principio en el que se basa la <b>firma digital</b> y el <b>certificado digital</b>: tu certificado guarda tu clave pública (para que otros la conozcan) y protege tu clave privada (para que solo tú puedas usarla).</div>
+
+<div class="exercise"><h3>🧩 Mensaje confidencial</h3><p>Quieres enviarle a Bruno un mensaje que solo él pueda leer. ¿Con qué clave lo cifras?</p>
+<div class="options" id="opt_e3a"><div class="option" onclick="pickc(this,'e3a',1)">Con la clave pública de Bruno</div><div class="option" onclick="pickc(this,'e3a',0)">Con tu propia clave privada</div><div class="option" onclick="pickc(this,'e3a',0)">Con la clave pública tuya</div></div>
+<div id="fb_e3a" class="feedback-box" data-exp="Cifrando con la clave pública del destinatario, solo su clave privada podrá descifrarlo."></div></div>
+<div class="exercise"><h3>🧩 Demostrar autoría</h3><p>Quieres que cualquiera pueda comprobar que un mensaje lo has escrito tú. ¿Con qué clave lo firmas?</p>
+<div class="options" id="opt_e3b"><div class="option" onclick="pickc(this,'e3b',1)">Con tu clave privada</div><div class="option" onclick="pickc(this,'e3b',0)">Con la clave pública del destinatario</div><div class="option" onclick="pickc(this,'e3b',0)">Con tu clave pública</div></div>
+<div id="fb_e3b" class="feedback-box" data-exp="Al firmar con tu clave privada, cualquiera puede verificarlo con tu clave pública, que es conocida por todos."></div></div>
+<div class="exercise"><h3>🧩 La clave que nunca viaja</h3><p>¿Cuál de las dos claves debe permanecer siempre en secreto y nunca compartirse?</p>
+<div class="options" id="opt_e3c"><div class="option" onclick="pickc(this,'e3c',1)">La clave privada</div><div class="option" onclick="pickc(this,'e3c',0)">La clave pública</div><div class="option" onclick="pickc(this,'e3c',0)">Las dos, por igual</div></div>
+<div id="fb_e3c" class="feedback-box" data-exp="La clave pública está pensada para repartirse; la privada debe protegerse siempre."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="window.location='modulo2.html'">⬅️ Anterior</button><button class="nav-btn" onclick="window.location='modulo4.html'">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

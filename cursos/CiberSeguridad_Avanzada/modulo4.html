@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 4: Bastionado de smartphones y dispositivos IoT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🛡️</span>Módulo 4: Bastionado de smartphones y dispositivos IoT</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Bastionar es reforzar: reduce la superficie de ataque de tus dispositivos.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:36%"></div></div>
+    <div class="progress-text">Ciberseguridad Avanzada · Módulo 4 de 10</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>¿Qué es el bastionado?</h2>
+      <p><b>Bastionar</b> (en inglés <i>hardening</i>) es configurar un dispositivo para que tenga solo lo necesario y lo tenga bien protegido. Menos funciones abiertas = menos puertas para un atacante.</p>
+      <h3>1. Checklist de bastionado del móvil</h3>
+      <ul class="key-points"><li>✅ <span><b>Actualizaciones automáticas</b> del sistema y de las apps.</span></li><li>✅ <span><b>Bloqueo de pantalla</b> con PIN de 6 cifras o más, o contraseña, más biometría.</span></li><li>✅ <span><b>Permisos mínimos:</b> cámara, micrófono y ubicación solo «mientras se usa la app».</span></li><li>✅ <span><b>Bloquea la instalación de orígenes desconocidos</b> y activa Google Play Protect.</span></li><li>✅ <span><b>Localizar y borrar a distancia</b> activado (Encontrar mi dispositivo / Buscar).</span></li><li>✅ <span><b>Copia de seguridad</b> automática y cifrada.</span></li><li>✅ <span><b>Bluetooth, NFC y Wi‑Fi</b> desactivados cuando no se usan; olvida redes abiertas guardadas.</span></li></ul>
+      <h3>2. Autenticación robusta</h3>
+      <p>Usa un <b>gestor de contraseñas</b> y activa la <b>verificación en dos pasos (2FA)</b> con una app autenticadora o, mejor aún, <b>llaves de acceso (passkeys)</b>. El 2FA por SMS es mejor que nada, pero vulnerable a la duplicación de SIM (<i>SIM swapping</i>).</p>
+      <h3>3. El hogar conectado (IoT)</h3>
+      <p>Cámaras IP, asistentes de voz, bombillas, consolas y televisores inteligentes suelen tener contraseñas débiles y pocas actualizaciones.</p>
+      <div class="figure">
+        <svg viewBox="0 0 600 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Router con dos redes separadas: red principal para móviles y ordenadores, y red de invitados para dispositivos IoT">
+          <rect x="250" y="10" width="100" height="40" rx="10" fill="#1e3c72"/><text x="300" y="36" font-size="14" text-anchor="middle" fill="#fff" font-weight="700">Router</text>
+          <line x1="300" y1="50" x2="150" y2="100" stroke="#4ecdc4" stroke-width="3"/><line x1="300" y1="50" x2="450" y2="100" stroke="#ff9800" stroke-width="3"/>
+          <rect x="50" y="100" width="200" height="55" rx="10" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/><text x="150" y="124" font-size="13" text-anchor="middle" fill="#2e7d32" font-weight="700">Red principal</text><text x="150" y="143" font-size="12" text-anchor="middle" fill="#2e7d32">Móviles · Ordenadores</text>
+          <rect x="350" y="100" width="200" height="55" rx="10" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/><text x="450" y="124" font-size="13" text-anchor="middle" fill="#e65100" font-weight="700">Red de invitados / IoT</text><text x="450" y="143" font-size="12" text-anchor="middle" fill="#e65100">Cámaras · Bombillas · TV</text>
+        </svg>
+        <div class="figure-caption">Segmentar la red: si un dispositivo IoT es comprometido, no puede llegar a tus equipos principales.</div>
+      </div>
+      <ul class="key-points"><li>🏠 <span>Cambia <b>todas las contraseñas por defecto</b> (router incluido).</span></li><li>🏠 <span>Usa cifrado <b>WPA2 o WPA3</b> y desactiva WPS.</span></li><li>🏠 <span>Conecta los dispositivos IoT a una <b>red de invitados</b> separada.</span></li><li>🏠 <span>Actualiza el <b>firmware</b> y desactiva funciones que no uses (acceso remoto, UPnP).</span></li></ul>
+      <div class="quiz"><h4>🧩 ¿Cuál es la mejor forma de conectar una cámara IP barata en casa?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m4a')">A. En la misma red que el portátil, con la contraseña de fábrica.</button><button class="option" onclick="checkAnswer(this,true,'m4a')">B. En una red de invitados separada, con contraseña propia y firmware actualizado.</button><button class="option" onclick="checkAnswer(this,false,'m4a')">C. Sin contraseña para que funcione mejor.</button></div><p class="feedback" id="fb-m4a" data-ok="Aislar el IoT limita el daño si el dispositivo es vulnerable."></p></div>
+      <div class="quiz"><h4>🧩 ¿Qué método de 2FA es más resistente al SIM swapping?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m4b')">A. Código por SMS.</button><button class="option" onclick="checkAnswer(this,true,'m4b')">B. App autenticadora o passkey.</button><button class="option" onclick="checkAnswer(this,false,'m4b')">C. Pregunta de seguridad.</button></div><p class="feedback" id="fb-m4b" data-ok="Las apps autenticadoras y las passkeys no dependen de tu número de teléfono."></p></div>
+      <div class="activity"><h3>✍️ Actividad: bastiona tu móvil</h3><p>Aplica tres puntos del checklist a tu móvil y anota cuáles has cambiado.</p><textarea placeholder="Puntos aplicados..."></textarea><p class="small">No escribas contraseñas ni datos personales reales en este cuadro.</p></div>
+      <div class="summary-box"><b>Resumen:</b> actualiza, minimiza permisos, autentica con 2FA o passkeys y separa los dispositivos IoT en su propia red.</div>
+
+      <div style="text-align:center;margin-top:25px"><button class="btn" onclick="completar(this)">Marcar módulo como completado</button></div>
+      <div class="navigation">
+        <button class="nav-btn" onclick="window.location='modulo3.html'">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="window.location='modulo5.html'">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso 2: Ciberseguridad Avanzada y Defensa Digital · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function checkAnswer(btn,correct,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(correct?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=correct?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es la mejor opción. Vuelve a leer el apartado e inténtalo de nuevo.';}
+function completar(btn){if(window.scorm)scorm.complete(100);btn.disabled=true;btn.textContent='✅ Módulo completado';}
+</script>
+</body>
+</html>

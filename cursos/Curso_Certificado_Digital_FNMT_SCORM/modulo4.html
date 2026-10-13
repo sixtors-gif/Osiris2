@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La huella digital de un documento: funciones hash</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🔎</span>La huella digital de un documento: funciones hash</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Comprobarás con un laboratorio interactivo cómo una función hash resume cualquier documento en un código corto y único.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:27%"></div></div>
+    <div class="progress-text">Certificados digitales, firma electrónica y FNMT · Módulo 4 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>La huella digital de un documento: funciones hash</h2>
+
+<div class="activity"><h3>🔎 Un resumen imposible de falsificar</h3>
+<p>Una <b>función hash</b> (o función resumen) coge un documento de cualquier tamaño —una frase o un libro entero— y produce un código de <b>longitud fija</b>, algo así como su huella digital. Los algoritmos reales, como <b>SHA-256</b>, producen siempre un código de 64 caracteres hexadecimales.</p></div>
+<div class="lab"><h3>🧪 Laboratorio: efecto avalancha</h3>
+<p>Escribe un texto y compáralo con el mismo texto ligeramente modificado. Fíjate en lo distinto que sale el resultado con un cambio mínimo.</p>
+<div class="grid">
+<div><label>Texto original</label><textarea id="hA" rows="2" oninput="hUpd()">Pago 100 euros a Bruno</textarea></div>
+<div><label>Texto modificado</label><textarea id="hB" rows="2" oninput="hUpd()">Pago 100 euros a Bruno.</textarea></div>
+</div>
+<div class="out">Hash de A: <b id="hOutA" style="color:#8a6a1f"></b></div>
+<div class="out">Hash de B: <span id="hOutB"></span></div>
+<p id="hMsg" style="font-weight:700;margin-top:8px"></p>
+<p class="figure-caption">Hash simplificado con fines educativos (no es SHA-256, el algoritmo real que usan los certificados), pero muestra las mismas propiedades.</p></div>
+<script>
+function pseudoHash(str){
+  var h1=0x811c9dc5|0, h2=0xc2b2ae35|0;
+  for(var i=0;i<str.length;i++){
+    var c=str.charCodeAt(i);
+    h1=Math.imul(h1^c,16777619);
+    h2=Math.imul(h2^c,2654435761)^(h1>>>3);
+  }
+  h1=h1>>>0; h2=h2>>>0;
+  return (h1.toString(16).padStart(8,'0')+h2.toString(16).padStart(8,'0'));
+}
+function diffHash(a,b){
+  var out='',diff=0;
+  for(var i=0;i<a.length;i++){
+    if(a[i]===b[i]){out+='<span style="color:#1f6a1f">'+a[i]+'</span>';}
+    else{out+='<span style="color:#c0392b;font-weight:700">'+(b[i]||'')+'</span>';diff++;}
+  }
+  return {html:out,diff:diff};
+}
+</script><script>
+function hUpd(){
+ var a=document.getElementById('hA').value, b=document.getElementById('hB').value;
+ var ha=pseudoHash(a), hb=pseudoHash(b);
+ document.getElementById('hOutA').textContent=ha;
+ var d=diffHash(ha,hb);
+ document.getElementById('hOutB').innerHTML=d.html;
+ var msg=document.getElementById('hMsg');
+ if(a===b){msg.style.color='#1f6a1f';msg.textContent='Los textos son idénticos: el hash es exactamente el mismo, siempre (es determinista).';}
+ else{var pct=Math.round(d.diff/ha.length*100);msg.style.color='#9b2c20';msg.textContent='Han cambiado '+d.diff+' de '+ha.length+' caracteres del hash (~'+pct+'%) con un cambio mínimo en el texto. A esto se le llama efecto avalancha.';}
+}
+window.addEventListener('load',hUpd);
+</script>
+
+<h3>Las tres propiedades que la hacen útil</h3>
+<ul class="key-points"><li>🔁 <span><b>Determinista:</b> el mismo documento produce siempre el mismo hash. Es la propiedad que acabas de comprobar al comparar dos textos idénticos.</span></li><li>💥 <span><b>Efecto avalancha:</b> cambiar una sola letra, una coma o un espacio produce un hash completamente distinto. Por eso sirve para detectar cualquier modificación, por pequeña que sea.</span></li><li>🚫 <span><b>No reversible:</b> a partir del hash es imposible reconstruir el documento original. El hash no es una versión «comprimida» del documento, solo sirve para comparar.</span></li></ul>
+
+<h3>¿Para qué se usa?</h3>
+<p>El hash es la pieza que hacía falta para completar la firma digital: en vez de cifrar (con la clave privada) el documento entero —algo lento si el documento es grande—, se cifra únicamente su <b>hash</b>, mucho más corto. Es exactamente lo que verás en el próximo módulo.</p>
+<div class="tip-box">💡 <b>Consejo:</b> Muchas páginas de descargas publican, junto al archivo, su hash SHA-256. Si al calcular el hash del archivo descargado no coincide con el publicado, el archivo se ha corrompido o ha sido manipulado.</div>
+
+<div class="exercise"><h3>🧩 Documento idéntico</h3><p>Calculas el hash del mismo documento dos veces, sin cambiar nada. ¿Qué obtienes?</p>
+<div class="options" id="opt_e4a"><div class="option" onclick="pickc(this,'e4a',1)">Exactamente el mismo hash las dos veces</div><div class="option" onclick="pickc(this,'e4a',0)">Un hash distinto cada vez</div><div class="option" onclick="pickc(this,'e4a',0)">Un hash solo la primera vez</div></div>
+<div id="fb_e4a" class="feedback-box" data-exp="Una función hash es determinista: mismo documento, mismo hash, siempre."></div></div>
+<div class="exercise"><h3>🧩 Un cambio mínimo</h3><p>Añades un simple punto al final de un documento. ¿Qué le pasa a su hash?</p>
+<div class="options" id="opt_e4b"><div class="option" onclick="pickc(this,'e4b',1)">Cambia por completo</div><div class="option" onclick="pickc(this,'e4b',0)">Cambia solo el último carácter</div><div class="option" onclick="pickc(this,'e4b',0)">No cambia</div></div>
+<div id="fb_e4b" class="feedback-box" data-exp="El efecto avalancha hace que cualquier cambio, por pequeño que sea, altere el hash entero."></div></div>
+<div class="exercise"><h3>🧩 Reconstruir el original</h3><p>Si alguien solo tiene el hash de un documento, ¿puede recuperar el documento original a partir de él?</p>
+<div class="options" id="opt_e4c"><div class="option" onclick="pickc(this,'e4c',1)">No, el hash no se puede invertir</div><div class="option" onclick="pickc(this,'e4c',0)">Sí, siempre</div><div class="option" onclick="pickc(this,'e4c',0)">Solo si el documento es muy corto</div></div>
+<div id="fb_e4c" class="feedback-box" data-exp="El hash no es reversible: sirve para comparar, no para reconstruir el contenido."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="window.location='modulo3.html'">⬅️ Anterior</button><button class="nav-btn" onclick="window.location='modulo5.html'">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

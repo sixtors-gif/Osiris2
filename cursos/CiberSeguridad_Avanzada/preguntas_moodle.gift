@@ -1,0 +1,234 @@
+// ===============================================
+// CURSO 2: CIBERSEGURIDAD AVANZADA Y DEFENSA DIGITAL
+// BANCO DE PREGUNTAS EN FORMATO GIFT PARA MOODLE (30 preguntas)
+// ===============================================
+
+$CATEGORY: $course$/Ciberseguridad_Avanzada/Modulo01_IA_y_Amenazas
+
+::M1_P1::Recibes una llamada con la voz exacta de un familiar pidiendo una transferencia urgente. ¿Cuál es la respuesta más segura? {
+    ~Hacer la transferencia para evitar problemas.
+    =Colgar y llamar a su número habitual o pedir la palabra clave acordada.
+    ~Pedirle una foto de su DNI por WhatsApp.
+    ~Pedirle que mande otro audio.
+}
+
+::M1_P2::Un deepfake es\: {
+    =Un contenido de audio, imagen o vídeo manipulado o generado con inteligencia artificial de forma hiperrealista.
+    ~Un virus que bloquea la cámara web.
+    ~Una técnica para comprimir vídeos.
+    ~Un ataque que daña el hardware del móvil.
+}
+
+::M1_P3::¿Por qué ya no basta con buscar faltas de ortografía para detectar phishing? {
+    ~Porque los antivirus corrigen los mensajes.
+    ~Porque el phishing ya no existe.
+    ~Porque los bancos escriben con faltas.
+    =Porque la IA redacta mensajes correctos y personalizados.
+}
+
+$CATEGORY: $course$/Ciberseguridad_Avanzada/Modulo02_Doxxing_y_Privacidad
+
+::M2_P1::¿Qué medida ayuda a prevenir el doxxing al publicar fotografías? {
+    ~Añadir un filtro de color.
+    ~Usar el mismo alias en todas las plataformas.
+    =Eliminar los metadatos de ubicación (EXIF/GPS) y no mostrar fachadas o portales.
+    ~Subir la foto en mayor resolución.
+}
+
+::M2_P2::El doxxing consiste en\: {
+    ~Enviar correo basura masivo.
+    =Recopilar y publicar sin consentimiento información personal de alguien para intimidarle o acosarle.
+    ~Un fallo del router Wi‑Fi.
+    ~Instalar apps de prueba en el móvil.
+}
+
+::M2_P3::Alguien que se hace pasar por «soporte técnico del juego» para pedirte tu código de verificación está usando\: {
+    =Pretexting (ingeniería social).
+    ~Cifrado de extremo a extremo.
+    ~Una actualización legítima.
+    ~Bastionado.
+}
+
+$CATEGORY: $course$/Ciberseguridad_Avanzada/Modulo03_Seguridad_Movil
+
+::M3_P1::¿Por qué el abuso de los servicios de accesibilidad en Android es un riesgo crítico? {
+    ~Porque consume más datos.
+    ~Porque cambia el fondo de pantalla.
+    ~Porque desactiva el Wi‑Fi.
+    =Porque permite a una app maliciosa leer la pantalla, capturar credenciales y actuar sin tu permiso.
+}
+
+::M3_P2::El sideloading es\: {
+    ~Cargar el móvil por un lateral.
+    ~Usar dos tarjetas SIM a la vez.
+    =Instalar aplicaciones (por ejemplo APK) desde fuera de las tiendas oficiales.
+    ~Duplicar la pantalla en la televisión.
+}
+
+::M3_P3::¿Cuál de estos es un indicador de compromiso en un móvil? {
+    ~Que la pantalla se apague al no usarla.
+    =Recibir códigos de verificación por SMS que no has solicitado.
+    ~Que las apps se actualicen solas desde la tienda oficial.
+    ~Que el móvil se caliente al cargar.
+}
+
+$CATEGORY: $course$/Ciberseguridad_Avanzada/Modulo04_Bastionado_e_IoT
+
+::M4_P1::¿Cuál es la mejor práctica para proteger los dispositivos IoT del hogar? {
+    =Conectarlos a una red de invitados separada, con contraseña propia y firmware actualizado.
+    ~Apagar el router por la noche.
+    ~Mantener la contraseña de fábrica.
+    ~Darles permisos de administrador de red.
+}
+
+::M4_P2::¿Qué método de verificación en dos pasos es más resistente al SIM swapping? {
+    ~Código por SMS.
+    ~Correo electrónico sin contraseña.
+    ~Pregunta de seguridad.
+    =App autenticadora o llave de acceso (passkey).
+}
+
+::M4_P3::Bastionar un dispositivo significa\: {
+    ~Instalarle más aplicaciones.
+    ~Hacerle root para tener más control.
+    =Configurarlo para reducir funciones innecesarias y reforzar su protección.
+    ~Desactivar las actualizaciones.
+}
+
+$CATEGORY: $course$/Ciberseguridad_Avanzada/Modulo05_Malware_Avanzado
+
+::M5_P1::¿Cuál es la función principal de un infostealer? {
+    ~Bloquear la pantalla con una contraseña.
+    =Robar contraseñas guardadas, cookies de sesión y carteras de criptomonedas.
+    ~Mostrar publicidad.
+    ~Acelerar el ordenador.
+}
+
+::M5_P2::¿Qué regla de copias de seguridad protege mejor frente al ransomware? {
+    =La regla 3-2-1, con al menos una copia desconectada o fuera de casa.
+    ~Una única copia en el mismo disco.
+    ~Guardar todo solo en el móvil.
+    ~No hacer copias para no ocupar espacio.
+}
+
+::M5_P3::El ransomware de doble extorsión\: {
+    ~Únicamente ralentiza el equipo.
+    ~Solo muestra anuncios.
+    ~Borra el sistema operativo sin pedir nada.
+    =Cifra los archivos y además amenaza con publicar los datos robados.
+}
+
+$CATEGORY: $course$/Ciberseguridad_Avanzada/Modulo06_Hacking_Etico
+
+::M6_P1::¿Qué distingue legalmente a un hacker ético de un ciberdelincuente? {
+    ~Las herramientas que usa.
+    ~Que trabaja de noche.
+    =La autorización previa y por escrito del propietario del sistema.
+    ~Que no cobra por su trabajo.
+}
+
+::M6_P2::Descubres por casualidad un fallo que expone datos en una web. ¿Qué es la divulgación responsable? {
+    ~Publicarlo en redes para presionar.
+    =Avisar de forma privada al responsable (o a INCIBE-CERT) sin explotarlo ni difundirlo.
+    ~Descargar los datos como prueba.
+    ~Venderlo al mejor postor.
+}
+
+::M6_P3::¿Cuál es una forma legal de practicar hacking? {
+    =Participar en retos CTF y usar laboratorios propios en máquinas virtuales.
+    ~Probar contraseñas en cuentas de compañeros.
+    ~Escanear la red del centro sin permiso.
+    ~Entrar en la Wi‑Fi del vecino.
+}
+
+$CATEGORY: $course$/Ciberseguridad_Avanzada/Modulo07_Cifrado_y_VPN
+
+::M7_P1::Una web muestra el candado HTTPS. ¿Qué garantiza? {
+    ~Que la web es legítima.
+    ~Que tus datos no se guardan.
+    ~Que no tiene virus.
+    =Que la conexión está cifrada, aunque la web podría ser fraudulenta.
+}
+
+::M7_P2::¿Qué afirmación sobre una VPN es correcta? {
+    ~Te hace totalmente anónimo.
+    ~Elimina virus.
+    =Cifra tu tráfico hasta el servidor VPN, pero no te protege del phishing ni del malware.
+    ~Impide que las webs usen cookies.
+}
+
+::M7_P3::El cifrado de extremo a extremo (E2EE) significa que\: {
+    ~El servicio puede leer los mensajes para protegerte.
+    =Solo el emisor y el receptor pueden leer el mensaje.
+    ~Los mensajes se borran al leerlos.
+    ~El mensaje viaja sin cifrar.
+}
+
+$CATEGORY: $course$/Ciberseguridad_Avanzada/Modulo08_Respuesta_Incidentes
+
+::M8_P1::Ante una infección por ransomware en un equipo conectado a la red, la primera acción debe ser\: {
+    =Desconectarlo de la red (Wi‑Fi o cable) para evitar la propagación.
+    ~Reiniciarlo varias veces.
+    ~Formatear el disco sin guardar pruebas.
+    ~Pagar el rescate.
+}
+
+::M8_P2::¿Cuál es el orden correcto del ciclo de respuesta ante incidentes? {
+    ~Recuperar, detectar, contener, erradicar, aprender.
+    ~Erradicar, detectar, recuperar, contener, aprender.
+    ~Contener, aprender, detectar, recuperar, erradicar.
+    =Detectar, contener, erradicar, recuperar, aprender.
+}
+
+::M8_P3::Tras robarte una cuenta, ¿desde dónde conviene cambiar las contraseñas y cerrar sesiones? {
+    ~Desde el mismo equipo infectado.
+    ~Desde un ordenador público.
+    =Desde otro dispositivo limpio y de confianza.
+    ~No hace falta cambiarlas.
+}
+
+$CATEGORY: $course$/Ciberseguridad_Avanzada/Modulo09_Legal_y_Etica
+
+::M9_P1::Reenviar a un grupo una imagen íntima de otra persona sin su consentimiento\: {
+    ~Es legal si no la has creado tú.
+    =Es delito, aunque tú no la hayas creado.
+    ~Solo es delito si cobras por ello.
+    ~Es legal si el grupo es privado.
+}
+
+::M9_P2::Pedir a una plataforma que borre tus datos personales es ejercer el derecho de\: {
+    =Supresión.
+    ~Portabilidad.
+    ~Rectificación.
+    ~Acceso.
+}
+
+::M9_P3::En España, ¿desde qué edad puede un menor responder penalmente por un ciberdelito? {
+    ~Desde los 12 años.
+    ~Solo a partir de los 18 años.
+    ~Desde los 16 años.
+    =Desde los 14 años.
+}
+
+$CATEGORY: $course$/Ciberseguridad_Avanzada/Modulo10_Proyecto_Final
+
+::M10_P1::¿Qué cuenta es prioritaria proteger en una auditoría personal? {
+    ~La del juego que menos usas.
+    ~Una cuenta de foro antigua.
+    =El correo electrónico principal, porque permite recuperar las demás.
+    ~La de una app de linterna.
+}
+
+::M10_P2::Si tu correo aparece en una filtración conocida, debes\: {
+    ~Ignorarlo.
+    =Cambiar esa contraseña y cualquier otra donde la repitieras, y activar 2FA.
+    ~Borrar el correo inmediatamente.
+    ~Cambiar solo el nombre de usuario.
+}
+
+::M10_P3::¿Cada cuánto se recomienda repetir el checklist de seguridad personal? {
+    =Periódicamente, por ejemplo cada tres meses.
+    ~Nunca, basta con hacerlo una vez.
+    ~Solo cuando cambies de móvil.
+    ~Solo si te roban una cuenta.
+}

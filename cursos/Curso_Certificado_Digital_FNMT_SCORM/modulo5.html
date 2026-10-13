@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La firma digital: firmar y verificar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🖊️</span>La firma digital: firmar y verificar</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Verás cómo se combinan el hash y la clave privada para firmar un documento, y probarás un simulador de firma y verificación.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:33%"></div></div>
+    <div class="progress-text">Certificados digitales, firma electrónica y FNMT · Módulo 5 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>La firma digital: firmar y verificar</h2>
+
+<div class="activity"><h3>🖊️ Firmar = cifrar el hash con tu clave privada</h3>
+<p>Ya tienes las dos piezas que faltaban: el <b>hash</b> (un resumen corto e imposible de falsificar) y la <b>clave privada</b> (que solo tú posees). La firma digital las combina.</p></div>
+
+<h3>Cómo se firma un documento</h3>
+<div class="pipe"><div class="pbox"><b>1. Documento</b>el texto original</div><div class="parrow">➜</div><div class="pbox"><b>2. Hash</b>resumen del documento</div><div class="parrow">➜</div><div class="pbox res"><b>3. Firma</b>el hash cifrado con tu clave privada</div></div>
+<p>El resultado —la <b>firma electrónica</b>— es un pequeño bloque de datos que se adjunta al documento. No es un dibujo ni una imagen de tu rúbrica: es <b>el hash del documento, cifrado con tu clave privada</b>.</p>
+
+<h3>Cómo se verifica</h3>
+<div class="pipe"><div class="pbox"><b>Documento recibido</b>+ su firma</div><div class="parrow">➜</div><div class="pbox"><b>Se calcula</b>el hash del documento recibido</div><div class="parrow">➜</div><div class="pbox"><b>Se descifra</b>la firma con tu clave pública</div><div class="parrow">➜</div><div class="pbox res"><b>¿Coinciden?</b>firma válida o inválida</div></div>
+<p>Cualquiera que tenga tu <b>clave pública</b> (está en tu certificado, que es público) puede repetir este proceso. Si los dos hash coinciden, se confirma que:</p>
+<ul class="key-points"><li>👤 <span><b>Autenticidad:</b> la firma solo pudo generarla quien tiene tu clave privada, es decir, tú.</span></li><li>📄 <span><b>Integridad:</b> el documento no se ha modificado ni una coma desde que lo firmaste (si se hubiera modificado, el hash actual no coincidiría).</span></li><li>🚫 <span><b>No repudio:</b> no puedes negar después haber firmado el documento, igual que no puedes negar una firma manuscrita auténtica.</span></li></ul>
+
+<div class="lab"><h3>🧪 Simulador de firma y verificación</h3>
+<div class="grid"><div style="grid-column:1/-1"><label>Documento</label>
+<textarea id="fdoc" rows="3">Yo, Ana, autorizo el pago de 500 € a Bruno por el catering del sábado.</textarea></div></div>
+<button class="btn" onclick="firmar()">🖊️ Firmar documento</button>
+<button class="btn" onclick="verificar()" style="background:linear-gradient(45deg,#2c4a78,#1f3a63);color:#fff">🔍 Verificar firma</button>
+<button class="btn" onclick="tampering()" style="background:#c0392b;color:#fff">✏️ Simular manipulación</button>
+<div class="out" style="margin-top:14px">Firma (hash cifrado con la clave privada): <b id="fsig" style="color:#8a6a1f">— todavía no se ha firmado —</b></div>
+<div id="fres" style="margin-top:10px;font-weight:700"></div>
+</div>
+<script>
+function pseudoHash(str){
+  var h1=0x811c9dc5|0, h2=0xc2b2ae35|0;
+  for(var i=0;i<str.length;i++){
+    var c=str.charCodeAt(i);
+    h1=Math.imul(h1^c,16777619);
+    h2=Math.imul(h2^c,2654435761)^(h1>>>3);
+  }
+  h1=h1>>>0; h2=h2>>>0;
+  return (h1.toString(16).padStart(8,'0')+h2.toString(16).padStart(8,'0'));
+}
+function diffHash(a,b){
+  var out='',diff=0;
+  for(var i=0;i<a.length;i++){
+    if(a[i]===b[i]){out+='<span style="color:#1f6a1f">'+a[i]+'</span>';}
+    else{out+='<span style="color:#c0392b;font-weight:700">'+(b[i]||'')+'</span>';diff++;}
+  }
+  return {html:out,diff:diff};
+}
+</script><script>
+var firmaGuardada=null;
+function firmar(){var doc=document.getElementById('fdoc').value;var h=pseudoHash(doc);firmaGuardada=btoa(h);
+ document.getElementById('fsig').textContent=firmaGuardada;document.getElementById('fres').innerHTML='';}
+function verificar(){var r=document.getElementById('fres');
+ if(!firmaGuardada){r.style.color='#9b2c20';r.innerHTML='⚠️ Todavía no has firmado ningún documento.';return;}
+ var doc=document.getElementById('fdoc').value;var hActual=pseudoHash(doc);var hFirmado=atob(firmaGuardada);
+ if(hActual===hFirmado){r.style.color='#1f6a1f';r.innerHTML='✅ Firma válida: el documento es idéntico al que se firmó.';}
+ else{r.style.color='#9b2c20';r.innerHTML='❌ Firma inválida: el documento ha cambiado desde que se firmó (o no corresponde a esta firma).';}
+}
+function tampering(){var d=document.getElementById('fdoc');d.value=d.value.replace('500 €','5.000 €');}
+</script>
+<div class="tip-box">💡 <b>Consejo:</b> Prueba a firmar, luego pulsa «Simular manipulación» (cambia el importe) y por último «Verificar firma»: verás que la firma deja de ser válida, porque el hash del documento manipulado ya no coincide con el que se firmó.</div>
+<div class="figure vid-box">
+<div class="vid-frame"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/vaGTDS8UTs0" title="La firma electrónica de documentos"
+frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+<p class="figure-caption"><b>La firma electrónica de documentos</b> · canal oficial <b>INCIBE</b> en YouTube</p><p class="vid-desc">Un consultor explica, en pocos minutos, qué es la firma electrónica y qué ventajas tiene frente a la firma en papel.</p></div>
+
+<div class="exercise"><h3>🧩 Qué se cifra</h3><p>En una firma digital real, ¿qué es exactamente lo que se cifra con la clave privada?</p>
+<div class="options" id="opt_e5a"><div class="option" onclick="pickc(this,'e5a',1)">El hash (resumen) del documento</div><div class="option" onclick="pickc(this,'e5a',0)">El documento completo, letra por letra</div><div class="option" onclick="pickc(this,'e5a',0)">La clave pública del firmante</div></div>
+<div id="fb_e5a" class="feedback-box" data-exp="Se firma el hash, mucho más corto que el documento, no el documento completo."></div></div>
+<div class="exercise"><h3>🧩 Documento modificado</h3><p>Firmas un documento y después alguien le cambia una cifra. ¿Qué pasará al verificar la firma?</p>
+<div class="options" id="opt_e5b"><div class="option" onclick="pickc(this,'e5b',1)">La firma dejará de ser válida</div><div class="option" onclick="pickc(this,'e5b',0)">La firma seguirá siendo válida, porque ya se firmó una vez</div><div class="option" onclick="pickc(this,'e5b',0)">No se puede saber</div></div>
+<div id="fb_e5b" class="feedback-box" data-exp="El hash del documento modificado no coincidirá con el que se cifró al firmar: la verificación fallará."></div></div>
+<div class="exercise"><h3>🧩 Qué garantiza</h3><p>¿Cuál de estas NO es una garantía que ofrece una firma digital válida?</p>
+<div class="options" id="opt_e5c"><div class="option" onclick="pickc(this,'e5c',1)">Que el contenido del documento es correcto o verdadero</div><div class="option" onclick="pickc(this,'e5c',0)">Que el documento no se ha modificado desde que se firmó</div><div class="option" onclick="pickc(this,'e5c',0)">Que lo firmó quien dice haberlo firmado</div></div>
+<div id="fb_e5c" class="feedback-box" data-exp="La firma garantiza autoría e integridad, pero no que la información del documento sea cierta."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="window.location='modulo4.html'">⬅️ Anterior</button><button class="nav-btn" onclick="window.location='modulo6.html'">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

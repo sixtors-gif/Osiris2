@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Paso 4: descargar el certificado y hacer copia de seguridad</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">⬇️</span>Paso 4: descargar el certificado y hacer copia de seguridad</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Descargarás (conceptualmente) tu certificado y aprenderás por qué es imprescindible hacer una copia de seguridad nada más obtenerlo.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:73%"></div></div>
+    <div class="progress-text">Certificados digitales, firma electrónica y FNMT · Módulo 11 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Paso 4: descargar el certificado y hacer copia de seguridad</h2>
+
+<h3>Vuelve al mismo ordenador y al mismo navegador</h3>
+<p>Pasada aproximadamente una hora desde que acreditaste tu identidad, entra de nuevo en <b>sede.fnmt.gob.es</b>, en el apartado de descarga, <b>desde el mismo equipo y el mismo navegador</b> que usaste para solicitar el certificado. Ahí es donde quedó generada tu clave privada.</p>
+<div class="figure"><img src="img/fnmt_paso4_descarga.png" alt="Página real de Descargar Certificado en sede.fnmt.gob.es" style="max-width:100%;border:1px solid #d9dfee;border-radius:8px">
+<p class="figure-caption">El formulario de descarga real pide tu documento de identificación, tu primer apellido y el Código de Solicitud.<br><span style="font-size:.85em">Captura real de <b>sede.fnmt.gob.es</b> (23/09/2026). El aspecto de la web puede cambiar con el tiempo.</span></p></div>
+<ol class="steps"><li>Introduce tu documento de identificación, tu <b>primer apellido</b> y el <b>Código de Solicitud</b> recibido por correo.</li><li>Marca la casilla de aceptación de los términos y condiciones de uso del certificado, y pulsa <b>Descargar Certificado</b>.</li><li>En algún momento de este paso se te pedirá también la <b>contraseña</b> que creaste al solicitar el certificado (paso 2).</li><li>El certificado se genera y se instala automáticamente en el almacén de certificados de tu navegador (o del sistema, según el navegador).</li><li>Comprueba que aparece: en la mayoría de navegadores puedes verlo en sus opciones de privacidad/seguridad, en «Gestionar certificados».</li></ol>
+
+<h3>Haz la copia de seguridad de inmediato</h3>
+<p>Un certificado instalado en el navegador vive, en el fondo, dentro del sistema operativo. Si formateas el ordenador, lo cambias, o el navegador tiene un problema, <b>puedes perder tu certificado para siempre</b> y no hay forma de «volver a descargarlo»: habría que solicitar uno nuevo entero.</p>
+<div class="danger-box">🚫 <b>Cuidado:</b> La propia FNMT lo indica como <b>recomendado justo después de descargar</b>: exporta tu certificado a un archivo antes de hacer nada más.</div>
+
+<h3>Cómo se exporta (idea general)</h3>
+<p>Los pasos exactos cambian algo según el navegador y su versión, pero la idea es siempre la misma: entras en el <b>gestor de certificados</b> de tu navegador o de tu sistema operativo, buscas tu certificado (verás tu nombre y el emisor «AC FNMT Usuarios»), y eliges <b>exportar</b>, incluyendo la <b>clave privada</b>.</p>
+<ul class="key-points"><li>📁 <span>El archivo exportado suele tener extensión <code>.pfx</code> o <code>.p12</code>. Contiene tu clave privada, así que hay que protegerlo con una <b>contraseña de exportación</b> (distinta de la del paso 2, puedes elegir la que quieras en ese momento).</span></li><li>💾 <span>Guarda ese archivo en un lugar seguro: un disco externo, un gestor de contraseñas o una nube cifrada. <b>Nunca</b> lo envíes por correo sin cifrar ni lo dejes en un ordenador compartido.</span></li><li>🖥️ <span>En Windows, el gestor de certificados se abre escribiendo <code>certmgr.msc</code>; en Firefox está en Ajustes → Privacidad y seguridad → Certificados; en Chrome/Edge, en Configuración → Privacidad y seguridad → Seguridad → Gestionar certificados.</span></li></ul>
+<div class="tip-box">💡 <b>Consejo:</b> Con ese archivo <code>.pfx</code> y su contraseña podrás <b>reinstalar</b> el certificado en el mismo equipo tras formatearlo, o <b>usarlo en otro dispositivo</b>: es justo lo que veremos en el próximo módulo.</div>
+
+<div class="exercise"><h3>🧩 Antes de nada</h3><p>Nada más descargar el certificado, ¿cuál es la recomendación más importante?</p>
+<div class="options" id="opt_e11a"><div class="option" onclick="pickc(this,'e11a',1)">Hacer una copia de seguridad exportándolo a un archivo</div><div class="option" onclick="pickc(this,'e11a',0)">Borrar el correo con el Código de Solicitud</div><div class="option" onclick="pickc(this,'e11a',0)">Cambiar de navegador</div></div>
+<div id="fb_e11a" class="feedback-box" data-exp="Sin copia de seguridad, perder el certificado (por ejemplo al formatear) obliga a tramitarlo de nuevo por completo."></div></div>
+<div class="exercise"><h3>🧩 El archivo exportado</h3><p>Al exportar tu certificado con su clave privada, ¿qué debes hacer para protegerlo?</p>
+<div class="options" id="opt_e11b"><div class="option" onclick="pickc(this,'e11b',1)">Ponerle una contraseña de exportación</div><div class="option" onclick="pickc(this,'e11b',0)">Nada, ya viene protegido</div><div class="option" onclick="pickc(this,'e11b',0)">Compartirlo con varias personas por si acaso</div></div>
+<div id="fb_e11b" class="feedback-box" data-exp="El archivo .pfx/.p12 contiene la clave privada: debe protegerse siempre con contraseña."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="window.location='modulo10.html'">⬅️ Anterior</button><button class="nav-btn" onclick="window.location='modulo12.html'">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

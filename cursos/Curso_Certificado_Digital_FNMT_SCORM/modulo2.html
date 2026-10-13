@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>El problema: proteger la información</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🔒</span>El problema: proteger la información</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Entenderás qué es cifrar un mensaje y probarás un cifrado clásico para descubrir el problema del cifrado simétrico.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:13%"></div></div>
+    <div class="progress-text">Certificados digitales, firma electrónica y FNMT · Módulo 2 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>El problema: proteger la información</h2>
+
+<div class="activity"><h3>🔓 Texto claro y texto cifrado</h3>
+<p>Un mensaje que cualquiera puede leer es <b>texto claro</b>. <b>Cifrar</b> es transformarlo, con una <b>clave</b>, en un galimatías (<b>texto cifrado</b>) que solo se puede volver a leer si se conoce esa clave. <b>Descifrar</b> es el proceso inverso.</p></div>
+<div class="lab"><h3>🧪 Laboratorio: el cifrado César</h3>
+<p>Es uno de los cifrados más antiguos que se conocen (lo usaba Julio César): cada letra se sustituye por otra que está unas posiciones más adelante en el abecedario. El número de posiciones es la <b>clave</b>.</p>
+<div class="grid">
+<div><label>Texto (solo letras A-Z, sin acentos ni Ñ)</label><input id="csTxt" value="NOS VEMOS A LAS DIEZ" oninput="csUpd()"></div>
+<div><label>Clave (desplazamiento, 1 a 25)</label><input id="csKey" type="number" min="1" max="25" value="3" oninput="csUpd()"></div>
+</div>
+<div class="out">Texto cifrado: <b id="csOut" style="color:#8a6a1f"></b></div>
+<p>Prueba a poner la <b>misma clave</b> (3) y, en el campo de texto, escribe el resultado cifrado: verás que si en vez de sumar restaras la clave, recuperarías el mensaje original. <b>La misma clave sirve para cifrar y para descifrar.</b></p></div>
+<script>
+function caesar(str,shift){return str.split('').map(function(ch){var c=ch.toUpperCase().charCodeAt(0);
+ if(c>=65&&c<=90){return String.fromCharCode(((c-65+shift)%26+26)%26+65);}return ch;}).join('');}
+function csUpd(){var t=document.getElementById('csTxt').value;var k=parseInt(document.getElementById('csKey').value)||0;
+ document.getElementById('csOut').textContent=caesar(t,k);}
+window.addEventListener('load',csUpd);
+</script>
+
+<h3>El problema del cifrado simétrico</h3>
+<p>En el cifrado César, y en general en el <b>cifrado simétrico</b>, se usa <b>una única clave</b> para cifrar y para descifrar. Es rápido y sencillo, pero tiene un problema serio:</p>
+<ul class="key-points"><li>📨 <span>Para que la otra persona pueda leer tu mensaje, <b>tienes que enviarle la clave</b> de alguna forma.</span></li><li>🕵️ <span>Si alguien intercepta esa clave por el camino, <b>podrá leer (y falsificar) todos vuestros mensajes</b>, presentes y futuros.</span></li><li>👥 <span>Si te comunicas con muchas personas distintas, necesitarías <b>una clave secreta diferente para cada una</b> y gestionarlas todas de forma segura.</span></li></ul>
+<div class="alert-box">⚠️ <b>Error típico:</b> El cifrado César se rompe en segundos (solo hay 25 claves posibles). Los cifrados simétricos reales, como el AES que usa tu banco, son muchísimo más robustos matemáticamente, pero comparten el mismo problema de fondo: <b>¿cómo compartes la clave secreta de forma segura la primera vez?</b></div>
+<div class="tip-box">💡 <b>Consejo:</b> Este problema —llamado <b>reparto de claves</b>— se resolvió con una idea que cambió Internet: la <b>criptografía asimétrica</b>, con dos claves distintas en vez de una. Es el tema del próximo módulo.</div>
+
+<div class="exercise"><h3>🧩 La misma clave</h3><p>En el cifrado César, si cifras con una clave de 5, ¿qué clave necesitas para descifrar?</p>
+<div class="options" id="opt_e2a"><div class="option" onclick="pickc(this,'e2a',1)">También 5</div><div class="option" onclick="pickc(this,'e2a',0)">25 menos 5, es decir 20</div><div class="option" onclick="pickc(this,'e2a',0)">No hace falta ninguna clave</div></div>
+<div id="fb_e2a" class="feedback-box" data-exp="Es un cifrado simétrico: la misma clave sirve para cifrar y para descifrar."></div></div>
+<div class="exercise"><h3>🧩 El problema de fondo</h3><p>¿Cuál es el gran problema del cifrado simétrico?</p>
+<div class="options" id="opt_e2b"><div class="option" onclick="pickc(this,'e2b',1)">Hay que hacer llegar la clave secreta a la otra persona sin que nadie la intercepte</div><div class="option" onclick="pickc(this,'e2b',0)">Es demasiado lento para usarse en Internet</div><div class="option" onclick="pickc(this,'e2b',0)">No se puede usar con números, solo con letras</div></div>
+<div id="fb_e2b" class="feedback-box" data-exp="Si la clave se comparte por un canal inseguro, cualquiera que la intercepte podrá leer los mensajes."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="window.location='modulo1.html'">⬅️ Anterior</button><button class="nav-btn" onclick="window.location='modulo3.html'">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

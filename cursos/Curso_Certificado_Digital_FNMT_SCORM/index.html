@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Certificados digitales, firma electrónica y FNMT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🛡️</span>Certificados digitales, firma electrónica y FNMT</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Criptografía básica, firma digital, y cómo obtener y usar el certificado de persona física de la FNMT.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+    <div class="progress-text">Certificados digitales, firma electrónica y FNMT · Inicio</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Certificados digitales, firma electrónica y FNMT</h2>
+
+<div class="activity"><h3>👋 Bienvenido/a</h3>
+<p>Este curso tiene dos partes. Primero entenderás <b>por qué funciona</b> un certificado digital: cifrado, clave pública y privada, funciones hash y firma electrónica, con laboratorios interactivos para probarlo tú mismo/a. Después aplicarás esos conceptos a un caso real: <b>obtener, configurar y usar tu Certificado digital de persona física de la FNMT</b>, el más utilizado en España.</p></div>
+<div class="box"><b>Objetivo:</b> entender los fundamentos de la criptografía y la firma digital, y saber solicitar, acreditar, descargar, proteger y usar tu certificado FNMT con seguridad.</div>
+<h3>Itinerario</h3>
+<div class="card-grid"><div class="mini-card"><div class="ico">🔐</div><b>Fundamentos</b>Módulos 2 a 7: cifrado, claves, hash y firma digital</div><div class="mini-card"><div class="ico">🏛️</div><b>El certificado FNMT</b>Módulos 8 a 13: solicitud, acreditación, descarga y uso</div><div class="mini-card"><div class="ico">🚨</div><b>Seguridad y reto</b>Módulos 14 y 15: caducidad, revocación, fraude y caso práctico</div></div>
+<h3>Antes de empezar</h3>
+<ul class="key-points"><li>🧑‍💻 <span><b>Nivel:</b> ninguno. No hace falta saber matemáticas ni programación.</span></li><li>🪪 <span>Para el trámite real de la FNMT necesitarás tu <b>DNI o NIE en vigor</b>. Lo detallamos en el módulo 8.</span></li><li>🌐 <span>La fuente oficial es siempre <b>sede.fnmt.gob.es</b>: los procedimientos pueden actualizarse con el tiempo.</span></li></ul>
+<h3>Contenido</h3>
+<ul class="key-points"><li><span><b>1.</b></span><span><a href="modulo1.html">¿Qué es un certificado digital?</a></span></li><li><span><b>2.</b></span><span><a href="modulo2.html">El problema: proteger la información</a></span></li><li><span><b>3.</b></span><span><a href="modulo3.html">Clave pública y clave privada</a></span></li><li><span><b>4.</b></span><span><a href="modulo4.html">La huella digital de un documento: funciones hash</a></span></li><li><span><b>5.</b></span><span><a href="modulo5.html">La firma digital: firmar y verificar</a></span></li><li><span><b>6.</b></span><span><a href="modulo6.html">El certificado digital: contenido y confianza</a></span></li><li><span><b>7.</b></span><span><a href="modulo7.html">Tipos de certificados y la FNMT</a></span></li><li><span><b>8.</b></span><span><a href="modulo8.html">El proceso FNMT en 4 pasos</a></span></li><li><span><b>9.</b></span><span><a href="modulo9.html">Pasos 1 y 2: configuración previa y solicitud</a></span></li><li><span><b>10.</b></span><span><a href="modulo10.html">Paso 3: acreditar tu identidad</a></span></li><li><span><b>11.</b></span><span><a href="modulo11.html">Paso 4: descargar el certificado y hacer copia de seguridad</a></span></li><li><span><b>12.</b></span><span><a href="modulo12.html">Instalar el certificado en otro dispositivo</a></span></li><li><span><b>13.</b></span><span><a href="modulo13.html">Usar el certificado: sedes electrónicas y AutoFirma</a></span></li><li><span><b>14.</b></span><span><a href="modulo14.html">Seguridad: caducidad, renovación y revocación</a></span></li><li><span><b>15.</b></span><span><a href="modulo15.html">Reto final: repaso y caso práctico</a></span></li><li><span>🏁</span><span><a href="examen_final.html">Examen final</a></span></li></ul>
+<div class="navigation"><span></span><button class="nav-btn" onclick="window.location='modulo1.html'">Comenzar ➡️</button></div>
+      
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

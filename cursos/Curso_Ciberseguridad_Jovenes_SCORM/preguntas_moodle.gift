@@ -1,0 +1,64 @@
+// Curso de Ciberseguridad para jóvenes de 16 años
+// Formato GIFT para Moodle. Codificación UTF-8.
+// Cada pregunta tiene una única respuesta correcta.
+
+::Ciberseguridad 1::¿Qué es la ciberseguridad? = Proteger dispositivos, cuentas, datos y personas frente a riesgos digitales. ~%0%Instalar muchos juegos ~%0%Tener muchos seguidores ~%0%Cambiar de móvil cada año
+
+::Ciberseguridad 2::¿Cuál es una buena práctica con las contraseñas? = Usar una contraseña larga y diferente para cada servicio. ~%0%Usar la misma en todas partes ~%0%Compartirla con un amigo ~%0%Usar siempre el nombre y año de nacimiento
+
+::Ciberseguridad 3::¿Qué añade la autenticación en dos pasos? = Una segunda prueba de identidad además de la contraseña. ~%0%Una segunda cuenta ~%0%Más publicidad ~%0%Un antivirus obligatorio
+
+::Ciberseguridad 4::¿Cuál es una señal típica de phishing? = Un mensaje que crea urgencia y pide hacer clic o entregar datos. ~%0%Un aviso que esperabas ~%0%Una actualización oficial dentro de la app ~%0%Un mensaje de un profesor que conoces
+
+::Ciberseguridad 5::¿Qué debes hacer ante un enlace sospechoso? = No introducir datos y comprobar el servicio desde su web o app oficial. ~%0%Poner tu contraseña para comprobarlo ~%0%Reenviarlo a tus amigos ~%0%Desactivar el antivirus
+
+::Ciberseguridad 6::¿Qué forma parte de la huella digital? = Lo que publicas, comentas o compartes en Internet. ~%0%Solo las fotos que guardas en tu móvil ~%0%Únicamente tus mensajes privados ~%0%Nada de lo que hagas online
+
+::Ciberseguridad 7::¿Qué conviene hacer con las actualizaciones? = Instalarlas desde las fuentes oficiales y mantener el dispositivo actualizado. ~%0%Ignorarlas siempre ~%0%Instalar cualquier archivo que aparezca ~%0%Desactivar las actualizaciones
+
+::Ciberseguridad 8::¿Qué es malware? = Software creado para realizar acciones maliciosas. ~%0%Una red Wi-Fi ~%0%Un tipo de contraseña ~%0%Una copia de seguridad
+
+::Ciberseguridad 9::En un videojuego, alguien dice ser soporte y pide tu código de acceso. ¿Qué haces? = No lo compartes y utilizas los canales oficiales de soporte. ~%0%Se lo das si conoce tu nombre ~%0%Lo publicas en el chat ~%0%Le das también tu contraseña
+
+::Ciberseguridad 10::¿Qué conviene hacer ante ciberacoso? = Guardar pruebas si es seguro, bloquear/reportar y pedir ayuda. ~%0%Reenviar el contenido ~%0%Responder atacando ~%0%Quedarse siempre en silencio
+
+::Ciberseguridad 11::Si crees que han entrado en tu cuenta, ¿qué haces? = Cambiar la contraseña desde un dispositivo confiable, cerrar sesiones y activar 2FA. ~%0%Publicar la contraseña para avisar ~%0%Ignorarlo ~%0%Descargar un programa desconocido
+
+::Ciberseguridad 12::¿Cuál es una buena regla antes de compartir una foto de otra persona? = Pensar si tienes permiso y si la publicación puede perjudicarla. ~%0%Compartirla porque ya existe ~%0%Compartirla solo con desconocidos ~%0%Etiquetar a todo el mundo
+
+::Ciberseguridad 13::¿Qué debes hacer con un código de verificación que recibes sin haberlo solicitado? = No compartirlo y revisar si alguien intenta acceder a tu cuenta. ~%0%Compartirlo con quien lo pida ~%0%Publicarlo ~%0%Responder con otra contraseña
+
+::Ciberseguridad 14::¿Qué opción reduce el riesgo al instalar una app? = Usar una tienda o fuente oficial y revisar permisos. ~%0%Buscar la versión pirateada ~%0%Aceptar todos los permisos sin mirar ~%0%Instalarla desde un enlace recibido en un chat
+
+::Ciberseguridad 15::¿Qué es una copia de seguridad? = Una copia de datos que permite recuperarlos si se pierden o dañan. ~%0%Un antivirus ~%0%Una contraseña secundaria ~%0%Un perfil privado
+
+::Ciberseguridad 16::¿Por qué es útil bloquear la pantalla? = Dificulta que otra persona acceda al dispositivo si lo dejas solo. ~%0%Aumenta la velocidad ~%0%Evita todos los virus ~%0%Hace invisible el móvil
+
+::Ciberseguridad 17::¿Qué debes hacer si pierdes el móvil? = Usar las herramientas oficiales para localizar/bloquearlo y avisar a una persona responsable si procede. ~%0%Esperar semanas ~%0%Publicar tus contraseñas ~%0%Desactivar todas las cuentas de tus amigos
+
+::Ciberseguridad 18::¿Qué señal hace sospechoso un premio online? = Que te pida datos sensibles, dinero o códigos para recibirlo. ~%0%Que tenga un diseño bonito ~%0%Que aparezca una imagen ~%0%Que use emojis
+
+::Ciberseguridad 19::¿Qué información no deberías publicar junto con tu rutina diaria? = Tu ubicación en tiempo real y horarios habituales. ~%0%Un dibujo ~%0%Una opinión sobre una película ~%0%El nombre de una canción
+
+::Ciberseguridad 20::¿Qué es la suplantación de identidad? = Hacerse pasar por otra persona o servicio para engañar. ~%0%Cambiar de avatar ~%0%Usar un apodo ~%0%Crear una contraseña
+
+::Ciberseguridad 21::¿Qué haces si un amigo te pide dinero desde una cuenta que no reconoces? = Compruebas por otro medio que realmente es tu amigo antes de actuar. ~%0%Envías el dinero inmediatamente ~%0%Pides su contraseña ~%0%Publicas su teléfono
+
+::Ciberseguridad 22::¿Qué significa reportar un contenido? = Avisar a la plataforma de que puede incumplir sus normas o ser dañino. ~%0%Compartirlo más veces ~%0%Guardarlo como favorito ~%0%Responder con insultos
+
+::Ciberseguridad 23::¿Por qué no debes usar cracks o software pirateado? = Pueden incluir malware y además proceden de fuentes no confiables. ~%0%Porque siempre ocupan más espacio ~%0%Porque cambian el fondo ~%0%Porque no tienen iconos
+
+::Ciberseguridad 24::¿Qué es una buena reacción ante un error cometido online? = Parar, pedir ayuda y aprender de lo ocurrido. ~%0%Ocultarlo siempre ~%0%Culpar a otra persona ~%0%Seguir haciendo lo mismo
+
+::Ciberseguridad 25::¿Qué dato es especialmente sensible para el acceso a una cuenta? = Un código de verificación de un solo uso. ~%0%El color favorito ~%0%El videojuego preferido ~%0%La marca de zapatillas
+
+::Ciberseguridad 26::¿Qué haces antes de aceptar una solicitud de amistad de alguien desconocido? = Piensas si tienes un motivo para aceptarla y evitas compartir datos personales. ~%0%Le das tu teléfono ~%0%Le mandas una foto privada ~%0%Le das tu contraseña
+
+::Ciberseguridad 27::¿Qué principio resume mejor el curso? = Parar, pensar y comprobar antes de actuar. ~%0%Hacer clic rápido ~%0%Confiar en cualquier logo ~%0%Compartir todo con amigos
+
+::Ciberseguridad 28::¿Qué es una red Wi‑Fi pública? = Una red de acceso compartido que no debes asumir que es de confianza. ~%0%Una contraseña ~%0%Un antivirus ~%0%Una copia de seguridad
+
+::Ciberseguridad 29::¿Qué haces si una página imita perfectamente a una marca? = Compruebas la dirección y accedes por un canal oficial en lugar de confiar solo en su apariencia. ~%0%Introduces la contraseña ~%0%Descargas lo que ofrezca ~%0%Das tus datos para verificar
+
+::Ciberseguridad 30::¿Qué hábito mejora la seguridad de forma continua? = Revisar cuentas, actualizaciones, privacidad y accesos periódicamente. ~%0%Cambiar de dispositivo cada mes ~%0%Aceptar todas las solicitudes ~%0%Usar una única contraseña
+
