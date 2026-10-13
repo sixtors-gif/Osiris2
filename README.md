@@ -28,3 +28,11 @@ El Curso 2 (`CiberSeguridad_Avanzada`) se genera con los scripts de `herramienta
 python3 herramientas/generar_ciberseguridad_avanzada_modulos.py cursos/CiberSeguridad_Avanzada
 python3 herramientas/generar_ciberseguridad_avanzada_examen.py cursos/CiberSeguridad_Avanzada
 ```
+
+## Mantener actualizada la carpeta `F:\Temas` (Windows)
+
+1. Clona el repositorio una vez en tu PC:
+   `git clone -b claude/focused-franklin-3ugnxv https://github.com/sixtors-gif/Osiris2.git`
+2. Cada vez que haya cambios, haz doble clic en `herramientas\actualizar_F_Temas.bat`.
+   Descarga la última versión y copia `cursos\`, `paquetes\` y este README a `F:\Temas`
+   (añade y sobrescribe archivos, pero no borra nada que ya tengas allí).
