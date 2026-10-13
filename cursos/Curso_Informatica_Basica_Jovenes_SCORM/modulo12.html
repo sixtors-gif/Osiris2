@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 12: Proyecto final: la ficha de tu equipo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🏆</span>Módulo 12: Proyecto final: la ficha de tu equipo</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Investiga tu propio ordenador o móvil con lo que has aprendido.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:92%"></div></div>
+    <div class="progress-text">Informática básica · Módulo 12 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>Conviértete en detective de tu equipo</h2>
+      <p>Vas a hacer la <b>ficha técnica de tu ordenador o móvil</b> (o de uno del centro, con permiso). Así es como se averiguan los datos:</p>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Dispositivo</th><th>Dónde mirarlo</th></tr><tr><td>Windows</td><td><b>Configuración › Sistema › Información</b>. Para más detalle, escribe <code>msinfo32</code> en el buscador.</td></tr><tr><td>macOS</td><td>Menú  › <b>Acerca de este Mac</b></td></tr><tr><td>Linux (Ubuntu)</td><td><b>Configuración › Acerca de</b> (o «Sistema › Acerca de»)</td></tr><tr><td>Android</td><td><b>Ajustes › Acerca del teléfono</b></td></tr><tr><td>iPhone / iPad</td><td><b>Ajustes › General › Información</b></td></tr></table></div>
+      <div class="activity checklist">
+        <h3>✔️ Rellena tu ficha</h3>
+        <p>Marca cada dato a medida que lo encuentres:</p>
+        <label><input type="checkbox" class="chk"> Tipo de dispositivo y modelo</label>
+        <label><input type="checkbox" class="chk"> Procesador</label>
+        <label><input type="checkbox" class="chk"> Memoria RAM</label>
+        <label><input type="checkbox" class="chk"> Almacenamiento total y libre</label>
+        <label><input type="checkbox" class="chk"> Sistema operativo y versión</label>
+        <label><input type="checkbox" class="chk"> ¿Está actualizado?</label>
+        <label><input type="checkbox" class="chk"> Periféricos que usas (entrada, salida, mixtos)</label>
+        <label><input type="checkbox" class="chk"> ¿Cómo se conecta a Internet? (wifi, cable, datos)</label>
+        <label><input type="checkbox" class="chk"> ¿Dónde están tus copias de seguridad?</label>
+        <button class="btn" onclick="progreso()">Ver mi progreso</button>
+        <p class="feedback" id="prog"></p>
+      </div>
+      <div class="activity"><h3>✍️ Entrega: tu ficha y tu valoración</h3><p>Copia aquí los datos y responde: ¿es suficiente tu equipo para lo que haces? ¿Qué mejorarías primero (RAM, SSD, copias, actualizaciones…)?</p><textarea placeholder="Modelo: ... Procesador: ... RAM: ... Valoración: ..."></textarea></div>
+      <div class="box tip"><b>No compartas</b> números de serie, IMEI ni contraseñas en tu entrega: no hacen falta para el proyecto.</div>
+      <div class="summary-box"><b>¡Enhorabuena!</b> Has completado los 12 módulos. Ahora puedes hacer el examen final.</div>
+      <script>function progreso(){var c=document.querySelectorAll('.chk:checked').length,t=document.querySelectorAll('.chk').length;document.getElementById('prog').textContent=c===t?'🏆 ¡Ficha completa! '+c+'/'+t:'Llevas '+c+' de '+t+' datos. ¡Sigue!';}</script>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo11.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('examen_final.html')">Ir al examen final 🏁</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Informática básica para jóvenes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function checkAnswer(btn,ok,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(ok?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=ok?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es correcto. Vuelve a leer el apartado e inténtalo de nuevo.';}
+function checkNum(id,exp,fb,msg){var s=String(document.getElementById(id).value).trim(),e=document.getElementById(fb);
+// Acepta 37,5 / 37.5 / 3.072 / 3072: prueba el punto como decimal y como separador de miles.
+var c=[parseFloat(s.replace(/\./g,'').replace(',','.')),parseFloat(s.replace(',','.'))];if(c.some(function(v){return isFinite(v)&&Math.abs(v-exp)<0.01})){e.textContent='✅ '+msg;}else{e.textContent='❌ Todavía no. Repasa la tabla y prueba de nuevo.';}}
+function checkClasifica(id){var ok=0,t=0;document.querySelectorAll('#'+id+' select').forEach(function(s){t++;var bien=s.value===s.getAttribute('data-ok');if(bien)ok++;s.style.borderColor=s.value?(bien?'#4caf50':'#f44336'):'#bbb';});document.getElementById(id+'-fb').textContent=(ok===t?'✅ ¡Perfecto! ':'Llevas ')+ok+' de '+t+' bien.'+(ok===t?'':' Las que están en rojo merecen otra vuelta.');}
+</script>
+</body>
+</html>

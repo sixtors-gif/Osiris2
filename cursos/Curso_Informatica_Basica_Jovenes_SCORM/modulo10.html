@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 10: Cuidado y mantenimiento del equipo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🧰</span>Módulo 10: Cuidado y mantenimiento del equipo</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Pequeños hábitos para que tu equipo dure más y funcione mejor.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:77%"></div></div>
+    <div class="progress-text">Informática básica · Módulo 10 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>Mantener el equipo en forma</h2>
+      <div class="card-grid"><div class="mini-card"><div class="ico">🔄</div><b>Actualiza</b><span class="small">Sistema y apps: corrigen fallos y agujeros de seguridad.</span></div><div class="mini-card"><div class="ico">🧹</div><b>Limpia</b><span class="small">Desinstala lo que no uses y vacía Descargas y Papelera.</span></div><div class="mini-card"><div class="ico">🛡️</div><b>Protege</b><span class="small">Antivirus activo (en Windows, el que trae ya sirve) y solo descargas oficiales.</span></div><div class="mini-card"><div class="ico">💾</div><b>Copia</b><span class="small">Copias de seguridad de lo importante.</span></div><div class="mini-card"><div class="ico">🔋</div><b>Batería</b><span class="small">Evita calor extremo; no la dejes siempre al 0 %.</span></div><div class="mini-card"><div class="ico">🌬️</div><b>Ventila</b><span class="small">No tapes las rejillas; quita el polvo con cuidado.</span></div></div>
+      <h3>Si el equipo va lento…</h3>
+      <div class="flow"><div class="flow-step">🔁 Reinicia</div><span class="flow-arrow">➜</span><div class="flow-step">📋 Cierra programas que no uses</div><span class="flow-arrow">➜</span><div class="flow-step">🧮 Mira el Administrador de tareas</div><span class="flow-arrow">➜</span><div class="flow-step">🗑️ Libera espacio</div><span class="flow-arrow">➜</span><div class="flow-step">🔄 Actualiza</div></div>
+      <p>En Windows, el <b>Administrador de tareas</b> (<kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>Esc</kbd>) muestra qué programas consumen más procesador y memoria. En el móvil, revisa en Ajustes qué apps gastan más batería y almacenamiento.</p>
+      <h3>Cuídate tú también: ergonomía</h3>
+      <div class="figure"><img src="img/ergonomia.svg" alt="Postura correcta: pantalla a la altura de los ojos, a un brazo de distancia, espalda apoyada, codos a 90 grados y pies en el suelo"><div class="figure-caption">Una buena postura evita dolores de espalda, cuello y vista.</div></div>
+      <ul class="key-points"><li>🧘 <span>Regla <b>20-20-20</b>: cada 20 minutos, mira algo a 20 pies (unos 6 metros) durante 20 segundos.</span></li><li>🧘 <span>Levántate y muévete al menos cada hora.</span></li><li>🧘 <span>Buena iluminación, sin reflejos en la pantalla.</span></li><li>🧘 <span>Evita pantallas justo antes de dormir.</span></li></ul>
+      <div class="quiz"><h4>🧩 El portátil va muy lento desde hace días. ¿Qué es lo primero y más sencillo?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m10a')">A. Comprar otro</button><button class="option" onclick="checkAnswer(this,true,'m10a')">B. Reiniciarlo y cerrar los programas que no uses</button><button class="option" onclick="checkAnswer(this,false,'m10a')">C. Abrirlo y quitar piezas</button></div><p class="feedback" id="fb-m10a" data-ok="Muchos problemas se resuelven reiniciando y liberando memoria."></p></div>
+      <div class="quiz"><h4>🧩 ¿A qué altura debe quedar la pantalla?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'m10b')">A. Con el borde superior a la altura de los ojos</button><button class="option" onclick="checkAnswer(this,false,'m10b')">B. Muy por debajo de la mesa</button><button class="option" onclick="checkAnswer(this,false,'m10b')">C. Lo más alta posible, para mirar hacia arriba</button></div><p class="feedback" id="fb-m10b" data-ok="Así el cuello queda recto y relajado."></p></div>
+      <div class="summary-box"><b>Resumen:</b> actualiza, limpia, protege, copia y ventila. Y cuida tu postura y tu vista.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo9.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo11.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Informática básica para jóvenes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function checkAnswer(btn,ok,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(ok?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=ok?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es correcto. Vuelve a leer el apartado e inténtalo de nuevo.';}
+function checkNum(id,exp,fb,msg){var s=String(document.getElementById(id).value).trim(),e=document.getElementById(fb);
+// Acepta 37,5 / 37.5 / 3.072 / 3072: prueba el punto como decimal y como separador de miles.
+var c=[parseFloat(s.replace(/\./g,'').replace(',','.')),parseFloat(s.replace(',','.'))];if(c.some(function(v){return isFinite(v)&&Math.abs(v-exp)<0.01})){e.textContent='✅ '+msg;}else{e.textContent='❌ Todavía no. Repasa la tabla y prueba de nuevo.';}}
+function checkClasifica(id){var ok=0,t=0;document.querySelectorAll('#'+id+' select').forEach(function(s){t++;var bien=s.value===s.getAttribute('data-ok');if(bien)ok++;s.style.borderColor=s.value?(bien?'#4caf50':'#f44336'):'#bbb';});document.getElementById(id+'-fb').textContent=(ok===t?'✅ ¡Perfecto! ':'Llevas ')+ok+' de '+t+' bien.'+(ok===t?'':' Las que están en rojo merecen otra vuelta.');}
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 9: Redes e Internet</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🌐</span>Módulo 9: Redes e Internet</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Cómo se conectan tus dispositivos entre sí y con el resto del mundo.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:69%"></div></div>
+    <div class="progress-text">Informática básica · Módulo 9 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>De tu casa al mundo</h2>
+      <p>Una <b>red</b> son varios dispositivos conectados para compartir información. <b>Internet</b> es la red de redes: une millones de redes de todo el mundo.</p>
+      <div class="figure"><img src="img/red_domestica.svg" alt="Red doméstica: Internet, router y dispositivos por cable y wifi"><div class="figure-caption">En casa, el router reparte la conexión a Internet por cable y por wifi.</div></div>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Elemento</th><th>Qué es</th></tr><tr><td><b>Router</b></td><td>El aparato que conecta tu red de casa con Internet y crea el wifi.</td></tr><tr><td><b>Wifi</b></td><td>Conexión sin cables entre tus dispositivos y el router.</td></tr><tr><td><b>Cable de red (Ethernet)</b></td><td>Conexión con cable: más estable y rápida que el wifi.</td></tr><tr><td><b>Datos móviles (4G/5G)</b></td><td>Internet a través de la compañía de teléfono, fuera de casa.</td></tr><tr><td><b>Dirección IP</b></td><td>El «número de teléfono» de cada dispositivo en la red.</td></tr><tr><td><b>Navegador</b></td><td>El programa para ver páginas web: Firefox, Chrome, Edge, Safari…</td></tr></table></div>
+      <h3>Internet no es solo la web</h3>
+      <div class="card-grid"><div class="mini-card"><div class="ico">🌍</div><b>Web</b><span class="small">Páginas que visitas con el navegador.</span></div><div class="mini-card"><div class="ico">✉️</div><b>Correo</b><span class="small">Mensajes con archivos adjuntos.</span></div><div class="mini-card"><div class="ico">💬</div><b>Mensajería</b><span class="small">Chats, llamadas y videollamadas.</span></div><div class="mini-card"><div class="ico">☁️</div><b>Nube</b><span class="small">Guardar y compartir archivos en servidores.</span></div><div class="mini-card"><div class="ico">🎮</div><b>Juego online</b><span class="small">Partidas con otras personas.</span></div><div class="mini-card"><div class="ico">📺</div><b>Streaming</b><span class="small">Música y vídeo sin descargarlos.</span></div></div>
+      <div class="box tip"><b>Seguridad básica:</b> busca el candado 🔒 y <code>https://</code> al escribir datos, no te conectes a wifis públicas para cosas importantes y cambia la contraseña del wifi que trae el router de fábrica.</div>
+      <div class="quiz"><h4>🧩 ¿Qué aparato conecta la red de tu casa con Internet?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'m9a')">A. El router</button><button class="option" onclick="checkAnswer(this,false,'m9a')">B. La impresora</button><button class="option" onclick="checkAnswer(this,false,'m9a')">C. El monitor</button></div><p class="feedback" id="fb-m9a" data-ok="El router es la puerta entre tu red e Internet."></p></div>
+      <div class="quiz"><h4>🧩 ¿Qué conexión suele ser más estable para jugar online?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m9b')">A. Wifi lejos del router</button><button class="option" onclick="checkAnswer(this,true,'m9b')">B. Cable de red (Ethernet)</button><button class="option" onclick="checkAnswer(this,false,'m9b')">C. Bluetooth</button></div><p class="feedback" id="fb-m9b" data-ok="El cable no sufre interferencias ni pérdidas por distancia."></p></div>
+      <div class="summary-box"><b>Resumen:</b> router + wifi/cable en casa, datos móviles fuera. Internet incluye web, correo, mensajería, nube, juegos y streaming.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo8.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo10.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Informática básica para jóvenes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function checkAnswer(btn,ok,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(ok?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=ok?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es correcto. Vuelve a leer el apartado e inténtalo de nuevo.';}
+function checkNum(id,exp,fb,msg){var s=String(document.getElementById(id).value).trim(),e=document.getElementById(fb);
+// Acepta 37,5 / 37.5 / 3.072 / 3072: prueba el punto como decimal y como separador de miles.
+var c=[parseFloat(s.replace(/\./g,'').replace(',','.')),parseFloat(s.replace(',','.'))];if(c.some(function(v){return isFinite(v)&&Math.abs(v-exp)<0.01})){e.textContent='✅ '+msg;}else{e.textContent='❌ Todavía no. Repasa la tabla y prueba de nuevo.';}}
+function checkClasifica(id){var ok=0,t=0;document.querySelectorAll('#'+id+' select').forEach(function(s){t++;var bien=s.value===s.getAttribute('data-ok');if(bien)ok++;s.style.borderColor=s.value?(bien?'#4caf50':'#f44336'):'#bbb';});document.getElementById(id+'-fb').textContent=(ok===t?'✅ ¡Perfecto! ':'Llevas ')+ok+' de '+t+' bien.'+(ok===t?'':' Las que están en rojo merecen otra vuelta.');}
+</script>
+</body>
+</html>

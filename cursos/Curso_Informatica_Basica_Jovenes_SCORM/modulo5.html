@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 5: Almacenamiento: dónde se guardan tus archivos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">💾</span>Módulo 5: Almacenamiento: dónde se guardan tus archivos</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Discos duros, SSD, memorias USB, tarjetas y la nube.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:38%"></div></div>
+    <div class="progress-text">Informática básica · Módulo 5 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>Guardar para no perder</h2>
+      <p>El <b>almacenamiento</b> conserva tus archivos y programas aunque apagues el aparato. Hay varios tipos, cada uno con sus ventajas.</p>
+      <div class="figure"><img src="img/tipos_almacenamiento.svg" alt="Disco duro, SSD, memoria USB, tarjeta SD y nube"><div class="figure-caption">Tipos de almacenamiento más comunes.</div></div>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Tipo</th><th>Ventajas</th><th>Inconvenientes</th></tr><tr><td><b>Disco duro (HDD)</b></td><td>Mucha capacidad por poco dinero.</td><td>Lento y delicado: tiene piezas que giran.</td></tr><tr><td><b>SSD</b></td><td>Muy rápido, silencioso y resistente a golpes.</td><td>Algo más caro por GB.</td></tr><tr><td><b>Memoria USB / tarjeta SD</b></td><td>Pequeñas y fáciles de llevar.</td><td>Se pierden con facilidad; no son buenas como única copia.</td></tr><tr><td><b>Nube</b> (Google Drive, OneDrive, iCloud…)</td><td>Accesible desde cualquier dispositivo; copia fuera de casa.</td><td>Necesita Internet y una cuenta bien protegida; espacio gratis limitado.</td></tr></table></div>
+      <h3>La regla de oro: copias de seguridad</h3>
+      <p>Los aparatos se rompen, se pierden y los roban. Si algo te importa, debe estar <b>al menos en dos sitios</b>; por ejemplo, en tu ordenador y en la nube o en un disco externo.</p>
+      <ul class="key-points"><li>🛟 <span>Activa la copia automática de fotos del móvil.</span></li><li>🛟 <span>Guarda los trabajos de clase en una carpeta sincronizada con la nube.</span></li><li>🛟 <span>Comprueba de vez en cuando que puedes abrir la copia.</span></li></ul>
+      <div class="quiz"><h4>🧩 ¿Qué tipo de almacenamiento hace que un ordenador arranque más rápido?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m5a')">A. Disco duro mecánico (HDD)</button><button class="option" onclick="checkAnswer(this,true,'m5a')">B. SSD</button><button class="option" onclick="checkAnswer(this,false,'m5a')">C. Una memoria USB</button></div><p class="feedback" id="fb-m5a" data-ok="El SSD no tiene piezas móviles y es muchísimo más rápido."></p></div>
+      <div class="quiz"><h4>🧩 Tu trabajo final solo está en una memoria USB. ¿Qué deberías hacer?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m5b')">A. Nada, es suficiente</button><button class="option" onclick="checkAnswer(this,true,'m5b')">B. Guardar otra copia en el ordenador o en la nube</button><button class="option" onclick="checkAnswer(this,false,'m5b')">C. Borrarlo del USB para que no ocupe</button></div><p class="feedback" id="fb-m5b" data-ok="Una sola copia es un riesgo: si se pierde el USB, pierdes el trabajo."></p></div>
+      <div class="summary-box"><b>Resumen:</b> HDD (barato y lento), SSD (rápido), USB/SD (portátiles), nube (en Internet). Y siempre, al menos dos copias.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo4.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo6.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Informática básica para jóvenes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function checkAnswer(btn,ok,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(ok?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=ok?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es correcto. Vuelve a leer el apartado e inténtalo de nuevo.';}
+function checkNum(id,exp,fb,msg){var s=String(document.getElementById(id).value).trim(),e=document.getElementById(fb);
+// Acepta 37,5 / 37.5 / 3.072 / 3072: prueba el punto como decimal y como separador de miles.
+var c=[parseFloat(s.replace(/\./g,'').replace(',','.')),parseFloat(s.replace(',','.'))];if(c.some(function(v){return isFinite(v)&&Math.abs(v-exp)<0.01})){e.textContent='✅ '+msg;}else{e.textContent='❌ Todavía no. Repasa la tabla y prueba de nuevo.';}}
+function checkClasifica(id){var ok=0,t=0;document.querySelectorAll('#'+id+' select').forEach(function(s){t++;var bien=s.value===s.getAttribute('data-ok');if(bien)ok++;s.style.borderColor=s.value?(bien?'#4caf50':'#f44336'):'#bbb';});document.getElementById(id+'-fb').textContent=(ok===t?'✅ ¡Perfecto! ':'Llevas ')+ok+' de '+t+' bien.'+(ok===t?'':' Las que están en rojo merecen otra vuelta.');}
+</script>
+</body>
+</html>

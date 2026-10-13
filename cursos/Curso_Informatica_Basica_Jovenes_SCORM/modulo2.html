@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 2: Hardware: el ordenador por dentro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🔩</span>Módulo 2: Hardware: el ordenador por dentro</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Conoce las piezas principales y para qué sirve cada una.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:15%"></div></div>
+    <div class="progress-text">Informática básica · Módulo 2 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>¿Qué hay dentro de la caja?</h2>
+      <p>Si abrimos un ordenador de sobremesa encontramos varias piezas conectadas a una gran tarjeta llamada <b>placa base</b>. En un portátil o un móvil están las mismas piezas, pero mucho más pequeñas y juntas.</p>
+      <div class="figure"><img src="img/ordenador_por_dentro.svg" alt="Torre abierta con procesador, memoria RAM, placa base, tarjeta gráfica, disco SSD, disco duro, fuente de alimentación y ventilador"><div class="figure-caption">Las piezas principales de un ordenador de sobremesa.</div></div>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Pieza</th><th>Qué hace</th><th>Compáralo con…</th></tr><tr><td><b>Placa base</b></td><td>Conecta todas las piezas entre sí.</td><td>Las calles de una ciudad.</td></tr><tr><td><b>Procesador (CPU)</b></td><td>Ejecuta las instrucciones de los programas.</td><td>El cerebro.</td></tr><tr><td><b>Memoria RAM</b></td><td>Guarda lo que estás usando <i>ahora</i>. Se borra al apagar.</td><td>La mesa de estudio: cuanto más grande, más cosas abiertas a la vez.</td></tr><tr><td><b>Almacenamiento (SSD/HDD)</b></td><td>Guarda archivos y programas aunque se apague.</td><td>La estantería o el armario.</td></tr><tr><td><b>Tarjeta gráfica (GPU)</b></td><td>Calcula las imágenes que ves (juegos, vídeo, 3D).</td><td>Un artista especializado en dibujar.</td></tr><tr><td><b>Fuente de alimentación</b></td><td>Transforma la corriente del enchufe para las piezas.</td><td>El corazón que reparte energía.</td></tr><tr><td><b>Ventiladores y disipador</b></td><td>Evitan que las piezas se calienten demasiado.</td><td>El aire acondicionado.</td></tr></table></div>
+      <div class="alert-box"><b>RAM no es lo mismo que almacenamiento.</b> Un móvil «de 8 GB de RAM y 256 GB» tiene 8 GB para trabajar con lo que tienes abierto y 256 GB para guardar fotos, apps y archivos.</div>
+      <h3>¿Qué hace que un ordenador vaya rápido?</h3>
+      <ul class="key-points"><li>⚡ <span>Un <b>procesador</b> moderno con varios <b>núcleos</b> (trabajadores en paralelo).</span></li><li>⚡ <span>Suficiente <b>RAM</b> para lo que usas (hoy, 8 GB como mínimo; 16 GB va holgado).</span></li><li>⚡ <span>Un <b>SSD</b> en lugar de un disco duro mecánico: arranca y abre programas mucho antes.</span></li></ul>
+      <div class="quiz"><h4>🧩 Tienes muchas pestañas y programas abiertos y todo va lento. ¿Qué pieza se está quedando corta probablemente?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'m2a')">A. La memoria RAM</button><button class="option" onclick="checkAnswer(this,false,'m2a')">B. La fuente de alimentación</button><button class="option" onclick="checkAnswer(this,false,'m2a')">C. El ventilador</button></div><p class="feedback" id="fb-m2a" data-ok="La RAM guarda lo que tienes abierto; si se llena, el equipo se ralentiza."></p></div>
+      <div class="quiz"><h4>🧩 ¿Qué pieza conserva tus fotos aunque apagues el ordenador?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m2b')">A. La RAM</button><button class="option" onclick="checkAnswer(this,true,'m2b')">B. El almacenamiento (SSD o disco duro)</button><button class="option" onclick="checkAnswer(this,false,'m2b')">C. El procesador</button></div><p class="feedback" id="fb-m2b" data-ok="La RAM se borra al apagar; el almacenamiento, no."></p></div>
+      <div class="summary-box"><b>Resumen:</b> placa base (conecta), CPU (piensa), RAM (trabajo del momento), almacenamiento (guarda), GPU (imágenes), fuente (energía) y refrigeración (temperatura).</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo1.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo3.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Informática básica para jóvenes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function checkAnswer(btn,ok,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(ok?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=ok?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es correcto. Vuelve a leer el apartado e inténtalo de nuevo.';}
+function checkNum(id,exp,fb,msg){var s=String(document.getElementById(id).value).trim(),e=document.getElementById(fb);
+// Acepta 37,5 / 37.5 / 3.072 / 3072: prueba el punto como decimal y como separador de miles.
+var c=[parseFloat(s.replace(/\./g,'').replace(',','.')),parseFloat(s.replace(',','.'))];if(c.some(function(v){return isFinite(v)&&Math.abs(v-exp)<0.01})){e.textContent='✅ '+msg;}else{e.textContent='❌ Todavía no. Repasa la tabla y prueba de nuevo.';}}
+function checkClasifica(id){var ok=0,t=0;document.querySelectorAll('#'+id+' select').forEach(function(s){t++;var bien=s.value===s.getAttribute('data-ok');if(bien)ok++;s.style.borderColor=s.value?(bien?'#4caf50':'#f44336'):'#bbb';});document.getElementById(id+'-fb').textContent=(ok===t?'✅ ¡Perfecto! ':'Llevas ')+ok+' de '+t+' bien.'+(ok===t?'':' Las que están en rojo merecen otra vuelta.');}
+</script>
+</body>
+</html>

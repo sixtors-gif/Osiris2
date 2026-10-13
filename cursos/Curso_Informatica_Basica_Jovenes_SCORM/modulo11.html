@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 11: Elegir un ordenador: leer una ficha técnica</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🛒</span>Módulo 11: Elegir un ordenador: leer una ficha técnica</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Entiende qué significan los números antes de comprar.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div>
+    <div class="progress-text">Informática básica · Módulo 11 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>¿Qué dicen todos esos números?</h2>
+      <p>Al comprar un ordenador o un móvil verás una <b>ficha técnica</b>. Con lo aprendido ya puedes entenderla.</p>
+      <div class="figure"><img src="img/ficha_tecnica.svg" alt="Ficha técnica de un portátil de ejemplo"><div class="figure-caption">Ficha de ejemplo (datos ficticios) con la explicación de cada línea.</div></div>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Uso</th><th>RAM orientativa</th><th>Almacenamiento</th><th>Gráfica</th></tr><tr><td>Clase, ofimática, navegar, vídeos</td><td>8 GB</td><td>SSD de 256–512 GB</td><td>Integrada</td></tr><tr><td>Edición de fotos, programación, multitarea</td><td>16 GB</td><td>SSD de 512 GB o más</td><td>Integrada o dedicada básica</td></tr><tr><td>Juegos exigentes, vídeo, 3D</td><td>16–32 GB</td><td>SSD de 1 TB</td><td>Dedicada</td></tr></table></div>
+      <ul class="key-points"><li>✅ <span>Primero decide <b>para qué</b> lo vas a usar; después mira el presupuesto.</span></li><li>✅ <span>Prioriza <b>SSD</b> y suficiente <b>RAM</b>: se notan más que unos pocos GHz.</span></li><li>✅ <span>Comprueba si incluye <b>sistema operativo</b>.</span></li><li>✅ <span>Mira el <b>peso</b> y la <b>batería</b> si lo vas a llevar a clase.</span></li><li>✅ <span>Compara en tiendas fiables y desconfía de chollos imposibles.</span></li></ul>
+      <div class="quiz"><h4>🧩 Lo usarás para clase, documentos y vídeos. ¿Qué configuración tiene más sentido?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'m11a')">A. 8–16 GB de RAM y SSD de 256–512 GB</button><button class="option" onclick="checkAnswer(this,false,'m11a')">B. 64 GB de RAM y gráfica de gama alta</button><button class="option" onclick="checkAnswer(this,false,'m11a')">C. 4 GB de RAM y disco duro mecánico</button></div><p class="feedback" id="fb-m11a" data-ok="Es suficiente para ese uso, sin pagar de más."></p></div>
+      <div class="quiz"><h4>🧩 En una ficha pone «SSD 512 GB». ¿A qué se refiere?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m11b')">A. A la memoria RAM</button><button class="option" onclick="checkAnswer(this,true,'m11b')">B. Al almacenamiento</button><button class="option" onclick="checkAnswer(this,false,'m11b')">C. A la pantalla</button></div><p class="feedback" id="fb-m11b" data-ok="Es el espacio para guardar archivos y programas."></p></div>
+      <div class="activity"><h3>✍️ Actividad: compara dos equipos</h3><p>Busca dos portátiles de precio parecido y compara procesador, RAM, almacenamiento, pantalla, peso y batería. ¿Cuál elegirías y por qué?</p><textarea placeholder="Equipo A: ... Equipo B: ... Elijo ... porque ..."></textarea></div>
+      <div class="summary-box"><b>Resumen:</b> uso → presupuesto → RAM y SSD → resto. Lee la ficha con calma.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo10.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo12.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Informática básica para jóvenes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function checkAnswer(btn,ok,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(ok?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=ok?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es correcto. Vuelve a leer el apartado e inténtalo de nuevo.';}
+function checkNum(id,exp,fb,msg){var s=String(document.getElementById(id).value).trim(),e=document.getElementById(fb);
+// Acepta 37,5 / 37.5 / 3.072 / 3072: prueba el punto como decimal y como separador de miles.
+var c=[parseFloat(s.replace(/\./g,'').replace(',','.')),parseFloat(s.replace(',','.'))];if(c.some(function(v){return isFinite(v)&&Math.abs(v-exp)<0.01})){e.textContent='✅ '+msg;}else{e.textContent='❌ Todavía no. Repasa la tabla y prueba de nuevo.';}}
+function checkClasifica(id){var ok=0,t=0;document.querySelectorAll('#'+id+' select').forEach(function(s){t++;var bien=s.value===s.getAttribute('data-ok');if(bien)ok++;s.style.borderColor=s.value?(bien?'#4caf50':'#f44336'):'#bbb';});document.getElementById(id+'-fb').textContent=(ok===t?'✅ ¡Perfecto! ':'Llevas ')+ok+' de '+t+' bien.'+(ok===t?'':' Las que están en rojo merecen otra vuelta.');}
+</script>
+</body>
+</html>

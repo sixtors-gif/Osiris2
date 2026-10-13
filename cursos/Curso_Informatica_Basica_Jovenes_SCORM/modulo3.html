@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 3: Periféricos: entrada, salida y mixtos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🖱️</span>Módulo 3: Periféricos: entrada, salida y mixtos</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Los aparatos que conectas al ordenador para comunicarte con él.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:23%"></div></div>
+    <div class="progress-text">Informática básica · Módulo 3 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>¿Qué es un periférico?</h2>
+      <p>Un <b>periférico</b> es cualquier aparato que se conecta al ordenador para meter información, sacarla o las dos cosas. Se clasifican según hacia dónde viajan los datos.</p>
+      <div class="figure"><img src="img/perifericos.svg" alt="Periféricos de entrada, de salida y mixtos"><div class="figure-caption">Entrada: los datos entran al ordenador. Salida: salen hacia ti. Mixtos: en los dos sentidos.</div></div>
+      <div class="card-grid"><div class="mini-card"><div class="ico">⬅️</div><b>Entrada</b><span class="small">Teclado, ratón, micrófono, cámara web, escáner, lector de huellas, mando de juego.</span></div><div class="mini-card"><div class="ico">➡️</div><b>Salida</b><span class="small">Monitor, altavoces, impresora, proyector.</span></div><div class="mini-card"><div class="ico">↔️</div><b>Mixtos (entrada/salida)</b><span class="small">Pantalla táctil, cascos con micrófono, memoria USB, impresora multifunción.</span></div></div>
+      <h3>¿Cómo se conectan?</h3>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Conexión</th><th>Para qué se usa</th></tr><tr><td><b>USB</b> (tipo A y tipo C)</td><td>Ratón, teclado, memorias, móvil, carga… El USB-C es reversible.</td></tr><tr><td><b>HDMI</b> / <b>DisplayPort</b></td><td>Monitores, televisores y proyectores.</td></tr><tr><td><b>Jack de 3,5 mm</b></td><td>Auriculares y altavoces con cable.</td></tr><tr><td><b>Bluetooth</b></td><td>Sin cables: auriculares, ratones, teclados, altavoces.</td></tr></table></div>
+      <div class="activity" id="clasif">
+        <h3>🧩 Ejercicio: clasifica los periféricos</h3>
+        <div class="clasifica">
+          <span>⌨️ Teclado</span><select data-ok="e"><option value="">— elige —</option><option value="e">Entrada</option><option value="s">Salida</option><option value="m">Mixto</option></select>
+          <span>🖨️ Impresora (solo imprime)</span><select data-ok="s"><option value="">— elige —</option><option value="e">Entrada</option><option value="s">Salida</option><option value="m">Mixto</option></select>
+          <span>📱 Pantalla táctil</span><select data-ok="m"><option value="">— elige —</option><option value="e">Entrada</option><option value="s">Salida</option><option value="m">Mixto</option></select>
+          <span>🎤 Micrófono</span><select data-ok="e"><option value="">— elige —</option><option value="e">Entrada</option><option value="s">Salida</option><option value="m">Mixto</option></select>
+          <span>🔊 Altavoces</span><select data-ok="s"><option value="">— elige —</option><option value="e">Entrada</option><option value="s">Salida</option><option value="m">Mixto</option></select>
+          <span>🎧 Cascos con micrófono</span><select data-ok="m"><option value="">— elige —</option><option value="e">Entrada</option><option value="s">Salida</option><option value="m">Mixto</option></select>
+          <span>📷 Cámara web</span><select data-ok="e"><option value="">— elige —</option><option value="e">Entrada</option><option value="s">Salida</option><option value="m">Mixto</option></select>
+          <span>📽️ Proyector</span><select data-ok="s"><option value="">— elige —</option><option value="e">Entrada</option><option value="s">Salida</option><option value="m">Mixto</option></select>
+        </div>
+        <button class="btn" onclick="checkClasifica('clasif')">Comprobar</button>
+        <p class="feedback" id="clasif-fb"></p>
+      </div>
+      <div class="quiz"><h4>🧩 Una memoria USB, ¿qué tipo de periférico es?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m3a')">A. Solo de entrada</button><button class="option" onclick="checkAnswer(this,false,'m3a')">B. Solo de salida</button><button class="option" onclick="checkAnswer(this,true,'m3a')">C. Mixto: se leen y se escriben datos</button></div><p class="feedback" id="fb-m3a" data-ok="El ordenador lee y escribe en ella."></p></div>
+      <div class="summary-box"><b>Resumen:</b> entrada (los datos entran), salida (salen hacia ti) y mixtos (en ambos sentidos).</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo2.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo4.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Informática básica para jóvenes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function checkAnswer(btn,ok,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(ok?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=ok?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es correcto. Vuelve a leer el apartado e inténtalo de nuevo.';}
+function checkNum(id,exp,fb,msg){var s=String(document.getElementById(id).value).trim(),e=document.getElementById(fb);
+// Acepta 37,5 / 37.5 / 3.072 / 3072: prueba el punto como decimal y como separador de miles.
+var c=[parseFloat(s.replace(/\./g,'').replace(',','.')),parseFloat(s.replace(',','.'))];if(c.some(function(v){return isFinite(v)&&Math.abs(v-exp)<0.01})){e.textContent='✅ '+msg;}else{e.textContent='❌ Todavía no. Repasa la tabla y prueba de nuevo.';}}
+function checkClasifica(id){var ok=0,t=0;document.querySelectorAll('#'+id+' select').forEach(function(s){t++;var bien=s.value===s.getAttribute('data-ok');if(bien)ok++;s.style.borderColor=s.value?(bien?'#4caf50':'#f44336'):'#bbb';});document.getElementById(id+'-fb').textContent=(ok===t?'✅ ¡Perfecto! ':'Llevas ')+ok+' de '+t+' bien.'+(ok===t?'':' Las que están en rojo merecen otra vuelta.');}
+</script>
+</body>
+</html>

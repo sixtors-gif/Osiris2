@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 4: Bits y bytes: medir la información</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🔢</span>Módulo 4: Bits y bytes: medir la información</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Aprende las unidades que verás en móviles, archivos y tarifas de datos.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:31%"></div></div>
+    <div class="progress-text">Informática básica · Módulo 4 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>Todo son ceros y unos</h2>
+      <p>Dentro del ordenador toda la información (textos, fotos, música, vídeos) se guarda como combinaciones de <b>0 y 1</b>. Cada 0 o 1 es un <b>bit</b>, la unidad más pequeña. Ocho bits forman un <b>byte</b>, que es más o menos lo que ocupa una letra.</p>
+      <div class="figure"><img src="img/unidades_informacion.svg" alt="Escalera de unidades: bit, byte, KB, MB, GB y TB"><div class="figure-caption">Cada escalón es unas mil veces más grande que el anterior.</div></div>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Unidad</th><th>Equivale a</th><th>Ejemplo</th></tr><tr><td>1 byte (B)</td><td>8 bits</td><td>una letra</td></tr><tr><td>1 kilobyte (KB)</td><td>1024 bytes</td><td>un texto corto</td></tr><tr><td>1 megabyte (MB)</td><td>1024 KB</td><td>una foto o una canción (3–5 MB)</td></tr><tr><td>1 gigabyte (GB)</td><td>1024 MB</td><td>una película (1–4 GB)</td></tr><tr><td>1 terabyte (TB)</td><td>1024 GB</td><td>cientos de miles de fotos</td></tr></table></div>
+      <div class="box tip"><b>¿1000 o 1024?</b> Los ordenadores cuentan en potencias de 2 (1024), pero los fabricantes de discos usan 1000. Por eso un disco «de 1 TB» aparece en Windows como unos <b>931 GB</b>: no falta espacio, solo se cuenta distinto.</div>
+      <div class="alert-box"><b>Ojo con la «b»:</b> las velocidades de Internet se miden en <b>bits</b> por segundo (Mb/s, con «b» minúscula). Una fibra de 600 Mb/s descarga como mucho unos 75 MB por segundo (600 ÷ 8).</div>
+      <div class="activity"><h3>🧮 Calcula</h3>
+        <p>1) ¿Cuántos MB son 3 GB? (usa 1 GB = 1024 MB)</p>
+        <input id="c1" class="num" placeholder="MB"> <button class="btn" onclick="checkNum('c1',3072,'f1','Correcto: 3 × 1024 = 3072 MB.')">Comprobar</button><p class="feedback" id="f1"></p>
+        <p>2) Tu móvil tiene 64 GB libres y cada vídeo ocupa 2 GB. ¿Cuántos vídeos caben?</p>
+        <input id="c2" class="num" placeholder="vídeos"> <button class="btn" onclick="checkNum('c2',32,'f2','Correcto: 64 ÷ 2 = 32 vídeos.')">Comprobar</button><p class="feedback" id="f2"></p>
+        <p>3) Una fibra de 300 Mb/s, ¿cuántos MB descarga como máximo por segundo?</p>
+        <input id="c3" class="num" placeholder="MB/s"> <button class="btn" onclick="checkNum('c3',37.5,'f3','Correcto: 300 ÷ 8 = 37,5 MB por segundo.')">Comprobar</button><p class="feedback" id="f3"></p>
+      </div>
+      <div class="quiz"><h4>🧩 ¿Qué es más grande?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m4a')">A. 500 MB</button><button class="option" onclick="checkAnswer(this,true,'m4a')">B. 1 GB</button><button class="option" onclick="checkAnswer(this,false,'m4a')">C. 900 KB</button></div><p class="feedback" id="fb-m4a" data-ok="1 GB son 1024 MB."></p></div>
+      <div class="summary-box"><b>Resumen:</b> bit → byte (×8) → KB → MB → GB → TB (cada uno ×1024). Internet se mide en bits por segundo.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo3.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo5.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Informática básica para jóvenes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function checkAnswer(btn,ok,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(ok?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=ok?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es correcto. Vuelve a leer el apartado e inténtalo de nuevo.';}
+function checkNum(id,exp,fb,msg){var s=String(document.getElementById(id).value).trim(),e=document.getElementById(fb);
+// Acepta 37,5 / 37.5 / 3.072 / 3072: prueba el punto como decimal y como separador de miles.
+var c=[parseFloat(s.replace(/\./g,'').replace(',','.')),parseFloat(s.replace(',','.'))];if(c.some(function(v){return isFinite(v)&&Math.abs(v-exp)<0.01})){e.textContent='✅ '+msg;}else{e.textContent='❌ Todavía no. Repasa la tabla y prueba de nuevo.';}}
+function checkClasifica(id){var ok=0,t=0;document.querySelectorAll('#'+id+' select').forEach(function(s){t++;var bien=s.value===s.getAttribute('data-ok');if(bien)ok++;s.style.borderColor=s.value?(bien?'#4caf50':'#f44336'):'#bbb';});document.getElementById(id+'-fb').textContent=(ok===t?'✅ ¡Perfecto! ':'Llevas ')+ok+' de '+t+' bien.'+(ok===t?'':' Las que están en rojo merecen otra vuelta.');}
+</script>
+</body>
+</html>

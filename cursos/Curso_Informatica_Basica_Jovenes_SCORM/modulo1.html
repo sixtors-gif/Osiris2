@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 1: ¿Qué es un ordenador?</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">💻</span>Módulo 1: ¿Qué es un ordenador?</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Una máquina que recibe datos, los procesa y te devuelve un resultado.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:8%"></div></div>
+    <div class="progress-text">Informática básica · Módulo 1 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>Una máquina que sigue instrucciones</h2>
+      <p>Un <b>ordenador</b> es una máquina electrónica que recibe <b>datos</b>, los <b>procesa</b> siguiendo instrucciones (programas) y devuelve un <b>resultado</b>. No piensa por sí mismo: hace exactamente lo que le dicen los programas, pero a una velocidad enorme.</p>
+      <div class="figure"><img src="img/entrada_proceso_salida.svg" alt="Esquema: entrada, proceso, salida y almacenamiento"><div class="figure-caption">El ciclo de cualquier ordenador: entrada → proceso → salida, guardando lo necesario en el almacenamiento.</div></div>
+      <h3>El ciclo, con un ejemplo</h3>
+      <div class="flow"><div class="flow-step">⌨️ Escribes un mensaje (entrada)</div><span class="flow-arrow">➜</span><div class="flow-step">🧠 El procesador lo prepara (proceso)</div><span class="flow-arrow">➜</span><div class="flow-step">📱 Aparece en la pantalla (salida)</div><span class="flow-arrow">➜</span><div class="flow-step">💾 Se guarda en el chat (almacenamiento)</div></div>
+      <h3>Hay ordenadores por todas partes</h3>
+      <div class="card-grid"><div class="mini-card"><div class="ico">🖥️</div><b>Sobremesa</b><span class="small">Potente y ampliable; no se mueve de la mesa.</span></div><div class="mini-card"><div class="ico">💻</div><b>Portátil</b><span class="small">Todo en uno con batería; para llevar.</span></div><div class="mini-card"><div class="ico">📱</div><b>Móvil y tablet</b><span class="small">Ordenadores de bolsillo con pantalla táctil.</span></div><div class="mini-card"><div class="ico">🎮</div><b>Consola</b><span class="small">Ordenador especializado en juegos.</span></div><div class="mini-card"><div class="ico">⌚</div><b>Reloj inteligente</b><span class="small">Pequeño, con sensores.</span></div><div class="mini-card"><div class="ico">🚗</div><b>Integrados</b><span class="small">En coches, lavadoras o semáforos.</span></div></div>
+      <div class="box tip"><b>Dos palabras clave:</b> el <b>hardware</b> es todo lo que puedes tocar (piezas y aparatos) y el <b>software</b> son los programas y datos que lo hacen funcionar. Los verás a fondo en los próximos módulos.</div>
+      <div class="quiz"><h4>🧩 Haces una foto con el móvil. ¿Qué parte del ciclo es pulsar el botón de la cámara?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m1a')">A. Salida</button><button class="option" onclick="checkAnswer(this,true,'m1a')">B. Entrada</button><button class="option" onclick="checkAnswer(this,false,'m1a')">C. Almacenamiento</button></div><p class="feedback" id="fb-m1a" data-ok="La cámara y el botón introducen datos en el dispositivo."></p></div>
+      <div class="quiz"><h4>🧩 ¿Cuál de estos aparatos también es un ordenador?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'m1b')">A. Una consola de videojuegos</button><button class="option" onclick="checkAnswer(this,false,'m1b')">B. Una bicicleta</button><button class="option" onclick="checkAnswer(this,false,'m1b')">C. Una lámpara de mesa normal</button></div><p class="feedback" id="fb-m1b" data-ok="Tiene procesador, memoria, almacenamiento y ejecuta programas."></p></div>
+      <div class="activity"><h3>✍️ Actividad: ordenadores a tu alrededor</h3><p>Haz una lista de 5 aparatos de tu casa que lleven un ordenador dentro. Para cada uno, indica cuál es su entrada y su salida.</p><textarea placeholder="Ejemplo: microondas → entrada: botones; salida: pantalla y pitido"></textarea></div>
+      <div class="summary-box"><b>Resumen:</b> un ordenador recibe datos (entrada), los procesa, muestra resultados (salida) y guarda información (almacenamiento).</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('index.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo2.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Informática básica para jóvenes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function checkAnswer(btn,ok,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(ok?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=ok?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es correcto. Vuelve a leer el apartado e inténtalo de nuevo.';}
+function checkNum(id,exp,fb,msg){var s=String(document.getElementById(id).value).trim(),e=document.getElementById(fb);
+// Acepta 37,5 / 37.5 / 3.072 / 3072: prueba el punto como decimal y como separador de miles.
+var c=[parseFloat(s.replace(/\./g,'').replace(',','.')),parseFloat(s.replace(',','.'))];if(c.some(function(v){return isFinite(v)&&Math.abs(v-exp)<0.01})){e.textContent='✅ '+msg;}else{e.textContent='❌ Todavía no. Repasa la tabla y prueba de nuevo.';}}
+function checkClasifica(id){var ok=0,t=0;document.querySelectorAll('#'+id+' select').forEach(function(s){t++;var bien=s.value===s.getAttribute('data-ok');if(bien)ok++;s.style.borderColor=s.value?(bien?'#4caf50':'#f44336'):'#bbb';});document.getElementById(id+'-fb').textContent=(ok===t?'✅ ¡Perfecto! ':'Llevas ')+ok+' de '+t+' bien.'+(ok===t?'':' Las que están en rojo merecen otra vuelta.');}
+</script>
+</body>
+</html>

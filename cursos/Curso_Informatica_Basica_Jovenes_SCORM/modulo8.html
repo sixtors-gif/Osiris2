@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 8: Archivos y carpetas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">📂</span>Módulo 8: Archivos y carpetas</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Organizar bien tus archivos te ahorra mucho tiempo (y disgustos).</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:62%"></div></div>
+    <div class="progress-text">Informática básica · Módulo 8 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>Archivos, carpetas y rutas</h2>
+      <p>Un <b>archivo</b> (o fichero) es un documento, foto, canción o programa guardado. Las <b>carpetas</b> sirven para agruparlos, y pueden contener otras carpetas. El camino hasta un archivo se llama <b>ruta</b>.</p>
+      <div class="figure"><img src="img/arbol_carpetas.svg" alt="Árbol de carpetas: Documentos, Instituto, Matemáticas, Inglés y Fotos con sus archivos"><div class="figure-caption">Una estructura ordenada y la ruta para llegar a un archivo.</div></div>
+      <h3>La extensión: el «apellido» del archivo</h3>
+      <p>Las letras después del punto indican el <b>tipo de archivo</b> y con qué programa se abre.</p>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Extensión</th><th>Tipo</th><th>Se abre con…</th></tr><tr><td>.odt / .docx</td><td>Documento de texto</td><td>LibreOffice Writer, Word</td></tr><tr><td>.ods / .xlsx</td><td>Hoja de cálculo</td><td>LibreOffice Calc, Excel</td></tr><tr><td>.pdf</td><td>Documento para leer o imprimir</td><td>Navegador, lector de PDF</td></tr><tr><td>.jpg / .png</td><td>Imagen</td><td>Visor de fotos</td></tr><tr><td>.mp3</td><td>Audio</td><td>Reproductor de música</td></tr><tr><td>.mp4</td><td>Vídeo</td><td>Reproductor de vídeo</td></tr><tr><td>.zip</td><td>Archivo comprimido</td><td>El propio sistema operativo</td></tr><tr><td>.exe</td><td>Programa de Windows</td><td>⚠️ Solo si viene de una fuente de confianza</td></tr></table></div>
+      <h3>Buenas costumbres</h3>
+      <ul class="key-points"><li>🗂️ <span>Usa <b>nombres claros</b>: <code>tarea_fracciones_v2.odt</code> mejor que <code>documento1.odt</code>.</span></li><li>🗂️ <span>Evita espacios raros, tildes y símbolos en los nombres si vas a compartir archivos: usa guiones bajos.</span></li><li>🗂️ <span>Crea una carpeta por asignatura o proyecto.</span></li><li>🗂️ <span>Vacía de vez en cuando la carpeta de <b>Descargas</b>.</span></li><li>🗂️ <span>Lo que va a la <b>Papelera</b> aún se puede recuperar; al vaciarla, ya no.</span></li></ul>
+      <div class="alert-box"><b>Doble extensión = alarma.</b> Un archivo llamado <code>notas.pdf.exe</code> parece un PDF, pero es un programa. No lo abras.</div>
+      <div class="quiz"><h4>🧩 ¿Qué tipo de archivo es <code>viaje.mp4</code>?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m8a')">A. Una hoja de cálculo</button><button class="option" onclick="checkAnswer(this,true,'m8a')">B. Un vídeo</button><button class="option" onclick="checkAnswer(this,false,'m8a')">C. Un programa</button></div><p class="feedback" id="fb-m8a" data-ok=".mp4 es una extensión de vídeo."></p></div>
+      <div class="quiz"><h4>🧩 Te llega un archivo llamado <code>examen.pdf.exe</code>. ¿Qué es en realidad?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m8b')">A. Un PDF normal</button><button class="option" onclick="checkAnswer(this,true,'m8b')">B. Un programa que podría ser malicioso</button><button class="option" onclick="checkAnswer(this,false,'m8b')">C. Una imagen</button></div><p class="feedback" id="fb-m8b" data-ok="La extensión real es la última: .exe (programa)."></p></div>
+      <div class="activity"><h3>✍️ Actividad: organiza tu estructura</h3><p>Diseña la estructura de carpetas que usarías este curso (asignaturas, proyectos, fotos…).</p><textarea placeholder="Documentos › Instituto › ..."></textarea></div>
+      <div class="summary-box"><b>Resumen:</b> carpetas bien organizadas, nombres claros, fíjate en la extensión y desconfía de las dobles extensiones.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo7.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo9.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Informática básica para jóvenes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function checkAnswer(btn,ok,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(ok?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=ok?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es correcto. Vuelve a leer el apartado e inténtalo de nuevo.';}
+function checkNum(id,exp,fb,msg){var s=String(document.getElementById(id).value).trim(),e=document.getElementById(fb);
+// Acepta 37,5 / 37.5 / 3.072 / 3072: prueba el punto como decimal y como separador de miles.
+var c=[parseFloat(s.replace(/\./g,'').replace(',','.')),parseFloat(s.replace(',','.'))];if(c.some(function(v){return isFinite(v)&&Math.abs(v-exp)<0.01})){e.textContent='✅ '+msg;}else{e.textContent='❌ Todavía no. Repasa la tabla y prueba de nuevo.';}}
+function checkClasifica(id){var ok=0,t=0;document.querySelectorAll('#'+id+' select').forEach(function(s){t++;var bien=s.value===s.getAttribute('data-ok');if(bien)ok++;s.style.borderColor=s.value?(bien?'#4caf50':'#f44336'):'#bbb';});document.getElementById(id+'-fb').textContent=(ok===t?'✅ ¡Perfecto! ':'Llevas ')+ok+' de '+t+' bien.'+(ok===t?'':' Las que están en rojo merecen otra vuelta.');}
+</script>
+</body>
+</html>

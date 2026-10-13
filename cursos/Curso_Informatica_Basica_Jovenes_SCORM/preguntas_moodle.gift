@@ -1,0 +1,278 @@
+// Informática básica para jóvenes — Banco de preguntas GIFT para Moodle
+// Autor: Sixto Rodríguez de Sepúlveda. Una única respuesta correcta por pregunta; una categoría por módulo.
+
+$CATEGORY: Informática básica para jóvenes/Módulo 01 - ¿Qué es un ordenador?
+
+::INF01-1::¿Cuál es el ciclo básico de funcionamiento de un ordenador? {
+~Encender, jugar y apagar
+=Entrada, proceso y salida
+~Cargar, enchufar y desenchufar
+~Descargar, instalar y borrar
+}
+
+::INF01-2::¿Qué diferencia hay entre hardware y software? {
+=El hardware son las piezas físicas y el software, los programas
+~Son lo mismo
+~El hardware son los programas y el software, las piezas
+~El software solo existe en los móviles
+}
+
+::INF01-3::¿Cuál de estos aparatos lleva un ordenador dentro? {
+~Una mochila
+~Una silla
+~Un libro de papel
+=Una lavadora moderna con programas
+}
+
+$CATEGORY: Informática básica para jóvenes/Módulo 02 - Hardware\: el ordenador por dentro
+
+::INF02-1::¿Qué pieza ejecuta las instrucciones de los programas? {
+~El ventilador
+~La fuente de alimentación
+=El procesador (CPU)
+~La caja
+}
+
+::INF02-2::¿Qué ocurre con el contenido de la memoria RAM al apagar el ordenador? {
+~Se guarda para siempre
+=Se borra
+~Se envía a la nube
+~Se imprime
+}
+
+::INF02-3::¿Qué pieza conecta todos los componentes entre sí? {
+=La placa base
+~El monitor
+~El teclado
+~La memoria USB
+}
+
+$CATEGORY: Informática básica para jóvenes/Módulo 03 - Periféricos\: entrada, salida y mixtos
+
+::INF03-1::¿Cuál de estos es un periférico de entrada? {
+~La impresora
+~El altavoz
+~El proyector
+=El micrófono
+}
+
+::INF03-2::¿Por qué una pantalla táctil es un periférico mixto? {
+~Porque funciona sin electricidad
+~Porque es muy grande
+=Porque muestra imágenes y también recibe tus toques
+~Porque solo muestra imágenes
+}
+
+::INF03-3::¿Qué conexión se usa normalmente para un monitor o un televisor? {
+~Jack de 3,5 mm
+=HDMI
+~Cargador de batería
+~Ninguna
+}
+
+$CATEGORY: Informática básica para jóvenes/Módulo 04 - Bits y bytes\: medir la información
+
+::INF04-1::¿Cuántos bits tiene un byte? {
+=8
+~2
+~10
+~1024
+}
+
+::INF04-2::¿Cuántos MB son 2 GB, contando 1 GB \= 1024 MB? {
+~200
+~2000
+~1024
+=2048
+}
+
+::INF04-3::Una conexión de 600 Mb/s, ¿cuántos MB por segundo descarga como máximo? {
+~4800
+~600
+=75
+~60
+}
+
+$CATEGORY: Informática básica para jóvenes/Módulo 05 - Almacenamiento\: dónde se guardan tus archivos
+
+::INF05-1::¿Qué ventaja principal tiene un SSD frente a un disco duro mecánico? {
+~Siempre es más barato
+=Es mucho más rápido y no tiene piezas móviles
+~Tiene más capacidad por el mismo precio
+~No necesita electricidad
+}
+
+::INF05-2::¿Qué significa tener una buena copia de seguridad? {
+=Tener lo importante en al menos dos sitios distintos
+~Tener el archivo abierto
+~Guardar el archivo dos veces en la misma carpeta
+~Imprimirlo
+}
+
+::INF05-3::¿Qué necesita el almacenamiento en la nube para funcionar? {
+~Nada
+~Un disco duro externo
+~Una impresora
+=Conexión a Internet y una cuenta
+}
+
+$CATEGORY: Informática básica para jóvenes/Módulo 06 - Software\: los programas
+
+::INF06-1::¿Qué es el software libre? {
+~Programas que solo funcionan sin Internet
+~Cualquier programa pirata
+=Software que puedes usar, estudiar, modificar y compartir
+~Programas sin licencia de ningún tipo
+}
+
+::INF06-2::¿Por qué es peligroso descargar programas «crackeados»? {
+~Porque ocupan poco
+=Además de ser ilegal, suelen traer virus o malware
+~Porque son más rápidos
+~No tiene ningún riesgo
+}
+
+::INF06-3::¿Qué es un controlador (driver)? {
+=Un programa que permite al sistema usar una pieza concreta
+~Un tipo de virus
+~Una pieza del teclado
+~Un videojuego
+}
+
+$CATEGORY: Informática básica para jóvenes/Módulo 07 - El sistema operativo
+
+::INF07-1::¿Cuál de estos es un sistema operativo para móviles? {
+~VLC
+~LibreOffice
+~Firefox
+=Android
+}
+
+::INF07-2::¿Por qué hay que instalar las actualizaciones del sistema operativo? {
+~Porque borran tus archivos
+~Porque cambian el fondo de pantalla
+=Porque corrigen fallos y problemas de seguridad
+~No sirven para nada
+}
+
+::INF07-3::¿Qué es la interfaz de un sistema operativo? {
+~El cable de corriente
+=Las ventanas, iconos y menús con los que lo manejas
+~La memoria RAM
+~La caja del ordenador
+}
+
+$CATEGORY: Informática básica para jóvenes/Módulo 08 - Archivos y carpetas
+
+::INF08-1::¿Qué indica la extensión de un archivo, como .pdf o .jpg? {
+=El tipo de archivo y con qué programa se abre
+~Su tamaño
+~La fecha en que se creó
+~Quién lo creó
+}
+
+::INF08-2::¿Qué es en realidad un archivo llamado «trabajo.pdf.exe»? {
+~Una carpeta
+~Un PDF normal
+~Una foto
+=Un programa que podría ser malicioso
+}
+
+::INF08-3::¿Cómo se llama el camino hasta un archivo, por ejemplo Documentos › Instituto › tarea.odt? {
+~Driver
+~Extensión
+=Ruta
+~Píxel
+}
+
+$CATEGORY: Informática básica para jóvenes/Módulo 09 - Redes e Internet
+
+::INF09-1::¿Qué aparato conecta la red de tu casa con Internet? {
+~El monitor
+=El router
+~La impresora
+~El ratón
+}
+
+::INF09-2::¿Qué conexión suele ser más estable y rápida? {
+=Cable de red (Ethernet)
+~Wifi a mucha distancia del router
+~Bluetooth
+~Infrarrojos
+}
+
+::INF09-3::¿Qué programa usas para ver páginas web? {
+~Un controlador
+~Un procesador de textos
+~Un antivirus
+=Un navegador
+}
+
+$CATEGORY: Informática básica para jóvenes/Módulo 10 - Cuidado y mantenimiento del equipo
+
+::INF10-1::El ordenador va lento. ¿Qué es lo primero y más sencillo que puedes probar? {
+~Desmontar el procesador
+~Comprar otro ordenador
+=Reiniciar y cerrar los programas que no uses
+~Borrar el sistema operativo
+}
+
+::INF10-2::¿Qué dice la regla 20-20-20 para cuidar la vista? {
+~Usar el ordenador 20 horas seguidas
+=Cada 20 minutos, mirar a unos 6 metros durante 20 segundos
+~Poner el brillo al 20 %
+~Sentarse a 20 cm de la pantalla
+}
+
+::INF10-3::¿Qué programa de Windows muestra qué aplicaciones consumen más memoria y procesador? {
+=El Administrador de tareas
+~El Bloc de notas
+~La Papelera
+~El Explorador de archivos
+}
+
+$CATEGORY: Informática básica para jóvenes/Módulo 11 - Elegir un ordenador\: leer una ficha técnica
+
+::INF11-1::Para un ordenador de clase y ofimática, ¿qué es lo más importante priorizar? {
+~El tamaño de la caja
+~La gráfica más cara
+~Las luces de colores
+=Un SSD y suficiente RAM
+}
+
+::INF11-2::En una ficha técnica pone «RAM 16 GB». ¿Qué te indica? {
+~El tamaño de la pantalla
+~Cuántas fotos caben
+=Cuánta memoria de trabajo tiene para tener cosas abiertas a la vez
+~La duración de la batería
+}
+
+::INF11-3::¿Qué es lo primero que debes decidir antes de elegir un ordenador? {
+~El color
+=Para qué lo vas a usar
+~La marca de tu amigo
+~Nada, lo más caro siempre es mejor
+}
+
+$CATEGORY: Informática básica para jóvenes/Módulo 12 - Proyecto final\: la ficha de tu equipo
+
+::INF12-1::¿Dónde puedes ver la memoria RAM y el procesador de un ordenador con Windows? {
+=En Configuración › Sistema › Información
+~En la Papelera
+~En el navegador
+~En la calculadora
+}
+
+::INF12-2::Al compartir la ficha de tu equipo en un trabajo, ¿qué no deberías incluir? {
+~El tipo de almacenamiento
+~La cantidad de RAM
+~El sistema operativo
+=Contraseñas y números de serie o IMEI
+}
+
+::INF12-3::¿En qué menú de un móvil Android encuentras la información del dispositivo? {
+~Cámara
+~Galería
+=Ajustes › Acerca del teléfono
+~Contactos
+}

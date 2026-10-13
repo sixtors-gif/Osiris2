@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 6: Software: los programas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🧩</span>Módulo 6: Software: los programas</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Sin software, el hardware no sabe qué hacer.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:46%"></div></div>
+    <div class="progress-text">Informática básica · Módulo 6 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>¿Qué es el software?</h2>
+      <p>El <b>software</b> es el conjunto de <b>programas</b>: instrucciones que le dicen al hardware qué hacer. Se organiza en capas: tú usas las aplicaciones, las aplicaciones se apoyan en el sistema operativo y el sistema operativo controla el hardware.</p>
+      <div class="figure"><img src="img/capas_software.svg" alt="Capas: usuario, aplicaciones, sistema operativo y hardware"><div class="figure-caption">Cada capa se apoya en la de abajo.</div></div>
+      <h3>Tipos de software</h3>
+      <div class="card-grid"><div class="mini-card"><div class="ico">⚙️</div><b>Sistema operativo</b><span class="small">Gestiona el equipo: Windows, macOS, Linux, Android, iOS.</span></div><div class="mini-card"><div class="ico">📝</div><b>Aplicaciones</b><span class="small">Programas para tareas: navegador, procesador de textos, editor de fotos, juegos.</span></div><div class="mini-card"><div class="ico">🔌</div><b>Controladores (drivers)</b><span class="small">Permiten al sistema usar una pieza concreta: impresora, tarjeta gráfica…</span></div></div>
+      <h3>Licencias: ¿qué puedo hacer con un programa?</h3>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Tipo</th><th>Qué significa</th><th>Ejemplo</th></tr><tr><td><b>Software libre</b></td><td>Puedes usarlo, estudiarlo, modificarlo y compartirlo. Suele ser gratuito.</td><td>LibreOffice, Firefox, VLC, GIMP, Linux</td></tr><tr><td><b>Propietario (de pago)</b></td><td>Pagas una licencia para usarlo con las condiciones del fabricante.</td><td>Algunas versiones de Microsoft Office, Photoshop</td></tr><tr><td><b>Freeware</b></td><td>Gratuito, pero no puedes ver ni modificar su código.</td><td>Muchas apps gratuitas</td></tr><tr><td><b>Freemium</b></td><td>Gratis lo básico; pagas por funciones extra.</td><td>Muchos juegos y apps del móvil</td></tr></table></div>
+      <div class="alert-box"><b>Cuidado con el software «pirata» o crackeado:</b> además de ser ilegal, es una de las vías más habituales para meter virus en tu equipo. Si no puedes pagar un programa, busca una alternativa libre o gratuita.</div>
+      <div class="quiz"><h4>🧩 ¿Cuál de estos es un sistema operativo?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'m6a')">A. Android</button><button class="option" onclick="checkAnswer(this,false,'m6a')">B. Un navegador web</button><button class="option" onclick="checkAnswer(this,false,'m6a')">C. Un juego de fútbol</button></div><p class="feedback" id="fb-m6a" data-ok="Android gestiona el móvil; las apps funcionan encima de él."></p></div>
+      <div class="quiz"><h4>🧩 Puedes usar, modificar y compartir legalmente un programa. ¿Qué tipo de licencia tiene?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m6b')">A. Propietario</button><button class="option" onclick="checkAnswer(this,true,'m6b')">B. Software libre</button><button class="option" onclick="checkAnswer(this,false,'m6b')">C. Pirata</button></div><p class="feedback" id="fb-m6b" data-ok="Esas son precisamente las libertades del software libre."></p></div>
+      <div class="activity"><h3>✍️ Actividad: tus programas</h3><p>Elige 5 programas o apps que uses a menudo y busca qué tipo de licencia tienen. ¿Existe una alternativa libre para alguno?</p><textarea placeholder="Programa → tipo de licencia → alternativa libre"></textarea></div>
+      <div class="summary-box"><b>Resumen:</b> sistema operativo + aplicaciones + controladores. Fíjate en la licencia y evita el software pirata.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo5.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo7.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Informática básica para jóvenes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function checkAnswer(btn,ok,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(ok?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=ok?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es correcto. Vuelve a leer el apartado e inténtalo de nuevo.';}
+function checkNum(id,exp,fb,msg){var s=String(document.getElementById(id).value).trim(),e=document.getElementById(fb);
+// Acepta 37,5 / 37.5 / 3.072 / 3072: prueba el punto como decimal y como separador de miles.
+var c=[parseFloat(s.replace(/\./g,'').replace(',','.')),parseFloat(s.replace(',','.'))];if(c.some(function(v){return isFinite(v)&&Math.abs(v-exp)<0.01})){e.textContent='✅ '+msg;}else{e.textContent='❌ Todavía no. Repasa la tabla y prueba de nuevo.';}}
+function checkClasifica(id){var ok=0,t=0;document.querySelectorAll('#'+id+' select').forEach(function(s){t++;var bien=s.value===s.getAttribute('data-ok');if(bien)ok++;s.style.borderColor=s.value?(bien?'#4caf50':'#f44336'):'#bbb';});document.getElementById(id+'-fb').textContent=(ok===t?'✅ ¡Perfecto! ':'Llevas ')+ok+' de '+t+' bien.'+(ok===t?'':' Las que están en rojo merecen otra vuelta.');}
+</script>
+</body>
+</html>
