@@ -6,9 +6,6 @@ Cursos en formato **SCORM 1.2** listos para importar en Moodle. Autor: Sixto Rod
 |---|---|---|
 | Curso 2: Ciberseguridad Avanzada y Defensa Digital | `cursos/CiberSeguridad_Avanzada` | 10 módulos, examen de 20 preguntas, banco GIFT de 30 |
 | Certificados digitales, firma electrónica y FNMT | `cursos/Curso_Certificado_Digital_FNMT_SCORM` | 15 módulos, examen de 33 preguntas, banco GIFT de 48 |
-| Ciberseguridad avanzada para jóvenes | `cursos/Curso_Ciberseguridad_Avanzada_Jovenes_SCORM` | 8 unidades, examen de 8 preguntas, banco GIFT de 8 |
-| Ciberseguridad para jóvenes | `cursos/Curso_Ciberseguridad_Jovenes_SCORM` | 10 módulos, examen de 20 preguntas, banco GIFT de 30 |
-| Ciberseguridad para jóvenes | `cursos/Curso_Ciberseguridad_Jovenes_SCORM_con_modulo_seguridad_avanzada` | 16 módulos, examen de 34 preguntas, banco GIFT de 51 |
 | Ciberseguridad para jóvenes | `cursos/Curso_Ciberseguridad_Jovenes_SCORM_mejorado` | 15 módulos, examen de 32 preguntas, banco GIFT de 46 |
 | Ciberseguridad II: redes sociales en profundidad | `cursos/Curso_Ciberseguridad_Redes_Sociales_SCORM` | 15 módulos, examen de 27 preguntas, banco GIFT de 42 |
 | Escandallo de un catering con Calc | `cursos/Curso_Escandallo_Catering_SCORM` | 13 módulos, examen de 26 preguntas, banco GIFT de 44 |
