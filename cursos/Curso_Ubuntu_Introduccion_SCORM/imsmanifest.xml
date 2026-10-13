@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="ubuntu-introduccion" version="1.1"
+          xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                              http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG_1">
+    <organization identifier="ORG_1">
+      <title>Introducción a Ubuntu para usuarios</title>
+      <item identifier="ITEM_00" identifierref="RES_INDEX">
+        <title>Presentación del curso</title>
+      </item>
+      <item identifier="ITEM_01" identifierref="RES_MODULO1">
+        <title>Módulo 1: ¿Qué es Ubuntu?</title>
+      </item>
+      <item identifier="ITEM_02" identifierref="RES_MODULO2">
+        <title>Módulo 2: Versiones, sabores y requisitos</title>
+      </item>
+      <item identifier="ITEM_03" identifierref="RES_MODULO3">
+        <title>Módulo 3: Probar y preparar la instalación</title>
+      </item>
+      <item identifier="ITEM_04" identifierref="RES_MODULO4">
+        <title>Módulo 4: El instalador (1): idioma, teclado y opciones</title>
+      </item>
+      <item identifier="ITEM_05" identifierref="RES_MODULO5">
+        <title>Módulo 5: El instalador (2): disco, usuario y fin</title>
+      </item>
+      <item identifier="ITEM_06" identifierref="RES_MODULO6">
+        <title>Módulo 6: Primer inicio y el escritorio</title>
+      </item>
+      <item identifier="ITEM_07" identifierref="RES_MODULO7">
+        <title>Módulo 7: Ventanas, espacios de trabajo y atajos</title>
+      </item>
+      <item identifier="ITEM_08" identifierref="RES_MODULO8">
+        <title>Módulo 8: Archivos y carpetas</title>
+      </item>
+      <item identifier="ITEM_09" identifierref="RES_MODULO9">
+        <title>Módulo 9: Tus aplicaciones del día a día</title>
+      </item>
+      <item identifier="ITEM_10" identifierref="RES_MODULO10">
+        <title>Módulo 10: Instalar y quitar aplicaciones</title>
+      </item>
+      <item identifier="ITEM_11" identifierref="RES_MODULO11">
+        <title>Módulo 11: Mantener Ubuntu actualizado</title>
+      </item>
+      <item identifier="ITEM_12" identifierref="RES_MODULO12">
+        <title>Módulo 12: Configuración: tu Ubuntu a tu manera</title>
+      </item>
+      <item identifier="ITEM_13" identifierref="RES_MODULO13">
+        <title>Módulo 13: La terminal sin miedo</title>
+      </item>
+      <item identifier="ITEM_14" identifierref="RES_MODULO14">
+        <title>Módulo 14: Seguridad, privacidad y copias de seguridad</title>
+      </item>
+      <item identifier="ITEM_15" identifierref="RES_MODULO15">
+        <title>Módulo 15: Ayuda, problemas habituales y reto final</title>
+      </item>
+      <item identifier="ITEM_16" identifierref="RES_EXAMEN_FINAL">
+        <title>Examen final</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES_INDEX" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO1" type="webcontent" adlcp:scormtype="sco" href="modulo1.html">
+      <file href="modulo1.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO2" type="webcontent" adlcp:scormtype="sco" href="modulo2.html">
+      <file href="modulo2.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO3" type="webcontent" adlcp:scormtype="sco" href="modulo3.html">
+      <file href="modulo3.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO4" type="webcontent" adlcp:scormtype="sco" href="modulo4.html">
+      <file href="modulo4.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO5" type="webcontent" adlcp:scormtype="sco" href="modulo5.html">
+      <file href="modulo5.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO6" type="webcontent" adlcp:scormtype="sco" href="modulo6.html">
+      <file href="modulo6.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO7" type="webcontent" adlcp:scormtype="sco" href="modulo7.html">
+      <file href="modulo7.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO8" type="webcontent" adlcp:scormtype="sco" href="modulo8.html">
+      <file href="modulo8.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO9" type="webcontent" adlcp:scormtype="sco" href="modulo9.html">
+      <file href="modulo9.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO10" type="webcontent" adlcp:scormtype="sco" href="modulo10.html">
+      <file href="modulo10.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO11" type="webcontent" adlcp:scormtype="sco" href="modulo11.html">
+      <file href="modulo11.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO12" type="webcontent" adlcp:scormtype="sco" href="modulo12.html">
+      <file href="modulo12.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO13" type="webcontent" adlcp:scormtype="sco" href="modulo13.html">
+      <file href="modulo13.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO14" type="webcontent" adlcp:scormtype="sco" href="modulo14.html">
+      <file href="modulo14.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO15" type="webcontent" adlcp:scormtype="sco" href="modulo15.html">
+      <file href="modulo15.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_EXAMEN_FINAL" type="webcontent" adlcp:scormtype="sco" href="examen_final.html">
+      <file href="examen_final.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+  </resources>
+</manifest>

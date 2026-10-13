@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Datos del personal: empleados y nóminas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🔐</span>Datos del personal: empleados y nóminas</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>La protección de datos no es solo cosa de los clientes: también protege al propio equipo.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div>
+    <div class="progress-text">Curso de Protección de Datos · Módulo 11 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Datos del personal: empleados y nóminas</h2>
+
+      <div class="activity">
+        <h3>🗂️ Nóminas y contratos</h3>
+        <p>Las nóminas, contratos y datos bancarios del personal solo deben ser accesibles para dirección y administración/RRHH, nunca visibles para cualquier compañero o de forma pública en un tablón.</p>
+      </div>
+
+      <div class="card-grid">
+        <div class="mini-card">
+          <div class="ico">🖐️</div><b>Control horario</b>Si se usa huella o reconocimiento facial para fichar, es un dato biométrico especialmente protegido: debe existir una alternativa (tarjeta, código) para quien no quiera usarlo.
+        </div>
+        <div class="mini-card">
+          <div class="ico">📹</div><b>Cámaras en el trabajo</b>Permitidas en zonas de atención al público; prohibidas en vestuarios y zonas de descanso del personal, como viste en el módulo 6.
+        </div>
+        <div class="mini-card">
+          <div class="ico">📱</div><b>Dispositivos de empresa</b>El móvil, tablet o PMS de trabajo son para uso profesional. Evita hacer fotos con datos de clientes o compañeros para uso personal.
+        </div>
+        <div class="mini-card">
+          <div class="ico">🤐</div><b>Confidencialidad interna</b>Los datos de un compañero (nómina, bajas médicas, situación personal) no se comentan con el resto del equipo.
+        </div>
+      </div>
+
+      <div class="alert-box">⚠️ <b>Cuidado con la biometría:</b> huella dactilar o reconocimiento facial para el control horario están permitidos, pero requieren una base legal adecuada y nunca pueden ser la única opción obligatoria para todo el personal.</div>
+
+      <ul class="key-points">
+        <li>📸 <span><b>Fotos del equipo</b> para la web o redes sociales del establecimiento: necesitan el consentimiento de cada persona trabajadora que aparece.</span></li>
+        <li>🏥 <span><b>Bajas médicas:</b> el motivo médico concreto de una baja es un dato de salud; en administración basta con gestionar el justificante, sin necesidad de difundir el diagnóstico.</span></li>
+        <li>🔐 <span><b>Acceso por rol:</b> cada persona debería acceder solo a los datos que necesita para su puesto, igual que viste con los datos de clientes.</span></li>
+      </ul>
+
+      <div class="quiz">
+        <h3>🧩 Ejercicio práctico: El nuevo fichaje</h3>
+        <p>El establecimiento instala un sistema de fichaje por huella dactilar y lo hace obligatorio para todo el personal, sin alternativa. ¿Es correcto?</p>
+        <button class="btn" onclick="this.nextElementSibling.textContent='No del todo: al ser un dato biométrico, debe ofrecerse una alternativa (tarjeta, código PIN...) a quien no quiera o no pueda usar la huella dactilar.'">Ver orientación</button>
+        <p class="feedback"></p>
+      </div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo10.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo12.html')">Siguiente ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Protección de Datos · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+</body>
+</html>

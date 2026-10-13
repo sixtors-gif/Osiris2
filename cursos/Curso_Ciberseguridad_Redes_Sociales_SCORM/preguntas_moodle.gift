@@ -1,0 +1,327 @@
+// Curso de Ciberseguridad II: redes sociales en profundidad
+// Autor: Sixto Rodríguez de Sepúlveda
+// Formato GIFT para Moodle. Codificación UTF-8. Una única respuesta correcta por pregunta.
+
+$CATEGORY: Curso Ciberseguridad Redes Sociales/Módulo 1 - Por qué un curso solo de redes sociales
+
+::RRSS01-1::¿En qué se diferencia este curso del de Ciberseguridad general? {
+=Se centra en profundidad solo en las redes sociales
+~Trata sobre todo de virus informáticos
+~No tiene relación con el otro curso
+~Es exactamente el mismo curso
+}
+
+::RRSS01-2::En el semáforo de este curso, ¿qué significa el color ámbar? {
+=Piensa y comprueba antes de actuar
+~Actúa sin dudar
+~Para completamente, nunca lo hagas
+~Ignora la situación
+}
+
+$CATEGORY: Curso Ciberseguridad Redes Sociales/Módulo 2 - Cómo funcionan por dentro: modelo de negocio y algoritmo
+
+::RRSS02-1::¿Por qué son gratis la mayoría de redes sociales? {
+=Porque ganan dinero con publicidad basada en tu atención y tus datos
+~Porque no cuestan nada de mantener
+~Porque las paga el gobierno
+~Porque los usuarios pagan con su móvil
+}
+
+::RRSS02-2::¿Qué intenta maximizar, sobre todo, el algoritmo de una red social? {
+=El tiempo que pasas usando la aplicación
+~Tu bienestar personal
+~El número de amigos que tienes en la vida real
+~La calidad educativa del contenido
+}
+
+::RRSS02-3::¿Qué es la «cámara de eco»? {
+=Ver sobre todo contenido parecido al que ya consumes, sin otras opiniones
+~Un altavoz que usan los creadores de contenido
+~Un fallo técnico de la aplicación
+~Una función para grabar audio
+}
+
+$CATEGORY: Curso Ciberseguridad Redes Sociales/Módulo 3 - Tu huella digital y tu identidad digital
+
+::RRSS03-1::¿Cuál de estos es un ejemplo de huella digital «pasiva»? {
+=Un amigo te etiqueta en una foto sin que tú la hayas subido
+~Tú publicas una foto en tu perfil
+~Tú escribes un comentario en un vídeo
+~Tú cambias tu foto de perfil
+}
+
+::RRSS03-2::¿Qué puede revelar una foto aunque no se vea a simple vista? {
+=La ubicación exacta donde se tomó (metadatos GPS)
+~El nombre de quien la mira
+~La velocidad de tu conexión a Internet
+~El precio del móvil usado
+}
+
+::RRSS03-3::¿Qué pregunta te puede ayudar a decidir si publicar algo o no? {
+=¿Me importaría que lo viera un futuro empleador dentro de diez años?
+~¿Cuántos "me gusta" me va a dar?
+~¿Lo ha publicado ya algún famoso?
+~¿Tengo batería suficiente?
+}
+
+$CATEGORY: Curso Ciberseguridad Redes Sociales/Módulo 4 - Configurar la privacidad paso a paso
+
+::RRSS04-1::Al crear una cuenta nueva, ¿cómo suele venir configurada la privacidad? {
+=Bastante abierta; hay que revisarla y ajustarla tú mismo/a
+~Totalmente privada, no hace falta tocar nada
+~Imposible de cambiar
+~Solo visible para ti
+}
+
+::RRSS04-2::¿Qué es lo más prudente respecto a la ubicación al publicar en redes? {
+=Desactivarla, o al menos no compartir tu ubicación en tiempo real
+~Activarla siempre para que tus amigos te encuentren
+~No importa, nadie la mira
+~Compartirla solo los fines de semana
+}
+
+::RRSS04-3::¿Qué conviene revisar de vez en cuando además de la cuenta principal? {
+=Qué apps de terceros tienen acceso a tu cuenta
+~El color del tema de la aplicación
+~El idioma del teclado
+~El modelo de tu móvil
+}
+
+$CATEGORY: Curso Ciberseguridad Redes Sociales/Módulo 5 - Contraseñas y qué hacer si te hackean una cuenta
+
+::RRSS05-1::¿Por qué es importante usar una contraseña distinta en cada red social? {
+=Porque si una se filtra, las demás cuentas siguen a salvo
+~Porque las plataformas lo exigen por ley
+~No es importante, da igual repetirla
+~Porque así se recuerdan mejor
+}
+
+::RRSS05-2::Detectas que tu cuenta ha sido hackeada, pero todavía puedes entrar. ¿Qué haces primero? {
+=Cambiar la contraseña y cerrar el resto de sesiones activas
+~Esperar a ver qué pasa
+~Borrar la cuenta directamente
+~Cambiar el nombre de usuario
+}
+
+::RRSS05-3::¿Qué NO debes hacer nunca, ni con el "soporte técnico" de una red social? {
+=Compartir el código de verificación en dos pasos
+~Cambiar tu contraseña
+~Cerrar sesiones que no reconoces
+~Revisar tus apps conectadas
+}
+
+$CATEGORY: Curso Ciberseguridad Redes Sociales/Módulo 6 - Detectar perfiles falsos y catfishing
+
+::RRSS06-1::¿Qué es el catfishing? {
+=Hacerse pasar por otra persona en Internet, con una identidad falsa
+~Un tipo de virus informático
+~Una función para editar fotos
+~Un tipo de contraseña
+}
+
+::RRSS06-2::¿Cuál de estas es una señal típica de un perfil falso? {
+=Muchos seguidores pero muy pocas publicaciones y muy pocas fotos propias
+~Llevar varios años con actividad regular
+~Aceptar hacer una videollamada sin problema
+~Tener el perfil verificado
+}
+
+::RRSS06-3::¿Qué herramienta te ayuda a comprobar si una foto de perfil ha sido robada de otra cuenta? {
+=Una búsqueda inversa de imágenes
+~El corrector ortográfico
+~El historial de tu navegador
+~El traductor automático
+}
+
+$CATEGORY: Curso Ciberseguridad Redes Sociales/Módulo 7 - Gestionar contactos: silenciar, bloquear y denunciar
+
+::RRSS07-1::Un contacto publica cosas que no te interesan, pero no te hace ningún daño. ¿Qué herramienta encaja mejor? {
+=Silenciar
+~Bloquear
+~Denunciar
+~Eliminar la cuenta
+}
+
+::RRSS07-2::Alguien te está acosando y valoras contarlo a un adulto. ¿Qué deberías hacer antes de bloquearlo? {
+=Guardar capturas de pantalla de la conversación
+~Responderle con insultos
+~Borrar la app inmediatamente
+~Avisarle de que le vas a bloquear
+}
+
+::RRSS07-3::Ves un vídeo con discurso de odio dirigido a otra persona, no a ti. ¿Deberías denunciarlo? {
+=Sí, se puede denunciar aunque no vaya dirigido a ti
+~No, solo puede denunciarlo la persona afectada
+~Solo si tiene muchos comentarios
+~Solo si es tu amigo
+}
+
+$CATEGORY: Curso Ciberseguridad Redes Sociales/Módulo 8 - Grooming en redes sociales: cómo actúan y señales de alarma
+
+::RRSS08-1::¿Qué es el grooming? {
+=Que una persona adulta manipule a un menor por Internet con fines sexuales
+~Un tipo de virus para móviles
+~Una función de privacidad de las redes sociales
+~Un juego online popular
+}
+
+::RRSS08-2::¿Para qué insiste el groomer en pasar a un chat privado? {
+=Para aislar a la víctima y que nadie más vea la conversación
+~Porque esa app tiene mejores emoticonos
+~Para ahorrar datos móviles
+~Porque es obligatorio en esa red social
+}
+
+::RRSS08-3::Si a alguien le ha pasado esto, ¿de quién es la culpa? {
+=De la persona que manipula, nunca de la víctima
+~De la víctima, por haber hablado con esa persona
+~De la red social por permitir mensajes privados
+~De los padres de la víctima
+}
+
+$CATEGORY: Curso Ciberseguridad Redes Sociales/Módulo 9 - Sextorsión: qué hacer si pasa
+
+::RRSS09-1::Recibes un mensaje de chantaje con una imagen tuya. ¿Cuál es el primer paso correcto? {
+=No pagar ni enviar nada más, y guardar capturas como prueba
+~Pagar lo que piden para que se acabe cuanto antes
+~Borrar inmediatamente la conversación y la cuenta
+~Contárselo solo a amigos, nunca a un adulto
+}
+
+::RRSS09-2::¿De quién es la responsabilidad en un caso de sextorsión? {
+=De quien chantajea, nunca de la víctima
+~De la víctima, por haber compartido la imagen
+~De la plataforma donde ha ocurrido
+~De quien lo cuenta a un adulto
+}
+
+::RRSS09-3::Te amenazan con una imagen tuya generada con inteligencia artificial, que nunca existió de verdad. ¿Cambia el protocolo a seguir? {
+=No\: sigue sin pagar, guarda pruebas y pide ayuda igualmente
+~Sí, al ser falsa no hay que hacer nada
+~Solo hay que preocuparse si la imagen es real
+~Hay que pagar porque parece muy real
+}
+
+$CATEGORY: Curso Ciberseguridad Redes Sociales/Módulo 10 - Ciberacoso en redes sociales
+
+::RRSS10-1::¿Qué diferencia al ciberacoso de un conflicto puntual? {
+=Que es repetido y busca hacer daño de forma continuada
+~Que ocurre siempre en persona
+~Que solo afecta a menores de 12 años
+~Que solo ocurre entre desconocidos
+}
+
+::RRSS10-2::Ves cómo humillan a un compañero en un grupo, pero no participas activamente. ¿Qué deberías evitar? {
+=Reenviar o comentar el contenido humillante, aunque sea "en broma"
+~Apoyar en privado a la persona afectada
+~Denunciar el contenido en la plataforma
+~Contárselo a un adulto si es grave
+}
+
+::RRSS10-3::Sufres ciberacoso y dudas si contarlo a un adulto. ¿Qué es cierto? {
+=Pedir ayuda es la decisión inteligente, no una debilidad
+~Es mejor resolverlo siempre solo/a
+~Contarlo empeorará la situación siempre
+~Solo se puede contar a la Policía
+}
+
+$CATEGORY: Curso Ciberseguridad Redes Sociales/Módulo 11 - Retos virales y desafíos peligrosos
+
+::RRSS11-1::¿Cuál de estas preguntas te ayuda a valorar si un reto viral es peligroso? {
+=¿Puede hacerme daño a mí o a otra persona?
+~¿Cuántas visualizaciones puede conseguir?
+~¿Lo ha hecho ya algún famoso?
+~¿Es fácil de grabar?
+}
+
+::RRSS11-2::¿Qué suele impulsar la difusión de un reto viral peligroso? {
+=La presión social y la búsqueda de visualizaciones
+~Un objetivo educativo verificado
+~Una recomendación médica
+~Una normativa escolar
+}
+
+$CATEGORY: Curso Ciberseguridad Redes Sociales/Módulo 12 - Desinformación, bulos y deepfakes en redes
+
+::RRSS12-1::¿Por qué se comparten tan rápido los bulos y noticias falsas? {
+=Porque provocan emociones fuertes y el algoritmo premia esa reacción
+~Porque siempre son verdad
+~Porque las plataformas los marcan como destacados
+~Porque son más cortos que las noticias reales
+}
+
+::RRSS12-2::¿Qué deberías comprobar antes de compartir una noticia sorprendente? {
+=Si otras fuentes fiables cuentan lo mismo y si la fecha es actual
+~Solo el número de "me gusta" que tiene
+~Si el titular es llamativo
+~Quién lo ha compartido primero entre tus amigos
+}
+
+::RRSS12-3::¿Qué es un deepfake? {
+=Un contenido audiovisual manipulado con IA para parecer real
+~Un tipo de contraseña muy segura
+~Un filtro divertido de una red social
+~Una copia de seguridad de tus fotos
+}
+
+$CATEGORY: Curso Ciberseguridad Redes Sociales/Módulo 13 - Derechos de imagen: lo que compartes de ti y de los demás
+
+::RRSS13-1::Quieres publicar una foto en la que sale claramente identificable un amigo. ¿Qué deberías hacer? {
+=Pedirle permiso antes de publicarla
+~Publicarla directamente, es tu cuenta
+~Solo pedir permiso si sale mal en la foto
+~Pedir permiso solo si tiene muchos seguidores
+}
+
+::RRSS13-2::¿Qué es el «sharenting»? {
+=Que las familias compartan muchas fotos y datos de menores sin que estos puedan decidir
+~Una función de privacidad de Instagram
+~Compartir cuentas entre hermanos
+~Un tipo de estafa bancaria
+}
+
+::RRSS13-3::¿Qué te permite el derecho al olvido? {
+=Solicitar, en ciertas condiciones, que se elimine información sobre ti que ya no es relevante
+~Borrar los comentarios de otras personas sobre cualquier tema
+~Eliminar tu cuenta sin que quede ningún rastro en Internet, siempre
+~Cambiar tu nombre legal
+}
+
+$CATEGORY: Curso Ciberseguridad Redes Sociales/Módulo 14 - Bienestar digital: uso, comparación social y descanso
+
+::RRSS14-1::¿Por qué compararte con lo que ves en redes puede ser injusto contigo mismo/a? {
+=Porque sueles ver la versión más editada de la vida de los demás
+~Porque las redes muestran siempre la realidad completa
+~Porque solo los famosos publican contenido
+~Porque las fotos siempre son antiguas
+}
+
+::RRSS14-2::¿Cuál de estas es una señal de que tu relación con las redes podría no ser saludable? {
+=Sientes ansiedad si no puedes mirar el móvil unos minutos
+~Usas las redes un rato al día sin que te cueste dejarlo
+~Sigues a cuentas que te inspiran
+~Desactivas notificaciones poco importantes
+}
+
+$CATEGORY: Curso Ciberseguridad Redes Sociales/Módulo 15 - Tu reputación online y reto final
+
+::RRSS15-1::Un perfil nuevo, con pocas fotos y muchos seguidores, te escribe pidiendo pasar a un chat privado enseguida. ¿Qué haces? {
+=Sospechar, comprobar el perfil y no ceder a pasar a otra app sin más
+~Aceptar porque parece simpático/a
+~Darle tu número de teléfono directamente
+~Compartir tu ubicación para quedar
+}
+
+::RRSS15-2::Recibes una amenaza de sextorsión con una imagen tuya. ¿Cuál es la secuencia correcta? {
+=No pagar, guardar pruebas, bloquear y denunciar, y contarlo a un adulto o al 017
+~Pagar rápido y borrar todo después
+~No contárselo a nadie por vergüenza
+~Publicar la amenaza para avisar a todos
+}
+
+::RRSS15-3::Un vídeo indignante sobre un tema de actualidad se vuelve viral en tu grupo de amigos. ¿Qué haces antes de compartirlo? {
+=Comprobar la fuente y ver si otros medios fiables cuentan lo mismo
+~Compartirlo directamente porque es muy impactante
+~Ignorarlo sin más, nunca hay que fijarse en estas cosas
+~Preguntar solo a un amigo si es verdad
+}

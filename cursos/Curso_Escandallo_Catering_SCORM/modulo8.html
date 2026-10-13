@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La hoja Totales (I): datos y materia prima</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🔗</span>La hoja Totales (I): datos y materia prima</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Construirás la cabecera de la hoja resumen y aprenderás a enlazar celdas de otras hojas.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:62%"></div></div>
+    <div class="progress-text">Curso de Escandallo con Calc · Módulo 8 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>La hoja Totales (I): datos y materia prima</h2>
+
+<div class="activity"><h3>📊 La hoja «Totales»</h3><p>Es la hoja resumen: recoge las 4 recetas y añade personal, bebidas, varios e imprevistos. La construiremos por bloques en los módulos 8 a 11.</p></div>
+
+<h3>Bloque 1: datos de partida</h3>
+<ol class="steps"><li>En <b>A1</b> escribe «Fecha del Catering» y en <b>C1</b> la fecha (formato fecha).</li><li>En <b>G1</b> escribe «N.º de Comensales» y en <b>J1</b> el número: <b>300</b>.</li><li>En <b>A3</b> escribe «% Beneficio» y en <b>C3</b> el valor <b>20 %</b> (escribe 20% o 0,2 con formato porcentaje).</li></ol>
+<div class="figure sheetfig"><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:100px"><col style="width:70px"><col style="width:90px"><col style="width:70px"><col style="width:20px"><col style="width:20px"><col style="width:100px"><col style="width:60px"><col style="width:60px"><col style="width:70px"></colgroup><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th><th>J</th></tr><tr><th class="rn">1</th><td class="lbl i" colspan="2">Fecha del Catering</td><td class="date" colspan="2">10/01/2025</td><td class=""></td><td class=""></td><td class="lav" colspan="3">N.º de Comensales</td><td class="lav hl">300</td></tr><tr><th class="rn">3</th><td class="grn">% Beneficio</td><td class=""></td><td class="grn hl">20,00 %</td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td></tr></table></div><p class="figure-caption">Datos de partida: fecha, número de comensales (<b>J1</b>) y porcentaje de beneficio (<b>C3</b>).</p></div>
+<div class="tip-box">💡 <b>Consejo:</b> Estas celdas (<b>J1</b>, <b>C3</b>) son los «mandos» del archivo: cambiando solo estos números se recalcula todo el catering.</div>
+
+<h3>Bloque 2: materia prima (enlazar hojas)</h3>
+<p>Aquí no vamos a teclear los costes: los <b>traemos</b> desde cada ficha de receta, así siempre están actualizados.</p>
+<ol class="steps"><li>Escribe el título <b>Materia Prima</b> en A10.</li><li>En <b>A11</b> escribe <code>=</code>, haz clic en la pestaña <b>Entrante</b>, clic en la celda <b>B1</b> (nombre del plato) y pulsa Intro.</li><li>En <b>C11</b> escribe <code>=</code>, ve a la pestaña <b>Entrante</b>, haz clic en <b>G29</b> (coste por ración) y pulsa Intro.</li><li>Repite en las filas 12, 13 y 14 con las hojas <b>Carne</b>, <b>Pescado</b> y <b>Postre</b>.</li><li>En <b>B15</b> (Total Ración) escribe <code>=SUMA(C11:C14)</code>.</li><li>En <b>B16</b> (Total Catering) escribe <code>=B15*J1</code>: el coste por menú multiplicado por los comensales.</li></ol>
+<div class="figure sheetfig"><div class="fbar"><span class="cellname">C11</span><span class="fxmark">fx</span><code>=Entrante.G29</code></div><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:110px"><col style="width:170px"><col style="width:170px"></colgroup><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th></tr><tr><th class="rn">10</th><td class="pink" colspan="3">Materia Prima</td></tr><tr><th class="rn">11</th><td class="f hl3" colspan="2">=Entrante.B1</td><td class="r f hl">=Entrante.G29</td></tr><tr><th class="rn">12</th><td class="f" colspan="2">=Carne.B1</td><td class="r f">=Carne.G29</td></tr><tr><th class="rn">13</th><td class="f" colspan="2">=Pescado.B1</td><td class="r f">=Pescado.G29</td></tr><tr><th class="rn">14</th><td class="f" colspan="2">=Postre.B1</td><td class="r f">=Postre.G29</td></tr><tr><th class="rn">15</th><td class="lbl i">Total Ración</td><td class="blue f hl2" colspan="2">=SUMA(C11:C14)</td></tr><tr><th class="rn">16</th><td class="lbl i">Total Catering</td><td class="blue f hl2" colspan="2">=B15*J1</td></tr></table></div><p class="figure-caption">Fórmulas del bloque «Materia Prima» (Ver → Mostrar fórmula).</p></div>
+<table class="tbl"><tr><th>Programa</th><th>Cómo se escribe la referencia a otra hoja</th></tr>
+<tr><td>LibreOffice Calc</td><td><code>=Entrante.G29</code> (punto entre la hoja y la celda)</td></tr>
+<tr><td>Excel</td><td><code>=Entrante!G29</code> (signo de exclamación)</td></tr></table>
+<p>Haciendo <b>clic</b> en las celdas mientras escribes la fórmula, el programa pone la sintaxis correcta por ti.</p>
+<div class="tip-box">💡 <b>No te asustes:</b> Al enlazar con el ratón, LibreOffice a veces escribe <code>=$Entrante.G29</code> (con un <b>$</b> delante del nombre de la hoja). Es normal y funciona exactamente igual que <code>=Entrante.G29</code>.</div>
+<div class="figure sheetfig"><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:150px"><col style="width:100px"><col style="width:100px"></colgroup><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th></tr><tr><th class="rn">10</th><td class="pink" colspan="3">Materia Prima</td></tr><tr><th class="rn">11</th><td class="" colspan="2">Porra Archidonesa</td><td class="r">1,13 €</td></tr><tr><th class="rn">12</th><td class="" colspan="2">Solomillo ibérico al PX</td><td class="r">3,41 €</td></tr><tr><th class="rn">13</th><td class="" colspan="2">Merluza en salsa verde</td><td class="r">4,09 €</td></tr><tr><th class="rn">14</th><td class="" colspan="2">Tarta de queso</td><td class="r">1,02 €</td></tr><tr><th class="rn">15</th><td class="lbl i">Total Ración</td><td class="blue" colspan="2">9,64 €</td></tr><tr><th class="rn">16</th><td class="lbl i">Total Catering</td><td class="blue" colspan="2">2.892,88 €</td></tr></table></div><p class="figure-caption">El mismo bloque con los resultados: el coste de la comida por comensal es <b>9,64 €</b> y para 300 comensales <b>2.892,88 €</b>.</p></div>
+
+<h3>Pruébalo: los enlaces funcionan</h3>
+<ol class="steps"><li>Ve a la hoja <b>Entrante</b> y cambia el precio del tomate de 9,50 € a 12,00 €.</li><li>Vuelve a <b>Totales</b>: el coste de la Porra Archidonesa ha subido sin que toques nada.</li><li>Devuelve el precio a 9,50 €.</li></ol>
+
+<div class="exercise"><h3>🧩 Total catering</h3><p>El <b>Total Ración</b> (coste de comida por menú) es <b>10,00 €</b> y hay <b>250 comensales</b>. ¿Cuánto vale <b>Total Catering</b> (B16)? (en €)</p>
+<input id="e8a" type="number" step="1" placeholder="Escribe tu resultado">
+<button class="btn" onclick="chk('e8a',2500,'fb_e8a','10 × 250 = 2.500 €.')">Comprobar</button>
+<div id="fb_e8a" class="feedback-box"></div></div>
+<div class="exercise"><h3>🧩 ¿Qué fórmula enlaza?</h3><p>Estás en la hoja Totales y quieres traer el coste por ración de la hoja <b>Carne</b> (celda G29). En LibreOffice escribes…</p>
+<div class="options" id="opt_e8b"><div class="option" onclick="pickc(this,'e8b',1,0)">=Carne.G29</div><div class="option" onclick="pickc(this,'e8b',0,1)">=Carne!G29</div><div class="option" onclick="pickc(this,'e8b',0,2)">=Carne-G29</div></div>
+<div id="fb_e8b" class="feedback-box" data-exp="En LibreOffice la hoja y la celda se separan con un punto. En Excel se usaría el signo de exclamación."></div></div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo7.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo9.html')">Siguiente ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa los datos, la fórmula y prueba de nuevo.';}}
+function pickc(el,uid,ok,i){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

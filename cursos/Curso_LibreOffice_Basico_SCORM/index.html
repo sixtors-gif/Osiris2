@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LibreOffice: conceptos básicos comunes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🗂️</span>LibreOffice: conceptos básicos comunes</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Lo que Writer, Calc e Impress tienen en común: crear, guardar, formatos, edición, estilos, imprimir y no perder tu trabajo.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+    <div class="progress-text">LibreOffice: conceptos básicos comunes · Inicio</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>LibreOffice: conceptos básicos comunes</h2>
+
+<div class="activity"><h3>👋 Bienvenido/a</h3>
+<p>LibreOffice reúne varias aplicaciones —Writer, Calc, Impress y más— que, aunque sirven para cosas distintas, <b>comparten la misma forma de trabajar</b>. Este curso reúne todo lo <b>común</b> a esas aplicaciones: crear y guardar documentos, elegir el formato adecuado, deshacer, buscar, corregir, aprovechar la barra lateral y los estilos, personalizar tus herramientas, imprimir y no perder nunca tu trabajo.</p></div>
+<div class="box"><b>Objetivo:</b> manejar con soltura lo que es igual (o casi igual) en Writer, Calc e Impress, para aprenderlo una sola vez y aplicarlo siempre.</div>
+<div class="figure"><div class="app-grid"><div class="app-tile"><div class="app-ico">📝</div><b>Writer</b><span>Textos</span><code>.odt</code></div><div class="app-tile"><div class="app-ico">📊</div><b>Calc</b><span>Hojas de cálculo</span><code>.ods</code></div><div class="app-tile"><div class="app-ico">🖥️</div><b>Impress</b><span>Presentaciones</span><code>.odp</code></div><div class="app-tile"><div class="app-ico">✏️</div><b>Draw</b><span>Dibujo vectorial</span><code>.odg</code></div><div class="app-tile"><div class="app-ico">🗄️</div><b>Base</b><span>Bases de datos</span><code>.odb</code></div><div class="app-tile"><div class="app-ico">∑</div><b>Math</b><span>Fórmulas matemáticas</span><code>.odf</code></div></div></div>
+<h3>Antes de empezar</h3>
+<ul class="key-points"><li>🧑‍💻 <span><b>Nivel:</b> ninguno. No hace falta haber usado antes ningún paquete ofimático.</span></li><li>💻 <span>Ten LibreOffice abierto mientras sigues el curso, para probar cada paso en tu propio ordenador.</span></li><li>🆓 <span>Puedes descargarlo gratis desde <b>libreoffice.org</b> si aún no lo tienes instalado.</span></li></ul>
+<h3>Contenido</h3>
+<ul class="key-points"><li><span><b>1.</b></span><span><a href="modulo1.html">¿Qué es LibreOffice? El paquete completo</a></span></li><li><span><b>2.</b></span><span><a href="modulo2.html">El Centro de Inicio y la ventana de cualquier aplicación</a></span></li><li><span><b>3.</b></span><span><a href="modulo3.html">Crear, abrir, guardar y «Guardar como»</a></span></li><li><span><b>4.</b></span><span><a href="modulo4.html">Formatos de archivo: ODF, Microsoft Office y PDF</a></span></li><li><span><b>5.</b></span><span><a href="modulo5.html">Deshacer, rehacer y el portapapeles</a></span></li><li><span><b>6.</b></span><span><a href="modulo6.html">Buscar y reemplazar</a></span></li><li><span><b>7.</b></span><span><a href="modulo7.html">Ortografía, idioma y autocorrección</a></span></li><li><span><b>8.</b></span><span><a href="modulo8.html">La barra lateral y el Navegador</a></span></li><li><span><b>9.</b></span><span><a href="modulo9.html">Estilos: trabajar más rápido y de forma consistente</a></span></li><li><span><b>10.</b></span><span><a href="modulo10.html">Personalizar: barras de herramientas y atajos de teclado</a></span></li><li><span><b>11.</b></span><span><a href="modulo11.html">Imprimir y exportar a PDF</a></span></li><li><span><b>12.</b></span><span><a href="modulo12.html">Opciones generales y no perder tu trabajo</a></span></li><li><span><b>13.</b></span><span><a href="modulo13.html">Reto final: un mismo flujo en Writer, Calc e Impress</a></span></li><li><span>🏁</span><span><a href="examen_final.html">Examen final</a></span></li></ul>
+<div class="navigation"><span></span><button class="nav-btn" onclick="scormGo('modulo1.html')">Comenzar ➡️</button></div>
+      
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">LibreOffice: conceptos básicos comunes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

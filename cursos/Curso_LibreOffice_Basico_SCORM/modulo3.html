@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crear, abrir, guardar y «Guardar como»</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">💾</span>Crear, abrir, guardar y «Guardar como»</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Aprenderás a crear y abrir documentos, a guardar por primera vez y a usar «Guardar como» sin perder nunca tu trabajo.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:23%"></div></div>
+    <div class="progress-text">LibreOffice: conceptos básicos comunes · Módulo 3 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Crear, abrir, guardar y «Guardar como»</h2>
+
+<h3>Crear un documento nuevo</h3>
+<ol class="steps"><li>Desde el <b>Centro de Inicio</b>, pulsa el tipo de documento que necesites (texto, hoja de cálculo, presentación…).</li><li>Desde <b>dentro</b> de una aplicación ya abierta, usa <b>Archivo → Nuevo</b> (o <kbd>Ctrl</kbd>+<kbd>N</kbd>) para crear otro documento del mismo tipo.</li><li>También puedes partir de una <b>plantilla</b> (Archivo → Nueva → Plantillas) si no quieres empezar desde cero.</li></ol>
+
+<h3>Abrir un documento existente</h3>
+<p>Usa <b>Archivo → Abrir</b> (o <kbd>Ctrl</kbd>+<kbd>O</kbd>) y busca el archivo en tus carpetas. Si lo abriste hace poco, aparecerá también en <b>Archivo → Documentos recientes</b> o en el propio Centro de Inicio.</p>
+
+<h3>Guardar y Guardar como: la diferencia de siempre</h3>
+<table class="tbl"><tr><th>Orden</th><th>Atajo</th><th>Qué hace</th></tr>
+<tr><td><b>Guardar</b></td><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>Actualiza el archivo <b>con el mismo nombre y en el mismo sitio</b>. La primera vez, te pregunta nombre y carpeta.</td></tr>
+<tr><td><b>Guardar como…</b></td><td><kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>S</kbd></td><td>Crea <b>otro archivo</b> (otro nombre, otra carpeta u otro formato) y sigues trabajando en él. El original queda intacto.</td></tr></table>
+<div class="figure"><div class="dlg"><div class="dtitle"><span>Guardar como</span><span class="dx">✕</span></div><div class="dbody"><div class="drow"><span class="dlab">Guardar en la carpeta</span><span class="dval sel">Documentos › Trabajos</span></div><div class="drow"><span class="dlab">Nombre de archivo</span><span class="dval hi">Presupuesto_Catering_2026</span></div><div class="drow"><span class="dlab">Tipo de archivo</span><span class="dval hi">Hoja de cálculo ODF (.ods)</span></div></div><div class="dfoot"><span class="dbtn ok">Guardar</span><span class="dbtn">Cancelar</span></div></div></div>
+<div class="ms-box"><span class="mbadge">Microsoft Office</span> «Guardar como» es la tecla F12 en Word/Excel/PowerPoint; en LibreOffice es <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>S</kbd> en todas sus aplicaciones.</div>
+
+<h3>La regla número 1</h3>
+<div class="alert-box">⚠️ <b>Error típico:</b> Guarda <b>desde el primer minuto</b> y vuelve a guardar cada pocos minutos, en cualquier aplicación. Un corte de luz o un cierre inesperado pueden hacerte perder un buen rato de trabajo. En el módulo 12 verás cómo activar la recuperación automática.</div>
+
+<h3>Nombres de archivo que se entienden</h3>
+<table class="tbl"><tr><th>❌ Mal</th><th>✅ Bien</th><th>Por qué</th></tr>
+<tr><td><code>Documento1.odt</code></td><td><code>Informe_Practicas_2026.odt</code></td><td>El nombre debe decir qué contiene.</td></tr>
+<tr><td><code>presentacion final final (2).odp</code></td><td><code>Presentacion_TFG_v2.odp</code></td><td>«Final» y «(2)» no dicen nada; la versión sí.</td></tr>
+<tr><td><code>hoja de cálculo 12/03.ods</code></td><td><code>Gastos_Marzo2026.ods</code></td><td>La barra <code>/</code> no se puede usar en un nombre de archivo.</td></tr></table>
+<p>Esto vale igual para un documento de Writer, una hoja de Calc o una presentación de Impress: un nombre claro te ahorra tiempo a ti y a quien reciba el archivo.</p>
+
+<div class="exercise"><h3>🧩 Sin arriesgar el original</h3><p>Tienes un documento terminado y quieres probar cambios grandes sin arriesgar el original. ¿Qué haces primero?</p>
+<div class="options" id="opt_e3a"><div class="option" onclick="pickc(this,'e3a',1)">Guardar como con otro nombre (por ejemplo _v2) y probar en la copia</div><div class="option" onclick="pickc(this,'e3a',0)">Probar directamente y deshacer si sale mal</div><div class="option" onclick="pickc(this,'e3a',0)">Cerrar sin guardar y volver a intentarlo otro día</div></div>
+<div id="fb_e3a" class="feedback-box" data-exp="Con «Guardar como» sigues trabajando en un archivo nuevo y el original queda intacto."></div></div>
+<div class="exercise"><h3>🧩 El mismo atajo en todas partes</h3><p>¿Qué atajo de teclado abre «Guardar como» en cualquier aplicación de LibreOffice?</p>
+<div class="options" id="opt_e3b"><div class="option" onclick="pickc(this,'e3b',1)">Ctrl + Mayús + S</div><div class="option" onclick="pickc(this,'e3b',0)">Ctrl + S</div><div class="option" onclick="pickc(this,'e3b',0)">Ctrl + N</div></div>
+<div id="fb_e3b" class="feedback-box" data-exp="Ctrl+Mayús+S es el mismo en Writer, Calc e Impress."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo2.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo4.html')">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">LibreOffice: conceptos básicos comunes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

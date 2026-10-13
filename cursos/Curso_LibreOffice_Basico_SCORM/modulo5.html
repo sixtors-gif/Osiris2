@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Deshacer, rehacer y el portapapeles</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">📋</span>Deshacer, rehacer y el portapapeles</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Perderás el miedo a equivocarte y aprenderás a mover contenido de un sitio a otro con cortar, copiar y pegar.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:38%"></div></div>
+    <div class="progress-text">LibreOffice: conceptos básicos comunes · Módulo 5 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Deshacer, rehacer y el portapapeles</h2>
+
+<h3>Deshacer y rehacer: tu red de seguridad</h3>
+<table class="tbl"><tr><th>Acción</th><th>Atajo</th><th>Para qué</th></tr>
+<tr><td>Deshacer</td><td><kbd>Ctrl</kbd>+<kbd>Z</kbd></td><td>Anula el último cambio (y los anteriores, si repites)</td></tr>
+<tr><td>Rehacer</td><td><kbd>Ctrl</kbd>+<kbd>Y</kbd></td><td>Vuelve a aplicar lo que acabas de deshacer</td></tr></table>
+<p>Funciona igual en Writer (texto borrado sin querer), en Calc (una fórmula que rompiste sin darte cuenta) o en Impress (un objeto movido por error). <b>No tengas miedo a probar</b>: casi todo se puede deshacer.</p>
+
+<h3>El portapapeles: cortar, copiar y pegar</h3>
+<div class="figure"><div class="tbar"><span class="tbtn on">↩️ Deshacer</span><span class="tbtn ">↪️ Rehacer</span><span class="tbtn ">📋 Copiar</span><span class="tbtn ">✂️ Cortar</span><span class="tbtn ">📌 Pegar</span><span class="tbtn on">📌▾ Pegado especial</span></div><p class="figure-caption">Botones de la barra de herramientas estándar: están en el mismo sitio y hacen lo mismo en Writer, Calc e Impress.</p></div>
+<table class="tbl"><tr><th>Acción</th><th>Atajo</th><th>Qué hace</th></tr>
+<tr><td>Copiar</td><td><kbd>Ctrl</kbd>+<kbd>C</kbd></td><td>Guarda una copia de la selección en el portapapeles, sin borrarla</td></tr>
+<tr><td>Cortar</td><td><kbd>Ctrl</kbd>+<kbd>X</kbd></td><td>Guarda la selección en el portapapeles y la borra del sitio original</td></tr>
+<tr><td>Pegar</td><td><kbd>Ctrl</kbd>+<kbd>V</kbd></td><td>Coloca el contenido del portapapeles donde tengas el cursor</td></tr></table>
+<div class="tip-box">💡 <b>Consejo:</b> El portapapeles es <b>común a todo el sistema</b>: puedes copiar una tabla de Calc y pegarla en Writer, o un texto de Writer y pegarlo en una diapositiva de Impress.</div>
+
+<h3>Pegado especial: elegir qué se pega</h3>
+<p>A veces, al pegar, arrastras un formato que no quieres (una fuente o un color de otro documento). Con <b>Pegado especial</b> eliges exactamente qué se pega.</p>
+<ol class="steps"><li>Copia el contenido con <kbd>Ctrl</kbd>+<kbd>C</kbd>.</li><li>En el destino, pulsa <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>V</kbd> en vez de Ctrl+V.</li><li>Elige, por ejemplo, <b>Texto sin formato</b> para que se adapte al estilo del documento donde lo pegas.</li></ol>
+<div class="figure"><div class="dlg"><div class="dtitle"><span>Pegado especial</span><span class="dx">✕</span></div><div class="dbody"><div class="drow"><span class="dlab">Selección</span><span class="dval plain">☐ Formato HTML  ☑ Texto sin formato</span></div><div class="drow"><span class="dlab">Atributos</span><span class="dval plain">☐ Solo formato</span></div></div><div class="dfoot"><span class="dbtn ok">Aceptar</span><span class="dbtn">Cancelar</span></div></div></div>
+
+<div class="exercise"><h3>🧩 Deshacer</h3><p>Borras por error un párrafo entero en Writer. ¿Qué atajo lo recupera al instante?</p>
+<div class="options" id="opt_e5a"><div class="option" onclick="pickc(this,'e5a',1)">Ctrl+Z</div><div class="option" onclick="pickc(this,'e5a',0)">Ctrl+S</div><div class="option" onclick="pickc(this,'e5a',0)">Ctrl+P</div></div>
+<div id="fb_e5a" class="feedback-box" data-exp="Ctrl+Z deshace la última acción, y se puede repetir varias veces seguidas."></div></div>
+<div class="exercise"><h3>🧩 Cortar vs copiar</h3><p>Quieres mover un párrafo a otro lugar del documento, sin dejarlo también donde estaba. ¿Qué usas?</p>
+<div class="options" id="opt_e5b"><div class="option" onclick="pickc(this,'e5b',1)">Cortar (Ctrl+X) y pegar (Ctrl+V)</div><div class="option" onclick="pickc(this,'e5b',0)">Copiar (Ctrl+C) y pegar (Ctrl+V)</div><div class="option" onclick="pickc(this,'e5b',0)">Ctrl+Z</div></div>
+<div id="fb_e5b" class="feedback-box" data-exp="Cortar quita el contenido del sitio original; copiar lo deja también ahí."></div></div>
+<div class="exercise"><h3>🧩 Pegar sin arrastrar formato</h3><p>Pegas un texto copiado de una web y aparece con una fuente y un color raros. ¿Qué deberías haber usado?</p>
+<div class="options" id="opt_e5c"><div class="option" onclick="pickc(this,'e5c',1)">Pegado especial → Texto sin formato</div><div class="option" onclick="pickc(this,'e5c',0)">Copiar dos veces</div><div class="option" onclick="pickc(this,'e5c',0)">Deshacer antes de pegar</div></div>
+<div id="fb_e5c" class="feedback-box" data-exp="El pegado especial permite pegar solo el texto, sin el formato de origen."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo4.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo6.html')">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">LibreOffice: conceptos básicos comunes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

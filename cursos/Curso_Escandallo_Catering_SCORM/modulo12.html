@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revisión, errores y buenas prácticas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🔎</span>Revisión, errores y buenas prácticas</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Aprenderás a comprobar que tu archivo funciona, a interpretar los errores y a dejarlo bien presentado y protegido.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:92%"></div></div>
+    <div class="progress-text">Curso de Escandallo con Calc · Módulo 12 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Revisión, errores y buenas prácticas</h2>
+
+<h3>1. Revisa tus fórmulas</h3>
+<ol class="steps"><li>Activa <b>Ver → Mostrar fórmula</b> (<kbd>Ctrl</kbd>+<kbd>`</kbd>) para ver todas las fórmulas a la vez y comparar filas.</li><li>Selecciona una celda con resultado y usa <b>Herramientas → Detective → Rastrear precedentes</b>: dibuja flechas hacia las celdas de las que depende.</li><li>Comprueba que las fórmulas de una misma columna son <b>iguales</b> (solo cambia el número de fila).</li></ol>
+
+<h3>2. Pruébalo con casos límite</h3>
+<div class="card-grid">
+<div class="mini-card"><div class="ico">👥</div><b>Pocos comensales</b>Pon 15 en J1: ¿hay al menos 1 camarero y 1 furgoneta?</div>
+<div class="mini-card"><div class="ico">🏟️</div><b>Muchos comensales</b>Pon 700: ¿los cocineros se quedan en 6?</div>
+<div class="mini-card"><div class="ico">🍽️</div><b>Fila vacía</b>¿Hay algún #¡DIV/0! en las fichas?</div>
+<div class="mini-card"><div class="ico">💶</div><b>Cambio de precio</b>Sube un ingrediente: ¿se mueve el precio de venta?</div></div>
+
+<h3>3. Los errores más frecuentes</h3>
+<table class="tbl"><tr><th>Error</th><th>Qué significa</th><th>Cómo se arregla</th></tr>
+<tr><td><code>#¡DIV/0!</code></td><td>Estás dividiendo entre 0 o entre una celda vacía</td><td>Revisa el divisor; usa <code>SI</code> para controlar el caso</td></tr>
+<tr><td><code>#¡REF!</code></td><td>La fórmula apunta a una celda u hoja que ya no existe</td><td>Vuelve a hacer clic en la celda correcta; no borres hojas de las que depende algo</td></tr>
+<tr><td><code>#NOMBRE?</code></td><td>Función o nombre mal escrito (<code>SUMAA</code>)</td><td>Corrige el nombre de la función</td></tr>
+<tr><td><code>#¡VALOR!</code></td><td>Operas con texto donde hace falta un número</td><td>Comprueba que la celda es un número, no un texto</td></tr>
+<tr><td><code>###</code></td><td>La columna es demasiado estrecha</td><td>Ensancha la columna (doble clic en el borde)</td></tr></table>
+
+<h3>4. Presentación clara</h3>
+<ul class="key-points"><li>🎨 <span><b>Colores con sentido:</b> por ejemplo, un fondo suave para los datos que se teclean y otro para las fórmulas.</span></li><li>🧊 <span><b>Ver → Inmovilizar filas y columnas</b> para que los títulos no desaparezcan al bajar.</span></li><li>🖨️ <span><b>Formato → Página</b> → ajusta la hoja Totales a una página de ancho para imprimirla.</span></li><li>📅 <span>Guarda una copia con la fecha en el nombre (<code>Escandallo_2025-01-10.ods</code>) antes de hacer cambios grandes.</span></li></ul>
+
+<h3>5. Evita errores de teclear</h3>
+<ol class="steps"><li><b>Validez de datos</b>: selecciona B3 en una ficha → <b>Datos → Validez…</b> → permite «Número entero» mayor que 0. Así nadie pone 0 raciones.</li><li>Selecciona C3 en Totales → Validez → «Decimal» entre 0 y 1 para el % de beneficio.</li><li><b>Proteger la hoja</b>: desbloquea las celdas donde se teclean datos (<kbd>Ctrl</kbd>+<kbd>1</kbd> → pestaña <b>Protección</b> → quitar «Protegida») y luego <b>Herramientas → Proteger hoja…</b>. Así nadie borra una fórmula por accidente.</li></ol>
+<div class="tip-box">💡 <b>Consejo:</b> Para que la protección no moleste, deja <b>sin proteger</b> solo las celdas de entrada: nombre, raciones, ingredientes, precios, comensales y porcentajes.</div>
+
+<div class="exercise"><h3>🧩 Diagnóstico 1</h3><p>Borras por error la hoja «Postre» y en Totales la celda del postre muestra <code>#¡REF!</code>. ¿Qué ha pasado?</p>
+<div class="options" id="opt_e12a"><div class="option" onclick="pickc(this,'e12a',1,0)">La fórmula apunta a una hoja que ya no existe</div><div class="option" onclick="pickc(this,'e12a',0,1)">Estás dividiendo entre cero</div><div class="option" onclick="pickc(this,'e12a',0,2)">La columna es demasiado estrecha</div></div>
+<div id="fb_e12a" class="feedback-box" data-exp="#¡REF! indica una referencia que ya no es válida."></div></div>
+<div class="exercise"><h3>🧩 Diagnóstico 2</h3><p>Una celda muestra <code>#¡DIV/0!</code>. ¿Qué es lo primero que revisas?</p>
+<div class="options" id="opt_e12b"><div class="option" onclick="pickc(this,'e12b',1,0)">El divisor de la fórmula (¿vale 0 o está vacío?)</div><div class="option" onclick="pickc(this,'e12b',0,1)">El color de la celda</div><div class="option" onclick="pickc(this,'e12b',0,2)">El nombre del archivo</div></div>
+<div id="fb_e12b" class="feedback-box" data-exp="Este error aparece cuando se divide entre 0 o entre una celda vacía."></div></div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo11.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo13.html')">Siguiente ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa los datos, la fórmula y prueba de nuevo.';}}
+function pickc(el,uid,ok,i){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

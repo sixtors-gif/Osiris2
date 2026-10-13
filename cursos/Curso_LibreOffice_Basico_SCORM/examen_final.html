@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Examen final</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🏁</span>Examen final</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Demuestra que dominas los conceptos comunes de LibreOffice.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    <div class="progress-text">LibreOffice: conceptos básicos comunes · Examen final</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Examen final</h2>
+
+<p>Responde las <b>24 preguntas</b> con calma. Al terminar verás tu resultado al instante. Se recomienda acertar al menos el <b>70 %</b>.</p>
+<div class="summary-box">🎯 <b>Consejo:</b> piensa en lo que es igual en Writer, Calc e Impress; casi todas las preguntas tratan justamente de eso.</div>
+<div id="exam"></div>
+<div class="navigation"><button class="nav-btn" onclick="scormGo('modulo13.html')">⬅️ Repasar el reto final</button><button class="nav-btn" onclick="finishExam()">Finalizar</button></div>
+<div id="result" class="certificate" style="display:none;margin-top:25px"></div>
+<script>
+const qs=[["¿Qué organización desarrolla y mantiene LibreOffice?", "The Document Foundation", "Microsoft", "Una única empresa privada con ánimo de lucro", "El Gobierno de España"], ["Quieres preparar una presentación con diapositivas. ¿Qué aplicación usas?", "Impress", "Writer", "Base", "Math"], ["Quieres seguir trabajando en un documento que editaste ayer. ¿Qué es lo más rápido?", "Abrirlo desde «Documentos recientes» en el Centro de Inicio", "Crear un documento nuevo y volver a escribirlo todo", "Buscarlo manualmente por todas las carpetas", "Reinstalar LibreOffice"], ["¿Cuál de estas partes de la ventana se organiza igual en Writer, Calc e Impress?", "La barra de menús", "El área de trabajo (siempre es idéntica)", "Nada es común", "Solo el color de fondo"], ["¿Qué atajo abre «Guardar como» en cualquier aplicación de LibreOffice?", "Ctrl + Mayús + S", "Ctrl + S", "Ctrl + N", "Ctrl + P"], ["Tienes un documento terminado y quieres probar cambios grandes sin arriesgar el original. ¿Qué haces primero?", "Guardar como con otro nombre (por ejemplo _v2) y probar en la copia", "Probar directamente y deshacer si sale mal", "Cerrar sin guardar", "Borrar el archivo y empezar de nuevo"], ["¿Cuál es el formato nativo (ODF) de LibreOffice Calc?", ".ods", ".odt", ".xlsx", ".odp"], ["Quieres enviar una presentación para que la vean sin que nadie pueda cambiarla con facilidad. ¿Qué formato usas?", "PDF", ".odp", ".pptx", ".odt"], ["Borras por error un párrafo entero en Writer. ¿Qué atajo lo recupera al instante?", "Ctrl+Z", "Ctrl+S", "Ctrl+P", "Ctrl+F"], ["Quieres mover un párrafo a otro lugar sin dejarlo también donde estaba. ¿Qué usas?", "Cortar (Ctrl+X) y pegar (Ctrl+V)", "Copiar (Ctrl+C) y pegar (Ctrl+V)", "Ctrl+Z", "Ctrl+H"], ["Necesitas encontrar la palabra «total» en un documento largo. ¿Qué atajo usas?", "Ctrl+F", "Ctrl+H", "Ctrl+Z", "Ctrl+P"], ["Te has equivocado y escrito mal una palabra diez veces en el mismo documento. ¿Cuál es la forma más rápida de corregirlo?", "Buscar y reemplazar (Ctrl+H), con «Reemplazar todo»", "Corregirlo a mano, una por una", "Borrar el documento y empezar de nuevo", "Cambiar el idioma del corrector"], ["¿Qué tecla revisa de golpe toda la ortografía y gramática del documento?", "F7", "F1", "F5", "F11"], ["Un apellido poco común aparece siempre subrayado en rojo, aunque está bien escrito. ¿Qué haces?", "Añadirlo al diccionario personalizado con el clic derecho", "Cambiar el idioma de todo el documento", "Ignorarlo para siempre", "Desinstalar el corrector ortográfico"], ["¿Cómo se llama la franja de iconos a la derecha de la ventana, con paneles como Propiedades o Estilos?", "La barra lateral", "La barra de estado", "El Centro de Inicio", "La barra de menús"], ["Pulsas F5 en Impress mientras editas una presentación. ¿Qué ocurre?", "Se inicia la presentación desde el principio", "Se abre el Navegador", "No ocurre nada", "Se guarda el archivo"], ["¿Cuál es la gran ventaja de usar un estilo en vez de formatear a mano cada elemento?", "Si cambias el estilo, se actualizan a la vez todos los elementos que lo usan", "Ocupa menos espacio en el disco", "Solo funciona en Writer", "Hace que el archivo pese menos"], ["¿Qué tecla abre el panel de Estilos en Writer, Calc e Impress?", "F11", "F5", "F7", "F1"], ["¿Dónde se personalizan a la vez las barras de herramientas, los menús y los atajos de teclado?", "Herramientas → Personalizar…", "Archivo → Guardar como", "Formato → Página", "Ver → Barra de estado"], ["¿Qué atajo revisa la ortografía en cualquier aplicación de LibreOffice?", "F7", "F1", "Ctrl+F", "F11"], ["Vas a colgar unos apuntes para que los lean sin que puedan modificarlos con facilidad. ¿Qué haces?", "Exportarlos a PDF", "Enviar el archivo .odt original", "Imprimirlos y escanearlos", "Enviar una foto de la pantalla"], ["¿Qué deberías revisar antes de imprimir un documento largo?", "La vista preliminar, para comprobar cómo quedará cada página", "Nada, se imprime siempre bien", "El idioma del corrector ortográfico", "El tamaño del disco duro"], ["¿Dónde se activa la recuperación automática?", "Herramientas → Opciones → Cargar/Guardar → General", "Archivo → Imprimir", "Formato → Estilos", "Ver → Barra lateral"], ["El ordenador se apaga de golpe mientras trabajas. Al volver a abrir LibreOffice, ¿qué puedes encontrar?", "Un asistente de recuperación de documentos, si había datos de recuperación automática", "El documento se pierde siempre sin remedio", "Un mensaje de error sin más opciones", "Un documento en blanco, sin aviso"]];
+let answers={};
+const root=document.getElementById('exam');
+qs.forEach(function(x,i){
+  const box=document.createElement('div');box.className='quiz';
+  const h=document.createElement('h4');h.textContent=(i+1)+'. '+x[0];box.appendChild(h);
+  const opts=document.createElement('div');opts.className='options';
+  x.slice(1).map(function(o){return [Math.random(),o]}).sort(function(a,b){return a[0]-b[0]}).forEach(function(p){
+    const d=document.createElement('div');d.className='option';d.textContent=p[1];
+    d.onclick=function(){opts.querySelectorAll('.option').forEach(function(z){z.classList.remove('selected')});d.classList.add('selected');answers[i]=p[1];};
+    opts.appendChild(d);
+  });
+  box.appendChild(opts);root.appendChild(box);
+});
+function finishExam(){
+  let score=0;qs.forEach(function(x,i){if(answers[i]===x[1])score++;});
+  const pct=Math.round(score/qs.length*100);const r=document.getElementById('result');r.style.display='block';
+  r.innerHTML='<h2>'+(pct>=70?'🎉 ¡Muy bien!':'💪 Buen intento')+'</h2><p>Resultado: <b>'+score+'/'+qs.length+' ('+pct+'%)</b></p><p>'+(pct>=70?'Dominas lo básico común a Writer, Calc e Impress.':'Repasa los módulos y vuelve a intentarlo. Fíjate en lo que se repite en las tres aplicaciones.')+'</p>';
+  if(window.scorm)scorm.complete(pct);window.scrollTo({top:r.offsetTop,behavior:'smooth'});
+}
+</script>
+      
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">LibreOffice: conceptos básicos comunes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

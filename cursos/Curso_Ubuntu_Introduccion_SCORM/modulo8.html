@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Archivos y carpetas</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">📁</span>Archivos y carpetas</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Cómo se organiza el disco en Ubuntu y cómo usar la aplicación Archivos con soltura.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div>
+    <div class="progress-text">Introducción a Ubuntu para usuarios · Módulo 8 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Archivos y carpetas</h2>
+<div class="activity"><h3>📁 Tu carpeta personal</h3>
+<p>La aplicación <b>Archivos</b> (Files) es el explorador de Ubuntu. Se abre desde el Dock o buscándola en las Actividades. Tu espacio de trabajo es la <b>carpeta personal</b> (<i>Home</i>): ahí viven tus <b>Documentos</b>, <b>Descargas</b>, <b>Imágenes</b>, <b>Música</b> y <b>Vídeos</b>. Todo lo tuyo debe estar ahí.</p></div>
+<h3>Cómo se organiza el disco</h3>
+<p>En Windows cada unidad tiene una letra (<code>C:</code>, <code>D:</code>…). En Ubuntu <b>no hay letras</b>: todo cuelga de una única raíz llamada <code>/</code>.</p><div class="term-static"><span class="cm">/                    ← raíz: de aquí cuelga todo (no hay C: ni D:)</span>
+├── home
+│   └── ana                 ← tu carpeta personal (Home)
+│       ├── Documentos
+│       ├── Descargas
+│       ├── Escritorio
+│       ├── Imágenes
+│       ├── Música
+│       └── Vídeos
+├── media                   ← aquí aparecen los USB y discos externos
+└── etc, usr, var ...       ← el sistema (no hace falta tocarlo)</div>
+<div class="ms-box"><span class="mbadge">Si vienes de Windows</span> Tres diferencias que conviene saber: la separación de carpetas es <code>/</code> (no <code>\</code>), <b>las mayúsculas importan</b> (<code>Informe.odt</code> y <code>informe.odt</code> son archivos distintos) y los archivos <b>ocultos</b> empiezan por un punto.</div>
+<h3>Lo que haces cada día</h3><table class="tbl"><tr><th>Quiero…</th><th>Cómo se hace</th></tr><tr><td>Abrir una carpeta o un archivo</td><td>Doble clic</td></tr><tr><td>Copiar o mover</td><td>Arrastra con el ratón, o <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>X</kbd> y <kbd>Ctrl</kbd> + <kbd>V</kbd></td></tr><tr><td>Cambiar el nombre</td><td>Selecciona y pulsa <kbd>F2</kbd></td></tr><tr><td>Crear una carpeta</td><td>Clic derecho en un hueco ▸ <b>Nueva carpeta</b> (o <kbd>Ctrl</kbd> + <kbd>Mayús</kbd> + <kbd>N</kbd>)</td></tr><tr><td>Buscar</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd> dentro de la ventana de Archivos</td></tr><tr><td>Escribir una ruta</td><td><kbd>Ctrl</kbd> + <kbd>L</kbd> muestra la barra de ubicación</td></tr><tr><td>Ver archivos ocultos</td><td><kbd>Ctrl</kbd> + <kbd>H</kbd></td></tr><tr><td>Comprimir</td><td>Clic derecho sobre los archivos ▸ <b>Comprimir…</b> (formato ZIP para compartir con Windows)</td></tr><tr><td>Mandar a la Papelera</td><td>Selecciona y pulsa <kbd>Supr</kbd></td></tr><tr><td>Borrar sin pasar por la Papelera</td><td><kbd>Mayús</kbd> + <kbd>Supr</kbd> (pide confirmación y <b>no se puede deshacer</b>)</td></tr></table>
+<h3>Memorias USB y discos externos</h3>
+<p>Al conectar un USB, aparece en la <b>barra lateral</b> de Archivos. Antes de sacarlo pulsa el botón de <b>expulsar</b> que hay junto a su nombre: así te aseguras de que todos los datos se han escrito.</p><div class="alert-box">⚠️ Los archivos que borras con <kbd>Mayús</kbd> + <kbd>Supr</kbd>, o vaciando la Papelera, <b>no se recuperan</b>. Y las órdenes de la terminal, como <code>rm</code>, tampoco pasan por la Papelera.</div><div class="tip-box">💡 Trabaja con rutas cortas y nombres sin símbolos raros. Y mantén tus documentos en <b>Documentos</b>: es lo único que tendrás que copiar cuando cambies de equipo.</div>
+<div class="summary-box">🎯 <b>Idea clave:</b> todo cuelga de <code>/</code>; lo tuyo vive en tu carpeta personal; las mayúsculas importan.</div><div class="exercise"><h3>🧩 Dónde guardar</h3><p>¿Dónde se guardan por defecto tus documentos personales?</p><div class="options" id="opt_u8a"><div class="option" onclick="pickc(this,'u8a',0)">En la raíz del sistema, en /etc</div><div class="option" onclick="pickc(this,'u8a',0)">En la unidad C:</div><div class="option" onclick="pickc(this,'u8a',1)">En tu carpeta personal (Documentos, Descargas, Imágenes…)</div><div class="option" onclick="pickc(this,'u8a',0)">En la Papelera</div></div><div id="fb_u8a" class="feedback-box" data-exp="Tu carpeta personal (Home) es tu espacio; ahí están Documentos, Descargas, etc."></div></div><div class="exercise"><h3>🧩 Mayúsculas</h3><p>En Ubuntu, ¿son lo mismo <code>Informe.odt</code> e <code>informe.odt</code>?</p><div class="options" id="opt_u8b"><div class="option" onclick="pickc(this,'u8b',0)">Solo dentro de Documentos</div><div class="option" onclick="pickc(this,'u8b',0)">Sí, son siempre el mismo archivo</div><div class="option" onclick="pickc(this,'u8b',0)">Depende del color del icono</div><div class="option" onclick="pickc(this,'u8b',1)">No: las mayúsculas importan y son archivos distintos</div></div><div id="fb_u8b" class="feedback-box" data-exp="En el sistema de archivos de Linux se distingue entre mayúsculas y minúsculas."></div></div><div class="exercise"><h3>🧩 Archivos ocultos</h3><p>No ves un archivo que empieza por un punto. ¿Qué haces?</p><div class="options" id="opt_u8c"><div class="option" onclick="pickc(this,'u8c',0)">Reinstalo Ubuntu</div><div class="option" onclick="pickc(this,'u8c',0)">Es imposible verlos</div><div class="option" onclick="pickc(this,'u8c',1)">Pulso Ctrl + H para mostrar los archivos ocultos</div><div class="option" onclick="pickc(this,'u8c',0)">Lo busco en la unidad C:</div></div><div id="fb_u8c" class="feedback-box" data-exp="Ctrl + H muestra y oculta los archivos ocultos."></div></div><div class="exercise"><h3>🧩 Sacar el USB</h3><p>Antes de retirar un USB, ¿qué conviene hacer?</p><div class="options" id="opt_u8d"><div class="option" onclick="pickc(this,'u8d',1)">Expulsarlo desde la barra lateral de Archivos</div><div class="option" onclick="pickc(this,'u8d',0)">Nada, se puede arrancar del puerto</div><div class="option" onclick="pickc(this,'u8d',0)">Borrar la carpeta Descargas</div><div class="option" onclick="pickc(this,'u8d',0)">Apagar el wifi</div></div><div id="fb_u8d" class="feedback-box" data-exp="Expulsar asegura que los datos se han escrito antes de retirar el USB."></div></div>
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo7.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo9.html')">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Introducción a Ubuntu para usuarios · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+
+</body>
+</html>

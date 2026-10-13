@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tu huella digital y tu identidad digital</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">👣</span>Tu huella digital y tu identidad digital</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Descubrirás qué es la huella digital, qué revela sobre ti y cómo empezar a gestionarla.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
+    <div class="progress-text">Ciberseguridad II: redes sociales en profundidad · Módulo 3 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Tu huella digital y tu identidad digital</h2>
+
+<h3>Dos tipos de huella</h3>
+<div class="card-grid"><div class="mini-card"><div class="ico">👣</div><b>Huella activa</b>Lo que publicas tú mismo/a: fotos, comentarios, «me gusta», biografías</div><div class="mini-card"><div class="ico">👤</div><b>Huella pasiva</b>Lo que otros dicen o publican de ti: te etiquetan, te mencionan, comentan sobre ti</div></div>
+<p>Ambas forman tu <b>identidad digital</b>: la imagen que cualquiera puede hacerse de ti buscando tu nombre o tu usuario en Internet. Y esa imagen la puede ver un futuro empleador, un centro educativo o cualquier desconocido/a, no solo tus amigos.</p>
+
+<div class="figure vid-box">
+<div class="vid-frame"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/2PnYNAO_9CI" title="Tu identidad digital depende de ti"
+frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+<p class="figure-caption"><b>Tu identidad digital depende de ti</b> · canal oficial <b>Internet Segura for Kids (IS4K) / INCIBE</b> en YouTube</p><p class="vid-desc">Consejos sobre cómo construir una identidad digital positiva en la red.</p></div>
+
+<h3>Lo que revela una foto (aunque no lo veas)</h3>
+<p>Muchas fotos guardan <b>metadatos</b> (datos ocultos): el modelo del dispositivo, la fecha exacta y, si el GPS estaba activado, las <b>coordenadas del lugar</b> donde se tomó. Si compartes una foto en tiempo real desde tu casa o tu instituto, esa información puede acabar siendo pública.</p>
+<ul class="key-points"><li>📍 <span>Muchas apps <b>eliminan</b> automáticamente estos metadatos al subir la foto, pero no todas ni siempre.</span></li><li>🏠 <span>Evita fotografiar fachadas, matrículas o carteles con tu dirección, y no publiques tu ubicación en tiempo real.</span></li><li>🕰️ <span>Publica las fotos de tus vacaciones <b>cuando ya hayas vuelto</b>, no mientras sigues fuera de casa.</span></li></ul>
+
+<h3>Todo queda, aunque lo borres</h3>
+<p>Una vez que algo se comparte en Internet, puede haber sido guardado, capturado o reenviado por otra persona antes de que lo borres. Por eso conviene pensar antes de publicar, no confiar solo en poder borrarlo después.</p>
+<div class="alert-box">⚠️ <b>Error típico:</b> Antes de publicar algo, pregúntate: <i>«¿Me importaría que lo viera mi familia, un profesor o alguien que me quiera contratar dentro de diez años?»</i> Si la respuesta es sí, mejor no lo compartas, o cámbialo antes.</div>
+
+<h3>Audita tu propia huella</h3>
+<p>Una buena práctica, de vez en cuando, es comprobar qué aparece de ti:</p>
+<ol class="steps"><li>Busca tu nombre completo (y tu usuario habitual) en un buscador y en imágenes.</li><li>Revisa las fotos en las que apareces etiquetado/a, aunque las haya subido otra persona.</li><li>Comprueba qué información pública muestra cada una de tus cuentas a alguien que no te sigue.</li><li>Si encuentras algo que no te gusta, pide que lo borren o usa las opciones de privacidad; si no es posible, algunas plataformas permiten solicitar la retirada de contenido.</li></ol>
+
+<div class="exercise"><h3>🧩 Huella pasiva</h3><p>¿Cuál de estos es un ejemplo de huella digital «pasiva»?</p>
+<div class="options" id="opt_e3a"><div class="option" onclick="pickc(this,'e3a',1)">Un amigo te etiqueta en una foto sin que tú la hayas subido</div><div class="option" onclick="pickc(this,'e3a',0)">Tú publicas una foto en tu perfil</div><div class="option" onclick="pickc(this,'e3a',0)">Tú escribes un comentario en un vídeo</div></div>
+<div id="fb_e3a" class="feedback-box" data-exp="La huella pasiva es la que generan otras personas sobre ti, no tú directamente."></div></div>
+<div class="exercise"><h3>🧩 Metadatos de una foto</h3><p>¿Qué puede revelar una foto aunque no se vea a simple vista?</p>
+<div class="options" id="opt_e3b"><div class="option" onclick="pickc(this,'e3b',1)">La ubicación exacta donde se tomó (metadatos GPS)</div><div class="option" onclick="pickc(this,'e3b',0)">El nombre de quien la mira</div><div class="option" onclick="pickc(this,'e3b',0)">La velocidad de tu conexión a Internet</div></div>
+<div id="fb_e3b" class="feedback-box" data-exp="Los metadatos EXIF pueden incluir la ubicación GPS si estaba activada al hacer la foto."></div></div>
+<div class="exercise"><h3>🧩 Antes de publicar</h3><p>¿Qué pregunta te puede ayudar a decidir si publicar algo o no?</p>
+<div class="options" id="opt_e3c"><div class="option" onclick="pickc(this,'e3c',1)">¿Me importaría que lo viera un futuro empleador dentro de diez años?</div><div class="option" onclick="pickc(this,'e3c',0)">¿Cuántos "me gusta" me va a dar?</div><div class="option" onclick="pickc(this,'e3c',0)">¿Lo ha publicado ya algún famoso?</div></div>
+<div id="fb_e3c" class="feedback-box" data-exp="Pensar en el largo plazo ayuda a evitar publicaciones de las que luego te arrepientas."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo2.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo4.html')">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Ciberseguridad II: redes sociales en profundidad · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

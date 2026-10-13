@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La hoja Totales (II): el personal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">👩‍🍳</span>La hoja Totales (II): el personal</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Calcularás cuántas personas hacen falta según los comensales y cuánto cuesta el personal.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:69%"></div></div>
+    <div class="progress-text">Curso de Escandallo con Calc · Módulo 9 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>La hoja Totales (II): el personal</h2>
+
+<div class="activity"><h3>👩‍🍳 Idea</h3><p>Cuantos más comensales, más personal. En lugar de teclear el número de trabajadores, lo <b>calculamos con reglas</b> a partir de <b>J1</b> (comensales).</p></div>
+
+<h3>Estructura de la tabla</h3>
+<table class="tbl"><tr><th>Columna</th><th>Qué contiene</th></tr>
+<tr><td>G · Descripción</td><td>Puesto (Camareros, Cocineros, Marmitonas, Conductores, Azafatas, Nómina)</td></tr>
+<tr><td>H · Coste Trabajador/Hora</td><td>Lo que cuesta una hora de una persona (dato que tecleas)</td></tr>
+<tr><td>I · Comensales/Trabajador</td><td>Cuántos comensales atiende cada camarero (20)</td></tr>
+<tr><td>J · n.º Trabajadores</td><td><b>Fórmula</b> según los comensales</td></tr>
+<tr><td>K · Horas Trabajador</td><td>Horas que trabaja cada persona (dato que tecleas)</td></tr>
+<tr><td>L · Total</td><td>Coste del puesto</td></tr></table>
+
+<h3>Fórmula del total de cada puesto</h3>
+<div class="formula"><span class="f-label">Fórmula</span><code>=K8*J8*H8</code><span class="f-exp">Horas × número de trabajadores × coste por hora. Cópiala hacia abajo hasta L16.</span></div>
+
+<h3>Cuántas personas hacen falta (columna J)</h3>
+<p>Cada puesto tiene su propia regla. Aquí usamos <b>SI</b> y <b>REDONDEAR</b> (redondea al número entero más próximo: 22,5 → 23).</p>
+<div class="formula"><span class="f-label">J8</span><code>=SI(J$1&lt;I8;1;REDONDEAR(J$1/I8;0))</code><span class="f-exp"><b>Camareros:</b> 1 por cada 20 comensales. Si hay menos de 20 comensales, al menos 1.</span></div>
+<div class="formula"><span class="f-label">J9</span><code>=SI(J$1&gt;600;6;REDONDEAR(J$1/100+1;0))</code><span class="f-exp"><b>Cocineros:</b> 1 más por cada 100 comensales, con un máximo de 6.</span></div>
+<div class="formula"><span class="f-label">J10</span><code>=REDONDEAR(J9/2;0)</code><span class="f-exp"><b>Marmitonas:</b> la mitad que de cocineros.</span></div>
+<div class="formula"><span class="f-label">J11</span><code>=SI(J1&gt;200;2;1)</code><span class="f-exp"><b>Conductores:</b> 2 si hay más de 200 comensales; si no, 1.</span></div>
+<p><b>Azafatas</b> (J12 = 0) y <b>Nómina</b> (J13 = 1) se teclean a mano porque no dependen de los comensales.</p>
+<div class="figure sheetfig"><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:90px"><col style="width:70px"><col style="width:90px"><col style="width:260px"><col style="width:70px"><col style="width:130px"></colgroup><tr><th class="corner"></th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th></tr><tr><th class="rn">5</th><td class="pink" colspan="6">Personal</td></tr><tr style="height:46px"><th class="rn">6</th><td class="peach" rowspan="2">Descripción</td><td class="peach" rowspan="2">Coste Trabajador/Hora</td><td class="peach" rowspan="2">Comensales/ Trabajador</td><td class="peach" rowspan="2">n.º Trabajadores</td><td class="peach" rowspan="2">Horas Trabajador</td><td class="peach" rowspan="2">Total</td></tr><tr><th class="rn">7</th></tr><tr><th class="rn">8</th><td class="">Camareros</td><td class="r">12,00 €</td><td class="r">20</td><td class="r f hl">=SI(J$1&lt;I8;1;REDONDEAR(J$1/I8;0))</td><td class="r">6</td><td class="r f hl3">=K8*J8*H8</td></tr><tr><th class="rn">9</th><td class="">Cocineros</td><td class="r">10,00 €</td><td class=""></td><td class="r f hl">=SI(J$1&gt;600;6;REDONDEAR(J$1/100+1;0))</td><td class="r">20</td><td class="r f">=K9*J9*H9</td></tr><tr><th class="rn">10</th><td class="">Marmitonas</td><td class="r">8,00 €</td><td class=""></td><td class="r f hl">=REDONDEAR(J9/2;0)</td><td class="r">16</td><td class="r f">=K10*J10*H10</td></tr><tr><th class="rn">11</th><td class="">Conductores</td><td class="r">12,00 €</td><td class=""></td><td class="r f hl">=SI(J1&gt;200;2;1)</td><td class="r">8</td><td class="r f">=K11*J11*H11</td></tr><tr><th class="rn">12</th><td class="">Azafatas</td><td class="r">16,00 €</td><td class=""></td><td class="r">0</td><td class="r">2</td><td class="r f">=K12*J12*H12</td></tr><tr><th class="rn">13</th><td class="">Nómina</td><td class="r">30,00 €</td><td class=""></td><td class="r">1</td><td class="r">40</td><td class="r f">=K13*J13*H13</td></tr><tr><th class="rn">17</th><td class=""></td><td class="lbl i" colspan="4">Total Personal</td><td class="blue f hl2">=SUMA(L8:L16)</td></tr></table></div><p class="figure-caption">Fórmulas del bloque «Personal» (Ver → Mostrar fórmula).</p></div>
+<div class="figure sheetfig"><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:90px"><col style="width:70px"><col style="width:90px"><col style="width:80px"><col style="width:70px"><col style="width:100px"></colgroup><tr><th class="corner"></th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th></tr><tr><th class="rn">5</th><td class="pink" colspan="6">Personal</td></tr><tr style="height:46px"><th class="rn">6</th><td class="peach" rowspan="2">Descripción</td><td class="peach" rowspan="2">Coste Trabajador/Hora</td><td class="peach" rowspan="2">Comensales/ Trabajador</td><td class="peach" rowspan="2">n.º Trabajadores</td><td class="peach" rowspan="2">Horas Trabajador</td><td class="peach" rowspan="2">Total</td></tr><tr><th class="rn">7</th></tr><tr><th class="rn">8</th><td class="">Camareros</td><td class="r">12,00 €</td><td class="r">20</td><td class="r">15</td><td class="r">6</td><td class="r">1.080,00 €</td></tr><tr><th class="rn">9</th><td class="">Cocineros</td><td class="r">10,00 €</td><td class=""></td><td class="r">4</td><td class="r">20</td><td class="r">800,00 €</td></tr><tr><th class="rn">10</th><td class="">Marmitonas</td><td class="r">8,00 €</td><td class=""></td><td class="r">2</td><td class="r">16</td><td class="r">256,00 €</td></tr><tr><th class="rn">11</th><td class="">Conductores</td><td class="r">12,00 €</td><td class=""></td><td class="r">2</td><td class="r">8</td><td class="r">192,00 €</td></tr><tr><th class="rn">12</th><td class="">Azafatas</td><td class="r">16,00 €</td><td class=""></td><td class="r">0</td><td class="r">2</td><td class="r">0,00 €</td></tr><tr><th class="rn">13</th><td class="">Nómina</td><td class="r">30,00 €</td><td class=""></td><td class="r">1</td><td class="r">40</td><td class="r">1.200,00 €</td></tr><tr><th class="rn">17</th><td class=""></td><td class="lbl i" colspan="4">Total Personal</td><td class="blue">3.528,00 €</td></tr></table></div><p class="figure-caption">Resultados con 300 comensales: el personal cuesta <b>3.528,00 €</b>.</p></div>
+<div class="formula"><span class="f-label">L17</span><code>=SUMA(L8:L16)</code><span class="f-exp">Total Personal (L17): suma de todos los puestos.</span></div>
+<div class="tip-box">💡 <b>Consejo:</b> En <code>J$1</code> el <b>$</b> fija la fila 1: si copias la fórmula a otra fila, sigue mirando a los comensales.</div>
+
+<h3>¿Cómo cambia el personal con los comensales?</h3>
+<table class="tbl"><tr><th>Comensales</th><th>Camareros</th><th>Cocineros</th><th>Marmitonas</th><th>Conductores</th></tr><tr><td>150</td><td>8</td><td>3</td><td>2</td><td>1</td></tr><tr><td>300</td><td>15</td><td>4</td><td>2</td><td>2</td></tr><tr><td>450</td><td>23</td><td>6</td><td>3</td><td>2</td></tr><tr><td>700</td><td>35</td><td>6</td><td>3</td><td>2</td></tr></table>
+<div class="alert-box">⚠️ <b>Ojo:</b> <code>REDONDEAR(x;0)</code> redondea hacia arriba a partir de 0,5. Por eso con 150 comensales salen 8 camareros (7,5 → 8). Si prefieres asegurarte de que <b>nunca falte</b> personal, existe la función <code>REDONDEAR.MAS</code>.</div>
+
+<div class="exercise"><h3>🧩 Camareros para 450</h3><p>Con <b>450 comensales</b> y 20 comensales por camarero, ¿cuántos camareros calcula <code>=SI(J$1&lt;I8;1;REDONDEAR(J$1/I8;0))</code>?</p>
+<input id="e9a" type="number" step="1" placeholder="Escribe tu resultado">
+<button class="btn" onclick="chk('e9a',23,'fb_e9a','450 ÷ 20 = 22,5 → REDONDEAR da 23.')">Comprobar</button>
+<div id="fb_e9a" class="feedback-box"></div></div>
+<div class="exercise"><h3>🧩 Coste de los camareros</h3><p>Si hay <b>23 camareros</b>, cada uno trabaja <b>6 horas</b> a <b>12 €/hora</b>, ¿cuánto cuesta ese puesto? (en €)</p>
+<input id="e9b" type="number" step="1" placeholder="Escribe tu resultado">
+<button class="btn" onclick="chk('e9b',1656,'fb_e9b','23 × 6 × 12 = 1.656 €.')">Comprobar</button>
+<div id="fb_e9b" class="feedback-box"></div></div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo8.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo10.html')">Siguiente ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa los datos, la fórmula y prueba de nuevo.';}}
+function pickc(el,uid,ok,i){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

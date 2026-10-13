@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Instalar y quitar aplicaciones</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🛍️</span>Instalar y quitar aplicaciones</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Cómo instalar programas desde el App Center, qué son los «snaps» y los «debs» y cómo hacerlo con seguridad.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:62%"></div></div>
+    <div class="progress-text">Introducción a Ubuntu para usuarios · Módulo 10 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Instalar y quitar aplicaciones</h2>
+<div class="activity"><h3>🛍️ El App Center</h3>
+<p>En Ubuntu casi todo el software se instala desde el <b>App Center</b>, la tienda de aplicaciones: un solo sitio, con programas revisados y actualizaciones automáticas. Nada de buscar instaladores por internet.</p></div>
+<h3>Instalar una aplicación</h3><ol class="steps"><li>Haz clic en el icono del <b>App Center</b> del Dock, o pulsa <kbd>Super</kbd> y escribe «Software».</li><li>Cuando se abra, <b>busca</b> la aplicación por su nombre o elige una categoría y encuéntrala en la lista.</li><li>Selecciona la aplicación y pulsa <b>Instalar</b>.</li><li>El App Center te pedirá tu <b>contraseña</b>. Escríbela y empieza la instalación, que suele ser rápida (más lenta con conexión lenta).</li></ol>
+<h3>Quitar una aplicación</h3><ol class="steps"><li>Abre el <b>App Center</b>.</li><li>Pulsa el botón <b>Gestionar</b> (Manage) de la barra lateral.</li><li>Busca la aplicación en la lista de instaladas.</li><li>Selecciónala y pulsa <b>Desinstalar</b>. Escribe tu contraseña para confirmar.</li></ol><div class="tip-box">💡 Si intentas quitar una aplicación que otra necesita, el App Center te avisará de que se quitarán las dos y te pedirá confirmación antes de hacerlo.</div>
+<h3>Snaps y debs: dos formatos de aplicaciones</h3>
+<p>Las aplicaciones de Ubuntu llegan en dos formatos. No tienes que elegir tú casi nunca, pero conviene saber qué significan:</p><table class="tbl"><tr><th>Formato</th><th>Qué es</th><th>Cómo lo notarás</th></tr><tr><td><b>Snap</b></td><td>Aplicación «empaquetada» con todo lo que necesita, que se ejecuta en un entorno aislado. Se actualiza sola.</td><td>Si una aplicación está en los dos formatos, el App Center muestra primero el <b>snap</b>.</td></tr><tr><td><b>Deb</b></td><td>Paquete tradicional de Debian/Ubuntu, integrado con el sistema.</td><td>Muchas aplicaciones «de siempre» siguen en este formato. Desde la 24.10 también se pueden instalar <b>.deb</b> de terceros con el App Center.</td></tr></table>
+<p>En la versión 26.04, además, las aplicaciones <b>snap</b> están mejor integradas con el escritorio: puedes ver y controlar sus <b>permisos</b> (cámara, notificaciones, USB, archivos…) desde Configuración.</p>
+<h3>Instalar con seguridad</h3><ul class="key-points"><li>✅ <span>Instala <b>desde el App Center</b> siempre que puedas.</span></li><li>🌐 <span>Si una aplicación solo se ofrece en su web, descarga <b>únicamente de la web oficial</b> del autor.</span></li><li>⚠️ <span>No ejecutes órdenes o scripts de <b>foros y vídeos</b> sin entender qué hacen: pueden dañar el sistema o instalar software no deseado.</span></li><li>🔑 <span>Una instalación te pide <b>tu contraseña</b>: si no esperabas que te la pidieran, <b>no la escribas</b>.</span></li></ul>
+<div class="summary-box">🎯 <b>Idea clave:</b> App Center para instalar y quitar; la contraseña autoriza los cambios; desconfía de lo que no venga de fuentes oficiales.</div><div class="exercise"><h3>🧩 Instalar</h3><p>Quieres instalar un programa. ¿Cuál es el camino habitual en Ubuntu?</p><div class="options" id="opt_u10a"><div class="option" onclick="pickc(this,'u10a',0)">Copiarlo en la carpeta Escritorio</div><div class="option" onclick="pickc(this,'u10a',0)">Reinstalar Ubuntu</div><div class="option" onclick="pickc(this,'u10a',1)">Buscarlo en el App Center y pulsar Instalar</div><div class="option" onclick="pickc(this,'u10a',0)">Descargar un .exe de cualquier web</div></div><div id="fb_u10a" class="feedback-box" data-exp="El App Center es el sitio habitual: ofrece software revisado y actualizaciones automáticas."></div></div><div class="exercise"><h3>🧩 Desinstalar</h3><p>Para quitar una aplicación instalada con el App Center, ¿qué haces?</p><div class="options" id="opt_u10b"><div class="option" onclick="pickc(this,'u10b',1)">Gestionar ▸ seleccionar la aplicación ▸ Desinstalar</div><div class="option" onclick="pickc(this,'u10b',0)">La arrastro a la Papelera</div><div class="option" onclick="pickc(this,'u10b',0)">Borro su carpeta con Mayús + Supr</div><div class="option" onclick="pickc(this,'u10b',0)">Apago el equipo</div></div><div id="fb_u10b" class="feedback-box" data-exp="En el App Center, entra en «Gestionar», selecciona la aplicación y pulsa Desinstalar."></div></div><div class="exercise"><h3>🧩 Una web rara</h3><p>Un vídeo te dice que pegues una orden desconocida en la Terminal para «arreglar» tu equipo. ¿Qué haces?</p><div class="options" id="opt_u10c"><div class="option" onclick="pickc(this,'u10c',0)">La pego y pulso Intro sin leerla</div><div class="option" onclick="pickc(this,'u10c',0)">Se la mando a todos mis contactos</div><div class="option" onclick="pickc(this,'u10c',1)">No la ejecuto si no entiendo qué hace</div><div class="option" onclick="pickc(this,'u10c',0)">Reinicio el equipo cuatro veces</div></div><div id="fb_u10c" class="feedback-box" data-exp="Nunca ejecutes órdenes que no entiendes: pueden dañar el sistema o comprometer tu seguridad."></div></div>
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo9.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo11.html')">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Introducción a Ubuntu para usuarios · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+
+</body>
+</html>

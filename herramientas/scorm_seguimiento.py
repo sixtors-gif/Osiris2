@@ -116,7 +116,10 @@ def recursos_comunes(d):
     for raiz, _, fs in os.walk(d):
         for f in sorted(fs):
             rel = os.path.relpath(os.path.join(raiz, f), d).replace(os.sep, "/")
-            if rel.startswith(("img/", "practica/")):
+            # Todo lo que no es una página ni documentación del paquete: imágenes,
+            # prácticas y plantillas descargables (.ods, .xlsx...).
+            if not rel.endswith(".html") and rel not in ("style.css", "scorm.js", "imsmanifest.xml",
+                                                         "README.txt", "preguntas_moodle.gift"):
                 comunes.append(rel)
     return comunes
 

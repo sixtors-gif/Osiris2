@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Examen final</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🏁</span>Examen final</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Demuestra que dominas lo básico de una hoja de cálculo.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    <div class="progress-text">Hoja de cálculo básica: el horario del curso · Examen final</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Examen final</h2>
+
+<p>Responde las <b>26 preguntas</b> con calma. Al terminar verás tu resultado al instante. Se recomienda acertar al menos el <b>70 %</b>.</p>
+<div class="summary-box">🎯 <b>Consejo:</b> si dudas, recuerda lo que hiciste con tu propio horario en Calc.</div>
+<div id="exam"></div>
+<div class="navigation"><button class="nav-btn" onclick="scormGo('modulo14.html')">⬅️ Repasar el reto final</button><button class="nav-btn" onclick="finishExam()">Finalizar</button></div>
+<div id="result" class="certificate" style="display:none;margin-top:25px"></div>
+<script>
+const qs=[["En una hoja de cálculo, ¿qué es la celda C5?", "La que está en la columna C y en la fila 5.", "La que está en la fila C y en la columna 5.", "La quinta hoja del libro.", "El rango formado por C y 5."], ["¿En qué se diferencia «Guardar como» de «Guardar»?", "Guardar como crea otro archivo (otro nombre, carpeta o formato); Guardar actualiza el mismo.", "No hay ninguna diferencia.", "Guardar como borra el archivo original.", "Guardar como solo sirve para imprimir."], ["Antes de hacer un cambio muy grande en el horario, ¿qué conviene hacer?", "Guardar una copia con la versión siguiente (por ejemplo _v2) y trabajar en ella.", "Borrar el archivo y empezar de cero.", "Trabajar sin guardar hasta terminar.", "Cerrar el programa."], ["¿Cuál de estos nombres de archivo es más adecuado?", "Horario_2025-26_1JefeCocina_v1.ods", "horario nuevo (2) FINAL.ods", "Libro1.ods", "Horario 2025/26.ods"], ["¿Qué formato eliges para enviar el horario a las familias sin que nadie pueda modificarlo?", "PDF", ".ods", ".xlsx", "CSV"], ["La extensión de los archivos de Calc es…", ".ods", ".xlsx", ".docx", ".pdf"], ["¿Cómo modificas el texto de una celda sin borrarlo entero?", "Con F2 o haciendo doble clic sobre la celda.", "Pulsando Supr y escribiendo de nuevo siempre.", "Con Ctrl + A.", "Cerrando el archivo."], ["¿Qué atajo deshace la última acción?", "Ctrl + Z", "Ctrl + S", "Ctrl + A", "Ctrl + P"], ["¿Qué hace un doble clic en la línea que separa dos letras de columna?", "Ajusta la columna al texto más largo que contiene (ancho óptimo).", "Borra la columna.", "Combina las dos columnas.", "Oculta la columna."], ["Una celda tiene tres líneas de texto y no se ve entera. ¿Qué debes aumentar?", "El alto de la fila.", "El número de hojas.", "El tamaño del papel.", "El ancho del libro."], ["En el horario, ¿qué elemento lleva el tamaño de letra más grande?", "El título.", "Las aulas.", "Las horas.", "Los datos de las franjas."], ["¿Qué atajo aplica negrita a la selección?", "Ctrl + B", "Ctrl + F", "Ctrl + N", "Ctrl + Y"], ["¿Qué activas para que un texto largo se reparta en varias líneas dentro de su celda?", "Ajustar texto automáticamente.", "Negrita.", "Combinar celdas.", "Subrayado."], ["Combinas las celdas A5:C5 y el texto estaba en B5. ¿Qué ocurre con él?", "Calc avisa: solo se conserva el de la celda superior izquierda (A5), salvo que elijas mover el contenido a la primera celda.", "Se combina sin avisar y el texto se ve completo.", "Se copia a las tres celdas.", "Se mueve a la fila 6."], ["¿Cuántas celdas se unen al combinar el rango A1:O2?", "30", "15", "2", "17"], ["¿Qué color de letra usas sobre un fondo marrón oscuro?", "Blanco.", "Negro.", "Marrón oscuro.", "El mismo que el fondo."], ["Las líneas grises de la cuadrícula de la hoja, ¿se imprimen?", "No: solo se imprimen los bordes que tú dibujas.", "Sí, siempre.", "Solo si el papel es de color.", "Solo en PDF."], ["Para el programa, ¿qué es una fecha?", "Un número: los días transcurridos desde el 30/12/1899.", "Siempre un texto.", "Una imagen.", "Un color."], ["¿Qué valor decimal guarda el programa para las 12:00?", "0,5", "12", "1,2", "0,12"], ["Entrada 8:30 y salida 15:00. ¿Qué fórmula calcula las horas diarias si están en B14 y E14?", "=E14-B14", "=B14-E14+1", "=SUMA(B14)", "B14/E14"], ["¿Qué herramienta copia solo el aspecto (formato) de una celda a otras?", "Clonar formato (el pincel).", "Ctrl + X.", "Ordenar.", "Autofiltro."], ["Tienes formateado el bloque de LUNES. ¿Cuál es la mejor forma de preparar los otros cuatro días?", "Copiar y pegar el bloque y cambiar los textos.", "Formatear cada día desde cero.", "Imprimirlo y dibujarlo a mano.", "Borrar el bloque de LUNES."], ["Con una regla de formato condicional «la celda contiene INGLÉS», ¿qué ocurre si cambias el texto de la celda por CALIDAD?", "La celda deja de cumplir la regla y pierde ese color.", "Conserva el color.", "Se borra la celda.", "Se combina con la siguiente."], ["¿Cuál es la ventaja del formato condicional frente a colorear a mano?", "El color se actualiza solo al cambiar el contenido.", "Ocupa menos memoria.", "Cambia el papel de impresión.", "Evita guardar el archivo."], ["El horario es mucho más ancho que alto y se corta en dos páginas. ¿Qué haces?", "Orientación horizontal y ajustar a 1 página de ancho.", "Borrar columnas.", "Usar una letra gigante.", "Imprimir en papel A0."], ["¿Qué exporta el horario para que se vea igual en cualquier dispositivo y no se edite?", "Archivo → Exportar como → Exportar como PDF.", "Guardar como CSV.", "Archivo → Cerrar.", "Ver → Zoom."]];
+let answers={};
+const root=document.getElementById('exam');
+qs.forEach(function(x,i){
+  const box=document.createElement('div');box.className='quiz';
+  const h=document.createElement('h4');h.textContent=(i+1)+'. '+x[0];box.appendChild(h);
+  const opts=document.createElement('div');opts.className='options';
+  x.slice(1).map(function(o){return [Math.random(),o]}).sort(function(a,b){return a[0]-b[0]}).forEach(function(p){
+    const d=document.createElement('div');d.className='option';d.textContent=p[1];
+    d.onclick=function(){opts.querySelectorAll('.option').forEach(function(z){z.classList.remove('selected')});d.classList.add('selected');answers[i]=p[1];};
+    opts.appendChild(d);
+  });
+  box.appendChild(opts);root.appendChild(box);
+});
+function finishExam(){
+  let score=0;qs.forEach(function(x,i){if(answers[i]===x[1])score++;});
+  const pct=Math.round(score/qs.length*100);const r=document.getElementById('result');r.style.display='block';
+  r.innerHTML='<h2>'+(pct>=70?'🎉 ¡Muy bien!':'💪 Buen intento')+'</h2><p>Resultado: <b>'+score+'/'+qs.length+' ('+pct+'%)</b></p><p>'+(pct>=70?'Dominas lo básico de la hoja de cálculo: guardar, dar formato, combinar, colorear y preparar la impresión.':'Repasa los módulos y vuelve a intentarlo. Lo importante es practicar con tu propio horario.')+'</p>';
+  if(window.scorm)scorm.complete(pct);window.scrollTo({top:r.offsetTop,behavior:'smooth'});
+}
+</script>
+      
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Hoja de cálculo básica: el horario del curso · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

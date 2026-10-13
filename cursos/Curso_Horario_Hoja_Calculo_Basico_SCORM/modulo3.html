@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Formatos de archivo: .ods, .xlsx, .xls y PDF</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">📁</span>Formatos de archivo: .ods, .xlsx, .xls y PDF</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Descubrirás en qué formatos puedes guardar el horario, cuándo usar cada uno y qué se puede perder al cambiar de formato.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:21%"></div></div>
+    <div class="progress-text">Hoja de cálculo básica: el horario del curso · Módulo 3 de 14</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Formatos de archivo: .ods, .xlsx, .xls y PDF</h2>
+
+<h3>Los formatos más habituales</h3>
+<p>El <b>formato</b> de un archivo lo indica su <b>extensión</b> (lo que va tras el punto). Cada uno sirve para algo distinto. Este es el mismo horario guardado de cuatro maneras:</p>
+<table class="tbl"><tr><th>Extensión</th><th>Nombre</th><th>Peso del horario</th><th>Cuándo usarlo</th></tr>
+<tr><td><code>.ods</code></td><td>OpenDocument (LibreOffice)</td><td>24,8 KB</td><td>Trabajo diario con Calc. Formato abierto y gratuito.</td></tr>
+<tr><td><code>.xlsx</code></td><td>Excel 2007 o posterior</td><td>6,6 KB</td><td>Compartir con quien usa Excel actual.</td></tr>
+<tr><td><code>.xls</code></td><td>Excel 97-2003 (antiguo)</td><td>10,0 KB</td><td>Equipos muy antiguos. Tiene límites (65.536 filas y 256 columnas).</td></tr>
+<tr><td><code>.pdf</code></td><td>Documento para leer/imprimir</td><td>126,8 KB</td><td>Enviar o publicar el horario <b>sin que se pueda modificar</b>.</td></tr></table>
+<div class="tip-box">💡 <b>Consejo:</b> El peso depende del contenido: un horario pequeño casi no ocupa nada, pero el PDF pesa más porque guarda «la foto» de cada página con sus fuentes.</div>
+
+<h3>Guardar en otro formato</h3>
+<ol class="steps"><li>Abre <b>Archivo → Guardar como…</b> (<kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>S</kbd>).</li><li>Despliega <b>Tipo de archivo</b> y elige, por ejemplo, <b>Excel 2007-365 (.xlsx)</b>.</li><li>Deja el mismo nombre (solo cambiará la extensión) y pulsa <b>Guardar</b>.</li><li>El programa te avisa de que no es su formato habitual. Pulsa <b>Usar formato Excel 2007-365</b>.</li></ol>
+<div class="figure"><div class="dlg"><div class="dtitle"><span>Mantener formato</span><span class="dx">✕</span></div><div class="dbody"><div class="drow"><span class="dlab">Mensaje</span><span class="dval plain">Ha elegido guardar el documento en un formato distinto del formato ODF predeterminado.</span></div><div class="drow"><span class="dlab"></span><span class="dval plain">¿Desea usar el formato Excel 2007-365?</span></div></div><div class="dfoot"><span class="dbtn ok">Usar formato Excel 2007-365</span><span class="dbtn">Usar formato ODF</span></div></div></div>
+<div class="excel-box"><span class="xbadge">Excel</span> <b>Archivo → Guardar como → Examinar</b>. En «Tipo» elige <b>Libro de Excel (*.xlsx)</b>, <b>Libro de Excel 97-2003 (*.xls)</b> o <b>Hoja de cálculo OpenDocument (*.ods)</b>.</div>
+
+<h3>Un archivo, dos versiones: ojo con los cambios posteriores</h3>
+<p>Cuando guardas como <code>.xlsx</code>, <b>el archivo abierto pasa a ser el .xlsx</b>. Si luego haces cambios y pulsas Guardar, se guardan en el .xlsx; el <code>.ods</code> anterior <b>no</b> se actualiza. Por eso conviene guardar primero en <code>.ods</code> y, al final, hacer una copia en el otro formato para compartir.</p>
+<div class="alert-box">⚠️ <b>Error típico:</b> Al cambiar de formato puede perderse algún detalle de diseño (una fuente, un color muy especial). Después de guardar en otro formato, <b>ábrelo y revísalo</b>.</div>
+
+<h3>Cuando NO conviene: el formato CSV</h3>
+<p>El <b>CSV</b> guarda solo el texto de las celdas, separado por comas. Es útil para pasar datos entre programas, pero <b>pierde todo el formato</b>:</p>
+<div class="figure"><pre style="text-align:left;display:inline-block;background:#f6f7fb;border:1px solid #d9dfee;border-radius:8px;padding:10px 14px;font-size:.85em;line-height:1.4;overflow-x:auto;max-width:100%">HORARIO CURSO 2025-2026
+LUNES,,,MARTES,,,...
+HORA,ASIGNATURA,AULA,HORA,ASIGNATURA,AULA,...
+8:30 – 9:30,INFORMÁTICA,AULA INFORMÁTICA,8:30 – 9:30,ORIENTACIÓN LABORAL...</pre>
+<p class="figure-caption">Así quedaría el horario en CSV: solo texto separado por comas. ¡Sin colores, sin bordes, sin celdas combinadas!</p></div>
+
+<h3>Exportar a PDF</h3>
+<ol class="steps"><li><b>Archivo → Exportar como → Exportar como PDF…</b></li><li>Deja las opciones por defecto y pulsa <b>Exportar</b>.</li><li>Ponle nombre (por ejemplo <code>Horario_2025-26_v1.pdf</code>) y guárdalo.</li></ol>
+<div class="excel-box"><span class="xbadge">Excel</span> <b>Archivo → Exportar → Crear documento PDF/XPS</b>.</div>
+<p>El PDF se ve igual en cualquier ordenador o móvil, pero <b>no es editable</b>: es ideal para colgar el horario en la web o mandarlo por correo.</p>
+
+<h3>¿Qué formato elijo?</h3>
+<table class="tbl"><tr><th>Situación</th><th>Formato</th></tr>
+<tr><td>Sigo trabajando yo con Calc</td><td><code>.ods</code></td></tr>
+<tr><td>Se lo mando a una compañera que usa Excel y debe modificarlo</td><td><code>.xlsx</code></td></tr>
+<tr><td>Lo cuelgo en la web del centro para que lo lean</td><td><code>.pdf</code></td></tr>
+<tr><td>Un programa de gestión solo importa datos en texto plano</td><td><code>.csv</code></td></tr></table>
+
+<div class="exercise"><h3>🧩 Compartir para leer</h3><p>Quieres enviar el horario a las familias para que lo lean, sin que nadie pueda cambiarlo. ¿Qué formato eliges?</p>
+<div class="options" id="opt_e3a"><div class="option" onclick="pickc(this,'e3a',1)">PDF</div><div class="option" onclick="pickc(this,'e3a',0)">CSV</div><div class="option" onclick="pickc(this,'e3a',0)">XLS</div></div>
+<div id="fb_e3a" class="feedback-box" data-exp="El PDF se ve igual en todos los dispositivos y no se edita fácilmente."></div></div>
+<div class="exercise"><h3>🧩 Formato antiguo</h3><p>¿Qué formato corresponde a «Excel 97-2003»?</p>
+<div class="options" id="opt_e3b"><div class="option" onclick="pickc(this,'e3b',1)">.xls</div><div class="option" onclick="pickc(this,'e3b',0)">.xlsx</div><div class="option" onclick="pickc(this,'e3b',0)">.ods</div></div>
+<div id="fb_e3b" class="feedback-box" data-exp="La extensión .xls es la del Excel antiguo; .xlsx es la del Excel actual y .ods la de LibreOffice."></div></div>
+<div class="summary-box">🎯 <b>Tarea:</b> guarda tu horario en <b>.ods</b> y, con «Guardar como», crea también una copia <b>.xlsx</b> y un <b>PDF</b>. Compara cuánto pesa cada archivo (clic derecho → Propiedades).</div>
+
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo2.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo4.html')">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Hoja de cálculo básica: el horario del curso · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Datos sensibles: alergias, salud y necesidades especiales</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🔐</span>Datos sensibles: alergias, salud y necesidades especiales</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Las alergias y otros datos de salud son "categoría especial": requieren un cuidado extra.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:38%"></div></div>
+    <div class="progress-text">Curso de Protección de Datos · Módulo 5 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Datos sensibles: alergias, salud y necesidades especiales</h2>
+
+      <div class="activity">
+        <h3>🥜 ¿Por qué son especiales?</h3>
+        <p>El RGPD considera "categorías especiales" a los datos de salud, religión, origen étnico o discapacidad, entre otros, porque su mal uso puede causar más daño a la persona. Una alergia alimentaria, una necesidad de movilidad reducida o un menú halal o vegano por motivos religiosos entran en esta categoría, y aparecen constantemente en hostelería.</p>
+      </div>
+
+      <div class="figure">
+        <svg viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cómo no gestionar una alergia: nota visible en la cocina para cualquiera, frente a cómo sí gestionarla: sistema con acceso solo para quien lo necesita">
+          <text x="150" y="20" font-size="14" text-anchor="middle" fill="#c0392b" font-weight="700">❌ Así no</text>
+          <rect x="20" y="30" width="260" height="150" rx="12" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+          <rect x="45" y="55" width="210" height="60" fill="#fff9c4" stroke="#c9a13b" stroke-width="1" transform="rotate(-3 150 85)"/>
+          <text x="150" y="80" font-size="11" text-anchor="middle" fill="#333" transform="rotate(-3 150 85)">Mesa 4: alergia marisco</text>
+          <text x="150" y="95" font-size="11" text-anchor="middle" fill="#333" transform="rotate(-3 150 85)">Mesa 7: diabetes</text>
+          <text x="150" y="160" font-size="11.5" text-anchor="middle" fill="#c0392b">Nota a la vista de cualquiera</text>
+
+          <text x="450" y="20" font-size="14" text-anchor="middle" fill="#2e7d32" font-weight="700">✅ Así sí</text>
+          <rect x="320" y="30" width="260" height="150" rx="12" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+          <text x="450" y="80" font-size="30" text-anchor="middle">🔐</text>
+          <text x="450" y="115" font-size="11.5" text-anchor="middle" fill="#333">Sistema o ficha interna</text>
+          <text x="450" y="132" font-size="11.5" text-anchor="middle" fill="#333">visible solo para quien</text>
+          <text x="450" y="149" font-size="11.5" text-anchor="middle" fill="#333">prepara o sirve el plato</text>
+          <text x="450" y="166" font-size="11.5" text-anchor="middle" fill="#2e7d32" font-weight="700">Acceso controlado</text>
+        </svg>
+        <p class="figure-caption">El dato es el mismo; lo que cambia es quién puede verlo y cómo está guardado.</p>
+      </div>
+
+      <ul class="key-points">
+        <li>🎯 <span><b>Finalidad limitada:</b> una alergia se recoge para servir la comida con seguridad, nunca para otros usos como marketing o estadísticas sin más.</span></li>
+        <li>👥 <span><b>Acceso mínimo:</b> solo debe verla quien la necesita para hacer su trabajo (sala, cocina), no todo el equipo ni, desde luego, otros clientes.</span></li>
+        <li>🗑️ <span><b>No la conserves</b> más tiempo del necesario para ese servicio, salvo que el cliente sea habitual y acepte que se guarde su ficha para próximas visitas.</span></li>
+      </ul>
+
+      <div class="summary-box">💡 <b>Regla práctica:</b> trata cualquier dato de salud como tratarías tú que trataran el tuyo: solo lo justo, solo quien lo necesita, y guardado donde no lo vea cualquiera.</div>
+
+      <div class="quiz">
+        <h3>🧩 Ejercicio práctico: La pizarra de la cocina</h3>
+        <p>En la cocina hay una pizarra con las alergias de las mesas del turno, visible también desde la zona de paso de clientes hacia los aseos. ¿Qué cambiarías?</p>
+        <button class="btn" onclick="this.nextElementSibling.textContent='Colocar la pizarra en una zona no visible para clientes, o sustituirla por un sistema interno (comandas, apps de sala) al que solo acceda el personal que lo necesita.'">Ver orientación</button>
+        <p class="feedback"></p>
+      </div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo4.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo6.html')">Siguiente ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Protección de Datos · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+</body>
+</html>

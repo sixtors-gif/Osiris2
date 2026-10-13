@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marketing, fidelización y comunicaciones comerciales</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🔐</span>Marketing, fidelización y comunicaciones comerciales</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Enviar una newsletter o gestionar un club de clientes también tiene sus reglas.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:54%"></div></div>
+    <div class="progress-text">Curso de Protección de Datos · Módulo 7 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Marketing, fidelización y comunicaciones comerciales</h2>
+
+      <div class="activity">
+        <h3>📧 ¿Cuándo se puede enviar publicidad?</h3>
+        <p>Para enviar ofertas, newsletters o invitaciones a eventos necesitas una base legal: normalmente el <b>consentimiento</b> explícito del cliente, o su condición de cliente habitual para ofrecerle productos similares (siempre con la opción fácil de darse de baja).</p>
+      </div>
+
+      <div class="figure">
+        <svg viewBox="0 0 600 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Casilla de aceptación de marketing: correcta cuando está desmarcada por defecto, incorrecta cuando viene premarcada">
+          <rect x="10" y="15" width="280" height="150" rx="14" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+          <text x="150" y="42" font-size="14" text-anchor="middle" fill="#c0392b" font-weight="700">❌ Incorrecto</text>
+          <rect x="35" y="65" width="18" height="18" rx="3" fill="#c0392b"/><text x="44" y="79" font-size="13" text-anchor="middle" fill="#fff">✓</text>
+          <text x="65" y="79" font-size="11" fill="#333">Quiero recibir ofertas</text>
+          <text x="35" y="105" font-size="11" fill="#666">(casilla ya marcada</text>
+          <text x="35" y="120" font-size="11" fill="#666">de fábrica, el cliente</text>
+          <text x="35" y="135" font-size="11" fill="#666">no ha decidido nada)</text>
+
+          <rect x="310" y="15" width="280" height="150" rx="14" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+          <text x="450" y="42" font-size="14" text-anchor="middle" fill="#2e7d32" font-weight="700">✅ Correcto</text>
+          <rect x="335" y="65" width="18" height="18" rx="3" fill="#fff" stroke="#4caf50" stroke-width="2"/>
+          <text x="365" y="79" font-size="11" fill="#333">Quiero recibir ofertas</text>
+          <text x="335" y="105" font-size="11" fill="#666">(vacía por defecto: el</text>
+          <text x="335" y="120" font-size="11" fill="#666">cliente marca solo si</text>
+          <text x="335" y="135" font-size="11" fill="#666">realmente quiere)</text>
+        </svg>
+        <p class="figure-caption">El consentimiento tiene que ser una decisión activa del cliente, nunca algo que venga ya aceptado.</p>
+      </div>
+
+      <ul class="key-points">
+        <li>🚫 <span><b>No cedas datos</b> a otras empresas, agencias o "partners" sin el permiso explícito del cliente para ese fin concreto.</span></li>
+        <li>✋ <span><b>Baja fácil:</b> darse de baja de la newsletter o el club de fidelización debe ser tan sencillo como apuntarse, con un enlace visible en cada comunicación.</span></li>
+        <li>📝 <span><b>Encuestas de satisfacción:</b> están bien vistas si son para mejorar el servicio; evita usarlas como excusa para captar datos con otros fines sin decirlo.</span></li>
+        <li>🎂 <span><b>Programas de fidelización</b> (puntos, descuentos por cumpleaños): explica claramente qué datos usan y para qué al darse de alta.</span></li>
+      </ul>
+
+      <div class="quiz">
+        <h3>🧩 Ejercicio práctico: El club de fidelización</h3>
+        <p>Al final del formulario de alta al club de fidelización hay una casilla ya marcada: "Acepto compartir mis datos con empresas colaboradoras". ¿Es correcto?</p>
+        <button class="btn" onclick="this.nextElementSibling.textContent='No. El consentimiento debe ser una acción positiva del cliente: la casilla debe estar vacía por defecto y el cliente debe marcarla si realmente quiere aceptarlo.'">Ver orientación</button>
+        <p class="feedback"></p>
+      </div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo6.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo8.html')">Siguiente ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Protección de Datos · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+</body>
+</html>

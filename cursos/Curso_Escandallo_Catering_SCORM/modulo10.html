@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La hoja Totales (III): bebidas y varios</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🍷</span>La hoja Totales (III): bebidas y varios</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Calcularás las bebidas según los comensales y añadirás otros gastos como el transporte.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:77%"></div></div>
+    <div class="progress-text">Curso de Escandallo con Calc · Módulo 10 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>La hoja Totales (III): bebidas y varios</h2>
+
+<h3>Bebidas: la cantidad depende de los comensales</h3>
+<p>Cada bebida tiene su criterio de consumo:</p>
+<ul class="key-points"><li>🥤 <span><b>Refrescos y cerveza:</b> 1 por comensal → <code>=J1</code></span></li><li>🍷 <span><b>Agua, vinos y cava:</b> 1 botella por cada 4 comensales → <code>=REDONDEAR(J$1/4;0)</code></span></li></ul>
+<div class="formula"><span class="f-label">D22</span><code>=B22*C22</code><span class="f-exp">Total de cada bebida: coste unidad × cantidad. Cópiala hacia abajo.</span></div>
+<div class="formula"><span class="f-label">D34</span><code>=SUMA(D22:D27)</code><span class="f-exp">Total Bebidas (D34).</span></div>
+<div class="figure sheetfig"><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:100px"><col style="width:90px"><col style="width:190px"><col style="width:130px"></colgroup><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th></tr><tr><th class="rn">19</th><td class="pink" colspan="4">Bebidas</td></tr><tr style="height:34px"><th class="rn">20</th><td class="peach" rowspan="2">Descripción</td><td class="peach" rowspan="2">Coste Unidad</td><td class="peach" rowspan="2">Cantidad</td><td class="peach" rowspan="2">Total</td></tr><tr><th class="rn">21</th></tr><tr><th class="rn">22</th><td class="">Refrescos</td><td class="r">0,40 €</td><td class="r f hl">=J1</td><td class="r f hl3">=B22*C22</td></tr><tr><th class="rn">23</th><td class="">Agua</td><td class="r">0,50 €</td><td class="r f hl">=REDONDEAR(J$1/4;0)</td><td class="r f">=B23*C23</td></tr><tr><th class="rn">24</th><td class="">Vino Blanco</td><td class="r">5,00 €</td><td class="r f">=REDONDEAR(J$1/4;0)</td><td class="r f">=B24*C24</td></tr><tr><th class="rn">25</th><td class="">Vino Tinto</td><td class="r">5,50 €</td><td class="r f">=REDONDEAR(J$1/4;0)</td><td class="r f">=B25*C25</td></tr><tr><th class="rn">26</th><td class="">Cerveza</td><td class="r">0,30 €</td><td class="r f">=J1</td><td class="r f">=B26*C26</td></tr><tr><th class="rn">27</th><td class="">Cava</td><td class="r">7,00 €</td><td class="r f">=REDONDEAR(J$1/4;0)</td><td class="r f">=B27*C27</td></tr><tr><th class="rn">34</th><td class=""></td><td class="lbl i" colspan="2">Total Bebidas</td><td class="blue f hl2">=SUMA(D22:D27)</td></tr></table></div><p class="figure-caption">Fórmulas del bloque «Bebidas».</p></div>
+<div class="figure sheetfig"><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:100px"><col style="width:90px"><col style="width:90px"><col style="width:110px"></colgroup><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th></tr><tr><th class="rn">19</th><td class="pink" colspan="4">Bebidas</td></tr><tr style="height:34px"><th class="rn">20</th><td class="peach" rowspan="2">Descripción</td><td class="peach" rowspan="2">Coste Unidad</td><td class="peach" rowspan="2">Cantidad</td><td class="peach" rowspan="2">Total</td></tr><tr><th class="rn">21</th></tr><tr><th class="rn">22</th><td class="">Refrescos</td><td class="r">0,40 €</td><td class="r">300 Ud.</td><td class="r">120,00 €</td></tr><tr><th class="rn">23</th><td class="">Agua</td><td class="r">0,50 €</td><td class="r">75 Ud.</td><td class="r">37,50 €</td></tr><tr><th class="rn">24</th><td class="">Vino Blanco</td><td class="r">5,00 €</td><td class="r">75 Ud.</td><td class="r">375,00 €</td></tr><tr><th class="rn">25</th><td class="">Vino Tinto</td><td class="r">5,50 €</td><td class="r">75 Ud.</td><td class="r">412,50 €</td></tr><tr><th class="rn">26</th><td class="">Cerveza</td><td class="r">0,30 €</td><td class="r">300 Ud.</td><td class="r">90,00 €</td></tr><tr><th class="rn">27</th><td class="">Cava</td><td class="r">7,00 €</td><td class="r">75 Ud.</td><td class="r">525,00 €</td></tr><tr><th class="rn">34</th><td class=""></td><td class="lbl i" colspan="2">Total Bebidas</td><td class="blue">1.560,00 €</td></tr></table></div><p class="figure-caption">Resultados: las bebidas cuestan <b>1.560,00 €</b> para 300 comensales.</p></div>
+
+<h3>Un formato personalizado: «300 Ud.»</h3>
+<p>Las cantidades muestran la unidad pero siguen siendo <b>números</b> (se pueden multiplicar). Se consigue con un <b>código de formato</b>:</p>
+<ol class="steps"><li>Selecciona C22:C27 y pulsa <kbd>Ctrl</kbd>+<kbd>1</kbd> → pestaña <b>Números</b>.</li><li>En <b>Código de formato</b> escribe <code>0 "Ud."</code> y acepta.</li></ol>
+<div class="tip-box">💡 <b>Consejo:</b> Si escribieras «300 Ud.» como texto, Calc no podría multiplicarlo por el coste. El formato solo <b>maquilla</b> el número; el valor sigue siendo 300.</div>
+
+<h3>Varios: otros gastos del catering</h3>
+<ul class="key-points"><li>🧂 <span>Productos como <b>sal</b> y <b>pimienta</b>: coste × cantidad.</span></li><li>🚐 <span><b>Furgoneta:</b> una por conductor. Su cantidad se enlaza con los conductores: <code>=J11</code>.</span></li></ul>
+<div class="formula"><span class="f-label">L21</span><code>=J21*H21</code><span class="f-exp">Total de cada gasto (columna L). Cópiala hacia abajo.</span></div>
+<div class="formula"><span class="f-label">L35</span><code>=SUMA(L21:L34)</code><span class="f-exp">Total Productos Varios (L35).</span></div>
+<div class="figure sheetfig"><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:90px"><col style="width:70px"><col style="width:50px"><col style="width:60px"><col style="width:50px"><col style="width:130px"></colgroup><tr><th class="corner"></th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th></tr><tr><th class="rn">19</th><td class="pink" colspan="6">Varios</td></tr><tr><th class="rn">20</th><td class="peach">Descripción</td><td class="peach" colspan="2">Coste</td><td class="peach" colspan="2">Cantidad</td><td class="peach">Total</td></tr><tr><th class="rn">21</th><td class="">Sal</td><td class="r">0,30 €</td><td class="">Kg.</td><td class="r">10</td><td class="">Kg.</td><td class="r f hl3">=J21*H21</td></tr><tr><th class="rn">22</th><td class="">Pimienta</td><td class="r">5,49 €</td><td class="">kg.</td><td class="r">2</td><td class=""></td><td class="r f">=J22*H22</td></tr><tr><th class="rn">24</th><td class="">Furgoneta</td><td class="r">100,00 €</td><td class="">Ud.</td><td class="r f hl">=J11</td><td class="">Ud.</td><td class="r f">=J24*H24</td></tr><tr><th class="rn">35</th><td class=""></td><td class="lbl i" colspan="4">Total Productos Varios</td><td class="blue f hl2">=SUMA(L21:L34)</td></tr></table></div><p class="figure-caption">Bloque «Varios»: fórmulas.</p></div>
+<div class="figure sheetfig"><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:90px"><col style="width:70px"><col style="width:50px"><col style="width:60px"><col style="width:50px"><col style="width:100px"></colgroup><tr><th class="corner"></th><th>G</th><th>H</th><th>I</th><th>J</th><th>K</th><th>L</th></tr><tr><th class="rn">19</th><td class="pink" colspan="6">Varios</td></tr><tr><th class="rn">20</th><td class="peach">Descripción</td><td class="peach" colspan="2">Coste</td><td class="peach" colspan="2">Cantidad</td><td class="peach">Total</td></tr><tr><th class="rn">21</th><td class="">Sal</td><td class="r">0,30 €</td><td class="">Kg.</td><td class="r">10</td><td class="">Kg.</td><td class="r">3,00 €</td></tr><tr><th class="rn">22</th><td class="">Pimienta</td><td class="r">5,49 €</td><td class="">kg.</td><td class="r">2</td><td class=""></td><td class="r">10,98 €</td></tr><tr><th class="rn">24</th><td class="">Furgoneta</td><td class="r">100,00 €</td><td class="">Ud.</td><td class="r">2</td><td class="">Ud.</td><td class="r">200,00 €</td></tr><tr><th class="rn">35</th><td class=""></td><td class="lbl i" colspan="4">Total Productos Varios</td><td class="blue">213,98 €</td></tr></table></div><p class="figure-caption">Resultados: otros gastos por <b>213,98 €</b>.</p></div>
+<div class="tip-box">💡 <b>Consejo:</b> Enlazar la cantidad de furgonetas con el número de conductores (<code>=J11</code>) evita que se te olvide actualizarla si cambian los comensales.</div>
+
+<div class="exercise"><h3>🧩 Vino tinto</h3><p>Para <b>150 comensales</b> se calcula 1 botella de vino tinto por cada 4. Cada botella cuesta <b>5,50 €</b>. ¿Cuánto cuesta el vino tinto en total? (en €)</p>
+<input id="e10a" type="number" step="0.01" placeholder="Escribe tu resultado">
+<button class="btn" onclick="chk('e10a',209,'fb_e10a','150 ÷ 4 = 37,5 → REDONDEAR = 38 botellas; 38 × 5,50 = 209 €.')">Comprobar</button>
+<div id="fb_e10a" class="feedback-box"></div></div>
+<div class="exercise"><h3>🧩 Furgonetas</h3><p>Con <b>250 comensales</b> hay 2 conductores (más de 200). Cada furgoneta cuesta <b>100 €</b>. ¿Cuánto cuestan las furgonetas? (en €)</p>
+<input id="e10b" type="number" step="1" placeholder="Escribe tu resultado">
+<button class="btn" onclick="chk('e10b',200,'fb_e10b','2 furgonetas × 100 € = 200 €.')">Comprobar</button>
+<div id="fb_e10b" class="feedback-box"></div></div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo9.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo11.html')">Siguiente ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa los datos, la fórmula y prueba de nuevo.';}}
+function pickc(el,uid,ok,i){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

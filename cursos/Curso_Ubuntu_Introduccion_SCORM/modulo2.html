@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Versiones, sabores y requisitos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🗓️</span>Versiones, sabores y requisitos</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Qué significa 26.04 LTS, cuánto dura el soporte, qué sabores existen y qué ordenador necesitas.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:12%"></div></div>
+    <div class="progress-text">Introducción a Ubuntu para usuarios · Módulo 2 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Versiones, sabores y requisitos</h2>
+<div class="activity"><h3>🗓️ Cómo se numeran las versiones</h3>
+<p>Los números de Ubuntu son una <b>fecha</b>: <b>año.mes</b> de lanzamiento. Por eso <b>26.04</b> significa abril de 2026. Cada versión tiene también un nombre en clave formado por un adjetivo y un animal: la 26.04 es <b>«Resolute Raccoon»</b> (mapache resuelto). Se publicó el <b>23 de abril de 2026</b>, y la revisión <b>26.04.1</b> es la que hoy ofrece la web de descarga.</p></div>
+<h3>LTS frente a versiones intermedias</h3><table class="tbl"><tr><th></th><th>LTS (soporte a largo plazo)</th><th>Intermedia</th></tr><tr><td>Cuándo sale</td><td>Cada <b>dos años</b>, en abril (como la 24.04 y la 26.04)</td><td>Cada <b>seis meses</b> (como la 25.10)</td></tr><tr><td>Soporte</td><td><b>5 años</b> de actualizaciones de seguridad gratuitas (la 26.04 hasta abril de 2031)</td><td>Mucho más corto: hay que actualizar a la siguiente</td></tr><tr><td>Para quién</td><td>La mayoría de personas y centros: <b>estable y duradera</b></td><td>Quien quiere lo último cada seis meses</td></tr></table>
+<div class="box"><b>Ubuntu Pro:</b> es una suscripción de Canonical que amplía el soporte de seguridad hasta <b>15 años</b> en total. Es <b>gratuita para uso personal en hasta 5 equipos</b>. Para empezar no la necesitas.</div>
+<p>Para el aula y para tu casa, la recomendación general es <b>usar siempre una versión LTS</b>: cambias de versión solo cada dos años y tienes cinco de tranquilidad.</p>
+<div class="tip-box">💡 <b>Actualizar de una LTS a otra:</b> Ubuntu solo permite hacerlo de forma <b>secuencial</b> (de una LTS a la siguiente). Si usas la 24.04 LTS, podrás subir a la 26.04 LTS; si usas una más antigua, primero hay que pasar por la 24.04. Lo verás en el módulo de actualizaciones.</div><div class="figure vid-box"><div class="vid-frame"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/ugIlNyRRkYY" title="Introducing Ubuntu 26.04 LTS | Resolute Raccoon" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><p class="figure-caption"><b>Introducing Ubuntu 26.04 LTS | Resolute Raccoon</b> · canal oficial <b>Canonical Ubuntu</b> en YouTube</p><p class="vid-desc">Presentación oficial de la versión de este curso (1 min). Está en inglés; puedes activar los subtítulos de YouTube.</p></div>
+<h3>Los sabores oficiales de Ubuntu</h3>
+<p>Además de Ubuntu «a secas» existen <b>sabores oficiales</b>: mismo sistema base y mismo repositorio de software, pero con otro escritorio o con un objetivo concreto.</p><table class="tbl"><tr><th>Sabor</th><th>Para qué</th></tr><tr><td><b>Kubuntu</b></td><td>Escritorio KDE Plasma, muy personalizable</td></tr><tr><td><b>Xubuntu</b> y <b>Lubuntu</b></td><td>Escritorios ligeros: ideales para ordenadores antiguos o con poca memoria (desde 2 GB de RAM)</td></tr><tr><td><b>Ubuntu Budgie</b>, <b>Ubuntu Cinnamon</b>, <b>Ubuntu Unity</b></td><td>Otros escritorios, con aspecto más clásico o diferente</td></tr><tr><td><b>Ubuntu Studio</b></td><td>Creación de audio, vídeo y gráficos</td></tr><tr><td><b>Edubuntu</b></td><td>Educación</td></tr><tr><td><b>Ubuntu Kylin</b></td><td>Versión para usuarios de habla china</td></tr></table>
+<h3>Requisitos de Ubuntu Desktop 26.04 LTS</h3><table class="tbl"><tr><th>Componente</th><th>Mínimo para una experiencia cómoda</th></tr><tr><td>Procesador</td><td>2 GHz de <b>doble núcleo</b> o mejor</td></tr><tr><td>Memoria RAM</td><td><b>6 GB</b></td></tr><tr><td>Disco</td><td><b>25 GB</b> libres</td></tr><tr><td>Instalación</td><td>Un puerto <b>USB</b> o unidad de DVD para el instalador</td></tr><tr><td>Internet</td><td>Recomendable para actualizaciones y programas, pero <b>no obligatorio</b> para la instalación inicial</td></tr></table>
+<div class="lab"><h3>🧪 ¿Cumple mi ordenador los requisitos?</h3>
+<p>Escribe los datos de tu equipo (los encuentras en la configuración de Windows, en «Acerca de») y comprueba si encaja con Ubuntu Desktop 26.04 LTS.</p>
+<div class="grid">
+<div><label for="rq_ghz">Velocidad del procesador (GHz)</label><input id="rq_ghz" type="number" step="0.1" min="0" value="2.4"></div>
+<div><label for="rq_nuc">Núcleos del procesador</label><input id="rq_nuc" type="number" step="1" min="1" value="4"></div>
+<div><label for="rq_ram">Memoria RAM (GB)</label><input id="rq_ram" type="number" step="1" min="0" value="8"></div>
+<div><label for="rq_disk">Espacio libre en disco (GB)</label><input id="rq_disk" type="number" step="1" min="0" value="100"></div></div>
+<button class="btn" style="margin-left:0" onclick="checkReq()">Comprobar</button>
+<div class="res" id="rq_res"></div></div><h3>Descargar Ubuntu</h3><p>La descarga oficial es siempre desde <b>ubuntu.com/download/desktop</b>. La imagen (archivo ISO) pesa unos <b>5,9 GB</b> para ordenadores Intel/AMD de 64 bits y <b>3,9 GB</b> para ARM de 64 bits.</p><div class="shot"><img src="img/descarga.png" alt="Página de descarga de Ubuntu Desktop con la versión 26.04.1 LTS y los botones de descarga" loading="lazy"><p class="figure-caption"><span class="badge-real">Captura real</span>Página oficial de descarga de Ubuntu Desktop. Fuente: ubuntu.com/download/desktop (6 de octubre de 2026). El aspecto puede cambiar con el tiempo.</p></div><div class="alert-box">⚠️ Descarga Ubuntu <b>solo desde la web oficial</b>. Los sitios que ofrecen «versiones especiales» o «con programas incluidos» pueden esconder software dañino.</div><div class="exercise"><h3>🧩 Leer una versión</h3><p>¿Qué significa el número 26.04?</p><div class="options" id="opt_u2a"><div class="option" onclick="pickc(this,'u2a',0)">Que es la versión 26 del programa 04</div><div class="option" onclick="pickc(this,'u2a',1)">Que se publicó en abril de 2026</div><div class="option" onclick="pickc(this,'u2a',0)">Que es la cuarta edición del año 26</div><div class="option" onclick="pickc(this,'u2a',0)">Que necesita 26 GB y 4 de RAM</div></div><div id="fb_u2a" class="feedback-box" data-exp="Los números de Ubuntu son año.mes: 26.04 es abril de 2026."></div></div><div class="exercise"><h3>🧩 Elegir versión</h3><p>Montas un aula con 15 equipos y quieres cambiar de versión lo menos posible. ¿Cuál eliges?</p><div class="options" id="opt_u2b"><div class="option" onclick="pickc(this,'u2b',0)">Cualquiera, todas duran lo mismo</div><div class="option" onclick="pickc(this,'u2b',1)">Una LTS, con 5 años de soporte</div><div class="option" onclick="pickc(this,'u2b',0)">Una intermedia, para tener lo último</div><div class="option" onclick="pickc(this,'u2b',0)">La más antigua que encuentres</div></div><div id="fb_u2b" class="feedback-box" data-exp="Una LTS ofrece cinco años de actualizaciones de seguridad gratuitas: ideal para aulas."></div></div><div class="exercise"><h3>🧩 Equipo antiguo</h3><p>Un ordenador de 2 GB de RAM no cumple los requisitos de Ubuntu Desktop. ¿Qué alternativa sugiere Canonical?</p><div class="options" id="opt_u2c"><div class="option" onclick="pickc(this,'u2c',0)">Comprarle más disco duro</div><div class="option" onclick="pickc(this,'u2c',0)">Instalar la versión intermedia</div><div class="option" onclick="pickc(this,'u2c',0)">No se puede usar Ubuntu en ningún caso</div><div class="option" onclick="pickc(this,'u2c',1)">Un sabor ligero como Xubuntu o Lubuntu</div></div><div id="fb_u2c" class="feedback-box" data-exp="Los sabores Xubuntu y Lubuntu están pensados para equipos con menos recursos."></div></div>
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo1.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo3.html')">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Introducción a Ubuntu para usuarios · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+<script>
+function checkReq(){
+  var g=parseFloat(document.getElementById('rq_ghz').value),n=parseFloat(document.getElementById('rq_nuc').value),
+      r=parseFloat(document.getElementById('rq_ram').value),d=parseFloat(document.getElementById('rq_disk').value);
+  var items=[[g>=2&&n>=2,'Procesador: '+g+' GHz y '+n+' núcleo(s)','se piden 2 GHz de doble núcleo o mejor'],
+             [r>=6,'Memoria: '+r+' GB','se recomiendan 6 GB'],
+             [d>=25,'Disco libre: '+d+' GB','se necesitan 25 GB libres']];
+  var out='<ul class="checks">',ok=0;
+  items.forEach(function(i){if(i[0])ok++;out+='<li class="'+(i[0]?'ok':'ko')+'">'+(i[0]?'✅ ':'❌ ')+i[1]+' — '+(i[0]?'cumple':i[2])+'</li>';});
+  out+='</ul>';
+  var msg;
+  if(ok===3)msg='🎉 Tu equipo cumple los requisitos de Ubuntu Desktop 26.04 LTS.';
+  else if(r>=2)msg='💡 Tu equipo se queda corto para Ubuntu Desktop, pero con 2 GB de RAM o más puedes probar un sabor ligero como <b>Xubuntu</b> o <b>Lubuntu</b>.';
+  else msg='⚠️ Con estos datos el equipo es muy limitado. Revisa los requisitos de cada sabor antes de intentarlo.';
+  var e=document.getElementById('rq_res');e.className='res feedback-box '+(ok===3?'good':'bad');e.innerHTML=out+msg;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Imprevistos, precio de venta y ganancias</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🏷️</span>Imprevistos, precio de venta y ganancias</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Cerrarás el escandallo: sumarás todos los costes, calcularás el coste por menú, el precio de venta y las ganancias.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div>
+    <div class="progress-text">Curso de Escandallo con Calc · Módulo 11 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Imprevistos, precio de venta y ganancias</h2>
+
+<h3>Paso 1: los imprevistos</h3>
+<p>Siempre surge algo: más comensales de los previstos, un ingrediente que sube, un fallo de última hora. Se reserva un <b>porcentaje de seguridad</b> sobre los demás costes.</p>
+<ol class="steps"><li>En <b>A37</b> escribe «Imprevistos» y en <b>B37</b> el porcentaje <b>10 %</b>.</li><li>En <b>C37</b> escribe la fórmula de abajo: suma personal, bebidas, materia prima y varios, y calcula el 10 % del total.</li></ol>
+<div class="formula"><span class="f-label">C37</span><code>=(L17+D34+B16+L35)*B37</code><span class="f-exp">(Personal + Bebidas + Materia prima + Varios) × % de imprevistos.</span></div>
+
+<h3>Paso 2: los cuatro resultados finales (fila 8)</h3>
+<div class="formula"><span class="f-label">A8</span><code>=D34+B16+L17+L35+C37</code><span class="f-exp">Coste Total del Catering: bebidas + materia prima + personal + varios + imprevistos.</span></div>
+<div class="formula"><span class="f-label">B8</span><code>=A8/J1</code><span class="f-exp">Coste por Menú: el coste total repartido entre los comensales.</span></div>
+<div class="formula"><span class="f-label">C8</span><code>=B8+B8*C3</code><span class="f-exp">Precio de Venta: el coste por menú más el % de beneficio.</span></div>
+<div class="formula"><span class="f-label">D8</span><code>=(C8-B8)*J1</code><span class="f-exp">Ganancias: (precio − coste) de cada menú × comensales.</span></div>
+<div class="figure sheetfig"><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:170px"><col style="width:110px"><col style="width:210px"><col style="width:170px"></colgroup><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th></tr><tr><th class="rn">3</th><td class="grn">% Beneficio</td><td class=""></td><td class="grn">20,00 %</td><td class=""></td></tr><tr><th class="rn">5</th><td class="pink" colspan="4">Totales</td></tr><tr style="height:46px"><th class="rn">6</th><td class="peach" rowspan="2">Coste Total del Catering</td><td class="peach" rowspan="2">Coste por Menú</td><td class="peach" rowspan="2">Precio Venta</td><td class="peach" rowspan="2">Ganancias</td></tr><tr><th class="rn">7</th></tr><tr><th class="rn">8</th><td class="r f hl">=D34+B16+L17+L35+C37</td><td class="r f hl">=A8/J1</td><td class="r f hl">=B8+B8*C3</td><td class="r f hl">=(C8-B8)*J1</td></tr><tr><th class="rn">37</th><td class="lav">Imprevistos</td><td class="lav">10,00 %</td><td class="lav f hl3">=(L17+D34+B16+L35)*B37</td><td class=""></td></tr></table></div><p class="figure-caption">Fórmulas del bloque «Totales» y del bloque «Imprevistos».</p></div>
+<div class="figure sheetfig"><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:130px"><col style="width:100px"><col style="width:100px"><col style="width:110px"></colgroup><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th></tr><tr><th class="rn">3</th><td class="grn">% Beneficio</td><td class=""></td><td class="grn">20,00 %</td><td class=""></td></tr><tr><th class="rn">5</th><td class="pink" colspan="4">Totales</td></tr><tr style="height:46px"><th class="rn">6</th><td class="peach" rowspan="2">Coste Total del Catering</td><td class="peach" rowspan="2">Coste por Menú</td><td class="peach" rowspan="2">Precio Venta</td><td class="peach" rowspan="2">Ganancias</td></tr><tr><th class="rn">7</th></tr><tr><th class="rn">8</th><td class="blue">9.014,35 €</td><td class="blue">30,05 €</td><td class="blue">36,06 €</td><td class="blue">1.802,87 €</td></tr><tr><th class="rn">37</th><td class="lav">Imprevistos</td><td class="lav">10,00 %</td><td class="lav">819,49 €</td><td class=""></td></tr></table></div><p class="figure-caption">Resultado final del ejercicio: cada menú cuesta <b>30,05 €</b> y se vende a <b>36,06 €</b>.</p></div>
+<div class="figure"><svg viewBox="0 0 640 235" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reparto del coste total del catering y ganancias">
+<text x="20" y="28" font-size="14" font-weight="700" fill="#7a431d">Coste total: 9.014,35 €</text><rect x="20.0" y="40" width="192.6" height="44" fill="#e07a2f"/><text x="116.3" y="67" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">32 %</text><rect x="212.6" y="40" width="234.8" height="44" fill="#3b6ea8"/><text x="330.0" y="67" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">39 %</text><rect x="447.4" y="40" width="103.8" height="44" fill="#7a4fa0"/><text x="499.3" y="67" font-size="12" text-anchor="middle" fill="#fff" font-weight="700">17 %</text><rect x="551.2" y="40" width="14.2" height="44" fill="#2e9e4f"/><rect x="565.5" y="40" width="54.5" height="44" fill="#c0392b"/><rect x="20" y="108" width="14" height="14" fill="#e07a2f"/><text x="40" y="120" font-size="12" fill="#3b2a20">Materia prima: 2.892,88 €</text><rect x="225" y="108" width="14" height="14" fill="#3b6ea8"/><text x="245" y="120" font-size="12" fill="#3b2a20">Personal: 3.528,00 €</text><rect x="430" y="108" width="14" height="14" fill="#7a4fa0"/><text x="450" y="120" font-size="12" fill="#3b2a20">Bebidas: 1.560,00 €</text><rect x="20" y="132" width="14" height="14" fill="#2e9e4f"/><text x="40" y="144" font-size="12" fill="#3b2a20">Varios: 213,98 €</text><rect x="225" y="132" width="14" height="14" fill="#c0392b"/><text x="245" y="144" font-size="12" fill="#3b2a20">Imprevistos: 819,49 €</text>
+<text x="20" y="188" font-size="14" font-weight="700" fill="#7a431d">Coste total + beneficio del 20 % = 10.817,22 €</text>
+<rect x="20" y="198" width="600" height="26" fill="#d8c4b0"/><rect x="500.0" y="198" width="120.0" height="26" fill="#4caf50"/>
+<text x="560.0" y="216" font-size="11" text-anchor="middle" fill="#fff" font-weight="700">Ganancias</text></svg>
+<p class="figure-caption">El personal es la partida más grande del catering, por delante de la propia comida.</p></div>
+
+<h3>Dos formas de hablar de «margen»</h3>
+<div class="activity"><p>En este archivo el <b>20 %</b> se aplica <b>sobre el coste</b> (precio = coste × 1,20). Pero si miras cuánto beneficio hay <b>sobre lo que cobras</b>, es menos:</p>
+<p style="text-align:center"><code>0,20 ÷ 1,20 = 16,67 %</code> del precio de venta</p>
+<p>Si quisieras que el beneficio fuera un 20 % <b>del precio de venta</b>, la fórmula sería <code>=B8/(1-C3)</code>.</p></div>
+
+<div class="sim"><h3>🧪 Simulador: ¿qué pasa si cambio los mandos?</h3>
+<p>Es el mismo cálculo del archivo. Cambia los comensales o los porcentajes y observa el resultado.</p>
+<div class="grid"><div><label>N.º de comensales (J1)</label><input type="number" id="sn" value="300" min="1" oninput="simular()"></div>
+<div><label>% Beneficio (C3)</label><input type="number" id="sb" value="20" min="0" oninput="simular()"></div>
+<div><label>% Imprevistos (B37)</label><input type="number" id="si" value="10" min="0" oninput="simular()"></div></div>
+<div class="out"><div>Coste total<b id="o1"></b></div><div>Coste por menú<b id="o2"></b></div><div class="big">Precio de venta<b id="o3"></b></div><div>Ganancias<b id="o4"></b></div></div>
+<p class="small" id="o5" style="margin-top:10px"></p></div>
+<script>
+var RACION=9.642940833333332;
+function R(x){return Math.floor(x+0.5);}
+function simular(){
+ var n=parseFloat(document.getElementById('sn').value)||1,ben=(parseFloat(document.getElementById('sb').value)||0)/100,imp=(parseFloat(document.getElementById('si').value)||0)/100;
+ var cam=n<20?1:R(n/20),coc=n>600?6:R(n/100+1),mar=R(coc/2),con=n>200?2:1;
+ var pers=cam*6*12+coc*20*10+mar*16*8+con*8*12+0+1*40*30;
+ var beb=n*0.40+R(n/4)*(0.50+5.00+5.50+7.00)+n*0.30;
+ var vari=0.30*10+5.49*2+con*100;
+ var mp=RACION*n,base=mp+pers+beb+vari,imprv=base*imp,coste=base+imprv,menu=coste/n,venta=menu+menu*ben,gan=(venta-menu)*n;
+ function f(x){var s=x.toFixed(2).split('.');s[0]=s[0].replace(/\B(?=(\d{3})+(?!\d))/g,'.');return s.join(',')+' €';}
+ document.getElementById('o1').textContent=f(coste);document.getElementById('o2').textContent=f(menu);
+ document.getElementById('o3').textContent=f(venta);document.getElementById('o4').textContent=f(gan);
+ document.getElementById('o5').textContent=cam+' camareros · '+coc+' cocineros · '+mar+' marmitonas · '+con+' conductores';
+}
+window.addEventListener('load',simular);
+</script>
+
+<div class="exercise"><h3>🧩 Precio de venta</h3><p>Un menú cuesta <b>30 €</b> y quieres un beneficio del <b>25 %</b> sobre el coste. ¿A qué precio lo vendes? (en €)</p>
+<input id="e11a" type="number" step="0.01" placeholder="Escribe tu resultado">
+<button class="btn" onclick="chk('e11a',37.5,'fb_e11a','30 + 30 × 0,25 = 37,50 €.')">Comprobar</button>
+<div id="fb_e11a" class="feedback-box"></div></div>
+<div class="exercise"><h3>🧩 Ganancias</h3><p>Con ese menú a 37,50 € y coste de 30 €, ¿cuántos euros ganas en un catering de <b>200 comensales</b>? (en €)</p>
+<input id="e11b" type="number" step="1" placeholder="Escribe tu resultado">
+<button class="btn" onclick="chk('e11b',1500,'fb_e11b','(37,50 − 30) × 200 = 1.500 €.')">Comprobar</button>
+<div id="fb_e11b" class="feedback-box"></div></div>
+<div class="exercise"><h3>🧩 Beneficio sobre coste</h3><p>Aplicas un 25 % de beneficio sobre el coste. ¿Qué porcentaje del <b>precio de venta</b> representa la ganancia?</p>
+<div class="options" id="opt_e11c"><div class="option" onclick="pickc(this,'e11c',0,0)">25 %</div><div class="option" onclick="pickc(this,'e11c',1,1)">20 %</div><div class="option" onclick="pickc(this,'e11c',0,2)">30 %</div></div>
+<div id="fb_e11c" class="feedback-box" data-exp="0,25 ÷ 1,25 = 0,20 → 20 % del precio de venta."></div></div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo10.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo12.html')">Siguiente ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa los datos, la fórmula y prueba de nuevo.';}}
+function pickc(el,uid,ok,i){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

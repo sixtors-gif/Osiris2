@@ -1,0 +1,311 @@
+// Curso de hoja de cálculo básica: el horario del curso
+// Autor: Sixto Rodríguez de Sepúlveda
+// Formato GIFT para Moodle. Codificación UTF-8. Una única respuesta correcta por pregunta.
+
+$CATEGORY: Curso Hoja de cálculo básica/Módulo 1 - El proyecto: el horario del curso
+
+::HOR01-1::En una hoja de cálculo, ¿qué es la celda C5? {
+=La que está en la columna C y en la fila 5.
+~La que está en la fila C y en la columna 5.
+~La quinta hoja del libro.
+~El rango formado por C y 5.
+}
+
+::HOR01-2::¿Qué es un «libro» en Calc o Excel? {
+=El archivo completo, que puede tener varias hojas.
+~Una sola celda.
+~Una fila de datos.
+~Un gráfico.
+}
+
+::HOR01-3::¿Qué indica el rango A5\:C12? {
+=Las celdas desde A5 hasta C12.
+~Solo las celdas A5 y C12.
+~La resta entre A5 y C12.
+~La hoja 5 de la carpeta C12.
+}
+
+$CATEGORY: Curso Hoja de cálculo básica/Módulo 2 - Guardar tu trabajo
+
+::HOR02-1::¿En qué se diferencia «Guardar como» de «Guardar»? {
+=Guardar como crea otro archivo (otro nombre, carpeta o formato); Guardar actualiza el mismo.
+~No hay ninguna diferencia.
+~Guardar como borra el archivo original.
+~Guardar como solo sirve para imprimir.
+}
+
+::HOR02-2::Antes de hacer un cambio muy grande en el horario, ¿qué conviene hacer? {
+=Guardar una copia con la versión siguiente (por ejemplo _v2) y trabajar en ella.
+~Borrar el archivo y empezar de cero.
+~Trabajar sin guardar hasta terminar.
+~Cerrar el programa.
+}
+
+::HOR02-3::¿Cuál de estos nombres de archivo es más adecuado? {
+=Horario_2025-26_1JefeCocina_v1.ods
+~horario nuevo (2) FINAL.ods
+~Libro1.ods
+~Horario 2025/26.ods
+}
+
+::HOR02-4::¿Qué atajo abre «Guardar como…»? {
+=Ctrl + Mayús + S
+~Ctrl + Z
+~Ctrl + A
+~Ctrl + B
+}
+
+$CATEGORY: Curso Hoja de cálculo básica/Módulo 3 - Formatos de archivo: .ods, .xlsx, .xls y PDF
+
+::HOR03-1::¿Qué formato eliges para enviar el horario a las familias sin que nadie pueda modificarlo? {
+=PDF
+~.ods
+~.xlsx
+~CSV
+}
+
+::HOR03-2::La extensión de los archivos de Calc es… {
+=.ods
+~.xlsx
+~.docx
+~.pdf
+}
+
+::HOR03-3::¿Qué se pierde al guardar la hoja como CSV? {
+=Todo el formato\: colores, bordes y celdas combinadas.
+~Nada, se conserva todo.
+~Solo el título.
+~Solo los números.
+}
+
+$CATEGORY: Curso Hoja de cálculo básica/Módulo 4 - Escribir datos y moverse por la hoja
+
+::HOR04-1::¿Cómo modificas el texto de una celda sin borrarlo entero? {
+=Con F2 o haciendo doble clic sobre la celda.
+~Pulsando Supr y escribiendo de nuevo siempre.
+~Con Ctrl + A.
+~Cerrando el archivo.
+}
+
+::HOR04-2::¿Qué atajo deshace la última acción? {
+=Ctrl + Z
+~Ctrl + S
+~Ctrl + A
+~Ctrl + P
+}
+
+::HOR04-3::Escribes LUNES y arrastras el cuadradito de la esquina de la celda hacia la derecha. ¿Qué aparece? {
+=MARTES, MIÉRCOLES, JUEVES…
+~LUNES repetido.
+~Un error.
+~Los meses del año.
+}
+
+$CATEGORY: Curso Hoja de cálculo básica/Módulo 5 - Ancho de columnas y alto de filas
+
+::HOR05-1::¿Qué hace un doble clic en la línea que separa dos letras de columna? {
+=Ajusta la columna al texto más largo que contiene (ancho óptimo).
+~Borra la columna.
+~Combina las dos columnas.
+~Oculta la columna.
+}
+
+::HOR05-2::Una celda tiene tres líneas de texto y no se ve entera. ¿Qué debes aumentar? {
+=El alto de la fila.
+~El número de hojas.
+~El tamaño del papel.
+~El ancho del libro.
+}
+
+$CATEGORY: Curso Hoja de cálculo básica/Módulo 6 - Formato de texto: fuente, tamaño y negrita
+
+::HOR06-1::En el horario, ¿qué elemento lleva el tamaño de letra más grande? {
+=El título.
+~Las aulas.
+~Las horas.
+~Los datos de las franjas.
+}
+
+::HOR06-2::¿Qué atajo aplica negrita a la selección? {
+=Ctrl + B
+~Ctrl + F
+~Ctrl + N
+~Ctrl + Y
+}
+
+::HOR06-3::¿Qué atajo abre la ventana «Formatear celdas»? {
+=Ctrl + 1
+~Ctrl + 0
+~Ctrl + F1
+~Alt + F4
+}
+
+$CATEGORY: Curso Hoja de cálculo básica/Módulo 7 - Alinear y ajustar el texto
+
+::HOR07-1::¿Qué activas para que un texto largo se reparta en varias líneas dentro de su celda? {
+=Ajustar texto automáticamente.
+~Negrita.
+~Combinar celdas.
+~Subrayado.
+}
+
+::HOR07-2::El texto de una fila alta aparece pegado abajo. ¿Qué cambias? {
+=La alineación vertical.
+~El color de fuente.
+~El nombre del archivo.
+~El tipo de papel.
+}
+
+$CATEGORY: Curso Hoja de cálculo básica/Módulo 8 - Combinar celdas
+
+::HOR08-1::Combinas las celdas A5\:C5 y el texto estaba en B5. ¿Qué ocurre con él? {
+=Calc avisa\: solo se conserva el de la celda superior izquierda (A5), salvo que elijas mover el contenido a la primera celda.
+~Se combina sin avisar y el texto se ve completo.
+~Se copia a las tres celdas.
+~Se mueve a la fila 6.
+}
+
+::HOR08-2::¿Cuántas celdas se unen al combinar el rango A1\:O2? {
+=30
+~15
+~2
+~17
+}
+
+::HOR08-3::¿Para qué usamos las celdas combinadas en el horario? {
+=Para centrar títulos y cabeceras de día sobre sus tres columnas.
+~Para hacer cálculos.
+~Para ordenar los datos.
+~Para proteger la hoja.
+}
+
+$CATEGORY: Curso Hoja de cálculo básica/Módulo 9 - Bordes y colores de relleno
+
+::HOR09-1::¿Qué color de letra usas sobre un fondo marrón oscuro? {
+=Blanco.
+~Negro.
+~Marrón oscuro.
+~El mismo que el fondo.
+}
+
+::HOR09-2::Las líneas grises de la cuadrícula de la hoja, ¿se imprimen? {
+=No\: solo se imprimen los bordes que tú dibujas.
+~Sí, siempre.
+~Solo si el papel es de color.
+~Solo en PDF.
+}
+
+::HOR09-3::¿Para qué sirve dar un color distinto a cada asignatura? {
+=Para reconocerlas de un vistazo.
+~Para que el archivo pese menos.
+~Para que se calculen solas.
+~Para ordenar alfabéticamente.
+}
+
+$CATEGORY: Curso Hoja de cálculo básica/Módulo 10 - Fechas, horas y otros formatos de número
+
+::HOR10-1::Para el programa, ¿qué es una fecha? {
+=Un número\: los días transcurridos desde el 30/12/1899.
+~Siempre un texto.
+~Una imagen.
+~Un color.
+}
+
+::HOR10-2::¿Qué valor decimal guarda el programa para las 12\:00? {
+=0,5
+~12
+~1,2
+~0,12
+}
+
+::HOR10-3::Entrada 8\:30 y salida 15\:00. ¿Qué fórmula calcula las horas diarias si están en B14 y E14? {
+=\=E14-B14
+~\=B14-E14+1
+~\=SUMA(B14)
+~B14/E14
+}
+
+::HOR10-4::Escribes una fecha y aparece 45918. ¿Qué haces? {
+=Cambiar el formato de la celda a Fecha.
+~Borrar la celda.
+~Cambiar el color de fuente.
+~Guardar el archivo en PDF.
+}
+
+$CATEGORY: Curso Hoja de cálculo básica/Módulo 11 - Copiar formato y duplicar bloques
+
+::HOR11-1::¿Qué herramienta copia solo el aspecto (formato) de una celda a otras? {
+=Clonar formato (el pincel).
+~Ctrl + X.
+~Ordenar.
+~Autofiltro.
+}
+
+::HOR11-2::¿Qué atajo abre el Pegado especial? {
+=Ctrl + Mayús + V
+~Ctrl + V
+~Ctrl + D
+~Ctrl + Z
+}
+
+::HOR11-3::Tienes formateado el bloque de LUNES. ¿Cuál es la mejor forma de preparar los otros cuatro días? {
+=Copiar y pegar el bloque y cambiar los textos.
+~Formatear cada día desde cero.
+~Imprimirlo y dibujarlo a mano.
+~Borrar el bloque de LUNES.
+}
+
+$CATEGORY: Curso Hoja de cálculo básica/Módulo 12 - Colores automáticos: formato condicional
+
+::HOR12-1::Con una regla de formato condicional «la celda contiene INGLÉS», ¿qué ocurre si cambias el texto de la celda por CALIDAD? {
+=La celda deja de cumplir la regla y pierde ese color.
+~Conserva el color.
+~Se borra la celda.
+~Se combina con la siguiente.
+}
+
+::HOR12-2::¿Cuál es la ventaja del formato condicional frente a colorear a mano? {
+=El color se actualiza solo al cambiar el contenido.
+~Ocupa menos memoria.
+~Cambia el papel de impresión.
+~Evita guardar el archivo.
+}
+
+$CATEGORY: Curso Hoja de cálculo básica/Módulo 13 - Imprimir y exportar a PDF
+
+::HOR13-1::El horario es mucho más ancho que alto y se corta en dos páginas. ¿Qué haces? {
+=Orientación horizontal y ajustar a 1 página de ancho.
+~Borrar columnas.
+~Usar una letra gigante.
+~Imprimir en papel A0.
+}
+
+::HOR13-2::¿Qué exporta el horario para que se vea igual en cualquier dispositivo y no se edite? {
+=Archivo → Exportar como → Exportar como PDF.
+~Guardar como CSV.
+~Archivo → Cerrar.
+~Ver → Zoom.
+}
+
+::HOR13-3::¿Qué te permite revisar la vista previa antes de imprimir? {
+=Comprobar cómo saldrá cada página y ahorrar papel.
+~Cambiar los datos del horario.
+~Cifrar el archivo.
+~Convertirlo en CSV.
+}
+
+$CATEGORY: Curso Hoja de cálculo básica/Módulo 14 - Reto final: tu propio horario
+
+::HOR14-1::¿Qué haces primero al empezar el reto del 2º JEFE DE SALA? {
+=Guardar el libro con un buen nombre.
+~Imprimir.
+~Pintar las celdas.
+~Exportar a PDF.
+}
+
+::HOR14-2::Para colgar el horario en la puerta del aula y poder modificarlo el curso próximo, ¿qué conservas? {
+=El .ods editable y el PDF para imprimir.
+~Solo una foto del móvil.
+~Solo un CSV.
+~Nada\: se vuelve a hacer.
+}

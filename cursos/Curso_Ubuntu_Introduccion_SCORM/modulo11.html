@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mantener Ubuntu actualizado</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🔄</span>Mantener Ubuntu actualizado</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Instalar las actualizaciones con el Actualizador de software o con la terminal, y cómo pasar a una versión nueva.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:69%"></div></div>
+    <div class="progress-text">Introducción a Ubuntu para usuarios · Módulo 11 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Mantener Ubuntu actualizado</h2>
+<div class="activity"><h3>🔄 Por qué actualizar</h3>
+<p>Las <b>actualizaciones</b> corrigen fallos y, sobre todo, <b>problemas de seguridad</b>. Un sistema sin actualizar es como una casa con la puerta mal cerrada. En Ubuntu actualizar es gratuito, sencillo y no te obliga a reinstalar nada. Conviene hacerlo siempre tras una instalación nueva y después de forma regular.</p></div>
+<h3>Con la interfaz gráfica: Actualizador de software</h3><ol class="steps"><li>Abre el <b>Actualizador de software</b> (Software Updater): pulsa <kbd>Super</kbd> y escribe «Software Updater» o «Actualizador».</li><li>Comprobará si hay novedades y te mostrará la lista.</li><li>Pulsa <b>Instalar ahora</b> y escribe tu contraseña si te la pide.</li><li>Si al terminar se pide <b>reiniciar</b>, hazlo cuando te venga bien: algunas actualizaciones no se aplican hasta entonces.</li></ol><div class="shot"><img src="img/inst_updater.png" alt="Ventana del Actualizador de software con el mensaje «El software de este equipo está actualizado»" loading="lazy"><p class="figure-caption"><span class="badge-real">Captura real</span>El Actualizador de software cuando todo está al día. Fuente: tutorial oficial de Canonical «Install Ubuntu Desktop» (ubuntu.com/tutorials) (6 de octubre de 2026). El aspecto puede cambiar con el tiempo.</p></div>
+<div class="tip-box">💡 <b>Avisos más discretos:</b> desde Ubuntu 25.10, cuando hay actualizaciones el Actualizador <b>ya no se abre de golpe</b> robándote el teclado. Aparece una <b>notificación</b> con la opción de abrirlo o de instalarlo todo directamente, y un <b>icono en la barra superior</b> te recuerda que hay actualizaciones pendientes.</div>
+<h3>Con la terminal</h3>
+<p>También puedes actualizar escribiendo órdenes. Es muy rápido, y lo verás en muchos tutoriales:</p><div class="term-static"><span class="ps">usuario@ubuntu<span style="color:#fff">:</span><b>~</b><span style="color:#fff">$</span></span> sudo apt update
+<span class="cm"># consulta qué actualizaciones hay (te pedirá tu contraseña)</span>
+<span class="ps">usuario@ubuntu<span style="color:#fff">:</span><b>~</b><span style="color:#fff">$</span></span> sudo apt upgrade
+<span class="cm"># aplica las actualizaciones; pulsa S (o Y) y luego Intro para confirmar</span></div><p><code>sudo</code> significa «hazlo como administrador». Al escribir tu contraseña <b>no verás nada</b> (ni siquiera asteriscos): es normal, escríbela y pulsa Intro.</p>
+<h3>Cambiar a una versión nueva de Ubuntu</h3>
+<p>Para pasar a una versión posterior usa el mismo Actualizador de software: te avisará de que hay una nueva versión y mostrará el botón <b>Actualizar</b> (Upgrade). Hay reglas importantes:</p><ul class="key-points"><li>➡️ <span>Ubuntu solo admite actualizaciones <b>secuenciales</b>: de una LTS a la siguiente LTS. Si estás en una versión muy antigua, hay que repetir el proceso varias veces.</span></li><li>🗓️ <span>Para pasar a una LTS nueva, normalmente hay que esperar a su <b>primera revisión</b> (por ejemplo la 26.04.1).</span></li><li>🔌 <span>Con un portátil, <b>conéctalo a la corriente</b> y comprueba que tienes <b>varios GB libres</b>.</span></li><li>💾 <span>Haz <b>copia de seguridad</b> de tus archivos antes de empezar.</span></li><li>⏱️ <span>Puede tardar <b>hasta una hora</b>, según tu conexión y tu equipo.</span></li></ul>
+<div class="box"><b>Si usas Ubuntu 24.04 LTS:</b> las notas de la versión 26.04 indican que se actualiza directamente desde 24.04 LTS (o desde 25.10). Si usas una más antigua, primero hay que pasar por la 24.04.</div>
+<div class="alert-box">⚠️ <b>Una nota sobre aplicaciones de terceros:</b> si añadiste repositorios externos (los llamados PPA), el asistente puede desactivarlos durante el cambio de versión y avisarte. Revísalos después y vuelve a activarlos o busca sus versiones nuevas.</div>
+<p>Desde la versión 26.04, la antigua aplicación <b>Software y actualizaciones</b> ya no se instala por defecto. Sigue disponible y se instala desde el App Center o con <code>sudo apt install software-properties-gtk</code>.</p>
+<div class="summary-box">🎯 <b>Idea clave:</b> actualizar es gratis, rápido y es tu mejor defensa. Hazlo al terminar de instalar y revisa las notificaciones de vez en cuando.</div><div class="exercise"><h3>🧩 Actualizar con la terminal</h3><p>¿Qué dos órdenes comprueban y aplican las actualizaciones desde la terminal?</p><div class="options" id="opt_u11a"><div class="option" onclick="pickc(this,'u11a',0)">cd Documentos y ls</div><div class="option" onclick="pickc(this,'u11a',1)">sudo apt update y sudo apt upgrade</div><div class="option" onclick="pickc(this,'u11a',0)">rm -rf y sudo reboot</div><div class="option" onclick="pickc(this,'u11a',0)">pwd y mkdir</div></div><div id="fb_u11a" class="feedback-box" data-exp="apt update consulta qué hay; apt upgrade lo aplica. Ambas con sudo."></div></div><div class="exercise"><h3>🧩 Cambio de versión</h3><p>Usas una versión LTS muy antigua. ¿Cómo se actualiza a la más reciente?</p><div class="options" id="opt_u11b"><div class="option" onclick="pickc(this,'u11b',0)">No es posible nunca</div><div class="option" onclick="pickc(this,'u11b',0)">Solo reinstalando</div><div class="option" onclick="pickc(this,'u11b',0)">Saltando directamente a la última</div><div class="option" onclick="pickc(this,'u11b',1)">De forma secuencial, de una LTS a la siguiente, repitiendo el proceso</div></div><div id="fb_u11b" class="feedback-box" data-exp="Ubuntu solo admite actualizaciones secuenciales entre versiones consecutivas."></div></div><div class="exercise"><h3>🧩 Antes de subir de versión</h3><p>¿Qué conviene hacer antes de cambiar a una versión nueva?</p><div class="options" id="opt_u11c"><div class="option" onclick="pickc(this,'u11c',1)">Copia de seguridad, portátil enchufado y espacio libre en disco</div><div class="option" onclick="pickc(this,'u11c',0)">Quitar el wifi para que no moleste</div><div class="option" onclick="pickc(this,'u11c',0)">Nada, es instantáneo</div><div class="option" onclick="pickc(this,'u11c',0)">Desinstalar el navegador</div></div><div id="fb_u11c" class="feedback-box" data-exp="El proceso puede tardar hasta una hora y necesita espacio: prepárate con copia, corriente y disco libre."></div></div>
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo10.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo12.html')">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Introducción a Ubuntu para usuarios · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+
+</body>
+</html>

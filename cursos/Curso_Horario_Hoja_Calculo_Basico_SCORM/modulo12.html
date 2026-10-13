@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Colores automáticos: formato condicional</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🤖</span>Colores automáticos: formato condicional</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Ampliación: harás que el programa coloree solo cada asignatura según lo que escribas en la celda.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:86%"></div></div>
+    <div class="progress-text">Hoja de cálculo básica: el horario del curso · Módulo 12 de 14</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Colores automáticos: formato condicional</h2>
+
+<div class="activity"><h3>🤖 La idea</h3><p>Hasta ahora has coloreado <b>a mano</b>. Con el <b>formato condicional</b> defines una <b>regla</b> («si la celda contiene INGLÉS, píntala de verde-azulado») y el programa colorea solo. Si cambias el texto de una clase, ¡el color cambia contigo!</p></div>
+
+<h3>Paso a paso en Calc</h3>
+<ol class="steps"><li>Selecciona las celdas de asignaturas, por ejemplo <b>B8:B12</b>, <b>E8:E12</b>… (con <kbd>Ctrl</kbd>+clic).</li><li>Menú <b>Formato → Condicional → Condición…</b></li><li>En <b>Condición 1</b> elige <b>Valor de la celda</b>, luego <b>contiene</b>, y escribe <code>INGLÉS</code>.</li><li>En <b>Aplicar estilo</b> pulsa <b>Nuevo estilo…</b>, ponle nombre (<i>Ingles</i>) y, en las pestañas <b>Fondo</b> y <b>Efectos de fuente</b>, elige el color teal <code>#008080</code> y la letra blanca. Acepta.</li><li>Pulsa <b>Añadir</b> para crear más condiciones (INFORMÁTICA, CALIDAD…) y <b>Aceptar</b>.</li></ol>
+<div class="figure"><div class="dlg"><div class="dtitle"><span>Formato condicional para B8:B12</span><span class="dx">✕</span></div><div class="dbody"><div class="drow"><span class="dlab">Condición 1</span><span class="dval hi">Valor de la celda · contiene · «INGLÉS»</span></div><div class="drow"><span class="dlab">Aplicar estilo</span><span class="dval sel">Inglés (fondo #008080, letra blanca)</span></div><div class="drow"><span class="dlab">Condición 2</span><span class="dval ">Valor de la celda · contiene · «INFORMÁTICA»</span></div><div class="drow"><span class="dlab">Aplicar estilo</span><span class="dval sel">Informática (fondo #993300, letra blanca)</span></div><div class="drow"><span class="dlab">Condición 3</span><span class="dval ">Valor de la celda · contiene · «CALIDAD»</span></div><div class="drow"><span class="dlab">Aplicar estilo</span><span class="dval sel">Calidad (fondo #CCFFCC)</span></div></div><div class="dfoot"><span class="dbtn ok">Aceptar</span><span class="dbtn">Cancelar</span></div></div></div>
+<div class="excel-box"><span class="xbadge">Excel</span> Pestaña <b>Inicio</b> → <b>Formato condicional</b> → <b>Reglas para resaltar celdas</b> → <b>Texto que contiene…</b> → «Formato personalizado…».</div>
+
+<h3>¿Cuándo usarlo?</h3>
+<table class="tbl"><tr><th>Color a mano</th><th>Formato condicional</th></tr>
+<tr><td>Sencillo y rápido para un documento que casi no cambia</td><td>Ideal si el contenido cambia a menudo o hay muchas celdas</td></tr>
+<tr><td>Si cambias el texto, debes repintar</td><td>El color se actualiza solo</td></tr>
+<tr><td>No requiere reglas</td><td>Requiere definir reglas (una por asignatura)</td></tr></table>
+<div class="alert-box">⚠️ <b>Error típico:</b> Las reglas se comprueban <b>en orden</b>. Si dos reglas coinciden con el mismo texto (por ejemplo, «COCINA» y «TEÓRICO-PRÁCTICO COCINA»), la primera manda. Escribe las condiciones <b>más específicas primero</b>.</div>
+
+<h3>Extra: inmovilizar filas</h3>
+<p>Cuando una hoja es larga, interesa que las cabeceras <b>no desaparezcan</b> al desplazarse. Sitúate en <b>A8</b> y elige <b>Ver → Inmovilizar filas y columnas</b>: las filas 1 a 7 se quedan fijas. Para quitarlo, repite la orden.</p>
+<div class="excel-box"><span class="xbadge">Excel</span> Pestaña <b>Vista</b> → <b>Inmovilizar paneles</b>.</div>
+
+<div class="exercise"><h3>🧩 La ventaja</h3><p>¿Cuál es la gran ventaja del formato condicional frente al color a mano?</p>
+<div class="options" id="opt_e12a"><div class="option" onclick="pickc(this,'e12a',1)">El color se actualiza solo cuando cambia el contenido</div><div class="option" onclick="pickc(this,'e12a',0)">Ocupa menos memoria</div><div class="option" onclick="pickc(this,'e12a',0)">Hace que el texto sea más grande</div></div>
+<div id="fb_e12a" class="feedback-box" data-exp="La regla se vuelve a evaluar cada vez que cambia la celda."></div></div>
+<div class="exercise"><h3>🧩 Reglas</h3><p>Con la regla «El texto contiene INGLÉS → fondo teal», ¿qué pasa si cambias «INGLÉS» por «CALIDAD» en esa celda?</p>
+<div class="options" id="opt_e12b"><div class="option" onclick="pickc(this,'e12b',1)">Deja de cumplir la regla y pierde el color teal</div><div class="option" onclick="pickc(this,'e12b',0)">Sigue teal</div><div class="option" onclick="pickc(this,'e12b',0)">Se borra la celda</div></div>
+<div id="fb_e12b" class="feedback-box" data-exp="La regla ya no se cumple, así que el color condicional desaparece."></div></div>
+<div class="summary-box">🎯 <b>Tarea (opcional):</b> en una <b>copia</b> del horario (guarda como _v2), quita los colores de las asignaturas y crea reglas condicionales para tres de ellas.</div>
+
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo11.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo13.html')">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Hoja de cálculo básica: el horario del curso · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+// Curso de Escandallo de un catering con Calc
+// Autor: Sixto Rodríguez de Sepúlveda
+// Formato GIFT para Moodle. Codificación UTF-8. Una única respuesta correcta por pregunta.
+
+$CATEGORY: Curso Escandallo/Módulo 1 - ¿Qué es un escandallo?
+
+::ESC01-1::¿Qué es un escandallo? {
+=Una ficha que calcula el coste de un plato o menú para poder fijar su precio de venta.
+~Una receta con fotografías de cada paso
+~Un inventario de la bodega
+~Una factura de un proveedor
+}
+
+::ESC01-2::¿Qué hoja del archivo del curso calcula el precio de venta del menú? {
+=La hoja «Totales».
+~La hoja «Entrante».
+~La hoja «Postre».
+~Ninguna\: se calcula a mano.
+}
+
+::ESC01-3::Además de la comida, ¿qué costes incluye el escandallo de un catering? {
+=Personal, bebidas, varios (transporte, sal…) e imprevistos.
+~Solo el alquiler del local.
+~Únicamente las bebidas.
+~Ninguno más\: solo la comida.
+}
+
+$CATEGORY: Curso Escandallo/Módulo 2 - Preparamos el libro de cálculo
+
+::ESC02-1::¿Con qué símbolo empieza siempre una fórmula en Calc? {
+=\=
+~\#
+~@
+~$
+}
+
+::ESC02-2::¿Qué resultado da la fórmula \=10+6/2*3? {
+=19
+~24
+~30
+~12
+}
+
+::ESC02-3::¿Cuántas hojas tiene el archivo del ejercicio? {
+=5\: Entrante, Carne, Pescado, Postre y Totales.
+~3
+~7
+~12
+}
+
+::ESC02-4::¿Qué indica B2\:D4? {
+=Un rango de celdas, desde B2 hasta D4.
+~Una resta entre dos celdas.
+~Una sola celda.
+~Una fórmula de suma.
+}
+
+$CATEGORY: Curso Escandallo/Módulo 3 - La ficha de receta: estructura
+
+::ESC03-1::En la ficha de receta, ¿qué indica «Cantidad P.»? {
+=La cantidad que trae el formato en que compras el ingrediente al proveedor.
+~La cantidad que toca por persona.
+~La cantidad que sobra.
+~El precio total de la receta.
+}
+
+::ESC03-2::El aceite se compra en garrafa de 5 litros. ¿Qué número escribes en Cantidad P. si la unidad es ml? {
+=5000
+~5
+~50
+~500
+}
+
+::ESC03-3::¿Qué debe cumplirse entre la Unidad (C) y la Unidad P. (E)? {
+=Deben ser la misma unidad (gr con gr, ml con ml, ud con ud).
+~Deben ser distintas.
+~No importa cuáles sean.
+~Siempre deben estar en kilos.
+}
+
+$CATEGORY: Curso Escandallo/Módulo 4 - Primera fórmula: el coste de cada ingrediente
+
+::ESC04-1::¿Qué fórmula calcula el coste de un ingrediente en la ficha de receta? {
+=\=B7*F7/D7
+~\=B7+F7+D7
+~\=B7/F7*D7
+~\=F7-B7
+}
+
+::ESC04-2::Un formato de 1000 gr cuesta 13,50 €. ¿Cuánto cuestan 1600 gr? {
+=21,60 €
+~16,00 €
+~13,50 €
+~24,30 €
+}
+
+::ESC04-3::Usas 6 huevos de un cartón de 12 que cuesta 3,00 €. ¿Cuánto cuestan los 6 huevos? {
+=1,50 €
+~3,00 €
+~0,50 €
+~6,00 €
+}
+
+$CATEGORY: Curso Escandallo/Módulo 5 - Copiar fórmulas y cantidad por persona
+
+::ESC05-1::¿Cómo se llama el pequeño cuadrado de la esquina de una celda que se arrastra para copiar fórmulas? {
+=Controlador de relleno
+~Marcador de celda
+~Selector de rango
+~Cursor de fórmula
+}
+
+::ESC05-2::En \=B7/B$3, ¿qué hace el símbolo $? {
+=Fija la fila 3 cuando se copia la fórmula.
+~Indica que la celda es dinero.
+~Multiplica por 3.
+~Oculta la celda B3.
+}
+
+::ESC05-3::Copias la fórmula \=B7/B$3 de H7 a H9. ¿Cómo queda en H9? {
+=\=B9/B$3
+~\=B9/B$5
+~\=B7/B$3
+~\=B7/B$5
+}
+
+::ESC05-4::Una receta de 8 raciones lleva 1600 gr de solomillo. ¿Cuántos gramos corresponden a cada persona? {
+=200 gr
+~12.800 gr
+~1.600 gr
+~20 gr
+}
+
+$CATEGORY: Curso Escandallo/Módulo 6 - Fórmulas a prueba de errores y totales
+
+::ESC06-1::¿Qué error aparece cuando una fórmula divide entre una celda vacía? {
+=\#¡DIV/0!
+~\#¡REF!
+~\#NOMBRE?
+~\#¡VALOR!
+}
+
+::ESC06-2::¿Qué hace \=SI(D7\=0;0;B7*F7/D7)? {
+=Devuelve 0 si D7 vale 0; si no, calcula el coste del ingrediente.
+~Suma D7 y B7.
+~Devuelve siempre 0.
+~Multiplica todo por D7.
+}
+
+::ESC06-3::¿Qué fórmula suma los costes de G7 a G27? {
+=\=SUMA(G7\:G27)
+~\=G7+G27
+~\=SUMAR(G7;G27)
+~\=TOTAL(G7\:G27)
+}
+
+::ESC06-4::Una receta cuesta 32,71 € en total y da 8 raciones. ¿Cuánto cuesta cada ración? {
+=4,09 €
+~261,68 €
+~0,24 €
+~40,89 €
+}
+
+$CATEGORY: Curso Escandallo/Módulo 7 - Duplicar la ficha: Carne, Pescado y Postre
+
+::ESC07-1::Al copiar una hoja para crear otra receta, ¿qué rango debes borrar para meter los ingredientes nuevos? {
+=A7\:F27 (ingredientes y datos del proveedor)
+~Toda la hoja
+~Las columnas G\:I
+~Solo la celda B3
+}
+
+::ESC07-2::¿Qué NO debes borrar al reutilizar la ficha? {
+=Las fórmulas de las columnas G, H e I.
+~Los ingredientes antiguos.
+~El nombre del plato.
+~Las raciones.
+}
+
+::ESC07-3::La tarta de queso cuesta 12,27 € y tiene 12 raciones. ¿Cuál es el Total Ración? {
+=1,02 €
+~147,24 €
+~0,98 €
+~12,27 €
+}
+
+$CATEGORY: Curso Escandallo/Módulo 8 - La hoja Totales (I): datos y materia prima
+
+::ESC08-1::En LibreOffice, ¿cómo enlazas el coste por ración de la hoja Carne (celda G29)? {
+=\=Carne.G29
+~\=Carne!G29
+~\=Carne\:G29
+~\=Carne,G29
+}
+
+::ESC08-2::¿Qué fórmula calcula el Total Ración de la materia prima? {
+=\=SUMA(C11\:C14)
+~\=C11*C14
+~\=B15*J1
+~\=SUMA(A11\:A14)
+}
+
+::ESC08-3::¿Qué calcula \=B15*J1? {
+=El coste de la comida de todo el catering.
+~El precio de venta.
+~Las ganancias.
+~Los imprevistos.
+}
+
+::ESC08-4::¿Por qué se enlazan las hojas en lugar de teclear los costes en Totales? {
+=Para que Totales se actualice solo si cambia una receta.
+~Porque Calc no permite teclear números.
+~Para que el archivo pese menos.
+~Por estética.
+}
+
+$CATEGORY: Curso Escandallo/Módulo 9 - La hoja Totales (II): el personal
+
+::ESC09-1::Con 450 comensales y 20 comensales por camarero, ¿cuántos camareros calcula REDONDEAR(450/20;0)? {
+=23
+~22
+~20
+~21
+}
+
+::ESC09-2::¿Qué calcula \=K8*J8*H8 en la tabla de personal? {
+=El coste total de un puesto\: horas × nº de trabajadores × coste por hora.
+~El número de trabajadores.
+~Las horas totales del catering.
+~El precio por menú.
+}
+
+::ESC09-3::¿Qué hace la función REDONDEAR(22,5;0)? {
+=Devuelve 23.
+~Devuelve 22.
+~Devuelve 22,5.
+~Devuelve 0.
+}
+
+::ESC09-4::Según la regla del curso, ¿cuántos conductores hay con 250 comensales? {
+=2
+~1
+~3
+~0
+}
+
+$CATEGORY: Curso Escandallo/Módulo 10 - La hoja Totales (III): bebidas y varios
+
+::ESC10-1::Se calcula 1 botella de vino por cada 4 comensales. Con 150 comensales, ¿cuántas botellas? {
+=38
+~37
+~40
+~150
+}
+
+::ESC10-2::¿Por qué la cantidad de furgonetas se enlaza con \=J11? {
+=Para que se actualice sola según el número de conductores.
+~Para ahorrar tinta al imprimir.
+~Porque Calc lo exige.
+~Para que salga en rojo.
+}
+
+::ESC10-3::¿Qué código de formato muestra «300 Ud.» sin dejar de ser un número? {
+=0 "Ud."
+~"300 Ud."
+~Ud.
+~\=300&"Ud."
+}
+
+$CATEGORY: Curso Escandallo/Módulo 11 - Imprevistos, precio de venta y ganancias
+
+::ESC11-1::Un menú cuesta 30 € y quieres un 25 % de beneficio sobre el coste. ¿Precio de venta? {
+=37,50 €
+~55,00 €
+~30,25 €
+~32,50 €
+}
+
+::ESC11-2::¿Qué fórmula calcula las ganancias en Totales? {
+=\=(C8-B8)*J1
+~\=C8*J1
+~\=B8*C3
+~\=A8-C8
+}
+
+::ESC11-3::Aplicas un 25 % de beneficio sobre el coste. ¿Qué % del precio de venta representa la ganancia? {
+=20 %
+~25 %
+~30 %
+~75 %
+}
+
+::ESC11-4::¿Qué suma la fórmula de imprevistos \=(L17+D34+B16+L35)*B37? {
+=Personal, bebidas, materia prima y varios, multiplicados por el % de imprevistos.
+~Solo la comida.
+~El precio de venta.
+~Las ganancias.
+}
+
+$CATEGORY: Curso Escandallo/Módulo 12 - Revisión, errores y buenas prácticas
+
+::ESC12-1::¿Qué herramienta permite ver todas las fórmulas de la hoja a la vez? {
+=Ver → Mostrar fórmula
+~Datos → Ordenar
+~Formato → Página
+~Hoja → Eliminar
+}
+
+::ESC12-2::Borras una hoja de la que depende una fórmula y aparece \#¡REF!. ¿Qué ha pasado? {
+=La fórmula apunta a una hoja o celda que ya no existe.
+~Se ha dividido entre cero.
+~La columna es demasiado estrecha.
+~La función está mal escrita.
+}
+
+::ESC12-3::¿Para qué sirve proteger la hoja después de desbloquear las celdas de entrada? {
+=Para evitar borrar una fórmula por accidente.
+~Para ocultar los precios.
+~Para impedir que se imprima.
+~Para reducir el tamaño del archivo.
+}
+
+$CATEGORY: Curso Escandallo/Módulo 13 - Reto final: tu propio escandallo
+
+::ESC13-1::Al terminar tu escandallo, ¿qué prueba demuestra que está bien construido? {
+=Al cambiar los comensales, personal, bebidas y precio se recalculan solos.
+~Que tiene muchos colores.
+~Que ocupa una sola hoja.
+~Que no tiene fórmulas.
+}
+
+::ESC13-2::¿Qué debe coincidir siempre entre la receta y el proveedor? {
+=La unidad de medida (gr con gr, ml con ml, ud con ud).
+~El color de las celdas.
+~El nombre del ingrediente en mayúsculas.
+~El número de fila.
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La ficha de receta: estructura</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">📝</span>La ficha de receta: estructura</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Diseñarás la ficha que se repetirá en cada plato: datos generales, receta, proveedor y cantidades por persona.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:23%"></div></div>
+    <div class="progress-text">Curso de Escandallo con Calc · Módulo 3 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>La ficha de receta: estructura</h2>
+
+<div class="activity"><h3>🧩 Las cuatro zonas de la ficha</h3>
+<div class="card-grid">
+<div class="mini-card"><div class="ico">📝</div><b>Datos generales</b>Nombre, fecha y raciones (A1:B3)</div>
+<div class="mini-card" style="background:#fdeaea"><div class="ico">🥬</div><b>RECETA</b>Ingrediente, cantidad y unidad (A:C)</div>
+<div class="mini-card" style="background:#eaf0fa"><div class="ico">🚚</div><b>PROVEEDOR</b>Cómo compras: cantidad, unidad y precio (D:F)</div>
+<div class="mini-card" style="background:#fff5cf"><div class="ico">💶</div><b>Coste y por persona</b>Cálculos (G:I)</div></div></div>
+
+<h3>Paso a paso</h3>
+<ol class="steps"><li>En la hoja <b>Entrante</b> escribe en <b>A1</b> «Nombre:», en <b>A2</b> «Fecha:» y en <b>A3</b> «Raciones:». Ponles negrita.</li><li>En <b>B1</b> escribe el nombre del plato (<i>Porra Archidonesa</i>), en <b>B2</b> la fecha y en <b>B3</b> el número de raciones (<b>10</b>).</li><li>En la fila 5 escribe los bloques: <b>RECETA</b> (A5), <b>PROVEEDOR</b> (D5) y <b>Cantidad Por Persona</b> (H5). Selecciona A5:C5 y usa <b>Formato → Combinar y descombinar celdas → Combinar celdas</b>. Haz lo mismo con D5:F5 y H5:I5.</li><li>En la fila 6 escribe los títulos: Ingredientes · Cantidad · Unidad · Cantidad P. · Unidad P. · Precio · Coste · Cantidad · Unidad.</li><li>Dales color de fondo (Ctrl+1 → pestaña <b>Fondo</b>) y bordes para que se distingan los bloques.</li><li>Da formato de <b>moneda</b> a las columnas F y G (filas 7 a 29) y de <b>fecha</b> a B2.</li></ol>
+
+<h3>El bloque «Proveedor»: la clave del cálculo</h3>
+<p>Los ingredientes no se compran «al gramo»: se compran en <b>formatos</b> (una caja de 5 kg, una garrafa de 5 litros, una docena de huevos). El bloque Proveedor recoge <b>ese formato y su precio</b>:</p>
+<ul class="key-points"><li>📦 <span><b>Cantidad P.</b>: cuánto trae el formato que compras. Ej.: <code>5000</code>.</span></li><li>⚖️ <span><b>Unidad P.</b>: en qué unidad está. Ej.: <code>gr</code>.</span></li><li>💶 <span><b>Precio</b>: lo que cuesta <b>ese formato completo</b>. Ej.: <code>9,50 €</code> la caja de 5 kg.</span></li></ul>
+<div class="figure sheetfig"><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:170px"><col style="width:70px"><col style="width:60px"><col style="width:80px"><col style="width:70px"><col style="width:70px"><col style="width:60px"><col style="width:90px"><col style="width:60px"></colgroup><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th></tr><tr><th class="rn">1</th><td class="lbl">Nombre:</td><td class="">Porra Archidonesa</td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td></tr><tr><th class="rn">2</th><td class="lbl">Fecha:</td><td class="date">10/01/2025</td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td></tr><tr><th class="rn">3</th><td class="lbl">Raciones:</td><td class="r">10</td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td></tr><tr><th class="rn">5</th><td class="rec" colspan="3">RECETA</td><td class="prov" colspan="3">PROVEEDOR</td><td class=""></td><td class="cpp" colspan="2">Cantidad Por Persona</td></tr><tr><th class="rn">6</th><td class="colh">Ingredientes</td><td class="colh">Cantidad</td><td class="colh">Unidad</td><td class="colh">Cantidad P.</td><td class="colh">Unidad P.</td><td class="colh">Precio</td><td class="coste">Coste</td><td class="colh">Cantidad</td><td class="colh">Unidad</td></tr><tr><th class="rn">7</th><td class="">Tomate pera maduro</td><td class="r hl3">2000</td><td class="hl3">gr</td><td class="r hl">5000</td><td class="hl">gr</td><td class="r hl">9,50 €</td><td class=""></td><td class=""></td><td class=""></td></tr><tr><th class="rn">8</th><td class="">Pan del día</td><td class="r">500</td><td class="">gr</td><td class="r">1000</td><td class="">gr</td><td class="r">2,40 €</td><td class=""></td><td class=""></td><td class=""></td></tr><tr><th class="rn">9</th><td class="">Ajo</td><td class="r">40</td><td class="">gr</td><td class="r">1000</td><td class="">gr</td><td class="r">6,50 €</td><td class=""></td><td class=""></td><td class=""></td></tr><tr><th class="rn">10</th><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td></tr><tr><th class="rn">11</th><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td></tr></table></div><p class="figure-caption">La ficha con los datos tecleados. Las columnas <b>G</b> (Coste), <b>H</b> e <b>I</b> se rellenarán con fórmulas.</p></div>
+<div class="alert-box">⚠️ <b>Error típico:</b> La <b>Unidad</b> (columna C) y la <b>Unidad P.</b> (columna E) deben ser la <b>misma</b>. Si el proveedor vende en kilos, convierte a gramos (1 kg = 1000 gr); si vende en litros, a mililitros (1 l = 1000 ml).</div>
+<div class="dl-box">📥 Los datos completos de la Porra Archidonesa están en la hoja <b>Entrante</b> del archivo modelo.<br><a href="Escandallo_modelo.ods" download>Descargar Escandallo_modelo.ods</a></div>
+
+<div class="exercise"><h3>🧩 Cambio de unidades</h3><p>El aceite llega en una garrafa de <b>5 litros</b>. ¿Qué número escribes en <b>Cantidad P.</b> si la unidad elegida es <b>ml</b>?</p>
+<input id="e3a" type="number" step="1" placeholder="Escribe tu resultado">
+<button class="btn" onclick="chk('e3a',5000,'fb_e3a','5 litros × 1000 = 5000 ml.')">Comprobar</button>
+<div id="fb_e3a" class="feedback-box"></div></div>
+<div class="exercise"><h3>🧩 Otro formato</h3><p>Un saco de patatas pesa <b>25 kg</b>. ¿Qué número pones en Cantidad P. si trabajas en <b>gr</b>?</p>
+<input id="e3b" type="number" step="1" placeholder="Escribe tu resultado">
+<button class="btn" onclick="chk('e3b',25000,'fb_e3b','25 kg × 1000 = 25 000 gr.')">Comprobar</button>
+<div id="fb_e3b" class="feedback-box"></div></div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo2.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo4.html')">Siguiente ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa los datos, la fórmula y prueba de nuevo.';}}
+function pickc(el,uid,ok,i){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

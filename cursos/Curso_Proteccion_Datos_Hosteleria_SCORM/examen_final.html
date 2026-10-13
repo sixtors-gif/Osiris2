@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Examen Final</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🔐</span>Examen Final</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Pon a prueba lo aprendido sobre protección de datos en hostelería.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    <div class="progress-text">Curso de Protección de Datos · Módulo 13 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>🏁 Examen final</h2>
+      <p>Responde las 26 preguntas con calma. Al terminar verás tu resultado al instante. Se recomienda acertar al menos el 70&nbsp;%.</p>
+      <div class="summary-box">🎯 <b>Consejo:</b> aplica el semáforo del módulo 13 — si una opción implica pedir un dato de más, compartirlo sin permiso o dejarlo a la vista, casi seguro que no es la respuesta correcta.</div>
+      <div id="exam"></div>
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo13.html')">⬅️ Repasar módulo 13</button>
+        <button class="nav-btn" onclick="finishExam()">Finalizar</button>
+      </div>
+      <div id="result" class="certificate" style="display:none;margin-top:25px"></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Protección de Datos · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+const qs=[
+["¿Qué es un dato personal?", "Cualquier información que permite identificar a una persona, directa o indirectamente.", "Solo el nombre completo", "Solo los datos bancarios", "Solo la dirección postal"],
+["¿Quién es el \"responsable del tratamiento\" en un hotel?", "El propio establecimiento, que decide para qué se usan los datos.", "El cliente que se aloja", "La AEPD", "Cualquier empresa externa"],
+["¿Qué principio se incumple si guardas datos de clientes durante años sin motivo?", "Limitación del plazo de conservación.", "Exactitud", "Transparencia", "Responsabilidad proactiva"],
+["¿Qué significa \"minimización de datos\"?", "Pedir solo los datos estrictamente necesarios para la finalidad.", "Guardar copia de todos los datos posibles", "Reducir el tamaño de los archivos", "Usar contraseñas cortas"],
+["¿Quién necesita conocer la alergia de un cliente para la cena?", "El personal de sala y cocina que prepara y sirve el plato.", "Todo el personal del hotel", "Solo dirección", "Nadie, no hace falta anotarla"],
+["¿Qué necesitas antes de publicar en redes una foto donde salen clientes reconocibles?", "Su permiso.", "Nada, es libre publicarla", "Solo avisar después", "El permiso de la AEPD"],
+["¿Qué obliga el Real Decreto 933/2021 a los alojamientos turísticos?", "A registrar los datos de las personas alojadas y comunicarlos a las Fuerzas y Cuerpos de Seguridad.", "A vender los datos a agencias de viaje", "A publicar la lista de huéspedes", "A pedir el certificado de empadronamiento"],
+["¿Se puede pedir una fotocopia o un \"selfie\" para el registro de viajeros?", "No: la AEPD ha aclarado que no está amparado y vulnera la minimización de datos.", "Sí, siempre es recomendable", "Solo si el cliente es extranjero", "Solo los fines de semana"],
+["¿Por qué los datos de salud son una \"categoría especial\"?", "Porque su mal uso puede causar un daño mayor a la persona.", "Porque ocupan más espacio en el sistema", "Porque son más baratos de tratar", "Porque no están regulados por el RGPD"],
+["¿Dónde debería anotarse la alergia de un cliente?", "En un sistema o ficha interna, visible solo para quien la necesita.", "En una pizarra visible para cualquiera", "En redes sociales del restaurante", "En el tique de caja"],
+["¿En qué zona está prohibido instalar cámaras, sin excepción?", "En vestuarios y aseos.", "En la recepción", "En el aparcamiento", "En el pasillo de habitaciones"],
+["¿Qué es obligatorio cuando hay cámaras de videovigilancia?", "Un cartel informativo visible en el acceso a la zona grabada.", "Pedir permiso a cada cliente antes de entrar", "Publicar las grabaciones en la web", "Nada, no hace falta informar"],
+["¿Cómo debe estar la casilla de aceptación de publicidad por defecto?", "Vacía; el cliente debe marcarla si quiere aceptar.", "Marcada de antemano", "Oculta para que no se vea", "Solo visible para clientes VIP"],
+["¿Qué debe incluir siempre una comunicación comercial (newsletter)?", "Una forma fácil de darse de baja.", "Un descuento obligatorio", "Los datos de otros clientes", "Publicidad de otras empresas sin avisar"],
+["¿Qué NO deberían hacer nunca dos personas de recepción?", "Compartir la misma contraseña del sistema (PMS).", "Bloquear la pantalla al alejarse", "Tener cada una su propio usuario", "Activar la verificación en dos pasos"],
+["Un huésped recibe un mensaje con datos reales de su reserva pidiendo la tarjeta. ¿Puede ser phishing igualmente?", "Sí: los datos pueden haberse obtenido accediendo al panel de gestión del hotel.", "No, si los datos son correctos siempre es fiable", "No, eso nunca ocurre en hostelería", "Sí, pero solo si el mensaje tiene faltas de ortografía"],
+["¿En cuánto tiempo hay que notificar a la AEPD una brecha con riesgo para las personas?", "En un máximo de 72 horas desde que se detecta.", "En 72 días", "No hay plazo definido", "Solo si lo pide el cliente"],
+["Un compañero pierde un USB con datos de reservas. ¿Qué debe hacer primero?", "Avisar cuanto antes a la persona responsable del establecimiento.", "Esperar a ver si aparece", "No decir nada a nadie", "Comprar un USB nuevo y seguir igual"],
+["¿Qué derecho ejerce un cliente que pide que eliminéis sus datos de la newsletter?", "El derecho de supresión.", "El derecho de acceso", "El derecho de portabilidad", "El derecho de limitación"],
+["¿Cuánto tiempo tiene, con carácter general, un establecimiento para responder a una petición de derechos?", "Un mes.", "Un año", "24 horas", "No es obligatorio responder"],
+["Si se usa la huella dactilar para fichar, ¿qué debe ofrecerse siempre?", "Una alternativa para quien no quiera usar ese sistema.", "Nada, es obligatorio para todos", "Un premio por usarla", "El despido de quien se niegue"],
+["¿Dónde no se puede instalar una cámara para \"evitar hurtos entre compañeros\"?", "En el vestuario del personal.", "En la recepción", "En el aparcamiento", "En el comedor de clientes"],
+["¿Cuál es una causa habitual de sanción de la AEPD en hostelería?", "Videovigilancia mal configurada o sin cartel informativo.", "Ofrecer wifi gratuita", "Aceptar pagos con tarjeta", "Tener una web con HTTPS"],
+["¿Qué rango de sanciones es habitual en el sector hostelero, según la AEPD?", "Entre 3.000 € y 50.000 €, según la gravedad.", "Siempre exactamente 100 €", "Nunca hay sanciones económicas", "Solo advertencias sin coste"],
+["En el semáforo de este curso, ¿qué significa una señal roja?", "Que piden un dato de más, se comparte sin permiso o se deja a la vista: hay que parar.", "Que se puede continuar sin problema", "Que hay que compartirlo con todo el equipo", "Que siempre es seguro"],
+["¿Cuál es el objetivo general de este curso?", "Saber qué datos se pueden pedir, cómo tratarlos con seguridad y qué hacer si algo falla, en tu puesto.", "Aprender a configurar un PMS", "Memorizar artículos del RGPD", "Evitar el contacto con clientes"]
+];
+let answers={};
+const root=document.getElementById('exam');
+qs.forEach((x,i)=>{
+  let opts=x.slice(1);
+  opts=opts.sort(()=>Math.random()-.5);
+  const box=document.createElement('div');box.className='quiz';
+  const h=document.createElement('h4');h.textContent=(i+1)+'. '+x[0];box.appendChild(h);
+  const wrap=document.createElement('div');wrap.className='options';
+  opts.forEach(o=>{
+    const d=document.createElement('div');d.className='option';d.dataset.q=i;d.textContent=o;
+    d.onclick=function(){pick(d,o,x[1]);};
+    wrap.appendChild(d);
+  });
+  box.appendChild(wrap);root.appendChild(box);
+});
+function pick(el,val,correct){
+  document.querySelectorAll('[data-q="'+el.dataset.q+'"]').forEach(x=>x.classList.remove('correct','incorrect','selected'));
+  el.classList.add('selected');
+  answers[el.dataset.q]=val;
+}
+function finishExam(){
+  let score=0;
+  qs.forEach((x,i)=>{ if(answers[i]===x[1]) score++; });
+  let pct=Math.round(score/qs.length*100);
+  let r=document.getElementById('result');
+  r.style.display='block';
+  r.innerHTML=`<h2>${pct>=70?'🎉 ¡Muy bien!':'💪 Buen intento'}</h2><p>Resultado: <b>${score}/${qs.length} (${pct}%)</b></p><p>${pct>=70?'Has demostrado que sabes aplicar la protección de datos en tu día a día en hostelería.':'Repasa los módulos y vuelve a intentarlo. Lo importante es aprender a reconocer cada situación.'}</p>`;
+  if(window.scorm) scorm.complete(pct);
+  window.scrollTo({top:r.offsetTop,behavior:'smooth'});
+}
+</script>
+</body>
+</html>

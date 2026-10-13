@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Examen final</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🏁</span>Examen final</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Demuestra que dominas la ciberseguridad aplicada a las redes sociales.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    <div class="progress-text">Ciberseguridad II: redes sociales en profundidad · Examen final</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Examen final</h2>
+
+<p>Responde las <b>27 preguntas</b> con calma. Al terminar verás tu resultado al instante. Se recomienda acertar al menos el <b>70 %</b>.</p>
+<div class="summary-box">🎯 <b>Consejo:</b> piensa en el semáforo de cada módulo y en los protocolos paso a paso (grooming, sextorsión, ciberacoso).</div>
+<div id="exam"></div>
+<div class="navigation"><button class="nav-btn" onclick="scormGo('modulo15.html')">⬅️ Repasar el reto final</button><button class="nav-btn" onclick="finishExam()">Finalizar</button></div>
+<div id="result" class="certificate" style="display:none;margin-top:25px"></div>
+<script>
+const qs=[["¿En qué se diferencia este curso del de Ciberseguridad general?", "Se centra en profundidad solo en las redes sociales", "Trata sobre todo de virus informáticos", "No tiene relación con el otro curso", "Es exactamente el mismo curso"], ["¿Por qué son gratis la mayoría de redes sociales?", "Porque ganan dinero con publicidad basada en tu atención y tus datos", "Porque no cuestan nada de mantener", "Porque las paga el gobierno", "Porque los usuarios pagan con su móvil"], ["¿Qué intenta maximizar, sobre todo, el algoritmo de una red social?", "El tiempo que pasas usando la aplicación", "Tu bienestar personal", "El número de amigos que tienes en la vida real", "La calidad educativa del contenido"], ["¿Cuál de estos es un ejemplo de huella digital «pasiva»?", "Un amigo te etiqueta en una foto sin que tú la hayas subido", "Tú publicas una foto en tu perfil", "Tú escribes un comentario en un vídeo", "Tú cambias tu foto de perfil"], ["¿Qué puede revelar una foto aunque no se vea a simple vista?", "La ubicación exacta donde se tomó (metadatos GPS)", "El nombre de quien la mira", "La velocidad de tu conexión a Internet", "El precio del móvil usado"], ["Al crear una cuenta nueva, ¿cómo suele venir configurada la privacidad?", "Bastante abierta; hay que revisarla y ajustarla tú mismo/a", "Totalmente privada, no hace falta tocar nada", "Imposible de cambiar", "Solo visible para ti"], ["¿Qué es lo más prudente respecto a la ubicación al publicar en redes?", "Desactivarla, o al menos no compartir tu ubicación en tiempo real", "Activarla siempre para que tus amigos te encuentren", "No importa, nadie la mira", "Compartirla solo los fines de semana"], ["¿Por qué es importante usar una contraseña distinta en cada red social?", "Porque si una se filtra, las demás cuentas siguen a salvo", "Porque las plataformas lo exigen por ley", "No es importante, da igual repetirla", "Porque así se recuerdan mejor"], ["Detectas que tu cuenta ha sido hackeada, pero todavía puedes entrar. ¿Qué haces primero?", "Cambiar la contraseña y cerrar el resto de sesiones activas", "Esperar a ver qué pasa", "Borrar la cuenta directamente", "Cambiar el nombre de usuario"], ["¿Qué es el catfishing?", "Hacerse pasar por otra persona en Internet, con una identidad falsa", "Un tipo de virus informático", "Una función para editar fotos", "Un tipo de contraseña"], ["¿Cuál de estas es una señal típica de un perfil falso?", "Muchos seguidores pero muy pocas publicaciones y muy pocas fotos propias", "Llevar varios años con actividad regular", "Aceptar hacer una videollamada sin problema", "Tener el perfil verificado"], ["Un contacto publica cosas que no te interesan, pero no te hace ningún daño. ¿Qué herramienta encaja mejor?", "Silenciar", "Bloquear", "Denunciar", "Eliminar la cuenta"], ["Alguien te está acosando y valoras contarlo a un adulto. ¿Qué deberías hacer antes de bloquearlo?", "Guardar capturas de pantalla de la conversación", "Responderle con insultos", "Borrar la app inmediatamente", "Avisarle de que le vas a bloquear"], ["¿Qué es el grooming?", "Que una persona adulta manipule a un menor por Internet con fines sexuales", "Un tipo de virus para móviles", "Una función de privacidad de las redes sociales", "Un juego online popular"], ["¿Para qué insiste el groomer en pasar a un chat privado?", "Para aislar a la víctima y que nadie más vea la conversación", "Porque esa app tiene mejores emoticonos", "Para ahorrar datos móviles", "Porque es obligatorio en esa red social"], ["Recibes un mensaje de chantaje con una imagen tuya. ¿Cuál es el primer paso correcto?", "No pagar ni enviar nada más, y guardar capturas como prueba", "Pagar lo que piden para que se acabe cuanto antes", "Borrar inmediatamente la conversación y la cuenta", "Contárselo solo a amigos, nunca a un adulto"], ["¿De quién es la responsabilidad en un caso de sextorsión?", "De quien chantajea, nunca de la víctima", "De la víctima, por haber compartido la imagen", "De la plataforma donde ha ocurrido", "De quien lo cuenta a un adulto"], ["Te amenazan con una imagen tuya generada con inteligencia artificial, que nunca existió de verdad. ¿Cambia el protocolo a seguir?", "No: sigue sin pagar, guarda pruebas y pide ayuda igualmente", "Sí, al ser falsa no hay que hacer nada", "Solo hay que preocuparse si la imagen es real", "Hay que pagar porque parece muy real"], ["¿Qué diferencia al ciberacoso de un conflicto puntual?", "Que es repetido y busca hacer daño de forma continuada", "Que ocurre siempre en persona", "Que solo afecta a menores de 12 años", "Que solo ocurre entre desconocidos"], ["Ves cómo humillan a un compañero en un grupo, pero no participas activamente. ¿Qué deberías evitar?", "Reenviar o comentar el contenido humillante, aunque sea \"en broma\"", "Apoyar en privado a la persona afectada", "Denunciar el contenido en la plataforma", "Contárselo a un adulto si es grave"], ["¿Cuál de estas preguntas te ayuda a valorar si un reto viral es peligroso?", "¿Puede hacerme daño a mí o a otra persona?", "¿Cuántas visualizaciones puede conseguir?", "¿Lo ha hecho ya algún famoso?", "¿Es fácil de grabar?"], ["¿Por qué se comparten tan rápido los bulos y noticias falsas?", "Porque provocan emociones fuertes y el algoritmo premia esa reacción", "Porque siempre son verdad", "Porque las plataformas los marcan como destacados", "Porque son más cortos que las noticias reales"], ["¿Qué deberías comprobar antes de compartir una noticia sorprendente?", "Si otras fuentes fiables cuentan lo mismo y si la fecha es actual", "Solo el número de \"me gusta\" que tiene", "Si el titular es llamativo", "Quién lo ha compartido primero entre tus amigos"], ["Quieres publicar una foto en la que sale claramente identificable un amigo. ¿Qué deberías hacer?", "Pedirle permiso antes de publicarla", "Publicarla directamente, es tu cuenta", "Solo pedir permiso si sale mal en la foto", "Pedir permiso solo si tiene muchos seguidores"], ["¿Qué es el «sharenting»?", "Que las familias compartan muchas fotos y datos de menores sin que estos puedan decidir", "Una función de privacidad de Instagram", "Compartir cuentas entre hermanos", "Un tipo de estafa bancaria"], ["¿Por qué compararte con lo que ves en redes puede ser injusto contigo mismo/a?", "Porque sueles ver la versión más editada de la vida de los demás", "Porque las redes muestran siempre la realidad completa", "Porque solo los famosos publican contenido", "Porque las fotos siempre son antiguas"], ["¿Cuál de estas es una señal de que tu relación con las redes podría no ser saludable?", "Sientes ansiedad si no puedes mirar el móvil unos minutos", "Usas las redes un rato al día sin que te cueste dejarlo", "Sigues a cuentas que te inspiran", "Desactivas notificaciones poco importantes"]];
+let answers={};
+const root=document.getElementById('exam');
+qs.forEach(function(x,i){
+  const box=document.createElement('div');box.className='quiz';
+  const h=document.createElement('h4');h.textContent=(i+1)+'. '+x[0];box.appendChild(h);
+  const opts=document.createElement('div');opts.className='options';
+  x.slice(1).map(function(o){return [Math.random(),o]}).sort(function(a,b){return a[0]-b[0]}).forEach(function(p){
+    const d=document.createElement('div');d.className='option';d.textContent=p[1];
+    d.onclick=function(){opts.querySelectorAll('.option').forEach(function(z){z.classList.remove('selected')});d.classList.add('selected');answers[i]=p[1];};
+    opts.appendChild(d);
+  });
+  box.appendChild(opts);root.appendChild(box);
+});
+function finishExam(){
+  let score=0;qs.forEach(function(x,i){if(answers[i]===x[1])score++;});
+  const pct=Math.round(score/qs.length*100);const r=document.getElementById('result');r.style.display='block';
+  r.innerHTML='<h2>'+(pct>=70?'🎉 ¡Muy bien!':'💪 Buen intento')+'</h2><p>Resultado: <b>'+score+'/'+qs.length+' ('+pct+'%)</b></p><p>'+(pct>=70?'Dominas los riesgos y hábitos clave de las redes sociales.':'Repasa los módulos y vuelve a intentarlo. Lo importante es saber reaccionar a tiempo.')+'</p>';
+  if(window.scorm)scorm.complete(pct);window.scrollTo({top:r.offsetTop,behavior:'smooth'});
+}
+</script>
+      
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Ciberseguridad II: redes sociales en profundidad · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

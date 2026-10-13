@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Imprimir y exportar a PDF</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🖨️</span>Imprimir y exportar a PDF</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Prepararás cualquier documento para imprimirlo con garantías o para compartirlo en PDF sin que se pueda modificar.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div>
+    <div class="progress-text">LibreOffice: conceptos básicos comunes · Módulo 11 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Imprimir y exportar a PDF</h2>
+
+<h3>Antes de imprimir: la vista preliminar</h3>
+<p>En cualquier aplicación, <b>Archivo → Vista preliminar</b> te muestra exactamente cómo va a quedar cada página impresa, antes de gastar papel.</p>
+
+<h3>Imprimir</h3>
+<ol class="steps"><li>Pulsa <kbd>Ctrl</kbd>+<kbd>P</kbd> para abrir el diálogo de <b>Imprimir</b>.</li><li>Elige la impresora, cuántas copias y qué páginas (todas, o solo un rango).</li><li>Revisa las opciones de la pestaña <b>Diseño de página</b> si necesitas varias páginas por hoja, o imprimir a doble cara.</li><li>Pulsa <b>Imprimir</b>.</li></ol>
+<div class="figure"><div class="dlg"><div class="dtitle"><span>Imprimir</span><span class="dx">✕</span></div><div class="dtabs"><span class="dtab on">General</span><span class="dtab">Diseño de página</span><span class="dtab">Opciones</span></div><div class="dbody"><div class="drow"><span class="dlab">Impresora</span><span class="dval sel">HP LaserJet (predeterminada)</span></div><div class="drow"><span class="dlab">Intervalo de páginas</span><span class="dval plain">● Todas   ○ Páginas: </span></div><div class="drow"><span class="dlab">Copias</span><span class="dval hi">1</span></div></div><div class="dfoot"><span class="dbtn ok">Imprimir</span><span class="dbtn">Cancelar</span></div></div></div>
+
+<h3>Exportar directamente a PDF</h3>
+<p>Si lo que quieres es un archivo <b>PDF</b> (para enviarlo por correo, subirlo a una plataforma o archivarlo), no hace falta «imprimir» de verdad: LibreOffice lo exporta directamente.</p>
+<ol class="steps"><li>Pulsa el icono <b>Exportar directamente como PDF</b> de la barra de herramientas (una hoja roja con «PDF»), o ve a <b>Archivo → Exportar como → Exportar como PDF…</b>.</li><li>Si usas el menú, puedes elegir opciones extra: calidad de las imágenes, si se incluyen los comentarios, o proteger el PDF con contraseña.</li><li>Ponle un nombre y guárdalo.</li></ol>
+<div class="tip-box">💡 <b>Consejo:</b> El botón de la barra de herramientas exporta con un solo clic, usando las opciones de la última vez; el menú «Exportar como PDF…» te deja elegirlas de nuevo cada vez.</div>
+<div class="ms-box"><span class="mbadge">Microsoft Office</span> En Word/Excel/PowerPoint, la opción equivalente es Archivo → Exportar → Crear PDF/XPS.</div>
+
+<h3>Imprimir, PDF o el formato original: ¿cuándo cada uno?</h3>
+<table class="tbl"><tr><th>Necesito…</th><th>Elijo…</th></tr>
+<tr><td>Entregarlo en papel</td><td>Imprimir (Ctrl+P)</td></tr>
+<tr><td>Compartirlo para que se lea igual en cualquier dispositivo, sin editarlo</td><td>Exportar a PDF</td></tr>
+<tr><td>Que otra persona lo siga editando</td><td>El formato original (.odt, .ods, .odp…) o su equivalente de Microsoft</td></tr></table>
+
+<div class="exercise"><h3>🧩 Compartir sin ediciones</h3><p>Vas a colgar los apuntes de clase en el aula virtual para que los alumnos los lean, sin que puedan modificarlos con facilidad. ¿Qué haces?</p>
+<div class="options" id="opt_e11a"><div class="option" onclick="pickc(this,'e11a',1)">Exportarlos a PDF</div><div class="option" onclick="pickc(this,'e11a',0)">Enviar el archivo .odt original</div><div class="option" onclick="pickc(this,'e11a',0)">Imprimirlos y escanearlos</div></div>
+<div id="fb_e11a" class="feedback-box" data-exp="El PDF es la opción pensada para compartir sin permitir ediciones sencillas."></div></div>
+<div class="exercise"><h3>🧩 Antes de gastar papel</h3><p>¿Qué deberías revisar antes de imprimir un documento largo?</p>
+<div class="options" id="opt_e11b"><div class="option" onclick="pickc(this,'e11b',1)">La vista preliminar, para comprobar cómo quedará cada página</div><div class="option" onclick="pickc(this,'e11b',0)">Nada, se imprime siempre bien</div><div class="option" onclick="pickc(this,'e11b',0)">El idioma del corrector ortográfico</div></div>
+<div id="fb_e11b" class="feedback-box" data-exp="La vista preliminar evita sorpresas y ahorra papel."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo10.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo12.html')">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">LibreOffice: conceptos básicos comunes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

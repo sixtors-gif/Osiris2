@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tus aplicaciones del día a día</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🧰</span>Tus aplicaciones del día a día</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Qué programa usar para cada tarea: navegar, escribir, ver PDF, fotos y vídeos, y mucho más.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:56%"></div></div>
+    <div class="progress-text">Introducción a Ubuntu para usuarios · Módulo 9 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Tus aplicaciones del día a día</h2>
+<div class="activity"><h3>🧰 Todo lo necesario ya viene</h3>
+<p>Ubuntu incluye un <b>conjunto de aplicaciones</b> pensado para el uso diario. Los nombres de algunas aplicaciones pueden aparecer en inglés o en español según tu idioma y tu versión; fíjate en el icono y en su función.</p></div><table class="tbl"><tr><th>Quiero…</th><th>Aplicación</th><th>Si vienes de Windows</th></tr><tr><td>Navegar por internet</td><td><b>Firefox</b> (versión 150 en la 26.04)</td><td>Edge / Chrome</td></tr><tr><td>Leer el correo</td><td><b>Thunderbird</b> (versión 140 en la 26.04)</td><td>Outlook</td></tr><tr><td>Escribir, calcular, presentar</td><td><b>LibreOffice</b> (Writer, Calc, Impress; versión 25.8 en la 26.04)</td><td>Word, Excel, PowerPoint</td></tr><tr><td>Ver archivos PDF</td><td><b>Papers</b> (visor de documentos)</td><td>Lector de PDF</td></tr><tr><td>Ver imágenes</td><td><b>Loupe</b> (visor de imágenes; ya permite ediciones sencillas)</td><td>Fotos</td></tr><tr><td>Reproducir vídeos</td><td><b>Showtime</b> (reproductor de vídeo)</td><td>Reproductor multimedia</td></tr><tr><td>Escribir notas de texto</td><td><b>Editor de texto</b> (Text Editor)</td><td>Bloc de notas</td></tr><tr><td>Abrir la línea de órdenes</td><td><b>Terminal</b> (en la 26.04, la aplicación Ptyxis)</td><td>PowerShell</td></tr><tr><td>Ver qué consume mi equipo</td><td><b>Resources</b> (CPU, memoria, red, discos, procesos)</td><td>Administrador de tareas</td></tr></table>
+<div class="box"><b>Nota sobre la instalación:</b> según elijas «selección predeterminada» o «extendida» al instalar, algunas de estas aplicaciones —por ejemplo las de ofimática— pueden venir ya o instalarse después desde el <b>App Center</b> (módulo siguiente).</div>
+<h3>Ofimática: LibreOffice</h3>
+<p>Si vienes de Word y Excel, <b>LibreOffice</b> te resultará muy familiar. Abre y guarda también los formatos de Microsoft Office (<code>.docx</code>, <code>.xlsx</code>, <code>.pptx</code>), así que puedes intercambiar documentos con quien use Windows sin problemas. Si has hecho el curso de <b>LibreOffice</b> de esta misma serie, ya sabes manejarlo: es exactamente el mismo programa.</p>
+<h3>¿Y si el programa que uso en Windows no existe en Ubuntu?</h3>
+<p>Ubuntu ofrece <b>miles de aplicaciones</b>. Muchas son las mismas que en Windows y están disponibles también para Ubuntu: por ejemplo <b>Firefox, Chrome, Spotify, Telegram, Discord, Slack, Steam, OBS Studio, Blender o Visual Studio Code</b>. Otras tienen una <b>alternativa libre</b> equivalente. Antes de dar nada por perdido: búscalo en el App Center y, si no aparece, comprueba si tiene <b>versión web</b>.</p><table class="tbl"><tr><th>En Windows</th><th>Alternativa habitual en Ubuntu</th></tr><tr><td>Photoshop</td><td>GIMP (retoque de imagen)</td></tr><tr><td>Illustrator</td><td>Inkscape (gráficos vectoriales)</td></tr><tr><td>Premiere / DaVinci</td><td>Kdenlive, Shotcut (edición de vídeo)</td></tr><tr><td>Adobe Audition</td><td>Audacity (edición de audio)</td></tr></table><div class="tip-box">💡 Si usas una aplicación concreta por trabajo o estudios, <b>comprueba antes de instalar</b> que existe una versión para Ubuntu o su equivalente. Es la mejor manera de evitar sorpresas.</div><div class="exercise"><h3>🧩 Quiero escribir una carta</h3><p>¿Qué aplicación de Ubuntu usarías para escribir una carta?</p><div class="options" id="opt_u9a"><div class="option" onclick="pickc(this,'u9a',0)">Resources</div><div class="option" onclick="pickc(this,'u9a',0)">Showtime</div><div class="option" onclick="pickc(this,'u9a',1)">LibreOffice Writer</div><div class="option" onclick="pickc(this,'u9a',0)">Archivos</div></div><div id="fb_u9a" class="feedback-box" data-exp="Writer es el procesador de textos de LibreOffice, equivalente a Word."></div></div><div class="exercise"><h3>🧩 Ver un PDF</h3><p>¿Con qué aplicación de Ubuntu se abren por defecto los PDF?</p><div class="options" id="opt_u9b"><div class="option" onclick="pickc(this,'u9b',0)">Terminal</div><div class="option" onclick="pickc(this,'u9b',1)">Papers (visor de documentos)</div><div class="option" onclick="pickc(this,'u9b',0)">Resources</div><div class="option" onclick="pickc(this,'u9b',0)">Firefox obligatoriamente</div></div><div id="fb_u9b" class="feedback-box" data-exp="Papers es el visor de documentos de Ubuntu desde la versión 25.04."></div></div><div class="exercise"><h3>🧩 Mi equipo va lento</h3><p>¿Qué aplicación te dice qué programa está consumiendo más recursos?</p><div class="options" id="opt_u9c"><div class="option" onclick="pickc(this,'u9c',1)">Resources</div><div class="option" onclick="pickc(this,'u9c',0)">Calendario</div><div class="option" onclick="pickc(this,'u9c',0)">Showtime</div><div class="option" onclick="pickc(this,'u9c',0)">Loupe</div></div><div id="fb_u9c" class="feedback-box" data-exp="Resources muestra el uso de CPU, memoria, red y discos, y agrupa los procesos por aplicación."></div></div>
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo8.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo10.html')">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Introducción a Ubuntu para usuarios · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+
+</body>
+</html>

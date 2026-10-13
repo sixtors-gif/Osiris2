@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Buscar y reemplazar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🔎</span>Buscar y reemplazar</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Aprenderás a encontrar cualquier palabra al instante y a sustituirla en todo el documento de una sola vez.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:46%"></div></div>
+    <div class="progress-text">LibreOffice: conceptos básicos comunes · Módulo 6 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Buscar y reemplazar</h2>
+
+<h3>Buscar: la barra rápida</h3>
+<ol class="steps"><li>Pulsa <kbd>Ctrl</kbd>+<kbd>F</kbd> para abrir la barra de búsqueda (aparece abajo, o flotante, según la aplicación).</li><li>Escribe la palabra o frase que buscas.</li><li>Pulsa <b>Intro</b> para saltar a la siguiente coincidencia, y sigue pulsando para ir avanzando por el documento.</li><li>Pulsa <b>Esc</b> para cerrar la barra de búsqueda.</li></ol>
+<p>Funciona igual para encontrar una palabra en un informe de Writer, un dato en una hoja de Calc o un texto dentro de una presentación de Impress.</p>
+
+<h3>Buscar y reemplazar: cambiar muchas veces de golpe</h3>
+<p>Si necesitas <b>sustituir</b> una palabra por otra (por ejemplo, corregir un nombre mal escrito en todo el documento), usa la ventana completa.</p>
+<ol class="steps"><li>Pulsa <kbd>Ctrl</kbd>+<kbd>H</kbd> para abrir <b>Buscar y reemplazar</b>.</li><li>Escribe en <b>Buscar</b> lo que quieres localizar, y en <b>Reemplazar por</b>, el texto nuevo.</li><li>Pulsa <b>Reemplazar todo</b> para cambiarlo en todo el documento de una vez, o <b>Buscar siguiente</b> y <b>Reemplazar</b> para ir uno a uno.</li></ol>
+<div class="figure"><div class="dlg"><div class="dtitle"><span>Buscar y reemplazar</span><span class="dx">✕</span></div><div class="dbody"><div class="drow"><span class="dlab">Buscar</span><span class="dval hi">catering</span></div><div class="drow"><span class="dlab">Reemplazar por</span><span class="dval hi">cátering</span></div><div class="drow"><span class="dlab">Opciones</span><span class="dval plain">☑ Coincidir mayúsculas y minúsculas  ☐ Solo palabras completas</span></div></div><div class="dfoot"><span class="dbtn ok">Reemplazar todo</span><span class="dbtn">Cerrar</span></div></div></div>
+
+<h3>Opciones útiles</h3>
+<ul class="key-points"><li>🔠 <span><b>Coincidir mayúsculas y minúsculas:</b> distingue «Catering» de «catering». Actívala si el uso de mayúsculas importa.</span></li><li>🔤 <span><b>Solo palabras completas:</b> evita que, al buscar «sal», también encuentre «salir» o «ensalada».</span></li><li>🧩 <span><b>Expresiones regulares:</b> una opción avanzada para búsquedas con patrones (por ejemplo, cualquier número de teléfono). No hace falta para el uso diario.</span></li></ul>
+<div class="alert-box">⚠️ <b>Error típico:</b> Antes de pulsar <b>Reemplazar todo</b>, revisa bien lo que has escrito en ambos campos: un espacio de más o una palabra mal escrita puede cambiar cosas que no querías.</div>
+
+<div class="exercise"><h3>🧩 Localizar algo rápido</h3><p>Necesitas encontrar la palabra «total» en un documento largo. ¿Qué atajo usas?</p>
+<div class="options" id="opt_e6a"><div class="option" onclick="pickc(this,'e6a',1)">Ctrl+F</div><div class="option" onclick="pickc(this,'e6a',0)">Ctrl+H</div><div class="option" onclick="pickc(this,'e6a',0)">Ctrl+Z</div></div>
+<div id="fb_e6a" class="feedback-box" data-exp="Ctrl+F abre la barra de búsqueda rápida."></div></div>
+<div class="exercise"><h3>🧩 Cambiar en todo el documento</h3><p>Te has equivocado y has escrito «Catreing» en vez de «Catering» diez veces en el mismo documento. ¿Cuál es la forma más rápida de corregirlo?</p>
+<div class="options" id="opt_e6b"><div class="option" onclick="pickc(this,'e6b',1)">Buscar y reemplazar (Ctrl+H), con «Reemplazar todo»</div><div class="option" onclick="pickc(this,'e6b',0)">Corregirlo a mano, una por una</div><div class="option" onclick="pickc(this,'e6b',0)">Borrar el documento y empezar de nuevo</div></div>
+<div id="fb_e6b" class="feedback-box" data-exp="Buscar y reemplazar corrige todas las apariciones de una vez."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo5.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo7.html')">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">LibreOffice: conceptos básicos comunes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Escandallo de un catering con Calc</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🧮</span>Escandallo de un catering con Calc</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Aprende a crear paso a paso una hoja de cálculo para calcular costes y precio de venta de un catering.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+    <div class="progress-text">Curso de Escandallo con Calc · Inicio</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Escandallo de un catering con Calc</h2>
+
+<div class="activity"><h3>👋 Bienvenido/a</h3>
+<p>En este curso aprenderás a <b>construir desde cero</b> una hoja de cálculo para calcular el coste y el precio de venta de un <b>catering</b>: el «escandallo». Sin saber nada de fórmulas, al final habrás creado un archivo completo que se recalcula solo cuando cambias los comensales, los precios o los porcentajes.</p></div>
+<div class="box"><b>Objetivo:</b> saber crear, paso a paso, un archivo de escandallo con sus fórmulas (SI, SUMA, REDONDEAR, referencias entre hojas…) y entender por qué funciona cada una.</div>
+<h3>¿Qué construirás?</h3>
+<div class="pipe"><div class="pbox"><b>4 fichas de receta</b>Entrante · Carne · Pescado · Postre</div><div class="parrow">➜</div>
+<div class="pbox blue"><b>Hoja «Totales»</b>Personal · Bebidas · Varios · Imprevistos</div><div class="parrow">➜</div><div class="pbox res"><b>🏷️ Precio de venta</b>y ganancias por menú</div></div>
+<h3>Antes de empezar</h3>
+<ul class="key-points"><li>💻 <span><b>Programa:</b> LibreOffice Calc (gratuito). También sirve Excel: las fórmulas son las mismas.</span></li><li>🧑‍🍳 <span><b>Nivel:</b> ninguno. Solo necesitas saber usar el ratón y el teclado.</span></li><li>⏱️ <span><b>Cómo trabajar:</b> ten Calc abierto a la vez que el curso y haz cada paso en tu archivo.</span></li></ul>
+<div class="dl-box">📥 <b>Archivo modelo resuelto</b><br>Úsalo para comparar tu trabajo con el resultado correcto.<br><a href="Escandallo_modelo.ods" download>Descargar Escandallo_modelo.ods</a></div>
+<h3>Itinerario</h3>
+<ul class="key-points"><li><span><b>1.</b></span><span><a href="modulo1.html">¿Qué es un escandallo?</a></span></li><li><span><b>2.</b></span><span><a href="modulo2.html">Preparamos el libro de cálculo</a></span></li><li><span><b>3.</b></span><span><a href="modulo3.html">La ficha de receta: estructura</a></span></li><li><span><b>4.</b></span><span><a href="modulo4.html">Primera fórmula: el coste de cada ingrediente</a></span></li><li><span><b>5.</b></span><span><a href="modulo5.html">Copiar fórmulas y cantidad por persona</a></span></li><li><span><b>6.</b></span><span><a href="modulo6.html">Fórmulas a prueba de errores y totales</a></span></li><li><span><b>7.</b></span><span><a href="modulo7.html">Duplicar la ficha: Carne, Pescado y Postre</a></span></li><li><span><b>8.</b></span><span><a href="modulo8.html">La hoja Totales (I): datos y materia prima</a></span></li><li><span><b>9.</b></span><span><a href="modulo9.html">La hoja Totales (II): el personal</a></span></li><li><span><b>10.</b></span><span><a href="modulo10.html">La hoja Totales (III): bebidas y varios</a></span></li><li><span><b>11.</b></span><span><a href="modulo11.html">Imprevistos, precio de venta y ganancias</a></span></li><li><span><b>12.</b></span><span><a href="modulo12.html">Revisión, errores y buenas prácticas</a></span></li><li><span><b>13.</b></span><span><a href="modulo13.html">Reto final: tu propio escandallo</a></span></li><li><span>🏁</span><span><a href="examen_final.html">Examen final</a></span></li></ul>
+<div class="navigation"><span></span><button class="nav-btn" onclick="scormGo('modulo1.html')">Comenzar ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa los datos, la fórmula y prueba de nuevo.';}}
+function pickc(el,uid,ok,i){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

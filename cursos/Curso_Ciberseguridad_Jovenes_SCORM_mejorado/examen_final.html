@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Examen Final</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🔒</span>Examen Final</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Pon a prueba tus hábitos de seguridad digital.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    <div class="progress-text">Curso de Ciberseguridad · Módulo 15 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>🏁 Examen final</h2>
+      <p>Responde las 32 preguntas con calma. Al terminar verás tu resultado al instante. Se recomienda acertar al menos el 70&nbsp;%.</p>
+      <div class="summary-box">🎯 <b>Consejo:</b> aplica el semáforo del módulo 15 — si una opción implica compartir una contraseña, un código, fotos íntimas o dar dinero, casi seguro que no es la respuesta correcta.</div>
+      <div id="exam"></div>
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo15.html')">⬅️ Repasar módulo 15</button>
+        <button class="nav-btn" onclick="finishExam()">Finalizar</button>
+      </div>
+      <div id="result" class="certificate" style="display:none;margin-top:25px"></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Ciberseguridad · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+const qs=[
+["¿Qué debe hacerte sospechar de un mensaje?", "Que pida una contraseña o código con urgencia.", "Que te salude por tu nombre", "Que incluya el logotipo de la empresa", "Que llegue en horario de clase"],
+["¿Qué es 2FA?", "Una segunda prueba de identidad además de la contraseña.", "Cambiar de móvil", "Crear una segunda cuenta", "Tener dos contraseñas iguales"],
+["¿Qué haces con una contraseña reutilizada?", "La sustituyes por una contraseña exclusiva para ese servicio.", "Compartirla con amigos", "Publicarla en una nota visible", "Usarla también para el correo"],
+["¿Qué es phishing?", "Un engaño que intenta obtener datos haciéndose pasar por una fuente legítima.", "Una actualización", "Una copia de seguridad", "Una red Wi-Fi"],
+["¿Qué haces ante un enlace inesperado?", "No introduces datos y verificas el servicio por un canal oficial.", "Hacer clic rápidamente", "Desactivar la seguridad", "Reenviarlo a un amigo"],
+["¿Qué es la huella digital?", "La información y rastro que dejamos con nuestra actividad en Internet.", "Solo las fotos del móvil", "Únicamente los videojuegos", "Nada que tenga que ver contigo"],
+["¿Qué dato conviene proteger especialmente?", "Contraseñas y códigos de acceso.", "El nombre de tu videojuego favorito", "El nombre de una app", "El color del móvil"],
+["¿Qué haces con las actualizaciones?", "Mantienes sistema y aplicaciones actualizados desde fuentes oficiales.", "Ignorarlas siempre", "Instalar archivos aleatorios", "Desactivarlas"],
+["¿Qué es malware?", "Software malicioso.", "Una red Wi-Fi", "Una contraseña fuerte", "Una copia de seguridad"],
+["¿Qué indica que una descarga puede ser peligrosa?", "Que procede de una fuente dudosa o pide desactivar protecciones.", "Que sea de la web oficial", "Que sea un anuncio", "Que pida permisos razonables"],
+["¿Qué haces si un supuesto moderador pide tu código?", "No lo compartes y utilizas el soporte oficial.", "Darle el código", "Publicarlo", "Darle también la contraseña"],
+["¿Qué haces con contenido humillante de otra persona?", "No lo reenvías y buscas ayuda/reportas cuando corresponda.", "Reenviarlo", "Añadir comentarios", "Hacer una captura y difundirla"],
+["Si sospechas que han entrado en tu cuenta, ¿qué haces?", "Cambias la contraseña, cierras sesiones y activas 2FA.", "Publicar la contraseña", "Ignorarlo", "Crear otra cuenta y abandonar la anterior"],
+["¿Por qué no conviene publicar una ubicación en tiempo real?", "Porque puede revelar dónde estás o tus rutinas.", "Porque gasta más batería", "Porque ocupa memoria", "Porque cambia el color de las fotos"],
+["¿Qué es una buena práctica con apps?", "Instalarlas desde fuentes oficiales y revisar sus permisos.", "Aceptar todos los permisos sin leerlos", "Archivos aleatorios", "Apps modificadas desconocidas"],
+["¿Qué debes hacer si un sitio te pide desactivar el antivirus?", "No seguir la indicación y abandonar la descarga.", "Seguir la instrucción", "Desactivar el móvil", "Enviar el archivo a más personas"],
+["¿El soporte legítimo necesita tu contraseña?", "No.", "Sí, siempre", "Sí, si dice ser urgente", "Sí, si conoce tu nombre"],
+["¿Qué hacer ante un problema grave online?", "Pedir ayuda a una persona adulta o responsable y utilizar canales oficiales.", "No contarle nada a nadie", "Buscar un programa desconocido", "Publicar los datos del incidente"],
+["¿Qué significa semáforo rojo?", "Parar porque hay señales claras de riesgo.", "Hacer clic sin mirar", "Dar el código", "Compartir el mensaje"],
+["¿Cuál es el objetivo del curso?", "Convertir la seguridad digital en hábitos sencillos y aplicables.", "Aprender a desactivar el antivirus", "Aprender a hackear personas", "Conseguir más seguidores"],
+["¿Qué es la ingeniería social?", "Manipular psicológicamente a alguien para que revele información o haga algo que beneficia al atacante.", "Un tipo de red social", "Un curso de programación", "Un antivirus"],
+["Un mensaje combina autoridad, urgencia y miedo a la vez. ¿Qué deberías pensar?", "Que es muy probable que sea un intento de manipulación o estafa.", "Que es muy fiable", "Que debo actuar lo antes posible sin dudar", "Que es spam sin importancia"],
+["¿Qué es el smishing?", "Un engaño de phishing que llega por SMS.", "Un virus para el móvil", "Una app de mensajería segura", "Un tipo de copia de seguridad"],
+["Te llama alguien que dice ser de tu banco y te pide el código que acabas de recibir por SMS. ¿Qué haces?", "No se lo das y cuelgas; llamas tú al teléfono oficial del banco.", "Se lo dices porque conoce tu nombre", "Se lo das si suena convincente", "Le das también tu contraseña"],
+["¿Qué hace el ransomware?", "Cifra tus archivos y pide un rescate para devolverte el acceso.", "Acelera tu ordenador", "Hace copias de seguridad automáticas", "Actualiza tus aplicaciones"],
+["Tus archivos aparecen cifrados con una nota pidiendo dinero. ¿Qué deberías hacer?", "No pagar, desconectar el dispositivo de la red y avisar a una persona responsable.", "Pagar cuanto antes para recuperar los archivos", "Ignorarlo y seguir usando el dispositivo con normalidad", "Compartir tus datos bancarios para verificar tu identidad"],
+["¿Qué es una señal de alerta en una tienda online?", "Precios increíblemente bajos y solo aceptan pago por transferencia a una persona.", "Tener HTTPS y datos de contacto reales", "Aceptar tarjeta y plataformas con protección al comprador", "Tener reseñas variadas a lo largo del tiempo"],
+["Antes de comprar algo muy barato en un anuncio, ¿qué deberías hacer?", "Buscar opiniones sobre esa tienda o vendedor y desconfiar si presiona a pagar ya.", "Pagar inmediatamente antes de que se agote", "Dar tu contraseña para verificar tu identidad", "Compartir el anuncio con tus amigos sin comprobarlo"],
+["¿Qué es un deepfake?", "Un vídeo, imagen o audio manipulado con inteligencia artificial para parecer real.", "Una copia de seguridad en la nube", "Un tipo de contraseña muy segura", "Una actualización del sistema"],
+["Recibes un audio con la voz de un familiar pidiendo dinero urgente desde un número desconocido. ¿Qué haces?", "Cuelgas y le llamas tú directamente al número que ya tenías guardado.", "Envías el dinero inmediatamente porque es su voz", "Le pides que te lo confirme por el mismo número desconocido", "Lo compartes con más gente para pedir consejo"],
+["¿Cuál es una señal de alarma de grooming?", "Alguien que insiste en pasar a un chat privado y pide que lo mantengas en secreto.", "Alguien que propone jugar una partida pública en un videojuego", "Alguien que hace una videollamada para presentarse", "Alguien que comparte contenido educativo abierto"],
+["Si alguien te chantajea con una imagen tuya para que le envíes más contenido o dinero, ¿qué es lo más importante que debes saber?", "Que no es culpa tuya y que pedir ayuda no tiene consecuencias negativas para ti.", "Que debes pagar para que no la difunda", "Que es mejor no contárselo a nadie", "Que debes enviarle más contenido para que no se enfade"]
+];
+let answers={};
+const root=document.getElementById('exam');
+qs.forEach((x,i)=>{
+  let opts=x.slice(1);
+  opts=opts.sort(()=>Math.random()-.5);
+  const box=document.createElement('div');box.className='quiz';
+  const h=document.createElement('h4');h.textContent=(i+1)+'. '+x[0];box.appendChild(h);
+  const wrap=document.createElement('div');wrap.className='options';
+  opts.forEach(o=>{
+    const d=document.createElement('div');d.className='option';d.dataset.q=i;d.textContent=o;
+    d.onclick=function(){pick(d,o,x[1]);};
+    wrap.appendChild(d);
+  });
+  box.appendChild(wrap);root.appendChild(box);
+});
+function pick(el,val,correct){
+  document.querySelectorAll('[data-q="'+el.dataset.q+'"]').forEach(x=>x.classList.remove('correct','incorrect','selected'));
+  el.classList.add('selected');
+  answers[el.dataset.q]=val;
+}
+function finishExam(){
+  let score=0;
+  qs.forEach((x,i)=>{ if(answers[i]===x[1]) score++; });
+  let pct=Math.round(score/qs.length*100);
+  let r=document.getElementById('result');
+  r.style.display='block';
+  r.innerHTML=`<h2>${pct>=70?'🎉 ¡Muy bien!':'💪 Buen intento'}</h2><p>Resultado: <b>${score}/${qs.length} (${pct}%)</b></p><p>${pct>=70?'Has demostrado que sabes aplicar hábitos básicos de ciberseguridad.':'Repasa los módulos y vuelve a intentarlo. Lo importante es aprender a reconocer las situaciones de riesgo.'}</p>`;
+  if(window.scorm) scorm.complete(pct);
+  window.scrollTo({top:r.offsetTop,behavior:'smooth'});
+}
+</script>
+</body>
+</html>

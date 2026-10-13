@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ransomware: cuando alguien secuestra tus datos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🔒</span>Ransomware: cuando alguien secuestra tus datos</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Un tipo de malware que no roba tus archivos: los deja inservibles hasta que pagues. Verás cómo evitarlo y por qué nunca hay que pagar.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:53%"></div></div>
+    <div class="progress-text">Curso de Ciberseguridad · Módulo 8 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Ransomware: cuando alguien secuestra tus datos</h2>
+
+      <div class="activity">
+        <h3>🔒 ¿Qué es el ransomware?</h3>
+        <p>Es un malware que cifra (bloquea con una clave) tus fotos, trabajos y documentos, y luego muestra un mensaje pidiendo dinero —normalmente en criptomonedas— a cambio de la clave para recuperarlos.</p>
+      </div>
+
+      <div class="figure">
+        <svg viewBox="0 0 460 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Antes: carpeta con archivos normales. Después: carpeta cifrada con candado y nota de rescate">
+          <text x="110" y="22" font-size="13" text-anchor="middle" fill="#065f46" font-weight="700">Antes</text>
+          <rect x="30" y="35" width="160" height="110" rx="10" fill="#f8f9fa" stroke="#4ecdc4" stroke-width="2"/>
+          <text x="65" y="70" font-size="26" text-anchor="middle">📄</text>
+          <text x="110" y="70" font-size="26" text-anchor="middle">🖼️</text>
+          <text x="155" y="70" font-size="26" text-anchor="middle">📊</text>
+          <text x="110" y="105" font-size="12" text-anchor="middle" fill="#2e7d32" font-weight="700">Archivos accesibles</text>
+
+          <text x="230" y="95" font-size="26" fill="#f44336" text-anchor="middle">➜</text>
+
+          <text x="350" y="22" font-size="13" text-anchor="middle" fill="#c62828" font-weight="700">Después</text>
+          <rect x="270" y="35" width="160" height="110" rx="10" fill="#fdecea" stroke="#f44336" stroke-width="2"/>
+          <text x="350" y="80" font-size="34" text-anchor="middle">🔒</text>
+          <text x="350" y="110" font-size="12" text-anchor="middle" fill="#c62828" font-weight="700">Todo cifrado</text>
+
+          <rect x="30" y="160" width="400" height="25" rx="6" fill="#fff3e0" stroke="#ff9800" stroke-width="1.5"/>
+          <text x="230" y="177" font-size="11.5" text-anchor="middle" fill="#e65100" font-weight="700">"Paga 300 € en 48h o perderás tus archivos para siempre"</text>
+        </svg>
+        <p class="figure-caption">El ransomware no roba tus archivos: los deja ahí, pero inaccesibles, y pide un rescate por la clave.</p>
+      </div>
+
+      <div class="video-embed">
+        <iframe src="https://www.youtube.com/embed/vqwtLVfg7ns" title="¿Qué es el ransomware? | #AprendeCiberseguridad con INCIBE" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-source">Vídeo: "¿Qué es el ransomware?" — INCIBE, serie #AprendeCiberseguridad.</p>
+
+      <div class="alert-box">⚠️ <b>Nunca pagues el rescate.</b> No hay garantía de recuperar tus archivos, puedes volver a ser atacado, y estás financiando a quien lo hace posible para más gente.</div>
+
+      <h3>Tu mejor defensa: la regla 3‑2‑1 de las copias de seguridad</h3>
+      <div class="figure">
+        <svg viewBox="0 0 460 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Regla 3-2-1: tres copias, en dos soportes distintos, una de ellas fuera de casa o en la nube">
+          <circle cx="80" cy="65" r="45" fill="#f0fdf4" stroke="#4caf50" stroke-width="3"/>
+          <text x="80" y="60" font-size="26" text-anchor="middle" fill="#2e7d32" font-weight="700">3</text>
+          <text x="80" y="80" font-size="10.5" text-anchor="middle" fill="#2e7d32">copias</text>
+          <text x="80" y="128" font-size="11" text-anchor="middle" fill="#555">de tus archivos</text>
+
+          <circle cx="230" cy="65" r="45" fill="#eff6ff" stroke="#3b82f6" stroke-width="3"/>
+          <text x="230" y="60" font-size="26" text-anchor="middle" fill="#1e3a8a" font-weight="700">2</text>
+          <text x="230" y="80" font-size="10.5" text-anchor="middle" fill="#1e3a8a">soportes</text>
+          <text x="230" y="128" font-size="11" text-anchor="middle" fill="#555">distintos (disco + nube)</text>
+
+          <circle cx="380" cy="65" r="45" fill="#fdecea" stroke="#f44336" stroke-width="3"/>
+          <text x="380" y="60" font-size="26" text-anchor="middle" fill="#c62828" font-weight="700">1</text>
+          <text x="380" y="80" font-size="10.5" text-anchor="middle" fill="#c62828">copia fuera</text>
+          <text x="380" y="128" font-size="11" text-anchor="middle" fill="#555">de casa o en la nube</text>
+        </svg>
+        <p class="figure-caption">Si tienes copias recientes y desconectadas, un ransomware deja de ser una catástrofe: simplemente restauras tus archivos.</p>
+      </div>
+
+      <ul class="key-points">
+        <li>📥 <span><b>Cómo se propaga:</b> igual que otro malware: adjuntos de correo, documentos con "macros" que piden activarse, actualizaciones falsas o descargas piratas.</span></li>
+        <li>💾 <span><b>Haz copias de seguridad</b> con regularidad y guarda al menos una desconectada del dispositivo (un disco externo que no esté siempre enchufado, o la nube).</span></li>
+        <li>🔄 <span><b>Mantén todo actualizado:</b> muchos ataques aprovechan fallos de seguridad ya corregidos en versiones más nuevas.</span></li>
+      </ul>
+
+      <div class="quiz">
+        <h3>🧩 Ejercicio práctico: Archivos bloqueados</h3>
+        <p>Un día abres tu ordenador y todos tus documentos tienen una extensión rara y no se abren. Aparece un mensaje pidiendo dinero. ¿Cuáles son tus dos primeros pasos?</p>
+        <button class="btn" onclick="this.nextElementSibling.textContent='Desconecta el dispositivo de la red (Wi-Fi/cable) para que no siga cifrando o propagándose, y avisa a una persona adulta o responsable antes de tocar nada más. No pagues el rescate.'">Ver orientación</button>
+        <p class="feedback"></p>
+      </div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo7.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo9.html')">Siguiente ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Ciberseguridad · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+</body>
+</html>

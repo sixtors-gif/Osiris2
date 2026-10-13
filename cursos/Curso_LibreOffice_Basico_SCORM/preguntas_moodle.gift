@@ -1,0 +1,302 @@
+// Curso de LibreOffice: conceptos basicos comunes
+// Autor: Sixto Rodríguez de Sepúlveda
+// Formato GIFT para Moodle. Codificación UTF-8. Una única respuesta correcta por pregunta.
+
+$CATEGORY: Curso LibreOffice Básico/Módulo 1 - ¿Qué es LibreOffice? El paquete completo
+
+::LO01-1::¿Qué organización desarrolla y mantiene LibreOffice? {
+=The Document Foundation
+~Microsoft
+~Una única empresa privada con ánimo de lucro
+~El Gobierno de España
+}
+
+::LO01-2::Quieres preparar una presentación con diapositivas. ¿Qué aplicación usas? {
+=Impress
+~Writer
+~Base
+~Math
+}
+
+::LO01-3::¿Cuál es el equivalente de Excel en LibreOffice? {
+=Calc
+~Writer
+~Draw
+~Impress
+}
+
+$CATEGORY: Curso LibreOffice Básico/Módulo 2 - El Centro de Inicio y la ventana de cualquier aplicación
+
+::LO02-1::Quieres seguir trabajando en un documento que editaste ayer. ¿Qué es lo más rápido? {
+=Abrirlo desde «Documentos recientes» en el Centro de Inicio
+~Crear un documento nuevo y volver a escribirlo todo
+~Buscarlo manualmente por todas las carpetas
+~Reinstalar LibreOffice
+}
+
+::LO02-2::¿Cuál de estas partes de la ventana se organiza igual en Writer, Calc e Impress? {
+=La barra de menús
+~El área de trabajo (siempre es idéntica)
+~Nada es común
+~Solo el color de fondo
+}
+
+::LO02-3::En la barra de estado de Writer se muestran datos como… {
+=El número de página y de palabras
+~El número de filas de una tabla dinámica
+~El nombre de la impresora predeterminada
+~La hora del sistema
+}
+
+$CATEGORY: Curso LibreOffice Básico/Módulo 3 - Crear, abrir, guardar y «Guardar como»
+
+::LO03-1::¿Qué atajo abre «Guardar como» en cualquier aplicación de LibreOffice? {
+=Ctrl + Mayús + S
+~Ctrl + S
+~Ctrl + N
+~Ctrl + P
+}
+
+::LO03-2::Tienes un documento terminado y quieres probar cambios grandes sin arriesgar el original. ¿Qué haces primero? {
+=Guardar como con otro nombre (por ejemplo _v2) y probar en la copia
+~Probar directamente y deshacer si sale mal
+~Cerrar sin guardar
+~Borrar el archivo y empezar de nuevo
+}
+
+::LO03-3::¿Cuál de estos nombres de archivo es más adecuado? {
+=Informe_Practicas_2026.odt
+~Documento1.odt
+~presentacion final final (2).odp
+~sin nombre.odt
+}
+
+$CATEGORY: Curso LibreOffice Básico/Módulo 4 - Formatos de archivo: ODF, Microsoft Office y PDF
+
+::LO04-1::¿Cuál es el formato nativo (ODF) de LibreOffice Calc? {
+=.ods
+~.odt
+~.xlsx
+~.odp
+}
+
+::LO04-2::Quieres enviar una presentación para que la vean sin que nadie pueda cambiarla con facilidad. ¿Qué formato usas? {
+=PDF
+~.odp
+~.pptx
+~.odt
+}
+
+::LO04-3::¿Qué formato de Writer es equivalente a .docx de Word? {
+=.odt
+~.ods
+~.odp
+~.odg
+}
+
+$CATEGORY: Curso LibreOffice Básico/Módulo 5 - Deshacer, rehacer y el portapapeles
+
+::LO05-1::Borras por error un párrafo entero en Writer. ¿Qué atajo lo recupera al instante? {
+=Ctrl+Z
+~Ctrl+S
+~Ctrl+P
+~Ctrl+F
+}
+
+::LO05-2::Quieres mover un párrafo a otro lugar sin dejarlo también donde estaba. ¿Qué usas? {
+=Cortar (Ctrl+X) y pegar (Ctrl+V)
+~Copiar (Ctrl+C) y pegar (Ctrl+V)
+~Ctrl+Z
+~Ctrl+H
+}
+
+::LO05-3::Pegas un texto copiado de una web y aparece con una fuente y un color raros. ¿Qué deberías haber usado? {
+=Pegado especial → Texto sin formato
+~Copiar dos veces
+~Deshacer antes de pegar
+~Cambiar el idioma del documento
+}
+
+$CATEGORY: Curso LibreOffice Básico/Módulo 6 - Buscar y reemplazar
+
+::LO06-1::Necesitas encontrar la palabra «total» en un documento largo. ¿Qué atajo usas? {
+=Ctrl+F
+~Ctrl+H
+~Ctrl+Z
+~Ctrl+P
+}
+
+::LO06-2::Te has equivocado y escrito mal una palabra diez veces en el mismo documento. ¿Cuál es la forma más rápida de corregirlo? {
+=Buscar y reemplazar (Ctrl+H), con «Reemplazar todo»
+~Corregirlo a mano, una por una
+~Borrar el documento y empezar de nuevo
+~Cambiar el idioma del corrector
+}
+
+::LO06-3::¿Para qué sirve la opción «Solo palabras completas» al buscar «sal»? {
+=Para que no encuentre también «salir» o «ensalada»
+~Para buscar solo en mayúsculas
+~Para buscar en todos los idiomas a la vez
+~Para reemplazar automáticamente sin confirmar
+}
+
+$CATEGORY: Curso LibreOffice Básico/Módulo 7 - Ortografía, idioma y autocorrección
+
+::LO07-1::¿Qué tecla revisa de golpe toda la ortografía y gramática del documento? {
+=F7
+~F1
+~F5
+~F11
+}
+
+::LO07-2::Un apellido poco común aparece siempre subrayado en rojo, aunque está bien escrito. ¿Qué haces? {
+=Añadirlo al diccionario personalizado con el clic derecho
+~Cambiar el idioma de todo el documento
+~Ignorarlo para siempre
+~Desinstalar el corrector ortográfico
+}
+
+::LO07-3::¿Para qué sirve la Autocorrección? {
+=Para cambiar automáticamente ciertos textos mientras escribes (mayúsculas, comillas, erratas frecuentes)
+~Para traducir el documento a otro idioma
+~Para comprobar fórmulas de Calc
+~Para exportar a PDF
+}
+
+$CATEGORY: Curso LibreOffice Básico/Módulo 8 - La barra lateral y el Navegador
+
+::LO08-1::¿Cómo se llama la franja de iconos a la derecha de la ventana, con paneles como Propiedades o Estilos? {
+=La barra lateral
+~La barra de estado
+~El Centro de Inicio
+~La barra de menús
+}
+
+::LO08-2::Pulsas F5 en Impress mientras editas una presentación. ¿Qué ocurre? {
+=Se inicia la presentación desde el principio
+~Se abre el Navegador
+~No ocurre nada
+~Se guarda el archivo
+}
+
+::LO08-3::¿Para qué sirve el Navegador? {
+=Para saltar directamente a cualquier parte del documento, sin desplazarte a mano
+~Para revisar la ortografía
+~Para cambiar el idioma
+~Para imprimir el documento
+}
+
+$CATEGORY: Curso LibreOffice Básico/Módulo 9 - Estilos: trabajar más rápido y de forma consistente
+
+::LO09-1::¿Cuál es la gran ventaja de usar un estilo en vez de formatear a mano cada elemento? {
+=Si cambias el estilo, se actualizan a la vez todos los elementos que lo usan
+~Ocupa menos espacio en el disco
+~Solo funciona en Writer
+~Hace que el archivo pese menos
+}
+
+::LO09-2::¿Qué tecla abre el panel de Estilos en Writer, Calc e Impress? {
+=F11
+~F5
+~F7
+~F1
+}
+
+::LO09-3::En Calc, ¿a qué se aplican los estilos? {
+=A las celdas
+~A las diapositivas
+~A los párrafos
+~A las impresoras
+}
+
+$CATEGORY: Curso LibreOffice Básico/Módulo 10 - Personalizar: barras de herramientas y atajos de teclado
+
+::LO10-1::¿Dónde se personalizan a la vez las barras de herramientas, los menús y los atajos de teclado? {
+=Herramientas → Personalizar…
+~Archivo → Guardar como
+~Formato → Página
+~Ver → Barra de estado
+}
+
+::LO10-2::¿Qué atajo revisa la ortografía en cualquier aplicación de LibreOffice? {
+=F7
+~F1
+~Ctrl+F
+~F11
+}
+
+::LO10-3::¿Qué atajo abre el diálogo de Buscar y reemplazar? {
+=Ctrl+H
+~Ctrl+F
+~Ctrl+B
+~Ctrl+R
+}
+
+$CATEGORY: Curso LibreOffice Básico/Módulo 11 - Imprimir y exportar a PDF
+
+::LO11-1::Vas a colgar unos apuntes para que los lean sin que puedan modificarlos con facilidad. ¿Qué haces? {
+=Exportarlos a PDF
+~Enviar el archivo .odt original
+~Imprimirlos y escanearlos
+~Enviar una foto de la pantalla
+}
+
+::LO11-2::¿Qué deberías revisar antes de imprimir un documento largo? {
+=La vista preliminar, para comprobar cómo quedará cada página
+~Nada, se imprime siempre bien
+~El idioma del corrector ortográfico
+~El tamaño del disco duro
+}
+
+::LO11-3::¿Qué atajo abre el diálogo de Imprimir? {
+=Ctrl+P
+~Ctrl+I
+~Ctrl+Mayús+P
+~Ctrl+E
+}
+
+$CATEGORY: Curso LibreOffice Básico/Módulo 12 - Opciones generales y no perder tu trabajo
+
+::LO12-1::¿Dónde se activa la recuperación automática? {
+=Herramientas → Opciones → Cargar/Guardar → General
+~Archivo → Imprimir
+~Formato → Estilos
+~Ver → Barra lateral
+}
+
+::LO12-2::El ordenador se apaga de golpe mientras trabajas. Al volver a abrir LibreOffice, ¿qué puedes encontrar? {
+=Un asistente de recuperación de documentos, si había datos de recuperación automática
+~El documento se pierde siempre sin remedio
+~Un mensaje de error sin más opciones
+~Un documento en blanco, sin aviso
+}
+
+::LO12-3::¿La recuperación automática sustituye a guardar tú mismo/a con Ctrl+S? {
+=No\: es una red de seguridad adicional, no un sustituto de guardar
+~Sí, ya no hace falta guardar nunca
+~Solo en Impress
+~Solo si tienes menos de 5 minutos de trabajo
+}
+
+$CATEGORY: Curso LibreOffice Básico/Módulo 13 - Reto final: un mismo flujo en Writer, Calc e Impress
+
+::LO13-1::Necesitas calcular el coste total de un evento con una fórmula que sume varias partidas. ¿Qué aplicación usas? {
+=Calc
+~Writer
+~Impress
+~Draw
+}
+
+::LO13-2::Copias una tabla de Calc y la pegas en Writer, pero aparece con un formato muy distinto al del documento. ¿Qué podrías haber hecho? {
+=Usar Pegado especial y elegir un formato compatible
+~Nada, no tiene solución
+~Borrar la tabla y escribirla a mano
+~Cambiar el idioma del documento
+}
+
+::LO13-3::Quieres que, si cambias el color corporativo, se actualicen a la vez todos los títulos de un informe. ¿Qué usas? {
+=Un estilo de título, modificándolo una sola vez
+~Cambiar el color de cada título a mano
+~Crear un documento nuevo por cada color
+~Un archivo de configuración aparte
+}

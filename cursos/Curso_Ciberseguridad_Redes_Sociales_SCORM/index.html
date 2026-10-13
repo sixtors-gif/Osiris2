@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ciberseguridad II: redes sociales en profundidad</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">📱</span>Ciberseguridad II: redes sociales en profundidad</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Privacidad, identidad, perfiles falsos, grooming, sextorsión, ciberacoso, retos virales, desinformación y bienestar digital.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+    <div class="progress-text">Ciberseguridad II: redes sociales en profundidad · Inicio</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Ciberseguridad II: redes sociales en profundidad</h2>
+
+<div class="activity"><h3>👋 Bienvenido/a</h3>
+<p>Este es el <b>segundo curso de ciberseguridad</b>, centrado por completo en las <b>redes sociales</b>: cómo funcionan por dentro, cómo proteger tu privacidad y tu identidad, cómo detectar perfiles falsos, cómo actuar ante el grooming, la sextorsión o el ciberacoso, y cómo cuidar tu bienestar y tu reputación digital.</p></div>
+<div class="box"><b>Objetivo:</b> profundizar en los riesgos y hábitos específicos de las redes sociales, más allá de los conceptos generales de ciberseguridad.</div>
+<div class="card-grid"><div class="mini-card"><div class="ico">👣</div><b>Identidad y privacidad</b>Módulos 3 a 5: huella digital, ajustes de privacidad y cuentas seguras</div><div class="mini-card"><div class="ico">🎭</div><b>Riesgos con otras personas</b>Módulos 6 a 10: perfiles falsos, contactos, grooming, sextorsión y ciberacoso</div><div class="mini-card"><div class="ico">🌊</div><b>Contenido y bienestar</b>Módulos 11 a 15: retos virales, desinformación, derechos de imagen y salud digital</div></div>
+<h3>Antes de empezar</h3>
+<ul class="key-points"><li>🧑‍💻 <span><b>Nivel:</b> no hace falta haber hecho el primer curso de Ciberseguridad, aunque se recomienda.</span></li><li>🤐 <span>Algunos módulos tratan temas sensibles (grooming, sextorsión, ciberacoso) con el cuidado necesario, siempre orientados a saber actuar.</span></li><li>📞 <span>Recuerda: la <b>línea 017 de INCIBE</b> está para cualquier duda o incidente, es gratuita y confidencial.</span></li></ul>
+<h3>Contenido</h3>
+<ul class="key-points"><li><span><b>1.</b></span><span><a href="modulo1.html">Por qué un curso solo de redes sociales</a></span></li><li><span><b>2.</b></span><span><a href="modulo2.html">Cómo funcionan por dentro: modelo de negocio y algoritmo</a></span></li><li><span><b>3.</b></span><span><a href="modulo3.html">Tu huella digital y tu identidad digital</a></span></li><li><span><b>4.</b></span><span><a href="modulo4.html">Configurar la privacidad paso a paso</a></span></li><li><span><b>5.</b></span><span><a href="modulo5.html">Contraseñas y qué hacer si te hackean una cuenta</a></span></li><li><span><b>6.</b></span><span><a href="modulo6.html">Detectar perfiles falsos y catfishing</a></span></li><li><span><b>7.</b></span><span><a href="modulo7.html">Gestionar contactos: silenciar, bloquear y denunciar</a></span></li><li><span><b>8.</b></span><span><a href="modulo8.html">Grooming en redes sociales: cómo actúan y señales de alarma</a></span></li><li><span><b>9.</b></span><span><a href="modulo9.html">Sextorsión: qué hacer si pasa</a></span></li><li><span><b>10.</b></span><span><a href="modulo10.html">Ciberacoso en redes sociales</a></span></li><li><span><b>11.</b></span><span><a href="modulo11.html">Retos virales y desafíos peligrosos</a></span></li><li><span><b>12.</b></span><span><a href="modulo12.html">Desinformación, bulos y deepfakes en redes</a></span></li><li><span><b>13.</b></span><span><a href="modulo13.html">Derechos de imagen: lo que compartes de ti y de los demás</a></span></li><li><span><b>14.</b></span><span><a href="modulo14.html">Bienestar digital: uso, comparación social y descanso</a></span></li><li><span><b>15.</b></span><span><a href="modulo15.html">Tu reputación online y reto final</a></span></li><li><span>🏁</span><span><a href="examen_final.html">Examen final</a></span></li></ul>
+<div class="navigation"><span></span><button class="nav-btn" onclick="scormGo('modulo1.html')">Comenzar ➡️</button></div>
+      
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Ciberseguridad II: redes sociales en profundidad · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

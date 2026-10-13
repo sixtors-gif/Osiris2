@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fechas, horas y otros formatos de número</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">📅</span>Fechas, horas y otros formatos de número</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Descubrirás cómo guarda el programa las fechas y las horas, y cómo darles el formato que quieras.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:71%"></div></div>
+    <div class="progress-text">Hoja de cálculo básica: el horario del curso · Módulo 10 de 14</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Fechas, horas y otros formatos de número</h2>
+
+<div class="activity"><h3>🔢 Un secreto: fechas y horas son números</h3>
+<p>Para el programa, una <b>fecha</b> es un número: los días transcurridos desde el 30/12/1899. El 18/09/2025 es el día <b>45918</b>. Y una <b>hora</b> es una fracción del día: las 12:00 son <b>0,5</b> (medio día). Por eso se puede <b>sumar y restar</b> fechas y horas.</p></div>
+<div class="lab"><h3>🧪 ¿Cómo guarda el programa las fechas y las horas?</h3>
+<div class="grid"><div><label>Fecha</label><input type="date" id="dF" value="2025-09-18" oninput="dfUpd()"></div>
+<div><label>Hora (h:mm)</label><input type="time" id="dH" value="08:30" oninput="dfUpd()"></div></div>
+<ul class="checks"><li>📅 Número de serie de la fecha: <b id="oS"></b> (días desde el 30/12/1899)</li>
+<li>🕗 Valor interno de la hora: <b id="oH"></b> (fracción del día)</li>
+<li>⏱️ Horas en decimal: <b id="oD"></b></li></ul></div>
+<script>
+function dfUpd(){var f=document.getElementById('dF').value.split('-');
+ if(f.length===3){var s=(Date.UTC(+f[0],+f[1]-1,+f[2])-Date.UTC(1899,11,30))/86400000;document.getElementById('oS').textContent=Math.round(s);}
+ var h=document.getElementById('dH').value.split(':');if(h.length===2){var m=(+h[0])*60+(+h[1]);document.getElementById('oH').textContent=(m/1440).toFixed(6).replace('.',',');document.getElementById('oD').textContent=(m/60).toFixed(2).replace('.',',')+' h';}}
+window.addEventListener('load',dfUpd);
+</script>
+
+<h3>Dar formato a una fecha</h3>
+<ol class="steps"><li>Escribe en <b>A3</b> la fecha <code>18/09/2025</code> y pulsa Intro. Calc la reconoce y la alinea a la derecha.</li><li>Selecciona A3 y pulsa <kbd>Ctrl</kbd>+<kbd>1</kbd> → pestaña <b>Números</b> → categoría <b>Fecha</b>.</li><li>Elige un formato largo, del tipo <b>jueves, 18 de septiembre de 2025</b>.</li><li>Combina A3:O3 y centra el texto (módulos 7 y 8).</li></ol>
+<div class="figure"><div class="dlg"><div class="dtitle"><span>Formatear celdas</span><span class="dx">✕</span></div><div class="dtabs"><span class="dtab on">Números</span><span class="dtab">Fuente</span><span class="dtab">Efectos de fuente</span><span class="dtab">Alineación</span><span class="dtab">Bordes</span><span class="dtab">Fondo</span></div><div class="dbody"><div class="drow"><span class="dlab">Categoría</span><span class="dval sel">Fecha</span></div><div class="drow"><span class="dlab">Formato</span><span class="dval hi">jueves, 18 de septiembre de 2025</span></div><div class="drow"><span class="dlab">Idioma</span><span class="dval ">Predeterminado</span></div></div><div class="dfoot"><span class="dbtn ok">Aceptar</span><span class="dbtn">Cancelar</span></div></div></div>
+<div class="figure sheetfig"><div class="xl-wrap"><table class="xls"><colgroup><col style="width:18px"><col style="width:66px"><col style="width:171px"><col style="width:101px"><col style="width:66px"><col style="width:171px"><col style="width:101px"></colgroup><tr class="hdr"><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr><tr style="height:19px"><th class="rn">1</th><td class="" style="font-size:23.0px;font-family:Arial,Helvetica,sans-serif;font-weight:700;text-align:center;vertical-align:middle;white-space:nowrap;overflow:hidden">HORARIO CURSO 2025-2026</td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td></tr><tr style="height:19px"><th class="rn">2</th><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td></tr><tr style="height:21px"><th class="rn">3</th><td class="hl" style="font-size:11.5px;font-family:Arial,Helvetica,sans-serif;font-style:italic;text-align:center;vertical-align:middle;white-space:nowrap;overflow:hidden">18/09/2025</td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td></tr></table></div><p class="figure-caption">Al escribir 18/09/2025 en A3, Calc lo muestra como fecha corta.</p></div>
+<div class="figure sheetfig"><div class="xl-wrap"><table class="xls"><colgroup><col style="width:18px"><col style="width:66px"><col style="width:171px"><col style="width:101px"><col style="width:66px"><col style="width:171px"><col style="width:101px"></colgroup><tr class="hdr"><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th></tr><tr style="height:19px"><th class="rn">1</th><td colspan="6" rowspan="2" class="" style="font-size:23.0px;font-family:Arial,Helvetica,sans-serif;font-weight:700;text-align:center;vertical-align:middle;white-space:nowrap;overflow:hidden">HORARIO CURSO 2025-2026</td></tr><tr style="height:19px"><th class="rn">2</th></tr><tr style="height:21px"><th class="rn">3</th><td colspan="6" class="hl2" style="font-size:11.5px;font-family:Arial,Helvetica,sans-serif;font-style:italic;text-align:center;vertical-align:middle;white-space:nowrap;overflow:hidden">Inicio del curso: jueves, 18 de septiembre de 2025</td></tr></table></div><p class="figure-caption">Con un formato de fecha largo la misma celda muestra el día de la semana y el mes con letras.</p></div>
+<h3>Añadir un texto fijo: formato personalizado</h3>
+<p>En el modelo, la fecha va precedida de las palabras «Inicio del curso:». No hace falta escribirlas en la celda: se añaden con un <b>formato personalizado</b>. En la pestaña <b>Números</b>, en el cuadro <b>Código de formato</b>, escribe:</p>
+<p style="text-align:center"><code>"Inicio del curso: "dddd, d "de" mmmm "de" yyyy</code></p>
+<p>Las letras son códigos: <code>dddd</code> = día de la semana, <code>d</code> = día, <code>mmmm</code> = mes con letras, <code>yyyy</code> = año. El texto fijo va <b>entre comillas</b>. (En Calc o Excel en español, el año se escribe <code>aaaa</code> en lugar de <code>yyyy</code>.) La celda sigue conteniendo la fecha real: puedes cambiarla y el texto fijo permanece.</p>
+<div class="tip-box">💡 <b>Consejo:</b> Si al escribir una fecha ves un número raro (como 45918), la celda tiene formato «General» o «Número»: cámbialo a formato <b>Fecha</b>.</div>
+<div class="excel-box"><span class="xbadge">Excel</span> <kbd>Ctrl</kbd>+<kbd>1</kbd> → pestaña <b>Número</b> → categoría <b>Fecha</b> (o «Fecha larga» en la cinta Inicio).</div>
+
+<h3>Horas y una primera fórmula</h3>
+<p>Escribe la hora de entrada <code>8:30</code> y la de salida <code>15:00</code>. Para saber cuántas horas hay entre las dos, una <b>fórmula</b>: empieza siempre por <b>=</b>.</p>
+<ol class="steps"><li>En <b>B14</b> escribe <code>8:30</code>; en <b>E14</b>, <code>15:00</code>.</li><li>En <b>H14</b> escribe <code>=</code>, haz clic en <b>E14</b>, escribe <code>-</code> y haz clic en <b>B14</b>. Pulsa Intro: <code>=E14-B14</code>.</li><li>Aplica al resultado el formato de hora <code>h:mm</code> para ver <b>6:30</b>.</li></ol>
+<div class="figure sheetfig"><div class="fbar"><span class="cellname">H14</span><span class="fxmark">fx</span><code>=E14-B14</code></div><div class="xl-wrap"><table class="xls"><colgroup><col style="width:18px"><col style="width:66px"><col style="width:171px"><col style="width:101px"><col style="width:66px"><col style="width:171px"><col style="width:101px"><col style="width:66px"><col style="width:171px"></colgroup><tr class="hdr"><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th></tr><tr style="height:10px"><th class="rn">13</th><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:visible"></td></tr><tr style="height:21px"><th class="rn">14</th><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;font-weight:700;vertical-align:bottom;white-space:nowrap;overflow:hidden">Entrada</td><td class="hl3" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;text-align:left;vertical-align:bottom;white-space:nowrap;overflow:visible">8:30</td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:hidden"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;font-weight:700;vertical-align:bottom;white-space:nowrap;overflow:hidden">Salida</td><td class="hl3" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;text-align:left;vertical-align:bottom;white-space:nowrap;overflow:visible">15:00</td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;vertical-align:bottom;white-space:nowrap;overflow:hidden"></td><td class="" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;font-weight:700;vertical-align:bottom;white-space:nowrap;overflow:hidden">Horas diarias</td><td class="hl2" style="font-size:9.6px;font-family:Arial,Helvetica,sans-serif;text-align:left;vertical-align:bottom;white-space:nowrap;overflow:visible">6:30</td></tr></table></div><p class="figure-caption">Entrada (8:30) y salida (15:00) son horas; «Horas diarias» resta una de otra: 6:30.</p></div>
+<div class="alert-box">⚠️ <b>Ojo:</b> Si una duración supera las 24 horas, usa el formato <code>[h]:mm</code> (con corchetes); si no, el programa volverá a contar desde 0.</div>
+
+<h3>Otros formatos de número</h3>
+<table class="tbl"><tr><th>Categoría</th><th>Ejemplo</th><th>Para qué</th></tr>
+<tr><td>General</td><td>1234,5</td><td>Lo que sale al escribir</td></tr>
+<tr><td>Número</td><td>1.234,50</td><td>Decimales y separador de miles</td></tr>
+<tr><td>Moneda</td><td>1.234,50 €</td><td>Precios</td></tr>
+<tr><td>Porcentaje</td><td>20 %</td><td>Tantos por ciento (0,2 se muestra 20 %)</td></tr>
+<tr><td>Fecha</td><td>jueves, 18 de septiembre de 2025</td><td>Días del calendario</td></tr>
+<tr><td>Hora</td><td>8:30</td><td>Horas y duraciones</td></tr>
+<tr><td>Texto</td><td>8:30 – 9:30</td><td>Lo que no debe calcularse</td></tr></table>
+<p>Las franjas del horario (<code>8:30 – 9:30</code>) son <b>texto</b> porque contienen dos horas y un guion; solo se van a leer, no a calcular.</p>
+
+<div class="exercise"><h3>🧩 Valor de una hora</h3><p>Las 18:00 son las tres cuartas partes de un día. ¿Qué valor decimal guarda internamente el programa?</p>
+<input id="e10a" type="text" inputmode="decimal" autocomplete="off" placeholder="Escribe tu respuesta">
+<button class="btn" onclick="chk('e10a',0.75,'fb_e10a','18 h ÷ 24 h = 0,75.')">Comprobar</button>
+<div id="fb_e10a" class="feedback-box"></div></div>
+<div class="exercise"><h3>🧩 Duración</h3><p>Entrada 8:30 y salida 15:00: ¿cuántas horas (en decimal) hay entre las dos?</p>
+<input id="e10b" type="text" inputmode="decimal" autocomplete="off" placeholder="Escribe tu respuesta">
+<button class="btn" onclick="chk('e10b',6.5,'fb_e10b','De 8:30 a 15:00 hay 6 horas y media = 6,5 h (6:30).')">Comprobar</button>
+<div id="fb_e10b" class="feedback-box"></div></div>
+<div class="exercise"><h3>🧩 Número raro</h3><p>Escribes una fecha y aparece 45918. ¿Qué ha pasado?</p>
+<div class="options" id="opt_e10c"><div class="option" onclick="pickc(this,'e10c',1)">La celda tiene formato de número; hay que darle formato de fecha</div><div class="option" onclick="pickc(this,'e10c',0)">La fecha está mal escrita</div><div class="option" onclick="pickc(this,'e10c',0)">Hay que borrar la celda</div></div>
+<div id="fb_e10c" class="feedback-box" data-exp="Las fechas son números de serie: solo hay que aplicar un formato de fecha."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo9.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo11.html')">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Hoja de cálculo básica: el horario del curso · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

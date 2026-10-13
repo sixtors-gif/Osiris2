@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guardar tu trabajo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">💾</span>Guardar tu trabajo</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Aprenderás a guardar por primera vez, a usar «Guardar como», a elegir buenos nombres y a no perder nunca tu trabajo.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:14%"></div></div>
+    <div class="progress-text">Hoja de cálculo básica: el horario del curso · Módulo 2 de 14</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Guardar tu trabajo</h2>
+
+<div class="alert-box">😱 <b>La regla número 1:</b> guarda <b>desde el primer minuto</b> y vuelve a guardar cada pocos minutos. Un corte de luz o un cierre inesperado pueden borrar una hora de trabajo.</div>
+
+<h3>Guardar y Guardar como: ¿en qué se diferencian?</h3>
+<table class="tbl"><tr><th>Orden</th><th>Atajo</th><th>Qué hace</th></tr>
+<tr><td><b>Guardar</b></td><td><kbd>Ctrl</kbd>+<kbd>S</kbd></td><td>Actualiza el archivo <b>con el mismo nombre y en el mismo sitio</b>. La primera vez te pregunta nombre y carpeta.</td></tr>
+<tr><td><b>Guardar como…</b></td><td><kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>S</kbd></td><td>Crea <b>otro archivo</b> (otro nombre, otra carpeta u otro formato) y sigues trabajando en él. El original queda como estaba.</td></tr></table>
+<div class="excel-box"><span class="xbadge">Excel</span> «Guardar como» es la tecla <kbd>F12</kbd>. Guardar es también <kbd>Ctrl</kbd>+<kbd>G</kbd> en Excel en español.</div>
+
+<h3>Tu primer guardado, paso a paso</h3>
+<ol class="steps"><li>Pulsa <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>S</kbd> (o <b>Archivo → Guardar como…</b>).</li><li>Elige la <b>carpeta</b> donde guardarás todo el trabajo (por ejemplo, <i>Documentos › Curso 2025-26 › Horarios</i>).</li><li>Escribe el <b>nombre</b>: <code>Horario_2025-26_v1</code>. No hace falta escribir la extensión.</li><li>En <b>Tipo de archivo</b> deja <b>ODF Hoja de cálculo (.ods)</b> y pulsa <b>Guardar</b>.</li><li>Comprueba que el nombre del archivo aparece arriba, en la barra de título de la ventana.</li></ol>
+<div class="figure"><div class="dlg"><div class="dtitle"><span>Guardar como</span><span class="dx">✕</span></div><div class="dbody"><div class="drow"><span class="dlab">Guardar en la carpeta</span><span class="dval sel">Documentos › Curso 2025-26 › Horarios</span></div><div class="drow"><span class="dlab">Nombre de archivo</span><span class="dval hi">Horario_2025-26_v1</span></div><div class="drow"><span class="dlab">Tipo de archivo</span><span class="dval hi">ODF Hoja de cálculo (.ods)</span></div></div><div class="dfoot"><span class="dbtn ok">Guardar</span><span class="dbtn">Cancelar</span></div></div></div>
+
+<h3>Nombres de archivo que se entienden</h3>
+<table class="tbl"><tr><th>❌ Mal</th><th>✅ Bien</th><th>Por qué</th></tr>
+<tr><td><code>horario nuevo (2) FINAL.ods</code></td><td><code>Horario_2025-26_v2.ods</code></td><td>«Nuevo» y «final» no dicen nada; la versión sí.</td></tr>
+<tr><td><code>Horario 2025/26.ods</code></td><td><code>Horario_2025-26.ods</code></td><td>La barra <code>/</code> no se puede usar en un nombre.</td></tr>
+<tr><td><code>Libro1.ods</code></td><td><code>Horario_1JefeCocina_2025-26_v1.ods</code></td><td>El nombre debe decir qué contiene.</td></tr></table>
+<div class="lab"><h3>🔎 Prueba tu nombre de archivo</h3>
+<p>Escribe el nombre que pondrías y comprueba las buenas prácticas:</p>
+<input id="fn" value="Horario_2025-26_v1" oninput="valName()">
+<ul class="checks" id="fnres"></ul><p><b id="fnscore"></b></p></div>
+<script>
+function valName(){
+ var v=document.getElementById('fn').value.trim();
+ var rules=[
+  ['No tiene caracteres prohibidos ( \\ / : * ? " < > | )', !/[\\\/:*?"<>|]/.test(v)],
+  ['Tiene entre 5 y 50 caracteres', v.length>=5&&v.length<=50],
+  ['Indica el curso o el año (por ejemplo 2025-26)', /20\d\d/.test(v)],
+  ['Indica la versión (v1, v2…)', /v\d+/i.test(v)],
+  ['No usa espacios (mejor guiones bajos)', v.length>0&&!/\s/.test(v)],
+  ['No usa palabras vagas (nuevo, final, copia, prueba)', v.length>0&&!/(nuevo|final|copia|prueba)/i.test(v)]];
+ var ul=document.getElementById('fnres');ul.innerHTML='';var ok=0;
+ rules.forEach(function(r){var li=document.createElement('li');li.className=r[1]?'ok':'ko';li.textContent=(r[1]?'✅ ':'❌ ')+r[0];if(r[1])ok++;ul.appendChild(li);});
+ document.getElementById('fnscore').textContent=ok+' de '+rules.length+' criterios cumplidos';
+}
+window.addEventListener('load',valName);
+</script>
+
+<h3>Versiones: el truco del «Guardar como»</h3>
+<p>Antes de hacer un <b>cambio grande</b> (rehacer colores, borrar un bloque…), usa <b>Guardar como</b> con la versión siguiente: <code>_v1</code> → <code>_v2</code>. Así, si algo sale mal, el trabajo anterior sigue intacto.</p>
+
+<h3>Red de seguridad: la recuperación automática</h3>
+<ol class="steps"><li><b>Herramientas → Opciones → Cargar/Guardar → General</b>.</li><li>Marca <b>Guardar información de recuperación automática cada</b> y pon <b>5 minutos</b>.</li><li>Marca también <b>Crear siempre copia de seguridad</b> si quieres una copia extra.</li></ol>
+<div class="excel-box"><span class="xbadge">Excel</span> <b>Archivo → Opciones → Guardar</b>: «Guardar información de Autorrecuperación cada 5 minutos».</div>
+
+<h3>Cerrar y volver a abrir</h3>
+<p>Cierra el archivo con <kbd>Ctrl</kbd>+<kbd>W</kbd> (o la <b>✕</b> de la ventana) y ábrelo de nuevo con <kbd>Ctrl</kbd>+<kbd>O</kbd> o desde <b>Archivo → Documentos recientes</b>. Si intentas cerrar sin guardar, el programa te lo pregunta: elige <b>Guardar</b>.</p>
+
+<div class="exercise"><h3>🧩 Sin perder el original</h3><p>Tienes el horario terminado y quieres probar un cambio de colores sin arriesgar el original. ¿Qué haces primero?</p>
+<div class="options" id="opt_e2a"><div class="option" onclick="pickc(this,'e2a',1)">Guardar como con otro nombre (por ejemplo _v2) y probar en la copia</div><div class="option" onclick="pickc(this,'e2a',0)">Probar directamente y no guardar si sale mal</div><div class="option" onclick="pickc(this,'e2a',0)">Borrar el archivo y volver a empezar</div></div>
+<div id="fb_e2a" class="feedback-box" data-exp="Con «Guardar como» sigues trabajando en un archivo nuevo y el original queda intacto."></div></div>
+<div class="exercise"><h3>🧩 El mejor nombre</h3><p>¿Cuál de estos nombres es más adecuado?</p>
+<div class="options" id="opt_e2b"><div class="option" onclick="pickc(this,'e2b',1)">Horario_2025-26_1JefeCocina_v1.ods</div><div class="option" onclick="pickc(this,'e2b',0)">horario nuevo final final.ods</div><div class="option" onclick="pickc(this,'e2b',0)">Libro1.ods</div></div>
+<div id="fb_e2b" class="feedback-box" data-exp="Dice qué es, para qué curso y qué versión: se entiende sin abrirlo."></div></div>
+<div class="summary-box">🎯 <b>Tarea:</b> crea un libro nuevo, guárdalo con el nombre <code>Horario_2025-26_v1</code> en tu carpeta de trabajo y activa la recuperación automática.</div>
+
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo1.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo3.html')">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Hoja de cálculo básica: el horario del curso · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cómo funcionan por dentro: modelo de negocio y algoritmo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">⚙️</span>Cómo funcionan por dentro: modelo de negocio y algoritmo</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Entenderás por qué las redes sociales son gratis, y cómo el algoritmo decide qué contenido te muestra.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:13%"></div></div>
+    <div class="progress-text">Ciberseguridad II: redes sociales en profundidad · Módulo 2 de 15</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Cómo funcionan por dentro: modelo de negocio y algoritmo</h2>
+
+<div class="activity"><h3>💸 Si es gratis, el producto eres tú</h3>
+<p>Instagram, TikTok o YouTube no cobran por usarlos. Pero mantener sus servidores y a miles de trabajadores cuesta muchísimo dinero. ¿De dónde sale? De la <b>publicidad</b>. Y para vender publicidad eficaz, necesitan una cosa: <b>tu atención y tus datos</b>, para poder mostrarte anuncios muy dirigidos y mantenerte el mayor tiempo posible dentro de la app.</p></div>
+
+<h3>El bucle del algoritmo</h3>
+<div class="pipe"><div class="pbox"><b>1. Publicas o interactúas</b>un me gusta, un comentario, un vídeo visto entero</div><div class="parrow">➜</div><div class="pbox"><b>2. El algoritmo mide</b>cuánto tiempo te ha enganchado ese contenido</div><div class="parrow">➜</div><div class="pbox"><b>3. Te muestra más</b>de lo que capta tu atención, para que sigas dentro</div><div class="parrow">➜</div><div class="pbox warn"><b>4. Vendes tu atención</b>la plataforma la vende a anunciantes</div></div>
+<p>El <b>algoritmo</b> es el programa que decide qué aparece en tu «Para ti» o en tu «Inicio». No lo hace al azar: aprende de tu comportamiento (qué ves entero, qué te hace parar de hacer scroll, qué compartes) y te muestra <b>más de lo mismo</b>, porque eso es lo que estadísticamente te mantiene más tiempo conectado/a.</p>
+
+<h3>Técnicas de diseño pensadas para retenerte</h3>
+<div class="card-grid"><div class="mini-card"><div class="ico">♾️</div><b>Scroll infinito</b>No hay un final natural de la página: siempre hay «un vídeo más»</div><div class="mini-card"><div class="ico">🔔</div><b>Notificaciones</b>Avisos diseñados para que vuelvas a abrir la app cuanto antes</div><div class="mini-card"><div class="ico">🎰</div><b>Recompensa variable</b>No sabes si el siguiente contenido será aburrido o genial: como una máquina tragaperras</div><div class="mini-card"><div class="ico">🔢</div><b>Contadores sociales</b>Los «me gusta» y seguidores convierten la atención en un número que quieres ver crecer</div><div class="mini-card"><div class="ico">▶️</div><b>Reproducción automática</b>El siguiente vídeo empieza solo, sin que tengas que decidir nada</div><div class="mini-card"><div class="ico">🪞</div><b>Cámara de eco</b>Cuanto más interactúas con un tipo de contenido, menos otras opiniones o temas ves</div></div>
+
+<h3>La cámara de eco (o burbuja de filtros)</h3>
+<p>Como el algoritmo te muestra sobre todo contenido parecido al que ya consumes, puedes acabar viendo siempre las mismas opiniones, sin darte cuenta de que existen otros puntos de vista igual de válidos. Esto influye en debates, noticias e incluso en cómo te comparas con los demás (lo verás en el módulo 14).</p>
+
+<div class="alert-box">⚠️ <b>Error típico:</b> El algoritmo no distingue entre «contenido que te hace bien» y «contenido que te engancha». Optimiza el <b>tiempo de uso</b>, no tu bienestar. Ser consciente de esto es el primer paso para usarlo tú a él, y no al revés.</div>
+<div class="tip-box">💡 <b>Consejo:</b> Muchas apps tienen un botón para marcar «no me interesa» o «ver menos de este contenido»: úsalo activamente para entrenar tu propio algoritmo en lugar de dejar que te entrene a ti.</div>
+
+<div class="exercise"><h3>🧩 Por qué es gratis</h3><p>¿Por qué son gratis la mayoría de redes sociales?</p>
+<div class="options" id="opt_e2a"><div class="option" onclick="pickc(this,'e2a',1)">Porque ganan dinero con publicidad basada en tu atención y tus datos</div><div class="option" onclick="pickc(this,'e2a',0)">Porque no cuestan nada de mantener</div><div class="option" onclick="pickc(this,'e2a',0)">Porque las paga el gobierno</div></div>
+<div id="fb_e2a" class="feedback-box" data-exp="Su modelo de negocio se basa en la publicidad, que depende de retener tu atención."></div></div>
+<div class="exercise"><h3>🧩 El objetivo del algoritmo</h3><p>¿Qué intenta maximizar, sobre todo, el algoritmo de una red social?</p>
+<div class="options" id="opt_e2b"><div class="option" onclick="pickc(this,'e2b',1)">El tiempo que pasas usando la aplicación</div><div class="option" onclick="pickc(this,'e2b',0)">Tu bienestar personal</div><div class="option" onclick="pickc(this,'e2b',0)">El número de amigos que tienes en la vida real</div></div>
+<div id="fb_e2b" class="feedback-box" data-exp="El algoritmo está optimizado para retener tu atención, no necesariamente para tu bienestar."></div></div>
+<div class="exercise"><h3>🧩 Cámara de eco</h3><p>¿Qué es la «cámara de eco»?</p>
+<div class="options" id="opt_e2c"><div class="option" onclick="pickc(this,'e2c',1)">Ver sobre todo contenido parecido al que ya consumes, sin otras opiniones</div><div class="option" onclick="pickc(this,'e2c',0)">Un altavoz que usan los creadores de contenido</div><div class="option" onclick="pickc(this,'e2c',0)">Un fallo técnico de la aplicación</div></div>
+<div id="fb_e2c" class="feedback-box" data-exp="Es el efecto de recibir siempre contenido similar, reforzando tus propias opiniones."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo1.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo3.html')">Siguiente ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Ciberseguridad II: redes sociales en profundidad · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

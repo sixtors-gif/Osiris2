@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Introducción a Ubuntu para usuarios</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🐧</span>Introducción a Ubuntu para usuarios</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Instalar, usar y mantener Ubuntu 26.04 LTS: un curso para usuarios, paso a paso y sin conocimientos previos.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+    <div class="progress-text">Introducción a Ubuntu para usuarios · Inicio</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Introducción a Ubuntu para usuarios</h2>
+
+<div class="activity"><h3>👋 Bienvenido/a</h3>
+<p><b>Ubuntu</b> es uno de los sistemas operativos libres más usados del mundo, y es <b>gratuito</b>. Este curso te lleva de la mano desde cero: qué es, cómo se instala, cómo se usa cada día, cómo se mantiene al día y cómo se protege. Está basado en <b>Ubuntu 26.04 LTS</b> («Resolute Raccoon»), la versión de soporte a largo plazo publicada en abril de 2026.</p></div>
+<div class="box"><b>Objetivo:</b> que puedas instalar Ubuntu (o probarlo sin riesgos), moverte con soltura por el escritorio, gestionar archivos y aplicaciones, mantenerlo actualizado y resolver los problemas habituales.</div>
+<div class="figure"><div class="app-grid">
+<div class="app-tile"><div class="app-ico">💾</div><b>Instalar</b><span>USB, instalador, usuario</span></div>
+<div class="app-tile"><div class="app-ico">🖥️</div><b>Usar</b><span>Escritorio, ventanas, archivos</span></div>
+<div class="app-tile"><div class="app-ico">🛍️</div><b>Software</b><span>App Center y actualizaciones</span></div>
+<div class="app-tile"><div class="app-ico">⌨️</div><b>Terminal</b><span>Con simulador para practicar</span></div>
+<div class="app-tile"><div class="app-ico">🔐</div><b>Seguridad</b><span>Contraseñas, copias, permisos</span></div></div></div>
+<h3>Antes de empezar</h3>
+<ul class="key-points">
+<li>🧑‍💻 <span><b>Nivel:</b> ninguno. No hace falta haber usado nunca Linux.</span></li>
+<li>💻 <span>Lo ideal es tener un Ubuntu a mano para practicar (el equipo del aula, una máquina virtual o el USB en modo «probar»). Si no, el curso incluye un <b>simulador de terminal</b> y ejercicios.</span></li>
+<li>📸 <span><b>Capturas:</b> el instalador, la página de descarga, el buscador de Actividades y la terminal son <b>capturas reales</b> de las páginas oficiales de Canonical. El escritorio completo se muestra con un <b>esquema ilustrativo</b>, indicado como tal.</span></li>
+<li>🎬 <span>Dos vídeos del canal oficial <b>Canonical Ubuntu</b>, en inglés.</span></li></ul>
+<h3>Contenido</h3>
+<ul class="key-points"><li><span><b>1.</b></span><span><a href="modulo1.html">¿Qué es Ubuntu?</a></span></li><li><span><b>2.</b></span><span><a href="modulo2.html">Versiones, sabores y requisitos</a></span></li><li><span><b>3.</b></span><span><a href="modulo3.html">Probar y preparar la instalación</a></span></li><li><span><b>4.</b></span><span><a href="modulo4.html">El instalador (1): idioma, teclado y opciones</a></span></li><li><span><b>5.</b></span><span><a href="modulo5.html">El instalador (2): disco, usuario y fin</a></span></li><li><span><b>6.</b></span><span><a href="modulo6.html">Primer inicio y el escritorio</a></span></li><li><span><b>7.</b></span><span><a href="modulo7.html">Ventanas, espacios de trabajo y atajos</a></span></li><li><span><b>8.</b></span><span><a href="modulo8.html">Archivos y carpetas</a></span></li><li><span><b>9.</b></span><span><a href="modulo9.html">Tus aplicaciones del día a día</a></span></li><li><span><b>10.</b></span><span><a href="modulo10.html">Instalar y quitar aplicaciones</a></span></li><li><span><b>11.</b></span><span><a href="modulo11.html">Mantener Ubuntu actualizado</a></span></li><li><span><b>12.</b></span><span><a href="modulo12.html">Configuración: tu Ubuntu a tu manera</a></span></li><li><span><b>13.</b></span><span><a href="modulo13.html">La terminal sin miedo</a></span></li><li><span><b>14.</b></span><span><a href="modulo14.html">Seguridad, privacidad y copias de seguridad</a></span></li><li><span><b>15.</b></span><span><a href="modulo15.html">Ayuda, problemas habituales y reto final</a></span></li><li><span>🏁</span><span><a href="examen_final.html">Examen final</a></span></li></ul>
+<div class="navigation"><span></span><button class="nav-btn" onclick="scormGo('modulo1.html')">Comenzar ➡️</button></div>
+      
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Introducción a Ubuntu para usuarios · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+
+</body>
+</html>

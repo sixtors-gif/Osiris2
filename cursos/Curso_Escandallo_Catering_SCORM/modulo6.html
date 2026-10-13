@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fórmulas a prueba de errores y totales</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🛡️</span>Fórmulas a prueba de errores y totales</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Evitarás el error #¡DIV/0! con la función SI y calcularás el total de la receta y el coste por ración.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:46%"></div></div>
+    <div class="progress-text">Curso de Escandallo con Calc · Módulo 6 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Fórmulas a prueba de errores y totales</h2>
+
+<h3>El problema: filas vacías</h3>
+<p>La ficha tiene 21 filas para ingredientes (7 a 27) pero una receta no las usa todas. En las filas vacías la <b>Cantidad P.</b> (D) vale 0 y la fórmula divide entre cero.</p>
+<div class="figure sheetfig"><div class="fbar"><span class="cellname">G10</span><span class="fxmark">fx</span><code>=B10*F10/D10</code></div><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:150px"><col style="width:70px"><col style="width:80px"><col style="width:70px"><col style="width:90px"></colgroup><tr><th class="corner"></th><th>A</th><th>B</th><th>D</th><th>F</th><th>G</th></tr><tr><th class="rn">6</th><td class="colh">Ingredientes</td><td class="colh">Cantidad</td><td class="colh">Cantidad P.</td><td class="colh">Precio</td><td class="coste">Coste</td></tr><tr><th class="rn">9</th><td class="">Huevos cocidos</td><td class="r">5</td><td class="r">12</td><td class="r">3,00 €</td><td class="r">1,25 €</td></tr><tr><th class="rn">10</th><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class="c hl4">#¡DIV/0!</td></tr></table></div><p class="figure-caption">En una fila vacía D10 vale 0 y dividir entre 0 no se puede: Calc muestra el error <b>#¡DIV/0!</b>.</p></div>
+
+<h3>La solución: la función SI</h3>
+<p>La función <b>SI</b> (en inglés IF) tiene tres partes: <code>=SI(condición; valor si se cumple; valor si no se cumple)</code>.</p>
+<div class="figure"><svg viewBox="0 0 640 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="La función SI: si D7 es cero devuelve cero; si no, calcula el coste">
+<rect x="10" y="70" width="120" height="50" rx="10" fill="#fff8ee" stroke="#e9b982" stroke-width="2"/><text x="70" y="100" font-size="14" text-anchor="middle" fill="#3b2a20" font-weight="700">Celda G7</text>
+<line x1="130" y1="95" x2="200" y2="95" stroke="#e07a2f" stroke-width="3"/>
+<polygon points="320,30 440,95 320,160 200,95" fill="#fff1e0" stroke="#e07a2f" stroke-width="3"/>
+<text x="320" y="92" font-size="14" text-anchor="middle" fill="#3b2a20" font-weight="700">¿D7 = 0?</text><text x="320" y="110" font-size="11" text-anchor="middle" fill="#7a431d">(condición)</text>
+<line x1="440" y1="95" x2="500" y2="95" stroke="#c0392b" stroke-width="3"/><text x="470" y="85" font-size="12" fill="#c0392b" font-weight="700">SÍ</text>
+<rect x="500" y="70" width="130" height="50" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="2"/><text x="565" y="100" font-size="14" text-anchor="middle" fill="#c0392b" font-weight="700">Resultado: 0</text>
+<polyline points="320,160 320,168 400,168" fill="none" stroke="#2e9e4f" stroke-width="3"/><text x="328" y="158" font-size="12" fill="#2e9e4f" font-weight="700">NO</text>
+<rect x="400" y="150" width="230" height="36" rx="10" fill="#e8f5e8" stroke="#2e9e4f" stroke-width="2"/><text x="515" y="173" font-size="13" text-anchor="middle" fill="#1f6a1f" font-weight="700">Resultado: B7*F7/D7</text></svg>
+<p class="figure-caption">La función SI decide qué hacer según una condición.</p></div>
+<div class="formula"><span class="f-label">Fórmula G7 definitiva</span><code>=SI(D7=0;0;B7*F7/D7)</code><span class="f-exp">Si la cantidad del formato es 0, el coste es 0. Si no, se hace el cálculo normal. Cópiala hasta G27.</span></div>
+<ol class="steps"><li>Sustituye la fórmula de <b>G7</b> por <code>=SI(D7=0;0;B7*F7/D7)</code>.</li><li>Copia G7 hasta <b>G27</b> (arrastrando o con <kbd>Ctrl</kbd>+<kbd>D</kbd>).</li><li>Comprueba que las filas vacías muestran <b>0,00 €</b> y no error.</li></ol>
+
+<h3>Totales de la receta</h3>
+<ol class="steps"><li>En <b>G28</b> (Total Receta) escribe <code>=SUMA(G7:G27)</code>. Atajo: selecciona G28 y pulsa <kbd>Alt</kbd>+<kbd>=</kbd>.</li><li>En <b>G29</b> (Total Ración) escribe <code>=G28/B3</code>: el coste total entre las raciones.</li></ol>
+<div class="figure sheetfig"><div class="fbar"><span class="cellname">G28</span><span class="fxmark">fx</span><code>=SUMA(G7:G27)</code></div><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:90px"><col style="width:130px"><col style="width:70px"><col style="width:70px"><col style="width:90px"></colgroup><tr><th class="corner"></th><th>A</th><th>B</th><th>E</th><th>F</th><th>G</th></tr><tr><th class="rn">1</th><td class="lbl">Nombre:</td><td class="">Porra Archidonesa</td><td class=""></td><td class=""></td><td class=""></td></tr><tr><th class="rn">3</th><td class="lbl">Raciones:</td><td class="r">10</td><td class=""></td><td class=""></td><td class=""></td></tr><tr><th class="rn">28</th><td class=""></td><td class=""></td><td class="tot" colspan="2">Total Receta</td><td class="totv hl">11,26 €</td></tr><tr><th class="rn">29</th><td class=""></td><td class=""></td><td class="ration" colspan="2">Total Ración</td><td class="rationv hl2">1,13 €</td></tr></table></div><p class="figure-caption">Total de la receta (G28) y coste por ración (G29) de la Porra Archidonesa.</p></div>
+<div class="tip-box">💡 <b>Consejo:</b> Como <code>SUMA(G7:G27)</code> incluye las filas vacías (que valen 0), si mañana añades un ingrediente nuevo <b>el total se actualiza solo</b>.</div>
+
+<div class="exercise"><h3>🧩 ¿Qué fórmula evita el error?</h3><p>Quieres que la fila vacía muestre 0 en vez de #¡DIV/0!. ¿Cuál escribes en G12?</p>
+<div class="options" id="opt_e6a"><div class="option" onclick="pickc(this,'e6a',1,0)">=SI(D12=0;0;B12*F12/D12)</div><div class="option" onclick="pickc(this,'e6a',0,1)">=SUMA(D12=0;B12*F12/D12)</div><div class="option" onclick="pickc(this,'e6a',0,2)">=SI(B12*F12/D12;0)</div></div>
+<div id="fb_e6a" class="feedback-box" data-exp="La estructura correcta de SI es condición; valor si se cumple; valor si no se cumple."></div></div>
+<div class="exercise"><h3>🧩 Coste por ración</h3><p>La receta del pescado cuesta <b>32,71 €</b> en total y da <b>8 raciones</b>. ¿Cuánto cuesta cada ración? (en €)</p>
+<input id="e6b" type="number" step="0.01" placeholder="Escribe tu resultado">
+<button class="btn" onclick="chk('e6b',4.09,'fb_e6b','32,71 ÷ 8 = 4,09 € por ración.')">Comprobar</button>
+<div id="fb_e6b" class="feedback-box"></div></div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo5.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo7.html')">Siguiente ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa los datos, la fórmula y prueba de nuevo.';}}
+function pickc(el,uid,ok,i){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Examen final</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🏁</span>Examen final</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Demuestra que sabes construir un escandallo con fórmulas.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    <div class="progress-text">Curso de Escandallo con Calc · Módulo 13 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Examen final</h2>
+
+<p>Responde las <b>26 preguntas</b> con calma. Al terminar verás tu resultado al instante. Se recomienda acertar al menos el <b>70 %</b>.</p>
+<div class="summary-box">🎯 <b>Consejo:</b> si dudas con una fórmula, piensa qué haría con datos sencillos (por ejemplo, 2 y 3) y comprueba si el resultado tiene sentido.</div>
+<div id="exam"></div>
+<div class="navigation"><button class="nav-btn" onclick="scormGo('modulo13.html')">⬅️ Repasar el reto final</button><button class="nav-btn" onclick="finishExam()">Finalizar</button></div>
+<div id="result" class="certificate" style="display:none;margin-top:25px"></div>
+<script>
+const qs=[["¿Qué es un escandallo?", "Una ficha que calcula el coste de un plato o menú para poder fijar su precio de venta.", "Una receta con fotografías de cada paso", "Un inventario de la bodega", "Una factura de un proveedor"], ["¿Con qué símbolo empieza siempre una fórmula en Calc?", "=", "#", "@", "$"], ["¿Qué resultado da la fórmula =10+6/2*3?", "19", "24", "30", "12"], ["En la ficha de receta, ¿qué indica «Cantidad P.»?", "La cantidad que trae el formato en que compras el ingrediente al proveedor.", "La cantidad que toca por persona.", "La cantidad que sobra.", "El precio total de la receta."], ["El aceite se compra en garrafa de 5 litros. ¿Qué número escribes en Cantidad P. si la unidad es ml?", "5000", "5", "50", "500"], ["¿Qué fórmula calcula el coste de un ingrediente en la ficha de receta?", "=B7*F7/D7", "=B7+F7+D7", "=B7/F7*D7", "=F7-B7"], ["Un formato de 1000 gr cuesta 13,50 €. ¿Cuánto cuestan 1600 gr?", "21,60 €", "16,00 €", "13,50 €", "24,30 €"], ["¿Cómo se llama el pequeño cuadrado de la esquina de una celda que se arrastra para copiar fórmulas?", "Controlador de relleno", "Marcador de celda", "Selector de rango", "Cursor de fórmula"], ["En =B7/B$3, ¿qué hace el símbolo $?", "Fija la fila 3 cuando se copia la fórmula.", "Indica que la celda es dinero.", "Multiplica por 3.", "Oculta la celda B3."], ["Copias la fórmula =B7/B$3 de H7 a H9. ¿Cómo queda en H9?", "=B9/B$3", "=B9/B$5", "=B7/B$3", "=B7/B$5"], ["¿Qué error aparece cuando una fórmula divide entre una celda vacía?", "#¡DIV/0!", "#¡REF!", "#NOMBRE?", "#¡VALOR!"], ["¿Qué hace =SI(D7=0;0;B7*F7/D7)?", "Devuelve 0 si D7 vale 0; si no, calcula el coste del ingrediente.", "Suma D7 y B7.", "Devuelve siempre 0.", "Multiplica todo por D7."], ["¿Qué fórmula suma los costes de G7 a G27?", "=SUMA(G7:G27)", "=G7+G27", "=SUMAR(G7;G27)", "=TOTAL(G7:G27)"], ["Al copiar una hoja para crear otra receta, ¿qué rango debes borrar para meter los ingredientes nuevos?", "A7:F27 (ingredientes y datos del proveedor)", "Toda la hoja", "Las columnas G:I", "Solo la celda B3"], ["En LibreOffice, ¿cómo enlazas el coste por ración de la hoja Carne (celda G29)?", "=Carne.G29", "=Carne!G29", "=Carne:G29", "=Carne,G29"], ["¿Qué fórmula calcula el Total Ración de la materia prima?", "=SUMA(C11:C14)", "=C11*C14", "=B15*J1", "=SUMA(A11:A14)"], ["Con 450 comensales y 20 comensales por camarero, ¿cuántos camareros calcula REDONDEAR(450/20;0)?", "23", "22", "20", "21"], ["¿Qué calcula =K8*J8*H8 en la tabla de personal?", "El coste total de un puesto: horas × nº de trabajadores × coste por hora.", "El número de trabajadores.", "Las horas totales del catering.", "El precio por menú."], ["Se calcula 1 botella de vino por cada 4 comensales. Con 150 comensales, ¿cuántas botellas?", "38", "37", "40", "150"], ["¿Por qué la cantidad de furgonetas se enlaza con =J11?", "Para que se actualice sola según el número de conductores.", "Para ahorrar tinta al imprimir.", "Porque Calc lo exige.", "Para que salga en rojo."], ["Un menú cuesta 30 € y quieres un 25 % de beneficio sobre el coste. ¿Precio de venta?", "37,50 €", "55,00 €", "30,25 €", "32,50 €"], ["¿Qué fórmula calcula las ganancias en Totales?", "=(C8-B8)*J1", "=C8*J1", "=B8*C3", "=A8-C8"], ["Aplicas un 25 % de beneficio sobre el coste. ¿Qué % del precio de venta representa la ganancia?", "20 %", "25 %", "30 %", "75 %"], ["¿Qué herramienta permite ver todas las fórmulas de la hoja a la vez?", "Ver → Mostrar fórmula", "Datos → Ordenar", "Formato → Página", "Hoja → Eliminar"], ["Borras una hoja de la que depende una fórmula y aparece #¡REF!. ¿Qué ha pasado?", "La fórmula apunta a una hoja o celda que ya no existe.", "Se ha dividido entre cero.", "La columna es demasiado estrecha.", "La función está mal escrita."], ["¿Para qué sirve proteger la hoja después de desbloquear las celdas de entrada?", "Para evitar borrar una fórmula por accidente.", "Para ocultar los precios.", "Para impedir que se imprima.", "Para reducir el tamaño del archivo."]];
+let answers={};
+const root=document.getElementById('exam');
+qs.forEach(function(x,i){
+  const box=document.createElement('div');box.className='quiz';
+  const h=document.createElement('h4');h.textContent=(i+1)+'. '+x[0];box.appendChild(h);
+  const opts=document.createElement('div');opts.className='options';
+  x.slice(1).map(function(o){return [Math.random(),o]}).sort(function(a,b){return a[0]-b[0]}).forEach(function(p){
+    const d=document.createElement('div');d.className='option';d.textContent=p[1];
+    d.onclick=function(){opts.querySelectorAll('.option').forEach(function(z){z.classList.remove('selected')});d.classList.add('selected');answers[i]=p[1];};
+    opts.appendChild(d);
+  });
+  box.appendChild(opts);root.appendChild(box);
+});
+function finishExam(){
+  let score=0;qs.forEach(function(x,i){if(answers[i]===x[1])score++;});
+  const pct=Math.round(score/qs.length*100);const r=document.getElementById('result');r.style.display='block';
+  r.innerHTML='<h2>'+(pct>=70?'🎉 ¡Muy bien!':'💪 Buen intento')+'</h2><p>Resultado: <b>'+score+'/'+qs.length+' ('+pct+'%)</b></p><p>'+(pct>=70?'Sabes construir e interpretar un escandallo con fórmulas en Calc.':'Repasa los módulos y vuelve a intentarlo. Lo importante es entender por qué funciona cada fórmula.')+'</p>';
+  if(window.scorm)scorm.complete(pct);window.scrollTo({top:r.offsetTop,behavior:'smooth'});
+}
+</script>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa los datos, la fórmula y prueba de nuevo.';}}
+function pickc(el,uid,ok,i){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

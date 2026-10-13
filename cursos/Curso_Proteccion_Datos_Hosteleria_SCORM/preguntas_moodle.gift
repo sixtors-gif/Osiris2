@@ -1,0 +1,289 @@
+// Curso de Protección de Datos en Hostelería y Restauración
+// Autor: Sixto Rodríguez de Sepúlveda
+// Formato GIFT para Moodle. Codificación UTF-8. Una única respuesta correcta por pregunta.
+// Una categoría por módulo (Banco de preguntas > Importar > formato GIFT).
+
+$CATEGORY: Curso Protección de Datos/Módulo 1 - ¿Qué es la protección de datos?
+
+::PD01::¿Qué es la protección de datos? {
+=Tratar la información personal con cuidado, solo para lo necesario y con las garantías legales.
+~Un programa antivirus
+~Una copia de seguridad
+~Un tipo de wifi
+}
+
+::PD02::¿Qué norma española complementa al RGPD? {
+=La LOPDGDD.
+~La Ley de Extranjería
+~El Código de Comercio
+~La Ley de Costas
+}
+
+::PD03::¿Qué autoridad vigila el cumplimiento de la protección de datos en España? {
+=La AEPD (Agencia Española de Protección de Datos).
+~La Guardia Civil
+~El Ayuntamiento
+~Hacienda
+}
+
+$CATEGORY: Curso Protección de Datos/Módulo 2 - Los principios del RGPD en la práctica
+
+::PD04::¿Qué principio obliga a informar al cliente de para qué se usan sus datos? {
+=Licitud, lealtad y transparencia.
+~Minimización
+~Exactitud
+~Portabilidad
+}
+
+::PD05::¿Qué principio impide usar los datos de una reserva para fines distintos sin avisar? {
+=Limitación de la finalidad.
+~Integridad y confidencialidad
+~Responsabilidad proactiva
+~Exactitud
+}
+
+::PD06::¿Qué principio exige mantener actualizados los datos de contacto? {
+=Exactitud.
+~Minimización
+~Limitación del plazo
+~Transparencia
+}
+
+$CATEGORY: Curso Protección de Datos/Módulo 3 - Qué datos manejamos en un hotel o restaurante
+
+::PD07::¿Qué departamento necesita normalmente el dato de una alergia alimentaria? {
+=Sala y cocina.
+~Pisos y limpieza
+~Marketing
+~Recursos humanos
+}
+
+::PD08::¿Qué puede requerir un evento con menores de edad? {
+=El consentimiento de madres, padres o tutores.
+~El carné de conducir de los menores
+~Nada especial
+~El historial médico completo
+}
+
+::PD09::¿Qué necesitas antes de publicar una foto de un evento con clientes reconocibles? {
+=Su permiso.
+~Nada
+~El visto bueno del proveedor de cámaras
+~Un contrato notarial
+}
+
+$CATEGORY: Curso Protección de Datos/Módulo 4 - El registro de viajeros - una obligación legal del sector
+
+::PD10::¿Qué plataforma se usa habitualmente para comunicar el registro de viajeros? {
+=SES.Hospedajes.
+~Booking Extranet
+~La Sede Electrónica de Hacienda
+~WhatsApp Business
+}
+
+::PD11::¿Cuánto tiempo deben conservarse los datos del registro de viajeros? {
+=3 años, salvo otra obligación legal.
+~Para siempre
+~1 semana
+~10 años siempre
+}
+
+::PD12::¿Qué dato del viajero se recoge para el registro, entre otros? {
+=El tipo y número de documento de identidad.
+~El grupo sanguíneo
+~La religión
+~El historial de reservas en otros hoteles
+}
+
+$CATEGORY: Curso Protección de Datos/Módulo 5 - Datos sensibles - alergias, salud y necesidades especiales
+
+::PD13::¿Qué tipo de dato es una alergia alimentaria según el RGPD? {
+=Un dato de categoría especial (salud).
+~Un dato público
+~Un dato irrelevante
+~Un dato financiero
+}
+
+::PD14::¿Cuál es la finalidad correcta para recoger una alergia? {
+=Preparar y servir la comida con seguridad.
+~Enviar publicidad personalizada
+~Compartirla con otros clientes
+~Clasificar clientes por tipo de dieta públicamente
+}
+
+::PD15::¿Qué se recomienda para gestionar las alergias en cocina? {
+=Un sistema o ficha interna con acceso restringido.
+~Una pizarra a la vista de los clientes
+~Publicarlas en la carta
+~Comentarlas en voz alta en sala
+}
+
+$CATEGORY: Curso Protección de Datos/Módulo 6 - Videovigilancia en el establecimiento
+
+::PD16::¿Qué zonas comunes SÍ admiten cámaras con cartel informativo? {
+=Recepción, pasillos, comedor y aparcamiento.
+~Aseos y vestuarios
+~Habitaciones
+~Zona de descanso del personal
+}
+
+::PD17::¿Cuánto tiempo se conservan, con carácter general, las grabaciones de videovigilancia? {
+=1 mes como máximo, salvo que recojan un incidente.
+~1 día
+~5 años
+~Para siempre
+}
+
+::PD18::¿Qué puede pedir una persona que aparece grabada por una cámara? {
+=Ver las imágenes en las que aparece o solicitar su eliminación.
+~Nada, no tiene ningún derecho
+~Comprar la cámara
+~Solicitar una copia de todas las grabaciones del mes
+}
+
+$CATEGORY: Curso Protección de Datos/Módulo 7 - Marketing, fidelización y comunicaciones comerciales
+
+::PD19::¿Qué necesitas para enviar publicidad a un cliente? {
+=Su consentimiento u otra base legal válida, con opción de baja fácil.
+~Solo su número de habitación
+~Nada, es libre para el hotel
+~El permiso del resto de clientes
+}
+
+::PD20::¿Qué debe evitarse en un formulario de alta a un club de fidelización? {
+=Casillas de aceptación ya marcadas por defecto.
+~Explicar para qué se usan los datos
+~Ofrecer la baja voluntaria
+~Pedir el email de contacto
+}
+
+::PD21::¿Se pueden ceder los datos de un cliente a una empresa colaboradora sin avisar? {
+=No, se necesita su consentimiento explícito para ese fin.
+~Sí, siempre que sea del mismo grupo
+~Sí, si son datos de contacto únicamente
+~Sí, sin ninguna condición
+}
+
+$CATEGORY: Curso Protección de Datos/Módulo 8 - Seguridad digital en recepción y reservas
+
+::PD22::¿Qué práctica de seguridad es incorrecta en recepción? {
+=Compartir la misma contraseña del PMS entre varios turnos.
+~Tener cada persona su propio usuario
+~Bloquear la pantalla al alejarse
+~Activar la verificación en dos pasos
+}
+
+::PD23::¿Puede un mensaje de phishing usar datos reales de una reserva? {
+=Sí, si el atacante ha accedido al panel de gestión del hotel.
+~No, eso es imposible
+~Solo si el cliente lo publicó en redes
+~No, los datos reales garantizan que es fiable
+}
+
+::PD24::¿Qué NUNCA pedirá una plataforma de reservas legítima por chat? {
+=El número completo de la tarjeta para "confirmar" una reserva ya hecha.
+~El nombre del huésped
+~Las fechas de la estancia
+~El número de reserva
+}
+
+$CATEGORY: Curso Protección de Datos/Módulo 9 - Brechas de seguridad - qué hacer si algo falla
+
+::PD25::¿Qué es una brecha de seguridad? {
+=Cualquier incidente que expone, pierde o compromete datos personales.
+~Una actualización del sistema
+~Un descuento aplicado por error
+~Una reserva cancelada
+}
+
+::PD26::¿En qué plazo debe notificarse una brecha con riesgo a la AEPD? {
+=En un máximo de 72 horas.
+~En 72 días
+~No es necesario notificar nunca
+~Solo si lo pide el cliente
+}
+
+::PD27::Si detectas una posible brecha, ¿qué debes hacer primero? {
+=Avisar cuanto antes a la persona responsable del establecimiento.
+~Solucionarlo tú mismo/a sin avisar
+~Ignorarlo si parece poco importante
+~Publicarlo en redes sociales
+}
+
+$CATEGORY: Curso Protección de Datos/Módulo 10 - Los derechos de tus clientes y cómo atenderlos
+
+::PD28::¿Qué derecho ejerce un cliente que pide corregir su email mal escrito? {
+=El derecho de rectificación.
+~El derecho de oposición
+~El derecho de portabilidad
+~El derecho de limitación
+}
+
+::PD29::¿Qué derecho permite a un cliente pedir sus datos en un formato reutilizable? {
+=El derecho de portabilidad.
+~El derecho de acceso
+~El derecho de supresión
+~El derecho de rectificación
+}
+
+::PD30::¿Qué debe hacer el personal si recibe una petición de derechos de un cliente? {
+=Trasladarla a la persona responsable de protección de datos del establecimiento.
+~Resolverla por su cuenta sin avisar
+~Ignorarla si parece poco importante
+~Pedir un DNI adicional antes de nada
+}
+
+$CATEGORY: Curso Protección de Datos/Módulo 11 - Datos del personal - empleados y nóminas
+
+::PD31::¿Qué debe ofrecerse si se usa la huella dactilar para el control horario? {
+=Una alternativa para quien no quiera usar ese sistema.
+~Nada, es obligatorio para todos
+~Un incentivo económico
+~El despido de quien se niegue
+}
+
+::PD32::¿Dónde está prohibido instalar cámaras para vigilar al personal? {
+=En vestuarios y zonas de descanso.
+~En la zona de atención al público
+~En el aparcamiento
+~En la entrada principal
+}
+
+::PD33::¿Quién debería tener acceso a las nóminas del personal? {
+=Solo dirección y administración/RRHH.
+~Todo el equipo
+~Los clientes habituales
+~Cualquier proveedor externo
+}
+
+$CATEGORY: Curso Protección de Datos/Módulo 12 - Sanciones reales y buenas prácticas por puesto
+
+::PD34::¿Cuál es un motivo habitual de sanción de la AEPD en hostelería? {
+=Videovigilancia mal configurada o sin cartel informativo.
+~Tener wifi gratuita para clientes
+~Aceptar pagos con tarjeta
+~Ofrecer desayuno incluido
+}
+
+::PD35::¿Qué rango de sanciones es habitual en el sector, según la AEPD? {
+=Entre 3.000 € y 50.000 €, según la gravedad.
+~Siempre 10 €
+~Nunca hay sanciones
+~Solo se avisa sin coste económico
+}
+
+$CATEGORY: Curso Protección de Datos/Módulo 13 - Tu kit personal de protección de datos
+
+::PD36::En el semáforo del curso, ¿qué indica una señal verde? {
+=Que el dato es necesario, tiene una finalidad clara y solo lo ve quien debe.
+~Que hay que parar y consultar
+~Que se puede compartir con cualquiera
+~Que hay que borrar el dato inmediatamente
+}
+
+::PD37::¿Cuál es el objetivo general de este curso? {
+=Saber qué datos pedir, cómo tratarlos con seguridad y qué hacer si algo falla, en tu puesto.
+~Aprender a programar un PMS desde cero
+~Memorizar el articulado completo del RGPD
+~Evitar cualquier trato con clientes
+}

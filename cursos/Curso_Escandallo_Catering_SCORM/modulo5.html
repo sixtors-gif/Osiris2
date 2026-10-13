@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Copiar fórmulas y cantidad por persona</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">📋</span>Copiar fórmulas y cantidad por persona</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Aprenderás a copiar una fórmula hacia abajo y a fijar una celda con el símbolo $ (referencias relativas y absolutas).</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:38%"></div></div>
+    <div class="progress-text">Curso de Escandallo con Calc · Módulo 5 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Copiar fórmulas y cantidad por persona</h2>
+
+<h3>Copiar una fórmula hacia abajo</h3>
+<p>No hace falta escribir la fórmula en cada fila. Hay tres formas:</p>
+<ol class="steps"><li>Selecciona <b>G7</b> y arrastra el pequeño cuadrado de la esquina inferior derecha (<b>controlador de relleno</b>) hasta <b>G27</b>.</li><li>O bien: selecciona el rango <b>G7:G27</b> y pulsa <kbd>Ctrl</kbd>+<kbd>D</kbd> (rellenar hacia abajo).</li><li>O bien: haz <b>doble clic</b> sobre el controlador de relleno.</li></ol>
+<p>Al copiar, Calc <b>ajusta las filas solo</b>: lo que en G7 era <code>B7*F7/D7</code> en G8 pasa a ser <code>B8*F8/D8</code>. Esto se llama <b>referencia relativa</b>.</p>
+
+<h3>Cantidad por persona (columnas H e I)</h3>
+<p>Para saber cuánto ingrediente toca <b>por comensal</b> divides la cantidad de la receta entre las <b>raciones</b> (celda B3).</p>
+<div class="formula"><span class="f-label">Fórmula H7</span><code>=B7/B$3</code><span class="f-exp">Cantidad de la receta ÷ raciones. El símbolo <b>$</b> delante del 3 «fija» la fila 3.</span></div>
+<div class="formula"><span class="f-label">Fórmula I7</span><code>=C7</code><span class="f-exp">La unidad se copia de la columna C.</span></div>
+<div class="figure sheetfig"><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:150px"><col style="width:60px"><col style="width:40px"><col style="width:60px"><col style="width:50px"><col style="width:60px"><col style="width:150px"><col style="width:120px"><col style="width:70px"></colgroup><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th></tr><tr><th class="rn">3</th><td class="lbl">Raciones:</td><td class="r hl2">10</td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td></tr><tr><th class="rn">5</th><td class="rec" colspan="3">RECETA</td><td class="prov" colspan="3">PROVEEDOR</td><td class=""></td><td class="cpp" colspan="2">Cantidad Por Persona</td></tr><tr><th class="rn">6</th><td class="colh">Ingredientes</td><td class="colh">Cantidad</td><td class="colh">Unidad</td><td class="colh">Cantidad P.</td><td class="colh">Unidad P.</td><td class="colh">Precio</td><td class="coste">Coste</td><td class="colh">Cantidad</td><td class="colh">Unidad</td></tr><tr><th class="rn">7</th><td class="">Tomate pera maduro</td><td class="r">2000</td><td class="">gr</td><td class="r">5000</td><td class="">gr</td><td class="r">9,50 €</td><td class="f hl">=B7*F7/D7</td><td class="f hl3">=B7/B$3</td><td class="f">=C7</td></tr><tr><th class="rn">8</th><td class="">Pan del día</td><td class="r">500</td><td class="">gr</td><td class="r">1000</td><td class="">gr</td><td class="r">2,40 €</td><td class="f hl">=B8*F8/D8</td><td class="f hl3">=B8/B$3</td><td class="f">=C8</td></tr><tr><th class="rn">9</th><td class="">Ajo</td><td class="r">40</td><td class="">gr</td><td class="r">1000</td><td class="">gr</td><td class="r">6,50 €</td><td class="f hl">=B9*F9/D9</td><td class="f hl3">=B9/B$3</td><td class="f">=C9</td></tr></table></div><p class="figure-caption">Con <b>Ver → Mostrar fórmula</b> se ven las fórmulas en vez de los resultados. Observa cómo cambia el número de fila al copiar hacia abajo.</p></div>
+<div class="figure sheetfig"><div class="fbar"><span class="cellname">H7</span><span class="fxmark">fx</span><code>=B7/B$3</code></div><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:150px"><col style="width:60px"><col style="width:40px"><col style="width:60px"><col style="width:50px"><col style="width:60px"><col style="width:70px"><col style="width:90px"><col style="width:50px"></colgroup><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th><th>I</th></tr><tr><th class="rn">3</th><td class="lbl">Raciones:</td><td class="r">10</td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td><td class=""></td></tr><tr><th class="rn">5</th><td class="rec" colspan="3">RECETA</td><td class="prov" colspan="3">PROVEEDOR</td><td class=""></td><td class="cpp" colspan="2">Cantidad Por Persona</td></tr><tr><th class="rn">6</th><td class="colh">Ingredientes</td><td class="colh">Cantidad</td><td class="colh">Unidad</td><td class="colh">Cantidad P.</td><td class="colh">Unidad P.</td><td class="colh">Precio</td><td class="coste">Coste</td><td class="colh">Cantidad</td><td class="colh">Unidad</td></tr><tr><th class="rn">7</th><td class="">Tomate pera maduro</td><td class="r">2000</td><td class="">gr</td><td class="r">5000</td><td class="">gr</td><td class="r">9,50 €</td><td class="r">3,80 €</td><td class="r hl3">200</td><td class="hl3">gr</td></tr><tr><th class="rn">8</th><td class="">Pan del día</td><td class="r">500</td><td class="">gr</td><td class="r">1000</td><td class="">gr</td><td class="r">2,40 €</td><td class="r">1,20 €</td><td class="r hl3">50</td><td class="hl3">gr</td></tr><tr><th class="rn">9</th><td class="">Ajo</td><td class="r">40</td><td class="">gr</td><td class="r">1000</td><td class="">gr</td><td class="r">6,50 €</td><td class="r">0,26 €</td><td class="r hl3">4</td><td class="hl3">gr</td></tr></table></div><p class="figure-caption">Cantidad por persona: 2000 gr de tomate entre 10 raciones = 200 gr por persona.</p></div>
+
+<h3>¿Por qué el símbolo $?</h3>
+<p>Las <b>raciones</b> están siempre en B3. Si al copiar la fórmula hacia abajo la referencia se moviera (<code>B4</code>, <code>B5</code>…) dividiría entre celdas vacías. El <b>$</b> impide que la fila cambie.</p>
+<table class="tbl"><tr><th>Tipo</th><th>Escritura</th><th>Al copiar hacia abajo…</th></tr>
+<tr><td>Relativa</td><td><code>B7</code></td><td>Pasa a B8, B9… (cambia la fila)</td></tr>
+<tr><td>Absoluta</td><td><code>$B$3</code></td><td>Siempre B3 (no cambia nada)</td></tr>
+<tr><td>Mixta (fila fija)</td><td><code>B$3</code></td><td>La fila 3 no cambia; la columna sí puede</td></tr>
+<tr><td>Mixta (columna fija)</td><td><code>$B3</code></td><td>La columna B no cambia; la fila sí</td></tr></table>
+<div class="tip-box">💡 <b>Consejo:</b> Para añadir los <b>$</b> sin escribirlos: pulsa <kbd>Mayús</kbd>+<kbd>F4</kbd> en LibreOffice (o <kbd>F4</kbd> en Excel) con el cursor sobre la referencia. Cada pulsación cambia el tipo.</div>
+<div class="alert-box">⚠️ <b>Error típico:</b> Escribir <code>=B7/B3</code> (sin $) funciona en la primera fila, pero al copiar a la fila 8 se convierte en <code>=B8/B4</code>: divide entre una celda vacía y aparece <b>#¡DIV/0!</b>.</div>
+
+<div class="exercise"><h3>🧩 Referencias</h3><p>Copias la fórmula <code>=B7/B$3</code> de H7 a H9. ¿Cómo queda en H9?</p>
+<div class="options" id="opt_e5a"><div class="option" onclick="pickc(this,'e5a',1,0)">=B9/B$3</div><div class="option" onclick="pickc(this,'e5a',0,1)">=B9/B$5</div><div class="option" onclick="pickc(this,'e5a',0,2)">=B7/B$3</div></div>
+<div id="fb_e5a" class="feedback-box" data-exp="La fila relativa (B7→B9) avanza dos filas y la fila fija (B$3) se mantiene."></div></div>
+<div class="exercise"><h3>🧩 Cantidad por persona</h3><p>Una receta para <b>8 raciones</b> lleva <b>1600 gr</b> de solomillo. ¿Cuántos gramos corresponden a cada persona?</p>
+<input id="e5b" type="number" step="1" placeholder="Escribe tu resultado">
+<button class="btn" onclick="chk('e5b',200,'fb_e5b','1600 ÷ 8 = 200 gr por persona.')">Comprobar</button>
+<div id="fb_e5b" class="feedback-box"></div></div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo4.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo6.html')">Siguiente ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa los datos, la fórmula y prueba de nuevo.';}}
+function pickc(el,uid,ok,i){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

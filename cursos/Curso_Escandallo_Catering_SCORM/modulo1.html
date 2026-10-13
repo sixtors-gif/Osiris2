@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>¿Qué es un escandallo?</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🍽️</span>¿Qué es un escandallo?</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Descubre para qué sirve, qué vas a construir y cómo se relacionan todas las piezas del archivo.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:8%"></div></div>
+    <div class="progress-text">Curso de Escandallo con Calc · Módulo 1 de 13</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>¿Qué es un escandallo?</h2>
+
+<div class="activity"><h3>🍽️ Definición</h3>
+<p>Un <b>escandallo</b> es una ficha de cálculo que averigua <b>cuánto cuesta</b> elaborar un plato o un menú completo, sumando el coste de cada ingrediente. A partir de ese coste se decide el <b>precio de venta</b>.</p>
+<p>En un <b>catering</b> el escandallo va más allá de la comida: también cuenta el personal, las bebidas, el transporte y un margen para imprevistos.</p></div>
+
+<h3>¿Para qué sirve?</h3>
+<ul class="key-points"><li>💶 <span><b>Fijar el precio:</b> saber cuánto cobrar para no perder dinero.</span></li><li>📊 <span><b>Controlar el margen:</b> ver cuánto beneficio deja cada menú.</span></li><li>🧾 <span><b>Presupuestar rápido:</b> cambias el número de comensales y todo se recalcula solo.</span></li><li>🔎 <span><b>Comparar:</b> ver qué plato o qué ingrediente encarece el menú.</span></li></ul>
+
+<h3>El camino del dinero: de los ingredientes al precio de venta</h3>
+<div class="pipe"><div class="pbox"><b>1 · Ingredientes</b>con el precio de tu proveedor</div><div class="parrow">➜</div>
+<div class="pbox"><b>2 · Ficha de receta</b>coste de la receta y de cada ración</div><div class="parrow">➜</div>
+<div class="pbox res"><b>3 · Materia prima</b>coste de comida por comensal</div></div>
+<div class="pipe"><div class="pbox plus"><b>+ Personal</b>camareros, cocineros…</div><div class="pbox plus"><b>+ Bebidas</b>agua, vino, cerveza…</div>
+<div class="pbox plus"><b>+ Varios</b>sal, transporte…</div><div class="pbox plus"><b>+ Imprevistos</b>un % de seguridad</div></div>
+<div class="pipe"><div class="pbox blue"><b>= Coste total</b>de todo el catering</div><div class="parrow">÷</div><div class="pbox blue"><b>Comensales</b>→ coste por menú</div>
+<div class="parrow">+</div><div class="pbox blue"><b>% Beneficio</b></div><div class="parrow">=</div><div class="pbox res"><b>🏷️ Precio de venta</b>por menú</div></div>
+
+<h3>El archivo que vamos a construir</h3>
+<p>Un solo libro de cálculo con <b>5 hojas</b>: cuatro fichas de receta (una por plato) y una hoja de resumen que las une.</p>
+<div class="card-grid">
+<div class="mini-card"><div class="ico">🥗</div><b>Entrante</b>Porra Archidonesa</div>
+<div class="mini-card"><div class="ico">🥩</div><b>Carne</b>Solomillo ibérico al PX</div>
+<div class="mini-card"><div class="ico">🐟</div><b>Pescado</b>Merluza en salsa verde</div>
+<div class="mini-card"><div class="ico">🍰</div><b>Postre</b>Tarta de queso</div>
+<div class="mini-card" style="background:#e8f5e8;border-color:#4caf50"><div class="ico">📊</div><b>Totales</b>Personal, bebidas, varios, precio</div></div>
+<div class="figure sheetfig"><div class="xl-wrap"><table class="xl"><colgroup><col style="width:34px"><col style="width:120px"><col style="width:100px"><col style="width:100px"><col style="width:110px"></colgroup><tr><th class="corner"></th><th>A</th><th>B</th><th>C</th><th>D</th></tr><tr><th class="rn">5</th><td class="pink" colspan="4">Totales</td></tr><tr style="height:34px"><th class="rn">6</th><td class="peach" rowspan="2">Coste Total del Catering</td><td class="peach" rowspan="2">Coste por Menú</td><td class="peach" rowspan="2">Precio Venta</td><td class="peach" rowspan="2">Ganancias</td></tr><tr><th class="rn">7</th></tr><tr><th class="rn">8</th><td class="blue hl3">9.014,35 €</td><td class="blue hl3">30,05 €</td><td class="blue hl2">36,06 €</td><td class="blue hl2">1.802,87 €</td></tr><tr><th class="rn">21</th></tr></table></div><p class="figure-caption">Este es el resultado final: el resumen del catering (hoja «Totales»). Al terminar el curso lo habrás construido tú.</p></div>
+<div class="dl-box">📥 <b>Archivo modelo resuelto</b><br>Descárgalo para comparar tu trabajo con el resultado correcto (formato LibreOffice Calc, se abre también con Excel).<br>
+<a href="Escandallo_modelo.ods" download>Descargar Escandallo_modelo.ods</a></div>
+
+<div class="tip-box">💡 <b>Programa:</b> Trabajaremos con <b>LibreOffice Calc</b> (gratuito). Si usas Excel, las fórmulas son las mismas; solo cambia cómo se escribe la referencia a otra hoja (lo verás en el módulo 8).</div>
+
+<div class="exercise"><h3>🧩 Comprueba lo aprendido</h3><p>En el archivo del curso, ¿qué hoja calcula el <b>precio de venta</b> del menú?</p>
+<div class="options" id="opt_e1a"><div class="option" onclick="pickc(this,'e1a',0,0)">La hoja «Entrante»</div><div class="option" onclick="pickc(this,'e1a',1,1)">La hoja «Totales»</div><div class="option" onclick="pickc(this,'e1a',0,2)">La hoja «Postre»</div></div>
+<div id="fb_e1a" class="feedback-box" data-exp="La hoja «Totales» une las fichas de receta con personal, bebidas, varios e imprevistos y calcula el precio de venta."></div></div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('index.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo2.html')">Siguiente ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
+if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa los datos, la fórmula y prueba de nuevo.';}}
+function pickc(el,uid,ok,i){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>
