@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Matemática Básica — Entender las proporciones</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="wrap"><section class="hero">
+<div class="brand"><img src="img/logo-centro.png" alt="Logo"><div><div class="kicker">Curso · Matemática Básica</div><h1>Entender las proporciones</h1><p class="subtitle">Aprende paso a paso, practica y comprueba tus resultados.</p></div></div>
+<div class="progress"><span style="width:10%"></span></div>
+</section>
+<section class="card">
+<h2>Módulo 1</h2>
+<p>Antes de calcular, aprende a comparar cantidades y a reconocer cuándo mantienen la misma relación.</p>
+<div class="box tip"><strong>Recuerda:</strong> equivocarse forma parte de aprender. Lo importante es revisar el procedimiento y entender por qué.</div>
+
+<h3>Explicación</h3>
+<p>Una proporción aparece cuando dos cantidades guardan siempre la misma relación. Por ejemplo, si 3 entradas cuestan 18&nbsp;€, cada entrada cuesta 6&nbsp;€. Esa relación te permite predecir cuánto costarán 5 entradas, si el precio de cada una se mantiene igual.</p>
+
+<div class="figure">
+  <svg viewBox="0 0 460 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="3 entradas cuestan 18 euros, a 6 euros cada una; 5 entradas cuestan 30 euros">
+    <text x="10" y="25" font-size="14" fill="#065f46" font-weight="700">3 entradas = 18 €</text>
+    <rect x="10" y="35" width="70" height="34" fill="#10b981"/><text x="45" y="57" font-size="12" text-anchor="middle" fill="#fff">6 €</text>
+    <rect x="83" y="35" width="70" height="34" fill="#10b981"/><text x="118" y="57" font-size="12" text-anchor="middle" fill="#fff">6 €</text>
+    <rect x="156" y="35" width="70" height="34" fill="#10b981"/><text x="191" y="57" font-size="12" text-anchor="middle" fill="#fff">6 €</text>
+
+    <text x="10" y="115" font-size="14" fill="#065f46" font-weight="700">5 entradas = ?</text>
+    <rect x="10" y="125" width="70" height="34" fill="#047857"/><text x="45" y="147" font-size="12" text-anchor="middle" fill="#fff">6 €</text>
+    <rect x="83" y="125" width="70" height="34" fill="#047857"/><text x="118" y="147" font-size="12" text-anchor="middle" fill="#fff">6 €</text>
+    <rect x="156" y="125" width="70" height="34" fill="#047857"/><text x="191" y="147" font-size="12" text-anchor="middle" fill="#fff">6 €</text>
+    <rect x="229" y="125" width="70" height="34" fill="#047857"/><text x="264" y="147" font-size="12" text-anchor="middle" fill="#fff">6 €</text>
+    <rect x="302" y="125" width="70" height="34" fill="#047857"/><text x="337" y="147" font-size="12" text-anchor="middle" fill="#fff">6 €</text>
+
+    <text x="380" y="147" font-size="15" fill="#065f46" font-weight="700">= 30 €</text>
+  </svg>
+  <p class="figure-caption">Cada entrada vale lo mismo (6 €). Para saber el total, multiplicas ese valor por el número de entradas.</p>
+</div>
+
+<p>La idea clave es buscar primero la relación entre las cantidades. Ante un problema real, pregúntate: «¿qué ocurre con una cantidad cuando la otra cambia?».</p>
+<div class="example"><strong>Ejemplo:</strong> 3 entradas cuestan 18 €. Si todas cuestan lo mismo, una entrada cuesta 18 ÷ 3 = 6 €. Entonces 5 entradas cuestan 5 × 6 = 30 €.</div>
+<div class="box tip"><strong>Clave:</strong> una proporción no es memorizar una fórmula: es entender qué relación existe entre las cantidades.</div>
+
+<h3>Actividad práctica</h3>
+<div class="exercise">
+  <h3>Practica</h3>
+  <p>Si 4 botellas cuestan 10 €, ¿cuánto cuesta una botella?</p>
+  <input id="e1" type="text" inputmode="decimal" autocomplete="off" placeholder="Tu resultado"><button onclick="checkNumber('e1',2.5,'fb1','¡Correcto! 10 ÷ 4 = 2,50 €.')">Comprobar</button>
+  <div id="fb1" class="feedback"></div>
+</div>
+
+<div class="nav"><a class="btn secondary" href="index.html">← Anterior</a>
+<a class="btn" href="modulo2.html">Siguiente →</a></div>
+</section><div class="footer">Matemática Básica · SCORM 1.2 · Módulo 1 de 10 · Creado por: Sixto Rodríguez de Sepúlveda</div></div>
+<script src="scorm.js"></script>
+<script>
+function checkNumber(id,expected,fb,msg){const v=parseFloat(String(document.getElementById(id).value).trim().replace(/\s/g,'').replace(',','.'));const e=document.getElementById(fb);
+if(Number.isFinite(v)&&Math.abs(v-expected)<0.001){e.className='feedback good';e.textContent=msg;}else{e.className='feedback bad';e.textContent='Todavía no. Revisa los datos y prueba de nuevo.';}e.style.display='block';} function choice(fb,ok,bien,mal){const e=document.getElementById(fb);e.className='feedback '+(ok?'good':'bad');e.textContent=ok?(bien||'¡Correcto! Has identificado la relación adecuada.'):(mal||'No exactamente. Piensa qué ocurre con una cantidad cuando aumenta la otra.');e.style.display='block';}
+</script></body></html>

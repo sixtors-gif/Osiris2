@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Matemática Básica — Regla de tres inversa</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="wrap"><section class="hero">
+<div class="brand"><img src="img/logo-centro.png" alt="Logo"><div><div class="kicker">Curso · Matemática Básica</div><h1>Regla de tres inversa</h1><p class="subtitle">Aprende paso a paso, practica y comprueba tus resultados.</p></div></div>
+<div class="progress"><span style="width:40%"></span></div>
+</section>
+<section class="card">
+<h2>Módulo 4</h2>
+<p>Aquí ocurre algo diferente: cuando una cantidad aumenta, la otra disminuye.</p>
+<div class="box tip"><strong>Recuerda:</strong> equivocarse forma parte de aprender. Lo importante es revisar el procedimiento y entender por qué.</div>
+
+<h3>Explicación</h3>
+<p>La proporcionalidad inversa aparece cuando dos cantidades se compensan. Ejemplo clásico: si el mismo trabajo lo hacen más personas, necesitan menos tiempo.</p>
+
+<div class="figure">
+  <svg viewBox="0 0 440 198" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="4 personas tardan 6 horas; 8 personas, el doble, tardan la mitad: 3 horas">
+    <text x="10" y="25" font-size="13" fill="#065f46" font-weight="700">4 personas</text>
+    <text x="10" y="50" font-size="20">🧑🧑🧑🧑</text>
+    <rect x="170" y="18" width="180" height="26" rx="6" fill="#10b981"/>
+    <text x="260" y="36" font-size="13" text-anchor="middle" fill="#fff" font-weight="700">6 horas</text>
+
+    <line x1="10" y1="80" x2="430" y2="80" stroke="#e2e8f0" stroke-width="1.5"/>
+
+    <text x="10" y="105" font-size="13" fill="#065f46" font-weight="700">8 personas (el doble)</text>
+    <text x="10" y="130" font-size="20">🧑🧑🧑🧑🧑🧑🧑🧑</text>
+    <rect x="170" y="98" width="90" height="26" rx="6" fill="#047857"/>
+    <text x="215" y="116" font-size="13" text-anchor="middle" fill="#fff" font-weight="700">3 horas</text>
+    <text x="270" y="116" font-size="12" fill="#4b635d">(la mitad)</text>
+
+    <rect x="10" y="145" width="420" height="42" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="220" y="163" font-size="12" text-anchor="middle" fill="#1e3a8a" font-weight="700">Si se duplican las personas, el tiempo se reduce a la mitad.</text>
+    <text x="220" y="180" font-size="12" text-anchor="middle" fill="#1e3a8a" font-weight="700">personas × tiempo = constante</text>
+  </svg>
+  <p class="figure-caption">Más personas trabajando ⇒ menos tiempo necesario, si todas rinden igual.</p>
+</div>
+
+<div class="example"><strong>Cuidado:</strong> esto supone que todas las personas trabajan al mismo ritmo y que añadir personas realmente reduce el tiempo.</div>
+<p>Pregúntate siempre: «si duplico una cantidad, ¿la otra debería reducirse a la mitad?». Si es así, la relación es inversa.</p>
+
+<h3>Actividad práctica</h3>
+<div class="exercise">
+  <h3>Practica</h3>
+  <p>6 personas realizan un trabajo en 10 horas. Si lo hacen 12 personas al mismo ritmo, ¿cuántas horas tardarán?</p>
+  <input id="e4" type="text" inputmode="decimal" autocomplete="off" placeholder="Tu resultado"><button onclick="checkNumber('e4',5,'fb4','¡Correcto! 6 × 10 = 12 × x, por tanto x = 5 horas.')">Comprobar</button>
+  <div id="fb4" class="feedback"></div>
+</div>
+
+<div class="nav"><a class="btn secondary" href="modulo3.html">← Anterior</a>
+<a class="btn" href="modulo5.html">Siguiente →</a></div>
+</section><div class="footer">Matemática Básica · SCORM 1.2 · Módulo 4 de 10 · Creado por: Sixto Rodríguez de Sepúlveda</div></div>
+<script src="scorm.js"></script>
+<script>
+function checkNumber(id,expected,fb,msg){const v=parseFloat(String(document.getElementById(id).value).trim().replace(/\s/g,'').replace(',','.'));const e=document.getElementById(fb);
+if(Number.isFinite(v)&&Math.abs(v-expected)<0.001){e.className='feedback good';e.textContent=msg;}else{e.className='feedback bad';e.textContent='Todavía no. Revisa los datos y prueba de nuevo.';}e.style.display='block';} function choice(fb,ok,bien,mal){const e=document.getElementById(fb);e.className='feedback '+(ok?'good':'bad');e.textContent=ok?(bien||'¡Correcto! Has identificado la relación adecuada.'):(mal||'No exactamente. Piensa qué ocurre con una cantidad cuando aumenta la otra.');e.style.display='block';}
+</script></body></html>

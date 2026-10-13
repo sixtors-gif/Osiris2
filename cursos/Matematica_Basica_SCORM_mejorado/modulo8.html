@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Matemática Básica — Descuentos y aumentos</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="wrap"><section class="hero">
+<div class="brand"><img src="img/logo-centro.png" alt="Logo"><div><div class="kicker">Curso · Matemática Básica</div><h1>Descuentos y aumentos</h1><p class="subtitle">Aprende paso a paso, practica y comprueba tus resultados.</p></div></div>
+<div class="progress"><span style="width:80%"></span></div>
+</section>
+<section class="card">
+<h2>Módulo 8</h2>
+<p>Los porcentajes aparecen constantemente en precios, ofertas, salarios, presupuestos y cambios de cantidades.</p>
+<div class="box tip"><strong>Recuerda:</strong> equivocarse forma parte de aprender. Lo importante es revisar el procedimiento y entender por qué.</div>
+
+<h3>Explicación</h3>
+<p>En un descuento del 20&nbsp;%, primero calculas cuánto se descuenta y después lo restas al precio original. En un aumento del 20&nbsp;%, calculas el incremento y lo sumas.</p>
+<p>Forma rápida, con un factor: descuento del 20&nbsp;% → precio final = precio × 0,80. Aumento del 20&nbsp;% → precio final = precio × 1,20.</p>
+
+<div class="figure">
+  <svg viewBox="0 0 460 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Descuento del 25 por ciento sobre 80 euros deja 60 euros; aumento del 10 por ciento sobre 50 euros deja 55 euros">
+    <text x="90" y="20" font-size="13" text-anchor="middle" fill="#c62828" font-weight="700">Descuento 25 %</text>
+    <text x="90" y="55" font-size="20" text-anchor="middle" fill="#94a3b8" text-decoration="line-through">80 €</text>
+    <text x="90" y="60" font-size="22" text-anchor="middle" fill="#f43f5e">⬇</text>
+    <text x="90" y="95" font-size="24" text-anchor="middle" fill="#065f46" font-weight="700">60 €</text>
+    <text x="90" y="118" font-size="11.5" text-anchor="middle" fill="#4b635d">80 × 0,75</text>
+
+    <line x1="230" y1="10" x2="230" y2="130" stroke="#e2e8f0" stroke-width="1.5"/>
+
+    <text x="370" y="20" font-size="13" text-anchor="middle" fill="#0f766e" font-weight="700">Aumento 10 %</text>
+    <text x="370" y="55" font-size="20" text-anchor="middle" fill="#94a3b8" text-decoration="line-through">50 €</text>
+    <text x="370" y="60" font-size="22" text-anchor="middle" fill="#10b981">⬆</text>
+    <text x="370" y="95" font-size="24" text-anchor="middle" fill="#065f46" font-weight="700">55 €</text>
+    <text x="370" y="118" font-size="11.5" text-anchor="middle" fill="#4b635d">50 × 1,10</text>
+  </svg>
+  <p class="figure-caption">Un descuento multiplica por menos de 1; un aumento multiplica por más de 1.</p>
+</div>
+
+<div class="example"><strong>Descuento:</strong> 80 € con 25 % de descuento → 80 × 0,75 = 60 €.</div>
+<div class="example"><strong>Aumento:</strong> 50 € con 10 % de aumento → 50 × 1,10 = 55 €.</div>
+
+<h3>Actividad práctica</h3>
+<div class="exercise">
+  <h3>En una tienda</h3>
+  <p>Una mochila cuesta 60 € y tiene un descuento del 15 %. ¿Cuál es su precio final?</p>
+  <input id="e8" type="text" inputmode="decimal" autocomplete="off" placeholder="Tu resultado"><button onclick="checkNumber('e8',51,'fb8','¡Correcto! 60 × 0,85 = 51 €.')">Comprobar</button>
+  <div id="fb8" class="feedback"></div>
+  <p>Un precio de 80 € aumenta un 10 %. ¿Nuevo precio?</p>
+  <input id="e8b" type="text" inputmode="decimal" autocomplete="off" placeholder="Tu resultado"><button onclick="checkNumber('e8b',88,'fb8b','¡Correcto! 80 × 1,10 = 88 €.')">Comprobar</button>
+  <div id="fb8b" class="feedback"></div>
+</div>
+
+<div class="nav"><a class="btn secondary" href="modulo7.html">← Anterior</a>
+<a class="btn" href="modulo9.html">Siguiente →</a></div>
+</section><div class="footer">Matemática Básica · SCORM 1.2 · Módulo 8 de 10 · Creado por: Sixto Rodríguez de Sepúlveda</div></div>
+<script src="scorm.js"></script>
+<script>
+function checkNumber(id,expected,fb,msg){const v=parseFloat(String(document.getElementById(id).value).trim().replace(/\s/g,'').replace(',','.'));const e=document.getElementById(fb);
+if(Number.isFinite(v)&&Math.abs(v-expected)<0.001){e.className='feedback good';e.textContent=msg;}else{e.className='feedback bad';e.textContent='Todavía no. Revisa los datos y prueba de nuevo.';}e.style.display='block';} function choice(fb,ok,bien,mal){const e=document.getElementById(fb);e.className='feedback '+(ok?'good':'bad');e.textContent=ok?(bien||'¡Correcto! Has identificado la relación adecuada.'):(mal||'No exactamente. Piensa qué ocurre con una cantidad cuando aumenta la otra.');e.style.display='block';}
+</script></body></html>

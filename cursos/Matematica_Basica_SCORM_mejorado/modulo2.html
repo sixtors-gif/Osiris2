@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Matemática Básica — Regla de tres directa</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="wrap"><section class="hero">
+<div class="brand"><img src="img/logo-centro.png" alt="Logo"><div><div class="kicker">Curso · Matemática Básica</div><h1>Regla de tres directa</h1><p class="subtitle">Aprende paso a paso, practica y comprueba tus resultados.</p></div></div>
+<div class="progress"><span style="width:20%"></span></div>
+</section>
+<section class="card">
+<h2>Módulo 2</h2>
+<p>Cuando una cantidad aumenta y la otra también aumenta (o ambas disminuyen), hablamos de proporcionalidad directa.</p>
+<div class="box tip"><strong>Recuerda:</strong> equivocarse forma parte de aprender. Lo importante es revisar el procedimiento y entender por qué.</div>
+
+<h3>Explicación</h3>
+<p>La regla de tres directa se usa cuando existe una relación constante. Ordena los datos en una tabla y multiplica en cruz.</p>
+<p>Ejemplo: 6 entradas cuestan 42 €. ¿Cuánto cuestan 9 entradas? Si cada entrada cuesta lo mismo, al comprar más entradas pagamos más: es una relación directa.</p>
+
+<div class="figure">
+  <svg viewBox="0 0 380 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tabla de regla de tres directa: 6 entradas 42 euros, 9 entradas x; multiplica en cruz 9 por 42 y divide entre 6">
+    <text x="95" y="20" font-size="13" text-anchor="middle" fill="#065f46" font-weight="700">Entradas</text>
+    <text x="285" y="20" font-size="13" text-anchor="middle" fill="#065f46" font-weight="700">Precio</text>
+    <line x1="10" y1="28" x2="370" y2="28" stroke="#cbd5e1" stroke-width="2"/>
+    <line x1="190" y1="10" x2="190" y2="120" stroke="#cbd5e1" stroke-width="2"/>
+
+    <text x="95" y="60" font-size="17" text-anchor="middle" fill="#173b34" font-weight="700">6</text>
+    <text x="285" y="60" font-size="17" text-anchor="middle" fill="#173b34" font-weight="700">42 €</text>
+    <line x1="10" y1="75" x2="370" y2="75" stroke="#e2e8f0" stroke-width="1.5"/>
+    <text x="95" y="105" font-size="17" text-anchor="middle" fill="#173b34" font-weight="700">9</text>
+    <text x="285" y="105" font-size="17" text-anchor="middle" fill="#047857" font-weight="700">x</text>
+    <line x1="10" y1="120" x2="370" y2="120" stroke="#cbd5e1" stroke-width="2"/>
+
+    <line x1="115" y1="98" x2="265" y2="55" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="205" y="70" font-size="12" fill="#0f766e" font-weight="700">multiplica</text>
+
+    <text x="190" y="150" font-size="15" text-anchor="middle" fill="#173b34">x = (9 × 42) ÷ 6</text>
+    <text x="190" y="175" font-size="16" text-anchor="middle" fill="#065f46" font-weight="700">x = 63 €</text>
+
+    <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#10b981"/></marker></defs>
+  </svg>
+  <p class="figure-caption">Multiplica en diagonal (9 × 42) y divide entre el dato que queda solo (6).</p>
+</div>
+
+<div class="example"><strong>Paso 1:</strong> ordena las cantidades de la misma clase en la misma columna.</div>
+<div class="example"><strong>Paso 2:</strong> comprueba que es directa: más ↔ más, o menos ↔ menos.</div>
+<div class="example"><strong>Paso 3:</strong> calcula: x = (dato conocido × dato conocido) ÷ dato restante.</div>
+
+<h3>Actividad práctica</h3>
+<div class="exercise">
+  <h3>Practica</h3>
+  <p>6 entradas cuestan 42 €. ¿Cuánto cuestan 9 entradas?</p>
+  <input id="e2" type="text" inputmode="decimal" autocomplete="off" placeholder="Tu resultado"><button onclick="checkNumber('e2',63,'fb2','¡Correcto! x = 42 × 9 ÷ 6 = 63 €.')">Comprobar</button>
+  <div id="fb2" class="feedback"></div>
+</div>
+
+<div class="nav"><a class="btn secondary" href="modulo1.html">← Anterior</a>
+<a class="btn" href="modulo3.html">Siguiente →</a></div>
+</section><div class="footer">Matemática Básica · SCORM 1.2 · Módulo 2 de 10 · Creado por: Sixto Rodríguez de Sepúlveda</div></div>
+<script src="scorm.js"></script>
+<script>
+function checkNumber(id,expected,fb,msg){const v=parseFloat(String(document.getElementById(id).value).trim().replace(/\s/g,'').replace(',','.'));const e=document.getElementById(fb);
+if(Number.isFinite(v)&&Math.abs(v-expected)<0.001){e.className='feedback good';e.textContent=msg;}else{e.className='feedback bad';e.textContent='Todavía no. Revisa los datos y prueba de nuevo.';}e.style.display='block';} function choice(fb,ok,bien,mal){const e=document.getElementById(fb);e.className='feedback '+(ok?'good':'bad');e.textContent=ok?(bien||'¡Correcto! Has identificado la relación adecuada.'):(mal||'No exactamente. Piensa qué ocurre con una cantidad cuando aumenta la otra.');e.style.display='block';}
+</script></body></html>

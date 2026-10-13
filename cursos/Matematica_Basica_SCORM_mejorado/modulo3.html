@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Matemática Básica — Regla de tres directa en problemas</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="wrap"><section class="hero">
+<div class="brand"><img src="img/logo-centro.png" alt="Logo"><div><div class="kicker">Curso · Matemática Básica</div><h1>Regla de tres directa en problemas</h1><p class="subtitle">Aprende paso a paso, practica y comprueba tus resultados.</p></div></div>
+<div class="progress"><span style="width:30%"></span></div>
+</section>
+<section class="card">
+<h2>Módulo 3</h2>
+<p>Ahora vamos a llevar la regla de tres a situaciones que podrían ocurrirte de verdad: compras, recetas, distancias y consumo.</p>
+<div class="box tip"><strong>Recuerda:</strong> equivocarse forma parte de aprender. Lo importante es revisar el procedimiento y entender por qué.</div>
+
+<h3>Explicación</h3>
+<p>Lo difícil no es multiplicar: es identificar los datos y decidir qué representa cada uno. No empieces a calcular sin leer el problema completo.</p>
+<p>Un buen hábito es escribir una frase: «Si aumenta X, ¿qué debería pasar con Y?». Si la respuesta es que también aumenta, probablemente sea directa.</p>
+
+<div class="card-grid">
+  <div class="mini-card"><div class="ico">🛒</div><b>Compra</b>2 kg de fruta cuestan 5 €. Para 6 kg, el precio sube en la misma proporción.</div>
+  <div class="mini-card"><div class="ico">🍝</div><b>Receta</b>Para 4 personas hacen falta 300 g de pasta. Para 8 personas, el doble.</div>
+  <div class="mini-card"><div class="ico">🚴</div><b>Distancia</b>A velocidad constante, más tiempo implica más distancia recorrida.</div>
+</div>
+
+<h3>Actividad práctica</h3>
+<div class="exercise">
+  <h3>Desafío cotidiano</h3>
+  <p>Una receta para 4 personas necesita 300 g de pasta. ¿Cuánta pasta necesitas para 10 personas?</p>
+  <input id="e3" type="text" inputmode="decimal" autocomplete="off" placeholder="Tu resultado"><button onclick="checkNumber('e3',750,'fb3','¡Correcto! 300 × 10 ÷ 4 = 750 g.')">Comprobar</button>
+  <div id="fb3" class="feedback"></div>
+</div>
+
+<div class="nav"><a class="btn secondary" href="modulo2.html">← Anterior</a>
+<a class="btn" href="modulo4.html">Siguiente →</a></div>
+</section><div class="footer">Matemática Básica · SCORM 1.2 · Módulo 3 de 10 · Creado por: Sixto Rodríguez de Sepúlveda</div></div>
+<script src="scorm.js"></script>
+<script>
+function checkNumber(id,expected,fb,msg){const v=parseFloat(String(document.getElementById(id).value).trim().replace(/\s/g,'').replace(',','.'));const e=document.getElementById(fb);
+if(Number.isFinite(v)&&Math.abs(v-expected)<0.001){e.className='feedback good';e.textContent=msg;}else{e.className='feedback bad';e.textContent='Todavía no. Revisa los datos y prueba de nuevo.';}e.style.display='block';} function choice(fb,ok,bien,mal){const e=document.getElementById(fb);e.className='feedback '+(ok?'good':'bad');e.textContent=ok?(bien||'¡Correcto! Has identificado la relación adecuada.'):(mal||'No exactamente. Piensa qué ocurre con una cantidad cuando aumenta la otra.');e.style.display='block';}
+</script></body></html>

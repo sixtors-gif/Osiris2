@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Matemática Básica — Repaso y problemas combinados</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="wrap"><section class="hero">
+<div class="brand"><img src="img/logo-centro.png" alt="Logo"><div><div class="kicker">Curso · Matemática Básica</div><h1>Repaso y problemas combinados</h1><p class="subtitle">Aprende paso a paso, practica y comprueba tus resultados.</p></div></div>
+<div class="progress"><span style="width:100%"></span></div>
+</section>
+<section class="card">
+<h2>Módulo 10</h2>
+<p>Último entrenamiento: identifica la herramienta, calcula y revisa si el resultado tiene sentido.</p>
+<div class="box tip"><strong>Recuerda:</strong> equivocarse forma parte de aprender. Lo importante es revisar el procedimiento y entender por qué.</div>
+
+<h3>Explicación</h3>
+<p>Ya tienes dos grandes herramientas. La regla de tres trabaja con relaciones entre cantidades; los porcentajes expresan relaciones respecto a 100.</p>
+<p>Cuando un problema combine ambas, no te asustes: divide el problema en pasos. Por ejemplo, puedes calcular primero un descuento y después aplicar una proporción.</p>
+
+<div class="steps">
+  <div class="step"><b>Lee</b> el problema completo antes de calcular nada.</div>
+  <div class="step"><b>Identifica</b> las cantidades y qué representa cada una.</div>
+  <div class="step"><b>Decide</b> si es regla de tres (directa/inversa) o porcentaje.</div>
+  <div class="step"><b>Calcula</b> paso a paso, sin saltarte operaciones.</div>
+  <div class="step"><b>Comprueba</b> que el resultado tiene sentido.</div>
+</div>
+
+<div class="example"><strong>Comprobación:</strong> si una tienda aplica un 20 % de descuento, el precio final debe ser menor que el original. Si te sale mayor, revisa la operación.</div>
+
+<h3>Actividad práctica</h3>
+<div class="exercise">
+  <h3>Reto final</h3>
+  <p>Un producto cuesta 150 €. Tiene un 20 % de descuento. Después, se aplica un gasto fijo de 5 €. ¿Cuál es el total?</p>
+  <input id="e10" type="text" inputmode="decimal" autocomplete="off" placeholder="Tu resultado"><button onclick="checkNumber('e10',125,'fb10','¡Correcto! 150 × 0,80 = 120; 120 + 5 = 125 €.')">Comprobar</button>
+  <div id="fb10" class="feedback"></div>
+</div>
+
+<div class="nav"><a class="btn secondary" href="modulo9.html">← Anterior</a>
+<a class="btn" href="repaso.html">Ir al repaso →</a></div>
+</section><div class="footer">Matemática Básica · SCORM 1.2 · Módulo 10 de 10 · Creado por: Sixto Rodríguez de Sepúlveda</div></div>
+<script src="scorm.js"></script>
+<script>
+function checkNumber(id,expected,fb,msg){const v=parseFloat(String(document.getElementById(id).value).trim().replace(/\s/g,'').replace(',','.'));const e=document.getElementById(fb);
+if(Number.isFinite(v)&&Math.abs(v-expected)<0.001){e.className='feedback good';e.textContent=msg;}else{e.className='feedback bad';e.textContent='Todavía no. Revisa los datos y prueba de nuevo.';}e.style.display='block';} function choice(fb,ok,bien,mal){const e=document.getElementById(fb);e.className='feedback '+(ok?'good':'bad');e.textContent=ok?(bien||'¡Correcto! Has identificado la relación adecuada.'):(mal||'No exactamente. Piensa qué ocurre con una cantidad cuando aumenta la otra.');e.style.display='block';}
+</script></body></html>

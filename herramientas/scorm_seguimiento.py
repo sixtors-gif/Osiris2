@@ -84,6 +84,9 @@ def orden_paginas(d):
     # Prácticas: van justo después del módulo al que pertenecen.
     if "practica_instalacion.html" in pags:
         orden.insert(orden.index("modulo12.html") + 1, "practica_instalacion.html")
+    # Repaso previo al examen (curso de Matemática básica).
+    if "repaso.html" in pags:
+        orden.append("repaso.html")
     orden.append("examen_final.html")
     extra = set(pags) - set(orden)
     assert not extra, f"{d}: páginas sin ubicar en el orden: {extra}"
@@ -97,6 +100,9 @@ def titulo_pagina(d, f):
         return "Presentación del curso"
     if f == "examen_final.html":
         return "Examen final"
+    if f == "repaso.html":
+        return "Repaso previo al examen"
+    t = re.sub(r"^[^—]+ — ", "", t)  # «Curso — Tema» → «Tema»
     m = re.match(r"(modulo|unidad)(\d+)\.html$", f)
     if m:
         pref = ("Módulo " if m.group(1) == "modulo" else "Unidad ") + m.group(2)

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Matemática Básica — Porcentajes en situaciones reales</title><link rel="stylesheet" href="style.css"></head>
+<body><div class="wrap"><section class="hero">
+<div class="brand"><img src="img/logo-centro.png" alt="Logo"><div><div class="kicker">Curso · Matemática Básica</div><h1>Porcentajes en situaciones reales</h1><p class="subtitle">Aprende paso a paso, practica y comprueba tus resultados.</p></div></div>
+<div class="progress"><span style="width:90%"></span></div>
+</section>
+<section class="card">
+<h2>Módulo 9</h2>
+<p>Ahora mezclamos porcentajes con decisiones cotidianas: notas, batería, presupuestos y encuestas.</p>
+<div class="box tip"><strong>Recuerda:</strong> equivocarse forma parte de aprender. Lo importante es revisar el procedimiento y entender por qué.</div>
+
+<h3>Explicación</h3>
+<p>Los porcentajes sirven para resumir información. Pero conviene preguntar siempre: «¿el porcentaje se aplica a qué cantidad?». El 20&nbsp;% de 50 no es lo mismo que el 20&nbsp;% de 500.</p>
+
+<div class="figure">
+  <svg viewBox="0 0 380 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico circular: el 35 por ciento de 240 personas encuestadas, 84 personas, eligió la opción A">
+    <g transform="translate(95,95)">
+      <circle r="70" fill="none" stroke="#e5e7eb" stroke-width="26"/>
+      <circle r="70" fill="none" stroke="#10b981" stroke-width="26" stroke-dasharray="153.9 439.8" transform="rotate(-90)"/>
+      <text x="0" y="-2" font-size="24" text-anchor="middle" fill="#065f46" font-weight="700">35 %</text>
+      <text x="0" y="20" font-size="12" text-anchor="middle" fill="#4b635d">opción A</text>
+    </g>
+    <rect x="210" y="38" width="16" height="16" fill="#10b981"/>
+    <text x="232" y="51" font-size="12.5" fill="#173b34" font-weight="700">Opción A</text>
+    <text x="232" y="68" font-size="12" fill="#4b635d">84 personas (35 %)</text>
+    <rect x="210" y="90" width="16" height="16" fill="#e5e7eb"/>
+    <text x="232" y="103" font-size="12.5" fill="#173b34" font-weight="700">Resto</text>
+    <text x="232" y="120" font-size="12" fill="#4b635d">156 personas (65 %)</text>
+    <text x="210" y="155" font-size="12" fill="#4b635d">Total: 240 personas</text>
+  </svg>
+  <p class="figure-caption">240 × 0,35 = 84 personas eligieron la opción A.</p>
+</div>
+
+<p>También es importante distinguir una cantidad y su porcentaje. Si una encuesta tiene 200 respuestas y el 35&nbsp;% elige una opción, esa opción tiene 70 respuestas.</p>
+<div class="example"><strong>Nota:</strong> si respondes correctamente 18 de 20 preguntas, has acertado el 90&nbsp;%.</div>
+<div class="example"><strong>Presupuesto:</strong> si destinas 30&nbsp;% de 400 € a ocio, son 120 €.</div>
+<div class="example"><strong>Batería:</strong> el 25&nbsp;% de 80 unidades de capacidad equivale a 20 unidades.</div>
+
+<h3>Actividad práctica</h3>
+<div class="exercise">
+  <h3>Situación real</h3>
+  <p>En una encuesta responden 160 personas. El 45&nbsp;% elige la opción A. ¿Cuántas personas la eligieron?</p>
+  <input id="e9" type="text" inputmode="decimal" autocomplete="off" placeholder="Tu resultado"><button onclick="checkNumber('e9',72,'fb9','¡Correcto! 160 × 0,45 = 72 personas.')">Comprobar</button>
+  <div id="fb9" class="feedback"></div>
+</div>
+
+<div class="nav"><a class="btn secondary" href="modulo8.html">← Anterior</a>
+<a class="btn" href="modulo10.html">Siguiente →</a></div>
+</section><div class="footer">Matemática Básica · SCORM 1.2 · Módulo 9 de 10 · Creado por: Sixto Rodríguez de Sepúlveda</div></div>
+<script src="scorm.js"></script>
+<script>
+function checkNumber(id,expected,fb,msg){const v=parseFloat(String(document.getElementById(id).value).trim().replace(/\s/g,'').replace(',','.'));const e=document.getElementById(fb);
+if(Number.isFinite(v)&&Math.abs(v-expected)<0.001){e.className='feedback good';e.textContent=msg;}else{e.className='feedback bad';e.textContent='Todavía no. Revisa los datos y prueba de nuevo.';}e.style.display='block';} function choice(fb,ok,bien,mal){const e=document.getElementById(fb);e.className='feedback '+(ok?'good':'bad');e.textContent=ok?(bien||'¡Correcto! Has identificado la relación adecuada.'):(mal||'No exactamente. Piensa qué ocurre con una cantidad cuando aumenta la otra.');e.style.display='block';}
+</script></body></html>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="MATEMATICA_BASICA_SCORM" version="1.1"
+          xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                              http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="ORG_1">
+    <organization identifier="ORG_1">
+      <title>Matemática Básica</title>
+      <item identifier="ITEM_00" identifierref="RES_INDEX">
+        <title>Presentación del curso</title>
+      </item>
+      <item identifier="ITEM_01" identifierref="RES_MODULO1">
+        <title>Módulo 1: Entender las proporciones</title>
+      </item>
+      <item identifier="ITEM_02" identifierref="RES_MODULO2">
+        <title>Módulo 2: Regla de tres directa</title>
+      </item>
+      <item identifier="ITEM_03" identifierref="RES_MODULO3">
+        <title>Módulo 3: Regla de tres directa en problemas</title>
+      </item>
+      <item identifier="ITEM_04" identifierref="RES_MODULO4">
+        <title>Módulo 4: Regla de tres inversa</title>
+      </item>
+      <item identifier="ITEM_05" identifierref="RES_MODULO5">
+        <title>Módulo 5: Problemas de regla de tres</title>
+      </item>
+      <item identifier="ITEM_06" identifierref="RES_MODULO6">
+        <title>Módulo 6: ¿Qué es un porcentaje?</title>
+      </item>
+      <item identifier="ITEM_07" identifierref="RES_MODULO7">
+        <title>Módulo 7: Calcular tantos por ciento</title>
+      </item>
+      <item identifier="ITEM_08" identifierref="RES_MODULO8">
+        <title>Módulo 8: Descuentos y aumentos</title>
+      </item>
+      <item identifier="ITEM_09" identifierref="RES_MODULO9">
+        <title>Módulo 9: Porcentajes en situaciones reales</title>
+      </item>
+      <item identifier="ITEM_10" identifierref="RES_MODULO10">
+        <title>Módulo 10: Repaso y problemas combinados</title>
+      </item>
+      <item identifier="ITEM_11" identifierref="RES_REPASO">
+        <title>Repaso previo al examen</title>
+      </item>
+      <item identifier="ITEM_12" identifierref="RES_EXAMEN_FINAL">
+        <title>Examen final</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="RES_INDEX" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/logo-centro.png"/>
+    </resource>
+    <resource identifier="RES_MODULO1" type="webcontent" adlcp:scormtype="sco" href="modulo1.html">
+      <file href="modulo1.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/logo-centro.png"/>
+    </resource>
+    <resource identifier="RES_MODULO2" type="webcontent" adlcp:scormtype="sco" href="modulo2.html">
+      <file href="modulo2.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/logo-centro.png"/>
+    </resource>
+    <resource identifier="RES_MODULO3" type="webcontent" adlcp:scormtype="sco" href="modulo3.html">
+      <file href="modulo3.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/logo-centro.png"/>
+    </resource>
+    <resource identifier="RES_MODULO4" type="webcontent" adlcp:scormtype="sco" href="modulo4.html">
+      <file href="modulo4.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/logo-centro.png"/>
+    </resource>
+    <resource identifier="RES_MODULO5" type="webcontent" adlcp:scormtype="sco" href="modulo5.html">
+      <file href="modulo5.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/logo-centro.png"/>
+    </resource>
+    <resource identifier="RES_MODULO6" type="webcontent" adlcp:scormtype="sco" href="modulo6.html">
+      <file href="modulo6.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/logo-centro.png"/>
+    </resource>
+    <resource identifier="RES_MODULO7" type="webcontent" adlcp:scormtype="sco" href="modulo7.html">
+      <file href="modulo7.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/logo-centro.png"/>
+    </resource>
+    <resource identifier="RES_MODULO8" type="webcontent" adlcp:scormtype="sco" href="modulo8.html">
+      <file href="modulo8.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/logo-centro.png"/>
+    </resource>
+    <resource identifier="RES_MODULO9" type="webcontent" adlcp:scormtype="sco" href="modulo9.html">
+      <file href="modulo9.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/logo-centro.png"/>
+    </resource>
+    <resource identifier="RES_MODULO10" type="webcontent" adlcp:scormtype="sco" href="modulo10.html">
+      <file href="modulo10.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/logo-centro.png"/>
+    </resource>
+    <resource identifier="RES_REPASO" type="webcontent" adlcp:scormtype="sco" href="repaso.html">
+      <file href="repaso.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/logo-centro.png"/>
+    </resource>
+    <resource identifier="RES_EXAMEN_FINAL" type="webcontent" adlcp:scormtype="sco" href="examen_final.html">
+      <file href="examen_final.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/logo-centro.png"/>
+    </resource>
+  </resources>
+</manifest>

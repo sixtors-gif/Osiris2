@@ -1,0 +1,13 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Repaso — Matemática Básica</title><link rel="stylesheet" href="style.css"></head><body><div class="wrap">
+<section class="hero"><div class="brand"><img src="img/logo-centro.png" alt="Logo"><div><div class="kicker">Curso · Matemática Básica</div><h1>Repaso y problemas combinados</h1><p class="subtitle">Cinco preguntas rápidas antes del examen final.</p></div></div><div class="progress"><span style="width:92%"></span></div></section>
+<section class="card"><h2>Repaso</h2><p>Responde sin mirar apuntes. Después revisa tus errores: son una pista sobre lo que necesitas practicar.</p>
+<div class="box tip">💡 <strong>Antes de responder:</strong> identifica si cada pregunta es una regla de tres (directa o inversa) o un porcentaje.</div>
+<div id="quiz"></div><button onclick="grade()">Corregir repaso</button><div id="result" class="box" style="display:none"></div>
+<div class="nav"><a class="btn secondary" href="modulo10.html">← Volver al módulo 10</a><a class="btn" href="examen_final.html">Examen final →</a></div></section><div class="footer">Matemática Básica · Repaso · Creado por: Sixto Rodríguez de Sepúlveda</div></div>
+<script src="scorm.js"></script><script>
+const qs=[["Si 5 cuadernos cuestan 15 €, ¿cuánto cuestan 8?", ["24 €", "20 €", "30 €"], 0], ["Si 4 personas tardan 12 horas en un trabajo, 8 personas tardan...", ["24 h", "6 h", "3 h"], 1], ["El 25 % de 200 es...", ["25", "50", "75"], 1], ["Un descuento del 10 % sobre 90 € deja un precio de...", ["81 €", "80 €", "89 €"], 0], ["¿Qué porcentaje de 120 representa 30?", ["20 %", "25 %", "30 %"], 1]];
+const q=document.getElementById('quiz');
+qs.forEach((x,i)=>{let d=document.createElement('div');d.className='quiz-q';d.innerHTML='<strong>'+(i+1)+'. '+x[0]+'</strong>';
+x[1].forEach((o,j)=>{let l=document.createElement('label');l.className='option';l.innerHTML='<input type="radio" name="q'+i+'" value="'+j+'"> '+o;d.appendChild(l)});q.appendChild(d)});
+function grade(){let s=0;qs.forEach((x,i)=>{let a=document.querySelector('input[name=q'+i+']:checked');if(a&&+a.value===x[2])s++;});let r=document.getElementById('result');r.style.display='block';r.innerHTML='<strong>Resultado: '+s+'/'+qs.length+'</strong><br>'+ (s===qs.length?'¡Perfecto! Ya puedes ir al examen final.':'Revisa los módulos que necesites y vuelve a intentarlo.');}
+</script></body></html>
