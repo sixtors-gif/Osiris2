@@ -15,16 +15,16 @@
   </div>
   <div class="progress-container">
     <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
-    <div class="progress-text">Curso de Ciberseguridad · Módulo 15 de 15</div>
+    <div class="progress-text">Curso de Ciberseguridad · Examen final</div>
   </div>
   <div class="content-area">
     <section class="module">
       <h2>🏁 Examen final</h2>
-      <p>Responde las 32 preguntas con calma. Al terminar verás tu resultado al instante. Se recomienda acertar al menos el 70&nbsp;%.</p>
+      <p>Responde las 34 preguntas con calma. Al terminar verás tu resultado al instante. Se recomienda acertar al menos el 70&nbsp;%.</p>
       <div class="summary-box">🎯 <b>Consejo:</b> aplica el semáforo del módulo 15 — si una opción implica compartir una contraseña, un código, fotos íntimas o dar dinero, casi seguro que no es la respuesta correcta.</div>
       <div id="exam"></div>
       <div class="navigation">
-        <button class="nav-btn" onclick="scormGo('modulo15.html')">⬅️ Repasar módulo 15</button>
+        <button class="nav-btn" onclick="scormGo('modulo16.html')">⬅️ Repasar módulo 16</button>
         <button class="nav-btn" onclick="finishExam()">Finalizar</button>
       </div>
       <div id="result" class="certificate" style="display:none;margin-top:25px"></div>
@@ -35,26 +35,26 @@
 <script src="scorm.js"></script>
 <script>
 const qs=[
-["¿Qué debe hacerte sospechar de un mensaje?", "Que pida una contraseña o código con urgencia.", "Compartirla en un grupo", "Ignorar todas las actualizaciones", "Publicarlo en redes"],
+["¿Qué debe hacerte sospechar de un mensaje?", "Que pida una contraseña o código con urgencia.", "Que te salude por tu nombre", "Que incluya el logotipo de la empresa", "Que llegue en horario de clase"],
 ["¿Qué es 2FA?", "Una segunda prueba de identidad además de la contraseña.", "Cambiar de móvil", "Crear una segunda cuenta", "Tener dos contraseñas iguales"],
 ["¿Qué haces con una contraseña reutilizada?", "La sustituyes por una contraseña exclusiva para ese servicio.", "Compartirla con amigos", "Publicarla en una nota visible", "Usarla también para el correo"],
 ["¿Qué es phishing?", "Un engaño que intenta obtener datos haciéndose pasar por una fuente legítima.", "Una actualización", "Una copia de seguridad", "Una red Wi-Fi"],
 ["¿Qué haces ante un enlace inesperado?", "No introduces datos y verificas el servicio por un canal oficial.", "Hacer clic rápidamente", "Desactivar la seguridad", "Reenviarlo a un amigo"],
 ["¿Qué es la huella digital?", "La información y rastro que dejamos con nuestra actividad en Internet.", "Solo las fotos del móvil", "Únicamente los videojuegos", "Nada que tenga que ver contigo"],
-["¿Qué dato conviene proteger especialmente?", "Contraseñas y códigos de acceso.", "El código de acceso", "El nombre de una app", "El color del móvil"],
+["¿Qué dato conviene proteger especialmente?", "Contraseñas y códigos de acceso.", "El nombre de tu videojuego favorito", "El nombre de una app", "El color del móvil"],
 ["¿Qué haces con las actualizaciones?", "Mantienes sistema y aplicaciones actualizados desde fuentes oficiales.", "Ignorarlas siempre", "Instalar archivos aleatorios", "Desactivarlas"],
 ["¿Qué es malware?", "Software malicioso.", "Una red Wi-Fi", "Una contraseña fuerte", "Una copia de seguridad"],
 ["¿Qué indica que una descarga puede ser peligrosa?", "Que procede de una fuente dudosa o pide desactivar protecciones.", "Que sea de la web oficial", "Que sea un anuncio", "Que pida permisos razonables"],
 ["¿Qué haces si un supuesto moderador pide tu código?", "No lo compartes y utilizas el soporte oficial.", "Darle el código", "Publicarlo", "Darle también la contraseña"],
 ["¿Qué haces con contenido humillante de otra persona?", "No lo reenvías y buscas ayuda/reportas cuando corresponda.", "Reenviarlo", "Añadir comentarios", "Hacer una captura y difundirla"],
 ["Si sospechas que han entrado en tu cuenta, ¿qué haces?", "Cambias la contraseña, cierras sesiones y activas 2FA.", "Publicar la contraseña", "Ignorarlo", "Crear otra cuenta y abandonar la anterior"],
-["¿Por qué no conviene publicar una ubicación en tiempo real?", "Porque puede revelar dónde estás o tus rutinas.", "Porque revela rutinas o ubicación", "Porque ocupa memoria", "Porque cambia el color de las fotos"],
-["¿Qué es una buena práctica con apps?", "Instalarlas desde fuentes oficiales y revisar sus permisos.", "Fuentes oficiales", "Archivos aleatorios", "Apps modificadas desconocidas"],
+["¿Por qué no conviene publicar una ubicación en tiempo real?", "Porque puede revelar dónde estás o tus rutinas.", "Porque gasta más batería", "Porque ocupa memoria", "Porque cambia el color de las fotos"],
+["¿Qué es una buena práctica con apps?", "Instalarlas desde fuentes oficiales y revisar sus permisos.", "Aceptar todos los permisos sin leerlos", "Archivos aleatorios", "Apps modificadas desconocidas"],
 ["¿Qué debes hacer si un sitio te pide desactivar el antivirus?", "No seguir la indicación y abandonar la descarga.", "Seguir la instrucción", "Desactivar el móvil", "Enviar el archivo a más personas"],
 ["¿El soporte legítimo necesita tu contraseña?", "No.", "Sí, siempre", "Sí, si dice ser urgente", "Sí, si conoce tu nombre"],
 ["¿Qué hacer ante un problema grave online?", "Pedir ayuda a una persona adulta o responsable y utilizar canales oficiales.", "No contarle nada a nadie", "Buscar un programa desconocido", "Publicar los datos del incidente"],
 ["¿Qué significa semáforo rojo?", "Parar porque hay señales claras de riesgo.", "Hacer clic sin mirar", "Dar el código", "Compartir el mensaje"],
-["¿Cuál es el objetivo del curso?", "Convertir la seguridad digital en hábitos sencillos y aplicables.", "Aprender hábitos para reducir riesgos", "Aprender a hackear personas", "Conseguir más seguidores"],
+["¿Cuál es el objetivo del curso?", "Convertir la seguridad digital en hábitos sencillos y aplicables.", "Aprender a desactivar el antivirus", "Aprender a hackear personas", "Conseguir más seguidores"],
 ["¿Qué es la ingeniería social?", "Manipular psicológicamente a alguien para que revele información o haga algo que beneficia al atacante.", "Un tipo de red social", "Un curso de programación", "Un antivirus"],
 ["Un mensaje combina autoridad, urgencia y miedo a la vez. ¿Qué deberías pensar?", "Que es muy probable que sea un intento de manipulación o estafa.", "Que es muy fiable", "Que debo actuar lo antes posible sin dudar", "Que es spam sin importancia"],
 ["¿Qué es el smishing?", "Un engaño de phishing que llega por SMS.", "Un virus para el móvil", "Una app de mensajería segura", "Un tipo de copia de seguridad"],
@@ -66,8 +66,7 @@ const qs=[
 ["¿Qué es un deepfake?", "Un vídeo, imagen o audio manipulado con inteligencia artificial para parecer real.", "Una copia de seguridad en la nube", "Un tipo de contraseña muy segura", "Una actualización del sistema"],
 ["Recibes un audio con la voz de un familiar pidiendo dinero urgente desde un número desconocido. ¿Qué haces?", "Cuelgas y le llamas tú directamente al número que ya tenías guardado.", "Envías el dinero inmediatamente porque es su voz", "Le pides que te lo confirme por el mismo número desconocido", "Lo compartes con más gente para pedir consejo"],
 ["¿Cuál es una señal de alarma de grooming?", "Alguien que insiste en pasar a un chat privado y pide que lo mantengas en secreto.", "Alguien que propone jugar una partida pública en un videojuego", "Alguien que hace una videollamada para presentarse", "Alguien que comparte contenido educativo abierto"],
-["Si alguien te chantajea con una imagen tuya para que le envíes más contenido o dinero, ¿qué es lo más importante que debes saber?", "Que no es culpa tuya y que pedir ayuda no tiene consecuencias negativas para ti.", "Que debes pagar para que no la difunda", "Que es mejor no contárselo a nadie", "Que debes enviarle más contenido para que no se enfade"]
-];
+["Si alguien te chantajea con una imagen tuya para que le envíes más contenido o dinero, ¿qué es lo más importante que debes saber?", "Que no es culpa tuya y que pedir ayuda no tiene consecuencias negativas para ti.", "Que debes pagar para que no la difunda", "Que es mejor no contárselo a nadie", "Que debes enviarle más contenido para que no se enfade"], ["¿Qué describe mejor el doxxing?", "Recopilar y difundir datos personales de alguien sin su permiso para intimidarle, acosarle o localizarle.", "Hacer una copia de seguridad de tus fotos", "Cambiar la contraseña de una red social", "Publicar un vídeo propio en una red social"], ["Alguien está difundiendo tu dirección y teléfono en un grupo. ¿Qué haces primero?", "No responder en caliente, guardar pruebas, pedir ayuda a una persona adulta y denunciarlo en la plataforma.", "Responder con amenazas para que pare", "Reenviar la publicación para que todos lo sepan", "Borrar tus redes sin guardar ninguna prueba"]];
 let answers={};
 const root=document.getElementById('exam');
 qs.forEach((x,i)=>{

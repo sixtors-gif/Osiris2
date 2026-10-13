@@ -4,8 +4,8 @@ Contenido:
 - imsmanifest.xml: paquete SCORM 1.2.
 - index.html: bienvenida y reto inicial.
 - modulo1.html ... modulo16.html: 16 módulos con teoría sencilla, esquemas visuales, vídeos oficiales (INCIBE / Internet Segura for Kids) y ejercicios prácticos. Incluye ingeniería social, phishing/smishing/vishing, ransomware, compras y estafas online, inteligencia artificial/deepfakes, grooming/sextorsión y un módulo avanzado sobre doxxing, huella digital, prevención y respuesta.
-- examen_final.html: examen final interactivo de 32 preguntas y puntuación.
-- preguntas_moodle.gift: 46 preguntas en formato GIFT para importar en Moodle.
+- examen_final.html: examen final interactivo de 34 preguntas y puntuación.
+- preguntas_moodle.gift: 51 preguntas en formato GIFT (una categoría por módulo, del 1 al 16) para importar en Moodle.
 - style.css + scorm.js + img/logo-centro.png.
 
 Nota sobre los vídeos: los módulos 2, 4, 8, 10, 11 y 13 incrustan vídeos oficiales de YouTube (INCIBE e Internet Segura for Kids). Requieren conexión a Internet para reproducirse; el resto del curso funciona sin conexión.
