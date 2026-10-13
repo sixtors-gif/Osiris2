@@ -1,0 +1,395 @@
+// Curso de Ciberseguridad para jóvenes de 16 años
+// Autor: Sixto Rodríguez de Sepúlveda
+// Formato GIFT para Moodle. Codificación UTF-8. Una única respuesta correcta por pregunta.
+// Una categoría por módulo (Banco de preguntas > Importar > formato GIFT).
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 1 - Tu vida digital también necesita seguridad
+
+::Ciberseguridad 1::¿Qué es la ciberseguridad? {
+=Proteger dispositivos, cuentas, datos y personas frente a riesgos digitales.
+~Instalar muchos juegos
+~Tener muchos seguidores
+~Cambiar de móvil cada año
+}
+
+::Ciberseguridad 6::¿Qué forma parte de la huella digital? {
+=Lo que publicas, comentas o compartes en Internet.
+~Solo las fotos que guardas en tu móvil
+~Únicamente tus mensajes privados
+~Nada de lo que hagas online
+}
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 2 - Ingeniería social - el arte del engaño
+
+::Ciberseguridad 20::¿Qué es la suplantación de identidad? {
+=Hacerse pasar por otra persona o servicio para engañar.
+~Cambiar de avatar
+~Usar un apodo
+~Crear una contraseña
+}
+
+::Ciberseguridad 31::¿Qué es la ingeniería social? {
+=Manipular psicológicamente a una persona para conseguir información o acciones que benefician al atacante.
+~Un tipo de red social
+~Un lenguaje de programación
+~Un antivirus gratuito
+}
+
+::Ciberseguridad 32::¿Cuál es una palanca típica de la ingeniería social? {
+=Crear una falsa sensación de urgencia para que actúes sin pensar.
+~Explicar la información con calma y sin prisa
+~Pedir que verifiques todo con calma
+~Ofrecer tiempo ilimitado para decidir
+}
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 3 - Contraseñas y acceso seguro
+
+::Ciberseguridad 2::¿Cuál es una buena práctica con las contraseñas? {
+=Usar una contraseña larga y diferente para cada servicio.
+~Usar la misma en todas partes
+~Compartirla con un amigo
+~Usar siempre el nombre y año de nacimiento
+}
+
+::Ciberseguridad 3::¿Qué añade la autenticación en dos pasos? {
+=Una segunda prueba de identidad además de la contraseña.
+~Una segunda cuenta
+~Más publicidad
+~Un antivirus obligatorio
+}
+
+::Ciberseguridad 13::¿Qué debes hacer con un código de verificación que recibes sin haberlo solicitado? {
+=No compartirlo y revisar si alguien intenta acceder a tu cuenta.
+~Compartirlo con quien lo pida
+~Publicarlo
+~Responder con otra contraseña
+}
+
+::Ciberseguridad 25::¿Qué dato es especialmente sensible para el acceso a una cuenta? {
+=Un código de verificación de un solo uso.
+~El color favorito
+~El videojuego preferido
+~La marca de zapatillas
+}
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 4 - Phishing, smishing y vishing - que no te pesquen
+
+::Ciberseguridad 4::¿Cuál es una señal típica de phishing? {
+=Un mensaje que crea urgencia y pide hacer clic o entregar datos.
+~Un aviso que esperabas
+~Una actualización oficial dentro de la app
+~Un mensaje de un profesor que conoces
+}
+
+::Ciberseguridad 5::¿Qué debes hacer ante un enlace sospechoso? {
+=No introducir datos y comprobar el servicio desde su web o app oficial.
+~Poner tu contraseña para comprobarlo
+~Reenviarlo a tus amigos
+~Desactivar el antivirus
+}
+
+::Ciberseguridad 29::¿Qué haces si una página imita perfectamente a una marca? {
+=Compruebas la dirección y accedes por un canal oficial en lugar de confiar solo en su apariencia.
+~Introduces la contraseña
+~Descargas lo que ofrezca
+~Das tus datos para verificar
+}
+
+::Ciberseguridad 33::¿Qué es el smishing? {
+=Un intento de phishing que llega por SMS.
+~Un virus que ataca solo a ordenadores
+~Una aplicación oficial de mensajería
+~Un método para hacer copias de seguridad
+}
+
+::Ciberseguridad 34::¿Qué es el vishing? {
+=Un engaño de ingeniería social realizado por llamada telefónica.
+~Un tipo de contraseña
+~Una actualización del sistema operativo
+~Una red social para videojuegos
+}
+
+::Ciberseguridad 35::¿Qué debes hacer si te llaman haciéndose pasar por tu banco y piden un código? {
+=Colgar y llamar tú directamente al teléfono oficial del banco.
+~Dar el código si mencionan tu nombre completo
+~Dar el código y luego avisar al banco
+~Pedir que te llamen en otro momento y dar el código entonces
+}
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 5 - Redes sociales y privacidad
+
+::Ciberseguridad 12::¿Cuál es una buena regla antes de compartir una foto de otra persona? {
+=Pensar si tienes permiso y si la publicación puede perjudicarla.
+~Compartirla porque ya existe
+~Compartirla solo con desconocidos
+~Etiquetar a todo el mundo
+}
+
+::Ciberseguridad 19::¿Qué información no deberías publicar junto con tu rutina diaria? {
+=Tu ubicación en tiempo real y horarios habituales.
+~Un dibujo
+~Una opinión sobre una película
+~El nombre de una canción
+}
+
+::Ciberseguridad 26::¿Qué haces antes de aceptar una solicitud de amistad de alguien desconocido? {
+=Piensas si tienes un motivo para aceptarla y evitas compartir datos personales.
+~Le das tu teléfono
+~Le mandas una foto privada
+~Le das tu contraseña
+}
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 6 - Móvil, Wi-Fi y dispositivos
+
+::Ciberseguridad 16::¿Por qué es útil bloquear la pantalla? {
+=Dificulta que otra persona acceda al dispositivo si lo dejas solo.
+~Aumenta la velocidad
+~Evita todos los virus
+~Hace invisible el móvil
+}
+
+::Ciberseguridad 17::¿Qué debes hacer si pierdes el móvil? {
+=Usar las herramientas oficiales para localizar/bloquearlo y avisar a una persona responsable si procede.
+~Esperar semanas
+~Publicar tus contraseñas
+~Desactivar todas las cuentas de tus amigos
+}
+
+::Ciberseguridad 28::¿Qué es una red Wi‑Fi pública? {
+=Una red de acceso compartido que no debes asumir que es de confianza.
+~Una contraseña
+~Un antivirus
+~Una copia de seguridad
+}
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 7 - Malware y descargas
+
+::Ciberseguridad 7::¿Qué conviene hacer con las actualizaciones? {
+=Instalarlas desde las fuentes oficiales y mantener el dispositivo actualizado.
+~Ignorarlas siempre
+~Instalar cualquier archivo que aparezca
+~Desactivar las actualizaciones
+}
+
+::Ciberseguridad 8::¿Qué es malware? {
+=Software creado para realizar acciones maliciosas.
+~Una red Wi-Fi
+~Un tipo de contraseña
+~Una copia de seguridad
+}
+
+::Ciberseguridad 14::¿Qué opción reduce el riesgo al instalar una app? {
+=Usar una tienda o fuente oficial y revisar permisos.
+~Buscar la versión pirateada
+~Aceptar todos los permisos sin mirar
+~Instalarla desde un enlace recibido en un chat
+}
+
+::Ciberseguridad 23::¿Por qué no debes usar cracks o software pirateado? {
+=Pueden incluir malware y además proceden de fuentes no confiables.
+~Porque siempre ocupan más espacio
+~Porque cambian el fondo
+~Porque no tienen iconos
+}
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 8 - Ransomware - cuando alguien secuestra tus datos
+
+::Ciberseguridad 15::¿Qué es una copia de seguridad? {
+=Una copia de datos que permite recuperarlos si se pierden o dañan.
+~Un antivirus
+~Una contraseña secundaria
+~Un perfil privado
+}
+
+::Ciberseguridad 36::¿Qué hace el ransomware? {
+=Cifra tus archivos y exige un pago para devolverte el acceso a ellos.
+~Mejora el rendimiento del dispositivo
+~Actualiza automáticamente tus aplicaciones
+~Hace copias de seguridad en la nube
+}
+
+::Ciberseguridad 37::¿Por qué no se debe pagar un rescate de ransomware? {
+=Porque no garantiza recuperar los archivos y financia a los ciberdelincuentes.
+~Porque es ilegal para la víctima
+~Porque el pago se hace siempre en efectivo
+~Porque el ransomware desaparece solo pasadas 24 horas
+}
+
+::Ciberseguridad 38::¿Qué es la regla 3-2-1 de las copias de seguridad? {
+=Tener 3 copias de tus archivos, en 2 soportes distintos, con 1 de ellas fuera de casa o en la nube.
+~Cambiar la contraseña cada 3 meses
+~Usar 3 antivirus a la vez
+~Hacer una copia cada 21 días
+}
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 9 - Gaming, chats y estafas
+
+::Ciberseguridad 9::En un videojuego, alguien dice ser soporte y pide tu código de acceso. ¿Qué haces? {
+=No lo compartes y utilizas los canales oficiales de soporte.
+~Se lo das si conoce tu nombre
+~Lo publicas en el chat
+~Le das también tu contraseña
+}
+
+::Ciberseguridad 21::¿Qué haces si un amigo te pide dinero desde una cuenta que no reconoces? {
+=Compruebas por otro medio que realmente es tu amigo antes de actuar.
+~Envías el dinero inmediatamente
+~Pides su contraseña
+~Publicas su teléfono
+}
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 10 - Compras y estafas online
+
+::Ciberseguridad 18::¿Qué señal hace sospechoso un premio online? {
+=Que te pida datos sensibles, dinero o códigos para recibirlo.
+~Que tenga un diseño bonito
+~Que aparezca una imagen
+~Que use emojis
+}
+
+::Ciberseguridad 39::¿Qué es una señal de alerta al comprar por Internet? {
+=Que el vendedor solo acepte pago por transferencia o Bizum directo, sin protección al comprador.
+~Que la web tenga HTTPS
+~Que existan reseñas variadas y con fecha
+~Que acepten pago con tarjeta
+}
+
+::Ciberseguridad 40::¿Qué deberías hacer antes de comprar en una tienda online desconocida? {
+=Buscar opiniones sobre la tienda y desconfiar si hay mucha urgencia para pagar.
+~Pagar cuanto antes para no perder la oferta
+~Compartir tu contraseña para verificar tu identidad
+~Aceptar cualquier método de pago que propongan
+}
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 11 - Inteligencia artificial, deepfakes y noticias falsas
+
+::Ciberseguridad 41::¿Qué es un deepfake? {
+=Un vídeo, imagen o audio manipulado con inteligencia artificial para parecer real.
+~Una copia de seguridad automática
+~Un tipo de contraseña muy segura
+~Un antivirus basado en IA
+}
+
+::Ciberseguridad 42::¿Qué deberías hacer ante un audio con la voz de un familiar pidiendo dinero urgente desde un número desconocido? {
+=Colgar y contactar tú directamente con esa persona por un canal que ya conocías.
+~Enviar el dinero de inmediato
+~Pedir confirmación por el mismo número desconocido
+~Reenviar el audio a otras personas sin comprobarlo
+}
+
+::Ciberseguridad 43::¿Por qué hay que verificar una noticia impactante antes de compartirla? {
+=Porque puede estar generada o manipulada con IA para engañar.
+~Porque compartir noticias siempre es ilegal
+~Porque las noticias reales nunca son impactantes
+~Porque compartir aumenta el tamaño del archivo
+}
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 12 - Ciberacoso y convivencia digital
+
+::Ciberseguridad 10::¿Qué conviene hacer ante ciberacoso? {
+=Guardar pruebas si es seguro, bloquear/reportar y pedir ayuda.
+~Reenviar el contenido
+~Responder atacando
+~Quedarse siempre en silencio
+}
+
+::Ciberseguridad 22::¿Qué significa reportar un contenido? {
+=Avisar a la plataforma de que puede incumplir sus normas o ser dañino.
+~Compartirlo más veces
+~Guardarlo como favorito
+~Responder con insultos
+}
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 13 - Grooming y sextorsión - pide ayuda a tiempo
+
+::Ciberseguridad 44::¿Cuál es una señal de alarma de grooming? {
+=Alguien insiste en pasar a un chat privado y pide mantenerlo en secreto.
+~Alguien participa en un chat público del juego
+~Alguien hace una videollamada para presentarse con su identidad real
+~Alguien comparte un enlace a contenido educativo oficial
+}
+
+::Ciberseguridad 45::Si alguien te chantajea con una imagen para pedirte más contenido o dinero, ¿qué es lo más importante? {
+=No es culpa tuya, y pedir ayuda no tiene consecuencias negativas para ti.
+~Debes pagar para que no la difunda
+~Es mejor no contárselo a nadie
+~Debes enviar más contenido para que no se enfade
+}
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 14 - ¿Qué hago si algo sale mal?
+
+::Ciberseguridad 11::Si crees que han entrado en tu cuenta, ¿qué haces? {
+=Cambiar la contraseña desde un dispositivo confiable, cerrar sesiones y activar 2FA.
+~Publicar la contraseña para avisar
+~Ignorarlo
+~Descargar un programa desconocido
+}
+
+::Ciberseguridad 24::¿Qué es una buena reacción ante un error cometido online? {
+=Parar, pedir ayuda y aprender de lo ocurrido.
+~Ocultarlo siempre
+~Culpar a otra persona
+~Seguir haciendo lo mismo
+}
+
+::Ciberseguridad 46::¿A qué número puedes llamar en España para pedir ayuda ante ciberacoso, grooming o sextorsión? {
+=A la Línea de Ayuda en Ciberseguridad 017 de INCIBE.
+~Al 010 de información municipal
+~A cualquier número que aparezca en el mensaje
+~No existe ninguna línea de ayuda para esto
+}
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 15 - Tu kit personal de ciberseguridad
+
+::Ciberseguridad 27::¿Qué principio resume mejor el curso? {
+=Parar, pensar y comprobar antes de actuar.
+~Hacer clic rápido
+~Confiar en cualquier logo
+~Compartir todo con amigos
+}
+
+::Ciberseguridad 30::¿Qué hábito mejora la seguridad de forma continua? {
+=Revisar cuentas, actualizaciones, privacidad y accesos periódicamente.
+~Cambiar de dispositivo cada mes
+~Aceptar todas las solicitudes
+~Usar una única contraseña
+}
+
+
+$CATEGORY: Curso Ciberseguridad para jóvenes/Módulo 16 - Seguridad avanzada - protege tu identidad digital
+
+// Módulo 16 — Seguridad avanzada y doxxing
+::Doxxing_01::¿Qué describe mejor el doxxing? {
+=Difundir información personal de alguien sin permiso, a menudo para intimidar o acosar.
+~Crear una contraseña larga y única.
+~Actualizar el sistema operativo.
+~Hacer una copia de seguridad.
+}
+
+::Doxxing_02::¿Qué deberías hacer si encuentras datos personales de un compañero publicados para acosarle? {
+=No difundirlos, conservar evidencias de forma privada, avisar a una persona adulta y denunciar el contenido.
+~Reenviarlos a todos para advertirles.
+~Publicar la dirección de quien lo hizo.
+~Responder con amenazas.
+}
+
+::Doxxing_03::¿Cuál es una buena forma de reducir el riesgo de doxxing? {
+=Revisar la privacidad y evitar publicar ubicaciones y rutinas en tiempo real.
+~Usar la misma contraseña en todas las redes.
+~Compartir códigos de verificación con amistades.
+~Aceptar todas las solicitudes de seguimiento.
+}
+
+::Doxxing_04::¿Por qué una foto aparentemente inocente puede revelar demasiado? {
+=Porque el fondo, los documentos, el uniforme o la ubicación pueden dar pistas personales.
+~Porque todas las fotos contienen necesariamente una contraseña.
+~Porque las fotos no pueden borrarse nunca.
+~Porque solo las personas expertas pueden ver fotos.
+}
+
+::Doxxing_05::¿Qué dato nunca debes compartir con alguien que te lo pide por mensaje? {
+=Un código de acceso o recuperación de tu cuenta.
+~El enlace público de una web oficial.
+~El nombre de una aplicación conocida.
+~Una recomendación general de seguridad.
+}

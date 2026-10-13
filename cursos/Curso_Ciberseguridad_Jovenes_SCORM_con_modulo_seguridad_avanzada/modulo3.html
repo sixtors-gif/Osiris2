@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contraseñas y acceso seguro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🔒</span>Contraseñas y acceso seguro</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Aprenderás a crear accesos difíciles de adivinar y a usar la autenticación en dos pasos.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:19%"></div></div>
+    <div class="progress-text">Curso de Ciberseguridad · Módulo 3 de 16</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Contraseñas y acceso seguro</h2>
+
+      <div class="activity">
+        <h3>🔑 Contraseñas fuertes</h3>
+        <p>Una contraseña larga y distinta para cada servicio es mucho más segura que reutilizar una corta. Una frase fácil de recordar para ti (y rara para los demás) funciona muy bien.</p>
+      </div>
+
+      <div class="figure">
+        <svg viewBox="0 0 600 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Comparación entre contraseña débil y contraseña fuerte">
+          <rect x="10" y="15" width="270" height="110" rx="14" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
+          <text x="145" y="45" font-size="16" text-anchor="middle" fill="#c62828" font-weight="700">❌ Débil</text>
+          <text x="145" y="72" font-size="15" text-anchor="middle" fill="#333" font-family="monospace">123456</text>
+          <text x="145" y="95" font-size="12.5" text-anchor="middle" fill="#666">Corta, obvia, se adivina</text>
+          <text x="145" y="113" font-size="12.5" text-anchor="middle" fill="#666">en segundos</text>
+
+          <rect x="320" y="15" width="270" height="110" rx="14" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
+          <text x="455" y="45" font-size="16" text-anchor="middle" fill="#2e7d32" font-weight="700">✅ Fuerte</text>
+          <text x="455" y="72" font-size="14" text-anchor="middle" fill="#333" font-family="monospace">MiPerro-Come3Pizzas!</text>
+          <text x="455" y="95" font-size="12.5" text-anchor="middle" fill="#666">Larga, única, fácil</text>
+          <text x="455" y="113" font-size="12.5" text-anchor="middle" fill="#666">de recordar para ti</text>
+        </svg>
+        <p class="figure-caption">Cuanto más larga y menos previsible, más tiempo tardaría alguien en adivinarla.</p>
+      </div>
+
+      <div class="activity">
+        <h3>🔁 Nunca reutilices</h3>
+        <p>Si una contraseña se filtra en una web, alguien podría probarla en tu correo, redes o juegos. Usa un gestor de contraseñas si tienes acceso a uno.</p>
+      </div>
+
+      <div class="figure">
+        <svg viewBox="0 0 640 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Flujo de verificación en dos pasos: contraseña, código en el móvil, acceso concedido">
+          <rect x="10" y="55" width="170" height="70" rx="14" fill="#fff" stroke="#4ecdc4" stroke-width="3"/>
+          <text x="95" y="85" font-size="22" text-anchor="middle">🔑</text>
+          <text x="95" y="108" font-size="13" text-anchor="middle" fill="#1e3c72" font-weight="700">1. Contraseña</text>
+
+          <text x="215" y="98" font-size="26" fill="#4ecdc4" text-anchor="middle">➜</text>
+
+          <rect x="235" y="55" width="170" height="70" rx="14" fill="#fff" stroke="#4ecdc4" stroke-width="3"/>
+          <text x="320" y="85" font-size="22" text-anchor="middle">📲</text>
+          <text x="320" y="108" font-size="13" text-anchor="middle" fill="#1e3c72" font-weight="700">2. Código (2FA)</text>
+
+          <text x="440" y="98" font-size="26" fill="#4ecdc4" text-anchor="middle">➜</text>
+
+          <rect x="460" y="55" width="170" height="70" rx="14" fill="#e8f5e8" stroke="#4caf50" stroke-width="3"/>
+          <text x="545" y="85" font-size="22" text-anchor="middle">✅</text>
+          <text x="545" y="108" font-size="13" text-anchor="middle" fill="#2e7d32" font-weight="700">Acceso concedido</text>
+        </svg>
+        <p class="figure-caption">La verificación en dos pasos (2FA) añade una segunda prueba de identidad, además de la contraseña.</p>
+      </div>
+
+      <ul class="key-points">
+        <li>🚫 <span><b>Evita datos obvios:</b> tu nombre, tu fecha de nacimiento, tu equipo favorito o palabras del diccionario.</span></li>
+        <li>🤐 <span><b>Nunca compartas</b> tu contraseña ni los códigos de verificación con nadie, aunque parezcan de confianza.</span></li>
+      </ul>
+
+      <div class="quiz">
+        <h3>🧩 Ejercicio práctico: Construye una contraseña</h3>
+        <p>Piensa una frase larga que puedas recordar, sin usar datos personales (no la escribas ni la compartas aquí). Después, activa 2FA en una cuenta importante en cuanto tengas oportunidad.</p>
+        <button class="btn" onclick="this.nextElementSibling.textContent='Una buena contraseña es larga, difícil de adivinar y exclusiva de ese servicio. El 2FA añade una barrera extra por si alguien la descubre.'">Ver orientación</button>
+        <p class="feedback"></p>
+      </div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo2.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo4.html')">Siguiente ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Curso de Ciberseguridad · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+</body>
+</html>
