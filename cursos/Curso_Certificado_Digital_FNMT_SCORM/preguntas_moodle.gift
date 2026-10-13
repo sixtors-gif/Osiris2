@@ -264,6 +264,20 @@ $CATEGORY: Curso Certificado Digital/Módulo 12 - Instalar el certificado en otr
 ~Recuperarlo desde el DNIe automáticamente
 }
 
+::M12_LAB_1::Importas un certificado de prueba emitido por una autoridad de certificación que no está entre las entidades raíz de confianza del equipo. ¿Qué ocurre? {
+=El certificado se instala, pero el sistema avisa de que no puede comprobar su confianza
+~El certificado se convierte automáticamente en válido
+~Windows lo envía a la FNMT para validarlo
+~No se puede abrir el archivo
+}
+
+::M12_LAB_2::¿Qué archivo debes importar para poder firmar con un certificado en un nuevo equipo? {
+=El archivo .p12 o .pfx, porque contiene la clave privada
+~El archivo .cer, porque contiene la clave pública
+~Una captura de pantalla del certificado
+~El justificante de la solicitud
+}
+
 $CATEGORY: Curso Certificado Digital/Módulo 13 - Usar el certificado: sedes electrónicas y AutoFirma
 
 ::CERT13-1::Vas a acceder a una sede electrónica con tu certificado. ¿Qué te puede pedir el navegador? {

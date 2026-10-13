@@ -8,7 +8,7 @@ Cursos en formato **SCORM 1.2** listos para importar en Moodle. Autor: Sixto Rod
 | Ciberseguridad para jóvenes (con módulo de seguridad avanzada) | `cursos/Curso_Ciberseguridad_Jovenes_SCORM_con_modulo_seguridad_avanzada` | 16 módulos con vídeos de INCIBE, examen y banco GIFT |
 | Ciberseguridad avanzada para jóvenes | `cursos/Curso_Ciberseguridad_Avanzada_Jovenes_SCORM` | 8 unidades, evaluación y banco GIFT |
 | **Curso 2: Ciberseguridad Avanzada y Defensa Digital** | `cursos/CiberSeguridad_Avanzada` | 10 módulos, examen de 20 preguntas y banco GIFT de 30 |
-| Certificado digital FNMT | `cursos/Curso_Certificado_Digital_FNMT_SCORM` | 15 módulos con capturas, examen y banco GIFT |
+| Certificado digital FNMT | `cursos/Curso_Certificado_Digital_FNMT_SCORM` | 15 módulos con capturas, laboratorio con certificado ficticio de prueba, examen y banco GIFT |
 
 ## Uso en Moodle
 
@@ -31,8 +31,15 @@ python3 herramientas/generar_ciberseguridad_avanzada_examen.py cursos/CiberSegur
 
 ## Mantener actualizada la carpeta `F:\Temas` (Windows)
 
+Estructura en `F:\Temas`:
+
+```
+F:\Temas\<curso>.zip             paquete SCORM listo para Moodle
+F:\Temas\extracted\<curso>\     el mismo curso descomprimido
+```
+
 1. Clona el repositorio una vez en tu PC:
    `git clone -b claude/focused-franklin-3ugnxv https://github.com/sixtors-gif/Osiris2.git`
 2. Cada vez que haya cambios, haz doble clic en `herramientas\actualizar_F_Temas.bat`.
-   Descarga la última versión y copia `cursos\`, `paquetes\` y este README a `F:\Temas`
-   (añade y sobrescribe archivos, pero no borra nada que ya tengas allí).
+   Descarga la última versión, copia los ZIP a `F:\Temas` y los cursos descomprimidos a
+   `F:\Temas\extracted\<curso>` (añade y sobrescribe archivos, pero no borra nada).

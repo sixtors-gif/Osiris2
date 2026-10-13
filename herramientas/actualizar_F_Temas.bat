@@ -1,7 +1,10 @@
 @echo off
-rem Actualiza F:\Temas con la última versión de los cursos del repositorio Osiris2.
+rem Actualiza F:\Temas con la ultima version de los cursos del repositorio Osiris2.
 rem Uso: doble clic en este archivo (requiere Git para Windows instalado).
-rem Copia cursos\ y paquetes\ a F:\Temas sin borrar nada de lo que ya haya allí.
+rem Estructura resultante:
+rem   F:\Temas\<curso>.zip                 paquete SCORM listo para Moodle
+rem   F:\Temas\extracted\<curso>\...       el mismo curso descomprimido
+rem Añade y sobrescribe archivos; no borra nada de lo que ya haya en F:\Temas.
 setlocal
 set "DESTINO=F:\Temas"
 set "REPO=%~dp0.."
@@ -15,10 +18,16 @@ if errorlevel 1 (
   exit /b 1
 )
 
-if not exist "%DESTINO%" mkdir "%DESTINO%"
-robocopy "%REPO%\cursos"   "%DESTINO%\cursos"   /E /NFL /NDL /NJH /NP
-robocopy "%REPO%\paquetes" "%DESTINO%\paquetes" /E /NFL /NDL /NJH /NP
-copy /Y "%REPO%\README.md" "%DESTINO%\README.md" >nul
+if not exist "%DESTINO%\extracted" mkdir "%DESTINO%\extracted"
+
+rem Paquetes ZIP directamente en F:\Temas
+copy /Y "%REPO%\paquetes\*.zip" "%DESTINO%\" >nul
+
+rem Cursos descomprimidos en F:\Temas\extracted\<curso>
+for /D %%C in ("%REPO%\cursos\*") do (
+  echo   %%~nxC
+  robocopy "%%C" "%DESTINO%\extracted\%%~nxC" /E /NFL /NDL /NJH /NJS /NP >nul
+)
 
 echo.
 echo F:\Temas actualizado.

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Laboratorio: instalar un certificado de prueba</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="badge-icon">🧪</span>Laboratorio: instalar un certificado de prueba</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Practica la importación de un certificado en tu ordenador con un certificado ficticio, sin riesgo para tu identidad real.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+    <div class="progress-text">Certificados digitales, firma electrónica y FNMT · Práctica del módulo 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+      <h2>Un certificado para practicar</h2>
+      <p>Para que puedas ensayar los pasos del módulo 12 sin usar tu certificado real, te damos una <b>copia de seguridad de un certificado inventado</b>, en el mismo formato <code>.p12</code> que obtienes al exportar el certificado de la FNMT.</p>
+
+      <div class="danger-box">⚠️ <b>Certificado FICTICIO y SIN VALIDEZ.</b> No lo ha emitido la FNMT ni ninguna autoridad reconocida: lo ha emitido una «AC de pruebas» creada solo para este curso. No sirve para ningún trámite y ninguna sede electrónica lo aceptará. Úsalo solo para practicar y bórralo al terminar.</div>
+
+      <h3>Datos del certificado de prueba</h3>
+      <div class="figure"><div class="certcard">
+        <div class="cc-head">🪪 Certificado de PRUEBA (ficticio)</div>
+        <div class="cc-body">
+          <div class="cc-row"><span class="cc-lab">Titular (CN)</span><span class="cc-val">PRUEBA FICTICIO CIUDADANO - 00000000T</span></div>
+          <div class="cc-row"><span class="cc-lab">Nombre / apellidos</span><span class="cc-val">CIUDADANO / PRUEBA FICTICIO</span></div>
+          <div class="cc-row"><span class="cc-lab">NIF (inventado)</span><span class="cc-val">00000000T</span></div>
+          <div class="cc-row"><span class="cc-lab">Correo</span><span class="cc-val">ciudadano.ficticio@example.com</span></div>
+          <div class="cc-row"><span class="cc-lab">Emisor</span><span class="cc-val">AC DE PRUEBAS DEL CURSO (NO VALIDA)</span></div>
+          <div class="cc-row"><span class="cc-lab">Válido desde</span><span class="cc-val">13/10/2026</span></div>
+          <div class="cc-row"><span class="cc-lab">Válido hasta</span><span class="cc-val">12/10/2028</span></div>
+          <div class="cc-row"><span class="cc-lab">Usos</span><span class="cc-val">Autenticación de cliente y firma</span></div>
+        </div>
+      </div>
+      <div class="figure-caption">La estructura imita la de un certificado de persona física: nombre, apellidos y NIF en el titular.</div></div>
+
+      <div class="dl-box">
+        <b>📥 Descarga los archivos de la práctica</b><br>
+        <a href="practica/certificado_prueba_ciudadano_ficticio.p12" download>Certificado con clave privada (.p12)</a>
+        <a href="practica/AC_pruebas_curso.cer" download>Certificado de la AC de pruebas (.cer)</a>
+        <a href="practica/certificado_prueba_ciudadano_ficticio.cer" download>Solo la parte pública (.cer)</a>
+        <p style="margin-top:12px">Contraseña del archivo <code>.p12</code>: <code>Curso2026</code></p>
+      </div>
+
+      <table class="tbl">
+        <tr><th>Archivo</th><th>Qué contiene</th><th>Para qué sirve</th></tr>
+        <tr><td><code>.p12</code> / <code>.pfx</code></td><td>Certificado <b>y clave privada</b>, protegidos con contraseña</td><td>Es la «copia de seguridad». Es lo que importas para poder <b>firmar e identificarte</b>.</td></tr>
+        <tr><td><code>.cer</code> / <code>.crt</code></td><td>Solo el certificado (clave pública)</td><td>Para que otros verifiquen tus firmas. <b>No</b> permite firmar.</td></tr>
+      </table>
+
+      <h3>Opción A · Windows (sirve también para Chrome y Edge)</h3>
+      <ol class="steps">
+        <li>Descarga <code>certificado_prueba_ciudadano_ficticio.p12</code> y haz <b>doble clic</b> sobre él. Se abre el <b>Asistente para importar certificados</b>.</li>
+        <li>En «Ubicación del almacén» elige <b>Usuario actual</b> y pulsa <b>Siguiente</b> dos veces.</li>
+        <li>Escribe la contraseña <code>Curso2026</code>. En las opciones de importación:
+          <ul>
+            <li>Marca <b>«Habilitar protección segura de claves privadas»</b> si quieres que Windows te avise cada vez que se use la clave (recomendado con tu certificado real).</li>
+            <li><b>No</b> marques «Marcar esta clave como exportable» si no necesitas volver a exportarla: así nadie podrá sacar una copia desde este equipo.</li>
+          </ul></li>
+        <li>Deja <b>«Seleccionar automáticamente el almacén»</b> y pulsa <b>Finalizar</b>. Debe aparecer «La importación se completó correctamente».</li>
+        <li>Comprueba que está instalado: pulsa <kbd>Win</kbd>+<kbd>R</kbd>, escribe <code>certmgr.msc</code> y abre <b>Personal › Certificados</b>. Verás «PRUEBA FICTICIO CIUDADANO - 00000000T». En Chrome o Edge: <b>Configuración › Privacidad y seguridad › Seguridad › Administrar certificados</b>.</li>
+      </ol>
+
+      <h3>Opción B · Mozilla Firefox (tiene su propio almacén)</h3>
+      <ol class="steps">
+        <li>Abre <b>Ajustes › Privacidad y seguridad</b> y baja hasta <b>Certificados › Ver certificados</b>.</li>
+        <li>En la pestaña <b>Sus certificados</b> pulsa <b>Importar…</b> y elige el archivo <code>.p12</code>.</li>
+        <li>Si Firefox te pide la contraseña maestra, introdúcela. Después escribe la contraseña del archivo: <code>Curso2026</code>.</li>
+        <li>El certificado aparece en la lista «Sus certificados».</li>
+      </ol>
+
+      <h3>Opción C · macOS</h3>
+      <ol class="steps">
+        <li>Haz doble clic en el archivo <code>.p12</code>; se abre <b>Acceso a Llaveros</b>.</li>
+        <li>Elige el llavero <b>inicio de sesión</b>, escribe <code>Curso2026</code> y acepta.</li>
+        <li>Lo verás en <b>Mis certificados</b>. Safari y Chrome usan este llavero.</li>
+      </ol>
+
+      <h3>¿Por qué dice «no es de confianza»?</h3>
+      <p>Al abrir el certificado verás un aviso del tipo <i>«No hay suficiente información para comprobar este certificado»</i> o <i>«emitido por una entidad no fiable»</i>. <b>Es lo esperado</b> y es la lección más importante de la práctica: un certificado solo es de confianza si su <b>autoridad de certificación (AC)</b> está en la lista de entidades raíz de confianza del sistema. La AC de la FNMT sí lo está; nuestra «AC de pruebas» no.</p>
+      <div class="tip-box">💡 <b>Paso opcional:</b> si quieres ver cómo cambia el aviso, instala también <code>AC_pruebas_curso.cer</code> en <b>Usuario actual › Entidades de certificación raíz de confianza</b>. Windows te mostrará una advertencia de seguridad: léela con calma, porque eso es exactamente lo que <b>nunca</b> debes aceptar con una AC desconocida que te llegue por correo o desde una web. En esta práctica no hay riesgo, porque la clave privada de la AC de pruebas se destruyó después de emitir el certificado, pero <b>elimínala al acabar</b>.</div>
+
+      <h3>Al terminar: elimina el certificado de prueba</h3>
+      <ul class="key-points">
+        <li>🪟 <span><b>Windows:</b> en <code>certmgr.msc</code> › Personal › Certificados, clic derecho sobre «PRUEBA FICTICIO…» › <b>Eliminar</b>. Si instalaste la AC de pruebas, bórrala también en «Entidades de certificación raíz de confianza».</span></li>
+        <li>🦊 <span><b>Firefox:</b> Ver certificados › Sus certificados › selecciónalo › <b>Eliminar</b>.</span></li>
+        <li>🍎 <span><b>macOS:</b> Acceso a Llaveros › Mis certificados › clic derecho › <b>Eliminar</b>.</span></li>
+        <li>🗑️ <span>Borra también el archivo <code>.p12</code> descargado, igual que harías con la copia de seguridad de tu certificado real en un equipo ajeno.</span></li>
+      </ul>
+
+      <div class="exercise"><h3>🧩 Comprueba lo aprendido</h3><p>Has importado el <code>.p12</code> de prueba y el sistema dice que el certificado «no es de confianza». ¿Por qué?</p>
+      <div class="options" id="opt_lab1"><div class="option" onclick="pickc(this,'lab1',0)">Porque la contraseña era incorrecta</div><div class="option" onclick="pickc(this,'lab1',1)">Porque la autoridad que lo emitió no está entre las entidades raíz de confianza del equipo</div><div class="option" onclick="pickc(this,'lab1',0)">Porque el certificado ha caducado</div></div>
+      <div id="fb_lab1" class="feedback-box" data-exp="La confianza depende de la cadena: si la AC raíz no es de confianza, el certificado tampoco lo es."></div></div>
+
+      <div class="exercise"><h3>🧩 ¿Qué archivo importas para poder firmar?</h3>
+      <div class="options" id="opt_lab2"><div class="option" onclick="pickc(this,'lab2',1)">El .p12 / .pfx, porque incluye la clave privada</div><div class="option" onclick="pickc(this,'lab2',0)">El .cer, porque es más pequeño</div><div class="option" onclick="pickc(this,'lab2',0)">Cualquiera de los dos: son iguales</div></div>
+      <div id="fb_lab2" class="feedback-box" data-exp="Sin clave privada no se puede firmar; el .cer solo contiene la parte pública."></div></div>
+
+      <div class="navigation"><button class="nav-btn" onclick="window.location='modulo12.html'">⬅️ Volver al módulo 12</button><button class="nav-btn" onclick="window.location='modulo13.html'">Siguiente módulo ➡️</button></div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="scorm.js"></script>
+<script>
+function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
+el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
+e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
+</script>
+</body>
+</html>

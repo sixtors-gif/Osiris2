@@ -1,0 +1,15 @@
+CERTIFICADO FICTICIO DE PRUEBA - SOLO PARA PRACTICAR
+=====================================================
+Estos archivos NO son un certificado real. No los ha emitido la FNMT ni ninguna
+autoridad reconocida y no sirven para ningún trámite.
+
+- certificado_prueba_ciudadano_ficticio.p12 : certificado + clave privada. Contraseña: Curso2026
+- certificado_prueba_ciudadano_ficticio.cer : solo la parte pública.
+- AC_pruebas_curso.cer : autoridad de certificación de pruebas del curso (NO de confianza).
+  Su clave privada se destruyó tras emitir el certificado.
+
+Titular inventado: PRUEBA FICTICIO CIUDADANO - 00000000T (ciudadano.ficticio@example.com)
+Validez: 13/10/2026 - 12/10/2028
+
+Instrucciones paso a paso: practica_instalacion.html
+Al terminar la práctica, elimina el certificado de tu equipo y borra el .p12.
