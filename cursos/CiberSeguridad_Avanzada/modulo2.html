@@ -36,10 +36,9 @@
       <div class="activity"><h3>✍️ Actividad: auditoría OSINT de ti mismo</h3><p>Busca tu nombre o alias en un buscador. ¿Qué información encontrarías que preferirías que no fuera pública?</p><textarea placeholder="Anota qué has encontrado y qué vas a cambiar."></textarea><p class="small">No escribas contraseñas ni datos personales reales en este cuadro.</p></div>
       <div class="summary-box"><b>Resumen:</b> cuanta menos información conectable publiques, más difícil será encontrarte. Ante un doxxing: pruebas, contención, denuncia y apoyo.</div>
 
-      <div style="text-align:center;margin-top:25px"><button class="btn" onclick="completar(this)">Marcar módulo como completado</button></div>
       <div class="navigation">
-        <button class="nav-btn" onclick="window.location='modulo1.html'">⬅️ Anterior</button>
-        <button class="nav-btn" onclick="window.location='modulo3.html'">Siguiente módulo ➡️</button>
+        <button class="nav-btn" onclick="scormGo('modulo1.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo3.html')">Siguiente módulo ➡️</button>
       </div>
     </section>
   </div>
@@ -48,7 +47,6 @@
 <script src="scorm.js"></script>
 <script>
 function checkAnswer(btn,correct,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(correct?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=correct?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es la mejor opción. Vuelve a leer el apartado e inténtalo de nuevo.';}
-function completar(btn){if(window.scorm)scorm.complete(100);btn.disabled=true;btn.textContent='✅ Módulo completado';}
 </script>
 </body>
 </html>

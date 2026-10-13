@@ -2,7 +2,8 @@ CURSO 2: CIBERSEGURIDAD AVANZADA Y DEFENSA DIGITAL — Paquete SCORM 1.2
 Continuación del curso "Ciberseguridad para jóvenes".
 
 Contenido:
-- imsmanifest.xml: paquete SCORM 1.2 (presentación + 10 módulos + examen, cada uno como SCO).
+- imsmanifest.xml: paquete SCORM 1.2 (presentación + 10 módulos + examen, cada uno como SCO;
+  el índice de Moodle se marca al ver cada página).
 - index.html: presentación, itinerario, compromiso ético y reto inicial.
 - modulo1.html ... modulo10.html: 10 módulos con teoría, esquemas, autoevaluaciones interactivas,
   actividades prácticas y resumen:

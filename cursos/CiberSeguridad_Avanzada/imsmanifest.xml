@@ -1,123 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifest identifier="MANIFEST_CIBERSEGURIDAD_AVANZADA" version="2.0"
+<manifest identifier="MANIFEST_CIBERSEGURIDAD_AVANZADA" version="1.1"
           xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
-          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p1p2"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
-                              http://www.adlnet.org/xsd/adlcp_rootv1p1p2 adlcp_rootv1p1p2.xsd">
+                              http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
   <metadata>
     <schema>ADL SCORM</schema>
     <schemaversion>1.2</schemaversion>
   </metadata>
-  <organizations default="ORG_CIBER_AVANZADA">
-    <organization identifier="ORG_CIBER_AVANZADA">
+  <organizations default="ORG_1">
+    <organization identifier="ORG_1">
       <title>Curso 2: Ciberseguridad Avanzada y Defensa Digital</title>
-      <item identifier="ITEM_INTRO" identifierref="RES_INTRO">
+      <item identifier="ITEM_00" identifierref="RES_INDEX">
         <title>Presentación del curso</title>
       </item>
-      <item identifier="ITEM_MOD1" identifierref="RES_MOD1">
+      <item identifier="ITEM_01" identifierref="RES_MODULO1">
         <title>Módulo 1: Ciberamenazas emergentes e inteligencia artificial</title>
       </item>
-      <item identifier="ITEM_MOD2" identifierref="RES_MOD2">
+      <item identifier="ITEM_02" identifierref="RES_MODULO2">
         <title>Módulo 2: Doxxing, ingeniería social avanzada y privacidad</title>
       </item>
-      <item identifier="ITEM_MOD3" identifierref="RES_MOD3">
+      <item identifier="ITEM_03" identifierref="RES_MODULO3">
         <title>Módulo 3: Vulnerabilidades y amenazas en dispositivos móviles</title>
       </item>
-      <item identifier="ITEM_MOD4" identifierref="RES_MOD4">
+      <item identifier="ITEM_04" identifierref="RES_MODULO4">
         <title>Módulo 4: Bastionado de smartphones y dispositivos IoT</title>
       </item>
-      <item identifier="ITEM_MOD5" identifierref="RES_MOD5">
+      <item identifier="ITEM_05" identifierref="RES_MODULO5">
         <title>Módulo 5: Malware avanzado y ransomware</title>
       </item>
-      <item identifier="ITEM_MOD6" identifierref="RES_MOD6">
+      <item identifier="ITEM_06" identifierref="RES_MODULO6">
         <title>Módulo 6: Hacking ético y auditoría de seguridad</title>
       </item>
-      <item identifier="ITEM_MOD7" identifierref="RES_MOD7">
+      <item identifier="ITEM_07" identifierref="RES_MODULO7">
         <title>Módulo 7: Cifrado, redes privadas y navegación segura</title>
       </item>
-      <item identifier="ITEM_MOD8" identifierref="RES_MOD8">
+      <item identifier="ITEM_08" identifierref="RES_MODULO8">
         <title>Módulo 8: Respuesta ante incidentes y forense digital básica</title>
       </item>
-      <item identifier="ITEM_MOD9" identifierref="RES_MOD9">
+      <item identifier="ITEM_09" identifierref="RES_MODULO9">
         <title>Módulo 9: Aspectos legales, ciberdelito y ética digital</title>
       </item>
-      <item identifier="ITEM_MOD10" identifierref="RES_MOD10">
+      <item identifier="ITEM_10" identifierref="RES_MODULO10">
         <title>Módulo 10: Proyecto final: auditoría de seguridad personal y móvil</title>
       </item>
-      <item identifier="ITEM_EXAMEN" identifierref="RES_EXAMEN">
-        <title>Examen final de Ciberseguridad Avanzada</title>
+      <item identifier="ITEM_11" identifierref="RES_EXAMEN_FINAL">
+        <title>Examen final</title>
       </item>
     </organization>
   </organizations>
   <resources>
-    <resource identifier="RES_INTRO" type="webcontent" adlcp:scormtype="sco" href="index.html">
+    <resource identifier="RES_INDEX" type="webcontent" adlcp:scormtype="sco" href="index.html">
       <file href="index.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
-    <resource identifier="RES_MOD1" type="webcontent" adlcp:scormtype="sco" href="modulo1.html">
+    <resource identifier="RES_MODULO1" type="webcontent" adlcp:scormtype="sco" href="modulo1.html">
       <file href="modulo1.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
-    <resource identifier="RES_MOD2" type="webcontent" adlcp:scormtype="sco" href="modulo2.html">
+    <resource identifier="RES_MODULO2" type="webcontent" adlcp:scormtype="sco" href="modulo2.html">
       <file href="modulo2.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
-    <resource identifier="RES_MOD3" type="webcontent" adlcp:scormtype="sco" href="modulo3.html">
+    <resource identifier="RES_MODULO3" type="webcontent" adlcp:scormtype="sco" href="modulo3.html">
       <file href="modulo3.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
-    <resource identifier="RES_MOD4" type="webcontent" adlcp:scormtype="sco" href="modulo4.html">
+    <resource identifier="RES_MODULO4" type="webcontent" adlcp:scormtype="sco" href="modulo4.html">
       <file href="modulo4.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
-    <resource identifier="RES_MOD5" type="webcontent" adlcp:scormtype="sco" href="modulo5.html">
+    <resource identifier="RES_MODULO5" type="webcontent" adlcp:scormtype="sco" href="modulo5.html">
       <file href="modulo5.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
-    <resource identifier="RES_MOD6" type="webcontent" adlcp:scormtype="sco" href="modulo6.html">
+    <resource identifier="RES_MODULO6" type="webcontent" adlcp:scormtype="sco" href="modulo6.html">
       <file href="modulo6.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
-    <resource identifier="RES_MOD7" type="webcontent" adlcp:scormtype="sco" href="modulo7.html">
+    <resource identifier="RES_MODULO7" type="webcontent" adlcp:scormtype="sco" href="modulo7.html">
       <file href="modulo7.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
-    <resource identifier="RES_MOD8" type="webcontent" adlcp:scormtype="sco" href="modulo8.html">
+    <resource identifier="RES_MODULO8" type="webcontent" adlcp:scormtype="sco" href="modulo8.html">
       <file href="modulo8.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
-    <resource identifier="RES_MOD9" type="webcontent" adlcp:scormtype="sco" href="modulo9.html">
+    <resource identifier="RES_MODULO9" type="webcontent" adlcp:scormtype="sco" href="modulo9.html">
       <file href="modulo9.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
-    <resource identifier="RES_MOD10" type="webcontent" adlcp:scormtype="sco" href="modulo10.html">
+    <resource identifier="RES_MODULO10" type="webcontent" adlcp:scormtype="sco" href="modulo10.html">
       <file href="modulo10.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
-    <resource identifier="RES_EXAMEN" type="webcontent" adlcp:scormtype="sco" href="examen_final.html">
+    <resource identifier="RES_EXAMEN_FINAL" type="webcontent" adlcp:scormtype="sco" href="examen_final.html">
       <file href="examen_final.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>

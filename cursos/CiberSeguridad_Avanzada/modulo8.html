@@ -38,10 +38,9 @@
       <div class="activity"><h3>✍️ Actividad: tu cronología</h3><p>Imagina que te roban la cuenta de Instagram. Escribe los 5 pasos que darías, en orden.</p><textarea placeholder="1. ... 2. ... 3. ... 4. ... 5. ..."></textarea><p class="small">No escribas contraseñas ni datos personales reales en este cuadro.</p></div>
       <div class="summary-box"><b>Resumen:</b> detecta, contén, erradica, recupera y aprende. Conserva pruebas y pide ayuda: no estás solo/a.</div>
 
-      <div style="text-align:center;margin-top:25px"><button class="btn" onclick="completar(this)">Marcar módulo como completado</button></div>
       <div class="navigation">
-        <button class="nav-btn" onclick="window.location='modulo7.html'">⬅️ Anterior</button>
-        <button class="nav-btn" onclick="window.location='modulo9.html'">Siguiente módulo ➡️</button>
+        <button class="nav-btn" onclick="scormGo('modulo7.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo9.html')">Siguiente módulo ➡️</button>
       </div>
     </section>
   </div>
@@ -50,7 +49,6 @@
 <script src="scorm.js"></script>
 <script>
 function checkAnswer(btn,correct,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(correct?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=correct?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es la mejor opción. Vuelve a leer el apartado e inténtalo de nuevo.';}
-function completar(btn){if(window.scorm)scorm.complete(100);btn.disabled=true;btn.textContent='✅ Módulo completado';}
 </script>
 </body>
 </html>

@@ -39,7 +39,6 @@ def activity(title, text, ph):
 
 SCRIPT = """<script>
 function checkAnswer(btn,correct,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(correct?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=correct?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es la mejor opción. Vuelve a leer el apartado e inténtalo de nuevo.';}
-function completar(btn){if(window.scorm)scorm.complete(100);btn.disabled=true;btn.textContent='✅ Módulo completado';}
 </script>"""
 
 def page(n, icon, title, subtitle, body):
@@ -69,10 +68,9 @@ def page(n, icon, title, subtitle, body):
   <div class="content-area">
     <section class="module">
 {body}
-      <div style="text-align:center;margin-top:25px"><button class="btn" onclick="completar(this)">Marcar módulo como completado</button></div>
       <div class="navigation">
-        <button class="nav-btn" onclick="window.location='{prev}'">⬅️ Anterior</button>
-        <button class="nav-btn" onclick="window.location='{nxt}'">{nxt_lbl}</button>
+        <button class="nav-btn" onclick="scormGo('{prev}')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('{nxt}')">{nxt_lbl}</button>
       </div>
     </section>
   </div>

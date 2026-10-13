@@ -7,7 +7,8 @@ completo de obtención, configuración y uso del Certificado digital de persona 
 (Fábrica Nacional de Moneda y Timbre).
 
 Contenido:
-- imsmanifest.xml: paquete SCORM 1.2 empaquetado como un único SCO (seguimiento correcto en Moodle).
+- imsmanifest.xml: paquete SCORM 1.2 con un SCO por página: el índice de Moodle marca cada
+  módulo como visto al abrirlo y el examen registra nota y aprobado/suspenso.
 - index.html: bienvenida, requisitos e itinerario.
 - modulo1.html ... modulo15.html: 15 módulos con explicaciones, esquemas, laboratorios
   interactivos (cifrado César, función hash, firma y verificación, comprobador de validez),

@@ -37,10 +37,9 @@
       <div class="activity"><h3>✍️ Actividad: revisa tu cifrado</h3><p>Comprueba si tu móvil y tu ordenador tienen el cifrado del dispositivo activado y si tus copias de seguridad están cifradas.</p><textarea placeholder="Resultado de la revisión..."></textarea><p class="small">No escribas contraseñas ni datos personales reales en este cuadro.</p></div>
       <div class="summary-box"><b>Resumen:</b> HTTPS cifra el canal, E2EE protege la conversación y el cifrado en reposo protege tus dispositivos. Una VPN ayuda, pero no es magia.</div>
 
-      <div style="text-align:center;margin-top:25px"><button class="btn" onclick="completar(this)">Marcar módulo como completado</button></div>
       <div class="navigation">
-        <button class="nav-btn" onclick="window.location='modulo6.html'">⬅️ Anterior</button>
-        <button class="nav-btn" onclick="window.location='modulo8.html'">Siguiente módulo ➡️</button>
+        <button class="nav-btn" onclick="scormGo('modulo6.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo8.html')">Siguiente módulo ➡️</button>
       </div>
     </section>
   </div>
@@ -49,7 +48,6 @@
 <script src="scorm.js"></script>
 <script>
 function checkAnswer(btn,correct,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(correct?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=correct?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es la mejor opción. Vuelve a leer el apartado e inténtalo de nuevo.';}
-function completar(btn){if(window.scorm)scorm.complete(100);btn.disabled=true;btn.textContent='✅ Módulo completado';}
 </script>
 </body>
 </html>

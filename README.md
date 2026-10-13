@@ -16,6 +16,15 @@ Cursos en formato **SCORM 1.2** listos para importar en Moodle. Autor: Sixto Rod
 2. En Moodle, añade una actividad **SCORM** y sube el ZIP sin descomprimir.
 3. Para el banco de preguntas: *Banco de preguntas › Importar › Formato GIFT* con el `preguntas_moodle.gift` del curso.
 
+## Seguimiento en Moodle
+
+Todos los cursos tienen un SCO por página. Al abrir una página, el índice de Moodle la marca
+como completada; los botones «Siguiente»/«Anterior» piden a Moodle que abra la página vecina
+(`nav.event`), y el examen registra la nota y aprobado/suspenso (conservando la mejor nota).
+Para saltar a un apartado no consecutivo se usa el índice de Moodle.
+
+Si se añade o cambia una página, ejecuta `python3 herramientas/scorm_seguimiento.py`.
+
 ## Regenerar los paquetes
 
 ```sh
@@ -27,6 +36,7 @@ El Curso 2 (`CiberSeguridad_Avanzada`) se genera con los scripts de `herramienta
 ```sh
 python3 herramientas/generar_ciberseguridad_avanzada_modulos.py cursos/CiberSeguridad_Avanzada
 python3 herramientas/generar_ciberseguridad_avanzada_examen.py cursos/CiberSeguridad_Avanzada
+python3 herramientas/scorm_seguimiento.py
 ```
 
 ## Mantener actualizada la carpeta `F:\Temas` (Windows)

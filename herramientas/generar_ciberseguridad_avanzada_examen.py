@@ -147,11 +147,11 @@ exam = f"""<!DOCTYPE html>
       <h2>Evaluación final</h2>
       <p>Responde a las {len(EXAM)} preguntas. Necesitas al menos un <b>70 %</b> para aprobar. Al corregir verás qué respuestas son correctas y podrás repetir el examen.</p>
       {''.join(qs)}
-      <div style="text-align:center"><button class="btn" onclick="corregir()">Corregir examen</button> <button class="btn" onclick="location.reload()">Reintentar</button></div>
+      <div style="text-align:center"><button class="btn" onclick="corregir()">Corregir examen</button> <button class="btn" onclick="reiniciar()">Reintentar</button></div>
       <div id="resultado" style="margin-top:20px"></div>
       <div class="navigation">
-        <button class="nav-btn" onclick="window.location='modulo10.html'">⬅️ Módulo 10</button>
-        <button class="nav-btn" onclick="window.location='index.html'">Inicio 🏠</button>
+        <button class="nav-btn" onclick="scormGo('modulo10.html')">⬅️ Módulo 10</button>
+        <button class="nav-btn" onclick="scormGo('index.html')">Inicio 🏠</button>
       </div>
     </section>
   </div>
@@ -160,6 +160,11 @@ exam = f"""<!DOCTYPE html>
 <script src="scorm.js"></script>
 <script>
 var RESP={answers};
+function reiniciar(){{
+  document.querySelectorAll('input[type=radio]').forEach(function(r){{r.checked=false}});
+  document.querySelectorAll('.option').forEach(function(l){{l.classList.remove('correct','incorrect')}});
+  document.getElementById('resultado').innerHTML='';window.scrollTo(0,0);
+}}
 function corregir(){{
   var ok=0,sin=0;
   for(var i=0;i<RESP.length;i++){{
@@ -242,7 +247,7 @@ index = f"""<!DOCTYPE html>
       </div>
       <div class="navigation">
         <span></span>
-        <button class="nav-btn" onclick="window.location='modulo1.html'">Comenzar ➡️</button>
+        <button class="nav-btn" onclick="scormGo('modulo1.html')">Comenzar ➡️</button>
       </div>
     </section>
   </div>
@@ -254,41 +259,15 @@ index = f"""<!DOCTYPE html>
 """
 open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(index)
 
-# ---------- Manifiesto
-common = '      <file href="style.css"/>\n      <file href="scorm.js"/>\n      <file href="img/logo-centro.png"/>\n'
-items = [("ITEM_INTRO", "RES_INTRO", "Presentación del curso", "index.html")]
-items += [(f"ITEM_MOD{i}", f"RES_MOD{i}", f"Módulo {i}: {t}", f"modulo{i}.html") for i, (_, t, _) in enumerate(MODS, 1)]
-items += [("ITEM_EXAMEN", "RES_EXAMEN", "Examen final de Ciberseguridad Avanzada", "examen_final.html")]
-it = "".join(f'      <item identifier="{a}" identifierref="{b}">\n        <title>{html.escape(t)}</title>\n      </item>\n' for a, b, t, _ in items)
-rs = "".join(f'    <resource identifier="{b}" type="webcontent" adlcp:scormtype="sco" href="{h}">\n      <file href="{h}"/>\n{common}    </resource>\n' for _, b, _, h in items)
-manifest = f"""<?xml version="1.0" encoding="UTF-8"?>
-<manifest identifier="MANIFEST_CIBERSEGURIDAD_AVANZADA" version="2.0"
-          xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
-          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p1p2"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
-                              http://www.adlnet.org/xsd/adlcp_rootv1p1p2 adlcp_rootv1p1p2.xsd">
-  <metadata>
-    <schema>ADL SCORM</schema>
-    <schemaversion>1.2</schemaversion>
-  </metadata>
-  <organizations default="ORG_CIBER_AVANZADA">
-    <organization identifier="ORG_CIBER_AVANZADA">
-      <title>Curso 2: Ciberseguridad Avanzada y Defensa Digital</title>
-{it}    </organization>
-  </organizations>
-  <resources>
-{rs}  </resources>
-</manifest>
-"""
-open(os.path.join(OUT, "imsmanifest.xml"), "w", encoding="utf-8").write(manifest)
+# El manifiesto (un SCO por página) lo genera herramientas/scorm_seguimiento.py.
 
 # ---------- README
 readme = f"""CURSO 2: CIBERSEGURIDAD AVANZADA Y DEFENSA DIGITAL — Paquete SCORM 1.2
 Continuación del curso "Ciberseguridad para jóvenes".
 
 Contenido:
-- imsmanifest.xml: paquete SCORM 1.2 (presentación + 10 módulos + examen, cada uno como SCO).
+- imsmanifest.xml: paquete SCORM 1.2 (presentación + 10 módulos + examen, cada uno como SCO;
+  el índice de Moodle se marca al ver cada página).
 - index.html: presentación, itinerario, compromiso ético y reto inicial.
 - modulo1.html ... modulo10.html: 10 módulos con teoría, esquemas, autoevaluaciones interactivas,
   actividades prácticas y resumen:
