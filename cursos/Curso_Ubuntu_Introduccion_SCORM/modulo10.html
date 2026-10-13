@@ -3,32 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Instalar y quitar aplicaciones</title>
+<title>Práctica: copiar, pegar, mover, renombrar y borrar archivos</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
   <div class="header">
-    <h1><span class="badge-icon">🛍️</span>Instalar y quitar aplicaciones</h1>
+    <h1><span class="badge-icon">📋</span>Práctica: copiar, pegar, mover, renombrar y borrar archivos</h1>
     <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
-    <p>Cómo instalar programas desde el App Center, qué son los «snaps» y los «debs» y cómo hacerlo con seguridad.</p>
+    <p>Paso a paso y con un simulador: todo lo que harás a diario en la aplicación Archivos.</p>
   </div>
   <div class="progress-container">
-    <div class="progress-bar"><div class="progress-fill" style="width:62%"></div></div>
-    <div class="progress-text">Introducción a Ubuntu para usuarios · Módulo 10 de 15</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:56%"></div></div>
+    <div class="progress-text">Introducción a Ubuntu para usuarios · Módulo 10 de 17</div>
   </div>
   <div class="content-area">
     <section class="module">
-      <h2>Instalar y quitar aplicaciones</h2>
-<div class="activity"><h3>🛍️ El App Center</h3>
-<p>En Ubuntu casi todo el software se instala desde el <b>App Center</b>, la tienda de aplicaciones: un solo sitio, con programas revisados y actualizaciones automáticas. Nada de buscar instaladores por internet.</p></div>
-<h3>Instalar una aplicación</h3><ol class="steps"><li>Haz clic en el icono del <b>App Center</b> del Dock, o pulsa <kbd>Super</kbd> y escribe «Software».</li><li>Cuando se abra, <b>busca</b> la aplicación por su nombre o elige una categoría y encuéntrala en la lista.</li><li>Selecciona la aplicación y pulsa <b>Instalar</b>.</li><li>El App Center te pedirá tu <b>contraseña</b>. Escríbela y empieza la instalación, que suele ser rápida (más lenta con conexión lenta).</li></ol>
-<h3>Quitar una aplicación</h3><ol class="steps"><li>Abre el <b>App Center</b>.</li><li>Pulsa el botón <b>Gestionar</b> (Manage) de la barra lateral.</li><li>Busca la aplicación en la lista de instaladas.</li><li>Selecciónala y pulsa <b>Desinstalar</b>. Escribe tu contraseña para confirmar.</li></ol><div class="tip-box">💡 Si intentas quitar una aplicación que otra necesita, el App Center te avisará de que se quitarán las dos y te pedirá confirmación antes de hacerlo.</div>
-<h3>Snaps y debs: dos formatos de aplicaciones</h3>
-<p>Las aplicaciones de Ubuntu llegan en dos formatos. No tienes que elegir tú casi nunca, pero conviene saber qué significan:</p><table class="tbl"><tr><th>Formato</th><th>Qué es</th><th>Cómo lo notarás</th></tr><tr><td><b>Snap</b></td><td>Aplicación «empaquetada» con todo lo que necesita, que se ejecuta en un entorno aislado. Se actualiza sola.</td><td>Si una aplicación está en los dos formatos, el App Center muestra primero el <b>snap</b>.</td></tr><tr><td><b>Deb</b></td><td>Paquete tradicional de Debian/Ubuntu, integrado con el sistema.</td><td>Muchas aplicaciones «de siempre» siguen en este formato. Desde la 24.10 también se pueden instalar <b>.deb</b> de terceros con el App Center.</td></tr></table>
-<p>En la versión 26.04, además, las aplicaciones <b>snap</b> están mejor integradas con el escritorio: puedes ver y controlar sus <b>permisos</b> (cámara, notificaciones, USB, archivos…) desde Configuración.</p>
-<h3>Instalar con seguridad</h3><ul class="key-points"><li>✅ <span>Instala <b>desde el App Center</b> siempre que puedas.</span></li><li>🌐 <span>Si una aplicación solo se ofrece en su web, descarga <b>únicamente de la web oficial</b> del autor.</span></li><li>⚠️ <span>No ejecutes órdenes o scripts de <b>foros y vídeos</b> sin entender qué hacen: pueden dañar el sistema o instalar software no deseado.</span></li><li>🔑 <span>Una instalación te pide <b>tu contraseña</b>: si no esperabas que te la pidieran, <b>no la escribas</b>.</span></li></ul>
-<div class="summary-box">🎯 <b>Idea clave:</b> App Center para instalar y quitar; la contraseña autoriza los cambios; desconfía de lo que no venga de fuentes oficiales.</div><div class="exercise"><h3>🧩 Instalar</h3><p>Quieres instalar un programa. ¿Cuál es el camino habitual en Ubuntu?</p><div class="options" id="opt_u10a"><div class="option" onclick="pickc(this,'u10a',0)">Copiarlo en la carpeta Escritorio</div><div class="option" onclick="pickc(this,'u10a',0)">Reinstalar Ubuntu</div><div class="option" onclick="pickc(this,'u10a',1)">Buscarlo en el App Center y pulsar Instalar</div><div class="option" onclick="pickc(this,'u10a',0)">Descargar un .exe de cualquier web</div></div><div id="fb_u10a" class="feedback-box" data-exp="El App Center es el sitio habitual: ofrece software revisado y actualizaciones automáticas."></div></div><div class="exercise"><h3>🧩 Desinstalar</h3><p>Para quitar una aplicación instalada con el App Center, ¿qué haces?</p><div class="options" id="opt_u10b"><div class="option" onclick="pickc(this,'u10b',1)">Gestionar ▸ seleccionar la aplicación ▸ Desinstalar</div><div class="option" onclick="pickc(this,'u10b',0)">La arrastro a la Papelera</div><div class="option" onclick="pickc(this,'u10b',0)">Borro su carpeta con Mayús + Supr</div><div class="option" onclick="pickc(this,'u10b',0)">Apago el equipo</div></div><div id="fb_u10b" class="feedback-box" data-exp="En el App Center, entra en «Gestionar», selecciona la aplicación y pulsa Desinstalar."></div></div><div class="exercise"><h3>🧩 Una web rara</h3><p>Un vídeo te dice que pegues una orden desconocida en la Terminal para «arreglar» tu equipo. ¿Qué haces?</p><div class="options" id="opt_u10c"><div class="option" onclick="pickc(this,'u10c',0)">La pego y pulso Intro sin leerla</div><div class="option" onclick="pickc(this,'u10c',0)">Se la mando a todos mis contactos</div><div class="option" onclick="pickc(this,'u10c',1)">No la ejecuto si no entiendo qué hace</div><div class="option" onclick="pickc(this,'u10c',0)">Reinicio el equipo cuatro veces</div></div><div id="fb_u10c" class="feedback-box" data-exp="Nunca ejecutes órdenes que no entiendes: pueden dañar el sistema o comprometer tu seguridad."></div></div>
+      <h2>Práctica: copiar, pegar, mover, renombrar y borrar archivos</h2>
+
+<div class="activity"><h3>📁 Manos a la obra con tus archivos</h3>
+<p>En el módulo anterior conociste cómo se organizan las carpetas en Ubuntu. Ahora vas a aprender, paso a paso, las operaciones que harás constantemente en la aplicación <b>Archivos</b>: <b>seleccionar</b>, <b>copiar</b>, <b>mover</b>, <b>renombrar</b>, <b>borrar</b> y <b>recuperar</b>. Al final hay un <b>simulador</b> con misiones.</p></div>
+
+<h3>1. Seleccionar</h3>
+<table class="tbl"><tr><th>Quiero seleccionar…</th><th>Cómo</th></tr>
+<tr><td>Un archivo</td><td>Un clic sobre él</td></tr>
+<tr><td>Varios sueltos</td><td>Mantén <kbd>Ctrl</kbd> y haz clic en cada uno</td></tr>
+<tr><td>Varios seguidos</td><td>Clic en el primero, mantén <kbd>Mayús</kbd> y clic en el último</td></tr>
+<tr><td>Todos los de la carpeta</td><td><kbd>Ctrl</kbd> + <kbd>A</kbd></td></tr>
+<tr><td>Un grupo con el ratón</td><td>Empieza a arrastrar desde un hueco vacío y dibuja un recuadro</td></tr></table>
+
+<h3>2. Copiar y pegar (el original se queda donde estaba)</h3>
+<ol class="steps">
+<li>Selecciona el archivo o los archivos.</li>
+<li>Pulsa <kbd>Ctrl</kbd> + <kbd>C</kbd> o haz clic derecho ▸ <b>Copiar</b>.</li>
+<li>Entra en la carpeta de destino (por ejemplo, desde la barra lateral).</li>
+<li>Pulsa <kbd>Ctrl</kbd> + <kbd>V</kbd> o haz clic derecho en un <b>hueco vacío</b> ▸ <b>Pegar</b>.</li>
+</ol>
+
+<h3>3. Mover: cortar y pegar (el original desaparece de su sitio)</h3>
+<ol class="steps">
+<li>Selecciona y pulsa <kbd>Ctrl</kbd> + <kbd>X</kbd> (o clic derecho ▸ <b>Cortar</b>).</li>
+<li>Ve a la carpeta de destino y pulsa <kbd>Ctrl</kbd> + <kbd>V</kbd>.</li>
+</ol>
+<div class="tip-box">💡 <b>Con el ratón:</b> arrastra el archivo hasta otra carpeta. <b>Dentro del mismo disco se mueve</b>; si lo sueltas en otro disco (por ejemplo, un USB) <b>se copia</b>. Si mantienes pulsada <kbd>Ctrl</kbd> al soltar, se copia en lugar de moverse. También puedes usar clic derecho ▸ <b>Copiar a…</b> o <b>Mover a…</b> para elegir el destino en una ventana.</div>
+
+<h3>4. ¿Y si ya existe un archivo con ese nombre?</h3>
+<ul class="key-points"><li>📄 <span>Si pegas en la <b>misma carpeta</b>, Archivos crea una copia con otro nombre, por ejemplo <code>foto (copia).jpg</code>.</span></li>
+<li>⚠️ <span>Si en la carpeta de destino ya hay uno con el mismo nombre, te pregunta qué hacer: <b>reemplazarlo</b> (se pierde el que había), <b>omitir</b> ese archivo, o ponerle <b>otro nombre</b>. Lee el aviso antes de pulsar.</span></li></ul>
+
+<h3>5. Renombrar</h3>
+<ol class="steps">
+<li>Selecciona el archivo y pulsa <kbd>F2</kbd> (o clic derecho ▸ <b>Renombrar…</b>).</li>
+<li>Escribe el nuevo nombre. Archivos selecciona solo el nombre, <b>sin la extensión</b> (<code>.odt</code>, <code>.jpg</code>…), para que no la borres sin querer.</li>
+<li>Pulsa <kbd>Intro</kbd>.</li>
+</ol>
+<p>Si seleccionas <b>varios</b> archivos y pulsas <kbd>F2</kbd>, puedes renombrarlos todos a la vez (por ejemplo, <code>viaje_1.jpg</code>, <code>viaje_2.jpg</code>…).</p>
+
+<h3>6. Crear carpetas</h3>
+<p>Clic derecho en un hueco ▸ <b>Nueva carpeta…</b>, o <kbd>Ctrl</kbd> + <kbd>Mayús</kbd> + <kbd>N</kbd>. Escribe el nombre y pulsa <kbd>Intro</kbd>.</p>
+
+<h3>7. Borrar y recuperar</h3>
+<table class="tbl"><tr><th>Acción</th><th>Cómo</th><th>¿Se puede recuperar?</th></tr>
+<tr><td>Mandar a la Papelera</td><td><kbd>Supr</kbd> o clic derecho ▸ <b>Mover a la papelera</b></td><td>✅ Sí</td></tr>
+<tr><td>Deshacer justo después</td><td>Botón <b>Deshacer</b> del aviso que aparece abajo, o <kbd>Ctrl</kbd> + <kbd>Z</kbd></td><td>✅ Sí</td></tr>
+<tr><td>Restaurar desde la Papelera</td><td>Abre <b>Papelera</b> en la barra lateral ▸ clic derecho ▸ <b>Restaurar desde la papelera</b></td><td>✅ Vuelve a su carpeta original</td></tr>
+<tr><td>Vaciar la Papelera</td><td>En la Papelera, botón <b>Vaciar</b></td><td>❌ No</td></tr>
+<tr><td>Borrar directamente</td><td><kbd>Mayús</kbd> + <kbd>Supr</kbd> (pide confirmación)</td><td>❌ No</td></tr></table>
+
+<h3>8. Más cosas útiles con el clic derecho</h3>
+<ul class="key-points">
+<li>📂 <span><b>Abrir con…</b>: elige con qué aplicación abrir el archivo (por ejemplo, una foto con el editor en lugar del visor).</span></li>
+<li>🗜️ <span><b>Comprimir…</b>: junta varios archivos en un <code>.zip</code> para enviarlos. Para abrir un <code>.zip</code> recibido: clic derecho ▸ <b>Extraer</b>.</span></li>
+<li>ℹ️ <span><b>Propiedades</b>: tamaño, ubicación, fecha y permisos.</span></li>
+<li>⭐ <span><b>Destacar</b>: lo añade a «Destacados» en la barra lateral para encontrarlo rápido.</span></li></ul>
+
+<h3>9. Copiar a una memoria USB</h3>
+<ol class="steps">
+<li>Conecta el USB: aparece en la barra lateral de Archivos.</li>
+<li>Copia los archivos con <kbd>Ctrl</kbd> + <kbd>C</kbd> y pégalos dentro del USB con <kbd>Ctrl</kbd> + <kbd>V</kbd> (o arrástralos: al ser otro disco, se copian).</li>
+<li>Espera a que termine la copia (verás el progreso arriba a la derecha).</li>
+<li>Pulsa el botón de <b>expulsar</b> ⏏ junto al nombre del USB y retíralo cuando desaparezca.</li>
+</ol>
+
+<h3>10. Practica en el simulador</h3>
+<p>Este explorador es una <b>simulación simplificada</b> de Archivos. Usa los botones o, con el simulador seleccionado, los atajos <kbd>Ctrl</kbd> + <kbd>C</kbd>, <kbd>Ctrl</kbd> + <kbd>X</kbd>, <kbd>Ctrl</kbd> + <kbd>V</kbd>, <kbd>Ctrl</kbd> + <kbd>A</kbd>, <kbd>F2</kbd> y <kbd>Supr</kbd>.</p>
+
+<div class="sim" id="sima" tabindex="0">
+  <div class="sim-top"><span>📁 Archivos</span><span id="sima-ruta">Carpeta personal</span><span></span></div>
+  <div class="sim-tools">
+    <button data-a="copiar">📄 Copiar <small>Ctrl+C</small></button><button data-a="cortar">✂️ Cortar <small>Ctrl+X</small></button>
+    <button data-a="pegar">📋 Pegar <small>Ctrl+V</small></button><button data-a="renombrar">✏️ Renombrar <small>F2</small></button>
+    <button data-a="carpeta">➕ Nueva carpeta</button><button data-a="borrar">🗑️ A la papelera <small>Supr</small></button>
+    <button data-a="restaurar">♻️ Restaurar</button>
+  </div>
+  <div class="sim-fm"><div class="sim-side" id="sima-side"></div><div class="sim-files" id="sima-files"></div></div>
+  <div class="sim-status" id="sima-status">Haz clic en un archivo para seleccionarlo. Ctrl + clic selecciona varios.</div>
+</div>
+<div class="missions-box"><b>🎯 Misiones</b><ul class="checks" id="sima-mis"></ul><p class="small" id="sima-msg"></p>
+<button class="btn" onclick="simaReset()">Empezar de nuevo</button></div>
+
+
+<div class="exercise"><h3>🧩 Copiar o mover</h3><p>Quieres llevar una foto a otra carpeta y que siga también en la original. ¿Qué haces?</p><div class="options" id="opt_u10a"><div class="option" onclick="pickc(this,'u10a',0)">Cortar (Ctrl + X) y pegar</div><div class="option" onclick="pickc(this,'u10a',1)">Copiar (Ctrl + C) y pegar (Ctrl + V) en la carpeta de destino</div><div class="option" onclick="pickc(this,'u10a',0)">Pulsar Mayús + Supr</div><div class="option" onclick="pickc(this,'u10a',0)">Renombrarla con F2</div></div><div id="fb_u10a" class="feedback-box" data-exp="Copiar deja el original en su sitio; cortar lo quita."></div></div>
+<div class="exercise"><h3>🧩 Varios sueltos</h3><p>¿Cómo seleccionas varios archivos que no están seguidos?</p><div class="options" id="opt_u10b"><div class="option" onclick="pickc(this,'u10b',0)">Con doble clic en cada uno</div><div class="option" onclick="pickc(this,'u10b',1)">Manteniendo pulsada Ctrl mientras haces clic en cada uno</div><div class="option" onclick="pickc(this,'u10b',0)">Pulsando F2</div><div class="option" onclick="pickc(this,'u10b',0)">Con Alt + F4</div></div><div id="fb_u10b" class="feedback-box" data-exp="Ctrl + clic añade o quita archivos de la selección uno a uno."></div></div>
+<div class="exercise"><h3>🧩 Recuperar</h3><p>Has mandado un archivo a la Papelera por error. ¿Cómo lo recuperas?</p><div class="options" id="opt_u10c"><div class="option" onclick="pickc(this,'u10c',0)">No se puede recuperar</div><div class="option" onclick="pickc(this,'u10c',0)">Reinstalando Ubuntu</div><div class="option" onclick="pickc(this,'u10c',1)">Abriendo la Papelera, clic derecho sobre él ▸ Restaurar desde la papelera</div><div class="option" onclick="pickc(this,'u10c',0)">Pulsando Mayús + Supr</div></div><div id="fb_u10c" class="feedback-box" data-exp="Mientras no vacíes la Papelera, el archivo se puede restaurar a su carpeta original."></div></div>
+<div class="exercise"><h3>🧩 Arrastrar al USB</h3><p>Arrastras un archivo desde Documentos hasta tu memoria USB. ¿Qué ocurre?</p><div class="options" id="opt_u10d"><div class="option" onclick="pickc(this,'u10d',0)">Se mueve y desaparece de Documentos</div><div class="option" onclick="pickc(this,'u10d',1)">Se copia: al ser otro disco, el original se queda en Documentos</div><div class="option" onclick="pickc(this,'u10d',0)">Se borra</div><div class="option" onclick="pickc(this,'u10d',0)">Se comprime</div></div><div id="fb_u10d" class="feedback-box" data-exp="Entre discos distintos, arrastrar copia; dentro del mismo disco, mueve."></div></div>
+<div class="summary-box">🎯 <b>Idea clave:</b> <kbd>Ctrl</kbd> + <kbd>C</kbd> copia, <kbd>Ctrl</kbd> + <kbd>X</kbd> corta, <kbd>Ctrl</kbd> + <kbd>V</kbd> pega; <kbd>F2</kbd> renombra; <kbd>Supr</kbd> manda a la Papelera, de donde aún puedes restaurar. Antes de vaciarla o de pulsar <kbd>Mayús</kbd> + <kbd>Supr</kbd>, piénsalo dos veces.</div>
+
       <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo9.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo11.html')">Siguiente ➡️</button></div>
     </section>
   </div>
@@ -36,12 +116,71 @@
 <footer class="footer-autor">Introducción a Ubuntu para usuarios · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
 <script src="scorm.js"></script>
 <script>
-function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
-if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
 function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
 el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
 e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
 </script>
-
+<script>
+(function(){
+var CARP=['Documentos','Descargas','Imágenes','USB','Papelera'],ICO={Documentos:'📄',Descargas:'⬇️',Imágenes:'🖼️',USB:'💾',Papelera:'🗑️'};
+var MIS=[['m1','Copia «foto_playa.jpg» de Imágenes al USB (debe seguir también en Imágenes)'],
+['m2','Mueve «apuntes.odt» de Descargas a Documentos (que ya no quede en Descargas)'],
+['m3','Renombra «documento1.odt» (en Documentos) como «trabajo_historia.odt»'],
+['m4','Crea una carpeta llamada «Clase» en Documentos'],
+['m5','Manda «borrador.txt» (en Documentos) a la Papelera… y después restáuralo']];
+var st,box=document.getElementById('sima');
+function nuevo(){return {cur:'Imágenes',sel:[],clip:null,origen:{},done:{},borrado:false,fs:{
+ Documentos:['documento1.odt','borrador.txt','horario.ods'],Descargas:['apuntes.odt','instalador.deb'],
+ Imágenes:['foto_playa.jpg','captura.png'],USB:['musica.mp3'],Papelera:[]}}}
+function ico(n){return n.indexOf('.')<0?'📂':{jpg:'🖼️',png:'🖼️',odt:'📝',ods:'📊',txt:'🗒️',mp3:'🎵',deb:'📦'}[n.split('.').pop()]||'📄'}
+function msg(t){document.getElementById('sima-status').textContent=t}
+function comprueba(){var f=st.fs;
+ if(f.USB.indexOf('foto_playa.jpg')>=0&&f['Imágenes'].indexOf('foto_playa.jpg')>=0)st.done.m1=1;
+ if(f.Documentos.indexOf('apuntes.odt')>=0&&f.Descargas.indexOf('apuntes.odt')<0)st.done.m2=1;
+ if(f.Documentos.indexOf('trabajo_historia.odt')>=0&&f.Documentos.indexOf('documento1.odt')<0)st.done.m3=1;
+ if(f.Documentos.indexOf('Clase')>=0)st.done.m4=1;
+ if(f.Papelera.indexOf('borrador.txt')>=0)st.borrado=true;
+ if(st.borrado&&f.Documentos.indexOf('borrador.txt')>=0)st.done.m5=1;}
+function pinta(){comprueba();
+ document.getElementById('sima-side').innerHTML=CARP.map(function(c){return '<button class="'+(c===st.cur?'on':'')+'" data-c="'+c+'">'+ICO[c]+' '+c+'</button>'}).join('');
+ var fl=st.fs[st.cur];document.getElementById('sima-files').innerHTML=fl.length?fl.map(function(n){return '<button class="sim-file'+(st.sel.indexOf(n)>=0?' sel':'')+'" data-f="'+n+'"><span>'+ico(n)+'</span>'+n+'</button>'}).join(''):'<p class="small">Esta carpeta está vacía.</p>';
+ document.getElementById('sima-ruta').textContent=st.cur==='USB'?'USB (memoria externa)':(st.cur==='Papelera'?'Papelera':'Carpeta personal › '+st.cur);
+ document.getElementById('sima-mis').innerHTML=MIS.map(function(m){return '<li class="'+(st.done[m[0]]?'ok':'')+'">'+(st.done[m[0]]?'✅ ':'⬜ ')+m[1]+'</li>'}).join('');
+ var n=MIS.filter(function(m){return st.done[m[0]]}).length;document.getElementById('sima-msg').textContent=n===MIS.length?'🏆 ¡Todas las misiones completadas!':'Misiones: '+n+' de '+MIS.length;}
+function libre(c,n){if(st.fs[c].indexOf(n)<0)return n;var p=n.lastIndexOf('.'),b=p>0?n.slice(0,p):n,e=p>0?n.slice(p):'',i=1,c2;
+ do{c2=b+' (copia'+(i>1?' '+i:'')+')'+e;i++}while(st.fs[c].indexOf(c2)>=0);return c2}
+function accion(a){var f=st.fs,c=st.cur;
+ if(a==='copiar'||a==='cortar'){if(!st.sel.length)return msg('Primero selecciona uno o varios archivos.');st.clip={modo:a,de:c,items:st.sel.slice()};
+  msg((a==='copiar'?'Copiado':'Cortado')+': '+st.sel.join(', ')+'. Ahora ve a la carpeta de destino y pulsa Pegar.');}
+ else if(a==='pegar'){if(!st.clip)return msg('No hay nada copiado ni cortado.');if(c==='Papelera')return msg('No se puede pegar en la Papelera: usa «A la papelera».');
+  var hechos=[];st.clip.items.forEach(function(n){if(st.fs[st.clip.de].indexOf(n)<0)return;
+   if(st.clip.modo==='cortar'&&st.clip.de===c)return;var dest=libre(c,n);f[c].push(dest);hechos.push(dest);
+   if(st.clip.modo==='cortar')f[st.clip.de].splice(f[st.clip.de].indexOf(n),1);});
+  msg(hechos.length?(st.clip.modo==='copiar'?'Copiado aquí: ':'Movido aquí: ')+hechos.join(', ')+(hechos.some(function(h){return h.indexOf('(copia')>=0})?' · Ya había uno con ese nombre: se ha creado una copia con otro nombre.':''):'Nada que pegar aquí.');
+  if(st.clip.modo==='cortar')st.clip=null;st.sel=hechos;}
+ else if(a==='renombrar'){if(st.sel.length!==1)return msg('Selecciona un solo archivo para renombrarlo.');if(c==='Papelera')return msg('Restaura el archivo antes de renombrarlo.');
+  var v=st.sel[0],nn=prompt('Nuevo nombre para «'+v+'»:',v);if(!nn||nn===v)return;nn=nn.trim();
+  if(/[\/]/.test(nn))return msg('El nombre no puede contener «/».');if(f[c].indexOf(nn)>=0)return msg('Ya existe un archivo con ese nombre en esta carpeta.');
+  f[c][f[c].indexOf(v)]=nn;st.sel=[nn];msg('Renombrado: «'+v+'» → «'+nn+'».');}
+ else if(a==='carpeta'){if(c==='Papelera')return msg('No se pueden crear carpetas dentro de la Papelera.');var nc=prompt('Nombre de la nueva carpeta:','Nueva carpeta');if(!nc)return;nc=nc.trim();
+  if(f[c].indexOf(nc)>=0)return msg('Ya existe algo con ese nombre.');f[c].push(nc);st.sel=[nc];msg('Carpeta «'+nc+'» creada en '+c+'.');}
+ else if(a==='borrar'){if(!st.sel.length)return msg('Selecciona lo que quieres mandar a la Papelera.');if(c==='Papelera')return msg('Ya está en la Papelera. En Ubuntu, «Vaciar papelera» lo borraría para siempre.');
+  st.sel.forEach(function(n){f[c].splice(f[c].indexOf(n),1);f.Papelera.push(n);st.origen[n]=c;});msg('Movido a la Papelera: '+st.sel.join(', ')+'. Puedes restaurarlo desde la Papelera.');st.sel=[];}
+ else if(a==='restaurar'){if(c!=='Papelera'||!st.sel.length)return msg('Entra en la Papelera, selecciona el archivo y pulsa Restaurar.');
+  st.sel.forEach(function(n){var o=st.origen[n]||'Documentos';f.Papelera.splice(f.Papelera.indexOf(n),1);f[o].push(libre(o,n));});msg('Restaurado a su carpeta original: '+st.sel.join(', ')+'.');st.sel=[];}
+ pinta();}
+box.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+ if(b.dataset.c){st.cur=b.dataset.c;st.sel=[];msg('Estás en '+st.cur+'.');pinta();}
+ else if(b.dataset.f){var n=b.dataset.f;if(e.ctrlKey||e.metaKey){var i=st.sel.indexOf(n);if(i>=0)st.sel.splice(i,1);else st.sel.push(n);}else st.sel=[n];msg('Seleccionado: '+st.sel.join(', '));pinta();}
+ else if(b.dataset.a)accion(b.dataset.a);
+ box.focus({preventScroll:true});});
+box.addEventListener('keydown',function(e){var k=e.key.toLowerCase(),m={c:'copiar',x:'cortar',v:'pegar'};
+ if((e.ctrlKey||e.metaKey)&&m[k]){e.preventDefault();accion(m[k]);}
+ else if((e.ctrlKey||e.metaKey)&&k==='a'){e.preventDefault();st.sel=st.fs[st.cur].slice();msg('Seleccionado todo.');pinta();}
+ else if(e.key==='F2'){e.preventDefault();accion('renombrar');}else if(e.key==='Delete'){e.preventDefault();accion('borrar');}});
+window.simaReset=function(){st=nuevo();msg('Haz clic en un archivo para seleccionarlo. Ctrl + clic selecciona varios.');pinta();};
+simaReset();
+})();
+</script>
 </body>
 </html>

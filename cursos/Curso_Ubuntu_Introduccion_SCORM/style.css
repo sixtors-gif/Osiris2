@@ -124,3 +124,38 @@ code{font-family:Consolas,'Courier New',monospace;background:#f6ecf3;border:1px 
 .badge-real{display:inline-block;background:#e95420;color:#fff;border-radius:6px;padding:1px 8px;font-size:.8em;font-weight:700;margin-right:6px}
 .lab input[type=number]{max-width:140px}
 .lab .res{margin-top:12px}
+
+/* Simuladores de escritorio y de Archivos (módulos 8 y 10) */
+.sim{border-radius:12px;overflow:hidden;border:1px solid #444;margin:16px 0;background:#2c001e;user-select:none;outline:none}
+.sim:focus{box-shadow:0 0 0 3px #E95420}
+.sim-top{display:flex;justify-content:space-between;background:#111;color:#eee;font-size:13px;padding:5px 12px}
+.sim-body{display:flex;height:340px}
+.sim-dock{width:58px;background:rgba(0,0,0,.55);display:flex;flex-direction:column;gap:6px;padding:8px 6px}
+.sim-app{width:46px;height:46px;border:0;border-radius:10px;background:rgba(255,255,255,.12);font-size:24px;cursor:pointer;position:relative}
+.sim-app:hover{background:rgba(255,255,255,.25)}
+.sim-app.abierta:after{content:"";position:absolute;left:-4px;top:19px;width:5px;height:8px;border-radius:3px;background:#E95420}
+.sim-desk{flex:1;position:relative;overflow:hidden;background:linear-gradient(135deg,#77216F,#2c001e)}
+.sim-hint{color:#fff;opacity:.85;text-align:center;margin-top:140px;font-size:15px}
+.sim-win{position:absolute;width:300px;max-width:85%;background:#fff;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.45);overflow:hidden}
+.sim-win.max{left:0!important;top:0!important;width:100%;max-width:100%;height:100%;border-radius:0}
+.sim-title{display:flex;justify-content:space-between;align-items:center;background:#ebebeb;padding:6px 8px;font-weight:700;font-size:14px;cursor:move;touch-action:none}
+.sim-btns button{width:24px;height:24px;border-radius:50%;border:0;background:#d4d4d4;margin-left:4px;cursor:pointer;font-size:12px;line-height:24px;padding:0}
+.sim-btns button.x{background:#E95420;color:#fff}
+.sim-cont{padding:18px 14px;font-size:14px;color:#333;min-height:90px}
+.sim-tools{display:flex;flex-wrap:wrap;gap:4px;background:#ebebeb;padding:6px}
+.sim-tools button{border:1px solid #c8c8c8;background:#fff;border-radius:6px;padding:5px 8px;cursor:pointer;font-size:13px}
+.sim-tools button small{color:#888}
+.sim-fm{display:flex;background:#fff;min-height:220px}
+.sim-side{width:150px;background:#f4f4f4;padding:6px;display:flex;flex-direction:column;gap:2px}
+.sim-side button{text-align:left;border:0;background:none;padding:7px 8px;border-radius:6px;cursor:pointer;font-size:14px}
+.sim-side button.on{background:#E95420;color:#fff}
+.sim-files{flex:1;display:flex;flex-wrap:wrap;align-content:flex-start;gap:8px;padding:10px}
+.sim-file{width:110px;border:2px solid transparent;background:none;border-radius:8px;padding:6px;cursor:pointer;font-size:12px;word-break:break-all}
+.sim-file span{display:block;font-size:30px}
+.sim-file.sel{background:#fbe1d6;border-color:#E95420}
+.sim-status{background:#f4f4f4;border-top:1px solid #ddd;color:#333;font-size:13px;padding:6px 10px;min-height:20px}
+.missions-box{background:#fff8f3;border:2px solid #E95420;border-radius:12px;padding:12px 16px;margin:10px 0 20px}
+.missions-box .checks{list-style:none;margin:8px 0;padding:0}
+.missions-box .checks li{padding:3px 0}
+.missions-box .checks li.ok{color:#2e7d32;font-weight:600}
+@media (max-width:600px){.sim-side{width:96px}.sim-side button{font-size:12px;padding:6px 4px}.sim-file{width:84px}.sim-body{height:300px}}

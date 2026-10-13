@@ -37,30 +37,36 @@
         <title>Módulo 7: Ventanas, espacios de trabajo y atajos</title>
       </item>
       <item identifier="ITEM_08" identifierref="RES_MODULO8">
-        <title>Módulo 8: Archivos y carpetas</title>
+        <title>Módulo 8: Práctica: abrir, organizar y cerrar ventanas</title>
       </item>
       <item identifier="ITEM_09" identifierref="RES_MODULO9">
-        <title>Módulo 9: Tus aplicaciones del día a día</title>
+        <title>Módulo 9: Archivos y carpetas</title>
       </item>
       <item identifier="ITEM_10" identifierref="RES_MODULO10">
-        <title>Módulo 10: Instalar y quitar aplicaciones</title>
+        <title>Módulo 10: Práctica: copiar, pegar, mover, renombrar y borrar archivos</title>
       </item>
       <item identifier="ITEM_11" identifierref="RES_MODULO11">
-        <title>Módulo 11: Mantener Ubuntu actualizado</title>
+        <title>Módulo 11: Tus aplicaciones del día a día</title>
       </item>
       <item identifier="ITEM_12" identifierref="RES_MODULO12">
-        <title>Módulo 12: Configuración: tu Ubuntu a tu manera</title>
+        <title>Módulo 12: Instalar y quitar aplicaciones</title>
       </item>
       <item identifier="ITEM_13" identifierref="RES_MODULO13">
-        <title>Módulo 13: La terminal sin miedo</title>
+        <title>Módulo 13: Mantener Ubuntu actualizado</title>
       </item>
       <item identifier="ITEM_14" identifierref="RES_MODULO14">
-        <title>Módulo 14: Seguridad, privacidad y copias de seguridad</title>
+        <title>Módulo 14: Configuración: tu Ubuntu a tu manera</title>
       </item>
       <item identifier="ITEM_15" identifierref="RES_MODULO15">
-        <title>Módulo 15: Ayuda, problemas habituales y reto final</title>
+        <title>Módulo 15: La terminal sin miedo</title>
       </item>
-      <item identifier="ITEM_16" identifierref="RES_EXAMEN_FINAL">
+      <item identifier="ITEM_16" identifierref="RES_MODULO16">
+        <title>Módulo 16: Seguridad, privacidad y copias de seguridad</title>
+      </item>
+      <item identifier="ITEM_17" identifierref="RES_MODULO17">
+        <title>Módulo 17: Ayuda, problemas habituales y reto final</title>
+      </item>
+      <item identifier="ITEM_18" identifierref="RES_EXAMEN_FINAL">
         <title>Examen final</title>
       </item>
     </organization>
@@ -398,6 +404,50 @@
     </resource>
     <resource identifier="RES_MODULO15" type="webcontent" adlcp:scormtype="sco" href="modulo15.html">
       <file href="modulo15.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO16" type="webcontent" adlcp:scormtype="sco" href="modulo16.html">
+      <file href="modulo16.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="img/descarga.png"/>
+      <file href="img/gnome_busqueda.png"/>
+      <file href="img/inst_accesibilidad.png"/>
+      <file href="img/inst_apps.png"/>
+      <file href="img/inst_cuenta.png"/>
+      <file href="img/inst_disco.png"/>
+      <file href="img/inst_etcher.png"/>
+      <file href="img/inst_idioma.png"/>
+      <file href="img/inst_progreso.png"/>
+      <file href="img/inst_propietario.png"/>
+      <file href="img/inst_reiniciar.png"/>
+      <file href="img/inst_teclado.png"/>
+      <file href="img/inst_tipo.png"/>
+      <file href="img/inst_ubicacion.png"/>
+      <file href="img/inst_updater.png"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/terminal.png"/>
+    </resource>
+    <resource identifier="RES_MODULO17" type="webcontent" adlcp:scormtype="sco" href="modulo17.html">
+      <file href="modulo17.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
       <file href="img/descarga.png"/>

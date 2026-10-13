@@ -16,7 +16,7 @@ Cursos en formato **SCORM 1.2** listos para importar en Moodle. Autor: Sixto Rod
 | LibreOffice: conceptos básicos comunes | `cursos/Curso_LibreOffice_Basico_SCORM` | 13 módulos, examen de 24 preguntas, banco GIFT de 39 |
 | Protección de Datos en Hostelería y Restauración | `cursos/Curso_Proteccion_Datos_Hosteleria_SCORM` | 13 módulos, examen de 26 preguntas, banco GIFT de 37 |
 | Informática básica para jóvenes | `cursos/Curso_Informatica_Basica_Jovenes_SCORM` | 12 módulos con 11 ilustraciones, examen de 24 preguntas, banco GIFT de 36 |
-| Introducción a Ubuntu para usuarios | `cursos/Curso_Ubuntu_Introduccion_SCORM` | 15 módulos, examen de 31 preguntas, banco GIFT de 46 |
+| Introducción a Ubuntu para usuarios | `cursos/Curso_Ubuntu_Introduccion_SCORM` | 17 módulos (2 prácticos con simuladores de ventanas y de Archivos), examen de 35 preguntas, banco GIFT de 52 |
 
 ## Uso en Moodle
 

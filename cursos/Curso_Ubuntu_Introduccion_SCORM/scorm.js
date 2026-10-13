@@ -1,6 +1,6 @@
 // scorm.js - Seguimiento SCORM 1.2 (generado por herramientas/scorm_seguimiento.py)
 (function(){
-var ORDEN=["index.html", "modulo1.html", "modulo2.html", "modulo3.html", "modulo4.html", "modulo5.html", "modulo6.html", "modulo7.html", "modulo8.html", "modulo9.html", "modulo10.html", "modulo11.html", "modulo12.html", "modulo13.html", "modulo14.html", "modulo15.html", "examen_final.html"];
+var ORDEN=["index.html", "modulo1.html", "modulo2.html", "modulo3.html", "modulo4.html", "modulo5.html", "modulo6.html", "modulo7.html", "modulo8.html", "modulo9.html", "modulo10.html", "modulo11.html", "modulo12.html", "modulo13.html", "modulo14.html", "modulo15.html", "modulo16.html", "modulo17.html", "examen_final.html"];
 var APROBADO=70;
 var EXAMEN='examen_final.html';
 function findAPI(w){var n=0;while(w&&n<10){try{if(w.API)return w.API;if(w.parent===w)break;w=w.parent}catch(e){break}n++}return null}

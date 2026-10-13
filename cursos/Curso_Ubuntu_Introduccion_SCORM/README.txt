@@ -3,17 +3,19 @@ Autor: Sixto Rodríguez de Sepúlveda
 
 Curso introductorio, sin conocimientos previos, basado en Ubuntu 26.04 LTS («Resolute Raccoon»,
 GNOME 50): qué es Ubuntu, versiones y requisitos, preparar el USB e instalar paso a paso, el escritorio,
-ventanas y atajos, archivos y carpetas, aplicaciones del día a día, App Center, actualizaciones,
+ventanas y atajos (con práctica guiada y simulador), archivos y carpetas (con práctica guiada
+de copiar, pegar, mover, renombrar y borrar, y simulador), aplicaciones del día a día, App Center, actualizaciones,
 Configuración, la terminal (con un simulador interactivo), seguridad y copias de seguridad, y cómo pedir ayuda.
 
 Contenido:
-- imsmanifest.xml: paquete SCORM 1.2 empaquetado como un único SCO (seguimiento correcto en Moodle).
+- imsmanifest.xml: paquete SCORM 1.2 con un SCO por página (el índice de Moodle se marca al avanzar).
 - index.html: bienvenida e itinerario.
-- modulo1.html ... modulo15.html: 15 módulos con explicaciones, tablas de equivalencias con Windows,
+- modulo1.html ... modulo17.html: 17 módulos con explicaciones, tablas de equivalencias con Windows,
   capturas reales del instalador y de la web oficial de Ubuntu, esquemas, ejercicios interactivos y
-  un simulador de terminal (módulo 13).
-- examen_final.html: examen final interactivo de 31 preguntas (aprobado con 70 %).
-- preguntas_moodle.gift: 46 preguntas en formato GIFT (15 categorías, una por módulo) para el
+  un simulador de terminal (módulo 15), un simulador de escritorio (módulo 8) y un
+  simulador de la aplicación Archivos (módulo 10).
+- examen_final.html: examen final interactivo de 35 preguntas (aprobado con 70 %).
+- preguntas_moodle.gift: 52 preguntas en formato GIFT (17 categorías, una por módulo) para el
   Banco de preguntas de Moodle.
 - style.css + scorm.js + img/ (logotipo y capturas).
 
@@ -35,14 +37,16 @@ Temario:
 5. El instalador (2): disco, usuario y fin
 6. Primer inicio y el escritorio
 7. Ventanas, espacios de trabajo y atajos
-8. Archivos y carpetas
-9. Tus aplicaciones del día a día
-10. Instalar y quitar aplicaciones
-11. Mantener Ubuntu actualizado
-12. Configuración: tu Ubuntu a tu manera
-13. La terminal sin miedo
-14. Seguridad, privacidad y copias de seguridad
-15. Ayuda, problemas habituales y reto final
+8. Práctica: abrir, organizar y cerrar ventanas
+9. Archivos y carpetas
+10. Práctica: copiar, pegar, mover, renombrar y borrar archivos
+11. Tus aplicaciones del día a día
+12. Instalar y quitar aplicaciones
+13. Mantener Ubuntu actualizado
+14. Configuración: tu Ubuntu a tu manera
+15. La terminal sin miedo
+16. Seguridad, privacidad y copias de seguridad
+17. Ayuda, problemas habituales y reto final
 
 Importación en Moodle:
 1. Crea una actividad "SCORM" y sube el ZIP completo (sin descomprimir).

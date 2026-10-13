@@ -3,42 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Archivos y carpetas</title>
+<title>Práctica: abrir, organizar y cerrar ventanas</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
   <div class="header">
-    <h1><span class="badge-icon">📁</span>Archivos y carpetas</h1>
+    <h1><span class="badge-icon">🖱️</span>Práctica: abrir, organizar y cerrar ventanas</h1>
     <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
-    <p>Cómo se organiza el disco en Ubuntu y cómo usar la aplicación Archivos con soltura.</p>
+    <p>Paso a paso y con un simulador: abrir aplicaciones, mover, maximizar, minimizar y cerrar ventanas.</p>
   </div>
   <div class="progress-container">
-    <div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div>
-    <div class="progress-text">Introducción a Ubuntu para usuarios · Módulo 8 de 15</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:44%"></div></div>
+    <div class="progress-text">Introducción a Ubuntu para usuarios · Módulo 8 de 17</div>
   </div>
   <div class="content-area">
     <section class="module">
-      <h2>Archivos y carpetas</h2>
-<div class="activity"><h3>📁 Tu carpeta personal</h3>
-<p>La aplicación <b>Archivos</b> (Files) es el explorador de Ubuntu. Se abre desde el Dock o buscándola en las Actividades. Tu espacio de trabajo es la <b>carpeta personal</b> (<i>Home</i>): ahí viven tus <b>Documentos</b>, <b>Descargas</b>, <b>Imágenes</b>, <b>Música</b> y <b>Vídeos</b>. Todo lo tuyo debe estar ahí.</p></div>
-<h3>Cómo se organiza el disco</h3>
-<p>En Windows cada unidad tiene una letra (<code>C:</code>, <code>D:</code>…). En Ubuntu <b>no hay letras</b>: todo cuelga de una única raíz llamada <code>/</code>.</p><div class="term-static"><span class="cm">/                    ← raíz: de aquí cuelga todo (no hay C: ni D:)</span>
-├── home
-│   └── ana                 ← tu carpeta personal (Home)
-│       ├── Documentos
-│       ├── Descargas
-│       ├── Escritorio
-│       ├── Imágenes
-│       ├── Música
-│       └── Vídeos
-├── media                   ← aquí aparecen los USB y discos externos
-└── etc, usr, var ...       ← el sistema (no hace falta tocarlo)</div>
-<div class="ms-box"><span class="mbadge">Si vienes de Windows</span> Tres diferencias que conviene saber: la separación de carpetas es <code>/</code> (no <code>\</code>), <b>las mayúsculas importan</b> (<code>Informe.odt</code> y <code>informe.odt</code> son archivos distintos) y los archivos <b>ocultos</b> empiezan por un punto.</div>
-<h3>Lo que haces cada día</h3><table class="tbl"><tr><th>Quiero…</th><th>Cómo se hace</th></tr><tr><td>Abrir una carpeta o un archivo</td><td>Doble clic</td></tr><tr><td>Copiar o mover</td><td>Arrastra con el ratón, o <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>X</kbd> y <kbd>Ctrl</kbd> + <kbd>V</kbd></td></tr><tr><td>Cambiar el nombre</td><td>Selecciona y pulsa <kbd>F2</kbd></td></tr><tr><td>Crear una carpeta</td><td>Clic derecho en un hueco ▸ <b>Nueva carpeta</b> (o <kbd>Ctrl</kbd> + <kbd>Mayús</kbd> + <kbd>N</kbd>)</td></tr><tr><td>Buscar</td><td><kbd>Ctrl</kbd> + <kbd>F</kbd> dentro de la ventana de Archivos</td></tr><tr><td>Escribir una ruta</td><td><kbd>Ctrl</kbd> + <kbd>L</kbd> muestra la barra de ubicación</td></tr><tr><td>Ver archivos ocultos</td><td><kbd>Ctrl</kbd> + <kbd>H</kbd></td></tr><tr><td>Comprimir</td><td>Clic derecho sobre los archivos ▸ <b>Comprimir…</b> (formato ZIP para compartir con Windows)</td></tr><tr><td>Mandar a la Papelera</td><td>Selecciona y pulsa <kbd>Supr</kbd></td></tr><tr><td>Borrar sin pasar por la Papelera</td><td><kbd>Mayús</kbd> + <kbd>Supr</kbd> (pide confirmación y <b>no se puede deshacer</b>)</td></tr></table>
-<h3>Memorias USB y discos externos</h3>
-<p>Al conectar un USB, aparece en la <b>barra lateral</b> de Archivos. Antes de sacarlo pulsa el botón de <b>expulsar</b> que hay junto a su nombre: así te aseguras de que todos los datos se han escrito.</p><div class="alert-box">⚠️ Los archivos que borras con <kbd>Mayús</kbd> + <kbd>Supr</kbd>, o vaciando la Papelera, <b>no se recuperan</b>. Y las órdenes de la terminal, como <code>rm</code>, tampoco pasan por la Papelera.</div><div class="tip-box">💡 Trabaja con rutas cortas y nombres sin símbolos raros. Y mantén tus documentos en <b>Documentos</b>: es lo único que tendrás que copiar cuando cambies de equipo.</div>
-<div class="summary-box">🎯 <b>Idea clave:</b> todo cuelga de <code>/</code>; lo tuyo vive en tu carpeta personal; las mayúsculas importan.</div><div class="exercise"><h3>🧩 Dónde guardar</h3><p>¿Dónde se guardan por defecto tus documentos personales?</p><div class="options" id="opt_u8a"><div class="option" onclick="pickc(this,'u8a',0)">En la raíz del sistema, en /etc</div><div class="option" onclick="pickc(this,'u8a',0)">En la unidad C:</div><div class="option" onclick="pickc(this,'u8a',1)">En tu carpeta personal (Documentos, Descargas, Imágenes…)</div><div class="option" onclick="pickc(this,'u8a',0)">En la Papelera</div></div><div id="fb_u8a" class="feedback-box" data-exp="Tu carpeta personal (Home) es tu espacio; ahí están Documentos, Descargas, etc."></div></div><div class="exercise"><h3>🧩 Mayúsculas</h3><p>En Ubuntu, ¿son lo mismo <code>Informe.odt</code> e <code>informe.odt</code>?</p><div class="options" id="opt_u8b"><div class="option" onclick="pickc(this,'u8b',0)">Solo dentro de Documentos</div><div class="option" onclick="pickc(this,'u8b',0)">Sí, son siempre el mismo archivo</div><div class="option" onclick="pickc(this,'u8b',0)">Depende del color del icono</div><div class="option" onclick="pickc(this,'u8b',1)">No: las mayúsculas importan y son archivos distintos</div></div><div id="fb_u8b" class="feedback-box" data-exp="En el sistema de archivos de Linux se distingue entre mayúsculas y minúsculas."></div></div><div class="exercise"><h3>🧩 Archivos ocultos</h3><p>No ves un archivo que empieza por un punto. ¿Qué haces?</p><div class="options" id="opt_u8c"><div class="option" onclick="pickc(this,'u8c',0)">Reinstalo Ubuntu</div><div class="option" onclick="pickc(this,'u8c',0)">Es imposible verlos</div><div class="option" onclick="pickc(this,'u8c',1)">Pulso Ctrl + H para mostrar los archivos ocultos</div><div class="option" onclick="pickc(this,'u8c',0)">Lo busco en la unidad C:</div></div><div id="fb_u8c" class="feedback-box" data-exp="Ctrl + H muestra y oculta los archivos ocultos."></div></div><div class="exercise"><h3>🧩 Sacar el USB</h3><p>Antes de retirar un USB, ¿qué conviene hacer?</p><div class="options" id="opt_u8d"><div class="option" onclick="pickc(this,'u8d',1)">Expulsarlo desde la barra lateral de Archivos</div><div class="option" onclick="pickc(this,'u8d',0)">Nada, se puede arrancar del puerto</div><div class="option" onclick="pickc(this,'u8d',0)">Borrar la carpeta Descargas</div><div class="option" onclick="pickc(this,'u8d',0)">Apagar el wifi</div></div><div id="fb_u8d" class="feedback-box" data-exp="Expulsar asegura que los datos se han escrito antes de retirar el USB."></div></div>
+      <h2>Práctica: abrir, organizar y cerrar ventanas</h2>
+
+<div class="activity"><h3>🪟 De la teoría a la práctica</h3>
+<p>En el módulo anterior viste los atajos. Ahora vas a practicar, paso a paso, lo que harás decenas de veces al día: <b>abrir</b> aplicaciones, <b>mover y ordenar</b> sus ventanas, <b>minimizarlas</b> y <b>cerrarlas</b> correctamente. Al final tienes un <b>simulador</b> para practicar aunque no tengas Ubuntu delante.</p></div>
+
+<h3>1. Abrir una aplicación: tres caminos</h3>
+<ol class="steps">
+<li><b>Desde el Dock</b> (la barra de iconos de la izquierda): un clic sobre el icono. Bajo el icono aparece un <b>punto</b>: indica que la aplicación está abierta.</li>
+<li><b>Buscándola:</b> pulsa <kbd>Super</kbd>, escribe las primeras letras (por ejemplo <code>calc</code>) y pulsa <kbd>Intro</kbd>. Es la forma más rápida cuando te acostumbras.</li>
+<li><b>Desde la cuadrícula de aplicaciones:</b> el botón de los nueve cuadrados, abajo del todo en el Dock, muestra <b>todas</b> las aplicaciones instaladas.</li>
+</ol>
+<div class="tip-box">💡 <b>¿Quieres otra ventana de la misma aplicación</b> (por ejemplo, dos documentos)? Clic derecho sobre su icono del Dock ▸ <b>Nueva ventana</b>, o dentro de la aplicación <kbd>Ctrl</kbd> + <kbd>N</kbd>.</div>
+
+<h3>2. Las partes de una ventana</h3>
+<div class="figure"><svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Partes de una ventana en Ubuntu: barra de título, botones minimizar, maximizar y cerrar, y bordes para cambiar el tamaño" font-family="Segoe UI,Tahoma,sans-serif">
+<rect x="70" y="40" width="420" height="230" rx="12" fill="#ffffff" stroke="#9aa4bd" stroke-width="2"/>
+<path d="M70,52 a12,12 0 0 1 12,-12 h396 a12,12 0 0 1 12,12 v34 h-420 z" fill="#ebebeb"/>
+<text x="280" y="68" font-size="15" font-weight="700" fill="#333" text-anchor="middle">Documentos</text>
+<circle cx="410" cy="63" r="11" fill="#d4d4d4"/><line x1="405" y1="63" x2="415" y2="63" stroke="#333" stroke-width="2"/>
+<circle cx="437" cy="63" r="11" fill="#d4d4d4"/><rect x="432" y="58" width="10" height="10" fill="none" stroke="#333" stroke-width="2"/>
+<circle cx="464" cy="63" r="11" fill="#E95420"/><path d="M459,58 l10,10 M469,58 l-10,10" stroke="#fff" stroke-width="2.2"/>
+<rect x="90" y="105" width="110" height="145" rx="6" fill="#f4f4f4"/>
+<g fill="#cfd6e4"><rect x="220" y="110" width="250" height="14" rx="4"/><rect x="220" y="134" width="210" height="14" rx="4"/><rect x="220" y="158" width="230" height="14" rx="4"/><rect x="220" y="182" width="180" height="14" rx="4"/></g>
+<rect x="476" y="256" width="14" height="14" fill="none" stroke="#E95420" stroke-width="2" stroke-dasharray="3 2"/>
+<g font-size="13" font-weight="700" fill="#1f3a63">
+<line x1="150" y1="63" x2="150" y2="20" stroke="#6b7280"/><text x="150" y="15" text-anchor="middle">Barra de título: arrastrar para mover · doble clic para maximizar</text>
+<line x1="410" y1="75" x2="545" y2="110" stroke="#6b7280"/><text x="550" y="114">Minimizar</text>
+<line x1="437" y1="75" x2="545" y2="140" stroke="#6b7280"/><text x="550" y="144">Maximizar</text>
+<line x1="464" y1="75" x2="545" y2="170" stroke="#6b7280"/><text x="550" y="174">Cerrar</text>
+<line x1="490" y1="270" x2="545" y2="250" stroke="#6b7280"/><text x="550" y="246">Bordes y</text><text x="550" y="262">esquinas:</text><text x="550" y="278">cambiar tamaño</text>
+</g></svg><div class="figure-caption">Esquema ilustrativo de una ventana de Ubuntu. En Ubuntu los botones están arriba a la <b>derecha</b> y el de cerrar es naranja.</div></div>
+
+<h3>3. Mover, maximizar y cambiar el tamaño</h3>
+<table class="tbl"><tr><th>Quiero…</th><th>Con el ratón</th><th>Con el teclado</th></tr>
+<tr><td>Mover la ventana</td><td>Arrastra la <b>barra de título</b></td><td>—</td></tr>
+<tr><td>Maximizar / restaurar</td><td>Botón ▢, o <b>doble clic</b> en la barra de título</td><td><kbd>Super</kbd> + <kbd>↑</kbd> / <kbd>Super</kbd> + <kbd>↓</kbd></td></tr>
+<tr><td>Ocupar media pantalla</td><td>Arrastra la ventana al borde izquierdo o derecho</td><td><kbd>Super</kbd> + <kbd>←</kbd> / <kbd>Super</kbd> + <kbd>→</kbd></td></tr>
+<tr><td>Cambiar el tamaño</td><td>Arrastra un <b>borde</b> o una <b>esquina</b> (el puntero cambia a una flecha doble)</td><td>—</td></tr>
+<tr><td>Traer al frente una ventana tapada</td><td>Clic en cualquier parte visible de ella, o en su icono del Dock</td><td><kbd>Alt</kbd> + <kbd>Tab</kbd></td></tr></table>
+
+<h3>4. Minimizar y recuperar</h3>
+<p>Minimizar <b>esconde</b> la ventana sin cerrarla: la aplicación sigue abierta y conserva lo que estabas haciendo.</p>
+<ul class="key-points"><li>➖ <span>Para minimizar: botón <b>–</b> de la barra de título.</span></li>
+<li>↩️ <span>Para recuperarla: clic en su icono del <b>Dock</b>, <kbd>Alt</kbd> + <kbd>Tab</kbd>, o <kbd>Super</kbd> y elegirla entre las ventanas.</span></li>
+<li>🖥️ <span>Para ver el escritorio un momento: <kbd>Super</kbd> + <kbd>D</kbd> esconde todas; repítelo para que vuelvan.</span></li></ul>
+
+<h3>5. Cerrar bien: ventana, pestaña o aplicación</h3>
+<table class="tbl"><tr><th>Acción</th><th>Cómo</th><th>Qué cierra</th></tr>
+<tr><td>Cerrar la ventana</td><td>Botón ✕ naranja, o <kbd>Alt</kbd> + <kbd>F4</kbd></td><td>Esa ventana</td></tr>
+<tr><td>Cerrar una pestaña o documento</td><td><kbd>Ctrl</kbd> + <kbd>W</kbd></td><td>Solo la pestaña o el documento activo</td></tr>
+<tr><td>Salir de la aplicación</td><td><kbd>Ctrl</kbd> + <kbd>Q</kbd>, o clic derecho en su icono del Dock ▸ <b>Salir</b></td><td>La aplicación entera, con todas sus ventanas</td></tr></table>
+<div class="alert-box">⚠️ <b>Si hay cambios sin guardar</b>, la aplicación te preguntará antes de cerrar. Lee el aviso: normalmente ofrece <b>Guardar</b>, <b>Cerrar sin guardar</b> o <b>Cancelar</b>. Si dudas, elige <b>Cancelar</b> y guarda primero con <kbd>Ctrl</kbd> + <kbd>S</kbd>.</div>
+
+<h3>6. Si una aplicación se queda colgada</h3>
+<ol class="steps">
+<li>Espera unos segundos: a veces solo está ocupada.</li>
+<li>Si Ubuntu muestra el aviso <b>«… no responde»</b>, puedes elegir <b>Esperar</b> o <b>Forzar salida</b>. Forzar la salida la cierra de inmediato y se pierde lo que no estuviera guardado.</li>
+<li>Si no aparece el aviso, abre <b>Resources</b> (el monitor del sistema), busca la aplicación y fuerza su cierre.</li>
+</ol>
+<div class="ms-box"><span class="mbadge">Si vienes de Windows</span> Es lo mismo que «Finalizar tarea» en el Administrador de tareas. <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Supr</kbd> en Ubuntu sirve para <b>cerrar la sesión</b>, no abre un administrador de tareas.</div>
+
+<h3>7. Practica en el simulador</h3>
+<p>Este escritorio es una <b>simulación simplificada</b> para practicar con el ratón (o con el dedo en una tableta). Completa las misiones.</p>
+
+<div class="sim" id="simv">
+  <div class="sim-top"><span>Actividades</span><span id="simv-hora">10:00</span><span>🔊 🔋</span></div>
+  <div class="sim-body">
+    <div class="sim-dock" id="simv-dock"></div>
+    <div class="sim-desk" id="simv-desk"><div class="sim-hint">Haz clic en un icono del Dock para abrir una aplicación</div></div>
+  </div>
+</div>
+<div class="missions-box"><b>🎯 Misiones</b><ul class="checks" id="simv-mis"></ul><p class="small" id="simv-msg"></p>
+<button class="btn" onclick="simvReset()">Empezar de nuevo</button></div>
+
+
+<div class="exercise"><h3>🧩 Doble clic</h3><p>¿Qué ocurre al hacer doble clic en la barra de título de una ventana?</p><div class="options" id="opt_u8a"><div class="option" onclick="pickc(this,'u8a',0)">Se cierra</div><div class="option" onclick="pickc(this,'u8a',1)">Se maximiza, o vuelve a su tamaño si ya estaba maximizada</div><div class="option" onclick="pickc(this,'u8a',0)">Se minimiza al Dock</div><div class="option" onclick="pickc(this,'u8a',0)">Se mueve a otro espacio de trabajo</div></div><div id="fb_u8a" class="feedback-box" data-exp="El doble clic en la barra de título alterna entre maximizar y restaurar."></div></div>
+<div class="exercise"><h3>🧩 Recuperar una ventana</h3><p>Has minimizado el editor de texto. ¿Cómo lo recuperas?</p><div class="options" id="opt_u8b"><div class="option" onclick="pickc(this,'u8b',0)">Lo vuelvo a instalar</div><div class="option" onclick="pickc(this,'u8b',0)">No se puede: minimizar es cerrar</div><div class="option" onclick="pickc(this,'u8b',1)">Hago clic en su icono del Dock o uso Alt + Tab</div><div class="option" onclick="pickc(this,'u8b',0)">Reinicio el ordenador</div></div><div id="fb_u8b" class="feedback-box" data-exp="Minimizar solo esconde la ventana; su icono del Dock la trae de vuelta."></div></div>
+<div class="exercise"><h3>🧩 Cerrar todo</h3><p>Quieres cerrar Firefox entero, con todas sus ventanas. ¿Qué atajo usas?</p><div class="options" id="opt_u8c"><div class="option" onclick="pickc(this,'u8c',0)">Ctrl + W</div><div class="option" onclick="pickc(this,'u8c',1)">Ctrl + Q</div><div class="option" onclick="pickc(this,'u8c',0)">Super + D</div><div class="option" onclick="pickc(this,'u8c',0)">Ctrl + N</div></div><div id="fb_u8c" class="feedback-box" data-exp="Ctrl + Q sale de la aplicación; Ctrl + W cierra solo la pestaña o el documento actual."></div></div>
+<div class="exercise"><h3>🧩 Aplicación colgada</h3><p>Una aplicación no responde y aparece un aviso. ¿Qué botón la cierra a la fuerza?</p><div class="options" id="opt_u8d"><div class="option" onclick="pickc(this,'u8d',0)">Esperar</div><div class="option" onclick="pickc(this,'u8d',1)">Forzar salida</div><div class="option" onclick="pickc(this,'u8d',0)">Minimizar</div><div class="option" onclick="pickc(this,'u8d',0)">Maximizar</div></div><div id="fb_u8d" class="feedback-box" data-exp="Forzar salida la cierra inmediatamente (se pierde lo no guardado)."></div></div>
+<div class="summary-box">🎯 <b>Idea clave:</b> abre desde el Dock o con <kbd>Super</kbd> + nombre; ordena con la barra de título y <kbd>Super</kbd> + flechas; minimizar no es cerrar; <kbd>Ctrl</kbd> + <kbd>W</kbd> cierra un documento y <kbd>Ctrl</kbd> + <kbd>Q</kbd> la aplicación.</div>
+
       <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo7.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo9.html')">Siguiente ➡️</button></div>
     </section>
   </div>
@@ -46,12 +107,40 @@
 <footer class="footer-autor">Introducción a Ubuntu para usuarios · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
 <script src="scorm.js"></script>
 <script>
-function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);
-if(isFinite(v)&&Math.abs(v-exp)<=0.011){e.className='feedback-box good';e.textContent='✅ '+msg;}else{e.className='feedback-box bad';e.textContent='❌ Todavía no. Revisa el enunciado y prueba de nuevo.';}}
 function pickc(el,uid,ok){var box=document.getElementById('opt_'+uid);box.querySelectorAll('.option').forEach(function(x){x.classList.remove('correct','incorrect')});
 el.classList.add(ok?'correct':'incorrect');var e=document.getElementById('fb_'+uid);e.className='feedback-box '+(ok?'good':'bad');
 e.textContent=(ok?'✅ Correcto. ':'❌ No exactamente. ')+e.getAttribute('data-exp');}
 </script>
-
+<script>
+(function(){
+var APPS=[{id:'files',ico:'📁',name:'Archivos'},{id:'web',ico:'🌐',name:'Firefox'},{id:'text',ico:'📝',name:'Editor de texto'}];
+var MIS=[['abrir2','Abre dos aplicaciones distintas desde el Dock'],['max','Maximiza una ventana (botón ▢ o doble clic en la barra de título)'],
+['mover','Mueve una ventana arrastrando su barra de título'],['min','Minimiza una ventana (botón –)'],
+['rec','Recupera la ventana minimizada haciendo clic en su icono del Dock'],['cerrar','Cierra todas las ventanas (botón ✕)']];
+var st,z=1,desk=document.getElementById('simv-desk'),dock=document.getElementById('simv-dock'),mis=document.getElementById('simv-mis');
+function done(k){if(!st.done[k]){st.done[k]=1;pinta();}}
+function pinta(){mis.innerHTML=MIS.map(function(m){return '<li class="'+(st.done[m[0]]?'ok':'')+'">'+(st.done[m[0]]?'✅ ':'⬜ ')+m[1]+'</li>'}).join('');
+ var n=MIS.filter(function(m){return st.done[m[0]]}).length;document.getElementById('simv-msg').textContent=n===MIS.length?'🏆 ¡Todas las misiones completadas!':'Misiones: '+n+' de '+MIS.length;
+ dock.innerHTML='';APPS.forEach(function(a){var b=document.createElement('button');b.className='sim-app'+(st.win[a.id]?' abierta':'');b.title=a.name;b.innerHTML=a.ico;b.onclick=function(){abrir(a)};dock.appendChild(b)});}
+function abrir(a){var w=st.win[a.id];
+ if(w){if(w.style.display==='none'){w.style.display='';done('rec');}w.style.zIndex=++z;return;}
+ w=document.createElement('div');w.className='sim-win';var n=Object.keys(st.win).length;w.style.left=(30+n*40)+'px';w.style.top=(20+n*30)+'px';w.style.zIndex=++z;
+ w.innerHTML='<div class="sim-title"><span>'+a.ico+' '+a.name+'</span><span class="sim-btns"><button title="Minimizar">–</button><button title="Maximizar">▢</button><button class="x" title="Cerrar">✕</button></span></div><div class="sim-cont">'+({files:'📂 Documentos · 📂 Descargas · 📂 Imágenes',web:'🔒 https://ubuntu.com',text:'Escribe aquí tus apuntes…'})[a.id]+'</div>';
+ var bt=w.querySelectorAll('.sim-btns button');
+ bt[0].onclick=function(e){e.stopPropagation();w.style.display='none';done('min');};
+ bt[1].onclick=function(e){e.stopPropagation();maxi(w);};
+ bt[2].onclick=function(e){e.stopPropagation();w.remove();delete st.win[a.id];if(!Object.keys(st.win).length&&st.done.abrir2)done('cerrar');pinta();};
+ var t=w.querySelector('.sim-title');t.ondblclick=function(){maxi(w)};
+ t.onpointerdown=function(e){if(e.target.tagName==='BUTTON'||w.classList.contains('max'))return;w.style.zIndex=++z;var r=desk.getBoundingClientRect(),ox=e.clientX-w.offsetLeft,oy=e.clientY-w.offsetTop,moved=0;
+  t.setPointerCapture(e.pointerId);t.onpointermove=function(ev){w.style.left=Math.max(0,Math.min(r.width-80,ev.clientX-ox))+'px';w.style.top=Math.max(0,Math.min(r.height-30,ev.clientY-oy))+'px';moved++;};
+  t.onpointerup=function(){t.onpointermove=null;if(moved>3)done('mover');};};
+ w.onpointerdown=function(){w.style.zIndex=++z;};
+ desk.appendChild(w);st.win[a.id]=w;var h=desk.querySelector('.sim-hint');if(h)h.style.display='none';
+ if(Object.keys(st.win).length>=2)done('abrir2');pinta();}
+function maxi(w){w.classList.toggle('max');if(w.classList.contains('max'))done('max');}
+window.simvReset=function(){desk.querySelectorAll('.sim-win').forEach(function(w){w.remove()});st={win:{},done:{}};var h=desk.querySelector('.sim-hint');if(h)h.style.display='';pinta();};
+simvReset();
+})();
+</script>
 </body>
 </html>
