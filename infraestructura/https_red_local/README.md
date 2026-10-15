@@ -30,6 +30,8 @@ Cómo poner un servidor web interno con `https://` y que **todos los puestos lo 
 | `instalar_ca_windows.bat` | Instala la CA en un puesto Windows (y la activa en Firefox). |
 | `instalar_ca_linux.sh` | Instala la CA en un puesto Linux (sistema, Chrome/Chromium y Firefox). |
 | `anadir_hosts_windows.bat` / `anadir_hosts_linux.sh` | Sin acceso al DNS: hacen que `horus.com` apunte al servidor en cada puesto. |
+| `generar_con_docker.sh` / `.bat` | Ejecutan el generador dentro de Docker. |
+| `docker-compose.yml`, `nginx/`, `web/` | Servidor web nginx de ejemplo con el certificado. |
 | `.gitignore` | Impide que las claves generadas acaben en el repositorio. |
 
 ---
@@ -79,6 +81,15 @@ Se crea la carpeta `salida/`:
 | `salida/ca/` | `HorusCA.key` (**clave secreta de la CA**) y `HorusCA.crt` | ❌ **Nunca.** Guarda `HorusCA.key` en un USB cifrado fuera del servidor. |
 | `salida/servidor/` | `horus.com.key`, `horus.com.fullchain.crt`, `horus.com.pfx` | ❌ Solo para el servidor web. |
 | `salida/para_los_puestos/` | `HorusCA.cer` (Windows), `HorusCA.crt` (resto), `HUELLA_SHA256.txt` | ✅ Esto es lo que se instala en los puestos. |
+
+### Con Docker (sin instalar nada más en el equipo)
+Desde esta carpeta, tras editar la parte **CONFIGURA AQUÍ** de `generar_certificados.sh`:
+- **Linux / macOS:** `bash generar_con_docker.sh`
+- **Windows (Docker Desktop):** doble clic en `generar_con_docker.bat`, o en PowerShell: `.\generar_con_docker.bat`
+
+Usa un contenedor Ubuntu desechable que se borra al terminar; los certificados quedan en `salida/` de tu equipo.
+
+Para **servir la web también con Docker**, pon tus páginas en `web/` y ejecuta `docker compose up -d`: el `docker-compose.yml` arranca nginx con el certificado (`nginx/horus.conf`) en los puertos 80 y 443. Al renovar el certificado: `docker compose restart`.
 
 ### Medida de seguridad incluida: restricción de nombres
 
@@ -162,11 +173,6 @@ Limitaciones: algunos Android no resuelven `.local`, y redes con VLAN separadas 
 
 Comprueba desde un puesto: `ping horus.com` (o `horus.local`) debe responder la IP del servidor.
 
----|---|---|
-| **DNS del router o servidor DNS interno** (recomendada) | Añade un registro `A`: `horus.com → 192.168.1.10` (y `www.horus.com`). En routers suele llamarse «DNS local», «Host estático» o «DNS rebinding/Local DNS». En Windows Server: consola **DNS** ▸ nueva zona `horus.com` ▸ registro A. En Pi-hole: *Local DNS Records*. | Muchos puestos; se configura una vez. |
-| Archivo `hosts` en cada puesto | Añade la línea `192.168.1.10  horus.com www.horus.com`. Windows: `C:\Windows\System32\drivers\etc\hosts` (Bloc de notas como administrador). Linux/macOS: `/etc/hosts`. | Pocos puestos o pruebas. |
-
-Comprueba desde un puesto: `ping horus.com` debe responder la IP del servidor.
 
 ---
 

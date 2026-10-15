@@ -22,7 +22,7 @@ DIAS_SERVIDOR=825                            # Máximo que aceptan Apple y la ma
 CLAVE_PFX="${CLAVE_PFX:-}"                   # Contraseña del .pfx para IIS (se pregunta si está vacía)
 # ----------------------------------------------------------------------------
 
-DIR="$(cd "$(dirname "$0")" && pwd)/salida"
+DIR="${SALIDA:-$(cd "$(dirname "$0")" && pwd)/salida}"   # SALIDA permite elegir la carpeta (Docker)
 CA_DIR="$DIR/ca"; SRV_DIR="$DIR/servidor"; CLI_DIR="$DIR/para_los_puestos"
 mkdir -p "$CA_DIR" "$SRV_DIR" "$CLI_DIR"
 chmod 700 "$CA_DIR"

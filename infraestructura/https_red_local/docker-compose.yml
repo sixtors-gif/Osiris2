@@ -1,0 +1,14 @@
+# Servidor web de ejemplo con el certificado del hotel.
+# 1) Genera antes los certificados (generar_con_docker.sh / .bat).
+# 2) Pon tu web en ./web   3) docker compose up -d
+services:
+  web:
+    image: nginx:stable
+    ports:
+      - "443:443"
+      - "80:80"
+    volumes:
+      - ./salida/servidor:/etc/nginx/certs:ro
+      - ./nginx/horus.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./web:/usr/share/nginx/html:ro
+    restart: unless-stopped
