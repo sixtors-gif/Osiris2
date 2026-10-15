@@ -29,6 +29,7 @@ Cómo poner un servidor web interno con `https://` y que **todos los puestos lo 
 | `generar_certificados.sh` | Crea la CA (una vez) y el certificado del servidor. También sirve para renovarlo. |
 | `instalar_ca_windows.bat` | Instala la CA en un puesto Windows (y la activa en Firefox). |
 | `instalar_ca_linux.sh` | Instala la CA en un puesto Linux (sistema, Chrome/Chromium y Firefox). |
+| `anadir_hosts_windows.bat` / `anadir_hosts_linux.sh` | Sin acceso al DNS: hacen que `horus.com` apunte al servidor en cada puesto. |
 | `.gitignore` | Impide que las claves generadas acaben en el repositorio. |
 
 ---
@@ -57,6 +58,8 @@ Necesitas `openssl` y `bash`:
 
 - **Linux (Ubuntu/Debian):** ya vienen; si falta, `sudo apt install openssl`.
 - **Windows Server o Windows:** instala **Git para Windows** y abre **Git Bash** (incluye `openssl`).
+
+> **Sin permisos de administrador en los puestos:** la CA puede instalarse solo para el usuario (el `.bat` lo hace automáticamente si no eres administrador), y la opción B del paso 3 (entrar por la IP) no necesita permisos.
 
 1. Copia esta carpeta al servidor.
 2. Edita la parte **CONFIGURA AQUÍ** de `generar_certificados.sh`:
@@ -121,10 +124,45 @@ Protege la clave del servidor: en Linux, `chmod 600 horus.com.key` y propietario
 
 ## 3. Que `horus.com` lleve al servidor (DNS)
 
-Los puestos tienen que resolver `horus.com` a la IP del servidor. Elige **una** opción:
+Los puestos tienen que saber que `horus.com` es la IP del servidor. Elige **una** opción:
 
-| Opción | Cómo | Cuándo |
+| Opción | Necesitas | Cuándo |
 |---|---|---|
+| **A. Registro en el DNS del router o de la empresa** | Acceso al router / al servidor DNS | Lo ideal: se hace una vez y vale para todos |
+| **B. Sin DNS: entrar por la IP** | Nada | Lo más rápido; la dirección es menos bonita |
+| **C. Archivo `hosts` en cada puesto** | Ser administrador de cada puesto | Pocos puestos, o mientras TI no añade el registro |
+| **D. Nombre `horus.local` (mDNS)** | Servidor Linux | Sin tocar los puestos ni el router |
+
+### A. Con acceso al DNS
+Añade un registro `A`: `horus.com → 192.168.1.10` (y `www.horus.com`). En routers suele llamarse «DNS local» o «Host estático»; en Windows Server, consola **DNS** ▸ nueva zona `horus.com` ▸ registro A; en Pi-hole, *Local DNS Records*.
+
+### Sin acceso al router ni al DNS de la empresa
+
+**B. Entrar por la IP: `https://192.168.1.10`**
+El certificado ya incluye la IP del servidor (`IPS_SERVIDOR`), así que sale el candado sin avisos. No hay que tocar nada más que instalar la CA (paso 4). Puedes crear en los puestos un acceso directo o un marcador llamado «Intranet Horus» que apunte a esa dirección.
+
+**C. Archivo `hosts` en cada puesto**
+Cada equipo aprende por su cuenta que `horus.com` es el servidor.
+- Windows: edita la IP en `anadir_hosts_windows.bat` y ejecútalo **como administrador** (vuelve a ejecutarlo y elige «Quitar» para deshacerlo).
+- Linux / macOS: edita la IP en `anadir_hosts_linux.sh` y ejecuta `bash anadir_hosts_linux.sh` (o `… quitar`).
+- A mano: añade `192.168.1.10  horus.com www.horus.com` a `C:\Windows\System32\drivers\etc\hosts` (Bloc de notas como administrador) o a `/etc/hosts`.
+- En móviles no se puede editar `hosts`: que entren por la IP (opción B).
+
+**D. Nombre `horus.local` anunciado por el propio servidor (mDNS)**
+Igual que las impresoras de red, el servidor se anuncia solo y Windows 10/11, macOS, Linux e iPhone lo encuentran sin configurar nada.
+1. **Antes de crear la CA**, pon `NOMBRES_EXTRA="www.horus.com horus.local"` en `generar_certificados.sh` (la CA solo podrá firmar los dominios que tenga configurados al crearla).
+2. En el servidor Linux: `sudo hostnamectl set-hostname horus` y `sudo apt install avahi-daemon` (en Ubuntu suele venir ya).
+3. Desde un puesto: `ping horus.local` y abre `https://horus.local`.
+
+Limitaciones: algunos Android no resuelven `.local`, y redes con VLAN separadas o un aislamiento entre clientes en la wifi lo bloquean. Si falla, usa la opción B.
+
+### Dos avisos importantes si no administras la red
+- **IP fija:** todas estas opciones necesitan que el servidor tenga siempre la misma IP. Sin acceso al router no puedes reservarla; si pones una IP fija a mano en el servidor, elige una **fuera del rango que reparte el router (DHCP)** para que no la reciba otro equipo. Lo más seguro es pedir a TI una IP reservada.
+- **Habla con el departamento de TI.** En una red de empresa, montar un servidor e instalar certificados raíz en los puestos suele requerir su permiso. Además, añadir un registro DNS les lleva cinco minutos y te ahorra configurar `hosts` en cada equipo. Esta carpeta (con este README) es justo lo que necesitan para revisarlo.
+
+Comprueba desde un puesto: `ping horus.com` (o `horus.local`) debe responder la IP del servidor.
+
+---|---|---|
 | **DNS del router o servidor DNS interno** (recomendada) | Añade un registro `A`: `horus.com → 192.168.1.10` (y `www.horus.com`). En routers suele llamarse «DNS local», «Host estático» o «DNS rebinding/Local DNS». En Windows Server: consola **DNS** ▸ nueva zona `horus.com` ▸ registro A. En Pi-hole: *Local DNS Records*. | Muchos puestos; se configura una vez. |
 | Archivo `hosts` en cada puesto | Añade la línea `192.168.1.10  horus.com www.horus.com`. Windows: `C:\Windows\System32\drivers\etc\hosts` (Bloc de notas como administrador). Linux/macOS: `/etc/hosts`. | Pocos puestos o pruebas. |
 

@@ -14,7 +14,7 @@ set -euo pipefail
 NOMBRE_CA="Hotel Horus - CA interna"         # Nombre que verán los usuarios
 ORGANIZACION="Hotel Horus"
 DOMINIO="horus.com"                          # Dominio principal del servidor
-NOMBRES_EXTRA="www.horus.com"                # Otros nombres (separados por espacios), o vacío
+NOMBRES_EXTRA="www.horus.com"                # Otros nombres separados por espacios (p. ej. "www.horus.com horus.local")
 IPS_SERVIDOR="192.168.1.10"                  # IP(s) del servidor en la LAN, o vacío
 RED_PERMITIDA="192.168.0.0/255.255.0.0"      # Red local en la que la CA puede firmar IPs
 DIAS_CA=3650                                 # 10 años
@@ -36,6 +36,13 @@ if [[ -f "$CA_DIR/HorusCA.key" ]]; then
   echo "• La CA ya existe: se reutiliza ($CA_DIR/HorusCA.crt)."
 else
   echo "• Creando la autoridad de certificación «$NOMBRE_CA»…"
+  # La CA solo podrá firmar los dominios configurados (y sus subdominios).
+  # OJO: decide los nombres ANTES de crear la CA; añadir un dominio nuevo después
+  # (por ejemplo horus.local) obliga a crear otra CA y reinstalarla en los puestos.
+  RESTRICCION_DNS=""
+  for d in $(echo "$DOMINIO $NOMBRES_EXTRA" | tr ' ' '\n' | sed 's/^www\.//' | sort -u); do
+    RESTRICCION_DNS="${RESTRICCION_DNS:+$RESTRICCION_DNS,}permitted;DNS:$d,permitted;DNS:.$d"
+  done
   cat > "$CA_DIR/ca.cnf" <<CNF
 [req]
 distinguished_name=dn
@@ -53,7 +60,7 @@ subjectKeyIdentifier=hash
 authorityKeyIdentifier=keyid:always
 # Restricción de nombres: esta CA SOLO puede firmar para el dominio del hotel y la
 # red local. Aunque su clave se filtrara, no serviría para suplantar otras webs.
-nameConstraints=critical,permitted;DNS:$DOMINIO,permitted;DNS:.$DOMINIO,permitted;IP:$RED_PERMITIDA
+nameConstraints=critical,$RESTRICCION_DNS,permitted;IP:$RED_PERMITIDA
 CNF
   openssl genrsa -out "$CA_DIR/HorusCA.key" 4096 2>/dev/null
   chmod 600 "$CA_DIR/HorusCA.key"
@@ -94,7 +101,7 @@ cat "$SRV_DIR/$DOMINIO.crt" "$CA_DIR/HorusCA.crt" > "$SRV_DIR/$DOMINIO.fullchain
 
 # .pfx para IIS / Windows Server
 if [[ -z "$CLAVE_PFX" ]]; then
-  read -r -s -p "Contraseña para el archivo .pfx (IIS); déjala vacía para no crearlo: " CLAVE_PFX; echo
+  read -r -s -p "Contraseña para el archivo .pfx (IIS); déjala vacía para no crearlo: " CLAVE_PFX || CLAVE_PFX=""; echo
 fi
 if [[ -n "$CLAVE_PFX" ]]; then
   openssl pkcs12 -export -inkey "$SRV_DIR/$DOMINIO.key" -in "$SRV_DIR/$DOMINIO.crt" -certfile "$CA_DIR/HorusCA.crt" \
