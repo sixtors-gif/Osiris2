@@ -70,3 +70,7 @@ F:\Temas\extracted\<curso>\     el mismo curso descomprimido
 2. Cada vez que haya cambios, haz doble clic en `herramientas\actualizar_F_Temas.bat`.
    Descarga la última versión, copia los ZIP a `F:\Temas` y los cursos descomprimidos a
    `F:\Temas\extracted\<curso>` (añade y sobrescribe archivos, pero no borra nada).
+
+## Otros recursos
+
+- [`infraestructura/https_red_local/`](infraestructura/https_red_local/README.md): CA interna del hotel y certificado HTTPS para `horus.com` en la red local, con scripts para generarlos e instalarlos en los puestos (Windows, Linux, macOS, Android e iOS).

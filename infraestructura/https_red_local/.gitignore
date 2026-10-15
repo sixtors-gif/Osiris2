@@ -1,0 +1,6 @@
+# Claves y certificados generados: NUNCA al repositorio
+salida/
+*.key
+*.pfx
+*.p12
+*.srl
