@@ -12,11 +12,11 @@ set -euo pipefail
 
 # ----------------------------- CONFIGURA AQUÍ -------------------------------
 NOMBRE_CA="Hotel Horus - CA interna"         # Nombre que verán los usuarios
-ORGANIZACION="Hotel Horus"
+ORGANIZACION="Hotel Escuela Horus"
 DOMINIO="horus.com"                          # Dominio principal del servidor
-NOMBRES_EXTRA="www.horus.com"                # Otros nombres separados por espacios (p. ej. "www.horus.com horus.local")
-IPS_SERVIDOR="192.168.1.10"                  # IP(s) del servidor en la LAN, o vacío
-RED_PERMITIDA="192.168.0.0/255.255.0.0"      # Red local en la que la CA puede firmar IPs
+NOMBRES_EXTRA="horus.local"                # Otros nombres separados por espacios (p. ej. "www.horus.com horus.local")
+IPS_SERVIDOR="10.210.232.155"                  # IP(s) del servidor en la LAN, o vacío
+RED_PERMITIDA="10.210.232.0/255.255.255.0"      # Red local en la que la CA puede firmar IPs
 DIAS_CA=3650                                 # 10 años
 DIAS_SERVIDOR=825                            # Máximo que aceptan Apple y la mayoría de navegadores
 CLAVE_PFX="${CLAVE_PFX:-}"                   # Contraseña del .pfx para IIS (se pregunta si está vacía)
