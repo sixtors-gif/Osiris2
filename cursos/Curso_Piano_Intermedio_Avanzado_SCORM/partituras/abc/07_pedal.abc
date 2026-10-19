@@ -1,0 +1,12 @@
+X:7
+T:Estudio de pedal sincopado
+C:Ejercicio original del curso
+M:4/4
+L:1/4
+Q:1/4=66
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:C
+[V:RH] "C"e2 g2 | "Am"e2 c2 | "F"f2 a2 | "G7"g2 f2 | "C"e4 |]
+[V:LH] "_Ped."C, G, C G, | "_✱ Ped."A,, E, A, E, | "_✱ Ped."F,, C, F, C, | "_✱ Ped."G,, D, F, D, | "_✱ Ped."[C,G,]4 |]

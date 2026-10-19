@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 8: Repertorio intermedio: analizar antes de tocar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">📜</span>Módulo 8: Repertorio intermedio: analizar antes de tocar</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Dos obras clásicas para aplicar todo lo aprendido.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:53%"></div></div>
+    <div class="progress-text">Piano · Nivel intermedio · Módulo 8 de 14</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>Estudiar una obra como un profesional</h2>
+      <ol class="steps"><li><b>Escucha</b> varias versiones grabadas.</li><li><b>Analiza:</b> tonalidad, forma (secciones que se repiten), armonía y pasajes difíciles.</li><li><b>Decide la digitación</b> y escríbela antes de tocar.</li><li><b>Trabaja por secciones</b>, empezando por la más difícil.</li><li>Une las secciones y haz <b>pasadas completas</b>.</li></ol>
+      <h3>1. J. S. Bach · Preludio en Do mayor, BWV 846</h3>
+      <p>Primera pieza de <i>El clave bien temperado</i> (libro I, 1722). Toda la obra es un mismo patrón de arpegio sobre una sucesión de acordes: es perfecta para practicar <b>análisis armónico</b> y <b>regularidad</b>.</p>
+      <div class="score-box"><h4>🎼 J. S. Bach · Preludio en Do mayor, BWV 846 (c. 1-4)</h4><div class="score" id="p-bach846"></div><div class="score-tools"><button onclick="tocar('bach846')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-bach846"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-bach846"></span></div><p class="score-note">Fragmento: los cuatro primeros compases reducidos a una sola línea para ver el patrón armónico. En el original, las dos primeras notas de cada grupo las toca la mano izquierda y se mantienen. Obra completa en IMSLP.</p></div>
+      <ul class="key-points"><li>🎼 <span>Escribe el acorde de cada compás de toda la obra (está en IMSLP) y toca la reducción en bloques.</span></li><li>🎼 <span>Mantén un sonido igual y <i>legato</i> sin pedal; si lo usas, cambio en cada compás.</span></li><li>🎼 <span>Obra completa: <a href="https://imslp.org/index.php?search=Bach+Well-Tempered+Clavier+Book+1" target="_blank" rel="noopener">IMSLP ↗</a></span></li></ul>
+      <h3>2. L. van Beethoven · <i>Para Elisa</i>, WoO 59</h3>
+      <p>Rondó en La menor (forma A–B–A–C–A). El tema A requiere un <b>legato</b> fluido entre las dos manos: la mano izquierda continúa el arpegio que empieza la derecha.</p>
+      <div class="score-box"><h4>🎼 L. van Beethoven · Para Elisa, WoO 59 (c. 1-8)</h4><div class="score" id="p-elise"></div><div class="score-tools"><button onclick="tocar('elise')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-elise"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-elise"></span></div><p class="score-note">Fragmento: tema inicial. Obra completa en IMSLP.</p></div>
+      <ul class="key-points"><li>🎼 <span>Las semicorcheas Mi–Re♯ deben sonar sin acentos: relaja el 4.º y 5.º dedo.</span></li><li>🎼 <span>Pedal: uno por compás en los arpegios; levántalo en el compás de la melodía sola.</span></li><li>🎼 <span>Obra completa: <a href="https://imslp.org/index.php?search=Für+Elise+Beethoven" target="_blank" rel="noopener">IMSLP ↗</a></span></li></ul>
+      <div class="quiz"><h4>🧩 El Preludio en Do mayor BWV 846 pertenece a…</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m8a')">A. Las Variaciones Goldberg</button><button class="option" onclick="checkAnswer(this,true,'m8a')">B. El clave bien temperado, libro I</button><button class="option" onclick="checkAnswer(this,false,'m8a')">C. Las Invenciones a dos voces</button></div><p class="feedback" id="fb-m8a" data-ok="Es el primer preludio del libro I."></p></div>
+      <div class="quiz"><h4>🧩 ¿En qué compás está escrita «Para Elisa»?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'m8b')">A. 3/8</button><button class="option" onclick="checkAnswer(this,false,'m8b')">B. 4/4</button><button class="option" onclick="checkAnswer(this,false,'m8b')">C. 6/8</button></div><p class="feedback" id="fb-m8b" data-ok="Está en 3/8, con anacrusa de dos semicorcheas."></p></div>
+      <div class="activity"><h3>🎹 Análisis</h3><p>Escribe el acorde de los compases 5 a 11 del Preludio BWV 846 (descárgalo de IMSLP).</p><textarea placeholder="Compás 5: …"></textarea></div>
+      <div class="dl-box">📥 <b>Partituras para imprimir:</b> todas las del curso están en el <a href="partituras/Cuaderno_de_partituras.pdf" target="_blank" rel="noopener">Cuaderno de partituras (PDF)</a>.</div>
+      <div class="summary-box"><b>Resumen:</b> escuchar, analizar, digitar, trabajar por secciones y unir.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo7.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo9.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Piano: nivel intermedio y avanzado · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script>var PARTITURAS={"bach846": "X:15\nT:Preludio en Do mayor, BWV 846\nC:J. S. Bach · El clave bien temperado, libro I\nM:4/4\nL:1/16\nQ:1/4=66\nK:C\n\"C\"CEGc eGce CEGc eGce | \"Dm7/C\"CDAd fAdf CDAd fAdf | \"G7/B\"B,DGd fGdf B,DGd fGdf | \"C\"CEGc eGce CEGc eGce |]\n", "elise": "X:16\nT:Para Elisa (Für Elise), WoO 59\nC:L. van Beethoven\nM:3/8\nL:1/16\nQ:3/8=50\n%%score {RH | LH}\nV:RH clef=treble name=\"M.D.\"\nV:LH clef=bass name=\"M.I.\"\nK:Am\n[V:RH] !pp!e^d | e^d e B =d c | A2 z C E A | B2 z E ^G B | c2 z E e^d |\n[V:LH] z2 | z6 | A,,E,A, z3 | E,,E,^G, z3 | A,,E,A, z3 |\n[V:RH] e^d e B =d c | A2 z C E A | B2 z E c B | A2 z4 |]\n[V:LH] z6 | A,,E,A, z3 | E,,E,^G, z3 | A,,E,A, z3 |]\n"};</script>
+<script src="abcjs-basic-min.js"></script>
+<script src="piano.js"></script>
+<script src="scorm.js"></script>
+</body>
+</html>

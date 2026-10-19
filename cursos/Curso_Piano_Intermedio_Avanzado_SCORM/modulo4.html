@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 4: Arpegios, acordes e inversiones</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🌊</span>Módulo 4: Arpegios, acordes e inversiones</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Los acordes, desplegados o en bloque, son el esqueleto de casi toda la música.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:27%"></div></div>
+    <div class="progress-text">Piano · Nivel intermedio · Módulo 4 de 14</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>De la escala al acorde</h2>
+      <p>Un <b>acorde tríada</b> se forma apilando terceras: fundamental, tercera y quinta. Según la tercera sea mayor o menor obtienes un acorde mayor o menor.</p>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Tipo</th><th>Intervalos desde la fundamental</th><th>Ejemplo en Do</th><th>Cifrado</th></tr><tr><td>Mayor</td><td>3.ª mayor + 5.ª justa</td><td>Do–Mi–Sol</td><td>C</td></tr><tr><td>Menor</td><td>3.ª menor + 5.ª justa</td><td>Do–Mi♭–Sol</td><td>Cm</td></tr><tr><td>Disminuido</td><td>3.ª menor + 5.ª disminuida</td><td>Do–Mi♭–Sol♭</td><td>Cdim / C°</td></tr><tr><td>Aumentado</td><td>3.ª mayor + 5.ª aumentada</td><td>Do–Mi–Sol♯</td><td>Caug / C+</td></tr></table></div>
+      <h3>1. Inversiones</h3>
+      <p>Si la nota más grave no es la fundamental, el acorde está <b>invertido</b>. Las inversiones permiten enlazar acordes moviendo poco las manos.</p>
+      <div class="figure"><img src="img/teclado_acordes.svg" alt="Teclado con Do mayor y Fa mayor en segunda inversión"><div class="figure-caption">Do mayor en estado fundamental (izquierda) y Fa mayor en 2.ª inversión, Do–Fa–La (derecha).</div></div>
+      <div class="score-box"><h4>🎼 Acorde de Do mayor y sus inversiones</h4><div class="score" id="p-inversiones"></div><div class="score-tools"><button onclick="tocar('inversiones')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-inversiones"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-inversiones"></span></div><p class="score-note">Digitación de la mano derecha bajo cada acorde. En la 1.ª inversión se usa 1-2-5 porque la 4.ª queda arriba.</p></div>
+      <h3>2. Arpegios</h3>
+      <ul class="key-points"><li>🌊 <span>Digitación de Do mayor (M.D., dos octavas): <b>1-2-3-1-2-3-5</b>; (M.I.): <b>5-4-2-1-4-2-1</b>.</span></li><li>🌊 <span>La muñeca y el antebrazo <b>acompañan lateralmente</b>: el pulgar no «se estira» por debajo.</span></li><li>🌊 <span>Practica primero el arpegio <b>en bloque</b> (acorde plaqué) para que la mano aprenda la forma.</span></li></ul>
+      <div class="score-box"><h4>🎼 Arpegio de Do mayor · 2 octavas, manos juntas</h4><div class="score" id="p-arpegio_do"></div><div class="score-tools"><button onclick="tocar('arpegio_do')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-arpegio_do"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-arpegio_do"></span></div><p class="score-note">Mantén la muñeca a la altura del teclado y desplaza el brazo lateralmente: el pulgar solo «guía», no se retuerce.</p></div>
+      <div class="quiz"><h4>🧩 ¿Qué notas forman la 1.ª inversión de Do mayor?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m4a')">A. Do–Mi–Sol</button><button class="option" onclick="checkAnswer(this,true,'m4a')">B. Mi–Sol–Do</button><button class="option" onclick="checkAnswer(this,false,'m4a')">C. Sol–Do–Mi</button></div><p class="feedback" id="fb-m4a" data-ok="En la 1.ª inversión la tercera (Mi) está en el bajo."></p></div>
+      <div class="quiz"><h4>🧩 ¿Qué tipo de acorde es Re–Fa–La?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m4b')">A. Mayor</button><button class="option" onclick="checkAnswer(this,true,'m4b')">B. Menor</button><button class="option" onclick="checkAnswer(this,false,'m4b')">C. Disminuido</button></div><p class="feedback" id="fb-m4b" data-ok="Re–Fa es una 3.ª menor y Re–La una 5.ª justa: Re menor."></p></div>
+      <div class="activity"><h3>🎹 Inversiones en todas las tonalidades</h3><p>Toca la tríada de cada tonalidad del círculo de quintas en estado fundamental, 1.ª y 2.ª inversión, subiendo y bajando. Anota las que te cuesten.</p><textarea placeholder="Me cuestan: …"></textarea></div>
+      <div class="summary-box"><b>Resumen:</b> cuatro tipos de tríada, tres posiciones y arpegios con el brazo acompañando.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo3.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo5.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Piano: nivel intermedio y avanzado · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script>var PARTITURAS={"inversiones": "X:4\nT:Do mayor: estado fundamental e inversiones\nC:Ejercicio\nM:4/4\nL:1/4\nQ:1/4=60\nK:C\n\"^Estado fundamental\"\"_1-3-5\"[CEG]2 \"^1.ª inversión\"\"_1-2-5\"[EGc]2 | \"^2.ª inversión\"\"_1-3-5\"[Gce]2 \"^Fundamental (8.ª arriba)\"\"_1-3-5\"[ceg]2 |]\n", "arpegio_do": "X:3\nT:Arpegio de Do mayor\nC:Ejercicio\nM:4/4\nL:1/8\nQ:1/4=60\n%%score {RH | LH}\nV:RH clef=treble name=\"M.D.\"\nV:LH clef=bass name=\"M.I.\"\nK:C\n[V:RH] (3!1!C!2!E!3!G (3!1!c!2!e!3!g (3!5!c'!3!g!2!e (3!1!c!3!G!2!E | !1!C8 |]\n[V:LH] (3!5!C,,!4!E,,!2!G,, (3!1!C,!4!E,!2!G, (3!1!C!2!G,!4!E, (3!1!C,!2!G,,!4!E,, | !5!C,,8 |]\n"};</script>
+<script src="abcjs-basic-min.js"></script>
+<script src="piano.js"></script>
+<script src="scorm.js"></script>
+</body>
+</html>

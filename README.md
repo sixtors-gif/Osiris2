@@ -17,6 +17,7 @@ Cursos en formato **SCORM 1.2** listos para importar en Moodle. Autor: Sixto Rod
 | Protección de Datos en Hostelería y Restauración | `cursos/Curso_Proteccion_Datos_Hosteleria_SCORM` | 13 módulos, examen de 26 preguntas, banco GIFT de 37 |
 | Informática básica para jóvenes | `cursos/Curso_Informatica_Basica_Jovenes_SCORM` | 12 módulos con 11 ilustraciones, examen de 24 preguntas, banco GIFT de 36 |
 | Matemática Básica | `cursos/Matematica_Basica_SCORM_mejorado` | 10 módulos (regla de tres y porcentajes), repaso de 5 preguntas, examen de 20, banco GIFT de 40 |
+| Piano: nivel intermedio y avanzado | `cursos/Curso_Piano_Intermedio_Avanzado_SCORM` | 14 módulos, 16 partituras interactivas (con audio) y cuaderno PDF, metrónomo, entrenador de lectura, examen de 28 preguntas, banco GIFT de 42 |
 | Introducción a Ubuntu para usuarios | `cursos/Curso_Ubuntu_Introduccion_SCORM` | 17 módulos (2 prácticos con simuladores de ventanas y de Archivos), examen de 35 preguntas, banco GIFT de 52 |
 
 ## Uso en Moodle
@@ -47,6 +48,8 @@ python3 herramientas/generar_ciberseguridad_avanzada_modulos.py cursos/CiberSegu
 python3 herramientas/generar_ciberseguridad_avanzada_examen.py cursos/CiberSeguridad_Avanzada
 python3 herramientas/scorm_seguimiento.py
 ```
+
+El curso de Piano se genera con `herramientas/generar_curso_piano.py` (partituras en `herramientas/piano_partituras.py`, PDF con `herramientas/piano_pdf.js`).
 
 El curso de Informática básica se genera igual:
 

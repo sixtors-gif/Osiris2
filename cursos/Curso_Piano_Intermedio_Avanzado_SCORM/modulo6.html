@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 6: Independencia de manos y acompañamientos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🤲</span>Módulo 6: Independencia de manos y acompañamientos</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Que cada mano cuente su propia historia.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:40%"></div></div>
+    <div class="progress-text">Piano · Nivel intermedio · Módulo 6 de 14</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>Dos manos, dos papeles</h2>
+      <p>En casi toda la música para piano una mano lleva la <b>melodía</b> y la otra el <b>acompañamiento</b>. La clave es que la melodía «cante» por encima: la mano del acompañamiento toca más suave.</p>
+      <h3>1. Patrones de acompañamiento</h3>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Patrón</th><th>Estilo</th><th>Esquema (Do mayor)</th></tr><tr><td>Bajo Alberti</td><td>Clasicismo (Mozart, Haydn, Clementi)</td><td>Do–Sol–Mi–Sol</td></tr><tr><td>Arpegio abierto</td><td>Romanticismo</td><td>Do–Sol–Mi'–Sol (amplio, con pedal)</td></tr><tr><td>Vals (bajo–acorde–acorde)</td><td>Danza 3/4</td><td>Do · [Mi Sol] · [Mi Sol]</td></tr><tr><td>Stride</td><td>Jazz clásico, ragtime</td><td>Bajo grave en 1 y 3; acorde medio en 2 y 4</td></tr><tr><td>Boogie</td><td>Blues, rock and roll</td><td>Do–Sol, Do–La, Do–Si♭, Do–La (módulo 12)</td></tr></table></div>
+      <div class="score-box"><h4>🎼 Melodía con bajo Alberti</h4><div class="score" id="p-alberti"></div><div class="score-tools"><button onclick="tocar('alberti')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-alberti"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-alberti"></span></div><p class="score-note">El bajo Alberti arpegia el acorde en orden grave–agudo–medio–agudo. La mano izquierda siempre más suave que la melodía.</p></div>
+      <h3>2. Cómo trabajar la independencia</h3>
+      <ol class="steps">
+        <li>Cada mano por separado, hasta que sea automática.</li>
+        <li>Juntas, muy lento, <b>compás a compás</b>.</li>
+        <li>Toca el acompañamiento <i>piano</i> y la melodía <i>mezzoforte</i>: el balance se entrena aparte.</li>
+        <li>Canta la melodía mientras tocas solo el acompañamiento.</li>
+      </ol>
+      <div class="quiz"><h4>🧩 ¿Qué es el bajo Alberti?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'m6a')">A. Un acompañamiento que arpegia el acorde en el orden grave–agudo–medio–agudo</button><button class="option" onclick="checkAnswer(this,false,'m6a')">B. Un pedal que se mantiene toda la obra</button><button class="option" onclick="checkAnswer(this,false,'m6a')">C. Una escala cromática en la mano izquierda</button></div><p class="feedback" id="fb-m6a" data-ok="Por ejemplo, Do–Sol–Mi–Sol."></p></div>
+      <div class="quiz"><h4>🧩 La melodía queda tapada por el acompañamiento. ¿Qué haces?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'m6b')">A. Tocar el acompañamiento más suave y dar más peso a la melodía</button><button class="option" onclick="checkAnswer(this,false,'m6b')">B. Tocar todo más fuerte</button><button class="option" onclick="checkAnswer(this,false,'m6b')">C. Quitar el acompañamiento</button></div><p class="feedback" id="fb-m6b" data-ok="El balance entre manos se trabaja de forma consciente."></p></div>
+      <div class="summary-box"><b>Resumen:</b> melodía que canta, acompañamiento suave y trabajo por capas.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo5.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo7.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Piano: nivel intermedio y avanzado · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script>var PARTITURAS={"alberti": "X:6\nT:Estudio con bajo Alberti\nC:Ejercicio original del curso\nM:4/4\nL:1/8\nQ:1/4=88\n%%score {RH | LH}\nV:RH clef=treble name=\"M.D.\"\nV:LH clef=bass name=\"M.I.\"\nK:C\n[V:RH] \"C\"G4 E2 G2 | \"G7\"F4 D2 F2 | \"C\"E2 G2 c2 B2 | \"C\"c8 |]\n[V:LH] C,G,E,G, C,G,E,G, | B,,G,D,G, B,,G,D,G, | C,G,E,G, C,G,E,G, | [C,E,G,]8 |]\n"};</script>
+<script src="abcjs-basic-min.js"></script>
+<script src="piano.js"></script>
+<script src="scorm.js"></script>
+</body>
+</html>

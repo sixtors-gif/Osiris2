@@ -1,0 +1,14 @@
+X:16
+T:Para Elisa (Für Elise), WoO 59
+C:L. van Beethoven
+M:3/8
+L:1/16
+Q:3/8=50
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:Am
+[V:RH] !pp!e^d | e^d e B =d c | A2 z C E A | B2 z E ^G B | c2 z E e^d |
+[V:LH] z2 | z6 | A,,E,A, z3 | E,,E,^G, z3 | A,,E,A, z3 |
+[V:RH] e^d e B =d c | A2 z C E A | B2 z E c B | A2 z4 |]
+[V:LH] z6 | A,,E,A, z3 | E,,E,^G, z3 | A,,E,A, z3 |]

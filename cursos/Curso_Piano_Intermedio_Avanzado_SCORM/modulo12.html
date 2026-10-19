@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 12: Improvisación: blues y reharmonización</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🎶</span>Módulo 12: Improvisación: blues y reharmonización</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Crear música propia con lo que ya sabes.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+    <div class="progress-text">Piano · Nivel avanzado · Módulo 12 de 14</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>El blues de 12 compases</h2>
+      <p>Es la forma más usada para aprender a improvisar: corta, repetitiva y con tres acordes.</p>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Compases</th><th>1–4</th><th>5–6</th><th>7–8</th><th>9</th><th>10</th><th>11</th><th>12</th></tr><tr><td>Acordes en Do</td><td>C7</td><td>F7</td><td>C7</td><td>G7</td><td>F7</td><td>C7</td><td>G7 (vuelta)</td></tr><tr><td>Grados</td><td>I7</td><td>IV7</td><td>I7</td><td>V7</td><td>IV7</td><td>I7</td><td>V7</td></tr></table></div>
+      <div class="score-box"><h4>🎼 Blues de 12 compases en Do (boogie)</h4><div class="score" id="p-blues"></div><div class="score-tools"><button onclick="tocar('blues')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-blues"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-blues"></span></div><p class="score-note">Mano derecha: 3.ª y 7.ª de cada acorde (shell voicing). Mano izquierda: patrón boogie fundamental–5.ª–6.ª–7.ª.</p></div>
+      <h3>1. La escala de blues</h3>
+      <div class="figure"><img src="img/teclado_blues.svg" alt="Escala de blues de Do"><div class="figure-caption">Escala de blues de Do: Do, Mi♭, Fa, Fa♯, Sol, Si♭. Funciona sobre los tres acordes del blues.</div></div>
+      <ol class="steps"><li>Toca el bajo boogie con la mano izquierda hasta que sea automático.</li><li>Con la derecha, improvisa frases cortas de 2 compases usando solo 3 notas de la escala.</li><li>Deja silencios: pregunta (2 compases) y respuesta (2 compases).</li><li>Amplía a toda la escala y añade la «nota azul» Mi♭ resolviendo a Mi.</li></ol>
+      <h3>2. Reharmonizar</h3>
+      <p>Reharmonizar es <b>cambiar los acordes</b> de una melodía conservándola. Recursos sencillos:</p>
+      <ul class="key-points"><li>🔄 <span>Sustituir I por vi o iii (comparten dos notas).</span></li><li>🔄 <span>Preparar cualquier acorde con su propio dominante (dominante secundario): antes de Dm, toca A7.</span></li><li>🔄 <span>Convertir V en ii–V (G7 → Dm7–G7).</span></li><li>🔄 <span>Sustitución tritonal: G7 → D♭7 (comparten la 3.ª y la 7.ª).</span></li></ul>
+      <div class="quiz"><h4>🧩 ¿Qué notas forman la escala de blues de Do?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m12a')">A. Do–Re–Mi–Sol–La</button><button class="option" onclick="checkAnswer(this,true,'m12a')">B. Do–Mi♭–Fa–Fa♯–Sol–Si♭</button><button class="option" onclick="checkAnswer(this,false,'m12a')">C. Do–Re–Mi–Fa–Sol–La–Si</button></div><p class="feedback" id="fb-m12a" data-ok="Es la pentatónica menor con la 5.ª disminuida añadida."></p></div>
+      <div class="quiz"><h4>🧩 ¿Qué acorde suena en el compás 5 del blues en Do?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m12b')">A. C7</button><button class="option" onclick="checkAnswer(this,true,'m12b')">B. F7</button><button class="option" onclick="checkAnswer(this,false,'m12b')">C. G7</button></div><p class="feedback" id="fb-m12b" data-ok="Los compases 5 y 6 van al IV7."></p></div>
+      <div class="activity"><h3>🎹 Tu primer coro de blues</h3><p>Graba con el móvil un coro (12 compases) de blues improvisado y escribe qué frase te ha gustado más.</p><textarea placeholder="Me ha gustado…"></textarea></div>
+      <div class="summary-box"><b>Resumen:</b> forma de 12 compases, escala de blues, pregunta–respuesta y sustituciones básicas.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo11.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo13.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Piano: nivel intermedio y avanzado · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script>var PARTITURAS={"blues": "X:14\nT:Blues en Do\nC:Ejercicio original del curso · tocar con swing\nM:4/4\nL:1/8\nQ:1/4=104\n%%score {RH | LH}\nV:RH clef=treble name=\"M.D.\"\nV:LH clef=bass name=\"M.I.\"\nK:C\n[V:RH] \"C7\"z2 [E_B]2 z2 [E_B]2 | \"C7\"z2 [E_B]2 z2 [E_B]2 | \"C7\"z2 [E_B]2 z2 [E_B]2 | \"C7\"z2 [E_B]2 z2 [E_B]2 |\n[V:LH] C,G, C,A, C,_B, C,A, | C,G, C,A, C,_B, C,A, | C,G, C,A, C,_B, C,A, | C,G, C,A, C,_B, C,A, |\n[V:RH] \"F7\"z2 [_EA]2 z2 [_EA]2 | \"F7\"z2 [_EA]2 z2 [_EA]2 | \"C7\"z2 [E_B]2 z2 [E_B]2 | \"C7\"z2 [E_B]2 z2 [E_B]2 |\n[V:LH] F,C F,D F,_E F,D | F,C F,D F,_E F,D | C,G, C,A, C,_B, C,A, | C,G, C,A, C,_B, C,A, |\n[V:RH] \"G7\"z2 [FB]2 z2 [FB]2 | \"F7\"z2 [_EA]2 z2 [_EA]2 | \"C7\"z2 [E_B]2 z2 [E_B]2 | \"G7\"z2 [FB]2 z2 [FB]2 |]\n[V:LH] G,D G,E G,F G,E | F,C F,D F,_E F,D | C,G, C,A, C,_B, C,A, | G,D G,E G,F G,E |]\n"};</script>
+<script src="abcjs-basic-min.js"></script>
+<script src="piano.js"></script>
+<script src="scorm.js"></script>
+</body>
+</html>

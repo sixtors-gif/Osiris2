@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 1: Cómo estudiar: método, rutina y metrónomo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">⏱️</span>Módulo 1: Cómo estudiar: método, rutina y metrónomo</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Estudiar mejor rinde más que estudiar más horas.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:7%"></div></div>
+    <div class="progress-text">Piano · Nivel intermedio · Módulo 1 de 14</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>Bienvenido/a al nivel intermedio</h2>
+      <p>En este nivel ya lees partituras sencillas y tocas con las dos manos. Lo que marca la diferencia a partir de aquí no es cuántas horas pasas al piano, sino <b>cómo</b> las usas. Este módulo te da un método que aplicarás en todo el curso.</p>
+      <h3>1. La práctica deliberada</h3>
+      <ul class="key-points"><li>🎯 <span><b>Objetivo concreto por sesión:</b> «compases 9-12 a negra = 72 sin errores», no «estudiar la pieza».</span></li><li>🎯 <span><b>Lento y sin errores:</b> el cerebro aprende lo que repites, también los errores. Si fallas, el tempo es demasiado rápido.</span></li><li>🎯 <span><b>Fragmentos cortos:</b> 1–2 compases, con la primera nota del siguiente compás como «puente».</span></li><li>🎯 <span><b>Manos separadas</b> en los pasajes difíciles; después juntas, aún más lento.</span></li><li>🎯 <span><b>Subida gradual con metrónomo:</b> de 4 en 4 o de 5 en 5 bpm cuando consigas 3 repeticiones limpias seguidas.</span></li><li>🎯 <span><b>Descansos:</b> 5 minutos cada 25–30. La concentración rinde más que la resistencia.</span></li></ul>
+      <h3>2. Una rutina de 60 minutos</h3>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Bloque</th><th>Tiempo</th><th>Contenido</th></tr><tr><td>Calentamiento</td><td>10 min</td><td>Escalas y arpegios del día (módulos 3 y 4)</td></tr><tr><td>Técnica</td><td>10 min</td><td>Un ejercicio técnico concreto (octavas, terceras, polirritmia…)</td></tr><tr><td>Repertorio: trabajo lento</td><td>25 min</td><td>Fragmentos difíciles con metrónomo</td></tr><tr><td>Repertorio: pasada completa</td><td>10 min</td><td>Tocar seguido sin parar, como en un concierto</td></tr><tr><td>Lectura a primera vista</td><td>5 min</td><td>Algo nuevo y fácil, sin detenerte</td></tr></table></div>
+      <h3>3. Tu metrónomo</h3>
+      <p>Este metrónomo funciona dentro del curso, también sin conexión. El primer tiempo de cada compás suena más agudo.</p>
+      <div class="activity"><div class="metro">
+        <button class="btn" id="met-btn" onclick="metroToggle()">▶ Iniciar</button>
+        <label>Tempo: <b id="met-val">72</b> bpm <input id="met-bpm" type="range" min="40" max="208" value="72" oninput="metroBpm(this.value)"></label>
+        <label>Compás: <select id="met-comp" onchange="metroPintar()"><option value="2">2/4</option><option value="3">3/4</option><option value="4" selected>4/4</option><option value="6">6/8 (en corcheas)</option></select></label>
+      </div><div class="beats" id="met-beats"></div></div>
+      <div class="box tip"><b>Truco:</b> pon el metrónomo a la mitad de la velocidad final y cuenta una nota por clic. Cuando sea fácil, sube 4 bpm. Al llegar al tempo final, bájalo otra vez y deja que el clic marque solo el tiempo fuerte.</div>
+      <div class="quiz"><h4>🧩 Fallas siempre en el mismo compás. ¿Qué haces?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m1a')">A. Tocar la pieza entera muchas veces seguidas</button><button class="option" onclick="checkAnswer(this,true,'m1a')">B. Aislar ese compás, bajar el tempo hasta tocarlo sin errores y subir poco a poco</button><button class="option" onclick="checkAnswer(this,false,'m1a')">C. Tocarlo más deprisa para pasarlo rápido</button></div><p class="feedback" id="fb-m1a" data-ok="Aislar, ralentizar y subir de forma gradual es la base de la práctica deliberada."></p></div>
+      <div class="quiz"><h4>🧩 ¿Cuándo subes el metrónomo?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'m1b')">A. Cuando lo toco tres veces seguidas sin errores</button><button class="option" onclick="checkAnswer(this,false,'m1b')">B. Cada cinco minutos, aunque falle</button><button class="option" onclick="checkAnswer(this,false,'m1b')">C. Nunca: hay que tocar siempre a tempo</button></div><p class="feedback" id="fb-m1b" data-ok="Solo se sube cuando el tempo actual está consolidado."></p></div>
+      <div class="activity"><h3>🎹 Tu plan semanal</h3><p>Escribe tu objetivo concreto para esta semana y cómo repartirás tu tiempo de estudio.</p><textarea placeholder="Lunes: escalas de Do y Sol… Objetivo: …"></textarea></div>
+      <div class="summary-box"><b>Resumen:</b> objetivos concretos, lento sin errores, fragmentos cortos, metrónomo gradual y una pasada completa al final.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('index.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo2.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Piano: nivel intermedio y avanzado · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script>var PARTITURAS={};</script>
+<script src="abcjs-basic-min.js"></script>
+<script src="piano.js"></script>
+<script src="scorm.js"></script>
+</body>
+</html>

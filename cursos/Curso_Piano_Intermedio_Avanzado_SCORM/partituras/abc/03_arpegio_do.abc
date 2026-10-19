@@ -1,0 +1,12 @@
+X:3
+T:Arpegio de Do mayor
+C:Ejercicio
+M:4/4
+L:1/8
+Q:1/4=60
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:C
+[V:RH] (3!1!C!2!E!3!G (3!1!c!2!e!3!g (3!5!c'!3!g!2!e (3!1!c!3!G!2!E | !1!C8 |]
+[V:LH] (3!5!C,,!4!E,,!2!G,, (3!1!C,!4!E,!2!G, (3!1!C!2!G,!4!E, (3!1!C,!2!G,,!4!E,, | !5!C,,8 |]

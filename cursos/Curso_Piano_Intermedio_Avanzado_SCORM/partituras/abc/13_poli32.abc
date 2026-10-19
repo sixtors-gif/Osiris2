@@ -1,0 +1,12 @@
+X:11
+T:3 contra 2
+C:Ejercicio
+M:2/4
+L:1/8
+Q:1/4=50
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:C
+[V:RH] (3CEG (3cGE | (3CEG (3cGE |]
+[V:LH] C,G, C,G, | C,G, C,G, |]

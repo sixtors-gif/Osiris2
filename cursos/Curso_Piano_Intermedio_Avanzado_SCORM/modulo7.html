@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 7: El pedal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🦶</span>Módulo 7: El pedal</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>El pedal es parte del sonido, no un efecto añadido.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:47%"></div></div>
+    <div class="progress-text">Piano · Nivel intermedio · Módulo 7 de 14</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>Los tres pedales</h2>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Pedal</th><th>Qué hace</th><th>Uso</th></tr><tr><td>Derecho (de resonancia)</td><td>Levanta todos los apagadores: las cuerdas siguen sonando</td><td>Legato, color y resonancia</td></tr><tr><td>Central (sostenuto)</td><td>Mantiene solo las notas que estaban pulsadas al pisarlo (en pianos de cola y algunos verticales)</td><td>Bajos largos sin emborronar el resto</td></tr><tr><td>Izquierdo (una corda)</td><td>Suaviza el sonido y cambia el timbre</td><td>Pasajes <i>pp</i> o de color especial</td></tr></table></div>
+      <h3>1. Pedal sincopado (legato)</h3>
+      <p>Es la técnica básica: el pedal se cambia <b>después</b> de tocar el acorde nuevo, nunca a la vez.</p>
+      <ol class="steps"><li>Toca el acorde con el pedal pisado.</li><li>Al tocar el acorde siguiente, <b>levanta</b> el pedal en ese instante…</li><li>…y <b>vuelve a pisarlo</b> justo después, con el acorde nuevo ya sonando.</li></ol>
+      <div class="score-box"><h4>🎼 Pedal sincopado (legato)</h4><div class="score" id="p-pedal"></div><div class="score-tools"><button onclick="tocar('pedal')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-pedal"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-pedal"></span></div><p class="score-note">«✱ Ped.» sobre el bajo nuevo: levanta el pedal justo cuando suena el acorde nuevo y vuelve a pisarlo inmediatamente después. Así se enlazan los acordes sin mezclarlos ni dejar huecos.</p></div>
+      <h3>2. Pedal según el estilo</h3>
+      <ul class="key-points"><li>🎨 <span><b>Barroco:</b> muy poco o nada (el clave no tenía pedal). La claridad viene de los dedos.</span></li><li>🎨 <span><b>Clásico:</b> breve, para unir y dar color; nunca para tapar las escalas.</span></li><li>🎨 <span><b>Romántico:</b> abundante y cambiado con cada armonía.</span></li><li>🎨 <span><b>Impresionismo:</b> medios pedales y mezclas de armonías buscadas.</span></li></ul>
+      <div class="box tip"><b>Escucha antes que la vista:</b> si el sonido se emborrona, cambia el pedal; si se corta, cámbialo más tarde. Las marcas de la partitura son una guía, el oído decide.</div>
+      <div class="quiz"><h4>🧩 ¿Cuándo se cambia el pedal en el pedal sincopado?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m7a')">A. Antes de tocar el acorde nuevo</button><button class="option" onclick="checkAnswer(this,true,'m7a')">B. Justo al tocar el acorde nuevo: se levanta y se vuelve a pisar inmediatamente</button><button class="option" onclick="checkAnswer(this,false,'m7a')">C. Solo al final de la obra</button></div><p class="feedback" id="fb-m7a" data-ok="Así los acordes se enlazan sin mezclarse."></p></div>
+      <div class="quiz"><h4>🧩 ¿Qué pedal sostiene solo las notas que estaban pulsadas al pisarlo?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m7b')">A. El izquierdo</button><button class="option" onclick="checkAnswer(this,true,'m7b')">B. El central (sostenuto)</button><button class="option" onclick="checkAnswer(this,false,'m7b')">C. El derecho</button></div><p class="feedback" id="fb-m7b" data-ok="El sostenuto mantiene solo esas notas."></p></div>
+      <div class="summary-box"><b>Resumen:</b> pedal sincopado, adaptado al estilo y controlado por el oído.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo6.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo8.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Piano: nivel intermedio y avanzado · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script>var PARTITURAS={"pedal": "X:7\nT:Estudio de pedal sincopado\nC:Ejercicio original del curso\nM:4/4\nL:1/4\nQ:1/4=66\n%%score {RH | LH}\nV:RH clef=treble name=\"M.D.\"\nV:LH clef=bass name=\"M.I.\"\nK:C\n[V:RH] \"C\"e2 g2 | \"Am\"e2 c2 | \"F\"f2 a2 | \"G7\"g2 f2 | \"C\"e4 |]\n[V:LH] \"_Ped.\"C, G, C G, | \"_✱ Ped.\"A,, E, A, E, | \"_✱ Ped.\"F,, C, F, C, | \"_✱ Ped.\"G,, D, F, D, | \"_✱ Ped.\"[C,G,]4 |]\n"};</script>
+<script src="abcjs-basic-min.js"></script>
+<script src="piano.js"></script>
+<script src="scorm.js"></script>
+</body>
+</html>

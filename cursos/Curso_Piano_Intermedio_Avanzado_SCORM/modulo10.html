@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 10: Polirritmia: 3 contra 2 y 4 contra 3</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🔀</span>Módulo 10: Polirritmia: 3 contra 2 y 4 contra 3</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Dos ritmos a la vez, cada uno en su mano.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:67%"></div></div>
+    <div class="progress-text">Piano · Nivel avanzado · Módulo 10 de 14</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>Contar en una cuadrícula común</h2>
+      <p>Para tocar 3 notas en una mano contra 2 en la otra, piensa en el <b>mínimo común múltiplo</b>: 6 subdivisiones. Cada mano toca en sus puntos y solo coinciden en el primero.</p>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Subdivisión</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><td>Mano derecha (3)</td><td>●</td><td></td><td>●</td><td></td><td>●</td><td></td></tr><tr><td>Mano izquierda (2)</td><td>●</td><td></td><td></td><td>●</td><td></td><td></td></tr><tr><td>Resultado</td><td>juntas</td><td></td><td>M.D.</td><td>M.I.</td><td>M.D.</td><td></td></tr></table></div>
+      <p>Dicho en voz alta: «<b>jun</b>-tas, de-re-cha, iz-quier-da, de-re-cha». Empieza muy lento, sobre la mesa, dando palmadas.</p>
+      <div class="score-box"><h4>🎼 Polirritmia 3 contra 2</h4><div class="score" id="p-poli32"></div><div class="score-tools"><button onclick="tocar('poli32')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-poli32"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-poli32"></span></div><p class="score-note">Cuadrícula de 6: la mano derecha toca en 1-3-5 y la izquierda en 1-4. Solo coinciden en el 1.</p></div>
+      <h3>4 contra 3</h3>
+      <p>Cuadrícula de <b>12</b>: la mano de 4 toca en 1-4-7-10 y la de 3 en 1-5-9.</p>
+      <div class="score-box"><h4>🎼 Polirritmia 4 contra 3</h4><div class="score" id="p-poli43"></div><div class="score-tools"><button onclick="tocar('poli43')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-poli43"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-poli43"></span></div><p class="score-note">Cuadrícula de 12: la mano derecha toca en 1-4-7-10 y la izquierda en 1-5-9.</p></div>
+      <div class="box tip"><b>En el repertorio:</b> el 3 contra 2 aparece constantemente en Chopin (por ejemplo, la <i>Fantasía-Impromptu</i>, que usa 4 contra 3) y en Debussy. Cuando lo domines, deja de contar: siente la mano lenta como el pulso y la rápida «fluyendo» por encima.</div>
+      <div class="quiz"><h4>🧩 ¿Cuántas subdivisiones tiene la cuadrícula común de 3 contra 2?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m10a')">A. 5</button><button class="option" onclick="checkAnswer(this,true,'m10a')">B. 6</button><button class="option" onclick="checkAnswer(this,false,'m10a')">C. 12</button></div><p class="feedback" id="fb-m10a" data-ok="El mínimo común múltiplo de 3 y 2 es 6."></p></div>
+      <div class="quiz"><h4>🧩 En 3 contra 2, ¿en qué subdivisiones coinciden las dos manos?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m10b')">A. En todas</button><button class="option" onclick="checkAnswer(this,true,'m10b')">B. Solo en la primera</button><button class="option" onclick="checkAnswer(this,false,'m10b')">C. En la 1.ª y la 4.ª</button></div><p class="feedback" id="fb-m10b" data-ok="Solo coinciden al principio de cada grupo."></p></div>
+      <div class="summary-box"><b>Resumen:</b> cuadrícula común, practicar fuera del piano y, al final, sentirlo sin contar.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo9.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo11.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Piano: nivel intermedio y avanzado · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script>var PARTITURAS={"poli32": "X:11\nT:3 contra 2\nC:Ejercicio\nM:2/4\nL:1/8\nQ:1/4=50\n%%score {RH | LH}\nV:RH clef=treble name=\"M.D.\"\nV:LH clef=bass name=\"M.I.\"\nK:C\n[V:RH] (3CEG (3cGE | (3CEG (3cGE |]\n[V:LH] C,G, C,G, | C,G, C,G, |]\n", "poli43": "X:12\nT:4 contra 3\nC:Ejercicio\nM:2/4\nL:1/16\nQ:1/4=40\n%%score {RH | LH}\nV:RH clef=treble name=\"M.D.\"\nV:LH clef=bass name=\"M.I.\"\nK:C\n[V:RH] cdef gfed | cdef gfed |]\n[V:LH] (3C,2G,2C2 (3C,2G,2C2 | (3C,2G,2C2 (3C,2G,2C2 |]\n"};</script>
+<script src="abcjs-basic-min.js"></script>
+<script src="piano.js"></script>
+<script src="scorm.js"></script>
+</body>
+</html>

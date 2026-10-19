@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 5: Armonía funcional aplicada al teclado</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🧭</span>Módulo 5: Armonía funcional aplicada al teclado</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Entender por qué suena lo que suena.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:33%"></div></div>
+    <div class="progress-text">Piano · Nivel intermedio · Módulo 5 de 14</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>Grados y funciones</h2>
+      <p>Cada acorde de una tonalidad tiene una <b>función</b>: reposo, alejamiento o tensión que pide resolver.</p>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Grado (Do mayor)</th><th>Acorde</th><th>Función</th></tr><tr><td>I</td><td>C (Do mayor)</td><td><b>Tónica</b>: reposo</td></tr><tr><td>ii</td><td>Dm (Re menor)</td><td>Subdominante</td></tr><tr><td>iii</td><td>Em (Mi menor)</td><td>Tónica (débil)</td></tr><tr><td>IV</td><td>F (Fa mayor)</td><td><b>Subdominante</b>: alejamiento</td></tr><tr><td>V / V7</td><td>G / G7 (Sol 7)</td><td><b>Dominante</b>: tensión que resuelve en I</td></tr><tr><td>vi</td><td>Am (La menor)</td><td>Tónica relativa</td></tr><tr><td>vii°</td><td>Bdim (Si disminuido)</td><td>Dominante</td></tr></table></div>
+      <h3>1. Cadencias</h3>
+      <ul class="key-points"><li>🎯 <span><b>Perfecta (auténtica):</b> V–I. Conclusión total.</span></li><li>🎯 <span><b>Plagal:</b> IV–I. El «amén».</span></li><li>🎯 <span><b>Semicadencia:</b> termina en V. Suspense, pide continuación.</span></li><li>🎯 <span><b>Rota (de engaño):</b> V–vi. Sorpresa: esperas I y suena vi.</span></li></ul>
+      <div class="score-box"><h4>🎼 Cadencias: I–IV–V7–I y I–vi–ii7–V7–I en Do mayor</h4><div class="score" id="p-cadencia"></div><div class="score-tools"><button onclick="tocar('cadencia')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-cadencia"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-cadencia"></span></div><p class="score-note">Observa la conducción de voces: las notas comunes se mantienen y las demás se mueven por grado conjunto.</p></div>
+      <h3>2. Conducción de voces</h3>
+      <ul class="key-points"><li>🔗 <span>Mantén las <b>notas comunes</b> entre acordes.</span></li><li>🔗 <span>Mueve las demás por el <b>camino más corto</b> (grado conjunto).</span></li><li>🔗 <span>La <b>sensible</b> (Si en Do mayor) sube a la tónica.</span></li><li>🔗 <span>La <b>7.ª del acorde</b> de dominante (Fa en Sol7) baja por grado.</span></li></ul>
+      <h3>3. Cifrado americano</h3>
+      <p>Letras: A = La, B = Si, C = Do, D = Re, E = Mi, F = Fa, G = Sol. «m» = menor; «7» = séptima menor; «maj7» = séptima mayor; «/» = bajo distinto (C/E = Do con Mi en el bajo).</p>
+      <div class="quiz"><h4>🧩 En Do mayor, ¿cuál es el acorde de dominante con séptima (V7)?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m5a')">A. Fa mayor</button><button class="option" onclick="checkAnswer(this,true,'m5a')">B. Sol7 (Sol–Si–Re–Fa)</button><button class="option" onclick="checkAnswer(this,false,'m5a')">C. La menor</button></div><p class="feedback" id="fb-m5a" data-ok="El V grado de Do es Sol; con la 7.ª: Sol–Si–Re–Fa."></p></div>
+      <div class="quiz"><h4>🧩 Esperas el acorde de Do al final y suena La menor. ¿Qué cadencia es?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m5b')">A. Perfecta</button><button class="option" onclick="checkAnswer(this,false,'m5b')">B. Plagal</button><button class="option" onclick="checkAnswer(this,true,'m5b')">C. Rota (de engaño)</button></div><p class="feedback" id="fb-m5b" data-ok="V–vi es la cadencia rota."></p></div>
+      <div class="activity"><h3>🎹 Transporte</h3><p>Toca la cadencia I–IV–V7–I del ejemplo en Sol mayor y en Fa mayor. Escribe los acordes que usas.</p><textarea placeholder="Sol mayor: G – C – D7 – G …"></textarea></div>
+      <div class="summary-box"><b>Resumen:</b> tónica, subdominante y dominante; cadencias y conducción de voces suave.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo4.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo6.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Piano: nivel intermedio y avanzado · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script>var PARTITURAS={"cadencia": "X:5\nT:Cadencias en Do mayor\nC:Ejercicio\nM:4/4\nL:1/4\nQ:1/4=60\n%%score {RH | LH}\nV:RH clef=treble name=\"M.D.\"\nV:LH clef=bass name=\"M.I.\"\nK:C\n[V:RH] \"C\"[CEG]2 \"F\"[CFA]2 | \"G7\"[B,FG]2 \"C\"[CEG]2 || \"C\"[CEG]2 \"Am\"[CEA]2 | \"Dm7\"[CFA]2 \"G7\"[B,FG]2 | \"C\"[CEG]4 |]\n[V:LH] \"_I\"C,2 \"_IV\"F,2 | \"_V7\"G,2 \"_I\"C,2 || \"_I\"C,2 \"_vi\"A,,2 | \"_ii7\"D,2 \"_V7\"G,,2 | \"_I\"C,4 |]\n"};</script>
+<script src="abcjs-basic-min.js"></script>
+<script src="piano.js"></script>
+<script src="scorm.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+X:5
+T:Cadencias en Do mayor
+C:Ejercicio
+M:4/4
+L:1/4
+Q:1/4=60
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:C
+[V:RH] "C"[CEG]2 "F"[CFA]2 | "G7"[B,FG]2 "C"[CEG]2 || "C"[CEG]2 "Am"[CEA]2 | "Dm7"[CFA]2 "G7"[B,FG]2 | "C"[CEG]4 |]
+[V:LH] "_I"C,2 "_IV"F,2 | "_V7"G,2 "_I"C,2 || "_I"C,2 "_vi"A,,2 | "_ii7"D,2 "_V7"G,,2 | "_I"C,4 |]

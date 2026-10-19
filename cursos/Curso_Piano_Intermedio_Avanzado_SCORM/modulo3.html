@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 3: Escalas en todas las tonalidades</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🎼</span>Módulo 3: Escalas en todas las tonalidades</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>La gimnasia diaria del pianista… y el mapa de la armonía.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
+    <div class="progress-text">Piano · Nivel intermedio · Módulo 3 de 14</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>Escalas: técnica y teoría a la vez</h2>
+      <p>Las escalas desarrollan la igualdad de los dedos y el paso del pulgar, y te enseñan las tonalidades. El <b>círculo de quintas</b> las ordena: cada paso a la derecha añade un sostenido y cada paso a la izquierda, un bemol.</p>
+      <div class="figure"><img src="img/circulo_quintas.svg" alt="Círculo de quintas"><div class="figure-caption">Tonalidades mayores (exterior), relativas menores (interior) y número de alteraciones de la armadura.</div></div>
+      <h3>1. Do mayor, la referencia</h3>
+      <div class="figure"><img src="img/teclado_do_mayor_md.svg" alt="Teclado con la escala de Do mayor y su digitación"><div class="figure-caption">Mano derecha: 1-2-3, pasa el pulgar, 1-2-3-4, pasa el pulgar… y el 5 solo en la nota final.</div></div>
+      <div class="score-box"><h4>🎼 Escala de Do mayor · 2 octavas, manos juntas</h4><div class="score" id="p-escala_do"></div><div class="score-tools"><button onclick="tocar('escala_do')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-escala_do"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-escala_do"></span></div><p class="score-note">Dedos: el pulgar «pasa por debajo» tras el 3.º y el 4.º dedo; los dedos largos «pasan por encima» al bajar.</p></div>
+      <h3>2. Reglas de digitación</h3>
+      <ul class="key-points"><li>🖐️ <span>El <b>pulgar no toca teclas negras</b> (salvo casos muy concretos).</span></li><li>🖐️ <span>Los dedos se agrupan en <b>1-2-3</b> y <b>1-2-3-4</b>: los grupos se ajustan para que los dedos largos caigan en las teclas negras.</span></li><li>🖐️ <span>El pulgar pasa por debajo <b>sin mover el codo</b>; prepara el paso girando ligeramente el antebrazo.</span></li><li>🖐️ <span>Estudia siempre <b>manos separadas primero</b>: los «pasos de pulgar» de cada mano no coinciden.</span></li></ul>
+      <div class="figure"><img src="img/teclado_re_mayor_md.svg" alt="Teclado con la escala de Re mayor y su digitación"><div class="figure-caption">Re mayor: misma digitación que Do (1-2-3-1-2-3-4-5) porque Fa♯ y Do♯ caen en dedos largos.</div></div>
+      <h3>3. Digitaciones estándar (una octava)</h3>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Tonalidad</th><th>Mano derecha</th><th>Mano izquierda</th></tr><tr><td>Do, Sol, Re, La, Mi</td><td>1 2 3 1 2 3 4 5</td><td>5 4 3 2 1 3 2 1</td></tr><tr><td>Si</td><td>1 2 3 1 2 3 4 5</td><td>4 3 2 1 4 3 2 1</td></tr><tr><td>Fa</td><td>1 2 3 4 1 2 3 4</td><td>5 4 3 2 1 3 2 1</td></tr><tr><td>Si♭</td><td>4 1 2 3 1 2 3 4</td><td>3 2 1 4 3 2 1 3</td></tr><tr><td>Mi♭</td><td>3 1 2 3 4 1 2 3</td><td>3 2 1 4 3 2 1 3</td></tr><tr><td>La♭</td><td>3 4 1 2 3 1 2 3</td><td>3 2 1 4 3 2 1 3</td></tr><tr><td>Re♭</td><td>2 3 1 2 3 4 1 2</td><td>3 2 1 4 3 2 1 3</td></tr><tr><td>Fa♯ / Sol♭</td><td>2 3 4 1 2 3 1 2</td><td>4 3 2 1 3 2 1 4</td></tr></table></div>
+      <p class="small">Digitaciones de uso habitual en los métodos tradicionales; algunas ediciones proponen variantes.</p>
+      <h3>4. Escalas menores</h3>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Tipo</th><th>Fórmula (desde La)</th><th>Rasgo</th></tr><tr><td>Natural</td><td>La Si Do Re Mi Fa Sol La</td><td>Misma armadura que su relativa mayor (Do)</td></tr><tr><td>Armónica</td><td>La Si Do Re Mi Fa <b>Sol♯</b> La</td><td>7.º grado elevado: crea la sensible</td></tr><tr><td>Melódica</td><td>Sube con <b>Fa♯ y Sol♯</b>; baja como la natural</td><td>Suaviza el salto de la armónica</td></tr></table></div>
+      <div class="score-box"><h4>🎼 Escala de La menor armónica · 1 octava, manos juntas</h4><div class="score" id="p-escala_lam"></div><div class="score-tools"><button onclick="tocar('escala_lam')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-escala_lam"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-escala_lam"></span></div><p class="score-note">El 7.º grado elevado (Sol♯) crea la sensible y el intervalo característico de 2.ª aumentada Fa–Sol♯.</p></div>
+      <div class="quiz"><h4>🧩 ¿Qué alteración caracteriza a la escala de La menor armónica?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m3a')">A. Fa♯</button><button class="option" onclick="checkAnswer(this,true,'m3a')">B. Sol♯</button><button class="option" onclick="checkAnswer(this,false,'m3a')">C. Si♭</button></div><p class="feedback" id="fb-m3a" data-ok="La menor armónica eleva el 7.º grado: Sol♯."></p></div>
+      <div class="quiz"><h4>🧩 ¿Cuántas alteraciones tiene la armadura de Re mayor?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'m3b')">A. Dos sostenidos</button><button class="option" onclick="checkAnswer(this,false,'m3b')">B. Un bemol</button><button class="option" onclick="checkAnswer(this,false,'m3b')">C. Tres sostenidos</button></div><p class="feedback" id="fb-m3b" data-ok="Re mayor lleva Fa♯ y Do♯."></p></div>
+      <div class="dl-box">📥 <b>Partituras para imprimir:</b> todas las del curso están en el <a href="partituras/Cuaderno_de_partituras.pdf" target="_blank" rel="noopener">Cuaderno de partituras (PDF)</a>.</div>
+      <div class="summary-box"><b>Resumen:</b> círculo de quintas, pulgar fuera de las teclas negras, manos separadas primero y las tres formas de la escala menor.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo2.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo4.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Piano: nivel intermedio y avanzado · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script>var PARTITURAS={"escala_do": "X:1\nT:Escala de Do mayor\nC:Ejercicio · digitación estándar\nM:4/4\nL:1/8\nQ:1/4=72\n%%score {RH | LH}\nV:RH clef=treble name=\"M.D.\"\nV:LH clef=bass name=\"M.I.\"\nK:C\n[V:RH] !1!C!2!D!3!E!1!F !2!G!3!A!4!B!1!c | !2!d!3!e!1!f!2!g !3!a!4!b!5!c'!4!b | !3!a!2!g!1!f!3!e !2!d!1!c!4!B!3!A | !2!G!1!F!3!E!2!D !1!C4 |]\n[V:LH] !5!C,,!4!D,,!3!E,,!2!F,, !1!G,,!3!A,,!2!B,,!1!C, | !4!D,!3!E,!2!F,!1!G, !3!A,!2!B,!1!C!2!B, | !3!A,!1!G,!2!F,!3!E, !4!D,!1!C,!2!B,,!3!A,, | !1!G,,!2!F,,!3!E,,!4!D,, !5!C,,4 |]\n", "escala_lam": "X:2\nT:La menor armónica\nC:Ejercicio\nM:4/4\nL:1/8\nQ:1/4=72\n%%score {RH | LH}\nV:RH clef=treble name=\"M.D.\"\nV:LH clef=bass name=\"M.I.\"\nK:Am\n[V:RH] !1!A!2!B!3!c!1!d !2!e!3!f!4!^g!5!a | !4!^g!3!f!2!e!1!d !3!c!2!B !1!A2 |]\n[V:LH] !5!A,!4!B,!3!C!2!D !1!E!3!F!2!^G!1!A | !2!^G!3!F!1!E!2!D !3!C!4!B, !5!A,2 |]\n"};</script>
+<script src="abcjs-basic-min.js"></script>
+<script src="piano.js"></script>
+<script src="scorm.js"></script>
+</body>
+</html>

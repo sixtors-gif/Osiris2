@@ -1,0 +1,324 @@
+// Piano: nivel intermedio y avanzado — Banco de preguntas GIFT para Moodle
+// Autor: Sixto Rodríguez de Sepúlveda. Una única respuesta correcta; una categoría por módulo.
+
+$CATEGORY: Piano intermedio y avanzado/Módulo 01 - Cómo estudiar\: método, rutina y metrónomo
+
+::PIA01-1::¿En qué consiste la práctica lenta deliberada? {
+~Tocar la obra entera muchas veces a tempo
+=Tocar a un tempo en el que no cometes errores y subirlo poco a poco con metrónomo
+~Tocar solo lo que ya sale bien
+~Practicar sin partitura desde el primer día
+}
+
+::PIA01-2::Al estudiar un pasaje difícil, ¿qué tamaño de fragmento conviene? {
+=Fragmentos cortos de 1–2 compases, con la nota de unión al siguiente
+~La página entera
+~Toda la obra de principio a fin
+~Una sola nota
+}
+
+::PIA01-3::¿Cuándo conviene subir el tempo del metrónomo? {
+~Nunca
+~Cada cinco minutos
+~Cuando te aburres
+=Cuando el tempo actual sale limpio varias veces seguidas
+}
+
+$CATEGORY: Piano intermedio y avanzado/Módulo 02 - Lectura avanzada\: claves, ritmos y compases
+
+::PIA02-1::En un compás de 6/8 a velocidad normal, ¿cuántos pulsos se sienten? {
+~3 pulsos de negra
+~6 pulsos de corchea
+=2 pulsos de negra con puntillo
+~4 pulsos de corchea
+}
+
+::PIA02-2::Un tresillo de corcheas ocupa el tiempo de… {
+~Tres corcheas
+=Dos corcheas (una negra)
+~Una corchea
+~Una blanca
+}
+
+::PIA02-3::¿Qué nota está en la primera línea adicional por debajo del pentagrama en clave de Sol? {
+=Do4 (Do central)
+~La3
+~Mi4
+~Si3
+}
+
+$CATEGORY: Piano intermedio y avanzado/Módulo 03 - Escalas en todas las tonalidades
+
+::PIA03-1::¿Qué regla de digitación de escalas es correcta? {
+~La mano izquierda copia la digitación de la derecha
+~El pulgar toca siempre las teclas negras
+~Se usan siempre los cinco dedos seguidos
+=El pulgar no suele tocar teclas negras
+}
+
+::PIA03-2::¿Qué alteración caracteriza a la escala de La menor armónica? {
+~Si♭
+~Fa♯
+=Sol♯
+~Do♯
+}
+
+::PIA03-3::¿Cuántas alteraciones tiene la armadura de Re mayor? {
+~Un sostenido
+=Dos sostenidos (Fa♯ y Do♯)
+~Dos bemoles
+~Ninguna
+}
+
+$CATEGORY: Piano intermedio y avanzado/Módulo 04 - Arpegios, acordes e inversiones
+
+::PIA04-1::¿Qué notas forman la 1.ª inversión de Do mayor? {
+=Mi–Sol–Do
+~Do–Mi–Sol
+~Sol–Do–Mi
+~Do–Fa–La
+}
+
+::PIA04-2::¿Qué digitación se usa habitualmente en el arpegio de Do mayor con la mano derecha (dos octavas)? {
+~5-4-2-1-4-2-1
+~1-2-4-1-2-4-5
+~1-3-5-1-3-5-5
+=1-2-3-1-2-3-5
+}
+
+::PIA04-3::Re–Fa–La es un acorde… {
+~Disminuido
+~Mayor
+=Menor
+~Aumentado
+}
+
+$CATEGORY: Piano intermedio y avanzado/Módulo 05 - Armonía funcional aplicada al teclado
+
+::PIA05-1::En Do mayor, ¿cuál es el acorde de dominante con séptima (V7)? {
+~Fa mayor\: Fa–La–Do
+=Sol7\: Sol–Si–Re–Fa
+~Do7\: Do–Mi–Sol–Si♭
+~Re menor\: Re–Fa–La
+}
+
+::PIA05-2::¿Qué es una cadencia perfecta (auténtica)? {
+=El enlace V–I
+~El enlace IV–I
+~Terminar en el V grado
+~El enlace V–vi
+}
+
+::PIA05-3::En cifrado americano, «Am» significa… {
+~Mi menor
+~La mayor
+~La séptima
+=La menor
+}
+
+$CATEGORY: Piano intermedio y avanzado/Módulo 06 - Independencia de manos y acompañamientos
+
+::PIA06-1::¿Qué es el bajo Alberti? {
+~Una escala en octavas
+~Un acorde mantenido con pedal
+=Un acompañamiento que arpegia el acorde en el orden grave–agudo–medio–agudo
+~Un adorno barroco
+}
+
+::PIA06-2::La melodía queda tapada por el acompañamiento. ¿Qué haces? {
+~Tocar las dos manos más fuerte
+=Tocar el acompañamiento más suave y dar más peso a la melodía
+~Quitar el pedal siempre
+~Tocar más deprisa
+}
+
+::PIA06-3::¿Qué patrón sigue el bajo boogie en Do? {
+=Do–Sol, Do–La, Do–Si♭, Do–La
+~Do–Mi–Sol–Do
+~Do–Re–Mi–Fa
+~Do–Sol–Mi–Sol
+}
+
+$CATEGORY: Piano intermedio y avanzado/Módulo 07 - El pedal
+
+::PIA07-1::¿Qué es el pedal sincopado (legato)? {
+~Usar solo el pedal izquierdo
+~Pisar el pedal toda la obra
+~Cambiar el pedal antes del acorde nuevo
+=Levantar el pedal justo al tocar el acorde nuevo y volver a pisarlo inmediatamente después
+}
+
+::PIA07-2::¿Qué pedal sostiene solo las notas que estaban pulsadas al pisarlo? {
+~El izquierdo
+~El derecho
+=El central (sostenuto)
+~Ninguno
+}
+
+::PIA07-3::¿Para qué sirve el pedal izquierdo (una corda)? {
+~Para mantener todas las notas
+=Para suavizar y cambiar el timbre
+~Para afinar el piano
+~Para tocar más fuerte
+}
+
+$CATEGORY: Piano intermedio y avanzado/Módulo 08 - Repertorio intermedio\: analizar antes de tocar
+
+::PIA08-1::El Preludio en Do mayor BWV 846 pertenece a… {
+=El clave bien temperado, libro I, de J. S. Bach
+~Las sonatas de Beethoven
+~Los nocturnos de Chopin
+~Las Invenciones de Bach
+}
+
+::PIA08-2::¿En qué compás está escrita «Para Elisa» de Beethoven? {
+~6/8
+~4/4
+~2/4
+=3/8
+}
+
+::PIA08-3::¿Cuál es el primer paso recomendable para estudiar una obra nueva? {
+~Memorizarla sin leerla
+~Tocarla a tempo desde el principio
+=Escucharla y analizar forma, tonalidad y pasajes difíciles
+~Tocar solo el final
+}
+
+$CATEGORY: Piano intermedio y avanzado/Módulo 09 - Técnica avanzada\: octavas, terceras y adornos
+
+::PIA09-1::En el Barroco y el Clasicismo, ¿por qué nota empieza normalmente el trino? {
+~Por la nota real
+=Por la nota superior
+~Por la nota inferior
+~Por la tónica
+}
+
+::PIA09-2::Al tocar octavas con la mano derecha, ¿qué dedo va arriba en las teclas negras? {
+=El 4.º
+~El 2.º
+~El pulgar
+~El 3.º siempre
+}
+
+::PIA09-3::Notas molestias en la muñeca estudiando octavas. ¿Qué haces? {
+~Subo el tempo
+~Sigo hasta que se pase
+~Toco más fuerte
+=Paro, descanso y reviso la técnica; si persiste, consulto a un profesional
+}
+
+$CATEGORY: Piano intermedio y avanzado/Módulo 10 - Polirritmia\: 3 contra 2 y 4 contra 3
+
+::PIA10-1::¿Cuántas subdivisiones tiene la cuadrícula común de un 3 contra 2? {
+~3
+~5
+=6
+~12
+}
+
+::PIA10-2::En 3 contra 2, ¿en qué subdivisiones coinciden las dos manos? {
+~En todas
+=Solo en la primera
+~En la 1.ª y la 3.ª
+~En ninguna
+}
+
+::PIA10-3::¿Cuántas subdivisiones tiene la cuadrícula común de un 4 contra 3? {
+=12
+~7
+~6
+~16
+}
+
+$CATEGORY: Piano intermedio y avanzado/Módulo 11 - Armonía avanzada\: séptimas, tensiones y voicings
+
+::PIA11-1::¿Qué notas forman Cmaj7? {
+~Do–Mi♭–Sol♭–Si♭
+~Do–Mi–Sol–Si♭
+~Do–Mi♭–Sol–Si♭
+=Do–Mi–Sol–Si
+}
+
+::PIA11-2::¿Qué notas tiene un voicing sin fundamental de Dm7 (3.ª, 5.ª, 7.ª y 9.ª)? {
+~Fa–La–Si–Mi
+~Re–Fa–La–Do
+=Fa–La–Do–Mi
+~Mi–Sol–Si–Re
+}
+
+::PIA11-3::¿Qué dos notas definen mejor un acorde de séptima (shell voicing)? {
+~La fundamental y la 5.ª
+=La 3.ª y la 7.ª
+~La 5.ª y la 9.ª
+~La 9.ª y la 13.ª
+}
+
+$CATEGORY: Piano intermedio y avanzado/Módulo 12 - Improvisación\: blues y reharmonización
+
+::PIA12-1::¿Qué notas forman la escala de blues de Do? {
+=Do–Mi♭–Fa–Fa♯–Sol–Si♭
+~Do–Re–Mi–Sol–La
+~Do–Re–Mi–Fa–Sol–La–Si
+~Do–Mi–Sol–Si♭
+}
+
+::PIA12-2::En un blues de 12 compases en Do, ¿qué acorde suena en los compases 5 y 6? {
+~Am
+~C7
+~G7
+=F7
+}
+
+::PIA12-3::Reharmonizar consiste en… {
+~Tocar más rápido
+~Cambiar la melodía conservando los acordes
+=Cambiar los acordes de una melodía conservando la melodía
+~Transportar a otra tonalidad
+}
+
+$CATEGORY: Piano intermedio y avanzado/Módulo 13 - Interpretación y estilos
+
+::PIA13-1::¿Qué es el rubato? {
+~Tocar siempre con metrónomo
+=Flexibilidad expresiva del tempo sin perder el pulso general
+~Un tipo de pedal
+~Un adorno barroco
+}
+
+::PIA13-2::¿Qué compositor es representativo del impresionismo pianístico? {
+=Claude Debussy
+~J. S. Bach
+~W. A. Mozart
+~Scott Joplin
+}
+
+::PIA13-3::En la música barroca para teclado, el pedal… {
+~Se sustituye por el izquierdo
+~Se usa en cada nota
+~Es obligatorio en las fugas
+=Se usa muy poco o nada
+}
+
+$CATEGORY: Piano intermedio y avanzado/Módulo 14 - Preparar una obra y tocar en público
+
+::PIA14-1::¿Qué técnica de memorización es más fiable? {
+~Tocarla muchas veces deprisa
+~Solo la memoria de los dedos
+=Combinar memoria analítica, visual, auditiva y motriz
+~Leerla sin tocar
+}
+
+::PIA14-2::Te equivocas tocando en público. ¿Qué haces? {
+~Paras y empiezas de nuevo
+=Sigues manteniendo el pulso y entras en el siguiente punto seguro
+~Te disculpas con el público
+~Tocas más deprisa para terminar
+}
+
+::PIA14-3::¿Qué ayuda a controlar los nervios antes de actuar? {
+=Simular la actuación ante otras personas varias veces
+~No tocar la obra la semana anterior
+~Cambiar la digitación el día antes
+~Subir el tempo el mismo día
+}

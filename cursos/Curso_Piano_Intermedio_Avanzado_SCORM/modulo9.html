@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 9: Técnica avanzada: octavas, terceras y adornos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">💪</span>Módulo 9: Técnica avanzada: octavas, terceras y adornos</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Potencia y agilidad sin tensión.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:60%"></div></div>
+    <div class="progress-text">Piano · Nivel avanzado · Módulo 9 de 14</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+
+      <h2>Comienza el nivel avanzado</h2>
+      <div class="alert-box"><b>Salud primero:</b> la técnica avanzada exige fuerza, pero nunca dolor. Si notas molestia en la muñeca, el antebrazo o la espalda, para. Calienta antes, estudia en sesiones cortas y consulta a un profesional si el dolor persiste.</div>
+      <h3>1. Octavas</h3>
+      <ul class="key-points"><li>🖐️ <span>Pulgar abajo; arriba el <b>5.º en teclas blancas y el 4.º en negras</b> (en octavas legato se alternan 3-4-5).</span></li><li>🖐️ <span>El movimiento sale de la <b>muñeca</b>, con el brazo sosteniendo el peso y la mano como un «arco» firme.</span></li><li>🖐️ <span>Empieza a tempo lento y forte suave; la velocidad llega con la relajación.</span></li></ul>
+      <div class="score-box"><h4>🎼 Octavas en Re mayor</h4><div class="score" id="p-octavas"></div><div class="score-tools"><button onclick="tocar('octavas')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-octavas"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-octavas"></span></div><p class="score-note">Pulgar abajo; arriba el 5.º en teclas blancas y el 4.º en negras (Fa♯, Do♯). Muñeca suelta: la mano «rebota» desde la muñeca.</p></div>
+      <h3>2. Terceras dobles</h3>
+      <div class="score-box"><h4>🎼 Terceras dobles en Do mayor</h4><div class="score" id="p-terceras"></div><div class="score-tools"><button onclick="tocar('terceras')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-terceras"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-terceras"></span></div><p class="score-note">Estudia primero ligando solo la voz superior; después, la inferior; por último, las dos.</p></div>
+      <h3>3. Adornos</h3>
+      <div class="tabla-wrap"><table class="tabla"><tr><th>Adorno</th><th>Signo</th><th>Realización habitual (Barroco–Clasicismo)</th></tr><tr><td>Trino</td><td>tr</td><td>Alterna la nota con la superior, empezando por la superior</td></tr><tr><td>Mordente</td><td>Signo con raya vertical</td><td>Nota real – inferior – real</td></tr><tr><td>Mordente superior (pralltriller)</td><td>Signo sin raya</td><td>Nota real – superior – real</td></tr><tr><td>Grupeto</td><td>~ tumbado</td><td>Superior – real – inferior – real</td></tr><tr><td>Apoyatura</td><td>Nota pequeña</td><td>Toma parte del valor de la nota principal</td></tr></table></div>
+      <div class="score-box"><h4>🎼 Adornos: cómo se escriben y cómo se tocan</h4><div class="score" id="p-adornos"></div><div class="score-tools"><button onclick="tocar('adornos')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-adornos"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-adornos"></span></div><p class="score-note">Trino: empieza por la nota superior. Mordente: nota real–inferior–real. Grupeto: superior–real–inferior–real.</p></div>
+      <p class="small">En el Romanticismo los trinos suelen empezar por la nota real; consulta siempre una edición crítica.</p>
+      <div class="quiz"><h4>🧩 En el Barroco y el Clasicismo, ¿por qué nota empieza normalmente el trino?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m9a')">A. Por la nota real</button><button class="option" onclick="checkAnswer(this,true,'m9a')">B. Por la nota superior</button><button class="option" onclick="checkAnswer(this,false,'m9a')">C. Por la nota inferior</button></div><p class="feedback" id="fb-m9a" data-ok="Empieza por la superior, que actúa como apoyatura."></p></div>
+      <div class="quiz"><h4>🧩 Octavas en la mano derecha: ¿qué dedo va arriba en las teclas negras?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'m9b')">A. El 4.º</button><button class="option" onclick="checkAnswer(this,false,'m9b')">B. El 2.º</button><button class="option" onclick="checkAnswer(this,false,'m9b')">C. El pulgar</button></div><p class="feedback" id="fb-m9b" data-ok="5.º en blancas y 4.º en negras."></p></div>
+      <div class="summary-box"><b>Resumen:</b> muñeca libre en las octavas, terceras por capas y adornos según el estilo.</div>
+
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo8.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo10.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Piano: nivel intermedio y avanzado · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script>var PARTITURAS={"octavas": "X:8\nT:Octavas (mano derecha)\nC:Ejercicio\nM:4/4\nL:1/4\nQ:1/4=60\nK:D\n!5![Dd]!5![Ee]!4![Ff]!5![Gg] | !5![Aa]!5![Bb]!4![cc']!5![dd'] |]\n", "terceras": "X:9\nT:Terceras dobles (mano derecha)\nC:Ejercicio · una digitación habitual (hay variantes)\nM:4/4\nL:1/4\nQ:1/4=50\nK:C\n\"^1-3\"[CE]\"^2-4\"[DF]\"^3-5\"[EG]\"^1-3\"[FA] | \"^2-4\"[GB]\"^1-3\"[Ac]\"^2-4\"[Bd]\"^3-5\"[ce] |]\n", "adornos": "X:10\nT:Trino, mordente y grupeto\nC:Ejercicio · realización en estilo barroco-clásico\nM:4/4\nL:1/16\nQ:1/4=60\nK:C\n\"^Escrito\"!trill!d8 !mordent!c8 | !turn!e8 z8 || \"^Se toca\"edededed cBc6 | fede e4 z8 |]\n"};</script>
+<script src="abcjs-basic-min.js"></script>
+<script src="piano.js"></script>
+<script src="scorm.js"></script>
+</body>
+</html>

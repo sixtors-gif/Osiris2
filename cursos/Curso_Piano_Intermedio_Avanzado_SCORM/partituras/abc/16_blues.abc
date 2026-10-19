@@ -1,0 +1,16 @@
+X:14
+T:Blues en Do
+C:Ejercicio original del curso · tocar con swing
+M:4/4
+L:1/8
+Q:1/4=104
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:C
+[V:RH] "C7"z2 [E_B]2 z2 [E_B]2 | "C7"z2 [E_B]2 z2 [E_B]2 | "C7"z2 [E_B]2 z2 [E_B]2 | "C7"z2 [E_B]2 z2 [E_B]2 |
+[V:LH] C,G, C,A, C,_B, C,A, | C,G, C,A, C,_B, C,A, | C,G, C,A, C,_B, C,A, | C,G, C,A, C,_B, C,A, |
+[V:RH] "F7"z2 [_EA]2 z2 [_EA]2 | "F7"z2 [_EA]2 z2 [_EA]2 | "C7"z2 [E_B]2 z2 [E_B]2 | "C7"z2 [E_B]2 z2 [E_B]2 |
+[V:LH] F,C F,D F,_E F,D | F,C F,D F,_E F,D | C,G, C,A, C,_B, C,A, | C,G, C,A, C,_B, C,A, |
+[V:RH] "G7"z2 [FB]2 z2 [FB]2 | "F7"z2 [_EA]2 z2 [_EA]2 | "C7"z2 [E_B]2 z2 [E_B]2 | "G7"z2 [FB]2 z2 [FB]2 |]
+[V:LH] G,D G,E G,F G,E | F,C F,D F,_E F,D | C,G, C,A, C,_B, C,A, | G,D G,E G,F G,E |]
