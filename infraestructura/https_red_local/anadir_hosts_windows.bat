@@ -7,8 +7,8 @@ rem  Para deshacerlo: ejecutalo de nuevo y elige "Quitar".
 rem ==========================================================================
 setlocal
 rem ------------------------- CONFIGURA AQUI ---------------------------------
-set "IP=192.168.1.10"
-set "NOMBRES=horus.com www.horus.com"
+set "IP=10.210.232.155"
+set "NOMBRES=horus.com www.horus.com horus.local"
 rem --------------------------------------------------------------------------
 set "HOSTS=%SystemRoot%\System32\drivers\etc\hosts"
 set "MARCA=# Servidor interno Hotel Horus"
