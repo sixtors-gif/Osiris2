@@ -111,3 +111,25 @@ code{font-family:Consolas,'Courier New',monospace;background:#fff3e0;border:1px 
 .fbar .fxmark{color:#2f6db5;font-style:italic;font-weight:700;font-family:Georgia,serif}
 .fbar code{background:none;border:0;font-size:1.05em}
 @media(max-width:640px){.header h1{font-size:1.5em}.content-area{padding:18px}}
+
+/* Módulo 13: formato condicional */
+.cf-ant{background:#ffd8a8;color:#7a4100;font-weight:700;padding:1px 6px;border-radius:3px}
+.cf-cad{background:#f4b6b6;color:#9c0006;font-weight:700;padding:1px 6px;border-radius:3px}
+td.cf-ant,td.cf-cad{border-radius:0}
+.cf-dlg{max-width:620px;margin:0 auto;border:1px solid #9aa4bd;border-radius:8px;background:#f3f4f7;box-shadow:0 6px 18px rgba(0,0,0,.18);text-align:left;font-family:'Segoe UI',Tahoma,sans-serif;font-size:14px;overflow:hidden}
+.cf-title{background:#e4e7ee;padding:8px 12px;font-weight:700;border-bottom:1px solid #c7ccd8}
+.cf-cond{background:#fff;margin:10px;border:1px solid #d3d8e3;border-radius:6px;padding:8px 10px}
+.cf-num{font-weight:700;color:#1f3a63;margin-bottom:6px}
+.cf-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:4px 0}
+.cf-sel,.cf-in{border:1px solid #9aa4bd;border-radius:4px;padding:3px 8px;background:#fff}
+.cf-sel:after{content:" ▾";color:#666}
+.cf-in{font-family:Consolas,monospace;min-width:110px}
+.cf-lab{color:#333}
+.cf-prev{padding:3px 10px;border:1px solid #ccc;font-weight:700}
+.cf-prev.cad{background:#f4b6b6;color:#9c0006}.cf-prev.ant{background:#ffd8a8;color:#7a4100}
+.cf-foot{display:flex;flex-wrap:wrap;gap:6px;padding:8px 10px;border-top:1px solid #c7ccd8;background:#eceef3}
+.cf-btn{border:1px solid #9aa4bd;border-radius:4px;padding:3px 12px;background:#fff}.cf-btn.ok{border-color:#2b6cb0;font-weight:700}
+.cf-sp{flex:1}
+.ms-box{background:#eef4fb;border:1px dashed #2b6cb0;border-radius:10px;padding:12px 16px;margin:14px 0}
+.ms-box .mbadge{display:inline-block;background:#2b6cb0;color:#fff;border-radius:12px;padding:1px 10px;font-size:.8em;font-weight:700;margin-right:6px}
+.small{font-size:.92em;color:#555}

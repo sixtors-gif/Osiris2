@@ -11,7 +11,7 @@ Cursos en formato **SCORM 1.2** listos para importar en Moodle. Autor: Sixto Rod
 | Ciberseguridad para jóvenes | `cursos/Curso_Ciberseguridad_Jovenes_SCORM_con_modulo_seguridad_avanzada` | 16 módulos, examen de 34 preguntas, banco GIFT de 51 |
 | Ciberseguridad para jóvenes | `cursos/Curso_Ciberseguridad_Jovenes_SCORM_mejorado` | 15 módulos, examen de 32 preguntas, banco GIFT de 46 |
 | Ciberseguridad II: redes sociales en profundidad | `cursos/Curso_Ciberseguridad_Redes_Sociales_SCORM` | 15 módulos, examen de 27 preguntas, banco GIFT de 42 |
-| Escandallo de un catering con Calc | `cursos/Curso_Escandallo_Catering_SCORM` | 13 módulos, examen de 26 preguntas, banco GIFT de 44 |
+| Escandallo de un catering con Calc | `cursos/Curso_Escandallo_Catering_SCORM` | 14 módulos (incluye estilos y formato condicional con alarma de antigüedad de precios), examen de 28 preguntas, banco GIFT de 47 |
 | Hoja de cálculo básica con un horario | `cursos/Curso_Horario_Hoja_Calculo_Basico_SCORM` | 14 módulos, examen de 26 preguntas, banco GIFT de 40 |
 | LibreOffice: conceptos básicos comunes | `cursos/Curso_LibreOffice_Basico_SCORM` | 13 módulos, examen de 24 preguntas, banco GIFT de 39 |
 | Protección de Datos en Hostelería y Restauración | `cursos/Curso_Proteccion_Datos_Hosteleria_SCORM` | 13 módulos, examen de 26 preguntas, banco GIFT de 37 |

@@ -3,68 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Reto final: tu propio escandallo</title>
+<title>Estilos y formato condicional: alarma de antigüedad de los precios</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
   <div class="header">
-    <h1><span class="badge-icon">🏆</span>Reto final: tu propio escandallo</h1>
+    <h1><span class="badge-icon">🚦</span>Estilos y formato condicional: alarma de antigüedad de los precios</h1>
     <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
-    <p>Aplica todo lo aprendido: construye desde cero el escandallo de un catering nuevo y comprueba tus resultados.</p>
+    <p>Haz que la fecha de cada ficha se ponga naranja o roja cuando los precios del proveedor se queden viejos.</p>
   </div>
   <div class="progress-container">
-    <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
-    <div class="progress-text">Curso de Escandallo con Calc · Módulo 13 de 13</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:93%"></div></div>
+    <div class="progress-text">Curso de Escandallo con Calc · Módulo 13 de 14</div>
   </div>
+  
   <div class="content-area">
     <section class="module">
-      <h2>Reto final: tu propio escandallo</h2>
+      <h2>Estilos y formato condicional: alarma de antigüedad de los precios</h2>
+<div class="activity"><h3>🎯 El problema</h3>
+<p>Los precios del bloque <b>Proveedor</b> cambian: si la ficha se hizo hace meses, el escandallo calcula con precios viejos y el precio de venta puede quedarse corto. La celda <b>B2 («Fecha:»)</b> de cada ficha guarda cuándo revisaste esos precios. Vamos a convertirla en una <b>alarma</b>:</p>
+<ul class="key-points"><li>🟧 <span>Más de <b>30 días</b>: fondo <b>naranja</b> («conviene revisar los precios»).</span></li>
+<li>🟥 <span>Más de <b>60 días</b>: fondo <b>rojo</b> («precios caducados: no presupuestes sin revisarlos»).</span></li>
+<li>⬜ <span>Menos de 30 días: sin color.</span></li></ul>
+<p>Usaremos dos herramientas de Calc que trabajan juntas: los <b>estilos de celda</b> y el <b>formato condicional</b>.</p></div>
 
-<div class="activity"><h3>🎯 El encargo</h3>
-<p>Una familia te pide un catering para una <b>comunión</b>. Tienes que preparar el presupuesto con un escandallo <b>nuevo</b> (archivo distinto al del curso).</p>
-<ul class="key-points"><li>👥 <span><b>Comensales:</b> 80</span></li><li>📈 <span><b>% Beneficio:</b> 25 % · <b>Imprevistos:</b> 8 %</span></li><li>📋 <span><b>Estructura:</b> las mismas 5 hojas: Entrante, Carne, Pescado, Postre y Totales.</span></li></ul></div>
+<h3>1. Los estilos de celda</h3>
+<p>Un <b>estilo</b> es un formato con nombre (fondo, letra, números, bordes…) que se aplica de una vez. Si cambias el estilo, cambian <b>todas</b> las celdas que lo usan. En Calc, el formato condicional <b>aplica estilos</b>: por eso los creamos primero.</p>
+<ol class="steps">
+<li>Abre el panel de estilos: <kbd>F11</kbd> (o <b>Ver → Estilos</b>) y elige el icono <b>Estilos de celda</b>.</li>
+<li>Clic derecho sobre <b>Predeterminado</b> → <b>Nuevo…</b></li>
+<li>Pestaña <b>Organizador</b> → Nombre: <code>Precio antiguo</code>.</li>
+<li>Pestaña <b>Fondo</b> → <b>Color</b> → un naranja claro.</li>
+<li>Pestaña <b>Efectos tipográficos</b> → color de letra marrón oscuro; pestaña <b>Tipo de letra</b> → <b>Negrita</b>.</li>
+<li>Pestaña <b>Números</b> → <b>Fecha</b> → formato <code>DD/MM/AAAA</code>, para que la fecha se siga viendo como fecha. → <b>Aceptar</b>.</li>
+<li>Repite para <code>Precio caducado</code> con fondo <b>rojo claro</b> y letra roja oscura.</li>
+</ol>
+<div class="tip-box">💡 <b>Atajo:</b> da el formato a mano a una celda, selecciónala y en el panel de estilos pulsa el menú <b>☰ Opciones de estilo → Estilo nuevo a partir de la selección…</b> (<kbd>Mayús</kbd> + <kbd>F11</kbd>). Solo tendrás que ponerle nombre.</div>
 
-<h3>Paso 1: las cuatro fichas de receta</h3>
-<p>Crea la ficha (módulos 3 a 6), duplícala (módulo 7) y teclea estos datos:</p>
-<details class="activity"><summary><b>🥗 Entrante: Ensalada de tomate con ventresca</b> — 8 raciones</summary><table class="tbl"><tr><th>Ingrediente</th><th>Cantidad</th><th>Formato proveedor</th><th>Precio del formato</th></tr><tr><td>Tomate pera maduro</td><td>1600 gr</td><td>5000 gr</td><td>9,50 €</td></tr><tr><td>Ventresca de atún</td><td>240 gr</td><td>1000 gr</td><td>42,00 €</td></tr><tr><td>Cebolla tierna</td><td>200 gr</td><td>1000 gr</td><td>1,80 €</td></tr><tr><td>Aceite de oliva virgen extra</td><td>100 ml</td><td>5000 ml</td><td>32,00 €</td></tr><tr><td>Vinagre de Jerez</td><td>30 ml</td><td>1000 ml</td><td>4,20 €</td></tr><tr><td>Sal</td><td>8 gr</td><td>1000 gr</td><td>0,45 €</td></tr></table></details><details class="activity"><summary><b>🥩 Carne: Pollo asado con patatas</b> — 8 raciones</summary><table class="tbl"><tr><th>Ingrediente</th><th>Cantidad</th><th>Formato proveedor</th><th>Precio del formato</th></tr><tr><td>Pollo troceado</td><td>2400 gr</td><td>1000 gr</td><td>5,90 €</td></tr><tr><td>Patatas</td><td>1600 gr</td><td>5000 gr</td><td>4,50 €</td></tr><tr><td>Aceite de oliva virgen extra</td><td>100 ml</td><td>5000 ml</td><td>32,00 €</td></tr><tr><td>Ajo</td><td>20 gr</td><td>1000 gr</td><td>6,50 €</td></tr><tr><td>Limones</td><td>3 ud</td><td>10 ud</td><td>3,50 €</td></tr><tr><td>Sal</td><td>10 gr</td><td>1000 gr</td><td>0,45 €</td></tr></table></details><details class="activity"><summary><b>🐟 Pescado: Salmón al horno con espárragos</b> — 8 raciones</summary><table class="tbl"><tr><th>Ingrediente</th><th>Cantidad</th><th>Formato proveedor</th><th>Precio del formato</th></tr><tr><td>Salmón (lomos)</td><td>1600 gr</td><td>1000 gr</td><td>15,50 €</td></tr><tr><td>Espárragos verdes</td><td>800 gr</td><td>1000 gr</td><td>6,90 €</td></tr><tr><td>Aceite de oliva virgen extra</td><td>80 ml</td><td>5000 ml</td><td>32,00 €</td></tr><tr><td>Limones</td><td>2 ud</td><td>10 ud</td><td>3,50 €</td></tr><tr><td>Eneldo fresco</td><td>20 gr</td><td>100 gr</td><td>2,00 €</td></tr><tr><td>Sal</td><td>8 gr</td><td>1000 gr</td><td>0,45 €</td></tr></table></details><details class="activity"><summary><b>🍰 Postre: Flan de huevo</b> — 10 raciones</summary><table class="tbl"><tr><th>Ingrediente</th><th>Cantidad</th><th>Formato proveedor</th><th>Precio del formato</th></tr><tr><td>Huevos</td><td>10 ud</td><td>12 ud</td><td>3,00 €</td></tr><tr><td>Leche entera</td><td>1000 ml</td><td>1000 ml</td><td>0,95 €</td></tr><tr><td>Nata líquida</td><td>250 ml</td><td>1000 ml</td><td>3,60 €</td></tr><tr><td>Azúcar</td><td>300 gr</td><td>1000 gr</td><td>1,10 €</td></tr></table></details>
+<h3>2. ¿Qué compara la alarma?</h3>
+<p>Para Calc una fecha es un <b>número</b>: los días transcurridos desde el 30/12/1899. Por eso se puede restar: <code>AHORA()-30</code> es «hace 30 días».</p>
+<div class="formula"><span class="f-label">Condición</span><code>B2 &lt;= AHORA()-30</code><span class="f-exp">La fecha de B2 es igual o <b>anterior</b> a la de hace 30 días → los precios tienen 30 días o más.</span></div>
+<div class="formula"><span class="f-label">Condición</span><code>B2 &lt;= AHORA()-60</code><span class="f-exp">Igual o anterior a la de hace 60 días → 60 días o más.</span></div>
+<p class="small"><b>AHORA()</b> devuelve la fecha y la hora actuales y se actualiza sola al abrir el archivo o al recalcular (<kbd>F9</kbd>). También sirve <b>HOY()</b>, que da solo la fecha; para esta alarma el resultado es prácticamente el mismo.</p>
 
-<h3>Paso 2: la hoja Totales</h3>
-<ol class="steps"><li>Comensales: <b>80</b>; beneficio: <b>25 %</b>; imprevistos: <b>8 %</b>.</li><li>Enlaza las 4 recetas en «Materia Prima» (módulo 8).</li><li>Personal (mismos costes por hora y misma regla que en el curso), con estas <b>horas</b>: Camareros 5 · Cocineros 10 · Marmitonas 8 · Conductores 4 · Azafatas 2 (0 personas) · Nómina 16 (1 persona).</li><li>Bebidas: los mismos precios y criterios (módulo 10).</li><li>Varios: Sal 3 kg · Pimienta 1 kg · Furgoneta (una por conductor).</li><li>Imprevistos, coste total, coste por menú, precio de venta y ganancias (módulo 11).</li></ol>
+<h3>3. El formato condicional paso a paso</h3>
+<ol class="steps">
+<li>Haz clic en <b>B2</b> de la hoja <b>Entrante</b>.</li>
+<li><b>Formato → Formato condicional → Condición…</b></li>
+<li><b>Condición 1:</b> «El valor de la celda es» · «<b>menor o igual que</b>» · escribe <code>AHORA()-60</code> · Aplicar estilo: <b>Precio caducado</b>.</li>
+<li>Pulsa <b>Añadir</b>. <b>Condición 2:</b> «El valor de la celda es» · «menor o igual que» · <code>AHORA()-30</code> · Aplicar estilo: <b>Precio antiguo</b>.</li>
+<li><b>Aceptar</b>. Como la fecha del modelo es de enero de 2025, B2 se pondrá roja.</li>
+</ol>
+<div class="figure"><div class="cf-dlg"><div class="cf-title">Formato condicional para B2</div><div class="cf-cond"><div class="cf-num">Condición 1</div><div class="cf-row"><span class="cf-sel">El valor de la celda es</span><span class="cf-sel">menor o igual que</span><span class="cf-in">AHORA()-60</span></div><div class="cf-row"><span class="cf-lab">Aplicar estilo</span><span class="cf-sel">Precio caducado</span><span class="cf-prev cad">10/01/2025</span></div></div><div class="cf-cond"><div class="cf-num">Condición 2</div><div class="cf-row"><span class="cf-sel">El valor de la celda es</span><span class="cf-sel">menor o igual que</span><span class="cf-in">AHORA()-30</span></div><div class="cf-row"><span class="cf-lab">Aplicar estilo</span><span class="cf-sel">Precio antiguo</span><span class="cf-prev ant">10/01/2025</span></div></div><div class="cf-foot"><span class="cf-btn">Añadir</span><span class="cf-btn">Subir</span><span class="cf-btn">Bajar</span><span class="cf-btn">Eliminar</span><span class="cf-sp"></span><span class="cf-btn ok">Aceptar</span><span class="cf-btn">Cancelar</span></div></div><div class="figure-caption">Esquema del cuadro <b>Formato → Formato condicional → Condición…</b> de LibreOffice Calc con las dos condiciones en el orden correcto.</div></div>
 
-<h3>Paso 3: comprueba tu resultado</h3>
-<details class="activity"><summary><b>👀 Ver los resultados correctos (haz primero tu escandallo)</b></summary>
-<table class="tbl"><tr><th>Receta</th><th>Total receta</th><th>Total ración</th></tr><tr><td>Ensalada de tomate con ventresca</td><td>14,25 €</td><td>1,78 €</td></tr><tr><td>Pollo asado con patatas</td><td>17,42 €</td><td>2,18 €</td></tr><tr><td>Salmón al horno con espárragos</td><td>31,94 €</td><td>3,99 €</td></tr><tr><td>Flan de huevo</td><td>4,68 €</td><td>0,47 €</td></tr></table>
-<table class="tbl"><tr><th>Concepto</th><th>Resultado esperado</th></tr>
-<tr><td>Materia prima por menú (B15)</td><td>8,42 €</td></tr>
-<tr><td>Trabajadores (camareros / cocineros / marmitonas / conductores)</td><td>4 / 2 / 1 / 1</td></tr>
-<tr><td>Total Personal</td><td>1.032,00 €</td></tr>
-<tr><td>Total Bebidas</td><td>416,00 €</td></tr>
-<tr><td>Total Productos Varios</td><td>106,39 €</td></tr>
-<tr><td>Imprevistos</td><td>178,23 €</td></tr>
-<tr><td><b>Coste total del catering</b></td><td><b>2.406,16 €</b></td></tr>
-<tr><td><b>Coste por menú</b></td><td><b>30,08 €</b></td></tr>
-<tr><td><b>Precio de venta</b></td><td><b>37,60 €</b></td></tr>
-<tr><td><b>Ganancias</b></td><td><b>601,54 €</b></td></tr></table></details>
+<h3>4. ¡El orden de las condiciones importa!</h3>
+<p>Calc comprueba las condiciones <b>de arriba abajo</b> y aplica la <b>primera que se cumple</b>. Una fecha de hace 75 días también es «≤ AHORA()-30». Si pusieras primero la de 30 días, se cumpliría siempre antes y <b>nunca verías el rojo</b>.</p>
+<div class="xl-wrap"><table class="tbl"><tr><th>Antigüedad</th><th>¿≤ AHORA()-60?</th><th>¿≤ AHORA()-30?</th><th>Orden correcto (60 → 30)</th><th>Orden al revés (30 → 60)</th></tr>
+<tr><td>10 días</td><td>No</td><td>No</td><td>Sin color</td><td>Sin color</td></tr>
+<tr><td>45 días</td><td>No</td><td>Sí</td><td><span class="cf-ant">Naranja</span></td><td><span class="cf-ant">Naranja</span></td></tr>
+<tr><td>75 días</td><td><b>Sí</b></td><td>Sí</td><td><span class="cf-cad">Rojo</span> ✅</td><td><span class="cf-ant">Naranja</span> ❌</td></tr></table></div>
+<div class="alert-box">⚠️ <b>Regla:</b> la condición <b>más estricta</b> (la de más días) va <b>primero</b>. Si te equivocas de orden, en el cuadro de diálogo selecciona la condición y usa <b>Subir</b> o <b>Bajar</b>.</div>
 
-<h3>Lista de comprobación</h3>
-<table class="tbl"><tr><th>✔</th><th>Punto a revisar</th></tr>
-<tr><td>☐</td><td>Las unidades del receta y del proveedor coinciden (gr con gr, ml con ml, ud con ud).</td></tr>
-<tr><td>☐</td><td>No hay ningún error (#¡DIV/0!, #¡REF!…) en ninguna hoja.</td></tr>
-<tr><td>☐</td><td>Las fórmulas de G, H e I están copiadas hasta la fila 27.</td></tr>
-<tr><td>☐</td><td>Si cambias los comensales, el personal, las bebidas y el precio se recalculan solos.</td></tr>
-<tr><td>☐</td><td>Has guardado el archivo con un nombre claro y con la fecha.</td></tr></table>
+<div class="activity" id="simcf">
+  <h3>🧪 Simulador: ¿de qué color se pone B2?</h3>
+  <p>Mueve la antigüedad de los precios y cambia el orden de las condiciones.</p>
+  <label>Los precios se revisaron hace <b id="cf-dias">45</b> días<br><input type="range" min="0" max="120" value="45" id="cf-rango" style="width:100%;max-width:420px" oninput="cfPinta()"></label>
+  <p style="margin-top:10px"><label><input type="radio" name="cf-orden" value="ok" checked onchange="cfPinta()" style="width:auto"> Orden correcto: primero «≤ AHORA()-60», después «≤ AHORA()-30»</label><br>
+  <label><input type="radio" name="cf-orden" value="mal" onchange="cfPinta()" style="width:auto"> Orden al revés: primero «≤ AHORA()-30», después «≤ AHORA()-60»</label></p>
+  <div class="xl-wrap"><table class="xl"><tr><th class="corner"></th><th>A</th><th style="min-width:110px">B</th></tr>
+  <tr><th class="rn">1</th><td class="lbl">Nombre:</td><td>Porra Archidonesa</td></tr>
+  <tr><th class="rn">2</th><td class="lbl">Fecha:</td><td id="cf-celda" class="r"></td></tr>
+  <tr><th class="rn">3</th><td class="lbl">Raciones:</td><td class="r">10</td></tr></table></div>
+  <p class="feedback-box" id="cf-explica" style="display:block"></p>
+</div>
+<script>
+function cfPinta(){
+  var d=+document.getElementById('cf-rango').value, ok=document.querySelector('input[name=cf-orden]:checked').value==='ok';
+  document.getElementById('cf-dias').textContent=d;
+  var f=new Date();f.setDate(f.getDate()-d);var txt=('0'+f.getDate()).slice(-2)+'/'+('0'+(f.getMonth()+1)).slice(-2)+'/'+f.getFullYear();
+  var conds=ok?[[60,'Precio caducado','cad'],[30,'Precio antiguo','ant']]:[[30,'Precio antiguo','ant'],[60,'Precio caducado','cad']];
+  var c=document.getElementById('cf-celda'),e=document.getElementById('cf-explica'),usada=null;
+  for(var i=0;i<conds.length;i++){if(d>=conds[i][0]){usada=i;break;}}
+  c.textContent=txt;c.className='r '+(usada===null?'':'cf-'+conds[usada][2]);
+  if(usada===null){e.className='feedback-box good';e.textContent='Ninguna condición se cumple (menos de 30 días): B2 se queda con su formato normal.';}
+  else{var m='Se cumple la condición '+(usada+1)+' (≤ AHORA()-'+conds[usada][0]+') → estilo «'+conds[usada][1]+'». Calc ya no mira las condiciones siguientes.';
+    if(!ok&&d>=60){e.className='feedback-box bad';m+=' ⚠️ ¡Fallo! Los precios tienen más de 60 días y deberían salir en rojo, pero la condición de 30 días va primero y «gana» siempre.';}
+    else e.className='feedback-box '+(conds[usada][2]==='cad'?'bad':'good');
+    e.textContent=m;}
+}
+cfPinta();
+</script>
 
-<div class="exercise"><h3>🧩 Tu resultado</h3><p>Cuando termines, escribe el <b>precio de venta por menú</b> que te sale en la celda C8 (en €).</p>
-<input id="e13a" type="number" step="0.01" placeholder="Escribe tu resultado">
-<button class="btn" onclick="chk('e13a',37.6,'fb_e13a','¡Excelente! El precio de venta correcto es 37,60 € por menú.')">Comprobar</button>
-<div id="fb_e13a" class="feedback-box"></div></div>
-<div class="summary-box">🏆 <b>¡Enhorabuena!</b> Si tu escandallo coincide, ya sabes construir una herramienta de costes completa: enlazar hojas, usar SI, REDONDEAR y SUMA, y controlar el margen de un catering. Continúa con el examen final.</div>
 
-      <div class="navigation">
-        <button class="nav-btn" onclick="scormGo('modulo12.html')">⬅️ Anterior</button>
-        <button class="nav-btn" onclick="scormGo('examen_final.html')">Siguiente ➡️</button>
-      </div>
+<h3>5. Resultado en Calc</h3>
+<div class="figure"><img src="img/alarma_ficha_calc.png" alt="Ficha con la fecha de B2 en rojo porque los precios tienen más de 60 días" style="max-width:100%"><div class="figure-caption">Ficha con precios de enero de 2025: B2 en rojo.</div></div>
+<div class="figure"><img src="img/alarma_pruebas_calc.png" alt="Tres fechas: hace 10 días sin color, hace 40 días en naranja y hace 75 días en rojo" style="max-width:100%"><div class="figure-caption">Resultado real en LibreOffice Calc con fechas de hace 10, 40 y 75 días (archivo de práctica, hoja «Pruebas»).</div></div>
+<div class="dl-box">📥 <b>Archivo de práctica:</b> <a href="Alarma_fechas_practica.ods" download>Alarma_fechas_practica.ods</a> — trae los dos estilos y el formato condicional ya hechos. Ábrelo, mira <b>Formato → Formato condicional → Gestionar…</b> y compáralo con el tuyo.</div>
+
+<h3>6. Llevarlo a las cuatro fichas</h3>
+<ul class="key-points">
+<li>🔓 <span>Si protegiste las hojas en el módulo 12, primero <b>Herramientas → Proteger hoja</b> (quítalo); en una hoja protegida no se puede cambiar el formato. Vuelve a protegerla al terminar.</span></li>
+<li>🖌️ <span>Selecciona B2 de <b>Entrante</b>, pulsa <b>Clonar formato</b> (el pincel) y haz clic en B2 de <b>Carne</b>; repite en <b>Pescado</b> y <b>Postre</b>. El pincel copia también el formato condicional.</span></li>
+<li>📋 <span>Alternativa: copia B2 (<kbd>Ctrl</kbd> + <kbd>C</kbd>) y en la otra hoja <b>Editar → Pegado especial → Solo formatos</b>.</span></li>
+<li>🔎 <span>Para revisar o borrar reglas: <b>Formato → Formato condicional → Gestionar…</b></span></li>
+<li>🔄 <span>Cuando revises los precios con el proveedor, pon la fecha de hoy en B2 con <kbd>Ctrl</kbd> + <kbd>;</kbd>: la alarma se apaga.</span></li>
+</ul>
+<div class="ms-box"><span class="mbadge">En Excel</span> Selecciona B2 → <b>Inicio → Formato condicional → Nueva regla → Aplicar formato únicamente a las celdas que contengan</b> → «Valor de la celda» · «menor o igual que» · <code>=HOY()-60</code> → <b>Formato…</b> (relleno rojo). Crea otra regla igual con <code>=HOY()-30</code> y relleno naranja. En <b>Formato condicional → Administrar reglas</b>, la de arriba tiene prioridad: deja la de 60 días encima (usa las flechas).</div>
+
+<div class="exercise"><h3>🧩 El orden</h3><p>Pones primero la condición «≤ AHORA()-30» (naranja) y después «≤ AHORA()-60» (rojo). Una ficha tiene precios de hace 90 días. ¿De qué color sale B2?</p><div class="options" id="opt_e13a"><div class="option" onclick="pickc(this,'e13a',0)">Rojo</div><div class="option" onclick="pickc(this,'e13a',1)">Naranja</div><div class="option" onclick="pickc(this,'e13a',0)">Sin color</div></div><div id="fb_e13a" class="feedback-box" data-exp="La primera condición que se cumple es la de 30 días y Calc ya no mira la siguiente: por eso la de 60 días debe ir primero."></div></div>
+<div class="exercise"><h3>🧩 La fórmula</h3><p>¿Qué significa la condición «El valor de la celda es menor o igual que AHORA()-30»?</p><div class="options" id="opt_e13b"><div class="option" onclick="pickc(this,'e13b',1)">Que la fecha es de hace 30 días o más</div><div class="option" onclick="pickc(this,'e13b',0)">Que faltan 30 días para esa fecha</div><div class="option" onclick="pickc(this,'e13b',0)">Que la celda contiene el número 30</div></div><div id="fb_e13b" class="feedback-box" data-exp="AHORA()-30 es la fecha de hace 30 días; una fecha menor o igual es igual o anterior a ella."></div></div>
+<div class="exercise"><h3>🧩 Ventaja de los estilos</h3><p>Quieres cambiar el rojo de la alarma por un rojo más intenso en las cuatro fichas. ¿Qué es lo más rápido?</p><div class="options" id="opt_e13c"><div class="option" onclick="pickc(this,'e13c',0)">Cambiar el color en cada celda B2</div><div class="option" onclick="pickc(this,'e13c',1)">Modificar el estilo «Precio caducado»: cambia en todas las celdas que lo usan</div><div class="option" onclick="pickc(this,'e13c',0)">Borrar el formato condicional y empezar de nuevo</div></div><div id="fb_e13c" class="feedback-box" data-exp="El formato condicional aplica el estilo: basta con modificarlo una vez."></div></div>
+
+<div class="summary-box">🎯 <b>Idea clave:</b> crea los estilos, añade las condiciones en B2 con la <b>más estricta primero</b> (≤ AHORA()-60 → rojo; ≤ AHORA()-30 → naranja), cópialo a las cuatro fichas con el pincel y actualiza la fecha cada vez que revises los precios.</div>
+
+      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo12.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo14.html')">Siguiente ➡️</button></div>
     </section>
   </div>
 </div>

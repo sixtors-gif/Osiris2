@@ -5,12 +5,14 @@ Curso práctico para aprender a construir desde cero una hoja de cálculo de esc
 (coste y precio de venta de un catering) con LibreOffice Calc (compatible con Excel).
 
 Contenido:
-- imsmanifest.xml: paquete SCORM 1.2 empaquetado como un único SCO (seguimiento correcto en Moodle).
+- imsmanifest.xml: paquete SCORM 1.2 con un SCO por página (el índice de Moodle se marca al avanzar).
 - index.html: bienvenida, requisitos e itinerario.
-- modulo1.html ... modulo13.html: 13 módulos con pasos guiados, capturas de hoja con sus fórmulas,
+- modulo1.html ... modulo14.html: 14 módulos con pasos guiados, capturas de hoja con sus fórmulas,
   ejercicios interactivos, una mini-calculadora y un simulador del escandallo completo.
-- examen_final.html: examen final interactivo de 26 preguntas.
-- preguntas_moodle.gift: 44 preguntas en formato GIFT (13 categorías, una por módulo) para el Banco de preguntas de Moodle.
+- examen_final.html: examen final interactivo de 28 preguntas.
+- preguntas_moodle.gift: 47 preguntas en formato GIFT (14 categorías, una por módulo) para el Banco de preguntas de Moodle.
+- Alarma_fechas_practica.ods: práctica del módulo 13 (estilos «Precio antiguo» y «Precio caducado» y
+  formato condicional de la fecha, con una hoja de pruebas de 10, 40 y 75 días).
 - Escandallo_modelo.ods: archivo modelo resuelto (5 hojas: Entrante, Carne, Pescado, Postre y Totales).
 - style.css + scorm.js + img/logo-centro.png.
 
@@ -27,7 +29,8 @@ Temario:
 10. La hoja Totales (III): bebidas y varios
 11. Imprevistos, precio de venta y ganancias
 12. Revisión, errores y buenas prácticas
-13. Reto final: tu propio escandallo
+13. Estilos y formato condicional: alarma de antigüedad de los precios
+14. Reto final: tu propio escandallo
 
 Importación en Moodle:
 1. Crea una actividad "SCORM" y sube el ZIP completo (sin descomprimir).

@@ -320,16 +320,39 @@ $CATEGORY: Curso Escandallo/Módulo 12 - Revisión, errores y buenas prácticas
 ~Para reducir el tamaño del archivo.
 }
 
-$CATEGORY: Curso Escandallo/Módulo 13 - Reto final: tu propio escandallo
+$CATEGORY: Curso Escandallo/Módulo 13 - Estilos y formato condicional - alarma de antigüedad
 
-::ESC13-1::Al terminar tu escandallo, ¿qué prueba demuestra que está bien construido? {
+::ESC13-1::En el formato condicional de B2, ¿qué condición debe ir primero? {
+=«≤ AHORA()-60» (la más estricta), y después «≤ AHORA()-30»
+~«≤ AHORA()-30», y después «≤ AHORA()-60»
+~Da igual el orden
+~Solo hace falta una condición
+}
+
+::ESC13-2::¿Qué ventaja tiene usar estilos de celda en el formato condicional? {
+=Si cambias el estilo, cambia en todas las celdas que lo usan
+~Las fórmulas se calculan más rápido
+~Protege la hoja automáticamente
+~Ocupa menos espacio en el archivo
+}
+
+::ESC13-3::Quieres que la alarma de B2 se apague tras revisar los precios. ¿Qué haces? {
+=Escribir en B2 la fecha de hoy (Ctrl + ;)
+~Borrar el formato condicional
+~Cambiar el color de la letra
+~Proteger la hoja
+}
+
+$CATEGORY: Curso Escandallo/Módulo 14 - Reto final: tu propio escandallo
+
+::ESC14-1::Al terminar tu escandallo, ¿qué prueba demuestra que está bien construido? {
 =Al cambiar los comensales, personal, bebidas y precio se recalculan solos.
 ~Que tiene muchos colores.
 ~Que ocupa una sola hoja.
 ~Que no tiene fórmulas.
 }
 
-::ESC13-2::¿Qué debe coincidir siempre entre la receta y el proveedor? {
+::ESC14-2::¿Qué debe coincidir siempre entre la receta y el proveedor? {
 =La unidad de medida (gr con gr, ml con ml, ud con ud).
 ~El color de las celdas.
 ~El nombre del ingrediente en mayúsculas.
