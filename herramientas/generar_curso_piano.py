@@ -240,6 +240,33 @@ circulo("circulo_quintas.svg", "Círculo de quintas con tonalidades mayores, men
 circulo("circulo_vecinos.svg", "Círculo de quintas con los seis acordes de Do mayor resaltados: Fa, Do y Sol, y Re menor, La menor y Mi menor",
         porcion=(11, 0, 1), grados=[(11, "IV", "ii"), (0, "I", "vi"), (1, "V", "iii")])
 
+def escaleras():
+    """Las dos familias de intervalos como escaleras de semitonos."""
+    filas = [("Familia de las justas: 4.ª, 5.ª y 8.ª", [("disminuida", "#f4b6b6"), ("JUSTA", "#ffd166"), ("aumentada", "#f4b6b6")]),
+             ("Familia de las mayores y menores: 2.ª, 3.ª, 6.ª y 7.ª", [("disminuida", "#f4b6b6"), ("menor", "#a8edea"), ("MAYOR", "#ffd166"), ("aumentada", "#f4b6b6")])]
+    W, h, gap = 120, 44, 44
+    s = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 250" width="680" height="250" role="img" aria-label="Las dos familias de intervalos" font-family="Segoe UI,Tahoma,sans-serif">',
+         '<rect width="680" height="250" fill="#fff"/>',
+         '<defs><marker id="fl" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#555"/></marker></defs>']
+    for f, (titulo, cajas) in enumerate(filas):
+        y = 34 + f * 112
+        s.append(f'<text x="14" y="{y-10}" font-size="14" font-weight="700" fill="#1e3c72">{titulo}</text>')
+        x0 = 14 if len(cajas) == 4 else 14 + (W + gap) / 2
+        for k, (txt, col) in enumerate(cajas):
+            x = x0 + k * (W + gap)
+            s.append(f'<rect x="{x}" y="{y}" width="{W}" height="{h}" rx="10" fill="{col}" stroke="#1e3c72"/>')
+            s.append(f'<text x="{x+W/2}" y="{y+27}" font-size="14" font-weight="700" text-anchor="middle" fill="#0f1b33">{txt}</text>')
+            if k:
+                xa = x - gap + 4
+                s.append(f'<line x1="{xa}" y1="{y+h/2}" x2="{x-4}" y2="{y+h/2}" stroke="#555" stroke-width="2" marker-end="url(#fl)"/>')
+                s.append(f'<text x="{x-gap/2}" y="{y+h+16}" font-size="11" text-anchor="middle" fill="#555">+1 st</text>')
+    s.append('<text x="14" y="242" font-size="12" fill="#555">Cada flecha = un semitono más (st = semitono). Hacia la izquierda, un semitono menos.</text>')
+    s.append("</svg>")
+    open(os.path.join(OUT, "img", "calidades_intervalos.svg"), "w", encoding="utf-8").write("\n".join(s))
+
+
+escaleras()
+
 # Utilidades de página ----------------------------------------------------------------------------
 
 
@@ -657,7 +684,7 @@ for i, (ic, t, sub, body) in enumerate(M, 1):
 orden = ["escala_do", "escala_lam", "arpegio_do", "inversiones", "cadencia", "alberti", "pedal", "bach846", "elise",
          "octavas", "terceras", "adornos", "poli32", "poli43", "iivi", "blues",
          "pulso_68", "ritmos", "escala_sol", "escala_fa", "cadencia_sol", "vals", "blues_frase",
-         "faros_sol", "faros_fa", "intervalos", "armaduras_sost", "armaduras_bem", "tono_do", "tono_lam", "modulacion"]
+         "faros_sol", "faros_fa", "intervalos", "armaduras_sost", "armaduras_bem", "tono_do", "tono_lam", "modulacion", "calidades"]
 assert set(orden) == set(PIEZAS)
 bloques = "".join(f'<section class="pieza"><h2>{i}. {PIEZAS[k]["titulo"]}</h2><div id="p-{k}"></div><p>{PIEZAS[k]["nota"]}</p></section>' for i, k in enumerate(orden, 1))
 cuaderno = f"""<!DOCTYPE html>
@@ -739,6 +766,10 @@ Q += [
  (2, "En clave de Fa, ¿qué nota está en la 4.ª línea (entre los dos puntos de la clave)?", ["Fa3", "Re3", "La3", "Sol2"], 0, False),
  (2, "¿Qué intervalo hay entre Re y Fa?", ["3.ª menor", "3.ª mayor", "4.ª justa", "2.ª mayor"], 0, True),
  (2, "¿Cuántos semitonos tiene una 5.ª justa?", ["7", "5", "6", "8"], 0, False),
+ (2, "¿Qué intervalos pertenecen a la familia de las justas (no pueden ser mayores ni menores)?", ["4.ª, 5.ª y 8.ª", "2.ª, 3.ª, 6.ª y 7.ª", "3.ª y 6.ª", "Todos"], 0, True),
+ (2, "Do–Fa♯ (6 semitonos) es una…", ["4.ª aumentada", "5.ª disminuida", "4.ª justa", "5.ª justa"], 0, False),
+ (2, "Mi–Si♭ (6 semitonos) es una…", ["5.ª disminuida", "4.ª aumentada", "5.ª justa", "6.ª menor"], 0, False),
+ (2, "Una 3.ª menor tiene…", ["Un semitono menos que la 3.ª mayor (3 semitonos)", "Un semitono más que la 3.ª mayor", "Los mismos semitonos que la 3.ª mayor", "7 semitonos"], 0, False),
  (3, "La armadura tiene Fa♯, Do♯ y Sol♯. ¿Cuál es la tonalidad mayor?", ["La mayor", "Sol mayor", "Mi mayor", "Re mayor"], 0, True),
  (3, "La armadura tiene Si♭, Mi♭ y La♭. ¿Cuál es la tonalidad mayor?", ["Mi♭ mayor", "La♭ mayor", "Si♭ mayor", "Re♭ mayor"], 0, False),
  (3, "¿Cuál es el orden de los sostenidos en la armadura?", ["Fa–Do–Sol–Re–La–Mi–Si", "Si–Mi–La–Re–Sol–Do–Fa", "Do–Re–Mi–Fa–Sol–La–Si", "Fa–Sol–La–Si–Do–Re–Mi"], 0, False),

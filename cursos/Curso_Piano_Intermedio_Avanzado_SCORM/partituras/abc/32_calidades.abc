@@ -1,0 +1,9 @@
+X:32
+T:El apellido de los intervalos
+C:Cada compás: nota a nota y después a la vez
+M:4/4
+L:1/4
+Q:1/4=80
+K:C clef=treble
+"^3.ª mayor (4)"C E [CE]2 | "^3.ª menor (3)"C _E [C_E]2 | "^5.ª justa (7)"C G [CG]2 | "^5.ª aumentada (8)"C ^G [C^G]2 |
+"^5.ª disminuida (6)"C _G [C_G]2 | "^4.ª justa (5)"C F [CF]2 | "^4.ª aumentada (6)"C ^F [C^F]2 | "^6.ª mayor (9)"C A [CA]2 | "^6.ª menor (8)"C _A [C_A]2 |]

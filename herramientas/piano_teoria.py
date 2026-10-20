@@ -60,7 +60,66 @@ TEORIA[2] = ('<h3>2. Entrenador de lectura</h3>', (
         ["8.ª (octava)", "De línea a espacio, saltando tres líneas", "Do – Do"]])
     + caja("La regla de los impares:", "3.ª, 5.ª y 7.ª unen siempre <b>línea con línea</b> o <b>espacio con espacio</b>; 2.ª, 4.ª, 6.ª y 8.ª unen línea con espacio. Con solo ver si las dos notas son «del mismo tipo» ya sabes si el intervalo es par o impar.")
     + "[[partitura:intervalos]]"
-    + "<h4>2. La calidad: cuenta los semitonos</h4>"
+    + "<h4>2. El «apellido»: justa, mayor, menor, aumentada y disminuida</h4>"
+    "<p>El número no basta. Mira estas dos 3.as: <b>Do–Mi</b> y <b>Re–Fa</b>. Las dos abarcan tres nombres de nota y en el pentagrama tienen el mismo dibujo (de línea a línea), pero en el teclado <b>no miden lo mismo</b>: de Do a Mi hay 4 semitonos y de Re a Fa solo 3. ¿Por qué? Porque las teclas blancas no están a la misma distancia: entre Mi–Fa y Si–Do no hay tecla negra, son semitonos. Según qué tramo del teclado «pise» un intervalo, sale más grande o más pequeño.</p>"
+    "<p>Por eso cada intervalo lleva, además del número, un <b>apellido</b> que dice su tamaño exacto en semitonos. Es como decir «una calle» (el número) y «el portal exacto» (el apellido).</p>"
+    + tabla(["Apellido", "Qué quiere decir", "Cómo suena"], [
+        ["<b>Justa</b>", "El tamaño «normal» de la 4.ª, la 5.ª y la 8.ª (y del unísono). Estos intervalos solo tienen un tamaño normal, ni grande ni pequeño", "Estable, «hueco», abierto: las campanas, las trompas, las quintas de una guitarra"],
+        ["<b>Mayor</b>", "El tamaño grande de la 2.ª, la 3.ª, la 6.ª y la 7.ª", "Luminoso, abierto (la 3.ª mayor es la del acorde mayor)"],
+        ["<b>Menor</b>", "El tamaño pequeño de la 2.ª, la 3.ª, la 6.ª y la 7.ª: <b>un semitono menos que la mayor</b>", "Más oscuro, más íntimo o melancólico"],
+        ["<b>Aumentada</b>", "Un semitono <b>más</b> que la justa o que la mayor: el intervalo «se ha estirado»", "Tenso, inestable: pide abrirse todavía más"],
+        ["<b>Disminuida</b>", "Un semitono <b>menos</b> que la justa o que la menor: el intervalo «se ha encogido»", "Tenso, inestable: pide cerrarse"]])
+    + caja("¿Por qué «justa»?", "Porque la 4.ª, la 5.ª y la 8.ª suenan tan «limpias» y estables que desde la Edad Media se consideraron las consonancias perfectas (en inglés se llaman <i>perfect</i>). Además, son las mismas en las escalas mayores y en las menores: Do–Sol es una 5.ª justa tanto en Do mayor como en Do menor. Como no hay una versión «mayor» y otra «menor», se les da un nombre propio: justas. Por eso <b>nunca existe una «5.ª mayor» ni una «3.ª justa»</b>.")
+    + "<p>Todo se resume en dos familias, como dos escaleras en las que cada peldaño es <b>un semitono</b>:</p>"
+    + "[[fig:calidades_intervalos.svg|Las dos familias de intervalos: justos (disminuida, justa, aumentada) y mayores/menores (disminuida, menor, mayor, aumentada)|Cada peldaño es un semitono. Los justos tienen un solo tamaño normal; los mayores y menores, dos.]]"
+    + tabla(["Intervalo", "Familia", "Disminuida", "Menor", "Mayor", "Justa", "Aumentada"], [
+        ["2.ª", "Mayor / menor", "0 (Mi–Fa♭, rarísima)", "1 (Mi–Fa)", "2 (Do–Re)", "—", "3 (Do–Re♯)"],
+        ["3.ª", "Mayor / menor", "2 (Do♯–Mi♭)", "3 (Re–Fa)", "4 (Do–Mi)", "—", "5 (Do–Mi♯)"],
+        ["4.ª", "Justa", "4 (Do♯–Fa)", "—", "—", "5 (Do–Fa)", "6 (Fa–Si)"],
+        ["5.ª", "Justa", "6 (Si–Fa)", "—", "—", "7 (Do–Sol)", "8 (Do–Sol♯)"],
+        ["6.ª", "Mayor / menor", "7 (Do♯–La♭)", "8 (Mi–Do)", "9 (Do–La)", "—", "10 (Do–La♯)"],
+        ["7.ª", "Mayor / menor", "9 (Do♯–Si♭)", "10 (Re–Do)", "11 (Do–Si)", "—", "12 (Do–Si♯)"],
+        ["8.ª", "Justa", "11 (Do♯–Do)", "—", "—", "12 (Do–Do)", "13 (Do–Do♯)"]])
+    + "<p class=\"small\">Los números son semitonos. Las casillas con «—» no existen: una 4.ª nunca es mayor y una 3.ª nunca es justa. La 2.ª disminuida casi no se usa: suena igual que una nota repetida.</p>"
+    + "<p>Escúchalo: cada compás toca el intervalo nota a nota y después las dos notas a la vez. Compara la 3.ª mayor con la menor y la 5.ª justa con sus versiones estirada y encogida.</p>"
+    "[[partitura:calidades]]"
+    + "<h4>Mismo sonido, distinto nombre</h4>"
+    "<p>Do–Fa♯ y Do–Sol♭ son <b>la misma tecla</b> y miden lo mismo (6 semitonos), pero no se llaman igual. Do–Fa♯ es una <b>4.ª aumentada</b> (Do, Re, Mi, Fa: cuatro nombres) y Do–Sol♭ una <b>5.ª disminuida</b> (Do, Re, Mi, Fa, Sol: cinco nombres). El nombre depende de <b>cómo está escrita</b> la nota, no solo de cómo suena. Por eso el orden para nombrar un intervalo es siempre: primero el número (los nombres de nota), después el apellido (los semitonos).</p>"
+    + caja("El tritono:", "la 4.ª aumentada y la 5.ª disminuida miden 6 semitonos, tres tonos: por eso se llaman <b>tritono</b>. Es justo la mitad de la octava y el intervalo más inestable de todos; en la Edad Media lo apodaban <i>diabolus in musica</i>. Entre teclas blancas solo aparece en <b>Fa–Si</b> (4.ª aumentada) y <b>Si–Fa</b> (5.ª disminuida), y es lo que da tensión al acorde de dominante Sol7 (Si y Fa).")
+    + "<h4>Cómo ponerle nombre a cualquier intervalo</h4>"
+    + pasos([
+        ("Pon el número: cuenta los nombres de nota, sin mirar las alteraciones.",
+         "ignora de momento los ♯ y ♭: Re–Fa♯ es «Re, Mi, Fa» = 3.ª. Mi–Si♭ es «Mi, Fa, Sol, La, Si» = 5.ª."),
+        ("Mira a qué familia pertenece.",
+         "4.ª, 5.ª y 8.ª (y el unísono) son de la familia de las <b>justas</b>; 2.ª, 3.ª, 6.ª y 7.ª, de la familia de las <b>mayores y menores</b>."),
+        ("Cuenta los semitonos en el teclado.",
+         "pon un dedo en la nota de abajo y avanza tecla a tecla (blancas y negras) hasta la de arriba, contando cada paso. Re → Re♯ → Mi → Fa → Fa♯ = 4 semitonos."),
+        ("Compara con la tabla y elige el apellido.",
+         "busca en la fila de su número la casilla con esos semitonos. 3.ª con 4 semitonos = <b>3.ª mayor</b>. 5.ª con 6 semitonos = un semitono menos que la justa (7) = <b>5.ª disminuida</b>."),
+    ])
+    + tabla(["Intervalo", "Número", "Semitonos", "Nombre completo"], [
+        ["Re – Fa♯", "Re, Mi, Fa → 3.ª", "4", "<b>3.ª mayor</b>"],
+        ["La – Do", "La, Si, Do → 3.ª", "3", "<b>3.ª menor</b>"],
+        ["Mi – La", "Mi, Fa, Sol, La → 4.ª", "5", "<b>4.ª justa</b>"],
+        ["Fa – Si", "Fa, Sol, La, Si → 4.ª", "6", "<b>4.ª aumentada</b> (tritono)"],
+        ["Mi – Si♭", "Mi, Fa, Sol, La, Si → 5.ª", "6", "<b>5.ª disminuida</b> (tritono)"],
+        ["Do – Sol♯", "Do, Re, Mi, Fa, Sol → 5.ª", "8", "<b>5.ª aumentada</b>"],
+        ["La – Fa", "La, Si, Do, Re, Mi, Fa → 6.ª", "8", "<b>6.ª menor</b>"],
+        ["Sol – Fa", "Sol, La, Si, Do, Re, Mi, Fa → 7.ª", "10", "<b>7.ª menor</b>"]])
+    + caja("Atajo para las teclas blancas:", "entre teclas blancas, <b>todas las 4.as y 5.as son justas</b> excepto Fa–Si (4.ª aumentada) y Si–Fa (5.ª disminuida). Las 3.as mayores son Do–Mi, Fa–La y Sol–Si; todas las demás (Re–Fa, Mi–Sol, La–Do, Si–Re) son menores. Apréndetelo y nombrarás la mayoría de los intervalos de un vistazo.")
+    + "<h4>Para qué sirve: los acordes están hechos de intervalos</h4>"
+    + tabla(["Acorde", "3.ª desde la fundamental", "5.ª desde la fundamental", "En Do"], [
+        ["Mayor", "3.ª mayor (4)", "5.ª justa (7)", "Do–Mi–Sol"],
+        ["Menor", "3.ª menor (3)", "5.ª justa (7)", "Do–Mi♭–Sol"],
+        ["Disminuido", "3.ª menor (3)", "5.ª disminuida (6)", "Do–Mi♭–Sol♭"],
+        ["Aumentado", "3.ª mayor (4)", "5.ª aumentada (8)", "Do–Mi–Sol♯"]])
+    + "<p>Así se entienden los nombres de los acordes del módulo 4: un acorde «disminuido» se llama así porque su 5.ª está disminuida, y uno «aumentado», porque su 5.ª está aumentada.</p>"
+    + caja("Invertir un intervalo (truco para los grandes):", "si subes la nota de abajo una octava, el intervalo «se da la vuelta»: los números suman siempre <b>9</b> (una 3.ª se convierte en 6.ª, una 2.ª en 7.ª, una 4.ª en 5.ª) y el apellido cambia al contrario: <b>mayor ↔ menor, aumentada ↔ disminuida; la justa sigue justa</b>. Ejemplo: Do–Mi es 3.ª mayor, así que Mi–Do es 6.ª menor. Así calculas una 6.ª o una 7.ª pensando en una 3.ª o una 2.ª, que son más fáciles.")
+    + "[[quiz:t2e|¿Qué intervalos NO pueden ser ni mayores ni menores?|2.ª, 3.ª, 6.ª y 7.ª;4.ª, 5.ª y 8.ª;Solo la 8.ª|1|La 4.ª, la 5.ª y la 8.ª son de la familia de las justas: pueden ser justas, aumentadas o disminuidas.]]"
+    "[[quiz:t2f|Do–Fa♯ mide 6 semitonos. ¿Cómo se llama?|5.ª disminuida;4.ª aumentada;4.ª justa|1|Do, Re, Mi, Fa son cuatro nombres (4.ª); la 4.ª justa tiene 5 semitonos y esta tiene uno más: aumentada.]]"
+    "[[quiz:t2g|¿Qué intervalo es Mi–Si♭?|5.ª justa;4.ª aumentada;5.ª disminuida|2|Mi a Si son cinco nombres (5.ª) y hay 6 semitonos, uno menos que la justa (7).]]"
+    "[[quiz:t2h|Si Do–Mi es una 3.ª mayor, ¿qué es Mi–Do (Do arriba)?|6.ª menor;6.ª mayor;3.ª menor|0|Al invertir, 3 + 6 = 9 y mayor pasa a menor.]]"
+    + "<h4>3. Todos los intervalos, con sus semitonos y una canción</h4>"
     + tabla(["Intervalo", "Semitonos", "Ejemplo", "Canción para reconocerlo de oído"], [
         ["2.ª menor", "1", "Mi – Fa", "El tema de la película <i>Tiburón</i>"],
         ["2.ª mayor", "2", "Do – Re", "«Cumpleaños feliz» (de «-ple-» a «-a-»)"],
@@ -75,7 +134,7 @@ TEORIA[2] = ('<h3>2. Entrenador de lectura</h3>', (
         ["7.ª mayor", "11", "Do – Si", "Un semitono menos que la octava: muy tensa"],
         ["8.ª justa", "12", "Do – Do", "<i>Somewhere Over the Rainbow</i> («some-where»)"]])
     + caja("Truco de la escala mayor:", "imagina la escala mayor que empieza en la nota de abajo. Si la nota de arriba pertenece a esa escala, el intervalo es <b>mayor</b> (2.ª, 3.ª, 6.ª, 7.ª) o <b>justo</b> (4.ª, 5.ª, 8.ª). Si está un semitono <b>por debajo</b>, es menor (o disminuido si era justo); un semitono <b>por encima</b>, aumentado. Ejemplo: Re–Fa. En Re mayor la 3.ª es Fa♯; Fa está un semitono por debajo → <b>3.ª menor</b>.")
-    + "<h4>3. Los intervalos en la mano</h4>"
+    + "<h4>4. Los intervalos en la mano</h4>"
     + tabla(["Intervalo", "Dedos (posición de cinco dedos)", "Sensación"], [
         ["2.ª", "Dedos vecinos (1-2, 2-3…)", "Mano cerrada"],
         ["3.ª", "Saltando un dedo (1-3, 2-4, 3-5)", "Una tecla blanca libre en medio"],
@@ -84,7 +143,7 @@ TEORIA[2] = ('<h3>2. Entrenador de lectura</h3>', (
         ["6.ª", "1-5 abriendo un poco", "Una tecla más que la posición"],
         ["8.ª", "1-5 (o 1-4 en teclas negras)", "La mano abierta del todo"]])
     + "<p>Con la práctica, los dedos «miden» los intervalos solos: lees «una 3.ª hacia arriba» y la mano coloca el dedo siguiente-pero-uno sin mirar el teclado.</p>"
-    + "<h4>4. Leer por intervalos mientras tocas</h4>"
+    + "<h4>5. Leer por intervalos mientras tocas</h4>"
     + pasos([
         ("Lee la primera nota con un faro.",
          "es la única nota que necesitas «nombrar». Colócate en ella sin prisa antes de empezar."),
@@ -268,6 +327,9 @@ GLOSARIO_TEORIA = [
     ("Transportar", "Tocar o escribir la misma música en otra tonalidad."),
     ("Enarmonía", "Mismo sonido escrito con nombres distintos (Fa♯ y Sol♭)."),
     ("Tritono", "Intervalo de tres tonos (6 semitonos), como Fa–Si; es la tensión del acorde de dominante."),
+    ("Intervalo justo", "Tamaño normal de la 4.ª (5 semitonos), la 5.ª (7) y la 8.ª (12); estos intervalos no pueden ser mayores ni menores."),
+    ("Intervalo mayor / menor", "Los dos tamaños normales de la 2.ª, 3.ª, 6.ª y 7.ª; el menor tiene un semitono menos que el mayor."),
+    ("Intervalo aumentado / disminuido", "Un semitono más que el justo o el mayor (aumentado), o uno menos que el justo o el menor (disminuido)."),
     ("Grado", "Posición de una nota o un acorde dentro de la escala (I, II, III…)."),
     ("Círculo de quintas", "Mapa de las tonalidades ordenadas por quintas: cada paso añade o quita una alteración."),
 ]

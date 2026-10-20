@@ -393,3 +393,15 @@ Q:1/4=84
 K:C clef=treble
 "^Do mayor""C"c2 e g | "F"a2 f d | "^→ Sol mayor""D7"^f e d c | "G"B2 d g | "D7"a ^f d c | "G"B4 |]
 """, "A partir del compás 3 aparece Fa♯ una y otra vez y la frase cierra con D7 → G (V7 → I de Sol): la música ha cambiado de «casa».")
+
+pieza("calidades", "Mayor, menor, justa, aumentada y disminuida: escucha la diferencia", """
+X:32
+T:El apellido de los intervalos
+C:Cada compás: nota a nota y después a la vez
+M:4/4
+L:1/4
+Q:1/4=80
+K:C clef=treble
+"^3.ª mayor (4)"C E [CE]2 | "^3.ª menor (3)"C _E [C_E]2 | "^5.ª justa (7)"C G [CG]2 | "^5.ª aumentada (8)"C ^G [C^G]2 |
+"^5.ª disminuida (6)"C _G [C_G]2 | "^4.ª justa (5)"C F [CF]2 | "^4.ª aumentada (6)"C ^F [C^F]2 | "^6.ª mayor (9)"C A [CA]2 | "^6.ª menor (8)"C _A [C_A]2 |]
+""", "Entre paréntesis, los semitonos. La 5.ª disminuida y la 4.ª aumentada suenan igual (6 semitonos, el tritono), pero se escriben distinto: Sol♭ es un tipo de Sol (5.ª) y Fa♯ un tipo de Fa (4.ª).")

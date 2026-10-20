@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 250" width="680" height="250" role="img" aria-label="Las dos familias de intervalos" font-family="Segoe UI,Tahoma,sans-serif">
+<rect width="680" height="250" fill="#fff"/>
+<defs><marker id="fl" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 z" fill="#555"/></marker></defs>
+<text x="14" y="24" font-size="14" font-weight="700" fill="#1e3c72">Familia de las justas: 4.ª, 5.ª y 8.ª</text>
+<rect x="96.0" y="34" width="120" height="44" rx="10" fill="#f4b6b6" stroke="#1e3c72"/>
+<text x="156.0" y="61" font-size="14" font-weight="700" text-anchor="middle" fill="#0f1b33">disminuida</text>
+<rect x="260.0" y="34" width="120" height="44" rx="10" fill="#ffd166" stroke="#1e3c72"/>
+<text x="320.0" y="61" font-size="14" font-weight="700" text-anchor="middle" fill="#0f1b33">JUSTA</text>
+<line x1="220.0" y1="56.0" x2="256.0" y2="56.0" stroke="#555" stroke-width="2" marker-end="url(#fl)"/>
+<text x="238.0" y="94" font-size="11" text-anchor="middle" fill="#555">+1 st</text>
+<rect x="424.0" y="34" width="120" height="44" rx="10" fill="#f4b6b6" stroke="#1e3c72"/>
+<text x="484.0" y="61" font-size="14" font-weight="700" text-anchor="middle" fill="#0f1b33">aumentada</text>
+<line x1="384.0" y1="56.0" x2="420.0" y2="56.0" stroke="#555" stroke-width="2" marker-end="url(#fl)"/>
+<text x="402.0" y="94" font-size="11" text-anchor="middle" fill="#555">+1 st</text>
+<text x="14" y="136" font-size="14" font-weight="700" fill="#1e3c72">Familia de las mayores y menores: 2.ª, 3.ª, 6.ª y 7.ª</text>
+<rect x="14" y="146" width="120" height="44" rx="10" fill="#f4b6b6" stroke="#1e3c72"/>
+<text x="74.0" y="173" font-size="14" font-weight="700" text-anchor="middle" fill="#0f1b33">disminuida</text>
+<rect x="178" y="146" width="120" height="44" rx="10" fill="#a8edea" stroke="#1e3c72"/>
+<text x="238.0" y="173" font-size="14" font-weight="700" text-anchor="middle" fill="#0f1b33">menor</text>
+<line x1="138" y1="168.0" x2="174" y2="168.0" stroke="#555" stroke-width="2" marker-end="url(#fl)"/>
+<text x="156.0" y="206" font-size="11" text-anchor="middle" fill="#555">+1 st</text>
+<rect x="342" y="146" width="120" height="44" rx="10" fill="#ffd166" stroke="#1e3c72"/>
+<text x="402.0" y="173" font-size="14" font-weight="700" text-anchor="middle" fill="#0f1b33">MAYOR</text>
+<line x1="302" y1="168.0" x2="338" y2="168.0" stroke="#555" stroke-width="2" marker-end="url(#fl)"/>
+<text x="320.0" y="206" font-size="11" text-anchor="middle" fill="#555">+1 st</text>
+<rect x="506" y="146" width="120" height="44" rx="10" fill="#f4b6b6" stroke="#1e3c72"/>
+<text x="566.0" y="173" font-size="14" font-weight="700" text-anchor="middle" fill="#0f1b33">aumentada</text>
+<line x1="466" y1="168.0" x2="502" y2="168.0" stroke="#555" stroke-width="2" marker-end="url(#fl)"/>
+<text x="484.0" y="206" font-size="11" text-anchor="middle" fill="#555">+1 st</text>
+<text x="14" y="242" font-size="12" fill="#555">Cada flecha = un semitono más (st = semitono). Hacia la izquierda, un semitono menos.</text>
+</svg>

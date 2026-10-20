@@ -69,6 +69,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -113,6 +114,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO1" type="webcontent" adlcp:scormtype="sco" href="modulo1.html">
@@ -121,6 +123,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -165,6 +168,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO2" type="webcontent" adlcp:scormtype="sco" href="modulo2.html">
@@ -173,6 +177,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -217,6 +222,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO3" type="webcontent" adlcp:scormtype="sco" href="modulo3.html">
@@ -225,6 +231,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -269,6 +276,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO4" type="webcontent" adlcp:scormtype="sco" href="modulo4.html">
@@ -277,6 +285,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -321,6 +330,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO5" type="webcontent" adlcp:scormtype="sco" href="modulo5.html">
@@ -329,6 +339,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -373,6 +384,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO6" type="webcontent" adlcp:scormtype="sco" href="modulo6.html">
@@ -381,6 +393,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -425,6 +438,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO7" type="webcontent" adlcp:scormtype="sco" href="modulo7.html">
@@ -433,6 +447,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -477,6 +492,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO8" type="webcontent" adlcp:scormtype="sco" href="modulo8.html">
@@ -485,6 +501,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -529,6 +546,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO9" type="webcontent" adlcp:scormtype="sco" href="modulo9.html">
@@ -537,6 +555,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -581,6 +600,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO10" type="webcontent" adlcp:scormtype="sco" href="modulo10.html">
@@ -589,6 +609,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -633,6 +654,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO11" type="webcontent" adlcp:scormtype="sco" href="modulo11.html">
@@ -641,6 +663,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -685,6 +708,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO12" type="webcontent" adlcp:scormtype="sco" href="modulo12.html">
@@ -693,6 +717,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -737,6 +762,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO13" type="webcontent" adlcp:scormtype="sco" href="modulo13.html">
@@ -745,6 +771,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -789,6 +816,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO14" type="webcontent" adlcp:scormtype="sco" href="modulo14.html">
@@ -797,6 +825,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -841,6 +870,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_EXAMEN_FINAL" type="webcontent" adlcp:scormtype="sco" href="examen_final.html">
@@ -849,6 +879,7 @@
       <file href="scorm.js"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/circulo_vecinos.svg"/>
       <file href="img/logo-centro.png"/>
@@ -893,6 +924,7 @@
       <file href="partituras/abc/29_tono_do.abc"/>
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
   </resources>
