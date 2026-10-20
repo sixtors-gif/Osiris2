@@ -4,7 +4,9 @@ function dibujarPartituras(){
   if(!window.ABCJS||!window.PARTITURAS)return;
   Object.keys(PARTITURAS).forEach(function(id){
     var el=document.getElementById('p-'+id); if(!el)return;
-    VISUAL[id]=ABCJS.renderAbc(el,PARTITURAS[id],{responsive:'resize',add_classes:true,staffwidth:900,wrap:{minSpacing:1.6,maxSpacing:2.6,preferredMeasuresPerLine:4},paddingleft:0,paddingright:0})[0];
+    var op={responsive:'resize',add_classes:true,staffwidth:900,wrap:{minSpacing:1.6,maxSpacing:2.6,preferredMeasuresPerLine:4},paddingleft:0,paddingright:0};
+    if(/^% sin-ajuste/m.test(PARTITURAS[id])){delete op.wrap;op.paddingright=30;} // respeta los saltos de línea (cambios de armadura)
+    VISUAL[id]=ABCJS.renderAbc(el,PARTITURAS[id],op)[0];
   });
 }
 function msg(id,t){var m=document.getElementById('m-'+id);if(m)m.textContent=t;}

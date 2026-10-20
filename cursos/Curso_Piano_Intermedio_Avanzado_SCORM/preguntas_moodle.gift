@@ -54,6 +54,34 @@ $CATEGORY: Piano intermedio y avanzado/Módulo 02 - Lectura avanzada\: claves, r
 =En dos pulsos, cada uno dividido en tres\: «1-y-a 2-y-a»
 }
 
+::PIA02-5::En clave de Sol, ¿qué nota está en la 4.ª línea? {
+~Si4
+~Mi5
+=Re5
+~Fa5
+}
+
+::PIA02-6::En clave de Fa, ¿qué nota está en la 4.ª línea (entre los dos puntos de la clave)? {
+~Re3
+=Fa3
+~La3
+~Sol2
+}
+
+::PIA02-7::¿Qué intervalo hay entre Re y Fa? {
+=3.ª menor
+~3.ª mayor
+~4.ª justa
+~2.ª mayor
+}
+
+::PIA02-8::¿Cuántos semitonos tiene una 5.ª justa? {
+~8
+~5
+~6
+=7
+}
+
 $CATEGORY: Piano intermedio y avanzado/Módulo 03 - Escalas en todas las tonalidades
 
 ::PIA03-1::¿Qué regla de digitación de escalas es correcta? {
@@ -89,6 +117,34 @@ $CATEGORY: Piano intermedio y avanzado/Módulo 03 - Escalas en todas las tonalid
 ~Fa♯
 =Si♭
 ~Do♯
+}
+
+::PIA03-6::La armadura tiene Fa♯, Do♯ y Sol♯. ¿Cuál es la tonalidad mayor? {
+~Sol mayor
+=La mayor
+~Mi mayor
+~Re mayor
+}
+
+::PIA03-7::La armadura tiene Si♭, Mi♭ y La♭. ¿Cuál es la tonalidad mayor? {
+=Mi♭ mayor
+~La♭ mayor
+~Si♭ mayor
+~Re♭ mayor
+}
+
+::PIA03-8::¿Cuál es el orden de los sostenidos en la armadura? {
+~Fa–Sol–La–Si–Do–Re–Mi
+~Si–Mi–La–Re–Sol–Do–Fa
+~Do–Re–Mi–Fa–Sol–La–Si
+=Fa–Do–Sol–Re–La–Mi–Si
+}
+
+::PIA03-9::¿Qué son Do mayor y Do menor entre sí? {
+~Tonos enarmónicos
+~Tonalidades relativas\: misma armadura
+=Tonalidades homónimas\: misma tónica y distinta armadura
+~La misma tonalidad
 }
 
 $CATEGORY: Piano intermedio y avanzado/Módulo 04 - Arpegios, acordes e inversiones
@@ -149,6 +205,34 @@ $CATEGORY: Piano intermedio y avanzado/Módulo 05 - Armonía funcional aplicada 
 ~Do mayor
 =Re mayor
 ~Mi menor
+}
+
+::PIA05-5::¿Qué nombre recibe el VII grado cuando está a un semitono de la tónica? {
+~Subtónica
+=Sensible
+~Superdominante
+~Mediante
+}
+
+::PIA05-6::Una obra sin armadura termina en La y usa a menudo Sol♯. ¿En qué tonalidad está? {
+=La menor
+~Do mayor
+~Sol mayor
+~La mayor
+}
+
+::PIA05-7::Una obra en Do mayor empieza a usar Fa♯ y cadencia D7 → G. ¿Qué ha ocurrido? {
+~No ha cambiado nada
+~Ha modulado a Fa mayor
+~Ha cambiado a modo menor
+=Ha modulado a Sol mayor, su dominante
+}
+
+::PIA05-8::La progresión I–vi–IV–V transportada a Re mayor es… {
+~Re – Si m – Do – La
+~Re – Mi m – Sol – La
+=Re – Si m – Sol – La
+~Re – Fa♯ m – Sol – Si m
 }
 
 $CATEGORY: Piano intermedio y avanzado/Módulo 06 - Independencia de manos y acompañamientos

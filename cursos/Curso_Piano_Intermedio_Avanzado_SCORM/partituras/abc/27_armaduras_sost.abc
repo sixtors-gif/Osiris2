@@ -1,0 +1,11 @@
+X:27
+T:Armaduras con sostenidos
+C:Cada quinta hacia arriba añade un sostenido
+% sin-ajuste
+M:none
+L:1/1
+Q:1/2=40
+K:C clef=treble
+"^Do · La m"[CEG] || [K:G]"^Sol · Mi m"[GBd] || [K:D]"^Re · Si m"[DFA] || [K:A]"^La · Fa♯ m"[Ace] ||
+K:E
+"^Mi · Do♯ m"[EGB] || [K:B]"^Si · Sol♯ m"[Bdf] || [K:F#]"^Fa♯ · Re♯ m"[FAc] || [K:C#]"^Do♯ · La♯ m"[ceg] |]

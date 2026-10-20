@@ -13,6 +13,7 @@ import html, json, math, os, re, shutil, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from piano_partituras import PIEZAS  # noqa: E402
 from piano_explicaciones import EXTRA, GLOSARIO, PALABRAS, pasos  # noqa: E402
+from piano_teoria import GLOSARIO_TEORIA, TEORIA  # noqa: E402
 
 OUT, ABCJS = sys.argv[1], sys.argv[2]
 RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
@@ -69,6 +70,7 @@ extra = """
 .glosario dt{font-weight:700;color:#1e3c72;margin-top:10px}.glosario dd{margin:2px 0 0 18px;line-height:1.55}
 details.glos{border:1px solid #dfe5ef;border-radius:12px;padding:10px 16px;margin:16px 0;background:#f8faff}
 details.glos summary{cursor:pointer;font-weight:700;color:#1e3c72;font-size:1.05em}
+.module h4{color:#1e3c72;margin:18px 0 6px;font-size:1.05em}
 .como{background:#f2f6ff;border-left:4px solid #6c8ccf;border-radius:8px;padding:8px 12px;margin:6px 0 10px;font-size:.95em;line-height:1.6}.como>b:first-child{color:#3b5ba8}
 .module ol{margin:10px 0 14px 28px}.module ol li{line-height:1.7;font-size:1.05em;padding:2px 0}
 @media print{.score-tools,.navigation,.progress-container{display:none}}
@@ -82,7 +84,9 @@ function dibujarPartituras(){
   if(!window.ABCJS||!window.PARTITURAS)return;
   Object.keys(PARTITURAS).forEach(function(id){
     var el=document.getElementById('p-'+id); if(!el)return;
-    VISUAL[id]=ABCJS.renderAbc(el,PARTITURAS[id],{responsive:'resize',add_classes:true,staffwidth:900,wrap:{minSpacing:1.6,maxSpacing:2.6,preferredMeasuresPerLine:4},paddingleft:0,paddingright:0})[0];
+    var op={responsive:'resize',add_classes:true,staffwidth:900,wrap:{minSpacing:1.6,maxSpacing:2.6,preferredMeasuresPerLine:4},paddingleft:0,paddingright:0};
+    if(/^% sin-ajuste/m.test(PARTITURAS[id])){delete op.wrap;op.paddingright=30;} // respeta los saltos de línea (cambios de armadura)
+    VISUAL[id]=ABCJS.renderAbc(el,PARTITURAS[id],op)[0];
   });
 }
 function msg(id,t){var m=document.getElementById('m-'+id);if(m)m.textContent=t;}
@@ -203,20 +207,38 @@ teclado("teclado_blues.svg", "Escala de blues de Do: Do, Mi♭, Fa, Fa♯, Sol, 
 MAYORES = ["Do", "Sol", "Re", "La", "Mi", "Si", "Fa♯/Sol♭", "Re♭", "La♭", "Mi♭", "Si♭", "Fa"]
 MENORES = ["La m", "Mi m", "Si m", "Fa♯ m", "Do♯ m", "Sol♯ m", "Re♯/Mi♭ m", "Si♭ m", "Fa m", "Do m", "Sol m", "Re m"]
 ARM = ["—", "1♯", "2♯", "3♯", "4♯", "5♯", "6♯ / 6♭", "5♭", "4♭", "3♭", "2♭", "1♭"]
-c = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" width="440" height="440" role="img" aria-label="Círculo de quintas con tonalidades mayores, menores relativas y armaduras" font-family="Segoe UI,Tahoma,sans-serif">',
-     '<rect width="440" height="440" fill="#fff"/><circle cx="220" cy="220" r="200" fill="#eef2fb" stroke="#1e3c72" stroke-width="2"/>',
-     '<circle cx="220" cy="220" r="130" fill="#fffaf0" stroke="#c9a227" stroke-width="2"/><circle cx="220" cy="220" r="72" fill="#1e3c72"/>',
-     '<text x="220" y="215" font-size="15" fill="#fff" font-weight="700" text-anchor="middle">Círculo</text><text x="220" y="234" font-size="15" fill="#fff" font-weight="700" text-anchor="middle">de quintas</text>']
-for i in range(12):
-    a = math.radians(i * 30 - 90)
-    for r, txt, size, col in ((172, MAYORES[i], 16, "#1e3c72"), (103, MENORES[i], 12, "#8a5a00"), (148, ARM[i], 11, "#555")):
-        x, y = 220 + r * math.cos(a), 220 + r * math.sin(a) + 5
-        c.append(f'<text x="{x:.1f}" y="{y:.1f}" font-size="{size}" font-weight="700" fill="{col}" text-anchor="middle">{txt}</text>')
-    x1, y1 = 220 + 130 * math.cos(a + math.radians(15)), 220 + 130 * math.sin(a + math.radians(15))
-    x2, y2 = 220 + 200 * math.cos(a + math.radians(15)), 220 + 200 * math.sin(a + math.radians(15))
-    c.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="#c7cfe0"/>')
-c.append("</svg>")
-open(os.path.join(OUT, "img", "circulo_quintas.svg"), "w", encoding="utf-8").write("\n".join(c))
+def circulo(nombre, aria, porcion=(), grados=()):
+    """porcion: índices (0 = Do) de las casillas resaltadas; grados: [(índice, exterior, interior)] con los números romanos."""
+    c = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" width="440" height="440" role="img" aria-label="{aria}" font-family="Segoe UI,Tahoma,sans-serif">',
+         '<rect width="440" height="440" fill="#fff"/><circle cx="220" cy="220" r="200" fill="#eef2fb" stroke="#1e3c72" stroke-width="2"/>',
+         '<circle cx="220" cy="220" r="130" fill="#fffaf0" stroke="#c9a227" stroke-width="2"/>']
+    for i in porcion:  # sector entre los ángulos de la casilla i, del anillo interior al exterior
+        a1, a2 = math.radians(i * 30 - 105), math.radians(i * 30 - 75)
+        p = lambda r, a: f"{220 + r * math.cos(a):.1f} {220 + r * math.sin(a):.1f}"
+        c.append(f'<path d="M{p(200, a1)} A200 200 0 0 1 {p(200, a2)} L{p(130, a2)} A130 130 0 0 0 {p(130, a1)} Z" fill="#ffd166" opacity=".75"/>')
+        c.append(f'<path d="M{p(130, a1)} A130 130 0 0 1 {p(130, a2)} L{p(72, a2)} A72 72 0 0 0 {p(72, a1)} Z" fill="#a8edea" opacity=".9"/>')
+    c += ['<circle cx="220" cy="220" r="72" fill="#1e3c72"/>',
+          '<text x="220" y="215" font-size="15" fill="#fff" font-weight="700" text-anchor="middle">Círculo</text><text x="220" y="234" font-size="15" fill="#fff" font-weight="700" text-anchor="middle">de quintas</text>']
+    for i in range(12):
+        a = math.radians(i * 30 - 90)
+        for r, txt, size, col in ((172, MAYORES[i], 16, "#1e3c72"), (103, MENORES[i], 12, "#8a5a00"), (148, ARM[i], 11, "#555")):
+            x, y = 220 + r * math.cos(a), 220 + r * math.sin(a) + 5
+            c.append(f'<text x="{x:.1f}" y="{y:.1f}" font-size="{size}" font-weight="700" fill="{col}" text-anchor="middle">{txt}</text>')
+        x1, y1 = 220 + 130 * math.cos(a + math.radians(15)), 220 + 130 * math.sin(a + math.radians(15))
+        x2, y2 = 220 + 200 * math.cos(a + math.radians(15)), 220 + 200 * math.sin(a + math.radians(15))
+        c.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="#c7cfe0"/>')
+    for i, ext, inte in grados:  # números romanos: el exterior sobre la mayor, el interior bajo la menor
+        a = math.radians(i * 30 - 90)
+        for r, txt in ((190, ext), (86, inte)):
+            x, y = 220 + r * math.cos(a), 220 + r * math.sin(a) + 4
+            c.append(f'<text x="{x:.1f}" y="{y:.1f}" font-size="11" font-weight="700" fill="#c0392b" text-anchor="middle">{txt}</text>')
+    c.append("</svg>")
+    open(os.path.join(OUT, "img", nombre), "w", encoding="utf-8").write("\n".join(c))
+
+
+circulo("circulo_quintas.svg", "Círculo de quintas con tonalidades mayores, menores relativas y armaduras")
+circulo("circulo_vecinos.svg", "Círculo de quintas con los seis acordes de Do mayor resaltados: Fa, Do y Sol, y Re menor, La menor y Mi menor",
+        porcion=(11, 0, 1), grados=[(11, "IV", "ii"), (0, "I", "vi"), (1, "V", "iii")])
 
 # Utilidades de página ----------------------------------------------------------------------------
 
@@ -612,12 +634,19 @@ assert len(M) == N
 
 def ampliar(i, body):
     """Añade «En pocas palabras» al principio y las explicaciones extra antes de la primera autoevaluación."""
-    extra = re.sub(r"\[\[partitura:(\w+)\]\]", lambda m: partitura(m.group(1)), EXTRA[i])
-    extra = re.sub(r"\[\[fig:([^|\]]+)\|([^|\]]+)\|([^\]]+)\]\]", lambda m: fig(*m.groups()), extra)
-    assert "[[" not in extra, i
     pos = body.find('<div class="quiz">')
     pos = len(body) if pos < 0 else pos
-    return PALABRAS[i] + body[:pos] + extra + "\n" + body[pos:]
+    body = PALABRAS[i] + body[:pos] + EXTRA[i] + "\n" + body[pos:]
+    if i in TEORIA:  # teoría a fondo, antes de su marcador
+        marca, teoria = TEORIA[i]
+        pos = body.index(marca)
+        body = body[:pos] + teoria + "\n" + body[pos:]
+    body = re.sub(r"\[\[partitura:(\w+)\]\]", lambda m: partitura(m.group(1)), body)
+    body = re.sub(r"\[\[fig:([^|\]]+)\|([^|\]]+)\|([^\]]+)\]\]", lambda m: fig(*m.groups()), body)
+    body = re.sub(r"\[\[quiz:(\w+)\|([^|\]]+)\|([^|\]]+)\|(\d)\|([^\]]+)\]\]",
+                  lambda m: quiz(m.group(1), m.group(2), m.group(3).split(";"), int(m.group(4)), m.group(5)), body)
+    assert "[[" not in body, i
+    return body
 
 
 M = [(ic, t, sub, ampliar(i, body)) for i, (ic, t, sub, body) in enumerate(M, 1)]
@@ -627,7 +656,8 @@ for i, (ic, t, sub, body) in enumerate(M, 1):
 # Cuaderno de partituras (para imprimir y generar el PDF) ------------------------------------------
 orden = ["escala_do", "escala_lam", "arpegio_do", "inversiones", "cadencia", "alberti", "pedal", "bach846", "elise",
          "octavas", "terceras", "adornos", "poli32", "poli43", "iivi", "blues",
-         "pulso_68", "ritmos", "escala_sol", "escala_fa", "cadencia_sol", "vals", "blues_frase"]
+         "pulso_68", "ritmos", "escala_sol", "escala_fa", "cadencia_sol", "vals", "blues_frase",
+         "faros_sol", "faros_fa", "intervalos", "armaduras_sost", "armaduras_bem", "tono_do", "tono_lam", "modulacion"]
 assert set(orden) == set(PIEZAS)
 bloques = "".join(f'<section class="pieza"><h2>{i}. {PIEZAS[k]["titulo"]}</h2><div id="p-{k}"></div><p>{PIEZAS[k]["nota"]}</p></section>' for i, k in enumerate(orden, 1))
 cuaderno = f"""<!DOCTYPE html>
@@ -644,7 +674,7 @@ header{{text-align:center;border-bottom:3px solid #c9a227;margin-bottom:20px}} h
 <footer>{FOOTER} · Partituras dibujadas con abcjs (licencia MIT)</footer>
 <script>var PARTITURAS={json.dumps({k: PIEZAS[k]["abc"] for k in orden}, ensure_ascii=False)};</script>
 <script src="../abcjs-basic-min.js"></script>
-<script>Object.keys(PARTITURAS).forEach(function(k){{ABCJS.renderAbc('p-'+k,PARTITURAS[k],{{responsive:'resize',staffwidth:900,wrap:{{minSpacing:1.6,maxSpacing:2.6,preferredMeasuresPerLine:4}},paddingleft:0,paddingright:0}});}});document.title+=' ';window.LISTO=true;</script>
+<script>Object.keys(PARTITURAS).forEach(function(k){{var op={{responsive:'resize',staffwidth:900,wrap:{{minSpacing:1.6,maxSpacing:2.6,preferredMeasuresPerLine:4}},paddingleft:0,paddingright:0}};if(/^% sin-ajuste/m.test(PARTITURAS[k])){{delete op.wrap;op.paddingright=30;}}ABCJS.renderAbc('p-'+k,PARTITURAS[k],op);}});document.title+=' ';window.LISTO=true;</script>
 </body></html>
 """
 open(os.path.join(OUT, "partituras", "cuaderno.html"), "w", encoding="utf-8").write(cuaderno)
@@ -705,6 +735,18 @@ Q += [
  (4, "¿Cuántos semitonos tiene una tercera mayor (por ejemplo, Do–Mi)?", ["4", "3", "2", "5"], 0, False),
  (5, "En Sol mayor, ¿qué acorde es la dominante (V)?", ["Re mayor", "Do mayor", "La menor", "Mi menor"], 0, False),
  (6, "En un vals con acompañamiento de mano izquierda, ¿qué se toca normalmente en el tiempo 1?", ["El bajo (la nota grave)", "El acorde en el registro medio", "Un silencio", "La melodía"], 0, False),
+ (2, "En clave de Sol, ¿qué nota está en la 4.ª línea?", ["Re5", "Mi5", "Si4", "Fa5"], 0, True),
+ (2, "En clave de Fa, ¿qué nota está en la 4.ª línea (entre los dos puntos de la clave)?", ["Fa3", "Re3", "La3", "Sol2"], 0, False),
+ (2, "¿Qué intervalo hay entre Re y Fa?", ["3.ª menor", "3.ª mayor", "4.ª justa", "2.ª mayor"], 0, True),
+ (2, "¿Cuántos semitonos tiene una 5.ª justa?", ["7", "5", "6", "8"], 0, False),
+ (3, "La armadura tiene Fa♯, Do♯ y Sol♯. ¿Cuál es la tonalidad mayor?", ["La mayor", "Sol mayor", "Mi mayor", "Re mayor"], 0, True),
+ (3, "La armadura tiene Si♭, Mi♭ y La♭. ¿Cuál es la tonalidad mayor?", ["Mi♭ mayor", "La♭ mayor", "Si♭ mayor", "Re♭ mayor"], 0, False),
+ (3, "¿Cuál es el orden de los sostenidos en la armadura?", ["Fa–Do–Sol–Re–La–Mi–Si", "Si–Mi–La–Re–Sol–Do–Fa", "Do–Re–Mi–Fa–Sol–La–Si", "Fa–Sol–La–Si–Do–Re–Mi"], 0, False),
+ (3, "¿Qué son Do mayor y Do menor entre sí?", ["Tonalidades homónimas: misma tónica y distinta armadura", "Tonalidades relativas: misma armadura", "Tonos enarmónicos", "La misma tonalidad"], 0, False),
+ (5, "¿Qué nombre recibe el VII grado cuando está a un semitono de la tónica?", ["Sensible", "Subtónica", "Superdominante", "Mediante"], 0, False),
+ (5, "Una obra sin armadura termina en La y usa a menudo Sol♯. ¿En qué tonalidad está?", ["La menor", "Do mayor", "Sol mayor", "La mayor"], 0, True),
+ (5, "Una obra en Do mayor empieza a usar Fa♯ y cadencia D7 → G. ¿Qué ha ocurrido?", ["Ha modulado a Sol mayor, su dominante", "Ha modulado a Fa mayor", "Ha cambiado a modo menor", "No ha cambiado nada"], 0, False),
+ (5, "La progresión I–vi–IV–V transportada a Re mayor es…", ["Re – Si m – Sol – La", "Re – Mi m – Sol – La", "Re – Si m – Do – La", "Re – Fa♯ m – Sol – Si m"], 0, False),
  (12, "¿Qué es una frase de «pregunta y respuesta» al improvisar?", ["Una idea corta seguida de otra que la contesta y cierra, a menudo en la tónica", "Tocar la escala de arriba abajo", "Repetir la misma nota todo el compás", "Cambiar de tonalidad en cada compás"], 0, False),
 ]
 Q.sort(key=lambda q: q[0])
@@ -774,8 +816,8 @@ open(os.path.join(OUT, "examen_final.html"), "w", encoding="utf-8").write(exam)
 
 # Portada ---------------------------------------------------------------------------------------
 itin = "".join(f'<li>{"🎹" if i < 8 else "🎼"} <span><b>{i+1}.</b> <a href="modulo{i+1}.html">{t}</a></span></li>' for i, t in enumerate(NOMBRES))
-glosario = ('<details class="glos"><summary>📖 Glosario: las palabras del curso explicadas fácil (' + str(len(GLOSARIO)) + ' términos)</summary><dl class="glosario">'
-            + "".join(f"<dt>{t}</dt><dd>{d}</dd>" for t, d in sorted(GLOSARIO, key=lambda x: x[0].lower())) + "</dl></details>")
+glosario = ('<details class="glos"><summary>📖 Glosario: las palabras del curso explicadas fácil (' + str(len(GLOSARIO) + len(GLOSARIO_TEORIA)) + ' términos)</summary><dl class="glosario">'
+            + "".join(f"<dt>{t}</dt><dd>{d}</dd>" for t, d in sorted(GLOSARIO + GLOSARIO_TEORIA, key=lambda x: x[0].lower())) + "</dl></details>")
 index = f"""<!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{TITULO}</title><link rel="stylesheet" href="style.css"></head>

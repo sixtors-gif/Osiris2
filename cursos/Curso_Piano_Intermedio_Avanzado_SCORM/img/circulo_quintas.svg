@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" width="440" height="440" role="img" aria-label="Círculo de quintas con tonalidades mayores, menores relativas y armaduras" font-family="Segoe UI,Tahoma,sans-serif">
 <rect width="440" height="440" fill="#fff"/><circle cx="220" cy="220" r="200" fill="#eef2fb" stroke="#1e3c72" stroke-width="2"/>
-<circle cx="220" cy="220" r="130" fill="#fffaf0" stroke="#c9a227" stroke-width="2"/><circle cx="220" cy="220" r="72" fill="#1e3c72"/>
+<circle cx="220" cy="220" r="130" fill="#fffaf0" stroke="#c9a227" stroke-width="2"/>
+<circle cx="220" cy="220" r="72" fill="#1e3c72"/>
 <text x="220" y="215" font-size="15" fill="#fff" font-weight="700" text-anchor="middle">Círculo</text><text x="220" y="234" font-size="15" fill="#fff" font-weight="700" text-anchor="middle">de quintas</text>
 <text x="220.0" y="53.0" font-size="16" font-weight="700" fill="#1e3c72" text-anchor="middle">Do</text>
 <text x="220.0" y="122.0" font-size="12" font-weight="700" fill="#8a5a00" text-anchor="middle">La m</text>

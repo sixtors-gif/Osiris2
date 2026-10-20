@@ -1,0 +1,11 @@
+X:28
+T:Armaduras con bemoles
+C:Cada quinta hacia abajo añade un bemol
+% sin-ajuste
+M:none
+L:1/1
+Q:1/2=40
+K:C clef=treble
+"^Do · La m"[CEG] || [K:F]"^Fa · Re m"[FAc] || [K:Bb]"^Si♭ · Sol m"[Bdf] || [K:Eb]"^Mi♭ · Do m"[EGB] ||
+K:Ab
+"^La♭ · Fa m"[Ace] || [K:Db]"^Re♭ · Si♭ m"[DFA] || [K:Gb]"^Sol♭ · Mi♭ m"[GBd] || [K:Cb]"^Do♭ · La♭ m"[CEG] |]

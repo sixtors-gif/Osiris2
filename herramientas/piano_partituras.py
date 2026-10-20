@@ -297,3 +297,99 @@ Q:1/4=96
 [V:RH] "^pregunta""C7"c2 _e f ^f g3 | "^respuesta"z2 _b g f _e c2 | "^nota azul"_e2 =e c G2 c2 | c6 z2 |]
 [V:LH] C,G, C,A, C,_B, C,A, | C,G, C,A, C,_B, C,A, | C,G, C,A, C,_B, C,A, | C,G, C,A, C,_B, C,A, |]
 """, "Solo con la escala de blues: dos compases que «preguntan», dos que «responden» y la nota azul (Mi♭) que resuelve en Mi.")
+
+# Teoría a fondo: notas faro, intervalos, armaduras, tonalidad y modulación ---------------------------
+pieza("faros_sol", "Notas faro en clave de Sol", """
+X:24
+T:Notas faro · clave de Sol
+C:Apréndelas de memoria: las demás se calculan desde ellas
+M:4/4
+L:1/4
+Q:1/4=100
+K:C clef=treble
+"^Do4"C4 | "^Mi4"E4 | "^Sol4"G4 | "^Do5"c4 | "^Fa5"f4 | "^Sol5"g4 | "^La5"a4 |]
+""", "Do4: 1.ª línea adicional abajo · Mi4: 1.ª línea · Sol4: 2.ª línea (donde se enrosca la clave) · Do5: 3.er espacio · Fa5: 5.ª línea · Sol5: espacio de encima · La5: 1.ª línea adicional arriba.")
+
+pieza("faros_fa", "Notas faro en clave de Fa", """
+X:25
+T:Notas faro · clave de Fa
+C:Apréndelas de memoria: las demás se calculan desde ellas
+M:4/4
+L:1/4
+Q:1/4=100
+K:C clef=bass
+"^Do2"C,,4 | "^Sol2"G,,4 | "^Do3"C,4 | "^Fa3"F,4 | "^La3"A,4 | "^Do4"C4 |]
+""", "Do2: 2.ª línea adicional abajo · Sol2: 1.ª línea · Do3: 2.º espacio · Fa3: 4.ª línea (entre los dos puntos de la clave) · La3: 5.ª línea · Do4: 1.ª línea adicional arriba (el mismo Do central de la clave de Sol).")
+
+pieza("intervalos", "Los intervalos desde Do: escúchalos y míralos", """
+X:26
+T:Intervalos desde Do4
+C:Melódicos (una nota tras otra) y armónicos (a la vez)
+M:4/4
+L:1/4
+Q:1/4=80
+K:C clef=treble
+C2 "^2.ª"D2 | C2 "^3.ª"E2 | C2 "^4.ª"F2 | C2 "^5.ª"G2 | C2 "^6.ª"A2 | C2 "^7.ª"B2 | C2 "^8.ª"c2 |
+"^3.ª"[CE]4 | "^5.ª"[CG]4 | "^6.ª"[CA]4 | "^8.ª"[Cc]4 |]
+""", "Fíjate en el dibujo: 3.ª, 5.ª y 7.ª van de línea a línea (o de espacio a espacio); 2.ª, 4.ª, 6.ª y 8.ª, de línea a espacio (o al revés).")
+
+pieza("armaduras_sost", "Armaduras con sostenidos (girando a la derecha en el círculo)", """
+X:27
+T:Armaduras con sostenidos
+C:Cada quinta hacia arriba añade un sostenido
+% sin-ajuste
+M:none
+L:1/1
+Q:1/2=40
+K:C clef=treble
+"^Do · La m"[CEG] || [K:G]"^Sol · Mi m"[GBd] || [K:D]"^Re · Si m"[DFA] || [K:A]"^La · Fa♯ m"[Ace] ||
+K:E
+"^Mi · Do♯ m"[EGB] || [K:B]"^Si · Sol♯ m"[Bdf] || [K:F#]"^Fa♯ · Re♯ m"[FAc] || [K:C#]"^Do♯ · La♯ m"[ceg] |]
+""", "Cada compás suena el acorde de la tónica mayor. Orden de los sostenidos: Fa – Do – Sol – Re – La – Mi – Si. El último sostenido es la sensible: la tónica mayor está un semitono por encima.")
+
+pieza("armaduras_bem", "Armaduras con bemoles (girando a la izquierda en el círculo)", """
+X:28
+T:Armaduras con bemoles
+C:Cada quinta hacia abajo añade un bemol
+% sin-ajuste
+M:none
+L:1/1
+Q:1/2=40
+K:C clef=treble
+"^Do · La m"[CEG] || [K:F]"^Fa · Re m"[FAc] || [K:Bb]"^Si♭ · Sol m"[Bdf] || [K:Eb]"^Mi♭ · Do m"[EGB] ||
+K:Ab
+"^La♭ · Fa m"[Ace] || [K:Db]"^Re♭ · Si♭ m"[DFA] || [K:Gb]"^Sol♭ · Mi♭ m"[GBd] || [K:Cb]"^Do♭ · La♭ m"[CEG] |]
+""", "Cada compás suena el acorde de la tónica mayor. Orden de los bemoles: Si – Mi – La – Re – Sol – Do – Fa (el de los sostenidos al revés). El penúltimo bemol es la tónica mayor.")
+
+pieza("tono_do", "Misma armadura, dos tonalidades (1): Do mayor", """
+X:29
+T:Melodía A
+C:Sin alteraciones · ¿mayor o menor?
+M:4/4
+L:1/4
+Q:1/4=88
+K:C clef=treble
+"C"c2 e g | "G"d2 B G | "F"A c "C"G E | "G7"F D "C"C2 |]
+""", "Empieza y termina en Do, los acordes giran alrededor de Do y no aparece ningún Sol♯: es Do mayor.")
+
+pieza("tono_lam", "Misma armadura, dos tonalidades (2): La menor", """
+X:30
+T:Melodía B
+C:Sin armadura · ¿mayor o menor?
+M:4/4
+L:1/4
+Q:1/4=88
+K:Am clef=treble
+"Am"A2 c e | "E"^g2 e B | "Am"c B A E | "E"^G B "Am"A2 |]
+""", "Empieza y termina en La y aparece Sol♯ (la sensible de La menor) como alteración accidental: es La menor, la relativa de Do mayor.")
+
+pieza("modulacion", "Una modulación: de Do mayor a Sol mayor", """
+X:31
+T:Modulación a la dominante
+C:Ejercicio original del curso
+M:4/4
+L:1/4
+Q:1/4=84
+K:C clef=treble
+"^Do mayor""C"c2 e g | "F"a2 f d | "^→ Sol mayor""D7"^f e d c | "G"B2 d g | "D7"a ^f d c | "G"B4 |]
+""", "A partir del compás 3 aparece Fa♯ una y otra vez y la frase cierra con D7 → G (V7 → I de Sol): la música ha cambiado de «casa».")

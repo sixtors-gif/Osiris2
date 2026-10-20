@@ -1,0 +1,8 @@
+X:24
+T:Notas faro · clave de Sol
+C:Apréndelas de memoria: las demás se calculan desde ellas
+M:4/4
+L:1/4
+Q:1/4=100
+K:C clef=treble
+"^Do4"C4 | "^Mi4"E4 | "^Sol4"G4 | "^Do5"c4 | "^Fa5"f4 | "^Sol5"g4 | "^La5"a4 |]

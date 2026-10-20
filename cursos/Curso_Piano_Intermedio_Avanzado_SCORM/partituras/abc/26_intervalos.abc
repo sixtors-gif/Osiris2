@@ -1,0 +1,9 @@
+X:26
+T:Intervalos desde Do4
+C:Melódicos (una nota tras otra) y armónicos (a la vez)
+M:4/4
+L:1/4
+Q:1/4=80
+K:C clef=treble
+C2 "^2.ª"D2 | C2 "^3.ª"E2 | C2 "^4.ª"F2 | C2 "^5.ª"G2 | C2 "^6.ª"A2 | C2 "^7.ª"B2 | C2 "^8.ª"c2 |
+"^3.ª"[CE]4 | "^5.ª"[CG]4 | "^6.ª"[CA]4 | "^8.ª"[Cc]4 |]

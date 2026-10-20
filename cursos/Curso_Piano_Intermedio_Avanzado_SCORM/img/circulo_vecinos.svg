@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" width="440" height="440" role="img" aria-label="Círculo de quintas con los seis acordes de Do mayor resaltados: Fa, Do y Sol, y Re menor, La menor y Mi menor" font-family="Segoe UI,Tahoma,sans-serif">
+<rect width="440" height="440" fill="#fff"/><circle cx="220" cy="220" r="200" fill="#eef2fb" stroke="#1e3c72" stroke-width="2"/>
+<circle cx="220" cy="220" r="130" fill="#fffaf0" stroke="#c9a227" stroke-width="2"/>
+<path d="M78.6 78.6 A200 200 0 0 1 168.2 26.8 L186.4 94.4 A130 130 0 0 0 128.1 128.1 Z" fill="#ffd166" opacity=".75"/>
+<path d="M128.1 128.1 A130 130 0 0 1 186.4 94.4 L201.4 150.5 A72 72 0 0 0 169.1 169.1 Z" fill="#a8edea" opacity=".9"/>
+<path d="M168.2 26.8 A200 200 0 0 1 271.8 26.8 L253.6 94.4 A130 130 0 0 0 186.4 94.4 Z" fill="#ffd166" opacity=".75"/>
+<path d="M186.4 94.4 A130 130 0 0 1 253.6 94.4 L238.6 150.5 A72 72 0 0 0 201.4 150.5 Z" fill="#a8edea" opacity=".9"/>
+<path d="M271.8 26.8 A200 200 0 0 1 361.4 78.6 L311.9 128.1 A130 130 0 0 0 253.6 94.4 Z" fill="#ffd166" opacity=".75"/>
+<path d="M253.6 94.4 A130 130 0 0 1 311.9 128.1 L270.9 169.1 A72 72 0 0 0 238.6 150.5 Z" fill="#a8edea" opacity=".9"/>
+<circle cx="220" cy="220" r="72" fill="#1e3c72"/>
+<text x="220" y="215" font-size="15" fill="#fff" font-weight="700" text-anchor="middle">Círculo</text><text x="220" y="234" font-size="15" fill="#fff" font-weight="700" text-anchor="middle">de quintas</text>
+<text x="220.0" y="53.0" font-size="16" font-weight="700" fill="#1e3c72" text-anchor="middle">Do</text>
+<text x="220.0" y="122.0" font-size="12" font-weight="700" fill="#8a5a00" text-anchor="middle">La m</text>
+<text x="220.0" y="77.0" font-size="11" font-weight="700" fill="#555" text-anchor="middle">—</text>
+<line x1="253.6" y1="94.4" x2="271.8" y2="26.8" stroke="#c7cfe0"/>
+<text x="306.0" y="76.0" font-size="16" font-weight="700" fill="#1e3c72" text-anchor="middle">Sol</text>
+<text x="271.5" y="135.8" font-size="12" font-weight="700" fill="#8a5a00" text-anchor="middle">Mi m</text>
+<text x="294.0" y="96.8" font-size="11" font-weight="700" fill="#555" text-anchor="middle">1♯</text>
+<line x1="311.9" y1="128.1" x2="361.4" y2="78.6" stroke="#c7cfe0"/>
+<text x="369.0" y="139.0" font-size="16" font-weight="700" fill="#1e3c72" text-anchor="middle">Re</text>
+<text x="309.2" y="173.5" font-size="12" font-weight="700" fill="#8a5a00" text-anchor="middle">Si m</text>
+<text x="348.2" y="151.0" font-size="11" font-weight="700" fill="#555" text-anchor="middle">2♯</text>
+<line x1="345.6" y1="186.4" x2="413.2" y2="168.2" stroke="#c7cfe0"/>
+<text x="392.0" y="225.0" font-size="16" font-weight="700" fill="#1e3c72" text-anchor="middle">La</text>
+<text x="323.0" y="225.0" font-size="12" font-weight="700" fill="#8a5a00" text-anchor="middle">Fa♯ m</text>
+<text x="368.0" y="225.0" font-size="11" font-weight="700" fill="#555" text-anchor="middle">3♯</text>
+<line x1="345.6" y1="253.6" x2="413.2" y2="271.8" stroke="#c7cfe0"/>
+<text x="369.0" y="311.0" font-size="16" font-weight="700" fill="#1e3c72" text-anchor="middle">Mi</text>
+<text x="309.2" y="276.5" font-size="12" font-weight="700" fill="#8a5a00" text-anchor="middle">Do♯ m</text>
+<text x="348.2" y="299.0" font-size="11" font-weight="700" fill="#555" text-anchor="middle">4♯</text>
+<line x1="311.9" y1="311.9" x2="361.4" y2="361.4" stroke="#c7cfe0"/>
+<text x="306.0" y="374.0" font-size="16" font-weight="700" fill="#1e3c72" text-anchor="middle">Si</text>
+<text x="271.5" y="314.2" font-size="12" font-weight="700" fill="#8a5a00" text-anchor="middle">Sol♯ m</text>
+<text x="294.0" y="353.2" font-size="11" font-weight="700" fill="#555" text-anchor="middle">5♯</text>
+<line x1="253.6" y1="345.6" x2="271.8" y2="413.2" stroke="#c7cfe0"/>
+<text x="220.0" y="397.0" font-size="16" font-weight="700" fill="#1e3c72" text-anchor="middle">Fa♯/Sol♭</text>
+<text x="220.0" y="328.0" font-size="12" font-weight="700" fill="#8a5a00" text-anchor="middle">Re♯/Mi♭ m</text>
+<text x="220.0" y="373.0" font-size="11" font-weight="700" fill="#555" text-anchor="middle">6♯ / 6♭</text>
+<line x1="186.4" y1="345.6" x2="168.2" y2="413.2" stroke="#c7cfe0"/>
+<text x="134.0" y="374.0" font-size="16" font-weight="700" fill="#1e3c72" text-anchor="middle">Re♭</text>
+<text x="168.5" y="314.2" font-size="12" font-weight="700" fill="#8a5a00" text-anchor="middle">Si♭ m</text>
+<text x="146.0" y="353.2" font-size="11" font-weight="700" fill="#555" text-anchor="middle">5♭</text>
+<line x1="128.1" y1="311.9" x2="78.6" y2="361.4" stroke="#c7cfe0"/>
+<text x="71.0" y="311.0" font-size="16" font-weight="700" fill="#1e3c72" text-anchor="middle">La♭</text>
+<text x="130.8" y="276.5" font-size="12" font-weight="700" fill="#8a5a00" text-anchor="middle">Fa m</text>
+<text x="91.8" y="299.0" font-size="11" font-weight="700" fill="#555" text-anchor="middle">4♭</text>
+<line x1="94.4" y1="253.6" x2="26.8" y2="271.8" stroke="#c7cfe0"/>
+<text x="48.0" y="225.0" font-size="16" font-weight="700" fill="#1e3c72" text-anchor="middle">Mi♭</text>
+<text x="117.0" y="225.0" font-size="12" font-weight="700" fill="#8a5a00" text-anchor="middle">Do m</text>
+<text x="72.0" y="225.0" font-size="11" font-weight="700" fill="#555" text-anchor="middle">3♭</text>
+<line x1="94.4" y1="186.4" x2="26.8" y2="168.2" stroke="#c7cfe0"/>
+<text x="71.0" y="139.0" font-size="16" font-weight="700" fill="#1e3c72" text-anchor="middle">Si♭</text>
+<text x="130.8" y="173.5" font-size="12" font-weight="700" fill="#8a5a00" text-anchor="middle">Sol m</text>
+<text x="91.8" y="151.0" font-size="11" font-weight="700" fill="#555" text-anchor="middle">2♭</text>
+<line x1="128.1" y1="128.1" x2="78.6" y2="78.6" stroke="#c7cfe0"/>
+<text x="134.0" y="76.0" font-size="16" font-weight="700" fill="#1e3c72" text-anchor="middle">Fa</text>
+<text x="168.5" y="135.8" font-size="12" font-weight="700" fill="#8a5a00" text-anchor="middle">Re m</text>
+<text x="146.0" y="96.8" font-size="11" font-weight="700" fill="#555" text-anchor="middle">1♭</text>
+<line x1="186.4" y1="94.4" x2="168.2" y2="26.8" stroke="#c7cfe0"/>
+<text x="125.0" y="59.5" font-size="11" font-weight="700" fill="#c0392b" text-anchor="middle">IV</text>
+<text x="177.0" y="149.5" font-size="11" font-weight="700" fill="#c0392b" text-anchor="middle">ii</text>
+<text x="220.0" y="34.0" font-size="11" font-weight="700" fill="#c0392b" text-anchor="middle">I</text>
+<text x="220.0" y="138.0" font-size="11" font-weight="700" fill="#c0392b" text-anchor="middle">vi</text>
+<text x="315.0" y="59.5" font-size="11" font-weight="700" fill="#c0392b" text-anchor="middle">V</text>
+<text x="263.0" y="149.5" font-size="11" font-weight="700" fill="#c0392b" text-anchor="middle">iii</text>
+</svg>
