@@ -1,0 +1,13 @@
+X:59
+T:Transporte
+C:Misma música, tres tonalidades
+% sin-ajuste
+M:4/4
+L:1/4
+Q:1/4=88
+K:C clef=treble
+"^Do mayor""C"C E G E | "F"F A F D | "C"E G c G | "C"E C C2 |
+K:G
+"^Sol mayor""G"G B d B | "C"c e c A | "G"B d g d | "G"B G G2 |
+K:F
+"^Fa mayor""F"F A c A | "Bb"B d B G | "F"A c f c | "F"A F F2 |]

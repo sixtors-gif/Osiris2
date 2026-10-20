@@ -84,6 +84,11 @@ def orden_paginas(d):
     # Prácticas: van justo después del módulo al que pertenecen.
     if "practica_instalacion.html" in pags:
         orden.insert(orden.index("modulo12.html") + 1, "practica_instalacion.html")
+    # Planning (curso de Piano): justo después de la presentación; gimnasio de ejercicios: tras el último módulo.
+    if "planificacion.html" in pags:
+        orden.insert(1, "planificacion.html")
+    if "ejercicios.html" in pags:
+        orden.append("ejercicios.html")
     # Repaso previo al examen (curso de Matemática básica).
     if "repaso.html" in pags:
         orden.append("repaso.html")
@@ -102,6 +107,10 @@ def titulo_pagina(d, f):
         return "Examen final"
     if f == "repaso.html":
         return "Repaso previo al examen"
+    if f == "planificacion.html":
+        return "Planning de 6 meses (1 hora al día)"
+    if f == "ejercicios.html":
+        return "Gimnasio: ejercicios prácticos"
     t = re.sub(r"^[^—]+ — ", "", t)  # «Curso — Tema» → «Tema»
     m = re.match(r"(modulo|unidad)(\d+)\.html$", f)
     if m:

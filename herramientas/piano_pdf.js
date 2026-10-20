@@ -1,4 +1,4 @@
-// Genera partituras/Cuaderno_de_partituras.pdf a partir de partituras/cuaderno.html
+// Genera partituras/Cuaderno_de_partituras.pdf (de partituras/cuaderno.html) y Planning_6_meses_piano.pdf (de planificacion.html)
 // Uso: node herramientas/piano_pdf.js cursos/Curso_Piano_Intermedio_Avanzado_SCORM
 // Requiere Playwright (npm i playwright) y Chromium.
 const { chromium } = require('playwright');
@@ -12,6 +12,11 @@ const path = require('path');
   await page.waitForFunction(() => window.LISTO === true);
   await page.pdf({ path: path.join(dir, 'partituras', 'Cuaderno_de_partituras.pdf'), format: 'A4',
     margin: { top: '15mm', bottom: '15mm', left: '12mm', right: '12mm' }, printBackground: true });
+  const plan = await browser.newPage();
+  await plan.goto('file://' + path.join(dir, 'planificacion.html'));
+  await plan.emulateMedia({ media: 'print' });
+  await plan.pdf({ path: path.join(dir, 'Planning_6_meses_piano.pdf'), format: 'A4', landscape: true,
+    margin: { top: '12mm', bottom: '12mm', left: '10mm', right: '10mm' }, printBackground: true });
   await browser.close();
-  console.log('PDF generado');
+  console.log('PDF generado (cuaderno y planning)');
 })();

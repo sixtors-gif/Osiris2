@@ -1,0 +1,12 @@
+X:45
+T:ii–V–i en tonalidad menor
+C:Ejercicio original del curso · 3.ª y 7.ª de cada acorde
+M:4/4
+L:1/1
+Q:1/4=60
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:Am
+[V:RH] "Bm7b5"[DA] | "E7"[D^G] | "Am7"[CG] | "Am"[CEA] |]
+[V:LH] B,, | E,, | A,, | A,, |]

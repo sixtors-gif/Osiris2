@@ -88,5 +88,20 @@ details.glos{border:1px solid #dfe5ef;border-radius:12px;padding:10px 16px;margi
 details.glos summary{cursor:pointer;font-weight:700;color:#1e3c72;font-size:1.05em}
 .module h4{color:#1e3c72;margin:18px 0 6px;font-size:1.05em}
 .como{background:#f2f6ff;border-left:4px solid #6c8ccf;border-radius:8px;padding:8px 12px;margin:6px 0 10px;font-size:.95em;line-height:1.6}.como>b:first-child{color:#3b5ba8}
+.ejercicio{background:#fff;border:1px solid #dfe5ef;border-left:5px solid #1e3c72;border-radius:12px;padding:6px 18px 12px;margin:18px 0}
+.ejercicio h4{margin:12px 0 6px;font-size:1.1em;color:#1e3c72}
+.ej-id{display:inline-block;background:#1e3c72;color:#fff;border-radius:8px;padding:1px 9px;margin-right:6px;font-size:.9em}
+.ej-meta{float:right;font-size:.85em;color:#777;font-weight:400}
+.ej-meta-fin{background:#eef7ee;border-radius:8px;padding:8px 12px;margin-top:8px}
+.mes{background:#f8faff;border:1px solid #dfe5ef;border-radius:12px;padding:6px 18px 4px;margin:14px 0}
+.mes .checklist{list-style:none;padding-left:0;margin:6px 0 12px}
+.tabla-plan td,.tabla-plan th{font-size:.92em}
+.tabla-plan tr.mes2 td{background:#f2f6ff}.tabla-plan tr.mes4 td{background:#f2f6ff}.tabla-plan tr.mes6 td{background:#f2f6ff}
+.tabla-plan tr.mes1 td,.tabla-plan tr.mes3 td,.tabla-plan tr.mes5 td{background:#fff}
+.tabla-plan input{width:20px;height:20px}
+.plan-prog{margin:8px 0}.plan-barra{display:inline-block;width:160px;height:10px;background:#dfe5ef;border-radius:6px;margin-left:8px;vertical-align:middle;overflow:hidden}
+.plan-barra span{display:block;height:100%;width:0;background:#4caf50}
+.tabla-diario td{height:34px}
+.lect-btns button.sel{background:#1e3c72;color:#fff}
 .module ol{margin:10px 0 14px 28px}.module ol li{line-height:1.7;font-size:1.05em;padding:2px 0}
-@media print{.score-tools,.navigation,.progress-container{display:none}}
+@media print{.score-tools,.navigation,.progress-container,.header img,.dl-box,.footer-autor{display:none}body{background:#fff}.container{max-width:none}.tabla-plan td,.tabla-plan th{font-size:.78em;padding:5px 6px}h2,h3{break-after:avoid}.tabla-plan tr,.ejercicio,.mes{break-inside:avoid}.container{box-shadow:none}}

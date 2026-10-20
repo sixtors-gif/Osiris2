@@ -1,0 +1,12 @@
+X:61
+T:Arpegios de acordes de cuatro notas
+C:Ejercicio original del curso
+M:4/4
+L:1/8
+Q:1/4=66
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:C
+[V:RH] "Cmaj7"C E G B c B G E | "Dm7"D F A c d c A F | "G7"G B d f g f d B | "Cmaj7"[CEGB]8 |]
+[V:LH] C,8 | D,8 | G,,8 | C,8 |]

@@ -1,0 +1,12 @@
+X:57
+T:Ostinato
+C:Mano izquierda p, derecha mf
+M:4/4
+L:1/8
+Q:1/4=72
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:C
+[V:RH] !mf!"C"e4 g4 | "Am"e4 c4 | "F"a4 f4 | "G"d4 B4 | "C"e4 g4 | "Am"c'4 a4 | "F"f4 c4 | "G"d4 B4 | "C"[ceg]8 |]
+[V:LH] !p!C,G,E,G, C,G,E,G, | A,,E,C,E, A,,E,C,E, | F,,C,A,,C, F,,C,A,,C, | G,,D,B,D, G,,D,B,D, | C,G,E,G, C,G,E,G, | A,,E,C,E, A,,E,C,E, | F,,C,A,,C, F,,C,A,,C, | G,,D,B,D, G,,D,B,D, | C,8 |]

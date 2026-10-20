@@ -1,0 +1,8 @@
+X:36
+T:Los modos a partir de Do
+C:Se diferencian en las notas que cambian respecto al modo mayor
+M:4/4
+L:1/4
+Q:1/4=76
+K:C clef=treble
+"^Jónico (mayor)"C D E F | G A B c || "^Dórico (Mi♭, Si♭)"C D _E F | G A _B c || "^Frigio (Re♭, Mi♭, La♭, Si♭)"C _D _E F | G _A _B c || "^Lidio (Fa♯)"C D E ^F | G A B c || "^Mixolidio (Si♭)"C D E F | G A _B c || "^Eólico (menor natural)"C D _E F | G _A _B c |]

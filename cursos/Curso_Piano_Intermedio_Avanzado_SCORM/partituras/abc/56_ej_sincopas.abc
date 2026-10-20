@@ -1,0 +1,12 @@
+X:56
+T:Síncopas
+C:La izquierda va firme y la derecha se desplaza
+M:4/4
+L:1/8
+Q:1/4=72
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:C
+[V:RH] "^recto"c2 c2 c2 c2 | "^síncopa"c c2 c2 c2 c | "^síncopa"z c c2 z c c2 | c4 z4 |]
+[V:LH] C,2 G,2 C,2 G,2 | C,2 G,2 C,2 G,2 | C,2 G,2 C,2 G,2 | C,4 z4 |]

@@ -49,6 +49,42 @@ function lectNueva(){var modo=document.getElementById('lect-clave').value;var cl
   var lista=LECT[clave],n=lista[Math.floor(Math.random()*lista.length)];lect.nota=n.replace(/[,']/g,'').toUpperCase();
   ABCJS.renderAbc('lect-pent','X:1\nL:1/1\nK:C clef='+(clave==='sol'?'treble':'bass')+'\n'+n+'|',{scale:1.6,staffwidth:150,paddingleft:10});
   document.querySelectorAll('.lect-btns button').forEach(function(b){b.className='';});document.getElementById('lect-fb').textContent='¿Qué nota es?';}
+// Entrenador de intervalos: dos notas, el alumno elige número y calidad
+var INT={bien:0,total:0,n:null,c:null,sel:{n:null,c:null}},SEMI=[0,2,4,5,7,9,11],REF=[0,2,4,5,7,9,11,12],LETRAS=['C','D','E','F','G','A','B'];
+var CAL=['justa','mayor','menor','aumentada','disminuida'];
+function intAbc(d,a){var o=Math.floor(d/7),l=LETRAS[d%7],ac=a>0?'^':(a<0?'_':'');if(o===0)return ac+l;if(o===1)return ac+l.toLowerCase();return ac+l.toLowerCase()+"'";}
+function intNueva(){
+  clearTimeout(INT.t);
+  for(var k=0;k<200;k++){
+    var d1=Math.floor(Math.random()*8),n=2+Math.floor(Math.random()*7),d2=d1+n-1,a1=[0,0,0,1,-1][Math.floor(Math.random()*5)],a2=[0,0,0,1,-1][Math.floor(Math.random()*5)];
+    var s1=12*Math.floor(d1/7)+SEMI[d1%7]+a1,s2=12*Math.floor(d2/7)+SEMI[d2%7]+a2,sem=s2-s1,dif=sem-REF[n-1],c=null;
+    if(n===4||n===5||n===8){c=dif===0?'justa':(dif===1?'aumentada':(dif===-1?'disminuida':null));}
+    else{c=dif===0?'mayor':(dif===-1?'menor':(dif===1?'aumentada':(dif===-2?'disminuida':null)));}
+    if(!c||sem<1)continue;
+    INT.n=n;INT.c=c;INT.sel={n:null,c:null};INT.sem=sem;
+    ABCJS.renderAbc('int-pent','X:1\nL:1/1\nK:C clef=treble\n['+intAbc(d1,a1)+intAbc(d2,a2)+']|',{scale:1.6,staffwidth:150,paddingleft:10});
+    document.querySelectorAll('#int-num button,#int-cal button').forEach(function(b){b.className='';});
+    document.getElementById('int-fb').textContent='¿Qué intervalo forman estas dos notas?';return;
+  }
+}
+function intElige(tipo,v,btn){if(!INT.n)return;INT.sel[tipo]=v;document.querySelectorAll(tipo==='n'?'#int-num button':'#int-cal button').forEach(function(b){b.className='';});btn.className='sel';}
+function intComprobar(){
+  if(!INT.n)return;if(!INT.sel.n||!INT.sel.c){document.getElementById('int-fb').textContent='Elige el número y la calidad.';return;}
+  INT.total++;var ok=INT.sel.n===INT.n&&INT.sel.c===INT.c;if(ok)INT.bien++;
+  document.getElementById('int-fb').textContent=(ok?'✅ ¡Correcto! ':'❌ Era una '+INT.n+'.ª '+INT.c+' ('+INT.sem+' semitonos). ')+(ok?'('+INT.sem+' semitonos). ':'')+'Aciertos: '+INT.bien+'/'+INT.total;
+  INT.n=null;INT.t=setTimeout(intNueva,ok?900:2400);
+}
+// Entrenador de armaduras: aparece una armadura y se pregunta la tonalidad mayor
+var ARM_T=[['C',['Do']],['G',['Sol']],['D',['Re']],['A',['La']],['E',['Mi']],['B',['Si']],['F#',['Fa♯']],['C#',['Re♭','Do♯']],
+           ['F',['Fa']],['Bb',['Si♭']],['Eb',['Mi♭']],['Ab',['La♭']],['Db',['Re♭','Do♯']],['Gb',['Fa♯','Sol♭']],['Cb',['Si','Do♭']]],
+    arm={k:null,bien:0,total:0};
+function armNueva(){clearTimeout(arm.t);var t=ARM_T[Math.floor(Math.random()*ARM_T.length)];arm.k=t;
+  ABCJS.renderAbc('arm-pent','X:1\nL:1\nK:'+t[0]+' clef=treble\nz|',{scale:1.6,staffwidth:200,paddingleft:10});
+  document.querySelectorAll('#arm-btns button').forEach(function(b){b.className='';});document.getElementById('arm-fb').textContent='¿Qué tonalidad mayor es?';}
+function armResp(nombre,btn){if(!arm.k)return;arm.total++;var ok=arm.k[1].indexOf(nombre)>=0;
+  if(ok){arm.bien++;btn.className='ok';}else{btn.className='ko';}
+  document.getElementById('arm-fb').textContent=(ok?'✅ ¡Bien! ':'❌ Era '+arm.k[1].join(' / ')+' mayor. ')+'Aciertos: '+arm.bien+'/'+arm.total;
+  arm.k=null;arm.t=setTimeout(armNueva,ok?700:2000);}
 function lectResp(letra,btn){if(!lect.nota)return;lect.total++;var ok=letra===lect.nota;
   if(ok){lect.bien++;lect.racha++;btn.className='ok';}else{lect.racha=0;btn.className='ko';}
   document.getElementById('lect-fb').textContent=(ok?'✅ ¡Bien! ':'❌ Era '+NOMBRE[lect.nota]+'. ')+'Aciertos: '+lect.bien+'/'+lect.total+' · racha: '+lect.racha;

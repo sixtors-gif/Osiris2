@@ -17,7 +17,7 @@ Cursos en formato **SCORM 1.2** listos para importar en Moodle. Autor: Sixto Rod
 | Protección de Datos en Hostelería y Restauración | `cursos/Curso_Proteccion_Datos_Hosteleria_SCORM` | 13 módulos, examen de 26 preguntas, banco GIFT de 37 |
 | Informática básica para jóvenes | `cursos/Curso_Informatica_Basica_Jovenes_SCORM` | 12 módulos con 11 ilustraciones, examen de 24 preguntas, banco GIFT de 36 |
 | Matemática Básica | `cursos/Matematica_Basica_SCORM_mejorado` | 10 módulos (regla de tres y porcentajes), repaso de 5 preguntas, examen de 20, banco GIFT de 40 |
-| Piano: nivel intermedio y avanzado | `cursos/Curso_Piano_Intermedio_Avanzado_SCORM` | 14 módulos con «En pocas palabras», explicaciones paso a paso, planes de práctica y errores frecuentes; teoría a fondo (notas faro, intervalos justos, mayores, menores, aumentados y disminuidos, círculo de quintas, tonalidad, modulación y transporte); 32 partituras interactivas (con audio) y cuaderno PDF, glosario, metrónomo, entrenador de lectura, examen de 33 preguntas, banco GIFT de 65 |
+| Piano: nivel intermedio y avanzado | `cursos/Curso_Piano_Intermedio_Avanzado_SCORM` | 14 módulos con «En pocas palabras», teoría a fondo (ritmo y compases, intervalos, círculo de quintas, escalas y modos, armonización, progresiones, forma, séptimas, blues, dinámica…), pasos con «Cómo se hace», planes de práctica y errores frecuentes; **planning de 6 meses (1 hora al día)** con PDF imprimible y diario de práctica; **gimnasio de 38 ejercicios prácticos**; 61 partituras interactivas (con audio) y cuaderno PDF, glosario, metrónomo, entrenadores de notas faro, intervalos y armaduras, examen de 42 preguntas, banco GIFT de 97 |
 | Introducción a Ubuntu para usuarios | `cursos/Curso_Ubuntu_Introduccion_SCORM` | 17 módulos (2 prácticos con simuladores de ventanas y de Archivos), examen de 35 preguntas, banco GIFT de 52 |
 
 ## Uso en Moodle
@@ -49,7 +49,7 @@ python3 herramientas/generar_ciberseguridad_avanzada_examen.py cursos/CiberSegur
 python3 herramientas/scorm_seguimiento.py
 ```
 
-El curso de Piano se genera con `herramientas/generar_curso_piano.py` (partituras en `herramientas/piano_partituras.py`, explicaciones ampliadas en `herramientas/piano_explicaciones.py` y `herramientas/piano_teoria.py`, PDF con `herramientas/piano_pdf.js`).
+El curso de Piano se genera con `herramientas/generar_curso_piano.py` (partituras en `herramientas/piano_partituras.py`, explicaciones ampliadas en `herramientas/piano_explicaciones.py` y `herramientas/piano_teoria.py` y `herramientas/piano_teoria2.py`, ejercicios y planning en `herramientas/piano_ejercicios.py`, partituras de la ampliación en `herramientas/piano_partituras2.py`, PDF con `herramientas/piano_pdf.js`).
 
 El curso de Informática básica se genera igual:
 

@@ -1,0 +1,12 @@
+X:48
+T:Paso del pulgar
+C:Dedos 1-2-3 subiendo y 3-2-1 bajando
+M:6/8
+L:1/8
+Q:3/8=60
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:C
+[V:RH] !1!C!2!D!3!E !1!F!2!G!3!A | !1!B!2!c!3!d !1!e!2!f!3!g | !3!g!2!f!1!e !3!d!2!c!1!B | !3!A!2!G!1!F !3!E!2!D!1!C |]
+[V:LH] !3!C,!2!D,!1!E, !3!F,!2!G,!1!A, | !3!B,!2!C!1!D !3!E!2!F!1!G | !1!G!2!F!3!E !1!D!2!C!3!B, | !1!A,!2!G,!3!F, !1!E,!2!D,!3!C, |]

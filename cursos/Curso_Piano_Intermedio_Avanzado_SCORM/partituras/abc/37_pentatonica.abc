@@ -1,0 +1,12 @@
+X:37
+T:Pentatónicas de Do mayor y La menor
+C:Cinco notas, sin semitonos: es difícil que suenen mal
+M:4/4
+L:1/4
+Q:1/4=88
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:C
+[V:RH] "^Do mayor pentatónica"C D E G | A c A G | E D C2 || "^La menor pentatónica"A, C D E | G A G E | D C A,2 |]
+[V:LH] C,2 G,2 | C,2 G,2 | C,4 || A,,2 E,2 | A,,2 E,2 | A,,4 |]

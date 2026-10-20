@@ -1,0 +1,12 @@
+X:51
+T:Lectura 1 · notas vecinas y terceras
+C:Do mayor · 4/4 · posición de cinco dedos
+M:4/4
+L:1/4
+Q:1/4=72
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:C
+[V:RH] E F G E | F E D2 | E G c G | E D C2 | D F A F | E G E C | D E F D | C4 |]
+[V:LH] C,2 G,,2 | C,2 G,,2 | C,2 E,2 | G,,2 C,2 | D,2 F,2 | C,2 E,2 | G,,2 G,,2 | C,4 |]

@@ -15,49 +15,55 @@
       <item identifier="ITEM_00" identifierref="RES_INDEX">
         <title>Presentación del curso</title>
       </item>
-      <item identifier="ITEM_01" identifierref="RES_MODULO1">
+      <item identifier="ITEM_01" identifierref="RES_PLANIFICACION">
+        <title>Planning de 6 meses (1 hora al día)</title>
+      </item>
+      <item identifier="ITEM_02" identifierref="RES_MODULO1">
         <title>Módulo 1: Cómo estudiar: método, rutina y metrónomo</title>
       </item>
-      <item identifier="ITEM_02" identifierref="RES_MODULO2">
+      <item identifier="ITEM_03" identifierref="RES_MODULO2">
         <title>Módulo 2: Lectura avanzada: claves, ritmos y compases</title>
       </item>
-      <item identifier="ITEM_03" identifierref="RES_MODULO3">
+      <item identifier="ITEM_04" identifierref="RES_MODULO3">
         <title>Módulo 3: Escalas en todas las tonalidades</title>
       </item>
-      <item identifier="ITEM_04" identifierref="RES_MODULO4">
+      <item identifier="ITEM_05" identifierref="RES_MODULO4">
         <title>Módulo 4: Arpegios, acordes e inversiones</title>
       </item>
-      <item identifier="ITEM_05" identifierref="RES_MODULO5">
+      <item identifier="ITEM_06" identifierref="RES_MODULO5">
         <title>Módulo 5: Armonía funcional aplicada al teclado</title>
       </item>
-      <item identifier="ITEM_06" identifierref="RES_MODULO6">
+      <item identifier="ITEM_07" identifierref="RES_MODULO6">
         <title>Módulo 6: Independencia de manos y acompañamientos</title>
       </item>
-      <item identifier="ITEM_07" identifierref="RES_MODULO7">
+      <item identifier="ITEM_08" identifierref="RES_MODULO7">
         <title>Módulo 7: El pedal</title>
       </item>
-      <item identifier="ITEM_08" identifierref="RES_MODULO8">
+      <item identifier="ITEM_09" identifierref="RES_MODULO8">
         <title>Módulo 8: Repertorio intermedio: analizar antes de tocar</title>
       </item>
-      <item identifier="ITEM_09" identifierref="RES_MODULO9">
+      <item identifier="ITEM_10" identifierref="RES_MODULO9">
         <title>Módulo 9: Técnica avanzada: octavas, terceras y adornos</title>
       </item>
-      <item identifier="ITEM_10" identifierref="RES_MODULO10">
+      <item identifier="ITEM_11" identifierref="RES_MODULO10">
         <title>Módulo 10: Polirritmia: 3 contra 2 y 4 contra 3</title>
       </item>
-      <item identifier="ITEM_11" identifierref="RES_MODULO11">
+      <item identifier="ITEM_12" identifierref="RES_MODULO11">
         <title>Módulo 11: Armonía avanzada: séptimas, tensiones y voicings</title>
       </item>
-      <item identifier="ITEM_12" identifierref="RES_MODULO12">
+      <item identifier="ITEM_13" identifierref="RES_MODULO12">
         <title>Módulo 12: Improvisación: blues y reharmonización</title>
       </item>
-      <item identifier="ITEM_13" identifierref="RES_MODULO13">
+      <item identifier="ITEM_14" identifierref="RES_MODULO13">
         <title>Módulo 13: Interpretación y estilos</title>
       </item>
-      <item identifier="ITEM_14" identifierref="RES_MODULO14">
+      <item identifier="ITEM_15" identifierref="RES_MODULO14">
         <title>Módulo 14: Preparar una obra y tocar en público</title>
       </item>
-      <item identifier="ITEM_15" identifierref="RES_EXAMEN_FINAL">
+      <item identifier="ITEM_16" identifierref="RES_EJERCICIOS">
+        <title>Gimnasio: ejercicios prácticos</title>
+      </item>
+      <item identifier="ITEM_17" identifierref="RES_EXAMEN_FINAL">
         <title>Examen final</title>
       </item>
     </organization>
@@ -67,6 +73,7 @@
       <file href="index.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -115,12 +122,126 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
+      <file href="licencias/abcjs-LICENSE.md"/>
+    </resource>
+    <resource identifier="RES_PLANIFICACION" type="webcontent" adlcp:scormtype="sco" href="planificacion.html">
+      <file href="planificacion.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
+      <file href="abcjs-basic-min.js"/>
+      <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
+      <file href="img/circulo_quintas.svg"/>
+      <file href="img/circulo_vecinos.svg"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
+      <file href="img/teclado_acordes.svg"/>
+      <file href="img/teclado_blues.svg"/>
+      <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
+      <file href="img/teclado_re_mayor_md.svg"/>
+      <file href="img/teclado_rootless.svg"/>
+      <file href="partituras/Cuaderno_de_partituras.pdf"/>
+      <file href="partituras/cuaderno.html"/>
+      <file href="partituras/abc/01_escala_do.abc"/>
+      <file href="partituras/abc/02_escala_lam.abc"/>
+      <file href="partituras/abc/03_arpegio_do.abc"/>
+      <file href="partituras/abc/04_inversiones.abc"/>
+      <file href="partituras/abc/05_cadencia.abc"/>
+      <file href="partituras/abc/06_alberti.abc"/>
+      <file href="partituras/abc/07_pedal.abc"/>
+      <file href="partituras/abc/08_bach846.abc"/>
+      <file href="partituras/abc/09_elise.abc"/>
+      <file href="partituras/abc/10_octavas.abc"/>
+      <file href="partituras/abc/11_terceras.abc"/>
+      <file href="partituras/abc/12_adornos.abc"/>
+      <file href="partituras/abc/13_poli32.abc"/>
+      <file href="partituras/abc/14_poli43.abc"/>
+      <file href="partituras/abc/15_iivi.abc"/>
+      <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
+      <file href="partituras/abc/24_faros_sol.abc"/>
+      <file href="partituras/abc/25_faros_fa.abc"/>
+      <file href="partituras/abc/26_intervalos.abc"/>
+      <file href="partituras/abc/27_armaduras_sost.abc"/>
+      <file href="partituras/abc/28_armaduras_bem.abc"/>
+      <file href="partituras/abc/29_tono_do.abc"/>
+      <file href="partituras/abc/30_tono_lam.abc"/>
+      <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO1" type="webcontent" adlcp:scormtype="sco" href="modulo1.html">
       <file href="modulo1.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -169,12 +290,42 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO2" type="webcontent" adlcp:scormtype="sco" href="modulo2.html">
       <file href="modulo2.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -223,12 +374,42 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO3" type="webcontent" adlcp:scormtype="sco" href="modulo3.html">
       <file href="modulo3.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -277,12 +458,42 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO4" type="webcontent" adlcp:scormtype="sco" href="modulo4.html">
       <file href="modulo4.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -331,12 +542,42 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO5" type="webcontent" adlcp:scormtype="sco" href="modulo5.html">
       <file href="modulo5.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -385,12 +626,42 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO6" type="webcontent" adlcp:scormtype="sco" href="modulo6.html">
       <file href="modulo6.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -439,12 +710,42 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO7" type="webcontent" adlcp:scormtype="sco" href="modulo7.html">
       <file href="modulo7.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -493,12 +794,42 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO8" type="webcontent" adlcp:scormtype="sco" href="modulo8.html">
       <file href="modulo8.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -547,12 +878,42 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO9" type="webcontent" adlcp:scormtype="sco" href="modulo9.html">
       <file href="modulo9.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -601,12 +962,42 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO10" type="webcontent" adlcp:scormtype="sco" href="modulo10.html">
       <file href="modulo10.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -655,12 +1046,42 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO11" type="webcontent" adlcp:scormtype="sco" href="modulo11.html">
       <file href="modulo11.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -709,12 +1130,42 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO12" type="webcontent" adlcp:scormtype="sco" href="modulo12.html">
       <file href="modulo12.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -763,12 +1214,42 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO13" type="webcontent" adlcp:scormtype="sco" href="modulo13.html">
       <file href="modulo13.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -817,12 +1298,42 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO14" type="webcontent" adlcp:scormtype="sco" href="modulo14.html">
       <file href="modulo14.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -871,12 +1382,126 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
+      <file href="licencias/abcjs-LICENSE.md"/>
+    </resource>
+    <resource identifier="RES_EJERCICIOS" type="webcontent" adlcp:scormtype="sco" href="ejercicios.html">
+      <file href="ejercicios.html"/>
+      <file href="style.css"/>
+      <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
+      <file href="abcjs-basic-min.js"/>
+      <file href="piano.js"/>
+      <file href="img/calidades_intervalos.svg"/>
+      <file href="img/circulo_quintas.svg"/>
+      <file href="img/circulo_vecinos.svg"/>
+      <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
+      <file href="img/teclado_acordes.svg"/>
+      <file href="img/teclado_blues.svg"/>
+      <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
+      <file href="img/teclado_re_mayor_md.svg"/>
+      <file href="img/teclado_rootless.svg"/>
+      <file href="partituras/Cuaderno_de_partituras.pdf"/>
+      <file href="partituras/cuaderno.html"/>
+      <file href="partituras/abc/01_escala_do.abc"/>
+      <file href="partituras/abc/02_escala_lam.abc"/>
+      <file href="partituras/abc/03_arpegio_do.abc"/>
+      <file href="partituras/abc/04_inversiones.abc"/>
+      <file href="partituras/abc/05_cadencia.abc"/>
+      <file href="partituras/abc/06_alberti.abc"/>
+      <file href="partituras/abc/07_pedal.abc"/>
+      <file href="partituras/abc/08_bach846.abc"/>
+      <file href="partituras/abc/09_elise.abc"/>
+      <file href="partituras/abc/10_octavas.abc"/>
+      <file href="partituras/abc/11_terceras.abc"/>
+      <file href="partituras/abc/12_adornos.abc"/>
+      <file href="partituras/abc/13_poli32.abc"/>
+      <file href="partituras/abc/14_poli43.abc"/>
+      <file href="partituras/abc/15_iivi.abc"/>
+      <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
+      <file href="partituras/abc/24_faros_sol.abc"/>
+      <file href="partituras/abc/25_faros_fa.abc"/>
+      <file href="partituras/abc/26_intervalos.abc"/>
+      <file href="partituras/abc/27_armaduras_sost.abc"/>
+      <file href="partituras/abc/28_armaduras_bem.abc"/>
+      <file href="partituras/abc/29_tono_do.abc"/>
+      <file href="partituras/abc/30_tono_lam.abc"/>
+      <file href="partituras/abc/31_modulacion.abc"/>
+      <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_EXAMEN_FINAL" type="webcontent" adlcp:scormtype="sco" href="examen_final.html">
       <file href="examen_final.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="Planning_6_meses_piano.pdf"/>
       <file href="abcjs-basic-min.js"/>
       <file href="piano.js"/>
       <file href="img/calidades_intervalos.svg"/>
@@ -925,6 +1550,35 @@
       <file href="partituras/abc/30_tono_lam.abc"/>
       <file href="partituras/abc/31_modulacion.abc"/>
       <file href="partituras/abc/32_calidades.abc"/>
+      <file href="partituras/abc/33_compases.abc"/>
+      <file href="partituras/abc/34_anacrusa.abc"/>
+      <file href="partituras/abc/35_hemiola.abc"/>
+      <file href="partituras/abc/36_modos_do.abc"/>
+      <file href="partituras/abc/37_pentatonica.abc"/>
+      <file href="partituras/abc/38_cromatica.abc"/>
+      <file href="partituras/abc/39_armonizar_do.abc"/>
+      <file href="partituras/abc/40_sus_slash.abc"/>
+      <file href="partituras/abc/41_progresiones.abc"/>
+      <file href="partituras/abc/42_canon_prog.abc"/>
+      <file href="partituras/abc/43_periodo.abc"/>
+      <file href="partituras/abc/44_forma_aba.abc"/>
+      <file href="partituras/abc/45_iivi_menor.abc"/>
+      <file href="partituras/abc/46_dinamicas.abc"/>
+      <file href="partituras/abc/47_ej_5dedos.abc"/>
+      <file href="partituras/abc/48_ej_pulgar.abc"/>
+      <file href="partituras/abc/49_ej_ritmos_escala.abc"/>
+      <file href="partituras/abc/50_ej_arpegios_tres.abc"/>
+      <file href="partituras/abc/51_ej_lectura1.abc"/>
+      <file href="partituras/abc/52_ej_lectura2.abc"/>
+      <file href="partituras/abc/53_ej_lectura3.abc"/>
+      <file href="partituras/abc/54_ej_saltos.abc"/>
+      <file href="partituras/abc/55_ej_intervalos.abc"/>
+      <file href="partituras/abc/56_ej_sincopas.abc"/>
+      <file href="partituras/abc/57_ej_independencia.abc"/>
+      <file href="partituras/abc/58_ej_pentatonica.abc"/>
+      <file href="partituras/abc/59_ej_transporte.abc"/>
+      <file href="partituras/abc/60_ej_cadencia_lam.abc"/>
+      <file href="partituras/abc/61_ej_septimas.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
   </resources>

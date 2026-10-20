@@ -14,6 +14,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from piano_partituras import PIEZAS  # noqa: E402
 from piano_explicaciones import EXTRA, GLOSARIO, PALABRAS, pasos  # noqa: E402
 from piano_teoria import GLOSARIO_TEORIA, TEORIA  # noqa: E402
+import piano_partituras2  # noqa: E402,F401  (registra las partituras de la ampliación en PIEZAS)
+from piano_teoria2 import TEORIA_EXTRA  # noqa: E402
+from piano_ejercicios import PLAN_JS, ejercicios_html, lista_ejercicios, planning_html  # noqa: E402
 
 OUT, ABCJS = sys.argv[1], sys.argv[2]
 RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
@@ -72,8 +75,23 @@ details.glos{border:1px solid #dfe5ef;border-radius:12px;padding:10px 16px;margi
 details.glos summary{cursor:pointer;font-weight:700;color:#1e3c72;font-size:1.05em}
 .module h4{color:#1e3c72;margin:18px 0 6px;font-size:1.05em}
 .como{background:#f2f6ff;border-left:4px solid #6c8ccf;border-radius:8px;padding:8px 12px;margin:6px 0 10px;font-size:.95em;line-height:1.6}.como>b:first-child{color:#3b5ba8}
+.ejercicio{background:#fff;border:1px solid #dfe5ef;border-left:5px solid #1e3c72;border-radius:12px;padding:6px 18px 12px;margin:18px 0}
+.ejercicio h4{margin:12px 0 6px;font-size:1.1em;color:#1e3c72}
+.ej-id{display:inline-block;background:#1e3c72;color:#fff;border-radius:8px;padding:1px 9px;margin-right:6px;font-size:.9em}
+.ej-meta{float:right;font-size:.85em;color:#777;font-weight:400}
+.ej-meta-fin{background:#eef7ee;border-radius:8px;padding:8px 12px;margin-top:8px}
+.mes{background:#f8faff;border:1px solid #dfe5ef;border-radius:12px;padding:6px 18px 4px;margin:14px 0}
+.mes .checklist{list-style:none;padding-left:0;margin:6px 0 12px}
+.tabla-plan td,.tabla-plan th{font-size:.92em}
+.tabla-plan tr.mes2 td{background:#f2f6ff}.tabla-plan tr.mes4 td{background:#f2f6ff}.tabla-plan tr.mes6 td{background:#f2f6ff}
+.tabla-plan tr.mes1 td,.tabla-plan tr.mes3 td,.tabla-plan tr.mes5 td{background:#fff}
+.tabla-plan input{width:20px;height:20px}
+.plan-prog{margin:8px 0}.plan-barra{display:inline-block;width:160px;height:10px;background:#dfe5ef;border-radius:6px;margin-left:8px;vertical-align:middle;overflow:hidden}
+.plan-barra span{display:block;height:100%;width:0;background:#4caf50}
+.tabla-diario td{height:34px}
+.lect-btns button.sel{background:#1e3c72;color:#fff}
 .module ol{margin:10px 0 14px 28px}.module ol li{line-height:1.7;font-size:1.05em;padding:2px 0}
-@media print{.score-tools,.navigation,.progress-container{display:none}}
+@media print{.score-tools,.navigation,.progress-container,.header img,.dl-box,.footer-autor{display:none}body{background:#fff}.container{max-width:none}.tabla-plan td,.tabla-plan th{font-size:.78em;padding:5px 6px}h2,h3{break-after:avoid}.tabla-plan tr,.ejercicio,.mes{break-inside:avoid}.container{box-shadow:none}}
 """
 open(os.path.join(OUT, "style.css"), "w", encoding="utf-8").write(base + extra)
 
@@ -129,6 +147,42 @@ function lectNueva(){var modo=document.getElementById('lect-clave').value;var cl
   var lista=LECT[clave],n=lista[Math.floor(Math.random()*lista.length)];lect.nota=n.replace(/[,']/g,'').toUpperCase();
   ABCJS.renderAbc('lect-pent','X:1\nL:1/1\nK:C clef='+(clave==='sol'?'treble':'bass')+'\n'+n+'|',{scale:1.6,staffwidth:150,paddingleft:10});
   document.querySelectorAll('.lect-btns button').forEach(function(b){b.className='';});document.getElementById('lect-fb').textContent='¿Qué nota es?';}
+// Entrenador de intervalos: dos notas, el alumno elige número y calidad
+var INT={bien:0,total:0,n:null,c:null,sel:{n:null,c:null}},SEMI=[0,2,4,5,7,9,11],REF=[0,2,4,5,7,9,11,12],LETRAS=['C','D','E','F','G','A','B'];
+var CAL=['justa','mayor','menor','aumentada','disminuida'];
+function intAbc(d,a){var o=Math.floor(d/7),l=LETRAS[d%7],ac=a>0?'^':(a<0?'_':'');if(o===0)return ac+l;if(o===1)return ac+l.toLowerCase();return ac+l.toLowerCase()+"'";}
+function intNueva(){
+  clearTimeout(INT.t);
+  for(var k=0;k<200;k++){
+    var d1=Math.floor(Math.random()*8),n=2+Math.floor(Math.random()*7),d2=d1+n-1,a1=[0,0,0,1,-1][Math.floor(Math.random()*5)],a2=[0,0,0,1,-1][Math.floor(Math.random()*5)];
+    var s1=12*Math.floor(d1/7)+SEMI[d1%7]+a1,s2=12*Math.floor(d2/7)+SEMI[d2%7]+a2,sem=s2-s1,dif=sem-REF[n-1],c=null;
+    if(n===4||n===5||n===8){c=dif===0?'justa':(dif===1?'aumentada':(dif===-1?'disminuida':null));}
+    else{c=dif===0?'mayor':(dif===-1?'menor':(dif===1?'aumentada':(dif===-2?'disminuida':null)));}
+    if(!c||sem<1)continue;
+    INT.n=n;INT.c=c;INT.sel={n:null,c:null};INT.sem=sem;
+    ABCJS.renderAbc('int-pent','X:1\nL:1/1\nK:C clef=treble\n['+intAbc(d1,a1)+intAbc(d2,a2)+']|',{scale:1.6,staffwidth:150,paddingleft:10});
+    document.querySelectorAll('#int-num button,#int-cal button').forEach(function(b){b.className='';});
+    document.getElementById('int-fb').textContent='¿Qué intervalo forman estas dos notas?';return;
+  }
+}
+function intElige(tipo,v,btn){if(!INT.n)return;INT.sel[tipo]=v;document.querySelectorAll(tipo==='n'?'#int-num button':'#int-cal button').forEach(function(b){b.className='';});btn.className='sel';}
+function intComprobar(){
+  if(!INT.n)return;if(!INT.sel.n||!INT.sel.c){document.getElementById('int-fb').textContent='Elige el número y la calidad.';return;}
+  INT.total++;var ok=INT.sel.n===INT.n&&INT.sel.c===INT.c;if(ok)INT.bien++;
+  document.getElementById('int-fb').textContent=(ok?'✅ ¡Correcto! ':'❌ Era una '+INT.n+'.ª '+INT.c+' ('+INT.sem+' semitonos). ')+(ok?'('+INT.sem+' semitonos). ':'')+'Aciertos: '+INT.bien+'/'+INT.total;
+  INT.n=null;INT.t=setTimeout(intNueva,ok?900:2400);
+}
+// Entrenador de armaduras: aparece una armadura y se pregunta la tonalidad mayor
+var ARM_T=[['C',['Do']],['G',['Sol']],['D',['Re']],['A',['La']],['E',['Mi']],['B',['Si']],['F#',['Fa♯']],['C#',['Re♭','Do♯']],
+           ['F',['Fa']],['Bb',['Si♭']],['Eb',['Mi♭']],['Ab',['La♭']],['Db',['Re♭','Do♯']],['Gb',['Fa♯','Sol♭']],['Cb',['Si','Do♭']]],
+    arm={k:null,bien:0,total:0};
+function armNueva(){clearTimeout(arm.t);var t=ARM_T[Math.floor(Math.random()*ARM_T.length)];arm.k=t;
+  ABCJS.renderAbc('arm-pent','X:1\nL:1\nK:'+t[0]+' clef=treble\nz|',{scale:1.6,staffwidth:200,paddingleft:10});
+  document.querySelectorAll('#arm-btns button').forEach(function(b){b.className='';});document.getElementById('arm-fb').textContent='¿Qué tonalidad mayor es?';}
+function armResp(nombre,btn){if(!arm.k)return;arm.total++;var ok=arm.k[1].indexOf(nombre)>=0;
+  if(ok){arm.bien++;btn.className='ok';}else{btn.className='ko';}
+  document.getElementById('arm-fb').textContent=(ok?'✅ ¡Bien! ':'❌ Era '+arm.k[1].join(' / ')+' mayor. ')+'Aciertos: '+arm.bien+'/'+arm.total;
+  arm.k=null;arm.t=setTimeout(armNueva,ok?700:2000);}
 function lectResp(letra,btn){if(!lect.nota)return;lect.total++;var ok=letra===lect.nota;
   if(ok){lect.bien++;lect.racha++;btn.className='ok';}else{lect.racha=0;btn.className='ko';}
   document.getElementById('lect-fb').textContent=(ok?'✅ ¡Bien! ':'❌ Era '+NOMBRE[lect.nota]+'. ')+'Aciertos: '+lect.bien+'/'+lect.total+' · racha: '+lect.racha;
@@ -305,11 +359,7 @@ def partitura(clave):
             + (f'<p class="score-note">{p["nota"]}</p>' if p["nota"] else "") + "</div>")
 
 
-def pagina(n, icono, titulo, sub, cuerpo):
-    prev = "index.html" if n == 1 else f"modulo{n-1}.html"
-    nxt = "examen_final.html" if n == N else f"modulo{n+1}.html"
-    lbl = "Ir al examen final 🏁" if n == N else "Siguiente módulo ➡️"
-    nivel = "Nivel intermedio" if n <= 8 else "Nivel avanzado"
+def _marco(titulo_pag, icono, h1, sub, cuerpo, prev, nxt, lbl, pct, etiqueta, script_final=""):
     # Cada página lleva solo las partituras que muestra
     datos = json.dumps({k: PIEZAS[k]["abc"] for k in re.findall(r'id="p-(\w+)"', cuerpo)}, ensure_ascii=False)
     return f"""<!DOCTYPE html>
@@ -317,19 +367,19 @@ def pagina(n, icono, titulo, sub, cuerpo):
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Módulo {n}: {titulo}</title>
+<title>{titulo_pag}</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
   <div class="header">
-    <h1><span class="shield-icon">{icono}</span>Módulo {n}: {titulo}</h1>
+    <h1><span class="shield-icon">{icono}</span>{h1}</h1>
     <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
     <p>{sub}</p>
   </div>
   <div class="progress-container">
-    <div class="progress-bar"><div class="progress-fill" style="width:{round(n*100/(N+1))}%"></div></div>
-    <div class="progress-text">Piano · {nivel} · Módulo {n} de {N}</div>
+    <div class="progress-bar"><div class="progress-fill" style="width:{pct}%"></div></div>
+    <div class="progress-text">{etiqueta}</div>
   </div>
   <div class="content-area">
     <section class="module">
@@ -346,9 +396,19 @@ def pagina(n, icono, titulo, sub, cuerpo):
 <script src="abcjs-basic-min.js"></script>
 <script src="piano.js"></script>
 <script src="scorm.js"></script>
+{script_final}
 </body>
 </html>
 """
+
+
+def pagina(n, icono, titulo, sub, cuerpo):
+    prev = "planificacion.html" if n == 1 else f"modulo{n-1}.html"
+    nxt = "ejercicios.html" if n == N else f"modulo{n+1}.html"
+    lbl = "Ir al gimnasio de ejercicios 🏋️" if n == N else "Siguiente módulo ➡️"
+    nivel = "Nivel intermedio" if n <= 8 else "Nivel avanzado"
+    return _marco(f"Módulo {n}: {titulo}", icono, f"Módulo {n}: {titulo}", sub, cuerpo, prev, nxt, lbl,
+                  round(n * 100 / (N + 2)), f"Piano · {nivel} · Módulo {n} de {N}")
 
 
 DESCARGA = '<div class="dl-box">📥 <b>Partituras para imprimir:</b> todas las del curso están en el <a href="partituras/Cuaderno_de_partituras.pdf" target="_blank" rel="noopener">Cuaderno de partituras (PDF)</a>.</div>'
@@ -659,15 +719,27 @@ M.append(("🏆", "Preparar una obra y tocar en público", "Proyecto final: de l
 assert len(M) == N
 
 
+ENTRENADORES = {
+    "intervalos": ('<div class="activity" id="int-box"><div id="int-pent" style="max-width:260px"></div><p class="feedback" id="int-fb">Pulsa «Empezar».</p>'
+                   '<p><b>Número:</b></p><div class="lect-btns" id="int-num">' + "".join(f'<button onclick="intElige(\'n\',{n},this)">{n}.ª</button>' for n in range(2, 9)) + '</div>'
+                   '<p><b>Calidad:</b></p><div class="lect-btns" id="int-cal">' + "".join(f'<button onclick="intElige(\'c\',\'{c}\',this)">{c.capitalize()}</button>' for c in ("justa", "mayor", "menor", "aumentada", "disminuida")) + '</div>'
+                   '<p><button class="btn" onclick="intComprobar()">Comprobar</button> <button class="btn" onclick="intNueva()">Empezar / otro intervalo</button></p></div>'),
+    "armaduras": ('<div class="activity"><div id="arm-pent" style="max-width:300px"></div><p class="feedback" id="arm-fb">Pulsa «Empezar».</p>'
+                  '<div class="lect-btns" id="arm-btns">' + "".join(f'<button onclick="armResp(\'{n}\',this)">{n}</button>' for n in ("Do", "Sol", "Re", "La", "Mi", "Si", "Fa♯", "Fa", "Si♭", "Mi♭", "La♭", "Re♭")) + '</div>'
+                  '<p><button class="btn" onclick="armNueva()">Empezar / otra armadura</button></p></div>'),
+}
+
+
 def ampliar(i, body):
     """Añade «En pocas palabras» al principio y las explicaciones extra antes de la primera autoevaluación."""
     pos = body.find('<div class="quiz">')
     pos = len(body) if pos < 0 else pos
     body = PALABRAS[i] + body[:pos] + EXTRA[i] + "\n" + body[pos:]
-    if i in TEORIA:  # teoría a fondo, antes de su marcador
-        marca, teoria = TEORIA[i]
+    bloques = ([TEORIA[i]] if i in TEORIA else []) + TEORIA_EXTRA.get(i, [])
+    for marca, teoria in bloques:  # teoría a fondo, antes de su marcador
         pos = body.index(marca)
         body = body[:pos] + teoria + "\n" + body[pos:]
+    body = re.sub(r"\[\[entrenador:(\w+)\]\]", lambda m: ENTRENADORES[m.group(1)], body)
     body = re.sub(r"\[\[partitura:(\w+)\]\]", lambda m: partitura(m.group(1)), body)
     body = re.sub(r"\[\[fig:([^|\]]+)\|([^|\]]+)\|([^\]]+)\]\]", lambda m: fig(*m.groups()), body)
     body = re.sub(r"\[\[quiz:(\w+)\|([^|\]]+)\|([^|\]]+)\|(\d)\|([^\]]+)\]\]",
@@ -680,12 +752,21 @@ M = [(ic, t, sub, ampliar(i, body)) for i, (ic, t, sub, body) in enumerate(M, 1)
 for i, (ic, t, sub, body) in enumerate(M, 1):
     open(os.path.join(OUT, f"modulo{i}.html"), "w", encoding="utf-8").write(pagina(i, ic, t, sub, body))
 
+# Gimnasio de ejercicios y planning de 6 meses ---------------------------------------------------------
+EJERCICIOS_HTML = ejercicios_html(partitura)
+N_EJ = len(lista_ejercicios())
+open(os.path.join(OUT, "ejercicios.html"), "w", encoding="utf-8").write(_marco(
+    "Gimnasio: ejercicios prácticos", "🏋️", "Gimnasio de ejercicios prácticos",
+    "Ejercicios con partitura, pasos, tiempo y una meta medible para cada día.",
+    "<h2>Ejercicios prácticos</h2>\n" + EJERCICIOS_HTML, f"modulo{N}.html", "examen_final.html", "Ir al examen final 🏁",
+    round((N + 1) * 100 / (N + 2)), "Piano · Gimnasio de ejercicios"))
+
 # Cuaderno de partituras (para imprimir y generar el PDF) ------------------------------------------
 orden = ["escala_do", "escala_lam", "arpegio_do", "inversiones", "cadencia", "alberti", "pedal", "bach846", "elise",
          "octavas", "terceras", "adornos", "poli32", "poli43", "iivi", "blues",
          "pulso_68", "ritmos", "escala_sol", "escala_fa", "cadencia_sol", "vals", "blues_frase",
          "faros_sol", "faros_fa", "intervalos", "armaduras_sost", "armaduras_bem", "tono_do", "tono_lam", "modulacion", "calidades"]
-assert set(orden) == set(PIEZAS)
+orden += [k for k in PIEZAS if k not in orden]  # las partituras de la ampliación, al final, en el orden en que se definen
 bloques = "".join(f'<section class="pieza"><h2>{i}. {PIEZAS[k]["titulo"]}</h2><div id="p-{k}"></div><p>{PIEZAS[k]["nota"]}</p></section>' for i, k in enumerate(orden, 1))
 cuaderno = f"""<!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -780,6 +861,41 @@ Q += [
  (5, "La progresión I–vi–IV–V transportada a Re mayor es…", ["Re – Si m – Sol – La", "Re – Mi m – Sol – La", "Re – Si m – Do – La", "Re – Fa♯ m – Sol – Si m"], 0, False),
  (12, "¿Qué es una frase de «pregunta y respuesta» al improvisar?", ["Una idea corta seguida de otra que la contesta y cierra, a menudo en la tónica", "Tocar la escala de arriba abajo", "Repetir la misma nota todo el compás", "Cambiar de tonalidad en cada compás"], 0, False),
 ]
+# Segunda ampliación: ritmo, escalas, armonización, texturas, pedal, forma, ornamentos, séptimas, blues y expresión
+Q += [
+ (2, "En un compás de 9/8, ¿cuántos pulsos se sienten?", ["3 pulsos de negra con puntillo", "9 pulsos de corchea", "2 pulsos", "4 pulsos"], 0, True),
+ (2, "¿Qué hace una ligadura entre dos notas iguales?", ["Las une en un solo sonido con la duración de las dos", "Las toca más fuertes", "Indica que se toquen más rápido", "Indica legato"], 0, False),
+ (2, "Una blanca con puntillo dura…", ["3 negras", "2 negras", "4 negras", "2 negras y media"], 0, False),
+ (2, "¿Qué es la anacrusa?", ["Las notas que empiezan antes del primer compás completo", "Un compás de silencio", "Un adorno de la mano izquierda", "El último compás de una obra"], 0, False),
+ (3, "¿Qué notas se quitan de la escala mayor para formar la pentatónica?", ["El 4.º y el 7.º grados", "El 1.º y el 5.º", "El 2.º y el 6.º", "El 3.º y el 7.º"], 0, True),
+ (3, "¿Qué modo es «mayor con la 7.ª menor»?", ["Mixolidio", "Dórico", "Lidio", "Frigio"], 0, False),
+ (3, "¿Qué escala menor tiene el 7.º grado subido?", ["La armónica", "La natural", "La pentatónica", "La dórica"], 0, False),
+ (3, "¿Cuál es el patrón de tonos y semitonos de la escala menor natural?", ["T–S–T–T–S–T–T", "T–T–S–T–T–T–S", "S–T–T–S–T–T–T", "T–S–T–S–T–T–T"], 0, False),
+ (4, "En una tonalidad mayor, ¿qué tipo de acorde es el del 6.º grado (vi)?", ["Menor", "Mayor", "Disminuido", "Aumentado"], 0, True),
+ (4, "¿Qué notas forman Csus4?", ["Do–Fa–Sol", "Do–Mi–Sol", "Do–Re–Sol", "Do–Mi–La"], 0, False),
+ (4, "En el cifrado C/E, ¿qué indica la «E»?", ["La nota que toca el bajo", "La tonalidad", "El acorde de Mi", "Una séptima"], 0, False),
+ (5, "¿Qué progresión es I–V–vi–IV en Do mayor?", ["Do–Sol–La m–Fa", "Do–Fa–Sol–Do", "Do–La m–Fa–Sol", "Do–Sol–Fa–La m"], 0, True),
+ (5, "En La menor, ¿cómo suele ser el acorde de dominante?", ["Mayor, con Sol♯", "Menor", "Disminuido", "Aumentado"], 0, False),
+ (5, "Una melodía tiene Mi en el pulso fuerte. ¿Qué acorde de Do mayor NO puede acompañarla?", ["Re m", "Do", "La m", "Mi m"], 0, False),
+ (6, "¿Qué textura tiene una melodía clara con acordes de fondo?", ["Melodía acompañada (homofonía)", "Monodía", "Polifonía", "Heterofonía"], 0, False),
+ (6, "En una fuga a dos voces, ¿qué mano manda?", ["Las dos a igualdad, cada una canta su voz", "Solo la derecha", "Solo la izquierda", "Ninguna"], 0, False),
+ (7, "¿Por qué suenan las cuerdas «por simpatía» con el pedal derecho pisado?", ["Porque quedan libres de apagadores y vibran con los armónicos de otras notas", "Porque el pedal las golpea", "Porque se afinan", "Porque se acortan"], 0, False),
+ (7, "¿Qué hace el medio pedal?", ["Deja los apagadores rozando las cuerdas, con menos resonancia", "Es igual que el pedal completo", "Sube la afinación", "Mantiene solo los graves"], 0, False),
+ (8, "¿Cuál es el esquema de un rondó?", ["A–B–A–C–A", "A–B", "A–B–A", "A–A'–A''"], 0, True),
+ (8, "En un periodo, ¿cómo termina normalmente la primera frase (el antecedente)?", ["En la dominante (semicadencia)", "En la tónica con cadencia perfecta", "Con un silencio", "En el IV grado"], 0, False),
+ (8, "¿Qué diferencia una forma ternaria (A–B–A) de una binaria (A–B)?", ["En la ternaria la música vuelve al principio", "En la ternaria hay más compases", "En la binaria hay un solo tema", "Ninguna"], 0, False),
+ (9, "¿Qué es una acciaccatura?", ["Una apoyatura breve (nota pequeña con barra)", "Una nota larga con puntillo", "Un tipo de pedal", "Un trino prolongado"], 0, False),
+ (10, "En una hemiola, ¿cómo se acentúan las seis negras de dos compases de 3/4?", ["En 1, 3 y 5 (2+2+2)", "En 1 y 4 (3+3)", "En todas por igual", "Solo en la primera"], 0, True),
+ (10, "¿Cómo se agrupa normalmente un compás de 7/8?", ["2+2+3 o 3+2+2", "1+6", "Siete pulsos iguales", "4+3 siempre"], 0, False),
+ (11, "En una tonalidad mayor, ¿qué acorde de séptima es el del V grado?", ["De dominante (7)", "Mayor 7", "Menor 7", "Semidisminuido"], 0, True),
+ (11, "¿Qué acorde es el vii de Do mayor con séptima?", ["Bm7♭5 (semidisminuido)", "Bmaj7", "B7", "Bm7"], 0, False),
+ (11, "¿Qué notas se tocan en un voicing «de shell»?", ["La 3.ª y la 7.ª", "La fundamental y la 5.ª", "Las siete notas de la escala", "La 9.ª y la 13.ª"], 0, False),
+ (12, "¿En qué compases del blues de 12 compases suena el IV grado por primera vez?", ["Compases 5 y 6", "Compases 1 a 4", "Compases 9 y 10", "Compás 12"], 0, True),
+ (12, "¿Qué es un turnaround?", ["Los últimos compases que preparan la vuelta al principio", "Un cambio de tonalidad", "Un adorno de la mano izquierda", "Una escala"], 0, False),
+ (13, "¿Qué significa «mf»?", ["Mezzoforte: medio fuerte", "Muy fuerte", "Mezzopiano: medio suave", "Muy suave"], 0, True),
+ (13, "¿Cuál es la diferencia entre staccato y tenuto?", ["El staccato corta la nota y el tenuto la mantiene", "No hay diferencia", "El tenuto es más rápido", "El staccato es más fuerte"], 0, False),
+ (13, "«Poco a poco crescendo» significa…", ["Ir creciendo lentamente", "Crecer bruscamente", "Pasar a piano", "Acelerar"], 0, False),
+]
 Q.sort(key=lambda q: q[0])
 
 
@@ -793,6 +909,12 @@ def _place(k, q):
 Q = [_place(k, q) for k, q in enumerate(Q)]
 EXAM = [q for q in Q if q[4]]
 NOMBRES = [m[1] for m in M]
+
+open(os.path.join(OUT, "planificacion.html"), "w", encoding="utf-8").write(_marco(
+    "Planning de 6 meses (1 hora al día)", "📅", "Planning de 6 meses · 1 hora al día",
+    "26 semanas, una hora diaria: qué estudiar cada día, cada semana y cada mes.",
+    "<h2>Tu planning de estudio</h2>\n" + planning_html(len(EXAM)), "index.html", "modulo1.html", "Empezar el módulo 1 ➡️",
+    round(100 / (N + 2)), "Piano · Planning de 6 meses", script_final="<script>" + PLAN_JS + "</script>"))
 
 
 def gift_esc(s):
@@ -828,7 +950,7 @@ exam = f"""<!DOCTYPE html>
     {qs_html}
     <div style="text-align:center"><button class="btn" onclick="corregir()">Corregir examen</button> <button class="btn" onclick="reiniciar()">Reintentar</button></div>
     <div id="resultado" style="margin-top:20px"></div>
-    <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo{N}.html')">⬅️ Módulo {N}</button><button class="nav-btn" onclick="scormGo('index.html')">Inicio 🏠</button></div>
+    <div class="navigation"><button class="nav-btn" onclick="scormGo('ejercicios.html')">⬅️ Gimnasio</button><button class="nav-btn" onclick="scormGo('index.html')">Inicio 🏠</button></div>
   </section></div></div>
 <footer class="footer-autor">{FOOTER}</footer>
 <script src="scorm.js"></script>
@@ -846,7 +968,7 @@ function corregir(){{var ok=0,sin=0;for(var i=0;i<RESP.length;i++){{var n=i+1,se
 open(os.path.join(OUT, "examen_final.html"), "w", encoding="utf-8").write(exam)
 
 # Portada ---------------------------------------------------------------------------------------
-itin = "".join(f'<li>{"🎹" if i < 8 else "🎼"} <span><b>{i+1}.</b> <a href="modulo{i+1}.html">{t}</a></span></li>' for i, t in enumerate(NOMBRES))
+itin = '<li>📅 <span><a href="planificacion.html"><b>Planning de 6 meses</b></a> (1 hora al día): qué estudiar cada día y cada semana</span></li>' + "".join(f'<li>{"🎹" if i < 8 else "🎼"} <span><b>{i+1}.</b> <a href="modulo{i+1}.html">{t}</a></span></li>' for i, t in enumerate(NOMBRES))
 glosario = ('<details class="glos"><summary>📖 Glosario: las palabras del curso explicadas fácil (' + str(len(GLOSARIO) + len(GLOSARIO_TEORIA)) + ' términos)</summary><dl class="glosario">'
             + "".join(f"<dt>{t}</dt><dd>{d}</dd>" for t, d in sorted(GLOSARIO + GLOSARIO_TEORIA, key=lambda x: x[0].lower())) + "</dl></details>")
 index = f"""<!DOCTYPE html>
@@ -864,9 +986,9 @@ index = f"""<!DOCTYPE html>
     {glosario}
     <h3>Itinerario</h3>
     <p><b>Nivel intermedio</b> (módulos 1–8) · <b>Nivel avanzado</b> (módulos 9–14)</p>
-    <ul class="key-points">{itin}<li>🏁 <span><a href="examen_final.html">Examen final</a></span></li></ul>
+    <ul class="key-points">{itin}<li>🏋️ <span><a href="ejercicios.html"><b>Gimnasio de ejercicios prácticos</b></a>: {N_EJ} ejercicios con partitura, pasos y meta</span></li><li>🏁 <span><a href="examen_final.html">Examen final</a></span></li></ul>
     <div class="alert-box"><b>Requisitos:</b> un piano o teclado de 88 teclas (mínimo 61) con teclas sensibles a la velocidad y pedal. Para escuchar las partituras hace falta conexión a Internet la primera vez (se descargan los sonidos del piano); el resto del curso funciona sin conexión.</div>
-    <div class="navigation"><span></span><button class="nav-btn" onclick="scormGo('modulo1.html')">Comenzar ➡️</button></div>
+    <div class="navigation"><span></span><button class="nav-btn" onclick="scormGo('planificacion.html')">Ver el planning y comenzar ➡️</button></div>
   </section></div></div>
 <footer class="footer-autor">{FOOTER}</footer>
 <script src="scorm.js"></script>
@@ -896,7 +1018,10 @@ Contenido:
 - partituras/Cuaderno_de_partituras.pdf (para imprimir) y partituras/abc/*.abc (fuentes ABC,
   se abren con MuseScore u otros editores con soporte ABC).
 - Ilustraciones: teclados con digitaciones y círculo de quintas.
-- Metrónomo y entrenador de lectura integrados (sin conexión).
+- planificacion.html y Planning_6_meses_piano.pdf: planning de 6 meses con 1 hora diaria (26 semanas,
+  semana tipo, pruebas de fin de mes, reglas para avanzar y diario de práctica imprimible).
+- ejercicios.html: gimnasio con {N_EJ} ejercicios prácticos (partitura, pasos, tiempo y meta medible).
+- Metrónomo y entrenadores integrados (notas faro, intervalos y armaduras; sin conexión).
 - examen_final.html: {len(EXAM)} preguntas (aprobado 70 %); preguntas_moodle.gift: {len(Q)} preguntas.
 - Seguimiento SCORM: un SCO por página; el índice de Moodle se marca al avanzar.
 

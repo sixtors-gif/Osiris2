@@ -110,6 +110,34 @@ $CATEGORY: Piano intermedio y avanzado/Módulo 02 - Lectura avanzada\: claves, r
 =Un semitono menos que la 3.ª mayor (3 semitonos)
 }
 
+::PIA02-13::En un compás de 9/8, ¿cuántos pulsos se sienten? {
+~2 pulsos
+~9 pulsos de corchea
+=3 pulsos de negra con puntillo
+~4 pulsos
+}
+
+::PIA02-14::¿Qué hace una ligadura entre dos notas iguales? {
+~Las toca más fuertes
+=Las une en un solo sonido con la duración de las dos
+~Indica que se toquen más rápido
+~Indica legato
+}
+
+::PIA02-15::Una blanca con puntillo dura… {
+=3 negras
+~2 negras
+~4 negras
+~2 negras y media
+}
+
+::PIA02-16::¿Qué es la anacrusa? {
+~El último compás de una obra
+~Un compás de silencio
+~Un adorno de la mano izquierda
+=Las notas que empiezan antes del primer compás completo
+}
+
 $CATEGORY: Piano intermedio y avanzado/Módulo 03 - Escalas en todas las tonalidades
 
 ::PIA03-1::¿Qué regla de digitación de escalas es correcta? {
@@ -175,6 +203,34 @@ $CATEGORY: Piano intermedio y avanzado/Módulo 03 - Escalas en todas las tonalid
 ~La misma tonalidad
 }
 
+::PIA03-10::¿Qué notas se quitan de la escala mayor para formar la pentatónica? {
+~El 1.º y el 5.º
+=El 4.º y el 7.º grados
+~El 2.º y el 6.º
+~El 3.º y el 7.º
+}
+
+::PIA03-11::¿Qué modo es «mayor con la 7.ª menor»? {
+=Mixolidio
+~Dórico
+~Lidio
+~Frigio
+}
+
+::PIA03-12::¿Qué escala menor tiene el 7.º grado subido? {
+~La dórica
+~La natural
+~La pentatónica
+=La armónica
+}
+
+::PIA03-13::¿Cuál es el patrón de tonos y semitonos de la escala menor natural? {
+~S–T–T–S–T–T–T
+~T–T–S–T–T–T–S
+=T–S–T–T–S–T–T
+~T–S–T–S–T–T–T
+}
+
 $CATEGORY: Piano intermedio y avanzado/Módulo 04 - Arpegios, acordes e inversiones
 
 ::PIA04-1::¿Qué notas forman la 1.ª inversión de Do mayor? {
@@ -205,92 +261,148 @@ $CATEGORY: Piano intermedio y avanzado/Módulo 04 - Arpegios, acordes e inversio
 ~5
 }
 
+::PIA04-5::En una tonalidad mayor, ¿qué tipo de acorde es el del 6.º grado (vi)? {
+~Mayor
+=Menor
+~Disminuido
+~Aumentado
+}
+
+::PIA04-6::¿Qué notas forman Csus4? {
+=Do–Fa–Sol
+~Do–Mi–Sol
+~Do–Re–Sol
+~Do–Mi–La
+}
+
+::PIA04-7::En el cifrado C/E, ¿qué indica la «E»? {
+~Una séptima
+~La tonalidad
+~El acorde de Mi
+=La nota que toca el bajo
+}
+
 $CATEGORY: Piano intermedio y avanzado/Módulo 05 - Armonía funcional aplicada al teclado
 
 ::PIA05-1::En Do mayor, ¿cuál es el acorde de dominante con séptima (V7)? {
+~Do7\: Do–Mi–Sol–Si♭
 ~Fa mayor\: Fa–La–Do
 =Sol7\: Sol–Si–Re–Fa
-~Do7\: Do–Mi–Sol–Si♭
 ~Re menor\: Re–Fa–La
 }
 
 ::PIA05-2::¿Qué es una cadencia perfecta (auténtica)? {
-=El enlace V–I
 ~El enlace IV–I
+=El enlace V–I
 ~Terminar en el V grado
 ~El enlace V–vi
 }
 
 ::PIA05-3::En cifrado americano, «Am» significa… {
-~Mi menor
+=La menor
 ~La mayor
 ~La séptima
-=La menor
+~Mi menor
 }
 
 ::PIA05-4::En Sol mayor, ¿qué acorde es la dominante (V)? {
-~La menor
-~Do mayor
-=Re mayor
 ~Mi menor
+~Do mayor
+~La menor
+=Re mayor
 }
 
 ::PIA05-5::¿Qué nombre recibe el VII grado cuando está a un semitono de la tónica? {
+~Superdominante
 ~Subtónica
 =Sensible
-~Superdominante
 ~Mediante
 }
 
 ::PIA05-6::Una obra sin armadura termina en La y usa a menudo Sol♯. ¿En qué tonalidad está? {
-=La menor
 ~Do mayor
+=La menor
 ~Sol mayor
 ~La mayor
 }
 
 ::PIA05-7::Una obra en Do mayor empieza a usar Fa♯ y cadencia D7 → G. ¿Qué ha ocurrido? {
-~No ha cambiado nada
+=Ha modulado a Sol mayor, su dominante
 ~Ha modulado a Fa mayor
 ~Ha cambiado a modo menor
-=Ha modulado a Sol mayor, su dominante
+~No ha cambiado nada
 }
 
 ::PIA05-8::La progresión I–vi–IV–V transportada a Re mayor es… {
-~Re – Si m – Do – La
-~Re – Mi m – Sol – La
-=Re – Si m – Sol – La
 ~Re – Fa♯ m – Sol – Si m
+~Re – Mi m – Sol – La
+~Re – Si m – Do – La
+=Re – Si m – Sol – La
+}
+
+::PIA05-9::¿Qué progresión es I–V–vi–IV en Do mayor? {
+~Do–La m–Fa–Sol
+~Do–Fa–Sol–Do
+=Do–Sol–La m–Fa
+~Do–Sol–Fa–La m
+}
+
+::PIA05-10::En La menor, ¿cómo suele ser el acorde de dominante? {
+~Menor
+=Mayor, con Sol♯
+~Disminuido
+~Aumentado
+}
+
+::PIA05-11::Una melodía tiene Mi en el pulso fuerte. ¿Qué acorde de Do mayor NO puede acompañarla? {
+=Re m
+~Do
+~La m
+~Mi m
 }
 
 $CATEGORY: Piano intermedio y avanzado/Módulo 06 - Independencia de manos y acompañamientos
 
 ::PIA06-1::¿Qué es el bajo Alberti? {
-~Un acorde mantenido con pedal
-=Un acompañamiento que arpegia el acorde en el orden grave–agudo–medio–agudo
-~Una escala en octavas
 ~Un adorno barroco
+~Un acorde mantenido con pedal
+~Una escala en octavas
+=Un acompañamiento que arpegia el acorde en el orden grave–agudo–medio–agudo
 }
 
 ::PIA06-2::La melodía queda tapada por el acompañamiento. ¿Qué haces? {
-=Tocar el acompañamiento más suave y dar más peso a la melodía
-~Tocar las dos manos más fuerte
 ~Quitar el pedal siempre
+~Tocar las dos manos más fuerte
+=Tocar el acompañamiento más suave y dar más peso a la melodía
 ~Tocar más deprisa
 }
 
 ::PIA06-3::¿Qué patrón sigue el bajo boogie en Do? {
-~Do–Sol–Mi–Sol
 ~Do–Mi–Sol–Do
-~Do–Re–Mi–Fa
 =Do–Sol, Do–La, Do–Si♭, Do–La
+~Do–Re–Mi–Fa
+~Do–Sol–Mi–Sol
 }
 
 ::PIA06-4::En un vals con acompañamiento de mano izquierda, ¿qué se toca normalmente en el tiempo 1? {
-~Un silencio
-~El acorde en el registro medio
 =El bajo (la nota grave)
+~El acorde en el registro medio
+~Un silencio
 ~La melodía
+}
+
+::PIA06-5::¿Qué textura tiene una melodía clara con acordes de fondo? {
+~Heterofonía
+~Monodía
+~Polifonía
+=Melodía acompañada (homofonía)
+}
+
+::PIA06-6::En una fuga a dos voces, ¿qué mano manda? {
+~Solo la izquierda
+~Solo la derecha
+=Las dos a igualdad, cada una canta su voz
+~Ninguna
 }
 
 $CATEGORY: Piano intermedio y avanzado/Módulo 07 - El pedal
@@ -316,73 +428,129 @@ $CATEGORY: Piano intermedio y avanzado/Módulo 07 - El pedal
 =Para suavizar y cambiar el timbre
 }
 
+::PIA07-4::¿Por qué suenan las cuerdas «por simpatía» con el pedal derecho pisado? {
+~Porque se afinan
+~Porque el pedal las golpea
+=Porque quedan libres de apagadores y vibran con los armónicos de otras notas
+~Porque se acortan
+}
+
+::PIA07-5::¿Qué hace el medio pedal? {
+~Es igual que el pedal completo
+=Deja los apagadores rozando las cuerdas, con menos resonancia
+~Sube la afinación
+~Mantiene solo los graves
+}
+
 $CATEGORY: Piano intermedio y avanzado/Módulo 08 - Repertorio intermedio\: analizar antes de tocar
 
 ::PIA08-1::El Preludio en Do mayor BWV 846 pertenece a… {
-~Los nocturnos de Chopin
-~Las sonatas de Beethoven
 =El clave bien temperado, libro I, de J. S. Bach
+~Las sonatas de Beethoven
+~Los nocturnos de Chopin
 ~Las Invenciones de Bach
 }
 
 ::PIA08-2::¿En qué compás está escrita «Para Elisa» de Beethoven? {
-~4/4
-=3/8
-~2/4
 ~6/8
+~4/4
+~2/4
+=3/8
 }
 
 ::PIA08-3::¿Cuál es el primer paso recomendable para estudiar una obra nueva? {
-=Escucharla y analizar forma, tonalidad y pasajes difíciles
-~Tocarla a tempo desde el principio
 ~Memorizarla sin leerla
+~Tocarla a tempo desde el principio
+=Escucharla y analizar forma, tonalidad y pasajes difíciles
 ~Tocar solo el final
+}
+
+::PIA08-4::¿Cuál es el esquema de un rondó? {
+~A–B
+=A–B–A–C–A
+~A–B–A
+~A–A'–A''
+}
+
+::PIA08-5::En un periodo, ¿cómo termina normalmente la primera frase (el antecedente)? {
+=En la dominante (semicadencia)
+~En la tónica con cadencia perfecta
+~Con un silencio
+~En el IV grado
+}
+
+::PIA08-6::¿Qué diferencia una forma ternaria (A–B–A) de una binaria (A–B)? {
+~Ninguna
+~En la ternaria hay más compases
+~En la binaria hay un solo tema
+=En la ternaria la música vuelve al principio
 }
 
 $CATEGORY: Piano intermedio y avanzado/Módulo 09 - Técnica avanzada\: octavas, terceras y adornos
 
 ::PIA09-1::En el Barroco y el Clasicismo, ¿por qué nota empieza normalmente el trino? {
-~Por la tónica
-~Por la nota real
 ~Por la nota inferior
+~Por la nota real
 =Por la nota superior
+~Por la tónica
 }
 
 ::PIA09-2::Al tocar octavas con la mano derecha, ¿qué dedo va arriba en las teclas negras? {
-~El pulgar
 ~El 2.º
 =El 4.º
+~El pulgar
 ~El 3.º siempre
 }
 
 ::PIA09-3::Notas molestias en la muñeca estudiando octavas. ¿Qué haces? {
-~Sigo hasta que se pase
 =Paro, descanso y reviso la técnica; si persiste, consulto a un profesional
+~Sigo hasta que se pase
 ~Toco más fuerte
 ~Subo el tempo
+}
+
+::PIA09-4::¿Qué es una acciaccatura? {
+~Un trino prolongado
+~Una nota larga con puntillo
+~Un tipo de pedal
+=Una apoyatura breve (nota pequeña con barra)
 }
 
 $CATEGORY: Piano intermedio y avanzado/Módulo 10 - Polirritmia\: 3 contra 2 y 4 contra 3
 
 ::PIA10-1::¿Cuántas subdivisiones tiene la cuadrícula común de un 3 contra 2? {
-=6
-~5
 ~3
+~5
+=6
 ~12
 }
 
 ::PIA10-2::En 3 contra 2, ¿en qué subdivisiones coinciden las dos manos? {
-~En ninguna
 ~En todas
-~En la 1.ª y la 3.ª
 =Solo en la primera
+~En la 1.ª y la 3.ª
+~En ninguna
 }
 
 ::PIA10-3::¿Cuántas subdivisiones tiene la cuadrícula común de un 4 contra 3? {
-~6
-~7
 =12
+~7
+~6
 ~16
+}
+
+::PIA10-4::En una hemiola, ¿cómo se acentúan las seis negras de dos compases de 3/4? {
+~Solo en la primera
+~En 1 y 4 (3+3)
+~En todas por igual
+=En 1, 3 y 5 (2+2+2)
+}
+
+::PIA10-5::¿Cómo se agrupa normalmente un compás de 7/8? {
+~Siete pulsos iguales
+~1+6
+=2+2+3 o 3+2+2
+~4+3 siempre
 }
 
 $CATEGORY: Piano intermedio y avanzado/Módulo 11 - Armonía avanzada\: séptimas, tensiones y voicings
@@ -408,57 +576,113 @@ $CATEGORY: Piano intermedio y avanzado/Módulo 11 - Armonía avanzada\: séptima
 =La 3.ª y la 7.ª
 }
 
+::PIA11-4::En una tonalidad mayor, ¿qué acorde de séptima es el del V grado? {
+~Menor 7
+~Mayor 7
+=De dominante (7)
+~Semidisminuido
+}
+
+::PIA11-5::¿Qué acorde es el vii de Do mayor con séptima? {
+~Bmaj7
+=Bm7♭5 (semidisminuido)
+~B7
+~Bm7
+}
+
+::PIA11-6::¿Qué notas se tocan en un voicing «de shell»? {
+=La 3.ª y la 7.ª
+~La fundamental y la 5.ª
+~Las siete notas de la escala
+~La 9.ª y la 13.ª
+}
+
 $CATEGORY: Piano intermedio y avanzado/Módulo 12 - Improvisación\: blues y reharmonización
 
 ::PIA12-1::¿Qué notas forman la escala de blues de Do? {
-~Do–Re–Mi–Fa–Sol–La–Si
-~Do–Re–Mi–Sol–La
-=Do–Mi♭–Fa–Fa♯–Sol–Si♭
 ~Do–Mi–Sol–Si♭
+~Do–Re–Mi–Sol–La
+~Do–Re–Mi–Fa–Sol–La–Si
+=Do–Mi♭–Fa–Fa♯–Sol–Si♭
 }
 
 ::PIA12-2::En un blues de 12 compases en Do, ¿qué acorde suena en los compases 5 y 6? {
+~G7
 ~C7
 =F7
-~G7
 ~Am
 }
 
 ::PIA12-3::Reharmonizar consiste en… {
-=Cambiar los acordes de una melodía conservando la melodía
 ~Cambiar la melodía conservando los acordes
+=Cambiar los acordes de una melodía conservando la melodía
 ~Tocar más rápido
 ~Transportar a otra tonalidad
 }
 
 ::PIA12-4::¿Qué es una frase de «pregunta y respuesta» al improvisar? {
-~Cambiar de tonalidad en cada compás
+=Una idea corta seguida de otra que la contesta y cierra, a menudo en la tónica
 ~Tocar la escala de arriba abajo
 ~Repetir la misma nota todo el compás
-=Una idea corta seguida de otra que la contesta y cierra, a menudo en la tónica
+~Cambiar de tonalidad en cada compás
+}
+
+::PIA12-5::¿En qué compases del blues de 12 compases suena el IV grado por primera vez? {
+~Compás 12
+~Compases 1 a 4
+~Compases 9 y 10
+=Compases 5 y 6
+}
+
+::PIA12-6::¿Qué es un turnaround? {
+~Un adorno de la mano izquierda
+~Un cambio de tonalidad
+=Los últimos compases que preparan la vuelta al principio
+~Una escala
 }
 
 $CATEGORY: Piano intermedio y avanzado/Módulo 13 - Interpretación y estilos
 
 ::PIA13-1::¿Qué es el rubato? {
-~Un tipo de pedal
 ~Tocar siempre con metrónomo
 =Flexibilidad expresiva del tempo sin perder el pulso general
+~Un tipo de pedal
 ~Un adorno barroco
 }
 
 ::PIA13-2::¿Qué compositor es representativo del impresionismo pianístico? {
-~J. S. Bach
 =Claude Debussy
+~J. S. Bach
 ~W. A. Mozart
 ~Scott Joplin
 }
 
 ::PIA13-3::En la música barroca para teclado, el pedal… {
-=Se usa muy poco o nada
+~Se sustituye por el izquierdo
 ~Se usa en cada nota
 ~Es obligatorio en las fugas
-~Se sustituye por el izquierdo
+=Se usa muy poco o nada
+}
+
+::PIA13-4::¿Qué significa «mf»? {
+~Mezzopiano\: medio suave
+~Muy fuerte
+=Mezzoforte\: medio fuerte
+~Muy suave
+}
+
+::PIA13-5::¿Cuál es la diferencia entre staccato y tenuto? {
+~No hay diferencia
+=El staccato corta la nota y el tenuto la mantiene
+~El tenuto es más rápido
+~El staccato es más fuerte
+}
+
+::PIA13-6::«Poco a poco crescendo» significa… {
+=Ir creciendo lentamente
+~Crecer bruscamente
+~Pasar a piano
+~Acelerar
 }
 
 $CATEGORY: Piano intermedio y avanzado/Módulo 14 - Preparar una obra y tocar en público

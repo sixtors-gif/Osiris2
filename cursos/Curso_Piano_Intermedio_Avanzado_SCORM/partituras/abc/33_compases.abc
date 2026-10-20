@@ -1,0 +1,9 @@
+X:33
+T:El acento marca el compás
+C:El primer tiempo de cada compás se siente más fuerte
+M:2/4
+L:1/4
+Q:1/4=90
+K:C clef=treble
+"^2/4"!>!c c | !>!c c || [M:3/4]"^3/4"!>!c c c | !>!c c c || [M:4/4]"^4/4"!>!c c c c | !>!c c c c || [M:6/8][L:1/8]"^6/8"!>!c c c c c c | !>!c c c c c c |]
+w: 1 2 | 1 2 | 1 2 3 | 1 2 3 | 1 2 3 4 | 1 2 3 4 | 1 2 3 4 5 6 | 1 2 3 4 5 6

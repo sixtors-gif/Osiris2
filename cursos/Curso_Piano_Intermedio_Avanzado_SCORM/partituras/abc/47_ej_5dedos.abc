@@ -1,0 +1,12 @@
+X:47
+T:Posición de cinco dedos
+C:Ligado, staccato y con acentos
+M:4/4
+L:1/8
+Q:1/4=80
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:C
+[V:RH] !1!C!2!D!3!E!4!F !5!G!4!F!3!E!2!D | !1!.C!2!.D!3!.E!4!.F !5!.G!4!.F!3!.E!2!.D | !>!C D E F !>!G F E D | C4 z4 |]
+[V:LH] !5!C,!4!D,!3!E,!2!F, !1!G,!2!F,!3!E,!4!D, | !5!.C,!4!.D,!3!.E,!2!.F, !1!.G,!2!.F,!3!.E,!4!.D, | !>!C, D, E, F, !>!G, F, E, D, | C,4 z4 |]

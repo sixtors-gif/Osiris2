@@ -1,0 +1,12 @@
+X:53
+T:Lectura 3 · Fa mayor y 6/8
+C:Fa mayor · 6/8 · un Si♭
+M:6/8
+L:1/8
+Q:3/8=60
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:F
+[V:RH] F2 A c2 A | B2 d c3 | A2 c f2 c | A2 G F3 | G2 B d2 B | c2 e g2 e | f2 c A2 G | F6 |]
+[V:LH] F,,3 C,3 | B,,3 F,,3 | F,,3 C,3 | C,3 F,,3 | C,3 G,,3 | C,3 C,3 | F,,3 C,3 | F,,6 |]

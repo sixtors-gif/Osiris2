@@ -1,0 +1,12 @@
+X:55
+T:Intervalos en bloque
+C:Terceras subiendo y bajando por la escala de Do
+M:4/4
+L:1/4
+Q:1/4=66
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:C
+[V:RH] [CE] [DF] [EG] [FA] | [GB] [FA] [EG] [DF] | [CE]4 |]
+[V:LH] [C,G,] [D,A,] [E,B,] [F,C] | [G,D] [F,C] [E,B,] [D,A,] | [C,G,]4 |]

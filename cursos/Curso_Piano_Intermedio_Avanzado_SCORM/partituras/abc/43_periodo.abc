@@ -1,0 +1,12 @@
+X:43
+T:Pregunta y respuesta
+C:Ejercicio original del curso
+M:4/4
+L:1/4
+Q:1/4=88
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:C
+[V:RH] "^antecedente""C"E2 G2 | "F"A2 F2 | "C"E C D E | "G7"D4 || "^consecuente""C"E2 G2 | "F"A2 F2 | "G7"D F E D | "C"C4 |]
+[V:LH] C,2 G,2 | F,,2 C,2 | C,2 G,,2 | G,,2 D,2 || C,2 G,2 | F,,2 C,2 | G,,2 D,2 | C,4 |]
