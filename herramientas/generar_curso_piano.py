@@ -12,7 +12,7 @@ import html, json, math, os, re, shutil, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from piano_partituras import PIEZAS  # noqa: E402
-from piano_explicaciones import EXTRA, GLOSARIO, PALABRAS  # noqa: E402
+from piano_explicaciones import EXTRA, GLOSARIO, PALABRAS, pasos  # noqa: E402
 
 OUT, ABCJS = sys.argv[1], sys.argv[2]
 RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
@@ -69,6 +69,7 @@ extra = """
 .glosario dt{font-weight:700;color:#1e3c72;margin-top:10px}.glosario dd{margin:2px 0 0 18px;line-height:1.55}
 details.glos{border:1px solid #dfe5ef;border-radius:12px;padding:10px 16px;margin:16px 0;background:#f8faff}
 details.glos summary{cursor:pointer;font-weight:700;color:#1e3c72;font-size:1.05em}
+.como{background:#f2f6ff;border-left:4px solid #6c8ccf;border-radius:8px;padding:8px 12px;margin:6px 0 10px;font-size:.95em;line-height:1.6}.como>b:first-child{color:#3b5ba8}
 .module ol{margin:10px 0 14px 28px}.module ol li{line-height:1.7;font-size:1.05em;padding:2px 0}
 @media print{.score-tools,.navigation,.progress-container{display:none}}
 """
@@ -303,6 +304,48 @@ def pagina(n, icono, titulo, sub, cuerpo):
 
 DESCARGA = '<div class="dl-box">📥 <b>Partituras para imprimir:</b> todas las del curso están en el <a href="partituras/Cuaderno_de_partituras.pdf" target="_blank" rel="noopener">Cuaderno de partituras (PDF)</a>.</div>'
 
+# Listas de pasos con su «cómo se hace» -----------------------------------------------------------
+PASOS_INDEPENDENCIA = pasos([
+    ("Cada mano por separado, hasta que sea automática.",
+     "«automática» quiere decir que puedes tocarla cinco veces seguidas sin errores mientras cuentas en voz alta, sin pensar en las notas."),
+    ("Juntas, muy lento, <b>compás a compás</b>.",
+     "busca las notas de las dos manos que están una encima de otra en la partitura (suenan a la vez) y márcalas con una rayita de lápiz. Toca un compás, para, prepara las manos para el siguiente y tócalo; cuando salgan sueltos, enlaza dos compases, luego cuatro."),
+    ("Toca el acompañamiento <i>piano</i> y la melodía <i>mezzoforte</i>: el balance se entrena aparte.",
+     "en la melodía, dedo firme y algo de peso del brazo; en el acompañamiento, dedos pegados a las teclas, bajándolas más despacio. Más adelante, en este módulo, tienes un ejercicio de equilibrio entre manos."),
+    ("Canta la melodía mientras tocas solo el acompañamiento.",
+     "tararea la melodía en voz alta mientras la izquierda acompaña: así la mano del acompañamiento aprende a «escuchar» a la melodía y a seguir sus respiraciones."),
+])
+PASOS_PEDAL = pasos([
+    ("Toca el acorde con el pedal pisado.",
+     "talón apoyado en el suelo y la punta del pie sobre el pedal; el movimiento sale del tobillo, no de la rodilla."),
+    ("Al tocar el acorde siguiente, <b>levanta</b> el pedal en ese instante…",
+     "como un balancín: <b>los dedos bajan y el pie sube a la vez</b>. Basta con subirlo lo justo para que se apague el acorde anterior."),
+    ("…y <b>vuelve a pisarlo</b> justo después, con el acorde nuevo ya sonando.",
+     "pisa en cuanto el acorde anterior se apague, con los dedos todavía hundidos. Di en voz alta «toca — sube — baja». Si oyes un hueco, has levantado el pie demasiado pronto; si oyes mezcla, demasiado tarde."),
+])
+PASOS_OBRA = pasos([
+    ("<b>Escucha</b> varias versiones grabadas.",
+     "busca dos o tres grabaciones de pianistas distintos y escúchalas siguiendo la partitura con el dedo. Anota el tempo aproximado y lo que más te guste de cada una."),
+    ("<b>Analiza:</b> tonalidad, forma (secciones que se repiten), armonía y pasajes difíciles.",
+     "usa la tabla «Analizar una obra en 5 preguntas» de este módulo: la armadura y el último acorde te dan la tonalidad; las dobles barras, las repeticiones y los cambios de carácter, las secciones. Rodea con lápiz los pasajes difíciles."),
+    ("<b>Decide la digitación</b> y escríbela antes de tocar.",
+     "en cada pasaje, prueba despacio dos o tres digitaciones y elige la que necesite menos cambios de posición de la mano. No hace falta escribirla en todas las notas: basta en los cambios de posición. Después usa siempre la misma."),
+    ("<b>Trabaja por secciones</b>, empezando por la más difícil.",
+     "numera las secciones y empieza cada día por la más difícil, cuando estás más descansado/a. Aplica el plan de 20 minutos del módulo 1."),
+    ("Une las secciones y haz <b>pasadas completas</b>.",
+     "une las secciones tocando desde el final de una hasta el principio de la siguiente. Al final de cada sesión haz una pasada completa sin parar, aunque falles, y anota dónde fallaste: eso es lo primero que estudiarás al día siguiente."),
+])
+PASOS_BLUES = pasos([
+    ("Toca el bajo boogie con la mano izquierda hasta que sea automático.",
+     "repítelo siguiendo los 12 compases de la partitura (Do7 cuatro compases, Fa7 dos, Do7 dos, Sol7, Fa7, Do7, Sol7) hasta que puedas contarlos en voz alta mientras tocas."),
+    ("Con la derecha, improvisa frases cortas de 2 compases usando solo 3 notas de la escala.",
+     "elige Do, Mi♭ y Fa. Inventa un ritmo sencillo (por ejemplo, cuatro corcheas y una negra) y repítelo cambiando el orden de las notas. Un ritmo repetido da unidad; las notas aportan la variedad."),
+    ("Deja silencios: pregunta (2 compases) y respuesta (2 compases).",
+     "la pregunta termina en una nota que suena «abierta» (Fa o Mi♭); la respuesta repite el ritmo de la pregunta y termina en Do, la nota de «casa». Como en una conversación: «¿Vienes?» — «Sí, ya voy»."),
+    ("Amplía a toda la escala y añade la «nota azul» Mi♭ resolviendo a Mi.",
+     "añade Fa♯, Sol y Si♭ poco a poco, una nota nueva cada día. Para la nota azul, toca Mi♭ y pasa enseguida al Mi (con los dedos 2-3), como un pequeño adorno sobre el acorde de Do7."),
+])
+
 M = []
 # 1 ------------------------------------------------------------------------------------------------
 M.append(("⏱️", "Cómo estudiar: método, rutina y metrónomo", "Estudiar mejor rinde más que estudiar más horas.", f"""
@@ -424,12 +467,7 @@ M.append(("🤲", "Independencia de manos y acompañamientos", "Que cada mano cu
       {tabla(["Patrón", "Estilo", "Esquema (Do mayor)"], [["Bajo Alberti", "Clasicismo (Mozart, Haydn, Clementi)", "Do–Sol–Mi–Sol"], ["Arpegio abierto", "Romanticismo", "Do–Sol–Mi'–Sol (amplio, con pedal)"], ["Vals (bajo–acorde–acorde)", "Danza 3/4", "Do · [Mi Sol] · [Mi Sol]"], ["Stride", "Jazz clásico, ragtime", "Bajo grave en 1 y 3; acorde medio en 2 y 4"], ["Boogie", "Blues, rock and roll", "Do–Sol, Do–La, Do–Si♭, Do–La (módulo 12)"]])}
       {partitura("alberti")}
       <h3>2. Cómo trabajar la independencia</h3>
-      <ol class="steps">
-        <li>Cada mano por separado, hasta que sea automática.</li>
-        <li>Juntas, muy lento, <b>compás a compás</b>.</li>
-        <li>Toca el acompañamiento <i>piano</i> y la melodía <i>mezzoforte</i>: el balance se entrena aparte.</li>
-        <li>Canta la melodía mientras tocas solo el acompañamiento.</li>
-      </ol>
+      {PASOS_INDEPENDENCIA}
       {quiz("m6a", "¿Qué es el bajo Alberti?", ["Un acompañamiento que arpegia el acorde en el orden grave–agudo–medio–agudo", "Un pedal que se mantiene toda la obra", "Una escala cromática en la mano izquierda"], 0, "Por ejemplo, Do–Sol–Mi–Sol.")}
       {quiz("m6b", "La melodía queda tapada por el acompañamiento. ¿Qué haces?", ["Tocar el acompañamiento más suave y dar más peso a la melodía", "Tocar todo más fuerte", "Quitar el acompañamiento"], 0, "El balance entre manos se trabaja de forma consciente.")}
       <div class="summary-box"><b>Resumen:</b> melodía que canta, acompañamiento suave y trabajo por capas.</div>
@@ -440,7 +478,7 @@ M.append(("🦶", "El pedal", "El pedal es parte del sonido, no un efecto añadi
       {tabla(["Pedal", "Qué hace", "Uso"], [["Derecho (de resonancia)", "Levanta todos los apagadores: las cuerdas siguen sonando", "Legato, color y resonancia"], ["Central (sostenuto)", "Mantiene solo las notas que estaban pulsadas al pisarlo (en pianos de cola y algunos verticales)", "Bajos largos sin emborronar el resto"], ["Izquierdo (una corda)", "Suaviza el sonido y cambia el timbre", "Pasajes <i>pp</i> o de color especial"]])}
       <h3>1. Pedal sincopado (legato)</h3>
       <p>Es la técnica básica: el pedal se cambia <b>después</b> de tocar el acorde nuevo, nunca a la vez.</p>
-      <ol class="steps"><li>Toca el acorde con el pedal pisado.</li><li>Al tocar el acorde siguiente, <b>levanta</b> el pedal en ese instante…</li><li>…y <b>vuelve a pisarlo</b> justo después, con el acorde nuevo ya sonando.</li></ol>
+      {PASOS_PEDAL}
       {partitura("pedal")}
       <h3>2. Pedal según el estilo</h3>
       {kp(["<b>Barroco:</b> muy poco o nada (el clave no tenía pedal). La claridad viene de los dedos.", "<b>Clásico:</b> breve, para unir y dar color; nunca para tapar las escalas.", "<b>Romántico:</b> abundante y cambiado con cada armonía.", "<b>Impresionismo:</b> medios pedales y mezclas de armonías buscadas."], "🎨")}
@@ -452,7 +490,7 @@ M.append(("🦶", "El pedal", "El pedal es parte del sonido, no un efecto añadi
 # 8 ------------------------------------------------------------------------------------------------
 M.append(("📜", "Repertorio intermedio: analizar antes de tocar", "Dos obras clásicas para aplicar todo lo aprendido.", f"""
       <h2>Estudiar una obra como un profesional</h2>
-      <ol class="steps"><li><b>Escucha</b> varias versiones grabadas.</li><li><b>Analiza:</b> tonalidad, forma (secciones que se repiten), armonía y pasajes difíciles.</li><li><b>Decide la digitación</b> y escríbela antes de tocar.</li><li><b>Trabaja por secciones</b>, empezando por la más difícil.</li><li>Une las secciones y haz <b>pasadas completas</b>.</li></ol>
+      {PASOS_OBRA}
       <h3>1. J. S. Bach · Preludio en Do mayor, BWV 846</h3>
       <p>Primera pieza de <i>El clave bien temperado</i> (libro I, 1722). Toda la obra es un mismo patrón de arpegio sobre una sucesión de acordes: es perfecta para practicar <b>análisis armónico</b> y <b>regularidad</b>.</p>
       {partitura("bach846")}
@@ -522,7 +560,7 @@ M.append(("🎶", "Improvisación: blues y reharmonización", "Crear música pro
       {partitura("blues")}
       <h3>1. La escala de blues</h3>
       {fig("teclado_blues.svg", "Escala de blues de Do", "Escala de blues de Do: Do, Mi♭, Fa, Fa♯, Sol, Si♭. Funciona sobre los tres acordes del blues.")}
-      <ol class="steps"><li>Toca el bajo boogie con la mano izquierda hasta que sea automático.</li><li>Con la derecha, improvisa frases cortas de 2 compases usando solo 3 notas de la escala.</li><li>Deja silencios: pregunta (2 compases) y respuesta (2 compases).</li><li>Amplía a toda la escala y añade la «nota azul» Mi♭ resolviendo a Mi.</li></ol>
+      {PASOS_BLUES}
       <h3>2. Reharmonizar</h3>
       <p>Reharmonizar es <b>cambiar los acordes</b> de una melodía conservándola. Recursos sencillos:</p>
       {kp(["Sustituir I por vi o iii (comparten dos notas).", "Preparar cualquier acorde con su propio dominante (dominante secundario): antes de Dm, toca A7.", "Convertir V en ii–V (G7 → Dm7–G7).", "Sustitución tritonal: G7 → D♭7 (comparten la 3.ª y la 7.ª)."], "🔄")}

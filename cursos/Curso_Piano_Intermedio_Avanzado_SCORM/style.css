@@ -86,5 +86,6 @@ textarea{min-height:100px}.btn{background:linear-gradient(45deg,#4ecdc4,#44a08d)
 .glosario dt{font-weight:700;color:#1e3c72;margin-top:10px}.glosario dd{margin:2px 0 0 18px;line-height:1.55}
 details.glos{border:1px solid #dfe5ef;border-radius:12px;padding:10px 16px;margin:16px 0;background:#f8faff}
 details.glos summary{cursor:pointer;font-weight:700;color:#1e3c72;font-size:1.05em}
+.como{background:#f2f6ff;border-left:4px solid #6c8ccf;border-radius:8px;padding:8px 12px;margin:6px 0 10px;font-size:.95em;line-height:1.6}.como>b:first-child{color:#3b5ba8}
 .module ol{margin:10px 0 14px 28px}.module ol li{line-height:1.7;font-size:1.05em;padding:2px 0}
 @media print{.score-tools,.navigation,.progress-container{display:none}}
