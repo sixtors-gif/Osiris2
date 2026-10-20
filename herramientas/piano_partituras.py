@@ -207,3 +207,93 @@ Q:3/8=50
 [V:RH] e^d e B =d c | A2 z C E A | B2 z E c B | A2 z4 |]
 [V:LH] z6 | A,,E,A, z3 | E,,E,^G, z3 | A,,E,A, z3 |]
 """, "Fragmento: tema inicial. Obra completa en IMSLP.")
+
+# ---------------------------------------------------------------------------------------------
+# Ampliación: partituras para las explicaciones «fáciles»
+# ---------------------------------------------------------------------------------------------
+
+pieza("pulso_68", "Contar el pulso: 3/4 frente a 6/8", """
+X:17
+T:3/4 y 6/8: las mismas seis corcheas, distinto pulso
+C:Ejercicio · cuenta en voz alta los números de debajo
+M:3/4
+L:1/8
+Q:1/4=80
+K:C
+"^3/4: tres pulsos de negra"!>!C E !>!G c !>!G E | !>!C2 !>!E2 !>!G2 |
+w: 1 y 2 y 3 y 1 2 3
+[M:6/8][Q:3/8=60] "^6/8: dos pulsos de negra con puntillo"!>!C E G !>!c G E | !>!C3 !>!G3 |]
+w: 1 2 3 4 5 6 1 4
+""", "En 3/4 las corcheas van de dos en dos (1-y, 2-y, 3-y); en 6/8, de tres en tres (1-2-3, 4-5-6). Los acentos (>) marcan el pulso.")
+
+pieza("ritmos", "Corcheas, tresillos, síncopa y puntillo", """
+X:18
+T:Ritmos que hay que saber contar
+C:Ejercicio · cuenta en voz alta
+M:2/4
+L:1/8
+Q:1/4=66
+K:C
+"^Corcheas"C D E F | "^Tresillos"(3CDE (3FGA | "^Síncopa"C D2 E | "^Puntillo"D3 C | D4 |]
+w: 1 y 2 y 1-o-la 2-o-la 1 y y 1 y 1
+""", "Síncopa: la nota larga empieza en un tiempo débil («y») y se mantiene sobre el fuerte. Puntillo: alarga la nota la mitad de su valor.")
+
+pieza("escala_sol", "Escala de Sol mayor · manos juntas", f"""
+X:19
+T:Sol mayor
+C:Ejercicio · misma digitación que Do mayor
+M:4/4
+L:1/8
+Q:1/4=72
+{GRAN}K:G
+[V:RH] !1!G!2!A!3!B!1!c !2!d!3!e!4!f!5!g | !4!f!3!e!2!d!1!c !3!B!2!A !1!G2 |]
+[V:LH] !5!G,!4!A,!3!B,!2!C !1!D!3!E!2!F!1!G | !2!F!3!E!1!D!2!C !3!B,!4!A, !5!G,2 |]
+""", "La armadura (un sostenido) convierte todos los Fa en Fa♯: así la escala cumple el patrón T-T-S-T-T-T-S.")
+
+pieza("escala_fa", "Escala de Fa mayor · manos juntas", f"""
+X:20
+T:Fa mayor
+C:Ejercicio · la mano derecha cambia la digitación
+M:4/4
+L:1/8
+Q:1/4=72
+{GRAN}K:F
+[V:RH] !1!F!2!G!3!A!4!B !1!c!2!d!3!e!4!f | !3!e!2!d!1!c!4!B !3!A!2!G !1!F2 |]
+[V:LH] !5!F,!4!G,!3!A,!2!B, !1!C!3!D!2!E!1!F | !2!E!3!D!1!C!2!B, !3!A,!4!G, !5!F,2 |]
+""", "Mano derecha 1-2-3-4, 1-2-3-4: así el pulgar no cae en el Si♭ (tecla negra). La izquierda sigue como en Do.")
+
+pieza("cadencia_sol", "Cadencia I–IV–V7–I transportada a Sol mayor", f"""
+X:21
+T:La misma cadencia, en Sol mayor
+C:Ejercicio · compárala con la de Do
+M:4/4
+L:1/4
+Q:1/4=60
+{GRAN}K:G
+[V:RH] "G"[GBd]2 "C"[Gce]2 | "D7"[Fcd]2 "G"[GBd]2 |]
+[V:LH] "_I"G,2 "_IV"C,2 | "_V7"D,2 "_I"G,2 |]
+""", "Son las mismas «formas» de la mano que en Do, desplazadas: I, IV y V7 siempre suenan con la misma función.")
+
+pieza("vals", "Acompañamiento de vals", f"""
+X:22
+T:Pequeño vals
+C:Ejercicio original del curso
+M:3/4
+L:1/4
+Q:1/4=120
+{GRAN}K:C
+[V:RH] "C"e2 g | "G7"f2 d | "C"e c G | "C"c3 |]
+[V:LH] !>!C, [E,G,] [E,G,] | !>!G,, [B,,F,] [B,,F,] | !>!C, [E,G,] [E,G,] | C,3 |]
+""", "Bajo con peso en el 1 y acordes ligeros en el 2 y el 3: «UM-pa-pa». La melodía, siempre por encima del acompañamiento.")
+
+pieza("blues_frase", "Frase de blues: pregunta y respuesta", f"""
+X:23
+T:Improvisación de ejemplo sobre Do7
+C:Ejercicio original del curso · tocar con swing
+M:4/4
+L:1/8
+Q:1/4=96
+{GRAN}K:C
+[V:RH] "^pregunta""C7"c2 _e f ^f g3 | "^respuesta"z2 _b g f _e c2 | "^nota azul"_e2 =e c G2 c2 | c6 z2 |]
+[V:LH] C,G, C,A, C,_B, C,A, | C,G, C,A, C,_B, C,A, | C,G, C,A, C,_B, C,A, | C,G, C,A, C,_B, C,A, |]
+""", "Solo con la escala de blues: dos compases que «preguntan», dos que «responden» y la nota azul (Mi♭) que resuelve en Mi.")

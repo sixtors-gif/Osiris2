@@ -1,0 +1,12 @@
+X:19
+T:Sol mayor
+C:Ejercicio · misma digitación que Do mayor
+M:4/4
+L:1/8
+Q:1/4=72
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:G
+[V:RH] !1!G!2!A!3!B!1!c !2!d!3!e!4!f!5!g | !4!f!3!e!2!d!1!c !3!B!2!A !1!G2 |]
+[V:LH] !5!G,!4!A,!3!B,!2!C !1!D!3!E!2!F!1!G | !2!F!3!E!1!D!2!C !3!B,!4!A, !5!G,2 |]

@@ -78,5 +78,13 @@ textarea{min-height:100px}.btn{background:linear-gradient(45deg,#4ecdc4,#44a08d)
 .dl-box{background:#fffaf0;border:2px solid #c9a227;border-radius:12px;padding:14px 18px;margin:18px 0}
 .dl-box a{font-weight:700}
 .checklist label{display:block;padding:6px 0}.checklist input{width:auto;margin-right:8px}
+.palabras{background:#fffaf0;border:2px solid #c9a227;border-radius:14px;padding:14px 18px 10px;margin:4px 0 20px;position:relative}
+.palabras p{font-size:1.12em;line-height:1.6;margin:6px 0}
+.pal-tag{display:inline-block;background:#c9a227;color:#fff;font-weight:700;font-size:.8em;letter-spacing:.04em;text-transform:uppercase;border-radius:20px;padding:3px 12px}
+.practica{background:#eef7ee;border-left:5px solid #4caf50;border-radius:10px;padding:12px 18px;margin:18px 0}
+.practica h3{margin-top:4px}
+.glosario dt{font-weight:700;color:#1e3c72;margin-top:10px}.glosario dd{margin:2px 0 0 18px;line-height:1.55}
+details.glos{border:1px solid #dfe5ef;border-radius:12px;padding:10px 16px;margin:16px 0;background:#f8faff}
+details.glos summary{cursor:pointer;font-weight:700;color:#1e3c72;font-size:1.05em}
 .module ol{margin:10px 0 14px 28px}.module ol li{line-height:1.7;font-size:1.05em;padding:2px 0}
 @media print{.score-tools,.navigation,.progress-container{display:none}}

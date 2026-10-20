@@ -12,6 +12,7 @@ import html, json, math, os, re, shutil, sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from piano_partituras import PIEZAS  # noqa: E402
+from piano_explicaciones import EXTRA, GLOSARIO, PALABRAS  # noqa: E402
 
 OUT, ABCJS = sys.argv[1], sys.argv[2]
 RAIZ = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
@@ -60,6 +61,14 @@ extra = """
 .dl-box{background:#fffaf0;border:2px solid #c9a227;border-radius:12px;padding:14px 18px;margin:18px 0}
 .dl-box a{font-weight:700}
 .checklist label{display:block;padding:6px 0}.checklist input{width:auto;margin-right:8px}
+.palabras{background:#fffaf0;border:2px solid #c9a227;border-radius:14px;padding:14px 18px 10px;margin:4px 0 20px;position:relative}
+.palabras p{font-size:1.12em;line-height:1.6;margin:6px 0}
+.pal-tag{display:inline-block;background:#c9a227;color:#fff;font-weight:700;font-size:.8em;letter-spacing:.04em;text-transform:uppercase;border-radius:20px;padding:3px 12px}
+.practica{background:#eef7ee;border-left:5px solid #4caf50;border-radius:10px;padding:12px 18px;margin:18px 0}
+.practica h3{margin-top:4px}
+.glosario dt{font-weight:700;color:#1e3c72;margin-top:10px}.glosario dd{margin:2px 0 0 18px;line-height:1.55}
+details.glos{border:1px solid #dfe5ef;border-radius:12px;padding:10px 16px;margin:16px 0;background:#f8faff}
+details.glos summary{cursor:pointer;font-weight:700;color:#1e3c72;font-size:1.05em}
 .module ol{margin:10px 0 14px 28px}.module ol li{line-height:1.7;font-size:1.05em;padding:2px 0}
 @media print{.score-tools,.navigation,.progress-container{display:none}}
 """
@@ -132,32 +141,42 @@ NEGRAS = {"C": "C#", "D": "D#", "F": "F#", "G": "G#", "A": "A#"}
 ESP = {"C": "Do", "D": "Re", "E": "Mi", "F": "Fa", "G": "Sol", "A": "La", "B": "Si"}
 
 
-def teclado(nombre, titulo, marcas, desde=4, octavas=2, color="#4ecdc4"):
-    """marcas: {'C4': '1', 'F#4': '2'…} → teclas resaltadas con su etiqueta (dedo o nota)."""
+def teclado(nombre, titulo, marcas, desde=4, octavas=2, color="#4ecdc4", saltos=(), extra=0):
+    """marcas: {'C4': '1', 'F#4': '2'…} → teclas resaltadas con su etiqueta (dedo o nota).
+    saltos: [('C4', 'D4', 'T')…] → etiqueta encima del teclado entre dos teclas (tonos y semitonos).
+    extra: teclas blancas añadidas tras la última octava (p. ej. 1 para terminar en Do)."""
     W, H, w, h = 26, 120, 16, 74
-    ancho = 7 * octavas * W + 2
-    s = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {ancho} {H+28}" width="{ancho}" height="{H+28}" role="img" aria-label="{html.escape(titulo, quote=True)}" font-family="Segoe UI,Tahoma,sans-serif">',
-         f'<rect width="{ancho}" height="{H+28}" fill="#ffffff"/>']
+    top = 30 if saltos else 0
+    ancho = (7 * octavas + extra) * W + 2
+    s = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {ancho} {H+28+top}" width="{ancho}" height="{H+28+top}" role="img" aria-label="{html.escape(titulo, quote=True)}" font-family="Segoe UI,Tahoma,sans-serif">',
+         f'<rect width="{ancho}" height="{H+28+top}" fill="#ffffff"/>', f'<g transform="translate(0,{top})">']
     x = 1
     pos = {}
-    for o in range(desde, desde + octavas):
-        for b in BLANCAS:
-            k = f"{b}{o}"; pos[k] = x
-            on = k in marcas
-            s.append(f'<rect x="{x}" y="1" width="{W}" height="{H}" rx="3" fill="{color if on else "#fff"}" stroke="#333"/>')
-            if on:
-                s.append(f'<text x="{x+W/2}" y="{H-10}" font-size="13" font-weight="700" text-anchor="middle" fill="#0f1b33">{marcas[k]}</text>')
-            if b == "C":
-                s.append(f'<text x="{x+W/2}" y="{H+20}" font-size="11" text-anchor="middle" fill="#555">Do{o}</text>')
-            x += W
+    blancas = [(b, o) for o in range(desde, desde + octavas) for b in BLANCAS] + [(b, desde + octavas) for b in BLANCAS[:extra]]
+    for b, o in blancas:
+        k = f"{b}{o}"; pos[k] = x
+        on = k in marcas
+        s.append(f'<rect x="{x}" y="1" width="{W}" height="{H}" rx="3" fill="{color if on else "#fff"}" stroke="#333"/>')
+        if on:
+            s.append(f'<text x="{x+W/2}" y="{H-10}" font-size="13" font-weight="700" text-anchor="middle" fill="#0f1b33">{marcas[k]}</text>')
+        if b == "C":
+            s.append(f'<text x="{x+W/2}" y="{H+20}" font-size="11" text-anchor="middle" fill="#555">Do{o}</text>')
+        x += W
     for o in range(desde, desde + octavas):
         for b, n in NEGRAS.items():
             k = f"{n[0]}#{o}"
             bx = pos[f"{b}{o}"] + W - w / 2
+            pos[k] = bx - W / 2 + w / 2
             on = k in marcas
             s.append(f'<rect x="{bx}" y="1" width="{w}" height="{h}" rx="2" fill="{"#e67e22" if on else "#1f2937"}"/>')
             if on:
                 s.append(f'<text x="{bx+w/2}" y="{h-8}" font-size="11" font-weight="700" text-anchor="middle" fill="#fff">{marcas[k]}</text>')
+    s.append("</g>")
+    for a, b, txt in saltos:
+        xa, xb = pos[a] + W / 2, pos[b] + W / 2
+        col = "#c0392b" if txt == "S" else "#1e3c72"
+        s.append(f'<path d="M{xa+3} 26 Q{(xa+xb)/2} 6 {xb-3} 26" fill="none" stroke="{col}" stroke-width="1.6"/>')
+        s.append(f'<text x="{(xa+xb)/2}" y="14" font-size="12" font-weight="700" text-anchor="middle" fill="{col}">{txt}</text>')
     s.append("</svg>")
     open(os.path.join(OUT, "img", nombre), "w", encoding="utf-8").write("\n".join(s))
 
@@ -170,6 +189,13 @@ teclado("teclado_acordes.svg", "Do mayor (Do–Mi–Sol) en estado fundamental y
         {"C4": "Do", "E4": "Mi", "G4": "Sol", "C5": "Do", "F5": "Fa", "A5": "La"}, color="#ffd166")
 teclado("teclado_rootless.svg", "Voicings sin fundamental: Dm7 (Fa–La–Do–Mi) y G7 (Fa–La–Si–Mi)",
         {"F4": "3", "A4": "5", "C5": "7", "E5": "9"}, color="#a8edea")
+teclado("teclado_pasos_do.svg", "Escala de Do mayor con los tonos (T) y semitonos (S) entre sus notas",
+        {f"{b}4": ESP[b] for b in BLANCAS} | {"C5": "Do"}, octavas=1, extra=1,
+        saltos=[(f"{a}4", f"{b}4" if b != "C" else "C5", t) for a, b, t in zip(BLANCAS, BLANCAS[1:] + ["C"], "TTSTTTS")])
+teclado("teclado_3M.svg", "Tercera mayor: de Do a Mi hay cuatro semitonos",
+        {"C4": "Do", "C#4": "1", "D4": "2", "D#4": "3", "E4": "Mi 4"}, octavas=1, color="#ffd166")
+teclado("teclado_3m.svg", "Tercera menor: de Do a Mi bemol hay tres semitonos",
+        {"C4": "Do", "C#4": "1", "D4": "2", "D#4": "3"}, octavas=1, color="#a8edea")
 teclado("teclado_blues.svg", "Escala de blues de Do: Do, Mi♭, Fa, Fa♯, Sol, Si♭",
         {"C4": "Do", "D#4": "Mi♭", "F4": "Fa", "F#4": "Fa♯", "G4": "Sol", "A#4": "Si♭", "C5": "Do"}, octavas=1)
 
@@ -544,12 +570,26 @@ M.append(("🏆", "Preparar una obra y tocar en público", "Proyecto final: de l
       <div class="summary-box"><b>¡Enhorabuena!</b> Has completado los 14 módulos. Ahora puedes hacer el examen final.</div>
 """))
 assert len(M) == N
+
+
+def ampliar(i, body):
+    """Añade «En pocas palabras» al principio y las explicaciones extra antes de la primera autoevaluación."""
+    extra = re.sub(r"\[\[partitura:(\w+)\]\]", lambda m: partitura(m.group(1)), EXTRA[i])
+    extra = re.sub(r"\[\[fig:([^|\]]+)\|([^|\]]+)\|([^\]]+)\]\]", lambda m: fig(*m.groups()), extra)
+    assert "[[" not in extra, i
+    pos = body.find('<div class="quiz">')
+    pos = len(body) if pos < 0 else pos
+    return PALABRAS[i] + body[:pos] + extra + "\n" + body[pos:]
+
+
+M = [(ic, t, sub, ampliar(i, body)) for i, (ic, t, sub, body) in enumerate(M, 1)]
 for i, (ic, t, sub, body) in enumerate(M, 1):
     open(os.path.join(OUT, f"modulo{i}.html"), "w", encoding="utf-8").write(pagina(i, ic, t, sub, body))
 
 # Cuaderno de partituras (para imprimir y generar el PDF) ------------------------------------------
 orden = ["escala_do", "escala_lam", "arpegio_do", "inversiones", "cadencia", "alberti", "pedal", "bach846", "elise",
-         "octavas", "terceras", "adornos", "poli32", "poli43", "iivi", "blues"]
+         "octavas", "terceras", "adornos", "poli32", "poli43", "iivi", "blues",
+         "pulso_68", "ritmos", "escala_sol", "escala_fa", "cadencia_sol", "vals", "blues_frase"]
 assert set(orden) == set(PIEZAS)
 bloques = "".join(f'<section class="pieza"><h2>{i}. {PIEZAS[k]["titulo"]}</h2><div id="p-{k}"></div><p>{PIEZAS[k]["nota"]}</p></section>' for i, k in enumerate(orden, 1))
 cuaderno = f"""<!DOCTYPE html>
@@ -619,6 +659,18 @@ Q = [
  (14, "¿Qué ayuda a controlar los nervios antes de actuar?", ["Simular la actuación ante otras personas varias veces", "No tocar la obra la semana anterior", "Cambiar la digitación el día antes", "Subir el tempo el mismo día"], 0, False),
 ]
 
+# Preguntas de la ampliación (solo banco GIFT); se ordenan por módulo para agrupar las categorías
+Q += [
+ (2, "¿Cómo se cuenta un compás de 6/8 a velocidad normal?", ["En dos pulsos, cada uno dividido en tres: «1-y-a 2-y-a»", "En seis pulsos iguales y fuertes", "En tres pulsos, como un 3/4", "En cuatro pulsos"], 0, False),
+ (3, "¿Cuál es el patrón de tonos (T) y semitonos (S) de toda escala mayor?", ["T–T–S–T–T–T–S", "T–S–T–T–S–T–T", "S–T–T–T–S–T–T", "T–T–T–S–T–T–S"], 0, False),
+ (3, "¿Qué alteración lleva la armadura de Fa mayor?", ["Si♭", "Fa♯", "Mi♭", "Do♯"], 0, False),
+ (4, "¿Cuántos semitonos tiene una tercera mayor (por ejemplo, Do–Mi)?", ["4", "3", "2", "5"], 0, False),
+ (5, "En Sol mayor, ¿qué acorde es la dominante (V)?", ["Re mayor", "Do mayor", "La menor", "Mi menor"], 0, False),
+ (6, "En un vals con acompañamiento de mano izquierda, ¿qué se toca normalmente en el tiempo 1?", ["El bajo (la nota grave)", "El acorde en el registro medio", "Un silencio", "La melodía"], 0, False),
+ (12, "¿Qué es una frase de «pregunta y respuesta» al improvisar?", ["Una idea corta seguida de otra que la contesta y cierra, a menudo en la tónica", "Tocar la escala de arriba abajo", "Repetir la misma nota todo el compás", "Cambiar de tonalidad en cada compás"], 0, False),
+]
+Q.sort(key=lambda q: q[0])
+
 
 def _place(k, q):
     m, t, opts, ok, ex = q
@@ -684,6 +736,8 @@ open(os.path.join(OUT, "examen_final.html"), "w", encoding="utf-8").write(exam)
 
 # Portada ---------------------------------------------------------------------------------------
 itin = "".join(f'<li>{"🎹" if i < 8 else "🎼"} <span><b>{i+1}.</b> <a href="modulo{i+1}.html">{t}</a></span></li>' for i, t in enumerate(NOMBRES))
+glosario = ('<details class="glos"><summary>📖 Glosario: las palabras del curso explicadas fácil (' + str(len(GLOSARIO)) + ' términos)</summary><dl class="glosario">'
+            + "".join(f"<dt>{t}</dt><dd>{d}</dd>" for t, d in sorted(GLOSARIO, key=lambda x: x[0].lower())) + "</dl></details>")
 index = f"""<!DOCTYPE html>
 <html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{TITULO}</title><link rel="stylesheet" href="style.css"></head>
@@ -695,7 +749,8 @@ index = f"""<!DOCTYPE html>
     <h2>Bienvenido/a 👋</h2>
     <p>Este curso es para quien ya lee partituras sencillas y toca con las dos manos, y quiere dar el salto: tocar con <b>método</b>, entender la <b>armonía</b>, dominar la <b>técnica</b> avanzada, <b>improvisar</b> y preparar obras para tocarlas en público.</p>
     <div class="box"><b>Cómo funciona:</b> cada módulo tiene explicaciones, <b>partituras interactivas</b> (pulsa «▶ Escuchar» y elige la velocidad), ejercicios para el piano y autoevaluaciones. Al final hay un examen de {len(EXAM)} preguntas.</div>
-    <div class="dl-box">📥 <b>Partituras para imprimir:</b> <a href="partituras/Cuaderno_de_partituras.pdf" target="_blank" rel="noopener">Cuaderno de partituras (PDF)</a> con los 16 ejercicios y fragmentos del curso. Las obras completas, en <a href="https://imslp.org" target="_blank" rel="noopener">IMSLP</a> (biblioteca libre de partituras de dominio público).</div>
+    <div class="dl-box">📥 <b>Partituras para imprimir:</b> <a href="partituras/Cuaderno_de_partituras.pdf" target="_blank" rel="noopener">Cuaderno de partituras (PDF)</a> con los {len(PIEZAS)} ejercicios y fragmentos del curso. Las obras completas, en <a href="https://imslp.org" target="_blank" rel="noopener">IMSLP</a> (biblioteca libre de partituras de dominio público).</div>
+    {glosario}
     <h3>Itinerario</h3>
     <p><b>Nivel intermedio</b> (módulos 1–8) · <b>Nivel avanzado</b> (módulos 9–14)</p>
     <ul class="key-points">{itin}<li>🏁 <span><a href="examen_final.html">Examen final</a></span></li></ul>
@@ -725,7 +780,7 @@ polirritmia, armonía de jazz y voicings, blues e improvisación, estilos e inte
 de una actuación (proyecto final).
 
 Contenido:
-- 16 partituras interactivas (notación ABC dibujada con abcjs, licencia MIT, en licencias/):
+- {len(PIEZAS)} partituras interactivas (notación ABC dibujada con abcjs, licencia MIT, en licencias/):
   se pueden escuchar a 50/75/100 % (requiere Internet la primera vez para los sonidos).
 - partituras/Cuaderno_de_partituras.pdf (para imprimir) y partituras/abc/*.abc (fuentes ABC,
   se abren con MuseScore u otros editores con soporte ABC).

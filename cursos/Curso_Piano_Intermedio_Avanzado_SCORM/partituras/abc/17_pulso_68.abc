@@ -1,0 +1,11 @@
+X:17
+T:3/4 y 6/8: las mismas seis corcheas, distinto pulso
+C:Ejercicio · cuenta en voz alta los números de debajo
+M:3/4
+L:1/8
+Q:1/4=80
+K:C
+"^3/4: tres pulsos de negra"!>!C E !>!G c !>!G E | !>!C2 !>!E2 !>!G2 |
+w: 1 y 2 y 3 y 1 2 3
+[M:6/8][Q:3/8=60] "^6/8: dos pulsos de negra con puntillo"!>!C E G !>!c G E | !>!C3 !>!G3 |]
+w: 1 2 3 4 5 6 1 4

@@ -71,9 +71,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -94,6 +97,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO1" type="webcontent" adlcp:scormtype="sco" href="modulo1.html">
@@ -104,9 +114,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -127,6 +140,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO2" type="webcontent" adlcp:scormtype="sco" href="modulo2.html">
@@ -137,9 +157,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -160,6 +183,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO3" type="webcontent" adlcp:scormtype="sco" href="modulo3.html">
@@ -170,9 +200,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -193,6 +226,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO4" type="webcontent" adlcp:scormtype="sco" href="modulo4.html">
@@ -203,9 +243,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -226,6 +269,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO5" type="webcontent" adlcp:scormtype="sco" href="modulo5.html">
@@ -236,9 +286,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -259,6 +312,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO6" type="webcontent" adlcp:scormtype="sco" href="modulo6.html">
@@ -269,9 +329,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -292,6 +355,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO7" type="webcontent" adlcp:scormtype="sco" href="modulo7.html">
@@ -302,9 +372,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -325,6 +398,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO8" type="webcontent" adlcp:scormtype="sco" href="modulo8.html">
@@ -335,9 +415,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -358,6 +441,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO9" type="webcontent" adlcp:scormtype="sco" href="modulo9.html">
@@ -368,9 +458,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -391,6 +484,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO10" type="webcontent" adlcp:scormtype="sco" href="modulo10.html">
@@ -401,9 +501,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -424,6 +527,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO11" type="webcontent" adlcp:scormtype="sco" href="modulo11.html">
@@ -434,9 +544,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -457,6 +570,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO12" type="webcontent" adlcp:scormtype="sco" href="modulo12.html">
@@ -467,9 +587,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -490,6 +613,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO13" type="webcontent" adlcp:scormtype="sco" href="modulo13.html">
@@ -500,9 +630,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -523,6 +656,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_MODULO14" type="webcontent" adlcp:scormtype="sco" href="modulo14.html">
@@ -533,9 +673,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -556,6 +699,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
     <resource identifier="RES_EXAMEN_FINAL" type="webcontent" adlcp:scormtype="sco" href="examen_final.html">
@@ -566,9 +716,12 @@
       <file href="piano.js"/>
       <file href="img/circulo_quintas.svg"/>
       <file href="img/logo-centro.png"/>
+      <file href="img/teclado_3M.svg"/>
+      <file href="img/teclado_3m.svg"/>
       <file href="img/teclado_acordes.svg"/>
       <file href="img/teclado_blues.svg"/>
       <file href="img/teclado_do_mayor_md.svg"/>
+      <file href="img/teclado_pasos_do.svg"/>
       <file href="img/teclado_re_mayor_md.svg"/>
       <file href="img/teclado_rootless.svg"/>
       <file href="partituras/Cuaderno_de_partituras.pdf"/>
@@ -589,6 +742,13 @@
       <file href="partituras/abc/14_poli43.abc"/>
       <file href="partituras/abc/15_iivi.abc"/>
       <file href="partituras/abc/16_blues.abc"/>
+      <file href="partituras/abc/17_pulso_68.abc"/>
+      <file href="partituras/abc/18_ritmos.abc"/>
+      <file href="partituras/abc/19_escala_sol.abc"/>
+      <file href="partituras/abc/20_escala_fa.abc"/>
+      <file href="partituras/abc/21_cadencia_sol.abc"/>
+      <file href="partituras/abc/22_vals.abc"/>
+      <file href="partituras/abc/23_blues_frase.abc"/>
       <file href="licencias/abcjs-LICENSE.md"/>
     </resource>
   </resources>

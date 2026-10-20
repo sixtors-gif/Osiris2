@@ -1,5 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 366 148" width="366" height="148" role="img" aria-label="Voicings sin fundamental: Dm7 (Fa–La–Do–Mi) y G7 (Fa–La–Si–Mi)" font-family="Segoe UI,Tahoma,sans-serif">
 <rect width="366" height="148" fill="#ffffff"/>
+<g transform="translate(0,0)">
 <rect x="1" y="1" width="26" height="120" rx="3" fill="#fff" stroke="#333"/>
 <text x="14.0" y="140" font-size="11" text-anchor="middle" fill="#555">Do4</text>
 <rect x="27" y="1" width="26" height="120" rx="3" fill="#fff" stroke="#333"/>
@@ -30,4 +31,5 @@
 <rect x="279.0" y="1" width="16" height="74" rx="2" fill="#1f2937"/>
 <rect x="305.0" y="1" width="16" height="74" rx="2" fill="#1f2937"/>
 <rect x="331.0" y="1" width="16" height="74" rx="2" fill="#1f2937"/>
+</g>
 </svg>

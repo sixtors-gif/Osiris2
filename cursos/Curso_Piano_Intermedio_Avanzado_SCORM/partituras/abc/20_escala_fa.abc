@@ -1,0 +1,12 @@
+X:20
+T:Fa mayor
+C:Ejercicio · la mano derecha cambia la digitación
+M:4/4
+L:1/8
+Q:1/4=72
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:F
+[V:RH] !1!F!2!G!3!A!4!B !1!c!2!d!3!e!4!f | !3!e!2!d!1!c!4!B !3!A!2!G !1!F2 |]
+[V:LH] !5!F,!4!G,!3!A,!2!B, !1!C!3!D!2!E!1!F | !2!E!3!D!1!C!2!B, !3!A,!4!G, !5!F,2 |]

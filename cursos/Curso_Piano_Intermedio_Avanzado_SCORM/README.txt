@@ -8,13 +8,13 @@ polirritmia, armonía de jazz y voicings, blues e improvisación, estilos e inte
 de una actuación (proyecto final).
 
 Contenido:
-- 16 partituras interactivas (notación ABC dibujada con abcjs, licencia MIT, en licencias/):
+- 23 partituras interactivas (notación ABC dibujada con abcjs, licencia MIT, en licencias/):
   se pueden escuchar a 50/75/100 % (requiere Internet la primera vez para los sonidos).
 - partituras/Cuaderno_de_partituras.pdf (para imprimir) y partituras/abc/*.abc (fuentes ABC,
   se abren con MuseScore u otros editores con soporte ABC).
 - Ilustraciones: teclados con digitaciones y círculo de quintas.
 - Metrónomo y entrenador de lectura integrados (sin conexión).
-- examen_final.html: 28 preguntas (aprobado 70 %); preguntas_moodle.gift: 42 preguntas.
+- examen_final.html: 28 preguntas (aprobado 70 %); preguntas_moodle.gift: 49 preguntas.
 - Seguimiento SCORM: un SCO por página; el índice de Moodle se marca al avanzar.
 
 Obras de dominio público: solo fragmentos; las obras completas se enlazan a IMSLP.

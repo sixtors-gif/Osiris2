@@ -1,0 +1,12 @@
+X:22
+T:Pequeño vals
+C:Ejercicio original del curso
+M:3/4
+L:1/4
+Q:1/4=120
+%%score {RH | LH}
+V:RH clef=treble name="M.D."
+V:LH clef=bass name="M.I."
+K:C
+[V:RH] "C"e2 g | "G7"f2 d | "C"e c G | "C"c3 |]
+[V:LH] !>!C, [E,G,] [E,G,] | !>!G,, [B,,F,] [B,,F,] | !>!C, [E,G,] [E,G,] | C,3 |]
