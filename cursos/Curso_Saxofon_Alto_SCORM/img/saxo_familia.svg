@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 360" width="620" height="360" role="img" aria-label="La familia del saxofón: soprano, alto, tenor y barítono, con su afinación" font-family="Segoe UI,Tahoma,sans-serif">
+<rect width="620" height="360" fill="#fffaf0"/>
+<rect x="60" y="230" width="22" height="80" rx="10" fill="#e8c868" stroke="#8a5a14" stroke-width="2"/>
+<path d="M82 290 Q114 320 130 280 L130 250 L112 250 Z" fill="#c9962b" stroke="#8a5a14" stroke-width="2"/>
+<path d="M71 230 Q71 204 44 210" fill="none" stroke="#3b2410" stroke-width="7" stroke-linecap="round"/>
+<text x="90" y="340" font-size="15" font-weight="700" fill="#3b2410" text-anchor="middle">Soprano</text>
+<text x="90" y="358" font-size="12" fill="#555" text-anchor="middle">en Si♭</text>
+<rect x="200" y="190" width="22" height="120" rx="10" fill="#e8c868" stroke="#8a5a14" stroke-width="2"/>
+<path d="M222 290 Q254 320 270 280 L270 250 L252 250 Z" fill="#c9962b" stroke="#8a5a14" stroke-width="2"/>
+<path d="M211 190 Q211 164 184 170" fill="none" stroke="#3b2410" stroke-width="7" stroke-linecap="round"/>
+<text x="230" y="340" font-size="15" font-weight="700" fill="#c0392b" text-anchor="middle">Alto</text>
+<text x="230" y="358" font-size="12" fill="#555" text-anchor="middle">en Mi♭</text>
+<rect x="340" y="140" width="22" height="170" rx="10" fill="#e8c868" stroke="#8a5a14" stroke-width="2"/>
+<path d="M362 290 Q394 320 410 280 L410 250 L392 250 Z" fill="#c9962b" stroke="#8a5a14" stroke-width="2"/>
+<path d="M351 140 Q351 114 324 120" fill="none" stroke="#3b2410" stroke-width="7" stroke-linecap="round"/>
+<text x="370" y="340" font-size="15" font-weight="700" fill="#3b2410" text-anchor="middle">Tenor</text>
+<text x="370" y="358" font-size="12" fill="#555" text-anchor="middle">en Si♭</text>
+<rect x="480" y="85" width="22" height="225" rx="10" fill="#e8c868" stroke="#8a5a14" stroke-width="2"/>
+<path d="M502 290 Q534 320 550 280 L550 250 L532 250 Z" fill="#c9962b" stroke="#8a5a14" stroke-width="2"/>
+<path d="M491 85 Q491 59 464 65" fill="none" stroke="#3b2410" stroke-width="7" stroke-linecap="round"/>
+<text x="510" y="340" font-size="15" font-weight="700" fill="#3b2410" text-anchor="middle">Barítono</text>
+<text x="510" y="358" font-size="12" fill="#555" text-anchor="middle">en Mi♭</text>
+<text x="310" y="22" font-size="14" fill="#555" text-anchor="middle">Cuanto más grande, más grave. Este curso es del saxo alto (en rojo).</text>
+</svg>

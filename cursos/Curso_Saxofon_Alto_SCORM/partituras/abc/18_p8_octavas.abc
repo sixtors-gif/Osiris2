@@ -1,0 +1,9 @@
+X:18
+T:La llave de octava: la misma nota una octava más aguda
+M:4/4
+L:1/4
+Q:1/4=60
+%%MIDI program 65
+%%MIDI chordprog 0
+K:C clef=treble transpose=-9
+"^sin octava"G2 "^con octava"g2 | "^sin"A2 "^con"a2 | "^sin"B2 "^con"b2 | "^sin"c2 "^con"c'2 |]

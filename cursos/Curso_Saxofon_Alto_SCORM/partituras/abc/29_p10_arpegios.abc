@@ -1,0 +1,16 @@
+X:29
+T:Arpegios de Do, Sol, Fa y Re mayor
+M:4/4
+L:1/4
+Q:1/4=72
+% sin-ajuste
+%%MIDI program 65
+%%MIDI chordprog 0
+K:C clef=treble transpose=-9
+"^Do mayor"c e g c' | c' g e c |
+K:G
+"^Sol mayor"G B d g | g d B G |
+K:F
+"^Fa mayor"F A c f | f c A F |
+K:D
+"^Re mayor"D F A d | d A F D |]

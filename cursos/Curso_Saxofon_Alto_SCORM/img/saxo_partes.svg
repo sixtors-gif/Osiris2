@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-110 0 880 520" width="880" height="520" role="img" aria-label="Esquema del saxo alto con sus partes: boquilla, caña, abrazadera, cuello, cuerpo, llaves, tudel, campana y correa" font-family="Segoe UI,Tahoma,sans-serif"><rect x="-110" width="880" height="520" fill="#fffaf0"/>
+<path d="M214 70 Q282 54 296 108 L296 380 Q296 452 360 452 Q424 452 424 380 L424 300" fill="none" stroke="#c9962b" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M214 70 Q282 54 296 108 L296 380 Q296 452 360 452 Q424 452 424 380 L424 300" fill="none" stroke="#e8c868" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M404 300 L384 244 Q424 232 464 244 L444 300 Z" fill="#c9962b" stroke="#8a5a14" stroke-width="2"/>
+<path d="M214 70 L152 46 L146 60 L204 84 Z" fill="#3b2410"/>
+<path d="M156 52 L204 70" stroke="#e8d9a8" stroke-width="7" stroke-linecap="round"/>
+<rect x="176" y="46" width="22" height="30" rx="4" transform="rotate(20 187 61)" fill="#8a8a8a" stroke="#555"/>
+<circle cx="296" cy="140" r="11" fill="#fff" stroke="#3b2410" stroke-width="2"/>
+<circle cx="296" cy="174" r="11" fill="#fff" stroke="#3b2410" stroke-width="2"/>
+<circle cx="296" cy="208" r="11" fill="#fff" stroke="#3b2410" stroke-width="2"/>
+<circle cx="296" cy="242" r="11" fill="#fff" stroke="#3b2410" stroke-width="2"/>
+<circle cx="296" cy="276" r="11" fill="#fff" stroke="#3b2410" stroke-width="2"/>
+<circle cx="296" cy="310" r="11" fill="#fff" stroke="#3b2410" stroke-width="2"/>
+<circle cx="296" cy="344" r="11" fill="#fff" stroke="#3b2410" stroke-width="2"/>
+<rect x="276" y="112" width="40" height="12" rx="6" fill="#8a5a14"/>
+<path d="M296 150 Q230 20 150 14" fill="none" stroke="#c0392b" stroke-width="3" stroke-dasharray="6 5"/>
+<line x1="152" y1="52" x2="80" y2="30" stroke="#555" stroke-width="1"/>
+<text x="80" y="34" font-size="15" font-weight="700" fill="#3b2410" text-anchor="end">Boquilla</text>
+<line x1="188" y1="62" x2="120" y2="96" stroke="#555" stroke-width="1"/>
+<text x="120" y="100" font-size="15" font-weight="700" fill="#3b2410" text-anchor="end">Caña y abrazadera</text>
+<line x1="246" y1="78" x2="90" y2="146" stroke="#555" stroke-width="1"/>
+<text x="90" y="150" font-size="15" font-weight="700" fill="#3b2410" text-anchor="end">Cuello (tudel)</text>
+<line x1="296" y1="126" x2="90" y2="196" stroke="#555" stroke-width="1"/>
+<text x="90" y="200" font-size="15" font-weight="700" fill="#3b2410" text-anchor="end">Llave de octava</text>
+<line x1="296" y1="210" x2="90" y2="246" stroke="#555" stroke-width="1"/>
+<text x="90" y="250" font-size="15" font-weight="700" fill="#3b2410" text-anchor="end">Llaves y almohadillas</text>
+<line x1="296" y1="300" x2="90" y2="326" stroke="#555" stroke-width="1"/>
+<text x="90" y="330" font-size="15" font-weight="700" fill="#3b2410" text-anchor="end">Cuerpo</text>
+<line x1="360" y1="452" x2="330" y2="492" stroke="#555" stroke-width="1"/>
+<text x="330" y="496" font-size="15" font-weight="700" fill="#3b2410" text-anchor="middle">Curva en U (arco)</text>
+<line x1="444" y1="270" x2="480" y2="286" stroke="#555" stroke-width="1"/>
+<text x="480" y="290" font-size="15" font-weight="700" fill="#3b2410" text-anchor="start">Campana (pabellón)</text>
+<line x1="180" y1="20" x2="190" y2="10" stroke="#555" stroke-width="1"/>
+<text x="190" y="14" font-size="15" font-weight="700" fill="#3b2410" text-anchor="start">Correa</text>
+<line x1="296" y1="120" x2="330" y2="104" stroke="#555" stroke-width="1"/>
+<text x="330" y="108" font-size="15" font-weight="700" fill="#3b2410" text-anchor="start">Pulgar izquierdo (octava)</text>
+<line x1="424" y1="350" x2="460" y2="376" stroke="#555" stroke-width="1"/>
+<text x="460" y="380" font-size="15" font-weight="700" fill="#3b2410" text-anchor="start">Anillo del pulgar derecho</text>
+<circle cx="424" cy="350" r="8" fill="none" stroke="#3b2410" stroke-width="3"/>
+</svg>

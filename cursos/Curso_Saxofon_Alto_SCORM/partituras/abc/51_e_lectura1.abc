@@ -1,0 +1,9 @@
+X:51
+T:Lectura a primera vista · nivel 1
+M:4/4
+L:1/4
+Q:1/4=72
+%%MIDI program 65
+%%MIDI chordprog 0
+K:G clef=treble transpose=-9
+G A B A | G2 B2 | A G F G | A4 |]

@@ -1,0 +1,9 @@
+X:33
+T:Negra con puntillo y corchea
+M:4/4
+L:1/8
+Q:1/4=66
+%%MIDI program 65
+%%MIDI chordprog 0
+K:C clef=treble transpose=-9
+G3 A B3 A | G3 A B4 | A3 B c3 B | A4 G4 |]

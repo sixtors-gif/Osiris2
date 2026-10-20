@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 9: Lectura y transposición: el saxo en Mi♭</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🔄</span>Módulo 9: Lectura y transposición: el saxo en Mi♭</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Por qué lo que lees no es lo que suena y cómo pasar de un tono a otro.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:56%"></div></div>
+    <div class="progress-text">Saxofón alto · Desarrollo · Módulo 9 de 14</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+<div class="palabras"><span class="pal-tag">En pocas palabras</span><p>El saxo alto es un <b>instrumento transpositor</b>: lo que lees <b>no es lo que suena</b>. El saxo alto suena una <b>sexta mayor más grave</b> que lo escrito. La regla de oro: del piano al saxo alto, <b>añade tres sostenidos</b> a la armadura.</p></div>
+      <h2>El saxo es un instrumento en Mi♭</h2>
+      <h3>1. Por qué los saxos transponen</h3>
+      <p>Todos los saxofones se tocan con la <b>misma digitación para la misma nota escrita</b>, aunque sean de tamaños muy distintos. Así, quien aprende el alto puede pasar al tenor o al soprano sin volver a aprender los dedos. A cambio, la música se escribe <b>transpuesta</b> para cada tipo de saxo, de modo que la misma nota escrita suena en alturas diferentes.</p>
+      <p>Cuando decimos que el alto está «en Mi♭» queremos decir que, cuando lees un <b>Do</b>, suena un <b>Mi♭</b> (una sexta mayor, 9 semitonos, más grave). El piano, la flauta y la guitarra suenan lo que está escrito: se dice que están «en Do» o en <b>tono de concierto</b>.</p>
+      <h3>2. Escrito y real: la tabla básica</h3><div class="tabla-wrap"><table class="tabla"><tr><th>Lo que lees (escrito)</th><th>Lo que suena (concierto)</th><th>Intervalo</th></tr><tr><td>Do</td><td>Mi♭</td><td>Una sexta mayor más grave</td></tr><tr><td>Re</td><td>Fa</td><td>Una sexta mayor más grave</td></tr><tr><td>Mi</td><td>Sol</td><td>Una sexta mayor más grave</td></tr><tr><td>Fa</td><td>La♭</td><td>Una sexta mayor más grave</td></tr><tr><td>Sol</td><td>Si♭</td><td>Una sexta mayor más grave</td></tr><tr><td>La</td><td>Do</td><td>Una sexta mayor más grave</td></tr><tr><td>Si</td><td>Re</td><td>Una sexta mayor más grave</td></tr></table></div><div class="box tip"><b>Las dos reglas:</b> • Del <b>saxo al piano</b>: lo que suena es una sexta mayor <b>más grave</b> que lo escrito.<br>• Del <b>piano al saxo</b>: se escribe una sexta mayor <b>más aguda</b> (o una tercera menor más grave).</div><h3>3. Las tonalidades</h3>
+      <p>Si un piano toca una canción en cierta tonalidad (la «de concierto»), el saxo alto debe leerla en otra tonalidad, tres sostenidos por encima. Esto es lo que se hace con las partituras de saxo:</p><div class="tabla-wrap"><table class="tabla"><tr><th>Piano (concierto)</th><th>Saxo alto (escrita)</th><th>Alteraciones de la escrita</th></tr><tr><td>Do mayor</td><td>La mayor</td><td>3 sostenidos</td></tr><tr><td>Sol mayor</td><td>Mi mayor</td><td>4 sostenidos</td></tr><tr><td>Re mayor</td><td>Si mayor</td><td>5 sostenidos</td></tr><tr><td>Fa mayor</td><td>Re mayor</td><td>2 sostenidos</td></tr><tr><td>Si♭ mayor</td><td>Sol mayor</td><td>1 sostenido</td></tr><tr><td>Mi♭ mayor</td><td>Do mayor</td><td>Sin alteraciones</td></tr><tr><td>La♭ mayor</td><td>Fa mayor</td><td>1 bemol</td></tr><tr><td>Re♭ mayor</td><td>Si♭ mayor</td><td>2 bemoles</td></tr></table></div><div class="como"><b>💡 Cómo se hace:</b> Para pasar de la armadura del piano a la del saxo alto, <b>suma tres sostenidos</b> (o quita tres bemoles). Si el piano tiene 3 bemoles (Mi♭ mayor), quitas 3 y queda sin alteraciones (Do mayor). Si el piano no tiene ninguna (Do mayor), sumas 3 sostenidos (La mayor).</div><h3>4. Convertidor de tonalidades</h3>
+      <div class="activity"><label>Tonalidad del piano (concierto): <select id="conv-sel" onchange="convertir()"><option value="0">Do</option><option value="1">Re♭</option><option value="2">Re</option><option value="3">Mi♭</option><option value="4">Mi</option><option value="5">Fa</option><option value="6">Fa♯</option><option value="7">Sol</option><option value="8">La♭</option><option value="9">La</option><option value="10">Si♭</option><option value="11">Si</option></select></label>
+        <p id="conv-res"></p><div id="conv-pent" style="max-width:300px"></div></div>
+      <h3>5. Entrenador de transposición</h3>
+      <div class="activity"><p id="trans-q">Pulsa «Empezar».</p><div class="lect-btns" id="trans-opts"></div><p class="feedback" id="trans-fb"></p>
+        <p><button class="btn" onclick="transNueva()">Empezar / otra pregunta</button></p></div>
+      <h3>6. La misma melodía en tres tonalidades</h3><div class="score-box"><h4>🎼 La misma melodía en tres tonalidades escritas</h4><div class="score" id="p-p9_ode_tres"></div><div class="score-tools"><button onclick="tocar('p9_ode_tres')">▶ Escuchar</button><button class="stop" onclick="parar()">■ Parar</button><label>Velocidad <select id="v-p9_ode_tres"><option value="0.5">50 %</option><option value="0.75">75 %</option><option value="1" selected>100 %</option></select></label><span class="score-msg" id="m-p9_ode_tres"></span></div><p class="score-note">Es la misma música. Un piano que la toca en Mi♭ mayor, en Si♭ mayor o en Fa mayor necesita que el saxo alto la lea en Do, Sol o Re.</p></div><h3>7. Tu registro real</h3>
+      <p>El saxo alto abarca, <b>escrito</b>, del Si♭ grave (Si♭3) al Fa♯ agudo (Fa♯6), pero lo que suena va del Re♭3 al La5. Un piano que quiera doblarte debe tocar las notas una sexta mayor más abajo.</p>
+      <h3>8. Tocar con otros músicos</h3><ul class="key-points"><li>🎙️ <span><b>En una banda o combo:</b> pide siempre la parte de <i>«saxo alto en Mi♭»</i>; los demás instrumentos tienen partes distintas.</span></li><li>🎙️ <span><b>Con una pista de acompañamiento (<i>play-along</i>):</b> suenan en tono de concierto; busca la edición «Eb instruments» o transpórtalas.</span></li><li>🎙️ <span><b>Con un pianista:</b> dile en qué tonalidad estás leyendo: «yo estoy en Do (escrito), tú estás en Mi♭ (concierto)».</span></li><li>🎙️ <span><b>Los acordes</b> de las partituras de saxo ya están transportados: no hace falta que los conviertas.</span></li></ul><h3>⚠️ Errores frecuentes y cómo corregirlos</h3><div class="tabla-wrap"><table class="tabla"><tr><th>Lo que pasa</th><th>Por qué</th><th>Cómo corregirlo</th></tr><tr><td>Toco lo que lee el piano y suena mal</td><td>No he transpuesto</td><td>Pide la parte de saxo alto o suma tres sostenidos a la armadura</td></tr><tr><td>Me pierdo con tantas alteraciones</td><td>Las armaduras transportadas tienen muchas</td><td>Practica las escalas escritas y haz el convertidor a diario</td></tr><tr><td>Confundo escrita y concierto</td><td>Uso la misma palabra para las dos</td><td>Di siempre «escrito» o «concierto» cuando hables de una nota</td></tr></table></div><div class="quiz"><h4>🧩 Lees un Do en la partitura del saxo alto. ¿Qué nota suena?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'s9a')">A. Mi♭</button><button class="option" onclick="checkAnswer(this,false,'s9a')">B. Do</button><button class="option" onclick="checkAnswer(this,false,'s9a')">C. La</button></div><p class="feedback" id="fb-s9a" data-ok="El saxo alto suena una sexta mayor más grave que lo escrito: Do suena Mi♭."></p></div><div class="quiz"><h4>🧩 El piano toca en Sol mayor. ¿En qué tonalidad escrita lees con el saxo alto?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'s9b')">A. Mi mayor</button><button class="option" onclick="checkAnswer(this,false,'s9b')">B. Re mayor</button><button class="option" onclick="checkAnswer(this,false,'s9b')">C. Si♭ mayor</button></div><p class="feedback" id="fb-s9b" data-ok="Se suman tres sostenidos: Sol (1♯) pasa a Mi (4♯)."></p></div><div class="quiz"><h4>🧩 ¿Qué regla vale para pasar la armadura del piano a la del saxo alto?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'s9c')">A. Sumar tres sostenidos (o quitar tres bemoles)</button><button class="option" onclick="checkAnswer(this,false,'s9c')">B. Restar tres sostenidos</button><button class="option" onclick="checkAnswer(this,false,'s9c')">C. Ninguna: son iguales</button></div><p class="feedback" id="fb-s9c" data-ok="El saxo alto escribe una sexta mayor por encima de lo que suena."></p></div><div class="quiz"><h4>🧩 ¿Cuántos semitonos más grave suena el saxo alto respecto a lo escrito?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'s9d')">A. 9</button><button class="option" onclick="checkAnswer(this,false,'s9d')">B. 3</button><button class="option" onclick="checkAnswer(this,false,'s9d')">C. 12</button></div><p class="feedback" id="fb-s9d" data-ok="Una sexta mayor son 9 semitonos."></p></div><div class="summary-box"><b>Resumen:</b> el saxo alto está en Mi♭: suena una sexta mayor más grave de lo escrito. Del piano al saxo, suma tres sostenidos. Pide siempre tu parte de «saxo alto».</div>
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo8.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo10.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Saxofón alto: de cero a intermedio · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script>var PARTITURAS={"p9_ode_tres": "X:22\nT:La misma melodía en tres tonalidades escritas\nM:4/4\nL:1/4\nQ:1/4=88\n% sin-ajuste\n%%MIDI program 65\n%%MIDI chordprog 0\nK:C clef=treble transpose=-9\n\"^escrito en Do: suena Mi♭\"E E F G | G F E D | C C D E | E3/2 D/ D2 |\nK:G\n\"^escrito en Sol: suena Si♭\"B B c d | d c B A | G G A B | B3/2 A/ A2 |\nK:D\n\"^escrito en Re: suena Fa\"F F G A | A G F E | D D E F | F3/2 E/ E2 |]\n"};var PARTITURAS_ACOMP={};</script>
+<script src="abcjs-basic-min.js"></script>
+<script src="saxo.js"></script>
+<script src="scorm.js"></script>
+
+</body>
+</html>

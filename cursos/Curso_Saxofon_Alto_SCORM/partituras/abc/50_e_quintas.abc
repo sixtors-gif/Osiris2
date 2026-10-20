@@ -1,0 +1,9 @@
+X:50
+T:Saltos de quinta
+M:4/4
+L:1/4
+Q:1/4=60
+%%MIDI program 65
+%%MIDI chordprog 0
+K:G clef=treble transpose=-9
+G d G d | A e A e | B f B f | G4 |]

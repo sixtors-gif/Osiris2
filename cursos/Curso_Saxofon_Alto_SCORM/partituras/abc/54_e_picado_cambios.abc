@@ -1,0 +1,9 @@
+X:54
+T:Picado con cambios de nota
+M:4/4
+L:1/4
+Q:1/4=76
+%%MIDI program 65
+%%MIDI chordprog 0
+K:C clef=treble transpose=-9
+.G .A .B .A | .G .A .B2 | .B .A .G .A | G4 |]

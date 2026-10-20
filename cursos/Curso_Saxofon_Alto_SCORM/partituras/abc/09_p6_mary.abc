@@ -1,0 +1,9 @@
+X:9
+T:Mary tenía un corderito (Mary Had a Little Lamb)
+M:4/4
+L:1/4
+Q:1/4=84
+%%MIDI program 65
+%%MIDI chordprog 0
+K:F clef=treble transpose=-9
+"F"A G F G | A A A2 | "C7"G G G2 | "F"A c c2 | A G F G | "F"A A A A | "C7"G G A G | "F"F4 |]

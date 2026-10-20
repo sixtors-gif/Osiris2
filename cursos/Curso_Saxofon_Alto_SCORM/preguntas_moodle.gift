@@ -1,0 +1,443 @@
+// Saxofón alto: de cero a intermedio — Banco de preguntas GIFT para Moodle
+// Autor: Sixto Rodríguez de Sepúlveda. Una única respuesta correcta; una categoría por módulo.
+
+$CATEGORY: Saxofón alto/Módulo 01 - Conoce tu saxo alto
+
+::SAX01-1::¿Qué hace vibrar al saxofón para producir el sonido? {
+~Los labios del intérprete
+=La caña contra la boquilla
+~El metal del cuerpo
+~El aire caliente
+}
+
+::SAX01-2::¿En qué tonalidad está afinado el saxo alto? {
+=Mi♭
+~Si♭
+~Do
+~Fa
+}
+
+::SAX01-3::¿Por qué el saxofón se considera un instrumento de viento-madera? {
+~Porque es de madera
+~Porque suena como una flauta
+~Porque lleva llaves
+=Porque el sonido nace de una caña
+}
+
+::SAX01-4::¿Quién inventó el saxofón? {
+~Hector Berlioz
+~Charlie Parker
+=Adolphe Sax
+~Marcel Mule
+}
+
+::SAX01-5::¿Qué hace la llave de octava? {
+~Cambia la tonalidad del saxo
+=Hace sonar una octava más aguda la misma digitación
+~Sube la afinación
+~Cierra todos los orificios
+}
+
+$CATEGORY: Saxofón alto/Módulo 02 - Montaje, cuidado y mantenimiento
+
+::SAX02-1::¿Cómo se guarda la caña después de tocar? {
+=Plana, en su estuche
+~Pegada a la boquilla
+~En el bolsillo
+~Mojada
+}
+
+::SAX02-2::¿Con qué dureza de caña es recomendable empezar? {
+~No importa
+~De 4 a 5
+~La más dura
+=De 1½ a 2½
+}
+
+::SAX02-3::¿Qué se pasa por el interior del cuerpo del saxo para secarlo? {
+~Alcohol
+~Agua y jabón
+=Un escobillón o paño
+~Nada
+}
+
+::SAX02-4::¿Para qué sirve la grasa para corcho? {
+~Para engrasar las llaves
+=Para montar el cuello y la boquilla sin forzar
+~Para limpiar la caña
+~Para afinar
+}
+
+::SAX02-5::¿Cuándo se limpia el interior del saxo? {
+=Después de cada sesión
+~Una vez al año
+~Nunca
+~Solo antes de un concierto
+}
+
+$CATEGORY: Saxofón alto/Módulo 03 - Postura, sujeción y respiración
+
+::SAX03-1::¿Qué mano va en la parte superior del saxo? {
+~Las dos arriba
+~La derecha
+~Da igual
+=La izquierda
+}
+
+::SAX03-2::¿Cómo debe quedar la boquilla respecto a tu boca al ajustar la correa? {
+~Debes estirarte
+~Debes agacharte
+=Debe llegar sin bajar ni subir la cabeza
+~No importa
+}
+
+::SAX03-3::¿Hacia dónde se lleva el aire al respirar para tocar? {
+~Hacia los hombros
+=Hacia el abdomen y los costados
+~Solo hacia el pecho
+~Hacia la garganta
+}
+
+::SAX03-4::Te mareas al practicar los ejercicios de respiración. ¿Qué haces? {
+=Paras y respiras con normalidad
+~Sigues más fuerte
+~Aguantas más aire
+~Bebes un refresco
+}
+
+$CATEGORY: Saxofón alto/Módulo 04 - La embocadura y el primer sonido
+
+::SAX04-1::¿Dónde apoyan los dientes superiores? {
+~En el labio inferior
+~Sobre la caña
+~Sobre el cuello
+=Sobre la boquilla
+}
+
+::SAX04-2::¿Cómo debe colocarse el labio inferior? {
+~Mordiendo la caña
+~Separado de la caña
+=Sobre los dientes inferiores, como un cojín
+~Hacia fuera
+}
+
+::SAX04-3::El sonido es un chirrido agudo. ¿Qué haces? {
+~Apretar más
+=Relajar la embocadura y sacar un poco la boquilla
+~Soplar más flojo
+~Cambiar de saxo
+}
+
+::SAX04-4::¿Qué forma tienen las comisuras al tocar? {
+=Cerradas, como para decir «u»
+~Muy abiertas
+~Hacia arriba, sonriendo
+~Hacia fuera
+}
+
+$CATEGORY: Saxofón alto/Módulo 05 - Primeras notas\: Si, La y Sol
+
+::SAX05-1::¿Qué dedos se usan para el Sol (Sol4)? {
+~Los seis
+~Solo el 1
+~1 y 2
+=1, 2 y 3 de la izquierda
+}
+
+::SAX05-2::¿Qué nota se toca con el dedo 1 solo (izquierdo)? {
+~Sol
+~La
+=Si
+~Do
+}
+
+::SAX05-3::¿Cuánto dura una blanca en 4/4? {
+~1 tiempo
+=2 tiempos
+~4 tiempos
+~½ tiempo
+}
+
+::SAX05-4::¿Dónde se escribe el Si en el pentagrama (clave de Sol)? {
+=En la tercera línea
+~En la primera línea
+~En el primer espacio
+~Encima del pentagrama
+}
+
+$CATEGORY: Saxofón alto/Módulo 06 - Más notas\: grave y medio
+
+::SAX06-1::¿Qué dedos se usan para el Fa (Fa4)? {
+~Solo derecha
+~Izquierda 1-2 y derecha 1-2
+~Los seis dedos
+=Izquierda 1-2-3 y derecha 1
+}
+
+::SAX06-2::¿Cuántos dedos hay abajo en el Re (Re4)? {
+~Uno
+~Tres
+=Seis
+~Cuatro
+}
+
+::SAX06-3::En Fa mayor, ¿cómo se toca el Si? {
+~Como Si natural
+=Como Si♭\: dedo 1 izquierdo y 1 derecho
+~Con el meñique
+~Con el pulgar
+}
+
+::SAX06-4::¿Qué dedo se usa para el Do (Do5)? {
+=El 2 de la izquierda
+~El 1 de la izquierda
+~Los seis
+~Ninguno
+}
+
+::SAX06-5::¿Con qué dedos se tocan las notas graves como el Do (Do4)? {
+~Con las palmas
+~Solo con el pulgar
+~Solo con la izquierda
+=Con los seis dedos y el meñique
+}
+
+$CATEGORY: Saxofón alto/Módulo 07 - La articulación\: la lengua
+
+::SAX07-1::¿Con qué parte de la lengua se articula? {
+~Con los lados
+~Con la base
+=Con la punta
+~No se usa la lengua
+}
+
+::SAX07-2::En una ligadura de varias notas, ¿cuántas se articulan con la lengua? {
+~Todas
+=Solo la primera
+~Ninguna
+~La última
+}
+
+::SAX07-3::¿Qué indica un punto sobre una nota? {
+=Que se toca más corta (picado)
+~Que se toca más fuerte
+~Que se liga
+~Que se alarga
+}
+
+::SAX07-4::Al articular, ¿qué pasa con el aire? {
+~Sale más débil
+~Se detiene del todo
+~Se cierra la garganta
+=Sigue constante; la lengua solo interrumpe la vibración
+}
+
+$CATEGORY: Saxofón alto/Módulo 08 - El registro agudo y la llave de octava
+
+::SAX08-1::¿Qué hace la llave de octava? {
+~Sube el volumen
+~Cambia la tonalidad
+=Hace que la misma digitación suene una octava más aguda
+~Afina el saxo
+}
+
+::SAX08-2::¿Qué dedos se usan para el Sol agudo (Sol5)? {
+~Solo la llave de octava
+=Izq 1-2-3 más la llave de octava
+~Los seis dedos
+~Derecha 1-2-3
+}
+
+::SAX08-3::Al subir de registro con la llave de octava, ¿qué hay que hacer con la boca? {
+=Mantenerla igual y dar más velocidad al aire
+~Morder más
+~Cerrar los labios
+~Abrir la boca
+}
+
+::SAX08-4::El Do♯ agudo (Do♯6) se toca con… {
+~El meñique
+~Los seis dedos
+~Solo el dedo 2
+=Todos los dedos levantados y la llave de octava
+}
+
+$CATEGORY: Saxofón alto/Módulo 09 - Lectura y transposición\: el saxo en Mi♭
+
+::SAX09-1::Lees un Do en la partitura del saxo alto. ¿Qué nota suena? {
+~La
+~Do
+=Mi♭
+~Re
+}
+
+::SAX09-2::El piano toca en Sol mayor. ¿En qué tonalidad escrita lees con el saxo alto? {
+~Re mayor
+=Mi mayor
+~Si♭ mayor
+~Do mayor
+}
+
+::SAX09-3::¿Qué regla vale para pasar la armadura del piano a la del saxo alto? {
+=Sumar tres sostenidos o quitar tres bemoles
+~Restar tres sostenidos
+~Ninguna
+~Sumar tres bemoles
+}
+
+::SAX09-4::¿Cuántos semitonos más grave suena el saxo alto respecto a lo escrito? {
+~5
+~3
+~12
+=9
+}
+
+::SAX09-5::¿Qué parte debes pedir para tocar en una banda? {
+~La de flauta
+~La de piano
+=La de saxo alto en Mi♭
+~La de saxo tenor
+}
+
+$CATEGORY: Saxofón alto/Módulo 10 - Escalas y arpegios
+
+::SAX10-1::¿Cuántas alteraciones tiene la escala de Re mayor? {
+~Un bemol
+=Dos sostenidos\: Fa♯ y Do♯
+~Ninguna
+~Tres bemoles
+}
+
+::SAX10-2::¿Cuál es la relativa menor de Sol mayor? {
+=Mi menor
+~La menor
+~Re menor
+~Si menor
+}
+
+::SAX10-3::¿Qué notas forman un arpegio mayor? {
+~Tónica y cuarta
+~Todas las notas de la escala
+~Tónica y segunda
+=Tónica, tercera, quinta y octava
+}
+
+::SAX10-4::¿Con qué se estudia una escala? {
+~Solo picada
+~Lo más rápido posible
+=Con metrónomo, despacio, ligada y con ritmos
+~Sin metrónomo
+}
+
+$CATEGORY: Saxofón alto/Módulo 11 - Ritmo, compases y fraseo
+
+::SAX11-1::¿Cuántos pulsos se sienten en un compás de 6/8? {
+~Seis
+=Dos, de tres corcheas cada uno
+~Tres
+~Cuatro
+}
+
+::SAX11-2::¿Cuánto dura una negra con puntillo? {
+=1½ tiempos
+~2 tiempos
+~1 tiempo
+~3 tiempos
+}
+
+::SAX11-3::¿Dónde conviene respirar? {
+~Cada dos notas
+~A mitad de frase
+~Cuando se acaba el aire
+=Entre frases, en un silencio o nota larga
+}
+
+::SAX11-4::¿Qué es la síncopa? {
+~Una nota picada
+~Un silencio largo
+=Un acento en la parte débil del compás
+~Un ritmo uniforme
+}
+
+$CATEGORY: Saxofón alto/Módulo 12 - Sonido y afinación
+
+::SAX12-1::Estás tocando más alto que el La de referencia. ¿Qué haces? {
+~Meter la boquilla
+=Sacar un poco la boquilla
+~Morder más
+~Soplar más fuerte
+}
+
+::SAX12-2::¿Qué nota escrita da el La (440 Hz) de concierto con el saxo alto? {
+=Fa♯
+~La
+~Do
+~Re
+}
+
+::SAX12-3::¿Qué se trabaja con las notas largas? {
+~La lengua
+~La velocidad
+~El vibrato
+=El sonido\: estabilidad, redondez y afinación
+}
+
+::SAX12-4::¿Qué es el vibrato? {
+~Un golpe de lengua
+~Un cambio de octava
+=Una pequeña oscilación regular de la altura de la nota
+~Un tipo de caña
+}
+
+$CATEGORY: Saxofón alto/Módulo 13 - Repertorio y tocar con otros
+
+::SAX13-1::¿Qué es lo primero que debes hacer con una pieza nueva? {
+~Tocarla a tempo desde el primer día
+=Escucharla y analizarla
+~Memorizarla sin leer
+~Tocar solo el final
+}
+
+::SAX13-2::¿Cuándo se sube el tempo del metrónomo? {
+=Cuando sale tres veces seguidas sin errores
+~Cada cinco minutos
+~Nunca
+~Cuando te aburres
+}
+
+::SAX13-3::Tocas en un grupo y haces de acompañamiento. ¿Qué debes hacer? {
+~No tocar
+~Tocar más fuerte
+~Tocar más rápido
+=Tocar más suave que quien lleva la melodía
+}
+
+$CATEGORY: Saxofón alto/Módulo 14 - Jazz, blues e improvisación
+
+::SAX14-1::¿Qué es la nota azul de la escala de blues? {
+~La tónica
+~La más aguda
+=La nota de paso que da color\: el Mi♭ en la escala de La escrita
+~La dominante
+}
+
+::SAX14-2::¿Cuántos compases tiene la forma básica del blues? {
+~8
+=12
+~16
+~24
+}
+
+::SAX14-3::Escrito A7, ¿qué acorde suena de concierto? {
+=C7
+~A7
+~E♭7
+~F7
+}
+
+::SAX14-4::¿Cómo se tocan las corcheas con swing? {
+~Picadas
+~Iguales
+~Muy cortas
+=Largas y cortas, como un tresillo con las dos primeras unidas
+}

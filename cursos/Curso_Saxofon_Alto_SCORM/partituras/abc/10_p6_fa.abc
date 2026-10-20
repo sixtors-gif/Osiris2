@@ -1,0 +1,9 @@
+X:10
+T:Descendiendo con el Fa♯
+M:4/4
+L:1/4
+Q:1/4=72
+%%MIDI program 65
+%%MIDI chordprog 0
+K:G clef=treble transpose=-9
+G F E D | E F G2 | F G A B | A G F2 | G4 |]
