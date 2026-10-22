@@ -89,6 +89,8 @@ def orden_paginas(d):
         orden.insert(1, "planificacion.html")
     if "ejercicios.html" in pags:
         orden.append("ejercicios.html")
+    if "proyecto_final.html" in pags:   # curso de IA: proyecto final antes del examen
+        orden.append("proyecto_final.html")
     # Repaso previo al examen (curso de Matemática básica).
     if "repaso.html" in pags:
         orden.append("repaso.html")
@@ -109,6 +111,8 @@ def titulo_pagina(d, f):
         return "Repaso previo al examen"
     if f == "planificacion.html":
         return "Planning de 6 meses (1 hora al día)"
+    if f == "proyecto_final.html":
+        return "Proyecto final: tu plan de IA"
     if f == "ejercicios.html":
         return "Gimnasio: ejercicios prácticos"
     t = re.sub(r"^[^—]+ — ", "", t)  # «Curso — Tema» → «Tema»

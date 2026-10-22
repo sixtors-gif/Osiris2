@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 11: Usar la IA con cabeza: privacidad, ética y límites</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🔒</span>Módulo 11: Usar la IA con cabeza: privacidad, ética y límites</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Datos personales, sesgos, derechos de autor, trampas y honestidad.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:79%"></div></div>
+    <div class="progress-text">IA con Claude · Práctica · Módulo 11 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+<div class="palabras"><span class="pal-tag">En pocas palabras</span><p>Usar IA no es solo «copiar y pegar». Hay que pensar <b>qué datos compartes, si lo que sale es cierto y justo, y si es honesto usarlo</b>. En hostelería manejas datos de clientes y alérgenos: aquí hay que ser especialmente cuidadoso.</p></div>
+      <h2>Responsabilidad con la IA</h2>
+      <h3>1. Privacidad y datos personales</h3>
+      <p>Un <b>dato personal</b> es cualquier información que identifica a una persona: nombre, DNI, correo, teléfono, número de reserva o habitación unido a un nombre, y también <b>datos sensibles</b> como la salud o las alergias vinculadas a alguien. En Europa los protege el <b>RGPD</b>. Regla práctica: <b>si no lo contarías en voz alta en un tren, no lo pegues en una IA</b>.</p>
+      <h3>Prueba el revisor de privacidad</h3>
+      <p>Escribe o pega un texto inventado y comprueba qué datos personales hay. Todo ocurre en tu navegador: no se envía nada.</p>
+      <div class="activity pv">
+        <textarea id="priv-texto" rows="5" placeholder="Pega aquí un texto de prueba (inventado)…" oninput="privRevisar()"></textarea>
+        <p><button class="btn" onclick="privEjemplo()">Ver un ejemplo</button> <button class="btn" onclick="privRevisar()">Revisar</button></p>
+        <div id="priv-res"></div>
+        <p><b>Versión anonimizada (solo detecta patrones evidentes; revisa tú el resto):</b></p><pre id="priv-limpio" class="pv-limpio"></pre>
+      </div>
+      <h3>2. Cómo anonimizar</h3><ol class="steps"><li>Quita nombres, DNI, correos, teléfonos y números de reserva o habitación.</li><li>Sustituye por marcas genéricas: «el cliente», «la mesa 5», «un grupo de 8 personas».</li><li>Quita detalles que identifiquen a alguien por sí solos (profesión rara, fechas exactas, matrícula).</li><li>Pregúntate: ¿necesita la IA ese dato para ayudarme? Si no, fuera.</li></ol><div class="hosteleria"><b>🍽️ En la hostelería:</b> un camarero apunta que un cliente es celíaco para no cometer un error. Ese dato <b>sí</b> es útil en el local, pero si lo mezclas con su nombre y lo pegas en una IA, ya estás tratando datos de salud de una persona. Sin base legal, y con una herramienta que quizá no es la que autoriza el negocio, <b>no se hace</b>. Consulta con tu responsable qué herramientas están permitidas.</div><h3>3. Sesgos e injusticias</h3>
+      <p>Como la IA aprende de textos humanos, puede repetir <b>prejuicios</b>: asociar profesiones con un género, tratar peor ciertos nombres o acentos, olvidar a grupos pequeños. Por eso no debe decidir sola sobre personas (contratar, despedir, dar un trato distinto a un cliente). Si algo te parece injusto, dilo y corrígelo.</p>
+      <h3>4. Derechos de autor y honestidad</h3><ul class="key-points"><li>⚖️ <span>Usar la IA para <b>ayudarte a aprender</b> es buena idea; usarla para hacer trampas en un examen o presentar como tuyo lo que no lo es, no.</span></li><li>⚖️ <span>Si en un trabajo te piden que indiques las herramientas usadas, <b>hazlo</b>.</span></li><li>⚖️ <span>Los textos e imágenes generados pueden parecerse a obras existentes: revisa que no copien un logotipo o una marca.</span></li><li>⚖️ <span>Las <b>falsificaciones</b> (deepfakes, voces clonadas, reseñas falsas) engañan y pueden ser ilegales.</span></li></ul><h3>5. Cómo detectar errores y bulos</h3><ol class="steps"><li>Desconfía de datos exactos, citas y enlaces: compruébalos.</li><li>Busca la misma información en dos fuentes fiables.</li><li>Pregúntale a Claude «¿qué debería comprobar de esto?».</li><li>En salud, seguridad y dinero, consulta siempre a una persona experta.</li></ol><div class="box tip"><b>En Europa hay normas específicas:</b> el <b>Reglamento Europeo de IA</b> (2024) regula usos de riesgo y exige transparencia, por ejemplo avisar cuando se habla con una IA o se publican contenidos generados. Los detalles se van aplicando por etapas: consulta las fuentes oficiales para saber qué te afecta.</div><h3>⚠️ Errores frecuentes y cómo corregirlos</h3><div class="tabla-wrap"><table class="tabla"><tr><th>Lo que pasa</th><th>Por qué</th><th>Cómo corregirlo</th></tr><tr><td>Pegar el listado de reservas para «ordenarlo»</td><td>Es rápido</td><td>Contiene datos personales; usa herramientas autorizadas o datos anonimizados</td></tr><tr><td>Creer que borrar el chat borra todo</td><td>Se ve vacío</td><td>Lee la política de privacidad y las opciones de la herramienta</td></tr><tr><td>Usar la IA para hacer los deberes sin entenderlos</td><td>Sale perfecto</td><td>No aprendes y puede ser considerado trampa; úsala para estudiar y practicar</td></tr></table></div><div class="quiz"><h4>🧩 ¿Cuál de estos datos NO debes pegar en una IA?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i11a')">A. Nombre y alergia de un cliente</button><button class="option" onclick="checkAnswer(this,false,'i11a')">B. Una receta de salsa</button><button class="option" onclick="checkAnswer(this,false,'i11a')">C. La definición de escandallo</button></div><p class="feedback" id="fb-i11a" data-ok="Nombre más datos de salud son datos personales sensibles."></p></div><div class="quiz"><h4>🧩 ¿Qué es un sesgo de la IA?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i11b')">A. Un prejuicio aprendido de los datos con los que se entrenó</button><button class="option" onclick="checkAnswer(this,false,'i11b')">B. Un fallo de corriente</button><button class="option" onclick="checkAnswer(this,false,'i11b')">C. Una pregunta mal escrita</button></div><p class="feedback" id="fb-i11b" data-ok="Los sesgos vienen de los datos humanos usados al entrenar."></p></div><div class="quiz"><h4>🧩 Si no estás seguro de una respuesta de la IA, ¿qué haces?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i11c')">A. Comprobarla en fuentes fiables o con una persona experta</button><button class="option" onclick="checkAnswer(this,false,'i11c')">B. Darla por buena</button><button class="option" onclick="checkAnswer(this,false,'i11c')">C. Enviársela a un cliente</button></div><p class="feedback" id="fb-i11c" data-ok="Contrastar es parte del uso responsable."></p></div><div class="activity"><h3>✍️ Tu código personal</h3><p>Escribe tres reglas que seguirás al usar IA (qué datos no compartirás, qué comprobarás, cuándo avisarás de que la has usado).</p><textarea placeholder="1) … 2) … 3) …"></textarea></div><!--dd:i11-privacidad--><div class="dd" id="dd-i11-privacidad" data-config="{&quot;tipo&quot;:&quot;clasificar&quot;,&quot;titulo&quot;:&quot;Dato personal o no&quot;,&quot;instruccion&quot;:&quot;Clasifica cada dato.&quot;,&quot;categorias&quot;:[&quot;Dato personal&quot;,&quot;No es dato personal&quot;],&quot;items&quot;:[[&quot;Correo de un cliente&quot;,0],[&quot;DNI&quot;,0],[&quot;Receta de tortilla&quot;,1],[&quot;Alergia de «Marta Ruiz»&quot;,0],[&quot;Horario del local&quot;,1],[&quot;Teléfono del cliente&quot;,0]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:i11-privacidad-->
+<div class="summary-box"><b>Resumen:</b> no compartas datos personales, anonimiza, desconfía de lo que no puedas comprobar, no la uses para hacer trampas y recuerda que decisiones sobre personas las toman personas.</div>
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo10.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo12.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Inteligencia artificial para jóvenes: aprende con Claude · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="ia.js"></script>
+<script src="dragdrop.js"></script>
+<script src="scorm.js"></script>
+</body>
+</html>

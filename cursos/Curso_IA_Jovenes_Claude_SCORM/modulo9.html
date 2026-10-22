@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 9: IA en hostelería (II): cocina y sala</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🍳</span>Módulo 9: IA en hostelería (II): cocina y sala</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Menús, recetas, escandallos, alérgenos y formación del equipo.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:64%"></div></div>
+    <div class="progress-text">IA con Claude · Práctica · Módulo 9 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+<div class="palabras"><span class="pal-tag">En pocas palabras</span><p>En cocina y sala la IA no cocina ni sirve, pero puede <b>dar ideas, hacer cuentas, preparar fichas y explicar procedimientos</b>. Eso sí: en todo lo que afecta a la salud (alérgenos, temperaturas, caducidades) manda la normativa y el criterio del profesional.</p></div>
+      <h2>Cocina y sala con ayuda de la IA</h2>
+      <h3>1. Ideas para el menú</h3>
+      <p>Dile qué tienes, para cuántos, qué presupuesto y qué estilo. Pide varias opciones y quédate con la que se pueda hacer de verdad en tu cocina.</p><div class="prompt"><div class="prompt-t">💬 Prompt para probar</div><pre>Actúa como jefe de cocina de un restaurante mediterráneo. En la cámara tengo calabacín, tomates maduros, queso feta y pan del día anterior. Propón 3 entrantes para el menú del día, con coste bajo y poco desperdicio. Preséntalo en una tabla con nombre, ingredientes y dificultad (baja, media o alta). Indica qué alérgenos podrían estar presentes, aclarando que debo verificarlos con las etiquetas reales.</pre><button type="button" onclick="copiar(this)">📋 Copiar</button></div><h3>2. Aprovechar sobras y reducir el desperdicio</h3>
+      <p>Pregunta cómo transformar lo que sobra (pan, verduras, caldos) en nuevos platos. Es una de las aplicaciones más prácticas para un negocio, porque cada kilo que no se tira es dinero.</p>
+      <h3>3. Escandallos y cantidades</h3>
+      <p>Un <b>escandallo</b> calcula el coste de un plato a partir de sus ingredientes. Claude puede explicarte el método, ayudarte a montar la tabla o a pasar una receta de 4 a 40 raciones. <b>Comprueba siempre las cuentas</b>: a los modelos de lenguaje les cuesta la aritmética larga; si es posible, pídele la fórmula de la hoja de cálculo y que sea la hoja la que calcule.</p><div class="prompt"><div class="prompt-t">💬 Prompt para probar</div><pre>Tengo una receta de salsa para 4 raciones: 200 g de tomate triturado, 40 ml de aceite, 20 g de cebolla y 5 g de sal. Quiero hacerla para 40 raciones. Dame la tabla con las cantidades nuevas y explícame cómo lo calculas para que yo pueda comprobarlo.</pre><button type="button" onclick="copiar(this)">📋 Copiar</button></div><div class="tabla-wrap"><table class="tabla"><tr><th>Uso</th><th>Ayuda de la IA</th><th>Comprobación humana</th></tr><tr><td>Carta y menús</td><td>Ideas, nombres de platos, descripciones</td><td>Que se pueda hacer, costes reales</td></tr><tr><td>Fichas técnicas</td><td>Estructura de la ficha y redacción de pasos</td><td>Pesos, tiempos, temperaturas</td></tr><tr><td>Alérgenos</td><td>Plantilla y recordatorio de los 14 alérgenos de declaración obligatoria</td><td>Ingredientes y etiquetas reales; normativa vigente</td></tr><tr><td>Formación</td><td>Guion para el equipo, test de preguntas, simulación de clientes difíciles</td><td>Que coincida con vuestros protocolos</td></tr><tr><td>Sala</td><td>Frases de sugerencia, vino y maridajes como ideas, vocabulario en idiomas</td><td>El criterio del sumiller o jefe de sala</td></tr></table></div><div class="hosteleria"><b>🍽️ En la hostelería:</b> pídele a Claude que haga de <b>cliente exigente</b> para ensayar. Ejemplo: «Haz de cliente que reclama que su plato está frío. Yo soy el camarero; contesta tras cada frase mía y al final dime qué hice bien y qué mejoraría». Es un entrenamiento sin riesgo antes del servicio real.</div><div class="alert-box"><b>⚠️ Ojo:</b> la IA no sustituye al plan APPCC ni a la normativa de seguridad alimentaria. No le preguntes «¿puedo servir esto?» como única fuente: consulta a tu responsable y a las fuentes oficiales (Agencia Española de Seguridad Alimentaria y Nutrición, tu comunidad autónoma).</div><h3>⚠️ Errores frecuentes y cómo corregirlos</h3><div class="tabla-wrap"><table class="tabla"><tr><th>Lo que pasa</th><th>Por qué</th><th>Cómo corregirlo</th></tr><tr><td>Fiarme de las cuentas largas</td><td>Los números salen redondos</td><td>Pide la fórmula y comprueba con calculadora u hoja de cálculo</td></tr><tr><td>Usar la lista de alérgenos de la IA</td><td>Parece completa</td><td>Debe salir de las etiquetas reales de tus productos</td></tr><tr><td>Copiar la receta tal cual</td><td>Parece profesional</td><td>Pruébala y ajusta tiempos y sazón: la IA no ha cocinado</td></tr></table></div><div class="quiz"><h4>🧩 ¿Qué conviene hacer con los cálculos de un escandallo hechos por una IA?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i9a')">A. Comprobarlos con calculadora o una hoja de cálculo</button><button class="option" onclick="checkAnswer(this,false,'i9a')">B. Darlos por buenos</button><button class="option" onclick="checkAnswer(this,false,'i9a')">C. Ignorarlos siempre</button></div><p class="feedback" id="fb-i9a" data-ok="La IA puede fallar en cuentas largas: se verifican."></p></div><div class="quiz"><h4>🧩 ¿De dónde debe salir la lista de alérgenos de un plato?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i9b')">A. De los ingredientes y etiquetas reales</button><button class="option" onclick="checkAnswer(this,false,'i9b')">B. De lo que supone la IA</button><button class="option" onclick="checkAnswer(this,false,'i9b')">C. De la memoria del cocinero</button></div><p class="feedback" id="fb-i9b" data-ok="Es información de seguridad: se basa en datos reales y verificados."></p></div><div class="quiz"><h4>🧩 ¿Para qué sirve hacer que Claude actúe como cliente difícil?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i9c')">A. Para ensayar cómo responder antes del servicio real</button><button class="option" onclick="checkAnswer(this,false,'i9c')">B. Para evitar atender a clientes</button><button class="option" onclick="checkAnswer(this,false,'i9c')">C. Para ganar propinas</button></div><p class="feedback" id="fb-i9c" data-ok="El juego de rol permite practicar sin riesgo."></p></div><!--dd:i9-verificar--><div class="dd" id="dd-i9-verificar" data-config="{&quot;tipo&quot;:&quot;clasificar&quot;,&quot;titulo&quot;:&quot;¿Lo verifica una persona?&quot;,&quot;instruccion&quot;:&quot;Clasifica según quién debe decidirlo.&quot;,&quot;categorias&quot;:[&quot;Lo comprueba una persona&quot;,&quot;Puede ayudar la IA&quot;],&quot;items&quot;:[[&quot;Alérgenos de un plato&quot;,0],[&quot;Temperatura de conservación&quot;,0],[&quot;Idea de nombre para un plato&quot;,1],[&quot;Borrador de ficha técnica&quot;,1],[&quot;Cálculo de coste con fórmula&quot;,0],[&quot;Frases de sugerencia en sala&quot;,1]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:i9-verificar-->
+<div class="summary-box"><b>Resumen:</b> en cocina y sala la IA da ideas, estructura documentos y permite ensayar; los cálculos, los alérgenos y la seguridad alimentaria los comprueba una persona con fuentes oficiales.</div>
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo8.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo10.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Inteligencia artificial para jóvenes: aprende con Claude · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="ia.js"></script>
+<script src="dragdrop.js"></script>
+<script src="scorm.js"></script>
+</body>
+</html>

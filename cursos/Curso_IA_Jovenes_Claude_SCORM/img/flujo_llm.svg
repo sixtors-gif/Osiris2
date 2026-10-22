@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" width="900" height="220" role="img" aria-label="Cómo genera texto un modelo de lenguaje: mensaje, tokens, modelo y siguiente token, en bucle" font-family="Segoe UI,Tahoma,sans-serif">
+<rect width="900" height="220" fill="#fff"/>
+<defs><marker id="fl" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#555"/></marker></defs>
+<rect x="20" y="50" width="180" height="80" rx="14" fill="#f59e0b"/>
+<text x="110" y="85" font-size="15" fill="#fff" text-anchor="middle" font-weight="700">1. Tu mensaje</text>
+<text x="110" y="108" font-size="12" fill="#fff" text-anchor="middle" font-weight="400">«Escribe una reseña…»</text>
+<line x1="204" y1="90" x2="236" y2="90" stroke="#555" stroke-width="2.5" marker-end="url(#fl)"/>
+<rect x="240" y="50" width="180" height="80" rx="14" fill="#a78bfa"/>
+<text x="330" y="85" font-size="15" fill="#fff" text-anchor="middle" font-weight="700">2. Tokens</text>
+<text x="330" y="108" font-size="12" fill="#fff" text-anchor="middle" font-weight="400">trozos de palabra</text>
+<line x1="424" y1="90" x2="456" y2="90" stroke="#555" stroke-width="2.5" marker-end="url(#fl)"/>
+<rect x="460" y="50" width="180" height="80" rx="14" fill="#4b3a8f"/>
+<text x="550" y="85" font-size="15" fill="#fff" text-anchor="middle" font-weight="700">3. El modelo</text>
+<text x="550" y="108" font-size="12" fill="#fff" text-anchor="middle" font-weight="400">calcula probabilidades</text>
+<line x1="644" y1="90" x2="676" y2="90" stroke="#555" stroke-width="2.5" marker-end="url(#fl)"/>
+<rect x="680" y="50" width="180" height="80" rx="14" fill="#16a34a"/>
+<text x="770" y="85" font-size="15" fill="#fff" text-anchor="middle" font-weight="700">4. Siguiente token</text>
+<text x="770" y="108" font-size="12" fill="#fff" text-anchor="middle" font-weight="400">elige uno y lo añade</text>
+<path d="M770 132 Q770 190 440 190 Q110 190 110 132" fill="none" stroke="#555" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#fl)"/>
+<text x="440" y="182" font-size="13" fill="#555" text-anchor="middle" font-weight="400">…y se repite palabra a palabra hasta terminar la respuesta</text>
+</svg>

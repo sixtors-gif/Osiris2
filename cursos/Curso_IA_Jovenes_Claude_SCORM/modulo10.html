@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 10: IA en hostelería (III): gestión, marketing y emprendimiento</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">📊</span>Módulo 10: IA en hostelería (III): gestión, marketing y emprendimiento</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Turnos, inventario, hojas de cálculo, promociones y un plan de negocio.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:71%"></div></div>
+    <div class="progress-text">IA con Claude · Práctica · Módulo 10 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+<div class="palabras"><span class="pal-tag">En pocas palabras</span><p>Detrás de cada local hay organización: turnos, pedidos, números, promociones. La IA ayuda a <b>ordenar ideas, escribir fórmulas, redactar documentos y analizar datos que no sean personales</b>. Es como tener un ayudante administrativo muy rápido.</p></div>
+      <h2>Gestión, marketing y emprendimiento</h2>
+      <h3>1. Organización del equipo y del trabajo</h3><ul class="key-points"><li>📋 <span>Plantillas de <b>turnos semanales</b> y de limpieza por zonas.</span></li><li>📋 <span>Listas de apertura y cierre del local.</span></li><li>📋 <span>Guiones para reuniones de equipo y de protocolo de incidencias.</span></li><li>📋 <span>Resúmenes de una normativa o de un convenio (siempre contrastando con el texto oficial).</span></li></ul><h3>2. Hojas de cálculo con ayuda</h3>
+      <p>Claude puede explicarte una fórmula, escribirla a partir de lo que quieres hacer o ayudarte a entender un error. Por ejemplo, para calcular el porcentaje de coste de materia prima de un plato o marcar en rojo los productos con poco stock.</p><div class="prompt"><div class="prompt-t">💬 Prompt para probar</div><pre>Tengo una hoja de cálculo con estas columnas: A producto, B stock actual, C stock mínimo. Quiero que la columna D muestre «PEDIR» si el stock actual es menor que el mínimo y «OK» en caso contrario, y que se pinten de rojo las filas con «PEDIR». Dame la fórmula y los pasos para el formato condicional en LibreOffice Calc y en Excel.</pre><button type="button" onclick="copiar(this)">📋 Copiar</button></div><div class="hosteleria"><b>🍽️ En la hostelería:</b> pegar en la IA la plantilla de tus tablas con <b>datos inventados o sin nombres de personas</b> es una buena forma de trabajar: obtienes la fórmula sin exponer datos reales.</div><h3>3. Marketing y promociones</h3>
+      <p>Pídele ideas de promociones de temporada, eslóganes, un calendario de publicaciones o la descripción de un local para una guía. Después <b>filtra con tu criterio</b>: lo que sea tópico, impreciso o que prometa lo que no puedes cumplir, fuera. Y si usas imágenes generadas por IA para publicitar tu comida, avisa de que son ilustraciones: el cliente no debe esperar un plato distinto del real.</p>
+      <h3>4. Si quieres emprender</h3>
+      <p>Claude te puede acompañar a pensar un proyecto: público objetivo, propuesta de valor, costes aproximados, riesgos y preguntas que debes responder. No te dará el negocio hecho, pero sí te evitará bloqueos y te propondrá preguntas que no habías pensado.</p><div class="prompt"><div class="prompt-t">💬 Prompt para probar</div><pre>Quiero abrir una pequeña cafetería de especialidad en mi barrio. Hazme un guion de 10 preguntas que debo responder antes de empezar (público, ubicación, costes, permisos, competencia, horarios, equipo…). Después ayúdame a ordenar mis respuestas en un esquema de plan de negocio de una página. No inventes cifras: dime qué datos debo buscar y dónde.</pre><button type="button" onclick="copiar(this)">📋 Copiar</button></div><div class="tabla-wrap"><table class="tabla"><tr><th>Área</th><th>Bien para la IA</th><th>Cuidado</th></tr><tr><td>Equipo</td><td>Cuadrantes, guiones, protocolos</td><td>Normativa laboral: consulta fuentes oficiales</td></tr><tr><td>Datos</td><td>Fórmulas, formatos, explicar un error</td><td>No subas datos personales ni de nóminas</td></tr><tr><td>Marketing</td><td>Ideas, textos, calendario</td><td>No prometer lo que no hay; avisar si la imagen es generada</td></tr><tr><td>Emprender</td><td>Preguntas, esquema, riesgos</td><td>Cifras, permisos y leyes: verificar siempre</td></tr></table></div><h3>⚠️ Errores frecuentes y cómo corregirlos</h3><div class="tabla-wrap"><table class="tabla"><tr><th>Lo que pasa</th><th>Por qué</th><th>Cómo corregirlo</th></tr><tr><td>Pedirle cifras de mercado exactas</td><td>Las da con seguridad</td><td>Pueden ser inventadas; busca datos oficiales (INE, informes del sector)</td></tr><tr><td>Subir la hoja de nóminas o de clientes</td><td>Es más cómodo</td><td>Datos personales: no se comparten sin base legal</td></tr><tr><td>Copiar un plan de negocio genérico</td><td>Queda bien</td><td>Tu local es único; adáptalo con datos reales</td></tr></table></div><div class="quiz"><h4>🧩 ¿Qué es mejor compartir con la IA para pedir una fórmula de hoja de cálculo?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i10a')">A. Una plantilla con datos inventados</button><button class="option" onclick="checkAnswer(this,false,'i10a')">B. La hoja con nóminas reales</button><button class="option" onclick="checkAnswer(this,false,'i10a')">C. La lista de clientes con teléfono</button></div><p class="feedback" id="fb-i10a" data-ok="Datos ficticios permiten trabajar sin exponer información personal."></p></div><div class="quiz"><h4>🧩 Si Claude te da una cifra de mercado exacta, ¿qué haces?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i10b')">A. Buscarla en una fuente oficial antes de usarla</button><button class="option" onclick="checkAnswer(this,false,'i10b')">B. Usarla directamente</button><button class="option" onclick="checkAnswer(this,false,'i10b')">C. Subirle la cifra un 10 %</button></div><p class="feedback" id="fb-i10b" data-ok="Las cifras exactas pueden ser inventadas."></p></div><div class="quiz"><h4>🧩 ¿Qué debes hacer si usas imágenes de comida generadas por IA en publicidad?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i10c')">A. Indicar que son ilustraciones y no confundir al cliente</button><button class="option" onclick="checkAnswer(this,false,'i10c')">B. Decir que son fotos reales</button><button class="option" onclick="checkAnswer(this,false,'i10c')">C. Nada</button></div><p class="feedback" id="fb-i10c" data-ok="La publicidad no debe inducir a error."></p></div><div class="activity"><h3>✍️ Tu mini plan de negocio</h3><p>Imagina un negocio de hostelería (cafetería, foodtruck, hotel rural…). Escribe cinco preguntas que le harías a Claude para empezar.</p><textarea placeholder="1) … 2) … 3) … 4) … 5) …"></textarea></div><!--dd:i10-datos--><div class="dd" id="dd-i10-datos" data-config="{&quot;tipo&quot;:&quot;clasificar&quot;,&quot;titulo&quot;:&quot;¿Se puede compartir?&quot;,&quot;instruccion&quot;:&quot;¿Qué puedes poner en la IA?&quot;,&quot;categorias&quot;:[&quot;Sí (sin datos personales)&quot;,&quot;No&quot;],&quot;items&quot;:[[&quot;Plantilla de hoja con datos inventados&quot;,0],[&quot;Receta de una salsa&quot;,0],[&quot;Nóminas del equipo&quot;,1],[&quot;Lista de clientes con teléfono&quot;,1],[&quot;Texto de un cartel de promoción&quot;,0],[&quot;Reservas con nombre y correo&quot;,1]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:i10-datos-->
+<div class="summary-box"><b>Resumen:</b> la IA ordena, redacta y explica fórmulas; tú aportas los datos reales (sin información personal) y verificas cifras y normas.</div>
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo9.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo11.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Inteligencia artificial para jóvenes: aprende con Claude · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="ia.js"></script>
+<script src="dragdrop.js"></script>
+<script src="scorm.js"></script>
+</body>
+</html>

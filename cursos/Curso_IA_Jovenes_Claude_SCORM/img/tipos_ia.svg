@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Rectángulos anidados: inteligencia artificial, aprendizaje automático, aprendizaje profundo e IA generativa" font-family="Segoe UI,Tahoma,sans-serif">
+<rect width="640" height="360" fill="#fff"/>
+<rect x="20" y="12" width="600" height="324" rx="20" fill="#ede9fe" stroke="#6d5bb5" stroke-width="1.5"/>
+<text x="320" y="37" font-size="15" fill="#2e1f6b" text-anchor="middle" font-weight="700">Inteligencia artificial</text>
+<text x="320" y="54" font-size="11.5" fill="#4a3a7a" text-anchor="middle" font-weight="400">máquinas que hacen tareas que requieren inteligencia</text>
+<rect x="60" y="58" width="520" height="278" rx="20" fill="#ddd6fe" stroke="#6d5bb5" stroke-width="1.5"/>
+<text x="320" y="83" font-size="15" fill="#2e1f6b" text-anchor="middle" font-weight="700">Aprendizaje automático</text>
+<text x="320" y="100" font-size="11.5" fill="#4a3a7a" text-anchor="middle" font-weight="400">aprende de ejemplos, no de reglas escritas a mano</text>
+<rect x="100" y="104" width="440" height="232" rx="20" fill="#c4b5fd" stroke="#6d5bb5" stroke-width="1.5"/>
+<text x="320" y="129" font-size="15" fill="#2e1f6b" text-anchor="middle" font-weight="700">Aprendizaje profundo</text>
+<text x="320" y="146" font-size="11.5" fill="#4a3a7a" text-anchor="middle" font-weight="400">redes neuronales con muchas capas</text>
+<rect x="140" y="150" width="360" height="186" rx="20" fill="#a78bfa" stroke="#6d5bb5" stroke-width="1.5"/>
+<text x="320" y="175" font-size="15" fill="#2e1f6b" text-anchor="middle" font-weight="700">IA generativa</text>
+<text x="320" y="192" font-size="11.5" fill="#4a3a7a" text-anchor="middle" font-weight="400">crea texto, imágenes… (Claude)</text>
+</svg>

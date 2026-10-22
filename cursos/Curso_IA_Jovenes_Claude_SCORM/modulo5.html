@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 5: Cómo funciona un modelo de lenguaje</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">🧠</span>Módulo 5: Cómo funciona un modelo de lenguaje</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Datos, entrenamiento, tokens, probabilidades y por qué a veces «alucina».</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:36%"></div></div>
+    <div class="progress-text">IA con Claude · Fundamentos · Módulo 5 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+<div class="palabras"><span class="pal-tag">En pocas palabras</span><p>Un modelo de lenguaje hace una sola cosa: <b>predice la siguiente palabra</b> (en realidad, el siguiente «token») según lo que ya hay escrito. Repitiendo eso muchas veces escribe respuestas enteras. Por eso es creativo, pero también puede <b>inventarse cosas</b> con mucha seguridad.</p></div>
+      <h2>Por dentro de Claude (y de otros asistentes)</h2>
+      <h3>1. Paso 1: el entrenamiento</h3>
+      <p>El modelo se entrena con <b>enormes cantidades de texto</b>. Durante el entrenamiento, cada vez que se le muestra un fragmento, tiene que adivinar la siguiente palabra; si falla, sus conexiones internas (<b>parámetros</b>, miles de millones de números) se ajustan un poquito. Tras hacerlo con billones de palabras, el modelo ha aprendido gramática, datos del mundo, estilos de escritura y hasta cierto razonamiento. Después se le <b>afina</b> con ejemplos de buenas respuestas y con valoraciones de personas para que sea útil y seguro.</p>
+      <h3>2. Paso 2: tu mensaje se convierte en tokens</h3>
+      <p>El modelo no lee palabras como tú, sino <b>tokens</b>: trozos de texto que pueden ser una palabra corta, parte de una palabra larga o un signo. En español, una palabra suele ser de 1 a 3 tokens. El modelo trabaja con números, no con letras.</p><div class="figure"><img src="img/flujo_llm.svg" alt="Flujo de un modelo de lenguaje: mensaje, tokens, modelo, siguiente token"><div class="figure-caption">El modelo calcula qué token es más probable, lo añade y repite el proceso hasta terminar la respuesta.</div></div><h3>3. Paso 3: predecir la siguiente palabra</h3>
+      <p>El modelo calcula una <b>probabilidad para cada token posible</b> y elige uno. No siempre elige el más probable: un ajuste llamado <b>temperatura</b> controla cuánto se arriesga. Con temperatura baja, respuestas más previsibles; con temperatura alta, más variadas y creativas. Por eso <b>la misma pregunta puede dar respuestas distintas</b>.</p>
+      <h3>Juega con las probabilidades</h3>
+      <p>Elige la palabra que crees más probable y mira cómo se reparten las probabilidades. Luego genera palabras con la temperatura.</p>
+      <div class="activity"><p id="pred-frase" style="font-size:1.15em;font-weight:700"></p><div class="lect-btns" id="pred-ops"></div><div id="pred-res"></div>
+        <p><button class="btn" onclick="predSiguiente()">Otra frase ➡️</button></p>
+        <hr><p><b>Genera palabras al azar</b> con esta frase. <label>Temperatura: <input type="range" id="pred-temp" min="0.1" max="2" step="0.1" value="1"> <b id="pred-t">1.0</b></label></p>
+        <p><button class="btn" onclick="predGenerar()">🎲 Generar una palabra</button> <button class="btn" onclick="predLimpiar()">Borrar</button></p><p id="pred-gen" class="pred-gen"></p>
+        <p class="small">Con temperatura baja casi siempre sale la palabra más probable; con temperatura alta salen también las raras.</p></div>
+      <h3>4. La ventana de contexto: la «memoria» de una conversación</h3>
+      <p>El modelo solo «ve» una cantidad limitada de texto a la vez: lo que está en la conversación (tu mensaje, sus respuestas y los documentos que le des). Eso es la <b>ventana de contexto</b>, y se mide en tokens. Las versiones recientes de Claude admiten ventanas muy grandes (cientos de páginas), pero <b>no recuerdan por sí mismas conversaciones antiguas</b> si no se les vuelven a dar o si la aplicación no tiene una función de memoria activada.</p>
+      <div class="activity"><label>Tokens: <input type="range" id="ctx-n" min="1000" max="200000" step="1000" value="100000" oninput="ctxActualizar()"> <b id="ctx-v">100000</b></label><p id="ctx-res"></p></div>
+      <h3>5. ¿Por qué se equivoca? Las «alucinaciones»</h3>
+      <p>Como el modelo genera lo que <b>suena probable</b>, a veces produce datos falsos con aspecto de verdaderos: una cita inexistente, un horario inventado, una receta con un ingrediente imposible. Se llama <b>alucinación</b>. Es más probable cuando:</p><ul class="key-points"><li>⚠️ <span>le preguntas algo <b>muy concreto o poco conocido</b> (un restaurante pequeño, una ley reciente);</span></li><li>⚠️ <span>no le das el contexto o el documento con la información;</span></li><li>⚠️ <span>le pides números, fechas o citas exactas;</span></li><li>⚠️ <span>le haces una pregunta con una premisa falsa y la acepta.</span></li></ul><div class="alert-box"><b>⚠️ Ojo:</b> en hostelería, un dato inventado (un alérgeno, una temperatura de conservación, un horario) puede causar un problema serio. <b>La IA ayuda a redactar y a pensar; la información crítica se verifica siempre con fuentes oficiales.</b></div><h3>6. Lo que sí hace bien… y lo que no</h3><div class="tabla-wrap"><table class="tabla"><tr><th>Suele hacerlo bien</th><th>Hay que vigilarlo</th></tr><tr><td>Redactar, resumir y reformular textos</td><td>Datos exactos, cifras y citas</td></tr><tr><td>Traducir y adaptar el tono</td><td>Información muy reciente (depende de su fecha de conocimiento)</td></tr><tr><td>Dar ideas y alternativas</td><td>Temas legales, médicos o de seguridad alimentaria</td></tr><tr><td>Explicar conceptos paso a paso</td><td>Hechos sobre personas o negocios concretos</td></tr><tr><td>Ayudar con fórmulas, código y tablas</td><td>Cálculos largos (conviene comprobarlos)</td></tr></table></div><div class="quiz"><h4>🧩 ¿Qué hace un modelo de lenguaje en cada paso?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i5a')">A. Predecir el siguiente token</button><button class="option" onclick="checkAnswer(this,false,'i5a')">B. Buscar en internet siempre</button><button class="option" onclick="checkAnswer(this,false,'i5a')">C. Copiar una respuesta guardada</button></div><p class="feedback" id="fb-i5a" data-ok="Predice el siguiente token y repite el proceso."></p></div><div class="quiz"><h4>🧩 ¿Qué es una alucinación de la IA?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i5b')">A. Una respuesta falsa que suena verdadera</button><button class="option" onclick="checkAnswer(this,false,'i5b')">B. Un fallo del teclado</button><button class="option" onclick="checkAnswer(this,false,'i5b')">C. Un sueño del modelo</button></div><p class="feedback" id="fb-i5b" data-ok="El modelo puede inventar datos con aspecto de ciertos."></p></div><div class="quiz"><h4>🧩 ¿Qué controla la temperatura?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i5c')">A. Lo arriesgado y variado que es el modelo al elegir palabras</button><button class="option" onclick="checkAnswer(this,false,'i5c')">B. La velocidad del ordenador</button><button class="option" onclick="checkAnswer(this,false,'i5c')">C. El volumen de la voz</button></div><p class="feedback" id="fb-i5c" data-ok="Con temperatura baja es más previsible; con alta, más creativo."></p></div><div class="quiz"><h4>🧩 ¿Qué es la ventana de contexto?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i5d')">A. La cantidad de texto que el modelo puede «ver» a la vez</button><button class="option" onclick="checkAnswer(this,false,'i5d')">B. El hueco de la pantalla</button><button class="option" onclick="checkAnswer(this,false,'i5d')">C. Un tipo de licencia</button></div><p class="feedback" id="fb-i5d" data-ok="Es la «memoria de trabajo» de una conversación, medida en tokens."></p></div><!--dd:i5-ficha--><div class="dd" id="dd-i5-ficha" data-config="{&quot;tipo&quot;:&quot;rellenar&quot;,&quot;titulo&quot;:&quot;Completa la idea&quot;,&quot;instruccion&quot;:&quot;Arrastra las palabras a su hueco.&quot;,&quot;texto&quot;:&quot;El modelo divide el texto en {0}, calcula la {1} de cada posible palabra siguiente y elige una según la {2}. Cuando inventa datos falsos se dice que {3}.&quot;,&quot;huecos&quot;:[&quot;tokens&quot;,&quot;probabilidad&quot;,&quot;temperatura&quot;,&quot;alucina&quot;],&quot;extra&quot;:[&quot;mesa&quot;,&quot;memoria&quot;]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:i5-ficha-->
+<div class="summary-box"><b>Resumen:</b> el modelo predice tokens según probabilidades; se entrena con muchos textos; tiene una ventana de contexto limitada; puede alucinar, así que se verifica lo importante.</div>
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo4.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo6.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Inteligencia artificial para jóvenes: aprende con Claude · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="ia.js"></script>
+<script src="dragdrop.js"></script>
+<script src="scorm.js"></script>
+</body>
+</html>

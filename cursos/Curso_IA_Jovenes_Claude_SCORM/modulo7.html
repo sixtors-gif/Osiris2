@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Módulo 7: Hablar con Claude: el arte de pedir bien (prompts)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="shield-icon">✍️</span>Módulo 7: Hablar con Claude: el arte de pedir bien (prompts)</h1>
+    <img src="img/logo-centro.png" class="logo-centro" alt="Logotipo del centro">
+    <p>Cómo escribir instrucciones claras para obtener respuestas útiles.</p>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div>
+    <div class="progress-text">IA con Claude · Práctica · Módulo 7 de 12</div>
+  </div>
+  <div class="content-area">
+    <section class="module">
+<div class="palabras"><span class="pal-tag">En pocas palabras</span><p>Un <b>prompt</b> es lo que le escribes a la IA. La calidad de la respuesta depende mucho de la calidad de lo que pides: <b>un buen prompt es como un buen encargo a un compañero nuevo</b>: claro, con contexto y con el resultado que esperas.</p></div>
+      <h2>Escribir buenos prompts</h2>
+      <h3>1. Los seis ingredientes de un buen prompt</h3><div class="tabla-wrap"><table class="tabla"><tr><th>Ingrediente</th><th>Qué es</th><th>Ejemplo en hostelería</th></tr><tr><td><b>Rol</b></td><td>Quién quieres que sea</td><td>«Actúa como jefe de sala de un restaurante»</td></tr><tr><td><b>Contexto</b></td><td>La situación y los datos</td><td>«Somos un bar de tapas de 40 plazas en Sevilla…»</td></tr><tr><td><b>Tarea</b></td><td>Lo que necesitas</td><td>«Redacta una respuesta a esta reseña»</td></tr><tr><td><b>Formato</b></td><td>Cómo quieres la respuesta</td><td>«Una tabla», «5 líneas», «lista numerada»</td></tr><tr><td><b>Tono</b></td><td>Cómo debe sonar</td><td>«Cercano y profesional»</td></tr><tr><td><b>Límites</b></td><td>Lo que debe respetar</td><td>«Sin prometer descuentos; máximo 80 palabras»</td></tr></table></div><h3>2. Del prompt flojo al prompt bueno</h3><div class="prompt"><div class="prompt-t">💬 Prompt flojo</div><pre>Hazme un menú.</pre><button type="button" onclick="copiar(this)">📋 Copiar</button></div><div class="prompt"><div class="prompt-t">💬 Prompt bueno</div><pre>Actúa como jefe de cocina de un restaurante de menú del día en una ciudad de interior. Es octubre. Tenemos 12 mesas y un presupuesto de 3,50 € de materia prima por plato. Propón un menú del día con 2 primeros, 2 segundos y 2 postres, usando productos de temporada. Preséntalo en una tabla con el plato y sus ingredientes principales. Marca con un asterisco los platos que podrían contener alérgenos para que yo los verifique.</pre><button type="button" onclick="copiar(this)">📋 Copiar</button></div><div class="box tip"><b>Fíjate:</b> el segundo prompt es más largo, pero le ahorra a Claude (y a ti) adivinar. <b>Más contexto = menos respuestas genéricas.</b> Y no hace falta que sea perfecto: puedes mejorar el prompt después.</div><h3>3. Construye tu propio prompt</h3>
+      <p>Rellena los campos o pulsa un ejemplo. Abajo se monta el prompt listo para copiar y pegar en Claude.</p>
+      <div class="activity pb">
+        <p><button class="btn" onclick="pbEjemplo(0)">Reseña de hotel</button> <button class="btn" onclick="pbEjemplo(1)">Ideas de cocina</button> <button class="btn" onclick="pbEjemplo(2)">Cafetería en redes</button></p>
+        <label>Rol <input type="text" id="pb-rol" oninput="pbMontar()" placeholder="Actúa como…"></label>
+        <label>Contexto <textarea id="pb-contexto" oninput="pbMontar()" placeholder="Situación, datos, público…"></textarea></label>
+        <label>Tarea <textarea id="pb-tarea" oninput="pbMontar()" placeholder="Qué necesitas exactamente"></textarea></label>
+        <label>Formato <input type="text" id="pb-formato" oninput="pbMontar()" placeholder="Tabla, lista, 5 líneas…"></label>
+        <label>Tono <input type="text" id="pb-tono" oninput="pbMontar()" placeholder="Cercano, formal, divertido…"></label>
+        <label>Límites <input type="text" id="pb-limites" oninput="pbMontar()" placeholder="Lo que debe respetar o evitar"></label>
+        <div class="prompt"><div class="prompt-t">💬 Tu prompt</div><pre id="pb-salida"></pre><button type="button" onclick="copiar(this)">📋 Copiar</button></div>
+        <p id="pb-nota" class="small"></p>
+      </div>
+      <h3>4. Técnicas que funcionan</h3><ul class="key-points"><li>🛠️ <span><b>Da ejemplos:</b> «Escríbelo con un estilo parecido a este texto: …».</span></li><li>🛠️ <span><b>Pide paso a paso:</b> «Explícame el razonamiento antes de la conclusión».</span></li><li>🛠️ <span><b>Pide preguntas:</b> «Antes de responder, hazme las preguntas que necesites».</span></li><li>🛠️ <span><b>Itera:</b> «Más corto», «menos formal», «añade una opción vegetariana».</span></li><li>🛠️ <span><b>Pide que se revise:</b> «Repasa tu respuesta y dime qué podría estar mal o qué debo comprobar».</span></li></ul><ol class="steps"><li>Escribe la primera versión de tu prompt, sin agobiarte.</li><li>Lee la respuesta con ojo crítico: ¿qué falta o sobra?</li><li>Contesta con una corrección concreta («hazlo más corto y sin tecnicismos»).</li><li>Cuando salga bien, guarda ese prompt: es tu plantilla para la próxima vez.</li></ol><div class="hosteleria"><b>🍽️ En la hostelería:</b> guarda una carpeta con tus plantillas de prompts (respuesta a reseñas, descripción de platos, mensaje de confirmación de reserva…). Con los datos del local ya puestos, cada tarea se hace en un minuto. Eso sí: <b>nunca incluyas en ellas datos personales de clientes</b>.</div><h3>⚠️ Errores frecuentes y cómo corregirlos</h3><div class="tabla-wrap"><table class="tabla"><tr><th>Lo que pasa</th><th>Por qué</th><th>Cómo corregirlo</th></tr><tr><td>Pedir en una frase sin contexto</td><td>Es rápido</td><td>La respuesta será genérica; añade para quién, para qué y cómo</td></tr><tr><td>Aceptar la primera respuesta</td><td>Parece suficiente</td><td>Conversa: pide cambios hasta que sirva</td></tr><tr><td>Pensar que hay un «prompt mágico»</td><td>Se ven trucos en redes</td><td>Lo que funciona es ser claro, dar contexto e iterar</td></tr></table></div><div class="quiz"><h4>🧩 ¿Qué hace mejor un prompt?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i7a')">A. Dar contexto, tarea y formato</button><button class="option" onclick="checkAnswer(this,false,'i7a')">B. Ser lo más corto posible</button><button class="option" onclick="checkAnswer(this,false,'i7a')">C. Usar palabras raras</button></div><p class="feedback" id="fb-i7a" data-ok="Contexto, tarea y formato claros dan respuestas más útiles."></p></div><div class="quiz"><h4>🧩 Si la primera respuesta no te sirve, ¿qué haces?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i7b')">A. Pedir cambios concretos en la misma conversación</button><button class="option" onclick="checkAnswer(this,false,'i7b')">B. Rendirte</button><button class="option" onclick="checkAnswer(this,false,'i7b')">C. Escribir lo mismo otra vez sin cambios</button></div><p class="feedback" id="fb-i7b" data-ok="Iterar es parte normal del trabajo con IA."></p></div><div class="quiz"><h4>🧩 ¿Qué NO debe contener una plantilla de prompt guardada?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'i7c')">A. Datos personales de clientes</button><button class="option" onclick="checkAnswer(this,false,'i7c')">B. El nombre de tu local</button><button class="option" onclick="checkAnswer(this,false,'i7c')">C. El tono deseado</button></div><p class="feedback" id="fb-i7c" data-ok="Los datos personales no se reutilizan ni se pegan en la IA sin necesidad."></p></div><div class="activity"><h3>✍️ Tu primer prompt</h3><p>Piensa en una tarea real de un bar, restaurante u hotel. Escribe el prompt con los seis ingredientes.</p><textarea placeholder="Rol: … Contexto: … Tarea: … Formato: … Tono: … Límites: …"></textarea></div><!--dd:i7-prompt--><div class="dd" id="dd-i7-prompt" data-config="{&quot;tipo&quot;:&quot;emparejar&quot;,&quot;titulo&quot;:&quot;Ingredientes del prompt&quot;,&quot;instruccion&quot;:&quot;Une cada ingrediente con su ejemplo.&quot;,&quot;pares&quot;:[[&quot;Rol&quot;,&quot;Actúa como jefe de sala&quot;],[&quot;Formato&quot;,&quot;Una tabla con tres columnas&quot;],[&quot;Tono&quot;,&quot;Cercano y profesional&quot;],[&quot;Límites&quot;,&quot;Máximo 80 palabras, sin descuentos&quot;]],&quot;extra&quot;:[&quot;Mesa 5&quot;]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:i7-prompt-->
+<div class="summary-box"><b>Resumen:</b> un buen prompt tiene rol, contexto, tarea, formato, tono y límites; se mejora conversando; y se guarda como plantilla sin datos personales.</div>
+      <div class="navigation">
+        <button class="nav-btn" onclick="scormGo('modulo6.html')">⬅️ Anterior</button>
+        <button class="nav-btn" onclick="scormGo('modulo8.html')">Siguiente módulo ➡️</button>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="footer-autor">Inteligencia artificial para jóvenes: aprende con Claude · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="ia.js"></script>
+<script src="dragdrop.js"></script>
+<script src="scorm.js"></script>
+</body>
+</html>

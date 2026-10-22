@@ -1,0 +1,351 @@
+[
+ {
+  "id": "i1-tipos",
+  "pagina": "modulo1.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "¿Tradicional o IA?",
+  "instruccion": "Clasifica cada ejemplo según cómo funciona.",
+  "categorias": [
+   "Programa tradicional",
+   "IA (aprende de ejemplos)"
+  ],
+  "items": [
+   [
+    "Calculadora",
+    0
+   ],
+   [
+    "TPV que suma la cuenta",
+    0
+   ],
+   [
+    "Recomendador de series",
+    1
+   ],
+   [
+    "Traductor automático",
+    1
+   ],
+   [
+    "Asistente como Claude",
+    1
+   ],
+   [
+    "Alarma que suena a una hora fija",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "i2-fechas",
+  "pagina": "modulo2.html",
+  "antes_de": "summary",
+  "tipo": "emparejar",
+  "titulo": "Hitos de la historia",
+  "instruccion": "Une cada hito con su protagonista o lugar.",
+  "pares": [
+   [
+    "Test de 1950",
+    "Alan Turing"
+   ],
+   [
+    "Término «IA» (1956)",
+    "Dartmouth"
+   ],
+   [
+    "Primer chatbot (1966)",
+    "ELIZA"
+   ],
+   [
+    "Primeras redes neuronales: perceptrón",
+    "Frank Rosenblatt"
+   ]
+  ],
+  "extra": [
+   "Deep Blue"
+  ]
+ },
+ {
+  "id": "i3-hitos",
+  "pagina": "modulo3.html",
+  "antes_de": "summary",
+  "tipo": "ordenar",
+  "titulo": "Ordena la historia",
+  "instruccion": "Ordena estos hitos del más antiguo al más reciente.",
+  "items": [
+   "Sistemas expertos",
+   "Deep Blue vence a Kaspárov",
+   "El aprendizaje profundo gana ImageNet",
+   "AlphaGo vence a Lee Sedol"
+  ]
+ },
+ {
+  "id": "i4-claude",
+  "pagina": "modulo4.html",
+  "antes_de": "summary",
+  "tipo": "ordenar",
+  "titulo": "De Turing a Claude",
+  "instruccion": "Ordena estos hechos cronológicamente.",
+  "items": [
+   "Test de Turing",
+   "Nace el término «IA»",
+   "Los Transformers",
+   "ChatGPT llega al gran público",
+   "Primeras versiones de Claude"
+  ]
+ },
+ {
+  "id": "i5-ficha",
+  "pagina": "modulo5.html",
+  "antes_de": "summary",
+  "tipo": "rellenar",
+  "titulo": "Completa la idea",
+  "instruccion": "Arrastra las palabras a su hueco.",
+  "texto": "El modelo divide el texto en {0}, calcula la {1} de cada posible palabra siguiente y elige una según la {2}. Cuando inventa datos falsos se dice que {3}.",
+  "huecos": [
+   "tokens",
+   "probabilidad",
+   "temperatura",
+   "alucina"
+  ],
+  "extra": [
+   "mesa",
+   "memoria"
+  ]
+ },
+ {
+  "id": "i6-claude",
+  "pagina": "modulo6.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "Buen uso o mal uso",
+  "instruccion": "¿Cómo conviene tratar a un asistente de IA?",
+  "categorias": [
+   "Buena práctica",
+   "Mala práctica"
+  ],
+  "items": [
+   [
+    "Revisar su respuesta",
+    0
+   ],
+   [
+    "Darle contexto de tu negocio",
+    0
+   ],
+   [
+    "Pegar un listado de clientes",
+    1
+   ],
+   [
+    "Fiarse sin comprobar",
+    1
+   ],
+   [
+    "Pedirle que explique su razonamiento",
+    0
+   ],
+   [
+    "Usarlo para hacer trampas",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "i7-prompt",
+  "pagina": "modulo7.html",
+  "antes_de": "summary",
+  "tipo": "emparejar",
+  "titulo": "Ingredientes del prompt",
+  "instruccion": "Une cada ingrediente con su ejemplo.",
+  "pares": [
+   [
+    "Rol",
+    "Actúa como jefe de sala"
+   ],
+   [
+    "Formato",
+    "Una tabla con tres columnas"
+   ],
+   [
+    "Tono",
+    "Cercano y profesional"
+   ],
+   [
+    "Límites",
+    "Máximo 80 palabras, sin descuentos"
+   ]
+  ],
+  "extra": [
+   "Mesa 5"
+  ]
+ },
+ {
+  "id": "i8-resena",
+  "pagina": "modulo8.html",
+  "antes_de": "summary",
+  "tipo": "ordenar",
+  "titulo": "Responder una reseña",
+  "instruccion": "Ordena los pasos de una buena respuesta.",
+  "items": [
+   "Leer la reseña y los hechos reales",
+   "Pedir a Claude un borrador con contexto",
+   "Revisar que lo que dice es verdad",
+   "Ajustar el tono al de tu local",
+   "Publicar la respuesta"
+  ]
+ },
+ {
+  "id": "i9-verificar",
+  "pagina": "modulo9.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "¿Lo verifica una persona?",
+  "instruccion": "Clasifica según quién debe decidirlo.",
+  "categorias": [
+   "Lo comprueba una persona",
+   "Puede ayudar la IA"
+  ],
+  "items": [
+   [
+    "Alérgenos de un plato",
+    0
+   ],
+   [
+    "Temperatura de conservación",
+    0
+   ],
+   [
+    "Idea de nombre para un plato",
+    1
+   ],
+   [
+    "Borrador de ficha técnica",
+    1
+   ],
+   [
+    "Cálculo de coste con fórmula",
+    0
+   ],
+   [
+    "Frases de sugerencia en sala",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "i10-datos",
+  "pagina": "modulo10.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "¿Se puede compartir?",
+  "instruccion": "¿Qué puedes poner en la IA?",
+  "categorias": [
+   "Sí (sin datos personales)",
+   "No"
+  ],
+  "items": [
+   [
+    "Plantilla de hoja con datos inventados",
+    0
+   ],
+   [
+    "Receta de una salsa",
+    0
+   ],
+   [
+    "Nóminas del equipo",
+    1
+   ],
+   [
+    "Lista de clientes con teléfono",
+    1
+   ],
+   [
+    "Texto de un cartel de promoción",
+    0
+   ],
+   [
+    "Reservas con nombre y correo",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "i11-privacidad",
+  "pagina": "modulo11.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "Dato personal o no",
+  "instruccion": "Clasifica cada dato.",
+  "categorias": [
+   "Dato personal",
+   "No es dato personal"
+  ],
+  "items": [
+   [
+    "Correo de un cliente",
+    0
+   ],
+   [
+    "DNI",
+    0
+   ],
+   [
+    "Receta de tortilla",
+    1
+   ],
+   [
+    "Alergia de «Marta Ruiz»",
+    0
+   ],
+   [
+    "Horario del local",
+    1
+   ],
+   [
+    "Teléfono del cliente",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "i12-futuro",
+  "pagina": "modulo12.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "Humano o más automatizable",
+  "instruccion": "¿Qué seguirá siendo más humano en hostelería?",
+  "categorias": [
+   "Seguirá siendo humano",
+   "Se automatizará más"
+  ],
+  "items": [
+   [
+    "Trato cercano",
+    0
+   ],
+   [
+    "Resolver un conflicto",
+    0
+   ],
+   [
+    "Confirmar una reserva sencilla",
+    1
+   ],
+   [
+    "Cálculo de pedidos",
+    1
+   ],
+   [
+    "Creatividad en la cocina",
+    0
+   ],
+   [
+    "Responder preguntas frecuentes",
+    1
+   ]
+  ]
+ }
+]

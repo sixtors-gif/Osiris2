@@ -1,0 +1,376 @@
+// Inteligencia artificial para jóvenes: aprende con Claude — Banco de preguntas GIFT para Moodle
+// Autor: Sixto Rodríguez de Sepúlveda. Una única respuesta correcta; una categoría por módulo.
+
+$CATEGORY: IA con Claude/Módulo 01 - ¿Qué es la inteligencia artificial?
+
+::IA01-1::¿Cómo aprende la IA de aprendizaje automático? {
+~Siguiendo reglas escritas una a una
+=Con muchos ejemplos de los que extrae patrones
+~Copiando a una persona
+~Leyendo manuales de instrucciones
+}
+
+::IA01-2::¿Dentro de qué campo está la IA generativa? {
+=Dentro del aprendizaje profundo, que está dentro del aprendizaje automático
+~Fuera de la IA
+~Solo en la robótica
+~Solo en los videojuegos
+}
+
+::IA01-3::¿Existe hoy una IA general que entienda cualquier cosa como una persona? {
+~Sí, en los móviles
+~Sí, desde hace décadas
+~Sí, es Claude
+=No, es todavía una idea de investigación
+}
+
+::IA01-4::¿Por qué es importante verificar lo que dice una IA? {
+~Porque cobra por respuesta
+~Porque siempre miente
+=Porque puede equivocarse con total seguridad
+~Porque está prohibido fiarse
+}
+
+$CATEGORY: IA con Claude/Módulo 02 - Historia de la IA (I)\: de Turing al primer invierno
+
+::IA02-1::¿Quién planteó en 1950 la pregunta «¿pueden pensar las máquinas?» y propuso un famoso test? {
+~Steve Jobs
+=Alan Turing
+~Albert Einstein
+~Bill Gates
+}
+
+::IA02-2::¿En qué reunión de 1956 se acuñó el término «inteligencia artificial»? {
+=En la conferencia de Dartmouth
+~En el Mundial de Fútbol
+~En una feria de coches
+~En la ONU
+}
+
+::IA02-3::¿Qué es un «invierno de la IA»? {
+~Un premio científico
+~Una estación del año
+~Un tipo de ordenador
+=Una etapa de decepción con poca financiación e interés
+}
+
+::IA02-4::¿Qué mostró el programa ELIZA? {
+~Que se podía traducir cualquier idioma
+~Que las máquinas sienten
+=Que una conversación sencilla puede parecer humana sin entender nada
+~Que existía una IA general
+}
+
+$CATEGORY: IA con Claude/Módulo 03 - Historia de la IA (II)\: expertos, ajedrez y deep learning
+
+::IA03-1::¿Qué hacía un sistema experto? {
+~Aprender solo de millones de imágenes
+=Aplicar reglas escritas por especialistas
+~Cocinar
+~Navegar por Internet
+}
+
+::IA03-2::¿Qué máquina venció al campeón de ajedrez Kaspárov en 1997? {
+=Deep Blue
+~Watson
+~Alexa
+~AlphaGo
+}
+
+::IA03-3::¿Qué impulsó el éxito del aprendizaje profundo en los años 2010? {
+~La invención del teléfono
+~Un cambio de nombre
+~Una ley
+=Muchos datos, tarjetas gráficas potentes y mejores algoritmos
+}
+
+::IA03-4::¿Qué consiguió AlphaGo en 2016? {
+~Conducir coches
+~Escribir novelas
+=Ganar a un campeón mundial de Go
+~Hablar 40 idiomas
+}
+
+$CATEGORY: IA con Claude/Módulo 04 - Historia de la IA (III)\: de los Transformers a Claude
+
+::IA04-1::¿Qué arquitectura de 2017 está en la base de los modelos de lenguaje actuales? {
+~Las hojas de cálculo
+=Los Transformers
+~Los sistemas expertos
+~Las bases de datos
+}
+
+::IA04-2::¿Qué empresa desarrolla Claude? {
+=Anthropic
+~Ninguna, es de código libre
+~Una cadena hotelera
+~Una marca de coches
+}
+
+::IA04-3::¿Qué significa «modelo de lenguaje grande» (LLM)? {
+~Un corrector ortográfico
+~Un diccionario gigante
+~Un traductor sin datos
+=Un modelo entrenado con muchísimo texto para generar lenguaje
+}
+
+::IA04-4::¿Por qué cambian tan rápido las versiones de los modelos? {
+~Por moda
+~Porque se rompen
+=Porque la investigación avanza rápido; conviene consultar la web oficial
+~Porque se cansan
+}
+
+$CATEGORY: IA con Claude/Módulo 05 - Cómo funciona un modelo de lenguaje
+
+::IA05-1::¿Qué es un token? {
+~Una moneda
+=Un fragmento de texto que el modelo procesa
+~Un tipo de contraseña
+~Una foto
+}
+
+::IA05-2::¿Qué hace básicamente un modelo de lenguaje al responder? {
+=Predice qué texto es más probable que siga
+~Busca la respuesta en Google
+~Consulta a una persona
+~Piensa como un humano
+}
+
+::IA05-3::¿Qué es una «alucinación»? {
+~Una imagen
+~Un sueño del modelo
+~Un virus
+=Una respuesta falsa con aspecto de verdadera
+}
+
+::IA05-4::¿Qué efecto tiene subir la temperatura? {
+~Modelo más rápido
+~Respuestas más calientes
+=Respuestas más variadas y menos previsibles
+~Más memoria
+}
+
+::IA05-5::¿Qué es la ventana de contexto? {
+~Una ventana del programa
+=La cantidad de texto que el modelo puede considerar a la vez
+~Un tipo de tarifa
+~El tamaño de la pantalla
+}
+
+$CATEGORY: IA con Claude/Módulo 06 - Conoce a Claude
+
+::IA06-1::¿Qué principios busca seguir Claude? {
+=Ser útil, honesto e inofensivo
+~Ser lo más rápido posible
+~Ganar discusiones
+~Agradar a todos
+}
+
+::IA06-2::¿Cuál es la edad mínima para usar Claude.ai según sus condiciones? {
+~No hay límite
+~10 años
+~13 años
+=18 años
+}
+
+::IA06-3::¿Cómo es mejor ver a un asistente de IA en el trabajo? {
+~Como un amigo para contarle todo
+~Como un jefe infalible
+=Como un ayudante nuevo, rápido pero al que se revisa
+~Como un enemigo
+}
+
+::IA06-4::¿Qué es la «IA constitucional»? {
+~Una ley del Estado
+=Entrenar al modelo con principios escritos que guían sus respuestas
+~Un ordenador especial
+~Un tipo de gráfico
+}
+
+$CATEGORY: IA con Claude/Módulo 07 - Hablar con Claude\: el arte de pedir bien (prompts)
+
+::IA07-1::¿Qué es un prompt? {
+=Lo que le escribes a la IA para pedirle algo
+~Un fallo del programa
+~Una marca de móviles
+~Un tipo de archivo
+}
+
+::IA07-2::¿Cuál de estos NO es uno de los seis ingredientes de un buen prompt? {
+~Límites
+~Rol
+~Formato
+=El número de teléfono del cliente
+}
+
+::IA07-3::Si la primera respuesta no sirve, lo mejor es... {
+~Escribir exactamente lo mismo
+~Abandonar
+=Pedir cambios concretos en la misma conversación
+~Insultar a la IA
+}
+
+::IA07-4::¿Qué mejora un prompt? {
+~Escribirlo en mayúsculas
+=Dar contexto y especificar el formato
+~Hacerlo lo más corto posible
+~Usar palabras rebuscadas
+}
+
+$CATEGORY: IA con Claude/Módulo 08 - IA en hostelería (I)\: atención al cliente y comunicación
+
+::IA08-1::Al responder una reseña con ayuda de Claude... {
+=Se revisa el borrador antes de publicarlo
+~Se publica sin leer
+~Se pega el nombre del cliente
+~Se promete cualquier cosa
+}
+
+::IA08-2::¿Quién confirma si un plato lleva un alérgeno? {
+~El cliente sin preguntarle
+~La IA por su cuenta
+~Nadie
+=Una persona con las etiquetas y la información oficial
+}
+
+::IA08-3::Para qué temas debe un chatbot pasar a una persona? {
+~Ubicación
+~Horario de apertura
+=Alergias, quejas graves y pagos
+~Saludos
+}
+
+::IA08-4::¿Qué conviene hacer con un resumen de reseñas hecho por la IA? {
+~Fiarse sin mirar
+=Comprobar que los puntos aparecen en las reseñas
+~Borrar las reseñas
+~Publicarlo tal cual
+}
+
+$CATEGORY: IA con Claude/Módulo 09 - IA en hostelería (II)\: cocina y sala
+
+::IA09-1::¿Qué debe hacerse con las cuentas de un escandallo hechas por IA? {
+=Comprobarlas con calculadora u hoja de cálculo
+~Darlas por buenas
+~Ignorarlas siempre
+~Imprimirlas
+}
+
+::IA09-2::La lista de alérgenos de un plato debe salir de... {
+~Una web cualquiera
+~Lo que supone la IA
+~La memoria
+=Los ingredientes y etiquetas reales
+}
+
+::IA09-3::¿Para qué sirve pedir que la IA actúe como cliente difícil? {
+~Para ganar propinas
+~Para evitar clientes
+=Para ensayar la atención antes del servicio
+~Para cambiar la carta
+}
+
+::IA09-4::¿Sustituye la IA al plan APPCC? {
+~Sí
+=No, la seguridad alimentaria se rige por la normativa y el criterio profesional
+~Solo en verano
+~Solo en hoteles
+}
+
+$CATEGORY: IA con Claude/Módulo 10 - IA en hostelería (III)\: gestión, marketing y emprendimiento
+
+::IA10-1::¿Qué datos es mejor usar para pedir ayuda con una hoja de cálculo? {
+=Una plantilla con datos inventados
+~Nóminas reales
+~Lista de clientes con teléfonos
+~DNI de los empleados
+}
+
+::IA10-2::Si la IA te da una cifra de mercado exacta, ¿qué haces? {
+~Ocultarla
+~Usarla sin más
+~Subirle un 10 %
+=Buscarla en una fuente oficial
+}
+
+::IA10-3::Si usas imágenes generadas por IA en tu publicidad... {
+~No importa
+~Dices que son fotos reales
+=No debes confundir al cliente sobre cómo es el plato real
+~Las vendes
+}
+
+::IA10-4::¿Qué te aporta Claude al pensar un negocio nuevo? {
+~El negocio ya hecho
+=Preguntas y esquemas para ordenar tus ideas
+~Dinero
+~Permisos
+}
+
+$CATEGORY: IA con Claude/Módulo 11 - Usar la IA con cabeza\: privacidad, ética y límites
+
+::IA11-1::¿Cuál de estos datos NO debes pegar en una IA? {
+=El nombre y la alergia de un cliente
+~Una receta de salsa
+~La definición de escandallo
+~Un menú sin nombres
+}
+
+::IA11-2::¿Qué es un sesgo de la IA? {
+~Un tipo de hoja de cálculo
+~Un fallo eléctrico
+~Una pregunta mal escrita
+=Un prejuicio aprendido de los datos de entrenamiento
+}
+
+::IA11-3::Anonimizar es... {
+~Cifrar el ordenador
+~Borrar el chat
+=Quitar o sustituir lo que identifica a una persona
+~Pedir permiso al cliente
+}
+
+::IA11-4::Si no estás seguro de una respuesta de la IA... {
+~La das por buena
+=La compruebas en fuentes fiables o con un experto
+~La envías al cliente
+~La borras sin leer
+}
+
+::IA11-5::¿Es honesto presentar como tuyo un trabajo hecho por la IA cuando te piden indicar las herramientas usadas? {
+=No, hay que indicar el uso
+~Sí, siempre
+~Solo en los exámenes
+~Depende del día
+}
+
+$CATEGORY: IA con Claude/Módulo 12 - El futuro de la IA y tu futuro profesional
+
+::IA12-1::¿Qué es un agente de IA? {
+~Una app de citas
+~Un empleado de una agencia
+~Un virus
+=Un sistema que realiza tareas con herramientas, con supervisión
+}
+
+::IA12-2::¿Qué seguirá siendo valioso en hostelería? {
+~Solo la rapidez
+~Nada
+=El trato humano y el criterio profesional
+~Saber la carta de memoria
+}
+
+::IA12-3::¿Cómo conviene tomar las predicciones sobre el futuro de la IA? {
+~Como certezas
+=Con cautela\: importan más las tendencias que las cifras exactas
+~Ignorándolas
+~Como ciencia ficción
+}
+
+::IA12-4::¿Qué habilidad no caduca? {
+=Aprender a aprender y pensar con criterio
+~Memorizar versiones de programas
+~Teclear muy rápido
+~Saber un único programa
+}
