@@ -36,6 +36,7 @@
 <ul class="key-points"><li>📁 <span>El archivo exportado suele tener extensión <code>.pfx</code> o <code>.p12</code>. Contiene tu clave privada, así que hay que protegerlo con una <b>contraseña de exportación</b> (distinta de la del paso 2, puedes elegir la que quieras en ese momento).</span></li><li>💾 <span>Guarda ese archivo en un lugar seguro: un disco externo, un gestor de contraseñas o una nube cifrada. <b>Nunca</b> lo envíes por correo sin cifrar ni lo dejes en un ordenador compartido.</span></li><li>🖥️ <span>En Windows, el gestor de certificados se abre escribiendo <code>certmgr.msc</code>; en Firefox está en Ajustes → Privacidad y seguridad → Certificados; en Chrome/Edge, en Configuración → Privacidad y seguridad → Seguridad → Gestionar certificados.</span></li></ul>
 <div class="tip-box">💡 <b>Consejo:</b> Con ese archivo <code>.pfx</code> y su contraseña podrás <b>reinstalar</b> el certificado en el mismo equipo tras formatearlo, o <b>usarlo en otro dispositivo</b>: es justo lo que veremos en el próximo módulo.</div>
 
+<!--dd:fnmt-copia--><div class="dd" id="dd-fnmt-copia" data-config="{&quot;tipo&quot;:&quot;rellenar&quot;,&quot;titulo&quot;:&quot;La copia de seguridad&quot;,&quot;instruccion&quot;:&quot;Completa la frase con las palabras que faltan.&quot;,&quot;texto&quot;:&quot;Nada más descargar el certificado, expórtalo a un archivo {0} o {1}, protégelo con una {2} de exportación y guárdalo en un lugar seguro.&quot;,&quot;huecos&quot;:[&quot;.pfx&quot;,&quot;.p12&quot;,&quot;contraseña&quot;],&quot;extra&quot;:[&quot;.pdf&quot;,&quot;clave pública&quot;]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:fnmt-copia-->
 <div class="exercise"><h3>🧩 Antes de nada</h3><p>Nada más descargar el certificado, ¿cuál es la recomendación más importante?</p>
 <div class="options" id="opt_e11a"><div class="option" onclick="pickc(this,'e11a',1)">Hacer una copia de seguridad exportándolo a un archivo</div><div class="option" onclick="pickc(this,'e11a',0)">Borrar el correo con el Código de Solicitud</div><div class="option" onclick="pickc(this,'e11a',0)">Cambiar de navegador</div></div>
 <div id="fb_e11a" class="feedback-box" data-exp="Sin copia de seguridad, perder el certificado (por ejemplo al formatear) obliga a tramitarlo de nuevo por completo."></div></div>
@@ -48,6 +49,7 @@
   </div>
 </div>
 <footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

@@ -55,6 +55,7 @@ window.addEventListener('load',vUpd);
 
 <h3>Cuidado con el fraude relacionado con la FNMT</h3>
 <p>Al ser un trámite muy solicitado, es también uno de los más suplantados por estafadores. Antes de introducir cualquier dato:</p>
+<!--dd:fnmt-fraude--><div class="dd" id="dd-fnmt-fraude" data-config="{&quot;tipo&quot;:&quot;clasificar&quot;,&quot;titulo&quot;:&quot;Hábito seguro o señal de fraude&quot;,&quot;instruccion&quot;:&quot;Clasifica cada situación.&quot;,&quot;categorias&quot;:[&quot;Hábito seguro&quot;,&quot;Señal de fraude&quot;],&quot;items&quot;:[[&quot;Escribir tú mismo sede.fnmt.gob.es en el navegador&quot;,0],[&quot;Revisar el candado y la dirección exacta antes de escribir tu DNI&quot;,0],[&quot;Cerrar el mensaje dudoso y entrar tú en la web oficial&quot;,0],[&quot;Te piden por WhatsApp tu archivo .pfx y su contraseña&quot;,1],[&quot;Te piden pagar por un trámite que es gratuito&quot;,1],[&quot;Un SMS con un enlace para «renovar» tu certificado&quot;,1]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:fnmt-fraude-->
 <div class="exercise"><h3>🧩 La web real</h3><p>¿Cuál de estas es la dirección real de la Sede Electrónica de la FNMT?</p>
 <div class="options" id="opt_e14a"><div class="option" onclick="pickc(this,'e14a',1)">sede.fnmt.gob.es</div><div class="option" onclick="pickc(this,'e14a',0)">fnmt-tramites-oficial.com</div><div class="option" onclick="pickc(this,'e14a',0)">sede.fnmt.certificados-online.info</div></div>
 <div id="fb_e14a" class="feedback-box" data-exp="El dominio oficial de la Administración termina en .gob.es; los otros son dominios que imitan el nombre pero no son de la FNMT."></div></div>
@@ -73,6 +74,7 @@ window.addEventListener('load',vUpd);
   </div>
 </div>
 <footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

@@ -1,0 +1,19 @@
+[
+ {"id":"mat-pasos-r3","pagina":"modulo2.html","antes_de":"<div class=\"exercise\">","tipo":"ordenar","titulo":"Pasos de la regla de tres directa","instruccion":"Ordena los pasos del método.",
+  "items":["Ordena las cantidades de la misma clase en la misma columna","Comprueba que es directa: más con más, o menos con menos","Calcula x = (dato conocido × dato conocido) ÷ dato restante"]},
+ {"id":"mat-inversa","pagina":"modulo4.html","antes_de":"<div class=\"exercise\">","tipo":"rellenar","titulo":"Proporcionalidad inversa","instruccion":"Completa la frase arrastrando las palabras a su hueco.",
+  "texto":"Si se duplican las personas que hacen un trabajo, el tiempo se reduce a la {0}; el producto personas × tiempo es {1}.",
+  "huecos":["mitad","constante"],"extra":["doble"]},
+ {"id":"mat-dir-inv","pagina":"modulo5.html","antes_de":"<div class=\"exercise\">","tipo":"clasificar","titulo":"¿Directa o inversa?","instruccion":"Clasifica cada situación.",
+  "categorias":["Directa","Inversa"],
+  "items":[["Más productos, más precio",0],["Más tiempo a velocidad constante, más distancia",0],["Más kg de fruta, más euros",0],["Más obreros en la misma tarea, menos tiempo",1],["Se duplican las personas, el tiempo se reduce a la mitad",1],["Más personas trabajando al mismo ritmo, menos horas",1]]},
+ {"id":"mat-equiv","pagina":"modulo6.html","antes_de":"<div class=\"exercise\">","tipo":"emparejar","titulo":"Equivalencias de porcentajes","instruccion":"Une cada porcentaje con su significado.",
+  "pares":[["50 %","La mitad"],["25 %","La cuarta parte"],["10 %","Una décima parte"],["75 %","Tres cuartas partes"]]},
+ {"id":"mat-calc-pct","pagina":"modulo7.html","antes_de":"<div class=\"exercise\">","tipo":"emparejar","titulo":"Calcula el tanto por ciento","instruccion":"Une cada operación con su resultado.",
+  "pares":[["15 % de 200","30"],["18 % de 250","45"],["20 % de 30","6"],["18 de 72, ¿qué %?","25 %"]]},
+ {"id":"mat-desc-aum","pagina":"modulo8.html","antes_de":"<div class=\"exercise\">","tipo":"clasificar","titulo":"Descuento o aumento","instruccion":"Clasifica cada factor o situación.",
+  "categorias":["Descuento","Aumento"],
+  "items":[["Precio × 0,80",0],["80 € con 25 % → 80 × 0,75",0],["Multiplica por menos de 1",0],["Precio × 1,20",1],["50 € con 10 % → 50 × 1,10",1],["Multiplica por más de 1",1]]},
+ {"id":"mat-pasos-prob","pagina":"modulo10.html","antes_de":"<div class=\"exercise\">","tipo":"ordenar","titulo":"Método para resolver problemas","instruccion":"Ordena los pasos del método.",
+  "items":["Lee el problema completo antes de calcular nada","Identifica las cantidades y qué representa cada una","Decide si es regla de tres (directa/inversa) o porcentaje","Calcula paso a paso, sin saltarte operaciones","Comprueba que el resultado tiene sentido"]}
+]

@@ -159,3 +159,46 @@ code{font-family:Consolas,'Courier New',monospace;background:#f6ecf3;border:1px 
 .missions-box .checks li{padding:3px 0}
 .missions-box .checks li.ok{color:#2e7d32;font-weight:600}
 @media (max-width:600px){.sim-side{width:96px}.sim-side button{font-size:12px;padding:6px 4px}.sim-file{width:84px}.sim-body{height:300px}}
+
+/* dd:inicio */
+.dd{background:#fbfcff;border:2px dashed #9fb1d6;border-radius:14px;padding:12px 16px 14px;margin:22px 0}
+.dd-titulo{margin:4px 0 4px;font-size:1.1em;color:inherit}
+.dd-instr{margin:0 0 10px;color:#555;font-size:.95em}
+.dd-pool{display:flex;flex-wrap:wrap;gap:8px;min-height:46px;padding:10px;margin:12px 0;border-radius:10px;background:#eef2fa;border:1px solid #d5ddef}
+.dd-chip{font:inherit;font-size:.95em;cursor:grab;user-select:none;touch-action:none;background:#fff;border:2px solid #4a6fb5;border-radius:10px;padding:7px 12px;color:#1f2d4d;box-shadow:0 2px 4px rgba(0,0,0,.08);text-align:left;line-height:1.3}
+.dd-chip:hover{background:#f2f6ff}.dd-chip.dd-sel{outline:3px solid #f5a623;background:#fff6e0}
+.dd-chip.dd-arrastrando{opacity:.35}
+.dd-ghost{position:fixed;z-index:9999;pointer-events:none;opacity:.92;transform:rotate(-2deg);box-shadow:0 8px 18px rgba(0,0,0,.25);cursor:grabbing}
+.dd-slot{min-height:42px;min-width:140px;display:flex;align-items:center;justify-content:center;border:2px dashed #9fb1d6;border-radius:10px;background:#fff;padding:3px;box-sizing:border-box}
+.dd-slot .dd-chip{width:100%;box-shadow:none}
+.dd-sobre{background:#fff6e0!important;border-color:#f5a623!important}
+.dd-filas{display:grid;grid-template-columns:1fr;gap:8px}
+.dd-fila{display:grid;grid-template-columns:minmax(120px,1fr) minmax(160px,1fr);gap:10px;align-items:center}
+.dd-pregunta{font-weight:600;line-height:1.35}
+.dd-cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.dd-cat{border:2px dashed #9fb1d6;border-radius:12px;background:#fff;padding:8px;min-height:110px}
+.dd-cat-t{font-weight:700;text-align:center;margin-bottom:6px}
+.dd-cat-lista{display:flex;flex-wrap:wrap;gap:6px;min-height:50px}
+.dd-orden{list-style:none;margin:8px 0;padding:0}
+.dd-item{display:flex;align-items:center;gap:8px;background:#fff;border:2px solid #4a6fb5;border-radius:10px;padding:8px 10px;margin:6px 0;cursor:grab;touch-action:pan-y;user-select:none}
+.dd-item.dd-arrastrando{opacity:.6;box-shadow:0 6px 14px rgba(0,0,0,.2)}
+.dd-asa{color:#7b8db5;font-size:1.2em}.dd-num{font-weight:700;min-width:1.7em}.dd-txt{flex:1;line-height:1.35}
+.dd-flecha{border:1px solid #9fb1d6;background:#f2f6ff;border-radius:6px;cursor:pointer;padding:3px 8px;font-size:.85em}
+.dd-texto{line-height:2.4}.dd-hueco{display:inline-flex;min-width:110px;vertical-align:middle;margin:0 3px}
+.dd-img{position:relative;margin:10px auto;width:100%}
+.dd-img img{width:100%;height:auto;display:block;pointer-events:none}
+.dd-lineas{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none}
+.dd-lineas line{stroke:#8a93a8;stroke-width:1.5}
+.dd-punto{position:absolute;width:12px;height:12px;border-radius:50%;background:#e74c3c;border:2px solid #fff;transform:translate(-50%,-50%);pointer-events:none;box-shadow:0 0 0 1px #c0392b}
+.dd-zona{position:absolute;transform:translate(-50%,-50%);width:120px;min-width:0;min-height:34px;z-index:2;background:rgba(255,255,255,.95)}
+.dd-zona .dd-chip{padding:4px 6px;font-size:.85em;text-align:center}
+.dd-ok{border-color:#4caf50!important;background:#e8f5e9!important}.dd-ko{border-color:#e53935!important;background:#ffebee!important}
+.dd-slot.dd-ok,.dd-slot.dd-ko{border-style:solid}.dd-slot.dd-ok .dd-chip{background:#c8e6c9;border-color:#4caf50}.dd-slot.dd-ko .dd-chip{background:#ffcdd2;border-color:#e53935}
+.dd-chip.dd-ok{color:#1b5e20}.dd-chip.dd-ko{color:#b71c1c}
+.dd-barra{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.dd-btn{border:0;border-radius:20px;padding:8px 18px;cursor:pointer;font-weight:700;background:#1e3c72;color:#fff;font:inherit;font-weight:700}
+.dd-btn.dd-sec{background:#e3e8f3;color:#2b3a5c}
+.dd-msg{margin-top:8px;font-weight:700;min-height:1.4em}.dd-bien{color:#2e7d32}.dd-mal{color:#b26a00}
+@media (max-width:560px){.dd-fila{grid-template-columns:1fr}.dd-slot{min-width:0}.dd-zona{width:92px}.dd-zona .dd-chip{font-size:.75em}}
+@media print{.dd{display:none}}
+/* dd:fin */

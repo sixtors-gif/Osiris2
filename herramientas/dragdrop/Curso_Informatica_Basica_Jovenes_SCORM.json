@@ -1,0 +1,20 @@
+[
+ {"id":"inf-piezas","pagina":"modulo2.html","antes_de":"summary","tipo":"emparejar","titulo":"Cada pieza, su trabajo","instruccion":"Une cada pieza del ordenador con lo que hace.",
+  "pares":[["Placa base","Conecta todas las piezas entre sí"],["Procesador (CPU)","Ejecuta las instrucciones de los programas"],["Memoria RAM","Guarda lo que estás usando ahora"],["Almacenamiento (SSD/HDD)","Guarda archivos aunque se apague"],["Tarjeta gráfica (GPU)","Calcula las imágenes que ves"],["Fuente de alimentación","Transforma la corriente del enchufe"]],
+  "extra":["Evita que las piezas se calienten"]},
+ {"id":"inf-unidades","pagina":"modulo4.html","antes_de":"summary","tipo":"ordenar","titulo":"De la unidad más pequeña a la más grande","instruccion":"Ordena las unidades de información de menor a mayor.",
+  "items":["Bit","Byte (8 bits)","Kilobyte (KB)","Megabyte (MB)","Gigabyte (GB)","Terabyte (TB)"]},
+ {"id":"inf-almacen","pagina":"modulo5.html","antes_de":"quiz","tipo":"clasificar","titulo":"Ventajas e inconvenientes","instruccion":"Arrastra cada característica al tipo de almacenamiento al que corresponde.",
+  "categorias":["Disco duro (HDD)","SSD","Nube"],
+  "items":[["Mucha capacidad por poco dinero",0],["Lento y delicado: tiene piezas que giran",0],["Muy rápido y silencioso",1],["Resistente a golpes",1],["Accesible desde cualquier dispositivo",2],["Necesita Internet y una cuenta bien protegida",2]]},
+ {"id":"inf-licencias","pagina":"modulo6.html","antes_de":"quiz","tipo":"clasificar","titulo":"¿Qué licencia tiene?","instruccion":"Clasifica cada descripción según el tipo de licencia.",
+  "categorias":["Software libre","Propietario (de pago)","Freemium"],
+  "items":[["Puedes usarlo, estudiarlo, modificarlo y compartirlo",0],["LibreOffice, Firefox, VLC o GIMP",0],["Pagas una licencia con las condiciones del fabricante",1],["Photoshop",1],["Gratis lo básico; pagas por funciones extra",2],["Muchos juegos y apps del móvil",2]]},
+ {"id":"inf-so","pagina":"modulo7.html","antes_de":"quiz","tipo":"rellenar","titulo":"El director de orquesta","instruccion":"Completa la frase arrastrando las palabras a su hueco.",
+  "texto":"El sistema operativo es el primer programa que se carga al encender el equipo: gestiona el {0}, ofrece una {1} con ventanas e iconos y organiza los {2} y carpetas.",
+  "huecos":["hardware","interfaz","archivos"],"extra":["router","extensión"]},
+ {"id":"inf-extensiones","pagina":"modulo8.html","antes_de":"quiz","tipo":"emparejar","titulo":"El apellido del archivo","instruccion":"Une cada extensión con el tipo de archivo.",
+  "pares":[[".docx","Documento de texto"],[".xlsx","Hoja de cálculo"],[".pdf","Documento para leer o imprimir"],[".png","Imagen"],[".mp3","Audio"],[".mp4","Vídeo"],[".zip","Archivo comprimido"],[".exe","Programa de Windows"]]},
+ {"id":"inf-lento","pagina":"modulo10.html","antes_de":"quiz","tipo":"ordenar","titulo":"Si el equipo va lento","instruccion":"Ordena los pasos que se recomiendan, del primero al último.",
+  "items":["Reinicia","Cierra programas que no uses","Mira el Administrador de tareas","Libera espacio","Actualiza"]}
+]

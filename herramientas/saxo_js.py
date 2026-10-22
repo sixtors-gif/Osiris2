@@ -161,6 +161,7 @@ function tmIniciar(min){clearInterval(tm.t);tm.resta=min*60;tmPintar();document.
     try{var c=new (window.AudioContext||window.webkitAudioContext)(),o=c.createOscillator();o.frequency.value=880;o.connect(c.destination);o.start();o.stop(c.currentTime+0.4);}catch(e){}}},1000);}
 function tmParar(){clearInterval(tm.t);document.getElementById('tm-msg').textContent='Parado.';}
 
+function comoTodos(a){document.querySelectorAll('details.como').forEach(function(d){d.open=a;});}
 // Autoevaluaciones
 function checkAnswer(btn,ok,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});
   btn.classList.add(ok?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=ok?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es correcto. Repasa el apartado e inténtalo de nuevo.';}

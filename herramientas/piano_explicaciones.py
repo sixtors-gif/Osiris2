@@ -18,7 +18,7 @@ def lista(items, ico):
 
 
 def como(texto):
-    return f'<div class="como"><b>💡 Cómo se hace:</b> {texto}</div>'
+    return f'<details class="como"><summary>💡 Cómo se hace</summary><div class="como-cuerpo">{texto}</div></details>'
 
 
 def pasos(items):

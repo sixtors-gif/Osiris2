@@ -33,7 +33,8 @@
       <div class="quiz"><h4>🧩 Recibes un audio de tu hermano pidiendo 200 € por Bizum porque «ha perdido la cartera». ¿Qué haces?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m1a')">A. Envío el dinero: es su voz.</button><button class="option" onclick="checkAnswer(this,true,'m1a')">B. Le llamo a su número de siempre o le pregunto la palabra clave antes de hacer nada.</button><button class="option" onclick="checkAnswer(this,false,'m1a')">C. Le pido que me mande otro audio.</button></div><p class="feedback" id="fb-m1a" data-ok="Verificar por un canal distinto es la defensa más eficaz contra la clonación de voz."></p></div>
       <div class="quiz"><h4>🧩 ¿Por qué ya no es fiable buscar faltas de ortografía para detectar phishing?</h4><div class="options"><button class="option" onclick="checkAnswer(this,true,'m1b')">A. Porque la IA redacta mensajes correctos y personalizados.</button><button class="option" onclick="checkAnswer(this,false,'m1b')">B. Porque los bancos también cometen faltas.</button><button class="option" onclick="checkAnswer(this,false,'m1b')">C. Porque el phishing ha desaparecido.</button></div><p class="feedback" id="fb-m1b" data-ok="Hay que analizar el contexto, la urgencia y el remitente, no solo la forma."></p></div>
       <div class="activity"><h3>✍️ Actividad: diseña tu protocolo</h3><p>Escribe en tres pasos qué harías si un supuesto familiar te pide dinero por mensaje.</p><textarea placeholder="1. ... 2. ... 3. ..."></textarea><p class="small">No escribas contraseñas ni datos personales reales en este cuadro.</p></div>
-      <div class="summary-box"><b>Resumen:</b> la IA hace las estafas más creíbles, pero el antídoto es sencillo: pausa, verifica por otro canal y nunca actúes bajo presión.</div>
+      <!--dd:cib-protocolo--><div class="dd" id="dd-cib-protocolo" data-config="{&quot;tipo&quot;:&quot;ordenar&quot;,&quot;titulo&quot;:&quot;Protocolo de verificación de identidad&quot;,&quot;instruccion&quot;:&quot;Ordena los pasos del protocolo que debes seguir ante una petición urgente sospechosa.&quot;,&quot;items&quot;:[&quot;Para y respira&quot;,&quot;Cuelga o no respondas&quot;,&quot;Contacta por otro canal&quot;,&quot;Usa la palabra clave familiar&quot;,&quot;Decide&quot;]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:cib-protocolo-->
+<div class="summary-box"><b>Resumen:</b> la IA hace las estafas más creíbles, pero el antídoto es sencillo: pausa, verifica por otro canal y nunca actúes bajo presión.</div>
 
       <div class="navigation">
         <button class="nav-btn" onclick="scormGo('index.html')">⬅️ Anterior</button>
@@ -43,6 +44,7 @@
   </div>
 </div>
 <footer class="footer-autor">Curso 2: Ciberseguridad Avanzada y Defensa Digital · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function checkAnswer(btn,correct,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(correct?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=correct?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es la mejor opción. Vuelve a leer el apartado e inténtalo de nuevo.';}

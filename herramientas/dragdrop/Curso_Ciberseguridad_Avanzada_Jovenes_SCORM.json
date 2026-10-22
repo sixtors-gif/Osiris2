@@ -1,0 +1,195 @@
+[
+ {
+  "id": "ca-huella",
+  "pagina": "unidad1.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "Huella digital activa o pasiva",
+  "instruccion": "Activa: lo que publicamos. Pasiva: lo que se registra sobre el uso.",
+  "categorias": [
+   "Huella activa",
+   "Huella pasiva"
+  ],
+  "items": [
+   [
+    "Publicar una foto deliberadamente",
+    0
+   ],
+   [
+    "Escribir un comentario público",
+    0
+   ],
+   [
+    "Datos de uso que una app registra automáticamente",
+    1
+   ],
+   [
+    "Lo que se registra sobre cómo usas un servicio",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "ca-doxxing",
+  "pagina": "unidad2.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "Si difunden datos de alguien",
+  "instruccion": "Separa lo que sí conviene hacer de lo que no.",
+  "categorias": [
+   "Sí hacer",
+   "No hacer"
+  ],
+  "items": [
+   [
+    "No difundirlo",
+    0
+   ],
+   [
+    "Guardar evidencias en privado",
+    0
+   ],
+   [
+    "Denunciar el contenido",
+    0
+   ],
+   [
+    "Pedir ayuda a un adulto",
+    0
+   ],
+   [
+    "Reenviarlo para avisar a más gente",
+    1
+   ],
+   [
+    "Publicar los datos de quien lo hizo",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "ca-disp",
+  "pagina": "unidad3.html",
+  "antes_de": "summary",
+  "tipo": "rellenar",
+  "titulo": "Reduce las oportunidades",
+  "instruccion": "Completa la idea con las palabras que faltan.",
+  "texto": "La seguridad avanzada empieza por reducir las {0} de acceso: un dispositivo {1}, bloqueado y con {2} limitados es más difícil de aprovechar.",
+  "huecos": [
+   "oportunidades",
+   "actualizado",
+   "permisos"
+  ],
+  "extra": [
+   "contraseñas",
+   "fotos"
+  ]
+ },
+ {
+  "id": "ca-mfa",
+  "pagina": "unidad4.html",
+  "antes_de": "summary",
+  "tipo": "emparejar",
+  "titulo": "Cuentas bien protegidas",
+  "instruccion": "Une cada elemento con su razón de ser.",
+  "pares": [
+   [
+    "Contraseña única",
+    "Una filtración en un servicio no abre otras cuentas"
+   ],
+   [
+    "Autenticación multifactor",
+    "Añade una segunda comprobación"
+   ],
+   [
+    "Correo principal",
+    "Suele permitir recuperar el resto de las cuentas"
+   ],
+   [
+    "Códigos de recuperación",
+    "Se guardan en un lugar privado y seguro"
+   ]
+  ]
+ },
+ {
+  "id": "ca-verif",
+  "pagina": "unidad5.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "Señales de engaño y verificación",
+  "instruccion": "Distingue lo que debe hacerte desconfiar de lo que debes hacer para comprobar.",
+  "categorias": [
+   "Desconfía de",
+   "Comprueba así"
+  ],
+  "items": [
+   [
+    "La urgencia",
+    0
+   ],
+   [
+    "El secreto",
+    0
+   ],
+   [
+    "Las amenazas",
+    0
+   ],
+   [
+    "Las ofertas demasiado buenas",
+    0
+   ],
+   [
+    "Escribir tú la dirección oficial del servicio",
+    1
+   ],
+   [
+    "Confirmar por otro canal conocido",
+    1
+   ],
+   [
+    "Colgar y llamar al número que ya tenías guardado",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "ca-publicar",
+  "pagina": "unidad6.html",
+  "antes_de": "summary",
+  "tipo": "emparejar",
+  "titulo": "Publicar con intención",
+  "instruccion": "Une cada medida con su objetivo.",
+  "pares": [
+   [
+    "Publicar después de salir",
+    "No revelar tu ubicación en directo"
+   ],
+   [
+    "Recortar o tapar",
+    "Documentos, matrículas, direcciones y pantallas"
+   ],
+   [
+    "Revisar el ajuste de la cámara",
+    "Que no añada ubicación a las fotos"
+   ],
+   [
+    "Pedir consentimiento",
+    "Antes de etiquetar o compartir imágenes en grupo"
+   ]
+  ]
+ },
+ {
+  "id": "ca-vuln",
+  "pagina": "unidad8.html",
+  "antes_de": "summary",
+  "tipo": "ordenar",
+  "titulo": "Si encuentras una vulnerabilidad",
+  "instruccion": "Ordena lo que debes hacer.",
+  "items": [
+   "No accedas a más datos",
+   "Documenta lo mínimo",
+   "Comunícala responsablemente"
+  ]
+ }
+]

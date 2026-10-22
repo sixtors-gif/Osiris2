@@ -1,0 +1,19 @@
+[
+ {"id":"lo-apps","pagina":"modulo1.html","antes_de":"nav","tipo":"emparejar","titulo":"Las aplicaciones de LibreOffice","instruccion":"Une cada aplicación con la extensión de archivo que usa por defecto.",
+  "pares":[["Writer (textos)",".odt"],["Calc (hojas de cálculo)",".ods"],["Impress (presentaciones)",".odp"],["Draw (dibujo vectorial)",".odg"],["Base (bases de datos)",".odb"],["Math (fórmulas matemáticas)",".odf"]]},
+ {"id":"lo-ventana","pagina":"modulo2.html","antes_de":"nav","tipo":"emparejar","titulo":"Las partes de la ventana","instruccion":"Une cada parte de la ventana con su descripción.",
+  "pares":[["Barra de título","Nombre del archivo"],["Barra de menús","Archivo, Editar, Formato…"],["Barras de herramientas","Los botones más usados, a un clic"],["Área de trabajo","La página, la cuadrícula o la diapositiva"],["Barra lateral","Paneles como Propiedades, Estilos o Galería"],["Barra de estado","Información rápida del documento"]]},
+ {"id":"lo-formatos","pagina":"modulo4.html","antes_de":"nav","tipo":"clasificar","titulo":"ODF o Microsoft Office","instruccion":"Clasifica cada extensión según el paquete al que pertenece.",
+  "categorias":["Formato ODF (nativo de LibreOffice)","Formato de Microsoft Office"],
+  "items":[[".odt",0],[".ods",0],[".odp",0],[".odb",0],[".docx",1],[".xlsx",1],[".pptx",1],[".accdb",1]]},
+ {"id":"lo-portapapeles","pagina":"modulo5.html","antes_de":"nav","tipo":"rellenar","titulo":"Deshacer y portapapeles","instruccion":"Completa la frase con el atajo o la acción que corresponde.",
+  "texto":"Deshacer es {0} y Rehacer es {1}. {2} guarda la selección en el portapapeles y la borra del sitio original; {3} la guarda sin borrarla.",
+  "huecos":["Ctrl + Z","Ctrl + Y","Cortar","Copiar"],"extra":["Pegar","Ctrl + S"]},
+ {"id":"lo-atajos","pagina":"modulo10.html","antes_de":"nav","tipo":"emparejar","titulo":"Atajos comunes","instruccion":"Une cada acción con su atajo de teclado.",
+  "pares":[["Abrir","Ctrl + O"],["Guardar como","Ctrl + Mayús + S"],["Buscar","Ctrl + F"],["Reemplazar","Ctrl + H"],["Ortografía","F7"],["Estilos","F11"],["Imprimir","Ctrl + P"],["Seleccionar todo","Ctrl + A"]]},
+ {"id":"lo-salida","pagina":"modulo11.html","antes_de":"nav","tipo":"clasificar","titulo":"Imprimir, PDF o formato original","instruccion":"Clasifica cada necesidad según lo que debes elegir.",
+  "categorias":["Imprimir (Ctrl + P)","Exportar a PDF","Formato original"],
+  "items":[["Entregarlo en papel",0],["Elegir impresora y número de copias",0],["Que se lea igual en cualquier dispositivo",1],["Colgar apuntes que no se modifiquen con facilidad",1],["Que otra persona lo siga editando",2],["Pasar el archivo a quien debe modificarlo",2]]},
+ {"id":"lo-recuperar","pagina":"modulo12.html","antes_de":"nav","tipo":"ordenar","titulo":"Tras un cierre inesperado","instruccion":"Ordena los pasos para recuperar tu trabajo.",
+  "items":["Vuelve a abrir LibreOffice (o la aplicación que usabas)","Si aparece el asistente de Recuperación de documentos, revisa la lista","Elige Iniciar la recuperación y comprueba el contenido","Guarda enseguida el archivo recuperado con Ctrl + S"]}
+]

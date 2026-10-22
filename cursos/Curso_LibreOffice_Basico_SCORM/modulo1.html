@@ -56,11 +56,13 @@ frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-pic
 <div class="options" id="opt_e1c"><div class="option" onclick="pickc(this,'e1c',1)">Porque Writer, Calc e Impress comparten la misma ventana, los mismos atajos y la misma forma de guardar, buscar e imprimir</div><div class="option" onclick="pickc(this,'e1c',0)">Porque todas las aplicaciones hacen exactamente lo mismo</div><div class="option" onclick="pickc(this,'e1c',0)">Porque solo hace falta aprender una aplicación</div></div>
 <div id="fb_e1c" class="feedback-box" data-exp="Aprender lo común una vez te sirve para las tres aplicaciones principales."></div></div>
 
-      <div class="navigation"><button class="nav-btn" onclick="scormGo('index.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo2.html')">Siguiente ➡️</button></div>
+      <!--dd:lo-apps--><div class="dd" id="dd-lo-apps" data-config="{&quot;tipo&quot;:&quot;emparejar&quot;,&quot;titulo&quot;:&quot;Las aplicaciones de LibreOffice&quot;,&quot;instruccion&quot;:&quot;Une cada aplicación con la extensión de archivo que usa por defecto.&quot;,&quot;pares&quot;:[[&quot;Writer (textos)&quot;,&quot;.odt&quot;],[&quot;Calc (hojas de cálculo)&quot;,&quot;.ods&quot;],[&quot;Impress (presentaciones)&quot;,&quot;.odp&quot;],[&quot;Draw (dibujo vectorial)&quot;,&quot;.odg&quot;],[&quot;Base (bases de datos)&quot;,&quot;.odb&quot;],[&quot;Math (fórmulas matemáticas)&quot;,&quot;.odf&quot;]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:lo-apps-->
+<div class="navigation"><button class="nav-btn" onclick="scormGo('index.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo2.html')">Siguiente ➡️</button></div>
     </section>
   </div>
 </div>
 <footer class="footer-autor">LibreOffice: conceptos básicos comunes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

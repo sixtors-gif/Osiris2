@@ -67,6 +67,7 @@ window.addEventListener('load',function(){labPre();});
 <div class="exercise"><h3>🧩 Bordes en papel</h3><p>Las líneas grises de la cuadrícula de la hoja, ¿se imprimen?</p>
 <div class="options" id="opt_e9b"><div class="option" onclick="pickc(this,'e9b',1)">No, solo se imprimen los bordes que tú dibujas</div><div class="option" onclick="pickc(this,'e9b',0)">Sí, siempre</div><div class="option" onclick="pickc(this,'e9b',0)">Solo en color</div></div>
 <div id="fb_e9b" class="feedback-box" data-exp="La cuadrícula es solo una ayuda visual; los bordes son los que salen en papel."></div></div>
+<!--dd:hor-colores--><div class="dd" id="dd-hor-colores" data-config="{&quot;tipo&quot;:&quot;clasificar&quot;,&quot;titulo&quot;:&quot;Color de letra según el fondo&quot;,&quot;instruccion&quot;:&quot;Clasifica cada asignatura según el color de letra que lleva en la tabla del curso.&quot;,&quot;categorias&quot;:[&quot;Letra blanca&quot;,&quot;Letra negra&quot;],&quot;items&quot;:[[&quot;INFORMÁTICA (#993300)&quot;,0],[&quot;INGLÉS (#008080)&quot;,0],[&quot;CALIDAD (#CCFFCC)&quot;,1],[&quot;ORIENTACIÓN LABORAL (#FF99CC)&quot;,1],[&quot;TEÓRICO COCINA / RECOGIDA (#FFCC99)&quot;,1],[&quot;TEÓRICO-PRÁCTICO COCINA (#FF6600)&quot;,1]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:hor-colores-->
 <div class="summary-box">🎯 <b>Tarea:</b> pon bordes a la tabla A5:O12 y pinta cada asignatura de su color (con letra blanca donde haga falta). Añade una leyenda de colores.</div>
 
       <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo8.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo10.html')">Siguiente ➡️</button></div>
@@ -74,6 +75,7 @@ window.addEventListener('load',function(){labPre();});
   </div>
 </div>
 <footer class="footer-autor">Hoja de cálculo básica: el horario del curso · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

@@ -73,6 +73,7 @@ window.addEventListener('load',hUpd);
 <p>El hash es la pieza que hacía falta para completar la firma digital: en vez de cifrar (con la clave privada) el documento entero —algo lento si el documento es grande—, se cifra únicamente su <b>hash</b>, mucho más corto. Es exactamente lo que verás en el próximo módulo.</p>
 <div class="tip-box">💡 <b>Consejo:</b> Muchas páginas de descargas publican, junto al archivo, su hash SHA-256. Si al calcular el hash del archivo descargado no coincide con el publicado, el archivo se ha corrompido o ha sido manipulado.</div>
 
+<!--dd:fnmt-hash--><div class="dd" id="dd-fnmt-hash" data-config="{&quot;tipo&quot;:&quot;emparejar&quot;,&quot;titulo&quot;:&quot;Las propiedades del hash&quot;,&quot;instruccion&quot;:&quot;Une cada propiedad o dato con su descripción.&quot;,&quot;pares&quot;:[[&quot;Determinista&quot;,&quot;El mismo documento produce siempre el mismo hash&quot;],[&quot;Efecto avalancha&quot;,&quot;Un cambio mínimo produce un hash completamente distinto&quot;],[&quot;No reversible&quot;,&quot;Del hash no se puede reconstruir el documento&quot;],[&quot;SHA-256&quot;,&quot;Produce siempre 64 caracteres hexadecimales&quot;]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:fnmt-hash-->
 <div class="exercise"><h3>🧩 Documento idéntico</h3><p>Calculas el hash del mismo documento dos veces, sin cambiar nada. ¿Qué obtienes?</p>
 <div class="options" id="opt_e4a"><div class="option" onclick="pickc(this,'e4a',1)">Exactamente el mismo hash las dos veces</div><div class="option" onclick="pickc(this,'e4a',0)">Un hash distinto cada vez</div><div class="option" onclick="pickc(this,'e4a',0)">Un hash solo la primera vez</div></div>
 <div id="fb_e4a" class="feedback-box" data-exp="Una función hash es determinista: mismo documento, mismo hash, siempre."></div></div>
@@ -88,6 +89,7 @@ window.addEventListener('load',hUpd);
   </div>
 </div>
 <footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

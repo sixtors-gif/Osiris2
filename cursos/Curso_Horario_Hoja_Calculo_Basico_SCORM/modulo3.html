@@ -65,6 +65,7 @@ HORA,ASIGNATURA,AULA,HORA,ASIGNATURA,AULA,...
 <div class="exercise"><h3>🧩 Formato antiguo</h3><p>¿Qué formato corresponde a «Excel 97-2003»?</p>
 <div class="options" id="opt_e3b"><div class="option" onclick="pickc(this,'e3b',1)">.xls</div><div class="option" onclick="pickc(this,'e3b',0)">.xlsx</div><div class="option" onclick="pickc(this,'e3b',0)">.ods</div></div>
 <div id="fb_e3b" class="feedback-box" data-exp="La extensión .xls es la del Excel antiguo; .xlsx es la del Excel actual y .ods la de LibreOffice."></div></div>
+<!--dd:hor-formatos--><div class="dd" id="dd-hor-formatos" data-config="{&quot;tipo&quot;:&quot;emparejar&quot;,&quot;titulo&quot;:&quot;¿Qué formato elijo?&quot;,&quot;instruccion&quot;:&quot;Une cada situación con el formato de archivo adecuado.&quot;,&quot;pares&quot;:[[&quot;Sigo trabajando yo con Calc&quot;,&quot;.ods&quot;],[&quot;Se lo mando a una compañera que usa Excel y debe modificarlo&quot;,&quot;.xlsx&quot;],[&quot;Lo cuelgo en la web del centro para que lo lean&quot;,&quot;.pdf&quot;],[&quot;Un programa de gestión solo importa datos en texto plano&quot;,&quot;.csv&quot;],[&quot;Equipos muy antiguos (Excel 97-2003)&quot;,&quot;.xls&quot;]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:hor-formatos-->
 <div class="summary-box">🎯 <b>Tarea:</b> guarda tu horario en <b>.ods</b> y, con «Guardar como», crea también una copia <b>.xlsx</b> y un <b>PDF</b>. Compara cuánto pesa cada archivo (clic derecho → Propiedades).</div>
 
       <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo2.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo4.html')">Siguiente ➡️</button></div>
@@ -72,6 +73,7 @@ HORA,ASIGNATURA,AULA,HORA,ASIGNATURA,AULA,...
   </div>
 </div>
 <footer class="footer-autor">Hoja de cálculo básica: el horario del curso · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

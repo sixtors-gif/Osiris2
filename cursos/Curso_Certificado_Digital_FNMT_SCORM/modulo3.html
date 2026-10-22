@@ -55,6 +55,7 @@
 <ul class="key-points"><li>📬 <span>La clave pública <b>se puede enviar por cualquier canal</b>, incluso inseguro: no sirve de nada si alguien la intercepta, porque solo permite cifrar, no descifrar.</span></li><li>🔑 <span>La clave privada <b>nunca viaja</b>: se queda siempre con su dueño (en el certificado digital, protegida por una contraseña o un PIN).</span></li><li>⚖️ <span>Es mucho más lenta que el cifrado simétrico, así que en la práctica (por ejemplo, en HTTPS) se usa para acordar de forma segura una clave simétrica temporal, y esa es la que cifra el resto de la conversación.</span></li></ul>
 <div class="tip-box">💡 <b>Consejo:</b> Este es exactamente el principio en el que se basa la <b>firma digital</b> y el <b>certificado digital</b>: tu certificado guarda tu clave pública (para que otros la conozcan) y protege tu clave privada (para que solo tú puedas usarla).</div>
 
+<!--dd:fnmt-claves--><div class="dd" id="dd-fnmt-claves" data-config="{&quot;tipo&quot;:&quot;clasificar&quot;,&quot;titulo&quot;:&quot;Clave pública o clave privada&quot;,&quot;instruccion&quot;:&quot;Arrastra cada característica a la clave a la que corresponde.&quot;,&quot;categorias&quot;:[&quot;Clave pública&quot;,&quot;Clave privada&quot;],&quot;items&quot;:[[&quot;Se reparte libremente&quot;,0],[&quot;Puede viajar por un canal inseguro&quot;,0],[&quot;Cifra el mensaje confidencial para su destinatario&quot;,0],[&quot;Nunca se comparte con nadie&quot;,1],[&quot;Solo la tiene su dueño&quot;,1],[&quot;Descifra el mensaje confidencial recibido&quot;,1],[&quot;Sirve para firmar y demostrar la autoría&quot;,1],[&quot;Permite comprobar que un mensaje es de su autor&quot;,0]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:fnmt-claves-->
 <div class="exercise"><h3>🧩 Mensaje confidencial</h3><p>Quieres enviarle a Bruno un mensaje que solo él pueda leer. ¿Con qué clave lo cifras?</p>
 <div class="options" id="opt_e3a"><div class="option" onclick="pickc(this,'e3a',1)">Con la clave pública de Bruno</div><div class="option" onclick="pickc(this,'e3a',0)">Con tu propia clave privada</div><div class="option" onclick="pickc(this,'e3a',0)">Con la clave pública tuya</div></div>
 <div id="fb_e3a" class="feedback-box" data-exp="Cifrando con la clave pública del destinatario, solo su clave privada podrá descifrarlo."></div></div>
@@ -70,6 +71,7 @@
   </div>
 </div>
 <footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

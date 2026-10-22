@@ -257,7 +257,7 @@ def lista_ejercicios():
 
 def ejercicio_html(e, partitura):
     id_, titulo, nivel, minutos, partituras, trabaja, pasos, meta = e
-    li = "".join(f"<li>{p[0]}<div class=\"como\"><b>💡 Cómo se hace:</b> {p[1]}</div></li>" if isinstance(p, tuple) else f"<li>{p}</li>" for p in pasos)
+    li = "".join(f"<li>{p[0]}<details class=\"como\"><summary>💡 Cómo se hace</summary><div class=\"como-cuerpo\">{p[1]}</div></details></li>" if isinstance(p, tuple) else f"<li>{p}</li>" for p in pasos)
     return (f'<div class="ejercicio" id="{id_}"><h4><span class="ej-id">{id_}</span> {titulo} <span class="ej-meta">{NIVELES[nivel]} · ⏱ {minutos} min</span></h4>'
             f'<p><b>Qué trabaja:</b> {trabaja}</p>' + "".join(partitura(k) for k in partituras)
             + f'<ol class="steps">{li}</ol><p class="ej-meta-fin">🎯 <b>Meta:</b> {meta}</p></div>')

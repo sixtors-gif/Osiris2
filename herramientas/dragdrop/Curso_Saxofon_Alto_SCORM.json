@@ -1,0 +1,481 @@
+[
+ {
+  "id": "s1-partes",
+  "pagina": "modulo1.html",
+  "antes_de": "<h3>4. Cómo funciona</h3>",
+  "tipo": "etiquetar",
+  "titulo": "Las partes del saxo alto",
+  "instruccion": "Arrastra cada nombre hasta la parte del saxo a la que señala la línea.",
+  "imagen": "img/saxo_partes_mudo.svg",
+  "alt": "Esquema del saxo alto sin nombres",
+  "ancho": 760,
+  "zonas": [
+   {
+    "x": 13,
+    "y": 6,
+    "respuesta": "Boquilla",
+    "punto": [
+     31.2,
+     10.6
+    ]
+   },
+   {
+    "x": 13,
+    "y": 24,
+    "respuesta": "Cuello (tudel)",
+    "punto": [
+     43.2,
+     15.4
+    ]
+   },
+   {
+    "x": 13,
+    "y": 42,
+    "respuesta": "Llave de octava",
+    "punto": [
+     46.1,
+     22.7
+    ]
+   },
+   {
+    "x": 13,
+    "y": 62,
+    "respuesta": "Cuerpo",
+    "punto": [
+     46.1,
+     50.0
+    ]
+   },
+   {
+    "x": 84,
+    "y": 34,
+    "respuesta": "Campana",
+    "punto": [
+     60.7,
+     51.0
+    ]
+   },
+   {
+    "x": 24,
+    "y": 92,
+    "respuesta": "Curva en U (arco)",
+    "punto": [
+     53.4,
+     86.9
+    ]
+   }
+  ],
+  "extra": [
+   "Correa"
+  ]
+ },
+ {
+  "id": "s1-afinacion",
+  "pagina": "modulo1.html",
+  "antes_de": "<h3>3. Partes del saxo alto</h3>",
+  "tipo": "clasificar",
+  "titulo": "La familia del saxofón",
+  "instruccion": "¿En qué tonalidad está afinado cada saxo?",
+  "categorias": [
+   "En Mi♭",
+   "En Si♭"
+  ],
+  "items": [
+   [
+    "Sopranino",
+    0
+   ],
+   [
+    "Alto",
+    0
+   ],
+   [
+    "Barítono",
+    0
+   ],
+   [
+    "Soprano",
+    1
+   ],
+   [
+    "Tenor",
+    1
+   ],
+   [
+    "Bajo",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "s2-desmontaje",
+  "pagina": "modulo2.html",
+  "antes_de": "<h3>3. Las cañas</h3>",
+  "tipo": "ordenar",
+  "titulo": "Desmontaje y limpieza",
+  "instruccion": "Ordena los pasos para desmontar y limpiar el saxo después de tocar.",
+  "items": [
+   "Afloja la abrazadera y quita la caña",
+   "Saca la boquilla y límpiala",
+   "Quita el cuello y pasa el paño o el escobillón",
+   "Pasa el escobillón por el cuerpo",
+   "Seca las llaves por fuera y guarda el saxo"
+  ]
+ },
+ {
+  "id": "s2-montaje",
+  "pagina": "modulo2.html",
+  "antes_de": "<h3>2. Desmontaje y limpieza (¡después de cada sesión!)</h3>",
+  "tipo": "ordenar",
+  "titulo": "Ordena el montaje del saxo",
+  "instruccion": "Ordena los pasos del montaje (arrastra o usa las flechas).",
+  "items": [
+   "Engrasa el corcho del cuello",
+   "Cuelga la correa y engancha el cuerpo",
+   "Monta el cuello en el cuerpo",
+   "Monta la boquilla en el corcho",
+   "Humedece la caña y colócala",
+   "Pon la abrazadera"
+  ]
+ },
+ {
+  "id": "s3-postura",
+  "pagina": "modulo3.html",
+  "antes_de": "quiz",
+  "tipo": "clasificar",
+  "titulo": "Postura y respiración",
+  "instruccion": "¿Qué se debe hacer y qué se debe evitar?",
+  "categorias": [
+   "Se hace",
+   "Se evita"
+  ],
+  "items": [
+   [
+    "Espalda erguida sin rigidez",
+    0
+   ],
+   [
+    "Hombros bajos y sueltos",
+    0
+   ],
+   [
+    "Dedos curvados sin apretar las llaves",
+    0
+   ],
+   [
+    "Llevar el aire hacia el abdomen",
+    0
+   ],
+   [
+    "Agacharse para llegar a la boquilla",
+    1
+   ],
+   [
+    "Subir los hombros al inspirar",
+    1
+   ],
+   [
+    "Doblar las muñecas",
+    1
+   ],
+   [
+    "Apretar las llaves con fuerza",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "s4-embocadura",
+  "pagina": "modulo4.html",
+  "antes_de": "<h3>2. Primeros pasos, de menos a más</h3>",
+  "tipo": "rellenar",
+  "titulo": "La embocadura",
+  "instruccion": "Completa la descripción de la embocadura.",
+  "texto": "Los dientes de {0} descansan sobre la {1}; el labio {2} forma un cojín sobre los dientes y las comisuras se cierran como para decir «{3}».",
+  "huecos": [
+   "arriba",
+   "boquilla",
+   "inferior",
+   "u"
+  ],
+  "extra": [
+   "abajo",
+   "caña",
+   "superior",
+   "a"
+  ]
+ },
+ {
+  "id": "s5-dedos",
+  "pagina": "modulo5.html",
+  "antes_de": "<h3>3. Las duraciones</h3>",
+  "tipo": "etiquetar",
+  "titulo": "¿Qué nota es?",
+  "instruccion": "Arrastra cada nombre bajo su digitación.",
+  "imagen": "img/dig_basicas_mudo.svg",
+  "alt": "Tres digitaciones sin nombre",
+  "ancho": 440,
+  "zonas": [
+   {
+    "x": 16.4,
+    "y": 93,
+    "respuesta": "Si",
+    "ancho": 90
+   },
+   {
+    "x": 49.2,
+    "y": 93,
+    "respuesta": "La",
+    "ancho": 90
+   },
+   {
+    "x": 81.9,
+    "y": 93,
+    "respuesta": "Sol",
+    "ancho": 90
+   }
+  ]
+ },
+ {
+  "id": "s6-dedos",
+  "pagina": "modulo6.html",
+  "antes_de": "<h3>2. Do y Do♯ del registro grave</h3>",
+  "tipo": "etiquetar",
+  "titulo": "¿Qué nota es?",
+  "instruccion": "Arrastra cada nombre bajo su digitación.",
+  "imagen": "img/dig_derecha_mudo.svg",
+  "alt": "Tres digitaciones sin nombre",
+  "ancho": 440,
+  "zonas": [
+   {
+    "x": 16.4,
+    "y": 93,
+    "respuesta": "Fa",
+    "ancho": 90
+   },
+   {
+    "x": 49.2,
+    "y": 93,
+    "respuesta": "Mi",
+    "ancho": 90
+   },
+   {
+    "x": 81.9,
+    "y": 93,
+    "respuesta": "Re",
+    "ancho": 90
+   }
+  ]
+ },
+ {
+  "id": "s6-alteradas",
+  "pagina": "modulo6.html",
+  "antes_de": "<h3>4. Las notas graves: Do, Do♯, Si y Si♭</h3>",
+  "tipo": "emparejar",
+  "titulo": "Las alteraciones",
+  "instruccion": "Une cada nota con sus dedos.",
+  "pares": [
+   [
+    "Fa♯",
+    "Izq 1-2-3 + der 2"
+   ],
+   [
+    "Si♭",
+    "Izq 1 + der 1"
+   ],
+   [
+    "Sol♯",
+    "Izq 1-2-3 + meñique izquierdo (G♯)"
+   ],
+   [
+    "Mi♭",
+    "Seis dedos + meñique derecho (E♭)"
+   ]
+  ]
+ },
+ {
+  "id": "s8-octava",
+  "pagina": "modulo8.html",
+  "antes_de": "<h3>3. Las notas agudas</h3>",
+  "tipo": "rellenar",
+  "titulo": "La llave de octava",
+  "instruccion": "Completa la frase.",
+  "texto": "En el registro agudo cada nota repite la digitación de la octava inferior y añade la {0}; la boca {1} igual y el aire va más {2}.",
+  "huecos": [
+   "llave de octava",
+   "se mantiene",
+   "rápido"
+  ],
+  "extra": [
+   "mordida",
+   "cambia",
+   "lento"
+  ]
+ },
+ {
+  "id": "s9-tonos",
+  "pagina": "modulo9.html",
+  "antes_de": "<h3>5. Entrenador de transposición</h3>",
+  "tipo": "emparejar",
+  "titulo": "Tonalidades del piano y del saxo alto",
+  "instruccion": "Une cada tonalidad del piano (concierto) con la que lee el saxo alto.",
+  "pares": [
+   [
+    "Do mayor",
+    "La mayor"
+   ],
+   [
+    "Sol mayor",
+    "Mi mayor"
+   ],
+   [
+    "Fa mayor",
+    "Re mayor"
+   ],
+   [
+    "Si♭ mayor",
+    "Sol mayor"
+   ],
+   [
+    "Mi♭ mayor",
+    "Do mayor"
+   ]
+  ],
+  "extra": [
+   "Si♭ mayor"
+  ]
+ },
+ {
+  "id": "s10-escalas",
+  "pagina": "modulo10.html",
+  "antes_de": "quiz",
+  "tipo": "clasificar",
+  "titulo": "Escalas del curso",
+  "instruccion": "¿Mayor o menor natural?",
+  "categorias": [
+   "Mayor",
+   "Menor natural"
+  ],
+  "items": [
+   [
+    "Sol mayor",
+    0
+   ],
+   [
+    "Fa mayor",
+    0
+   ],
+   [
+    "Do mayor",
+    0
+   ],
+   [
+    "Re mayor",
+    0
+   ],
+   [
+    "La menor",
+    1
+   ],
+   [
+    "Mi menor",
+    1
+   ],
+   [
+    "Re menor",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "s11-figuras",
+  "pagina": "modulo11.html",
+  "antes_de": "<h3>4. 3/4 y 6/8</h3>",
+  "tipo": "emparejar",
+  "titulo": "Figuras y duraciones",
+  "instruccion": "Une cada figura con su duración en negras.",
+  "pares": [
+   [
+    "Redonda",
+    "4 negras"
+   ],
+   [
+    "Blanca",
+    "2 negras"
+   ],
+   [
+    "Negra",
+    "1 negra"
+   ],
+   [
+    "Corchea",
+    "½ negra"
+   ],
+   [
+    "Negra con puntillo",
+    "1½ negras"
+   ]
+  ]
+ },
+ {
+  "id": "s12-afinar",
+  "pagina": "modulo12.html",
+  "antes_de": "<h3>5. Herramientas</h3>",
+  "tipo": "rellenar",
+  "titulo": "Afinar el saxo",
+  "instruccion": "Completa las reglas de la afinación.",
+  "texto": "Si estás alto, {0} la boquilla; si estás bajo, {1} la boquilla. El La de concierto se escribe {2}.",
+  "huecos": [
+   "saca",
+   "mete",
+   "Fa♯"
+  ],
+  "extra": [
+   "Sol",
+   "Do",
+   "aprieta"
+  ]
+ },
+ {
+  "id": "s13-estudio",
+  "pagina": "modulo13.html",
+  "antes_de": "<h3>2. Cuatro piezas del curso con acompañamiento</h3>",
+  "tipo": "ordenar",
+  "titulo": "Cómo se estudia una pieza",
+  "instruccion": "Ordena los pasos.",
+  "items": [
+   "Escúchala y cántala",
+   "Analiza la partitura",
+   "Marca las respiraciones",
+   "Trabaja por trozos de 2 compases",
+   "Une los trozos y toca de principio a fin",
+   "Grábate y evalúa"
+  ]
+ },
+ {
+  "id": "s14-blues",
+  "pagina": "modulo14.html",
+  "antes_de": "<h3>3. La escala de blues</h3>",
+  "tipo": "emparejar",
+  "titulo": "El blues en La (escrito)",
+  "instruccion": "¿Qué acorde (escrito) corresponde a cada compás?",
+  "pares": [
+   [
+    "Compases 1 a 4",
+    "A7"
+   ],
+   [
+    "Compases 5 y 6",
+    "D7"
+   ],
+   [
+    "Compás 9",
+    "E7"
+   ]
+  ],
+  "extra": [
+   "C7",
+   "F7"
+  ]
+ }
+]

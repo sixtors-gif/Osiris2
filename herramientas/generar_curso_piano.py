@@ -74,7 +74,7 @@ extra = """
 details.glos{border:1px solid #dfe5ef;border-radius:12px;padding:10px 16px;margin:16px 0;background:#f8faff}
 details.glos summary{cursor:pointer;font-weight:700;color:#1e3c72;font-size:1.05em}
 .module h4{color:#1e3c72;margin:18px 0 6px;font-size:1.05em}
-.como{background:#f2f6ff;border-left:4px solid #6c8ccf;border-radius:8px;padding:8px 12px;margin:6px 0 10px;font-size:.95em;line-height:1.6}.como>b:first-child{color:#3b5ba8}
+.como{background:#f2f6ff;border-left:4px solid #6c8ccf;border-radius:8px;margin:6px 0 10px;font-size:.95em;line-height:1.6}.como>summary{cursor:pointer;padding:7px 12px;font-weight:700;color:#3b5ba8;list-style:none;border-radius:8px}.como>summary::-webkit-details-marker{display:none}.como>summary::before{content:'▸ ';display:inline-block;width:1em}.como[open]>summary::before{content:'▾ '}.como>summary:hover{background:rgba(108,140,207,.12)}.como-cuerpo{padding:2px 14px 10px 14px}.como-ctrl{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}.como-ctrl button{background:#fff;border:1px solid #c7cfe0;border-radius:18px;padding:5px 12px;cursor:pointer;font-size:.9em;color:#3b5ba8;font-weight:600}
 .ejercicio{background:#fff;border:1px solid #dfe5ef;border-left:5px solid #1e3c72;border-radius:12px;padding:6px 18px 12px;margin:18px 0}
 .ejercicio h4{margin:12px 0 6px;font-size:1.1em;color:#1e3c72}
 .ej-id{display:inline-block;background:#1e3c72;color:#fff;border-radius:8px;padding:1px 9px;margin-right:6px;font-size:.9em}
@@ -187,6 +187,7 @@ function lectResp(letra,btn){if(!lect.nota)return;lect.total++;var ok=letra===le
   if(ok){lect.bien++;lect.racha++;btn.className='ok';}else{lect.racha=0;btn.className='ko';}
   document.getElementById('lect-fb').textContent=(ok?'✅ ¡Bien! ':'❌ Era '+NOMBRE[lect.nota]+'. ')+'Aciertos: '+lect.bien+'/'+lect.total+' · racha: '+lect.racha;
   lect.nota=null;setTimeout(lectNueva,ok?600:1400);}
+function comoTodos(a){document.querySelectorAll('details.como').forEach(function(d){d.open=a;});}
 // Autoevaluaciones
 function checkAnswer(btn,ok,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});
   btn.classList.add(ok?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=ok?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es correcto. Repasa el apartado e inténtalo de nuevo.';}
@@ -200,7 +201,7 @@ NEGRAS = {"C": "C#", "D": "D#", "F": "F#", "G": "G#", "A": "A#"}
 ESP = {"C": "Do", "D": "Re", "E": "Mi", "F": "Fa", "G": "Sol", "A": "La", "B": "Si"}
 
 
-def teclado(nombre, titulo, marcas, desde=4, octavas=2, color="#4ecdc4", saltos=(), extra=0):
+def teclado(nombre, titulo, marcas, desde=4, octavas=2, color="#4ecdc4", saltos=(), extra=0, rotulos=True):
     """marcas: {'C4': '1', 'F#4': '2'…} → teclas resaltadas con su etiqueta (dedo o nota).
     saltos: [('C4', 'D4', 'T')…] → etiqueta encima del teclado entre dos teclas (tonos y semitonos).
     extra: teclas blancas añadidas tras la última octava (p. ej. 1 para terminar en Do)."""
@@ -218,7 +219,7 @@ def teclado(nombre, titulo, marcas, desde=4, octavas=2, color="#4ecdc4", saltos=
         s.append(f'<rect x="{x}" y="1" width="{W}" height="{H}" rx="3" fill="{color if on else "#fff"}" stroke="#333"/>')
         if on:
             s.append(f'<text x="{x+W/2}" y="{H-10}" font-size="13" font-weight="700" text-anchor="middle" fill="#0f1b33">{marcas[k]}</text>')
-        if b == "C":
+        if b == "C" and rotulos:
             s.append(f'<text x="{x+W/2}" y="{H+20}" font-size="11" text-anchor="middle" fill="#555">Do{o}</text>')
         x += W
     for o in range(desde, desde + octavas):
@@ -255,13 +256,14 @@ teclado("teclado_3M.svg", "Tercera mayor: de Do a Mi hay cuatro semitonos",
         {"C4": "Do", "C#4": "1", "D4": "2", "D#4": "3", "E4": "Mi 4"}, octavas=1, color="#ffd166")
 teclado("teclado_3m.svg", "Tercera menor: de Do a Mi bemol hay tres semitonos",
         {"C4": "Do", "C#4": "1", "D4": "2", "D#4": "3"}, octavas=1, color="#a8edea")
+teclado("teclado_octava_mudo.svg", "Teclado de una octava, sin nombres de nota", {}, octavas=1, extra=1, rotulos=False)   # para arrastrar y soltar
 teclado("teclado_blues.svg", "Escala de blues de Do: Do, Mi♭, Fa, Fa♯, Sol, Si♭",
         {"C4": "Do", "D#4": "Mi♭", "F4": "Fa", "F#4": "Fa♯", "G4": "Sol", "A#4": "Si♭", "C5": "Do"}, octavas=1)
 
 MAYORES = ["Do", "Sol", "Re", "La", "Mi", "Si", "Fa♯/Sol♭", "Re♭", "La♭", "Mi♭", "Si♭", "Fa"]
 MENORES = ["La m", "Mi m", "Si m", "Fa♯ m", "Do♯ m", "Sol♯ m", "Re♯/Mi♭ m", "Si♭ m", "Fa m", "Do m", "Sol m", "Re m"]
 ARM = ["—", "1♯", "2♯", "3♯", "4♯", "5♯", "6♯ / 6♭", "5♭", "4♭", "3♭", "2♭", "1♭"]
-def circulo(nombre, aria, porcion=(), grados=()):
+def circulo(nombre, aria, porcion=(), grados=(), mudo=False):
     """porcion: índices (0 = Do) de las casillas resaltadas; grados: [(índice, exterior, interior)] con los números romanos."""
     c = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 440" width="440" height="440" role="img" aria-label="{aria}" font-family="Segoe UI,Tahoma,sans-serif">',
          '<rect width="440" height="440" fill="#fff"/><circle cx="220" cy="220" r="200" fill="#eef2fb" stroke="#1e3c72" stroke-width="2"/>',
@@ -276,6 +278,8 @@ def circulo(nombre, aria, porcion=(), grados=()):
     for i in range(12):
         a = math.radians(i * 30 - 90)
         for r, txt, size, col in ((172, MAYORES[i], 16, "#1e3c72"), (103, MENORES[i], 12, "#8a5a00"), (148, ARM[i], 11, "#555")):
+            if mudo and r == 172:
+                continue
             x, y = 220 + r * math.cos(a), 220 + r * math.sin(a) + 5
             c.append(f'<text x="{x:.1f}" y="{y:.1f}" font-size="{size}" font-weight="700" fill="{col}" text-anchor="middle">{txt}</text>')
         x1, y1 = 220 + 130 * math.cos(a + math.radians(15)), 220 + 130 * math.sin(a + math.radians(15))
@@ -291,6 +295,7 @@ def circulo(nombre, aria, porcion=(), grados=()):
 
 
 circulo("circulo_quintas.svg", "Círculo de quintas con tonalidades mayores, menores relativas y armaduras")
+circulo("circulo_mudo.svg", "Círculo de quintas sin los nombres de las tonalidades mayores", mudo=True)
 circulo("circulo_vecinos.svg", "Círculo de quintas con los seis acordes de Do mayor resaltados: Fa, Do y Sol, y Re menor, La menor y Mi menor",
         porcion=(11, 0, 1), grados=[(11, "IV", "ii"), (0, "I", "vi"), (1, "V", "iii")])
 
@@ -360,6 +365,9 @@ def partitura(clave):
 
 
 def _marco(titulo_pag, icono, h1, sub, cuerpo, prev, nxt, lbl, pct, etiqueta, script_final=""):
+    if cuerpo.count('class="como"') >= 2:  # botones para desplegar o plegar todos los «Cómo se hace»
+        cuerpo = ('<div class="como-ctrl"><button onclick="comoTodos(true)">▾ Desplegar todos los «Cómo se hace»</button>'
+                  '<button onclick="comoTodos(false)">▸ Plegar todos</button></div>\n' + cuerpo)
     # Cada página lleva solo las partituras que muestra
     datos = json.dumps({k: PIEZAS[k]["abc"] for k in re.findall(r'id="p-(\w+)"', cuerpo)}, ensure_ascii=False)
     return f"""<!DOCTYPE html>

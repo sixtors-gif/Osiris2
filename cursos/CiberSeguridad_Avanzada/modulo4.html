@@ -41,7 +41,8 @@
       <div class="quiz"><h4>🧩 ¿Cuál es la mejor forma de conectar una cámara IP barata en casa?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m4a')">A. En la misma red que el portátil, con la contraseña de fábrica.</button><button class="option" onclick="checkAnswer(this,true,'m4a')">B. En una red de invitados separada, con contraseña propia y firmware actualizado.</button><button class="option" onclick="checkAnswer(this,false,'m4a')">C. Sin contraseña para que funcione mejor.</button></div><p class="feedback" id="fb-m4a" data-ok="Aislar el IoT limita el daño si el dispositivo es vulnerable."></p></div>
       <div class="quiz"><h4>🧩 ¿Qué método de 2FA es más resistente al SIM swapping?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m4b')">A. Código por SMS.</button><button class="option" onclick="checkAnswer(this,true,'m4b')">B. App autenticadora o passkey.</button><button class="option" onclick="checkAnswer(this,false,'m4b')">C. Pregunta de seguridad.</button></div><p class="feedback" id="fb-m4b" data-ok="Las apps autenticadoras y las passkeys no dependen de tu número de teléfono."></p></div>
       <div class="activity"><h3>✍️ Actividad: bastiona tu móvil</h3><p>Aplica tres puntos del checklist a tu móvil y anota cuáles has cambiado.</p><textarea placeholder="Puntos aplicados..."></textarea><p class="small">No escribas contraseñas ni datos personales reales en este cuadro.</p></div>
-      <div class="summary-box"><b>Resumen:</b> actualiza, minimiza permisos, autentica con 2FA o passkeys y separa los dispositivos IoT en su propia red.</div>
+      <!--dd:cib-iot--><div class="dd" id="dd-cib-iot" data-config="{&quot;tipo&quot;:&quot;rellenar&quot;,&quot;titulo&quot;:&quot;Protege tu hogar conectado&quot;,&quot;instruccion&quot;:&quot;Completa la frase con las palabras correctas.&quot;,&quot;texto&quot;:&quot;Conecta los dispositivos IoT a una red de {0}, usa cifrado WPA2 o {1} y desactiva {2}.&quot;,&quot;huecos&quot;:[&quot;invitados&quot;,&quot;WPA3&quot;,&quot;WPS&quot;],&quot;extra&quot;:[&quot;SIM swapping&quot;,&quot;sandbox&quot;]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:cib-iot-->
+<div class="summary-box"><b>Resumen:</b> actualiza, minimiza permisos, autentica con 2FA o passkeys y separa los dispositivos IoT en su propia red.</div>
 
       <div class="navigation">
         <button class="nav-btn" onclick="scormGo('modulo3.html')">⬅️ Anterior</button>
@@ -51,6 +52,7 @@
   </div>
 </div>
 <footer class="footer-autor">Curso 2: Ciberseguridad Avanzada y Defensa Digital · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function checkAnswer(btn,correct,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(correct?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=correct?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es la mejor opción. Vuelve a leer el apartado e inténtalo de nuevo.';}

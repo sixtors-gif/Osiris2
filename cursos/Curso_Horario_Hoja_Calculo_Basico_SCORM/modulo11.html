@@ -53,6 +53,7 @@
 <div class="exercise"><h3>🧩 Ahorrar tiempo</h3><p>Tienes formateado el bloque de LUNES y necesitas los otros cuatro días. ¿Cuál es la mejor manera?</p>
 <div class="options" id="opt_e11b"><div class="option" onclick="pickc(this,'e11b',1)">Copiar y pegar el bloque y cambiar los textos</div><div class="option" onclick="pickc(this,'e11b',0)">Formatear cada día desde cero</div><div class="option" onclick="pickc(this,'e11b',0)">Imprimir y dibujar a mano</div></div>
 <div id="fb_e11b" class="feedback-box" data-exp="Copiar el bloque conserva formato, combinaciones y colores."></div></div>
+<!--dd:hor-atajos--><div class="dd" id="dd-hor-atajos" data-config="{&quot;tipo&quot;:&quot;emparejar&quot;,&quot;titulo&quot;:&quot;Atajos de copiar y pegar&quot;,&quot;instruccion&quot;:&quot;Une cada acción con su atajo de teclado.&quot;,&quot;pares&quot;:[[&quot;Copiar&quot;,&quot;Ctrl + C&quot;],[&quot;Cortar (mover)&quot;,&quot;Ctrl + X&quot;],[&quot;Pegar&quot;,&quot;Ctrl + V&quot;],[&quot;Pegado especial&quot;,&quot;Ctrl + Mayús + V&quot;],[&quot;Rellenar hacia abajo&quot;,&quot;Ctrl + D&quot;],[&quot;Rellenar a la derecha&quot;,&quot;Ctrl + R&quot;]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:hor-atajos-->
 <div class="summary-box">🎯 <b>Tarea:</b> formatea el bloque de LUNES y copia el formato a los otros cuatro días. Después escribe los datos que faltan.</div>
 
       <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo10.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo12.html')">Siguiente ➡️</button></div>
@@ -60,6 +61,7 @@
   </div>
 </div>
 <footer class="footer-autor">Hoja de cálculo básica: el horario del curso · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

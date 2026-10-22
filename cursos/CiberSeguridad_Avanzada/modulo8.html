@@ -36,7 +36,8 @@
       <div class="quiz"><h4>🧩 Tu portátil muestra una nota de rescate y está conectado al Wi‑Fi de casa. ¿Primera acción?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m8a')">A. Reiniciarlo varias veces.</button><button class="option" onclick="checkAnswer(this,true,'m8a')">B. Desconectarlo de la red para que no se propague.</button><button class="option" onclick="checkAnswer(this,false,'m8a')">C. Formatearlo inmediatamente.</button></div><p class="feedback" id="fb-m8a" data-ok="Aislar el equipo es la prioridad de la contención."></p></div>
       <div class="quiz"><h4>🧩 ¿Cuál es la mejor forma de conservar pruebas de acoso en una red social?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m8b')">A. Borrar los mensajes para no verlos.</button><button class="option" onclick="checkAnswer(this,true,'m8b')">B. Capturas con fecha, hora y perfil, sin borrar nada, y denunciar.</button><button class="option" onclick="checkAnswer(this,false,'m8b')">C. Responder al agresor.</button></div><p class="feedback" id="fb-m8b" data-ok="Las pruebas completas permiten a la plataforma y a la policía actuar."></p></div>
       <div class="activity"><h3>✍️ Actividad: tu cronología</h3><p>Imagina que te roban la cuenta de Instagram. Escribe los 5 pasos que darías, en orden.</p><textarea placeholder="1. ... 2. ... 3. ... 4. ... 5. ..."></textarea><p class="small">No escribas contraseñas ni datos personales reales en este cuadro.</p></div>
-      <div class="summary-box"><b>Resumen:</b> detecta, contén, erradica, recupera y aprende. Conserva pruebas y pide ayuda: no estás solo/a.</div>
+      <!--dd:cib-incidente--><div class="dd" id="dd-cib-incidente" data-config="{&quot;tipo&quot;:&quot;ordenar&quot;,&quot;titulo&quot;:&quot;Ciclo de respuesta ante incidentes&quot;,&quot;instruccion&quot;:&quot;Ordena las fases del ciclo de respuesta ante un incidente.&quot;,&quot;items&quot;:[&quot;Detectar&quot;,&quot;Contener&quot;,&quot;Erradicar&quot;,&quot;Recuperar&quot;,&quot;Aprender&quot;]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:cib-incidente-->
+<div class="summary-box"><b>Resumen:</b> detecta, contén, erradica, recupera y aprende. Conserva pruebas y pide ayuda: no estás solo/a.</div>
 
       <div class="navigation">
         <button class="nav-btn" onclick="scormGo('modulo7.html')">⬅️ Anterior</button>
@@ -46,6 +47,7 @@
   </div>
 </div>
 <footer class="footer-autor">Curso 2: Ciberseguridad Avanzada y Defensa Digital · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function checkAnswer(btn,correct,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(correct?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=correct?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es la mejor opción. Vuelve a leer el apartado e inténtalo de nuevo.';}

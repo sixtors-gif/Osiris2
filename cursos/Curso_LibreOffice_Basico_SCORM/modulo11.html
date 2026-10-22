@@ -47,11 +47,13 @@
 <div class="options" id="opt_e11b"><div class="option" onclick="pickc(this,'e11b',1)">La vista preliminar, para comprobar cómo quedará cada página</div><div class="option" onclick="pickc(this,'e11b',0)">Nada, se imprime siempre bien</div><div class="option" onclick="pickc(this,'e11b',0)">El idioma del corrector ortográfico</div></div>
 <div id="fb_e11b" class="feedback-box" data-exp="La vista preliminar evita sorpresas y ahorra papel."></div></div>
 
-      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo10.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo12.html')">Siguiente ➡️</button></div>
+      <!--dd:lo-salida--><div class="dd" id="dd-lo-salida" data-config="{&quot;tipo&quot;:&quot;clasificar&quot;,&quot;titulo&quot;:&quot;Imprimir, PDF o formato original&quot;,&quot;instruccion&quot;:&quot;Clasifica cada necesidad según lo que debes elegir.&quot;,&quot;categorias&quot;:[&quot;Imprimir (Ctrl + P)&quot;,&quot;Exportar a PDF&quot;,&quot;Formato original&quot;],&quot;items&quot;:[[&quot;Entregarlo en papel&quot;,0],[&quot;Elegir impresora y número de copias&quot;,0],[&quot;Que se lea igual en cualquier dispositivo&quot;,1],[&quot;Colgar apuntes que no se modifiquen con facilidad&quot;,1],[&quot;Que otra persona lo siga editando&quot;,2],[&quot;Pasar el archivo a quien debe modificarlo&quot;,2]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:lo-salida-->
+<div class="navigation"><button class="nav-btn" onclick="scormGo('modulo10.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo12.html')">Siguiente ➡️</button></div>
     </section>
   </div>
 </div>
 <footer class="footer-autor">LibreOffice: conceptos básicos comunes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

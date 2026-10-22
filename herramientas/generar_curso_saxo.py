@@ -81,7 +81,7 @@ extra = """
 details.glos{border:1px solid #dfe5ef;border-radius:12px;padding:10px 16px;margin:16px 0;background:#f8faff}
 details.glos summary{cursor:pointer;font-weight:700;color:#1e3c72;font-size:1.05em}
 .module h4{color:#1e3c72;margin:18px 0 6px;font-size:1.05em}
-.como{background:#f2f6ff;border-left:4px solid #6c8ccf;border-radius:8px;padding:8px 12px;margin:6px 0 10px;font-size:.95em;line-height:1.6}.como>b:first-child{color:#3b5ba8}
+.como{background:#f2f6ff;border-left:4px solid #6c8ccf;border-radius:8px;margin:6px 0 10px;font-size:.95em;line-height:1.6}.como>summary{cursor:pointer;padding:7px 12px;font-weight:700;color:#3b5ba8;list-style:none;border-radius:8px}.como>summary::-webkit-details-marker{display:none}.como>summary::before{content:'▸ ';display:inline-block;width:1em}.como[open]>summary::before{content:'▾ '}.como>summary:hover{background:rgba(108,140,207,.12)}.como-cuerpo{padding:2px 14px 10px 14px}.como-ctrl{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}.como-ctrl button{background:#fff;border:1px solid #c7cfe0;border-radius:18px;padding:5px 12px;cursor:pointer;font-size:.9em;color:#3b5ba8;font-weight:600}
 .ejercicio{background:#fff;border:1px solid #dfe5ef;border-left:5px solid #1e3c72;border-radius:12px;padding:6px 18px 12px;margin:18px 0}
 .ejercicio h4{margin:12px 0 6px;font-size:1.1em;color:#1e3c72}
 .ej-id{display:inline-block;background:#1e3c72;color:#fff;border-radius:8px;padding:1px 9px;margin-right:6px;font-size:.9em}
@@ -113,6 +113,9 @@ def guardar_svg(nombre, svg):
 
 guardar_svg("saxo_partes.svg", dg.svg_partes())
 guardar_svg("saxo_familia.svg", dg.svg_familia())
+guardar_svg("saxo_partes_mudo.svg", dg.svg_partes(etiquetas=False))   # sin textos: para la actividad de arrastrar y soltar
+guardar_svg("dig_basicas_mudo.svg", dg.svg_digitaciones(["Si4", "La4", "Sol4"], "Digitaciones sin nombre", con_nombre=False))
+guardar_svg("dig_derecha_mudo.svg", dg.svg_digitaciones(["Fa4", "Mi4", "Re4"], "Digitaciones sin nombre", con_nombre=False))
 for nombre, notas, titulo in (
         ("dig_basicas.svg", ["Si4", "La4", "Sol4"], "Si, La y Sol"),
         ("dig_derecha.svg", ["Fa4", "Mi4", "Re4"], "Fa, Mi y Re"),
@@ -131,6 +134,9 @@ open(os.path.join(OUT, "saxo.js"), "w", encoding="utf-8").write(SAXO_JS.replace(
 
 
 def _marco(titulo_pag, icono, h1, sub, cuerpo, prev, nxt, lbl, pct, etiqueta, script_final=""):
+    if cuerpo.count('class="como"') >= 2:  # botones para desplegar o plegar todos los «Cómo se hace»
+        cuerpo = ('<div class="como-ctrl"><button onclick="comoTodos(true)">▾ Desplegar todos los «Cómo se hace»</button>'
+                  '<button onclick="comoTodos(false)">▸ Plegar todos</button></div>\n' + cuerpo)
     claves = re.findall(r'id="p-(\w+)"', cuerpo)
     datos = json.dumps({k: PIEZAS[k]["abc"] for k in claves}, ensure_ascii=False)
     acomp = json.dumps({k: silenciar_melodia(PIEZAS[k]["abc"]) for k in claves if PIEZAS[k]["acomp"]}, ensure_ascii=False)

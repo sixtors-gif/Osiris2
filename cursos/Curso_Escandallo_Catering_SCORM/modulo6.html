@@ -53,7 +53,8 @@
 <button class="btn" onclick="chk('e6b',4.09,'fb_e6b','32,71 ÷ 8 = 4,09 € por ración.')">Comprobar</button>
 <div id="fb_e6b" class="feedback-box"></div></div>
 
-      <div class="navigation">
+      <!--dd:esc-si--><div class="dd" id="dd-esc-si" data-config="{&quot;tipo&quot;:&quot;rellenar&quot;,&quot;titulo&quot;:&quot;Fórmula a prueba de errores&quot;,&quot;instruccion&quot;:&quot;Completa la frase con las palabras que faltan.&quot;,&quot;texto&quot;:&quot;En las filas vacías la Cantidad P. vale 0 y aparece el error {0}. Se evita con la función {1}, que tiene tres partes: condición, valor si se cumple y valor si no se cumple. Para el total de la receta se usa {2}(G7:G27).&quot;,&quot;huecos&quot;:[&quot;#¡DIV/0!&quot;,&quot;SI&quot;,&quot;SUMA&quot;],&quot;extra&quot;:[&quot;#¡REF!&quot;,&quot;REDONDEAR&quot;]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:esc-si-->
+<div class="navigation">
         <button class="nav-btn" onclick="scormGo('modulo5.html')">⬅️ Anterior</button>
         <button class="nav-btn" onclick="scormGo('modulo7.html')">Siguiente ➡️</button>
       </div>
@@ -61,6 +62,7 @@
   </div>
 </div>
 <footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

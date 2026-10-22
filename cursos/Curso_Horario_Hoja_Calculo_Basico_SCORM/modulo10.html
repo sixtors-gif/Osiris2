@@ -77,11 +77,13 @@ window.addEventListener('load',dfUpd);
 <div class="options" id="opt_e10c"><div class="option" onclick="pickc(this,'e10c',1)">La celda tiene formato de número; hay que darle formato de fecha</div><div class="option" onclick="pickc(this,'e10c',0)">La fecha está mal escrita</div><div class="option" onclick="pickc(this,'e10c',0)">Hay que borrar la celda</div></div>
 <div id="fb_e10c" class="feedback-box" data-exp="Las fechas son números de serie: solo hay que aplicar un formato de fecha."></div></div>
 
-      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo9.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo11.html')">Siguiente ➡️</button></div>
+      <!--dd:hor-fechas--><div class="dd" id="dd-hor-fechas" data-config="{&quot;tipo&quot;:&quot;emparejar&quot;,&quot;titulo&quot;:&quot;Códigos de formato de fecha&quot;,&quot;instruccion&quot;:&quot;Une cada código del formato personalizado con lo que muestra.&quot;,&quot;pares&quot;:[[&quot;dddd&quot;,&quot;Día de la semana&quot;],[&quot;d&quot;,&quot;Día&quot;],[&quot;mmmm&quot;,&quot;Mes con letras&quot;],[&quot;yyyy&quot;,&quot;Año&quot;]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:hor-fechas-->
+<div class="navigation"><button class="nav-btn" onclick="scormGo('modulo9.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo11.html')">Siguiente ➡️</button></div>
     </section>
   </div>
 </div>
 <footer class="footer-autor">Hoja de cálculo básica: el horario del curso · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

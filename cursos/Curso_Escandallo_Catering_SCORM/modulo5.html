@@ -51,7 +51,8 @@
 <button class="btn" onclick="chk('e5b',200,'fb_e5b','1600 ÷ 8 = 200 gr por persona.')">Comprobar</button>
 <div id="fb_e5b" class="feedback-box"></div></div>
 
-      <div class="navigation">
+      <!--dd:esc-refs--><div class="dd" id="dd-esc-refs" data-config="{&quot;tipo&quot;:&quot;emparejar&quot;,&quot;titulo&quot;:&quot;Tipos de referencia&quot;,&quot;instruccion&quot;:&quot;Une cada escritura con lo que ocurre al copiar la fórmula hacia abajo.&quot;,&quot;pares&quot;:[[&quot;B7&quot;,&quot;Relativa: pasa a B8, B9… (cambia la fila)&quot;],[&quot;$B$3&quot;,&quot;Absoluta: siempre B3, no cambia nada&quot;],[&quot;B$3&quot;,&quot;Mixta: la fila 3 no cambia&quot;],[&quot;$B3&quot;,&quot;Mixta: la columna B no cambia&quot;]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:esc-refs-->
+<div class="navigation">
         <button class="nav-btn" onclick="scormGo('modulo4.html')">⬅️ Anterior</button>
         <button class="nav-btn" onclick="scormGo('modulo6.html')">Siguiente ➡️</button>
       </div>
@@ -59,6 +60,7 @@
   </div>
 </div>
 <footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

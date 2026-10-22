@@ -50,6 +50,7 @@
 <div class="exercise"><h3>🧩 Antes de combinar</h3><p>Vas a combinar A5:C5 y el texto «LUNES» está en la celda B5. ¿Qué pasará con él?</p>
 <div class="options" id="opt_e8b"><div class="option" onclick="pickc(this,'e8b',1)">Se perderá si no lo mueves a A5 antes</div><div class="option" onclick="pickc(this,'e8b',0)">Se conserva siempre</div><div class="option" onclick="pickc(this,'e8b',0)">Se copia a todas las celdas</div></div>
 <div id="fb_e8b" class="feedback-box" data-exp="Solo se conserva el contenido de la celda superior izquierda (A5). Escribe el texto ahí antes de combinar."></div></div>
+<!--dd:hor-combinar--><div class="dd" id="dd-hor-combinar" data-config="{&quot;tipo&quot;:&quot;ordenar&quot;,&quot;titulo&quot;:&quot;Combinar celdas paso a paso&quot;,&quot;instruccion&quot;:&quot;Ordena los pasos para combinar celdas.&quot;,&quot;items&quot;:[&quot;Selecciona el rango, por ejemplo A1:O2&quot;,&quot;Menú Formato → Combinar y descombinar celdas → Combinar celdas&quot;,&quot;Si avisa de que se perderá contenido, elige Vaciar el contenido de las celdas ocultas&quot;,&quot;Repite con las cabeceras de día, la fecha, el grupo y los bloques largos&quot;]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:hor-combinar-->
 <div class="summary-box">🎯 <b>Tarea:</b> combina el título, la fecha, los cinco días, el grupo y los bloques largos de jueves y viernes. Comprueba que todo queda centrado.</div>
 
       <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo7.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo9.html')">Siguiente ➡️</button></div>
@@ -57,6 +58,7 @@
   </div>
 </div>
 <footer class="footer-autor">Hoja de cálculo básica: el horario del curso · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

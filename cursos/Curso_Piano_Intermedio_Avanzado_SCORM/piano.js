@@ -89,6 +89,7 @@ function lectResp(letra,btn){if(!lect.nota)return;lect.total++;var ok=letra===le
   if(ok){lect.bien++;lect.racha++;btn.className='ok';}else{lect.racha=0;btn.className='ko';}
   document.getElementById('lect-fb').textContent=(ok?'✅ ¡Bien! ':'❌ Era '+NOMBRE[lect.nota]+'. ')+'Aciertos: '+lect.bien+'/'+lect.total+' · racha: '+lect.racha;
   lect.nota=null;setTimeout(lectNueva,ok?600:1400);}
+function comoTodos(a){document.querySelectorAll('details.como').forEach(function(d){d.open=a;});}
 // Autoevaluaciones
 function checkAnswer(btn,ok,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});
   btn.classList.add(ok?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=ok?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es correcto. Repasa el apartado e inténtalo de nuevo.';}

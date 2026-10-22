@@ -76,6 +76,7 @@
       <file href="index.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -98,6 +99,7 @@
       <file href="modulo1.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -120,6 +122,7 @@
       <file href="modulo2.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -142,6 +145,7 @@
       <file href="modulo3.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -164,6 +168,7 @@
       <file href="modulo4.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -186,6 +191,7 @@
       <file href="modulo5.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -208,6 +214,7 @@
       <file href="modulo6.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -230,6 +237,7 @@
       <file href="modulo7.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -252,6 +260,7 @@
       <file href="modulo8.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -274,6 +283,7 @@
       <file href="modulo9.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -296,6 +306,7 @@
       <file href="modulo10.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -318,6 +329,7 @@
       <file href="modulo11.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -340,6 +352,7 @@
       <file href="modulo12.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -362,6 +375,7 @@
       <file href="modulo13.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -384,6 +398,7 @@
       <file href="modulo14.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -406,6 +421,7 @@
       <file href="modulo15.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -428,6 +444,7 @@
       <file href="modulo16.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -450,6 +467,7 @@
       <file href="modulo17.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>
@@ -472,6 +490,7 @@
       <file href="examen_final.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/descarga.png"/>
       <file href="img/gnome_busqueda.png"/>
       <file href="img/inst_accesibilidad.png"/>

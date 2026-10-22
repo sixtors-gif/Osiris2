@@ -46,7 +46,7 @@ _notas_validas()
 OSCURO, CLARO, LATON = "#3b2410", "#ffffff", "#c9962b"
 
 
-def _diagrama(x, nombre, f):
+def _diagrama(x, nombre, f, con_nombre=True):
     """Dibuja el diagrama de una digitación con el origen en x. Devuelve (svg, ancho)."""
     g = [f'<g transform="translate({x},0)">']
     # llave de octava (pulgar izquierdo)
@@ -75,16 +75,17 @@ def _diagrama(x, nombre, f):
         on = rp == etiqueta
         g.append(f'<rect x="76" y="{y-9}" width="30" height="16" rx="6" fill="{OSCURO if on else CLARO}" stroke="{OSCURO}" stroke-width="1.5"/>')
         g.append(f'<text x="91" y="{y+3}" font-size="9" text-anchor="middle" fill="{CLARO if on else "#999"}" font-weight="700">{etiqueta}</text>')
-    g.append(f'<text x="58" y="304" font-size="14" text-anchor="middle" fill="{OSCURO}" font-weight="700">{html.escape(nombre)}</text>')
+    if con_nombre:
+        g.append(f'<text x="58" y="304" font-size="14" text-anchor="middle" fill="{OSCURO}" font-weight="700">{html.escape(nombre)}</text>')
     g.append("</g>")
     return "".join(g), 118
 
 
-def svg_digitaciones(nombres, titulo):
+def svg_digitaciones(nombres, titulo, con_nombre=True):
     """Un dibujo con varias digitaciones, una junto a otra."""
     cuerpo, x = [], 0
     for n in nombres:
-        d, w = _diagrama(x, n, FING[n])
+        d, w = _diagrama(x, n, FING[n], con_nombre)
         cuerpo.append(d); x += w
     ancho = x + 6
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {ancho} 316" width="{ancho}" height="316" role="img" aria-label="{html.escape(titulo, quote=True)}" '
@@ -97,7 +98,7 @@ def svg_diagrama_digitacion_js():
     return json.dumps({k: FING[k] for k in REGISTRO_GRAVE + REGISTRO_AGUDO}, ensure_ascii=False)
 
 
-def svg_partes():
+def svg_partes(etiquetas=True):
     """Esquema del saxo alto con sus partes."""
     c = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="-110 0 880 520" width="880" height="520" role="img" '
          'aria-label="Esquema del saxo alto con sus partes: boquilla, caña, abrazadera, cuello, cuerpo, llaves, tudel, campana y correa" '
@@ -121,17 +122,18 @@ def svg_partes():
     def etiqueta(x, y, tx, ty, txt, anchor="start"):
         c.append(f'<line x1="{x}" y1="{y}" x2="{tx}" y2="{ty-4}" stroke="#555" stroke-width="1"/>')
         c.append(f'<text x="{tx}" y="{ty}" font-size="15" font-weight="700" fill="#3b2410" text-anchor="{anchor}">{txt}</text>')
-    etiqueta(152, 52, 80, 34, "Boquilla", "end")
-    etiqueta(188, 62, 120, 100, "Caña y abrazadera", "end")
-    etiqueta(246, 78, 90, 150, "Cuello (tudel)", "end")
-    etiqueta(296, 126, 90, 200, "Llave de octava", "end")
-    etiqueta(296, 210, 90, 250, "Llaves y almohadillas", "end")
-    etiqueta(296, 300, 90, 330, "Cuerpo", "end")
-    etiqueta(360, 452, 330, 496, "Curva en U (arco)", "middle")
-    etiqueta(444, 270, 480, 290, "Campana (pabellón)")
-    etiqueta(180, 20, 190, 14, "Correa")
-    etiqueta(296, 120, 330, 108, "Pulgar izquierdo (octava)")
-    etiqueta(424, 350, 460, 380, "Anillo del pulgar derecho", "start")
+    if etiquetas:
+        etiqueta(152, 52, 80, 34, "Boquilla", "end")
+        etiqueta(188, 62, 120, 100, "Caña y abrazadera", "end")
+        etiqueta(246, 78, 90, 150, "Cuello (tudel)", "end")
+        etiqueta(296, 126, 90, 200, "Llave de octava", "end")
+        etiqueta(296, 210, 90, 250, "Llaves y almohadillas", "end")
+        etiqueta(296, 300, 90, 330, "Cuerpo", "end")
+        etiqueta(360, 452, 330, 496, "Curva en U (arco)", "middle")
+        etiqueta(444, 270, 480, 290, "Campana (pabellón)")
+        etiqueta(180, 20, 190, 14, "Correa")
+        etiqueta(296, 120, 330, 108, "Pulgar izquierdo (octava)")
+        etiqueta(424, 350, 460, 380, "Anillo del pulgar derecho", "start")
     c.append('<circle cx="424" cy="350" r="8" fill="none" stroke="#3b2410" stroke-width="3"/>')
     c.append("</svg>")
     return "\n".join(c)

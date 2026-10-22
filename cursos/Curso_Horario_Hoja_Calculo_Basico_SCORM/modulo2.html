@@ -75,6 +75,7 @@ window.addEventListener('load',valName);
 <div class="exercise"><h3>🧩 El mejor nombre</h3><p>¿Cuál de estos nombres es más adecuado?</p>
 <div class="options" id="opt_e2b"><div class="option" onclick="pickc(this,'e2b',1)">Horario_2025-26_1JefeCocina_v1.ods</div><div class="option" onclick="pickc(this,'e2b',0)">horario nuevo final final.ods</div><div class="option" onclick="pickc(this,'e2b',0)">Libro1.ods</div></div>
 <div id="fb_e2b" class="feedback-box" data-exp="Dice qué es, para qué curso y qué versión: se entiende sin abrirlo."></div></div>
+<!--dd:hor-guardar--><div class="dd" id="dd-hor-guardar" data-config="{&quot;tipo&quot;:&quot;clasificar&quot;,&quot;titulo&quot;:&quot;Guardar y Guardar como&quot;,&quot;instruccion&quot;:&quot;Clasifica cada característica según la orden a la que corresponde.&quot;,&quot;categorias&quot;:[&quot;Guardar&quot;,&quot;Guardar como…&quot;],&quot;items&quot;:[[&quot;Ctrl + S&quot;,0],[&quot;Actualiza el archivo con el mismo nombre y en el mismo sitio&quot;,0],[&quot;La primera vez te pregunta nombre y carpeta&quot;,0],[&quot;Ctrl + Mayús + S&quot;,1],[&quot;Crea otro archivo (otro nombre, carpeta o formato)&quot;,1],[&quot;El original queda como estaba&quot;,1]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:hor-guardar-->
 <div class="summary-box">🎯 <b>Tarea:</b> crea un libro nuevo, guárdalo con el nombre <code>Horario_2025-26_v1</code> en tu carpeta de trabajo y activa la recuperación automática.</div>
 
       <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo1.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo3.html')">Siguiente ➡️</button></div>
@@ -82,6 +83,7 @@ window.addEventListener('load',valName);
   </div>
 </div>
 <footer class="footer-autor">Hoja de cálculo básica: el horario del curso · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

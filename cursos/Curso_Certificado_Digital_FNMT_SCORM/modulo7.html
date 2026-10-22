@@ -37,6 +37,7 @@
 <tr><td>DNI electrónico</td><td>Incluido en el DNI</td><td>Chip del propio DNI</td><td>Lector de tarjetas y PIN del DNIe</td></tr>
 <tr><td>Cl@ve PIN / Permanente</td><td>Gratuito</td><td>No aplica (usuario y contraseña, o vinculado a un certificado)</td><td>Registro previo presencial u online</td></tr></table>
 
+<!--dd:fnmt-tipos--><div class="dd" id="dd-fnmt-tipos" data-config="{&quot;tipo&quot;:&quot;emparejar&quot;,&quot;titulo&quot;:&quot;Tipos de certificado e identificación&quot;,&quot;instruccion&quot;:&quot;Une cada opción con su descripción.&quot;,&quot;pares&quot;:[[&quot;Certificado de persona física&quot;,&quot;Identifica a una persona concreta con su DNI/NIE&quot;],[&quot;Certificado de representante&quot;,&quot;Identifica a una empresa a través de quien la representa&quot;],[&quot;DNI electrónico (DNIe)&quot;,&quot;Chip del carné con un certificado integrado; usa lector&quot;],[&quot;Certificado en la nube&quot;,&quot;La clave privada la custodia la FNMT&quot;],[&quot;Cl@ve&quot;,&quot;Sistema de identificación; no es un certificado&quot;],[&quot;Tarjeta o USB criptográfico&quot;,&quot;Certificado grabado en una llave física&quot;]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:fnmt-tipos-->
 <div class="exercise"><h3>🧩 Quién lo emite</h3><p>¿Qué organismo emite el certificado digital de persona física que vamos a tramitar en este curso?</p>
 <div class="options" id="opt_e7a"><div class="option" onclick="pickc(this,'e7a',1)">La FNMT-RCM, a través de CERES</div><div class="option" onclick="pickc(this,'e7a',0)">La Agencia Tributaria</div><div class="option" onclick="pickc(this,'e7a',0)">Tu banco</div></div>
 <div id="fb_e7a" class="feedback-box" data-exp="La FNMT-RCM, mediante su departamento CERES, es la Autoridad de Certificación que emite este certificado."></div></div>
@@ -52,6 +53,7 @@
   </div>
 </div>
 <footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

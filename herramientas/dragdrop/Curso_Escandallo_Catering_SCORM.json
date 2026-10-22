@@ -1,0 +1,21 @@
+[
+ {"id":"esc-zonas","pagina":"modulo3.html","antes_de":"nav","tipo":"clasificar","titulo":"Las zonas de la ficha de receta","instruccion":"Arrastra cada dato a la zona de la ficha en la que se escribe.",
+  "categorias":["RECETA","PROVEEDOR","Cantidad Por Persona"],
+  "items":[["Ingredientes",0],["Cuánto usas del ingrediente en la receta",0],["Unidad de la receta (gr)",0],
+           ["Cantidad P.: lo que trae el formato (5000)",1],["Unidad P.: unidad del formato (gr)",1],["Precio del formato completo (9,50 €)",1],
+           ["Cantidad entre raciones (200 gr)",2],["Unidad copiada de la columna C",2]]},
+ {"id":"esc-g7","pagina":"modulo4.html","antes_de":"nav","tipo":"ordenar","titulo":"Escribe la fórmula del coste","instruccion":"Ordena los pasos para calcular el coste del primer ingrediente en G7.",
+  "items":["Haz clic en la celda G7","Escribe = y haz clic en B7","Escribe * y haz clic en F7","Escribe / y haz clic en D7","Pulsa Intro","Debe aparecer 3,80 €"]},
+ {"id":"esc-refs","pagina":"modulo5.html","antes_de":"nav","tipo":"emparejar","titulo":"Tipos de referencia","instruccion":"Une cada escritura con lo que ocurre al copiar la fórmula hacia abajo.",
+  "pares":[["B7","Relativa: pasa a B8, B9… (cambia la fila)"],["$B$3","Absoluta: siempre B3, no cambia nada"],["B$3","Mixta: la fila 3 no cambia"],["$B3","Mixta: la columna B no cambia"]]},
+ {"id":"esc-si","pagina":"modulo6.html","antes_de":"nav","tipo":"rellenar","titulo":"Fórmula a prueba de errores","instruccion":"Completa la frase con las palabras que faltan.",
+  "texto":"En las filas vacías la Cantidad P. vale 0 y aparece el error {0}. Se evita con la función {1}, que tiene tres partes: condición, valor si se cumple y valor si no se cumple. Para el total de la receta se usa {2}(G7:G27).",
+  "huecos":["#¡DIV/0!","SI","SUMA"],"extra":["#¡REF!","REDONDEAR"]},
+ {"id":"esc-bebidas","pagina":"modulo10.html","antes_de":"nav","tipo":"clasificar","titulo":"Cuántas bebidas hacen falta","instruccion":"Clasifica cada bebida según el criterio de consumo del curso.",
+  "categorias":["1 por comensal (=J1)","1 botella por cada 4 comensales"],
+  "items":[["Refrescos",0],["Cerveza",0],["Agua",1],["Vino Blanco",1],["Vino Tinto",1],["Cava",1]]},
+ {"id":"esc-totales","pagina":"modulo11.html","antes_de":"nav","tipo":"emparejar","titulo":"Los cuatro resultados finales","instruccion":"Une cada resultado de la fila 8 con su cálculo.",
+  "pares":[["Coste Total del Catering","Bebidas + materia prima + personal + varios + imprevistos"],["Coste por Menú","Coste total repartido entre los comensales"],["Precio de Venta","Coste por menú más el % de beneficio"],["Ganancias","(Precio - coste) de cada menú por los comensales"]]},
+ {"id":"esc-errores","pagina":"modulo12.html","antes_de":"nav","tipo":"emparejar","titulo":"Errores frecuentes en Calc","instruccion":"Une cada error con su significado.",
+  "pares":[["#¡DIV/0!","Divides entre 0 o entre una celda vacía"],["#¡REF!","La fórmula apunta a una celda u hoja que ya no existe"],["#NOMBRE?","Función o nombre mal escrito (SUMAA)"],["#¡VALOR!","Operas con texto donde hace falta un número"],["###","La columna es demasiado estrecha"]]}
+]

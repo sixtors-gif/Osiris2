@@ -1,0 +1,561 @@
+[
+ {
+  "id": "p1-plan",
+  "pagina": "modulo1.html",
+  "antes_de": "quiz",
+  "tipo": "ordenar",
+  "titulo": "Plan de 20 minutos para un pasaje difícil",
+  "instruccion": "Ordena el plan de estudio.",
+  "items": [
+   "Lee el pasaje sin tocar: digitación, notas, alteraciones",
+   "Mano derecha sola, a la mitad del tempo",
+   "Mano izquierda sola, igual",
+   "Manos juntas, más lento; tres repeticiones limpias",
+   "Toca el pasaje dentro de su contexto"
+  ]
+ },
+ {
+  "id": "p2-intervalos",
+  "pagina": "modulo2.html",
+  "antes_de": "<h4>4. Los intervalos en la mano</h4>",
+  "tipo": "emparejar",
+  "titulo": "Intervalos y semitonos",
+  "instruccion": "Une cada intervalo con su tamaño en semitonos.",
+  "pares": [
+   [
+    "3.ª menor",
+    "3 semitonos"
+   ],
+   [
+    "3.ª mayor",
+    "4 semitonos"
+   ],
+   [
+    "4.ª justa",
+    "5 semitonos"
+   ],
+   [
+    "5.ª justa",
+    "7 semitonos"
+   ],
+   [
+    "6.ª mayor",
+    "9 semitonos"
+   ],
+   [
+    "7.ª menor",
+    "10 semitonos"
+   ],
+   [
+    "8.ª justa",
+    "12 semitonos"
+   ]
+  ]
+ },
+ {
+  "id": "p3-teclado",
+  "pagina": "modulo3.html",
+  "antes_de": "<h3>Construir cualquier escala mayor</h3>",
+  "tipo": "etiquetar",
+  "titulo": "Las notas en el teclado",
+  "instruccion": "Arrastra cada nombre a su tecla blanca (del Do central al Do siguiente).",
+  "imagen": "img/teclado_octava_mudo.svg",
+  "alt": "Teclado de una octava",
+  "ancho": 680,
+  "zonas": [
+   {
+    "x": 6.7,
+    "y": 70,
+    "respuesta": "Do",
+    "ancho": 66
+   },
+   {
+    "x": 19.0,
+    "y": 70,
+    "respuesta": "Re",
+    "ancho": 66
+   },
+   {
+    "x": 31.4,
+    "y": 70,
+    "respuesta": "Mi",
+    "ancho": 66
+   },
+   {
+    "x": 43.8,
+    "y": 70,
+    "respuesta": "Fa",
+    "ancho": 66
+   },
+   {
+    "x": 56.2,
+    "y": 70,
+    "respuesta": "Sol",
+    "ancho": 66
+   },
+   {
+    "x": 68.6,
+    "y": 70,
+    "respuesta": "La",
+    "ancho": 66
+   },
+   {
+    "x": 81.0,
+    "y": 70,
+    "respuesta": "Si",
+    "ancho": 66
+   },
+   {
+    "x": 93.3,
+    "y": 70,
+    "respuesta": "Do (octava)",
+    "ancho": 66
+   }
+  ]
+ },
+ {
+  "id": "p3-negras",
+  "pagina": "modulo3.html",
+  "antes_de": "<h3>Construir cualquier escala mayor</h3>",
+  "tipo": "etiquetar",
+  "titulo": "Las teclas negras",
+  "instruccion": "Arrastra cada nombre a su tecla negra.",
+  "imagen": "img/teclado_octava_mudo.svg",
+  "alt": "Teclado de una octava",
+  "ancho": 680,
+  "zonas": [
+   {
+    "x": 12.9,
+    "y": 24,
+    "respuesta": "Do♯",
+    "ancho": 50
+   },
+   {
+    "x": 25.2,
+    "y": 24,
+    "respuesta": "Re♯",
+    "ancho": 50
+   },
+   {
+    "x": 50.0,
+    "y": 24,
+    "respuesta": "Fa♯",
+    "ancho": 50
+   },
+   {
+    "x": 62.4,
+    "y": 24,
+    "respuesta": "Sol♯",
+    "ancho": 50
+   },
+   {
+    "x": 74.8,
+    "y": 24,
+    "respuesta": "La♯",
+    "ancho": 50
+   }
+  ]
+ },
+ {
+  "id": "p3-tonos",
+  "pagina": "modulo3.html",
+  "antes_de": "<h3>Construir cualquier escala mayor</h3>",
+  "tipo": "clasificar",
+  "titulo": "Tono o semitono",
+  "instruccion": "Clasifica cada pareja de notas contiguas.",
+  "categorias": [
+   "Tono",
+   "Semitono"
+  ],
+  "items": [
+   [
+    "Do–Re",
+    0
+   ],
+   [
+    "Re–Mi",
+    0
+   ],
+   [
+    "Mi–Fa",
+    1
+   ],
+   [
+    "Fa–Sol",
+    0
+   ],
+   [
+    "Sol–La",
+    0
+   ],
+   [
+    "La–Si",
+    0
+   ],
+   [
+    "Si–Do",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "p3-circulo",
+  "pagina": "modulo3.html",
+  "antes_de": "<h4>2. ¿Por qué cada paso añade una alteración?</h4>",
+  "tipo": "etiquetar",
+  "titulo": "Completa el círculo de quintas",
+  "instruccion": "Arrastra cada tonalidad mayor a su sitio. Fíjate en las armaduras (1♯, 2♯…).",
+  "imagen": "img/circulo_mudo.svg",
+  "alt": "Círculo de quintas sin nombres",
+  "ancho": 560,
+  "zonas": [
+   {
+    "x": 50.0,
+    "y": 8.4,
+    "respuesta": "Do",
+    "ancho": 50
+   },
+   {
+    "x": 70.8,
+    "y": 14.0,
+    "respuesta": "Sol",
+    "ancho": 50
+   },
+   {
+    "x": 86.0,
+    "y": 29.2,
+    "respuesta": "Re",
+    "ancho": 50
+   },
+   {
+    "x": 91.6,
+    "y": 50.0,
+    "respuesta": "La",
+    "ancho": 50
+   },
+   {
+    "x": 86.0,
+    "y": 70.8,
+    "respuesta": "Mi",
+    "ancho": 50
+   },
+   {
+    "x": 70.8,
+    "y": 86.0,
+    "respuesta": "Si",
+    "ancho": 50
+   },
+   {
+    "x": 50.0,
+    "y": 91.6,
+    "respuesta": "Fa♯",
+    "ancho": 50
+   },
+   {
+    "x": 29.2,
+    "y": 86.0,
+    "respuesta": "Re♭",
+    "ancho": 50
+   },
+   {
+    "x": 14.0,
+    "y": 70.8,
+    "respuesta": "La♭",
+    "ancho": 50
+   },
+   {
+    "x": 8.4,
+    "y": 50.0,
+    "respuesta": "Mi♭",
+    "ancho": 50
+   },
+   {
+    "x": 14.0,
+    "y": 29.2,
+    "respuesta": "Si♭",
+    "ancho": 50
+   },
+   {
+    "x": 29.2,
+    "y": 14.0,
+    "respuesta": "Fa",
+    "ancho": 50
+   }
+  ]
+ },
+ {
+  "id": "p3-sostenidos",
+  "pagina": "modulo3.html",
+  "antes_de": "<h4>4. Leer la tonalidad a partir de la armadura</h4>",
+  "tipo": "ordenar",
+  "titulo": "El orden de los sostenidos",
+  "instruccion": "Ordena los sostenidos como aparecen en la armadura.",
+  "items": [
+   "Fa♯",
+   "Do♯",
+   "Sol♯",
+   "Re♯",
+   "La♯",
+   "Mi♯",
+   "Si♯"
+  ]
+ },
+ {
+  "id": "p4-acordes",
+  "pagina": "modulo4.html",
+  "antes_de": "quiz",
+  "tipo": "clasificar",
+  "titulo": "Tipos de acorde",
+  "instruccion": "Clasifica cada tríada.",
+  "categorias": [
+   "Mayor",
+   "Menor",
+   "Disminuido"
+  ],
+  "items": [
+   [
+    "Do–Mi–Sol",
+    0
+   ],
+   [
+    "Fa–La–Do",
+    0
+   ],
+   [
+    "Sol–Si–Re",
+    0
+   ],
+   [
+    "La–Do–Mi",
+    1
+   ],
+   [
+    "Re–Fa–La",
+    1
+   ],
+   [
+    "Mi–Sol–Si",
+    1
+   ],
+   [
+    "Si–Re–Fa",
+    2
+   ]
+  ]
+ },
+ {
+  "id": "p5-funciones",
+  "pagina": "modulo5.html",
+  "antes_de": "quiz",
+  "tipo": "clasificar",
+  "titulo": "Funciones de los acordes de Do mayor",
+  "instruccion": "¿Qué función tiene cada acorde?",
+  "categorias": [
+   "Tónica",
+   "Subdominante",
+   "Dominante"
+  ],
+  "items": [
+   [
+    "Do (I)",
+    0
+   ],
+   [
+    "La m (vi)",
+    0
+   ],
+   [
+    "Mi m (iii)",
+    0
+   ],
+   [
+    "Fa (IV)",
+    1
+   ],
+   [
+    "Re m (ii)",
+    1
+   ],
+   [
+    "Sol (V)",
+    2
+   ],
+   [
+    "Si° (vii°)",
+    2
+   ]
+  ]
+ },
+ {
+  "id": "p7-pedal",
+  "pagina": "modulo7.html",
+  "antes_de": "quiz",
+  "tipo": "ordenar",
+  "titulo": "El pedal sincopado",
+  "instruccion": "Ordena los pasos del pedal sincopado.",
+  "items": [
+   "Toca el acorde con el pie arriba",
+   "Después de que suene, pisa el pedal",
+   "Toca el acorde siguiente y, en ese instante, levanta el pie",
+   "Vuelve a pisar enseguida"
+  ]
+ },
+ {
+  "id": "p8-formas",
+  "pagina": "modulo8.html",
+  "antes_de": "quiz",
+  "tipo": "emparejar",
+  "titulo": "Formas musicales",
+  "instruccion": "Une cada forma con su esquema.",
+  "pares": [
+   [
+    "Binaria",
+    "A – B"
+   ],
+   [
+    "Ternaria",
+    "A – B – A"
+   ],
+   [
+    "Rondó",
+    "A – B – A – C – A"
+   ],
+   [
+    "Tema con variaciones",
+    "A – A' – A'' – A'''"
+   ],
+   [
+    "Forma sonata",
+    "Exposición – Desarrollo – Reexposición"
+   ]
+  ]
+ },
+ {
+  "id": "p10-amalgama",
+  "pagina": "modulo10.html",
+  "antes_de": "quiz",
+  "tipo": "emparejar",
+  "titulo": "Compases de amalgama",
+  "instruccion": "Une cada compás con su agrupación habitual.",
+  "pares": [
+   [
+    "5/4",
+    "3 + 2 o 2 + 3"
+   ],
+   [
+    "7/8",
+    "2 + 2 + 3"
+   ],
+   [
+    "5/8",
+    "3 + 2"
+   ],
+   [
+    "11/8",
+    "3 + 3 + 3 + 2"
+   ]
+  ]
+ },
+ {
+  "id": "p11-septimas",
+  "pagina": "modulo11.html",
+  "antes_de": "quiz",
+  "tipo": "emparejar",
+  "titulo": "Acordes de séptima",
+  "instruccion": "Une cada acorde con sus notas.",
+  "pares": [
+   [
+    "Cmaj7",
+    "Do–Mi–Sol–Si"
+   ],
+   [
+    "C7",
+    "Do–Mi–Sol–Si♭"
+   ],
+   [
+    "Cm7",
+    "Do–Mi♭–Sol–Si♭"
+   ],
+   [
+    "Cm7♭5",
+    "Do–Mi♭–Sol♭–Si♭"
+   ],
+   [
+    "C°7",
+    "Do–Mi♭–Sol♭–La"
+   ]
+  ]
+ },
+ {
+  "id": "p12-blues",
+  "pagina": "modulo12.html",
+  "antes_de": "quiz",
+  "tipo": "rellenar",
+  "titulo": "El blues de 12 compases en Do",
+  "instruccion": "Completa los acordes.",
+  "texto": "En el blues en Do, los compases 1 a 4 usan {0}, los compases 5 y 6 usan {1} y el compás 9 usa {2}.",
+  "huecos": [
+   "C7",
+   "F7",
+   "G7"
+  ],
+  "extra": [
+   "Am",
+   "Dm"
+  ]
+ },
+ {
+  "id": "p13-estilos",
+  "pagina": "modulo13.html",
+  "antes_de": "quiz",
+  "tipo": "clasificar",
+  "titulo": "Rasgos de cada estilo",
+  "instruccion": "¿A qué época pertenece cada rasgo?",
+  "categorias": [
+   "Barroco",
+   "Clasicismo",
+   "Romanticismo"
+  ],
+  "items": [
+   [
+    "Pedal mínimo",
+    0
+   ],
+   [
+    "Contrapunto y adornos",
+    0
+   ],
+   [
+    "Bajo Alberti",
+    1
+   ],
+   [
+    "Frases equilibradas",
+    1
+   ],
+   [
+    "Rubato",
+    2
+   ],
+   [
+    "Pedal abundante",
+    2
+   ]
+  ]
+ },
+ {
+  "id": "p14-memoria",
+  "pagina": "modulo14.html",
+  "antes_de": "quiz",
+  "tipo": "ordenar",
+  "titulo": "Memorizar por capas",
+  "instruccion": "Ordena las capas de memoria.",
+  "items": [
+   "Análisis",
+   "Visual",
+   "Auditiva",
+   "Motriz",
+   "Prueba de fuego"
+  ]
+ }
+]

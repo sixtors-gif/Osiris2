@@ -34,7 +34,8 @@
       <div class="quiz"><h4>🧩 ¿Por qué un infostealer puede saltarse tu 2FA?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m5a')">A. Porque adivina el código.</button><button class="option" onclick="checkAnswer(this,true,'m5a')">B. Porque roba la cookie de sesión ya autenticada.</button><button class="option" onclick="checkAnswer(this,false,'m5a')">C. Porque desactiva el móvil.</button></div><p class="feedback" id="fb-m5a" data-ok="Con la cookie de sesión el atacante «hereda» tu inicio de sesión."></p></div>
       <div class="quiz"><h4>🧩 ¿Qué regla de copias de seguridad protege mejor frente al ransomware?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m5b')">A. Una sola copia en el mismo disco.</button><button class="option" onclick="checkAnswer(this,true,'m5b')">B. La regla 3-2-1, con una copia desconectada.</button><button class="option" onclick="checkAnswer(this,false,'m5b')">C. Guardar las fotos solo en el móvil.</button></div><p class="feedback" id="fb-m5b" data-ok="Una copia desconectada no puede ser cifrada por el ransomware."></p></div>
       <div class="activity"><h3>✍️ Actividad: tu plan de copias</h3><p>Describe dónde guardas hoy tus archivos importantes y cómo aplicarías la regla 3-2-1.</p><textarea placeholder="Mis copias..."></textarea><p class="small">No escribas contraseñas ni datos personales reales en este cuadro.</p></div>
-      <div class="summary-box"><b>Resumen:</b> evita cracks y descargas dudosas, mantén copias 3-2-1 y, tras una infección, cierra sesiones y cambia contraseñas desde un equipo limpio.</div>
+      <!--dd:cib-malware--><div class="dd" id="dd-cib-malware" data-config="{&quot;tipo&quot;:&quot;emparejar&quot;,&quot;titulo&quot;:&quot;Tipos de malware moderno&quot;,&quot;instruccion&quot;:&quot;Une cada tipo de malware con lo que hace.&quot;,&quot;pares&quot;:[[&quot;Ransomware de doble extorsión&quot;,&quot;Cifra tus archivos y amenaza con publicar los datos robados&quot;],[&quot;Infostealer&quot;,&quot;Roba contraseñas guardadas, cookies de sesión y carteras cripto&quot;],[&quot;Fileless&quot;,&quot;Se ejecuta en memoria usando herramientas legítimas del sistema&quot;],[&quot;Troyano bancario&quot;,&quot;Superpone pantallas falsas sobre apps de banca&quot;],[&quot;Botnet&quot;,&quot;Convierte tu equipo en un zombi para atacar a otros&quot;]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:cib-malware-->
+<div class="summary-box"><b>Resumen:</b> evita cracks y descargas dudosas, mantén copias 3-2-1 y, tras una infección, cierra sesiones y cambia contraseñas desde un equipo limpio.</div>
 
       <div class="navigation">
         <button class="nav-btn" onclick="scormGo('modulo4.html')">⬅️ Anterior</button>
@@ -44,6 +45,7 @@
   </div>
 </div>
 <footer class="footer-autor">Curso 2: Ciberseguridad Avanzada y Defensa Digital · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function checkAnswer(btn,correct,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(correct?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=correct?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es la mejor opción. Vuelve a leer el apartado e inténtalo de nuevo.';}

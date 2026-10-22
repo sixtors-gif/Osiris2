@@ -53,6 +53,8 @@ python3 herramientas/scorm_seguimiento.py
 El curso de Piano se genera con `herramientas/generar_curso_piano.py` (partituras en `herramientas/piano_partituras.py`, explicaciones ampliadas en `herramientas/piano_explicaciones.py` y `herramientas/piano_teoria.py` y `herramientas/piano_teoria2.py`, ejercicios y planning en `herramientas/piano_ejercicios.py`, partituras de la ampliación en `herramientas/piano_partituras2.py`, PDF con `herramientas/piano_pdf.js`).
 El curso de Saxofón alto se genera con `herramientas/generar_curso_saxo.py` (módulos en `herramientas/saxo_modulos_a.py` y `saxo_modulos_b.py`, partituras en `herramientas/saxo_partituras.py`, digitaciones y dibujos en `herramientas/saxo_digitaciones.py`, ejercicios y planning en `herramientas/saxo_ejercicios.py`, PDF con `herramientas/saxo_pdf.js`). Las partituras están en tono escrito y el audio se transpone a Mi♭ (abcjs `transpose=-9`, timbre de saxo alto).
 
+Las actividades de **arrastrar y soltar** (emparejar, clasificar, ordenar, rellenar y etiquetar sobre una imagen) están definidas en `herramientas/dragdrop/<curso>.json` y las inserta `herramientas/insertar_dragdrop.py` (motor en `herramientas/dragdrop/dragdrop.js`). Orden de trabajo: generadores → `python3 herramientas/insertar_dragdrop.py` → `python3 herramientas/scorm_seguimiento.py` → `sh herramientas/empaquetar.sh`. Funcionan con ratón, con el dedo y pulsando ficha y destino.
+
 El curso de Informática básica se genera igual:
 
 ```sh

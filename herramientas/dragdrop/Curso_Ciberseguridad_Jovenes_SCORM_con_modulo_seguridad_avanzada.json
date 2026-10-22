@@ -1,0 +1,182 @@
+[
+ {
+  "id": "cv-regla",
+  "pagina": "modulo1.html",
+  "antes_de": "quiz",
+  "tipo": "rellenar",
+  "titulo": "Tu regla de oro",
+  "instruccion": "Arrastra cada palabra a su hueco para completar la regla.",
+  "texto": "Antes de hacer clic, descargar o compartir algo, párate {0} segundos y pregúntate: ¿{1} lo envía?, ¿qué me pide?, ¿tiene {2}?",
+  "huecos": [
+   "5",
+   "quién",
+   "sentido"
+  ],
+  "extra": [
+   "10",
+   "cuándo"
+  ]
+ },
+ {
+  "id": "cv-palancas",
+  "pagina": "modulo2.html",
+  "antes_de": "quiz",
+  "tipo": "emparejar",
+  "titulo": "Las palancas del engaño",
+  "instruccion": "Une cada palanca psicológica con la frase típica que la usa.",
+  "pares": [
+   [
+    "Autoridad",
+    "Soy del banco/soporte"
+   ],
+   [
+    "Urgencia",
+    "Solo tienes 10 minutos"
+   ],
+   [
+    "Miedo",
+    "Tu cuenta será bloqueada"
+   ],
+   [
+    "Curiosidad",
+    "Mira este vídeo tuyo..."
+   ],
+   [
+    "Simpatía / confianza",
+    "Se hace pasar por un amigo"
+   ],
+   [
+    "Escasez",
+    "Últimas 2 unidades"
+   ]
+  ]
+ },
+ {
+  "id": "cv-canales",
+  "pagina": "modulo4.html",
+  "antes_de": "quiz",
+  "tipo": "clasificar",
+  "titulo": "Phishing, smishing o vishing",
+  "instruccion": "Según el canal por el que llega el engaño, clasifica cada ejemplo.",
+  "categorias": [
+   "Phishing (correo)",
+   "Smishing (SMS)",
+   "Vishing (llamada)"
+  ],
+  "items": [
+   [
+    "Correo con remitente raro que pide confirmar la contraseña",
+    0
+   ],
+   [
+    "Correo que dice que tu cuenta será bloqueada en 10 minutos",
+    0
+   ],
+   [
+    "Tu paquete está retenido, paga 1,50 € de tasa aquí",
+    1
+   ],
+   [
+    "Hacienda te debe una devolución, reclama en este enlace",
+    1
+   ],
+   [
+    "Llamada con el número falseado de tu banco",
+    2
+   ],
+   [
+    "Te piden instalar una app de acceso remoto por teléfono",
+    2
+   ]
+  ]
+ },
+ {
+  "id": "cv-habitos",
+  "pagina": "modulo6.html",
+  "antes_de": "quiz",
+  "tipo": "emparejar",
+  "titulo": "Cuatro hábitos para tu móvil",
+  "instruccion": "Une cada hábito con lo que debes hacer.",
+  "pares": [
+   [
+    "Actualizaciones",
+    "Corrigen fallos de seguridad"
+   ],
+   [
+    "Bloqueo de pantalla",
+    "PIN, patrón o huella/cara"
+   ],
+   [
+    "Wi-Fi público",
+    "No hacer cosas sensibles ahí"
+   ],
+   [
+    "Apps oficiales",
+    "Instalar de tiendas oficiales y revisar permisos"
+   ]
+  ]
+ },
+ {
+  "id": "cv-compras",
+  "pagina": "modulo10.html",
+  "antes_de": "quiz",
+  "tipo": "clasificar",
+  "titulo": "Compras online: señales",
+  "instruccion": "Separa las señales de alerta de las buenas señales.",
+  "categorias": [
+   "Señal de alerta",
+   "Buena señal"
+  ],
+  "items": [
+   [
+    "Precio muy por debajo del normal",
+    0
+   ],
+   [
+    "Solo aceptan transferencia o Bizum a una persona",
+    0
+   ],
+   [
+    "Tienda muy nueva, sin reseñas o con reseñas todas iguales",
+    0
+   ],
+   [
+    "Web con HTTPS y datos de contacto reales",
+    1
+   ],
+   [
+    "Pago con protección al comprador",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "cv-mal",
+  "pagina": "modulo14.html",
+  "antes_de": "quiz",
+  "tipo": "ordenar",
+  "titulo": "Si algo sale mal, el orden importa",
+  "instruccion": "Primero recupera el control, después revisa qué ha pasado.",
+  "items": [
+   "Cambia la contraseña",
+   "Cierra sesiones abiertas",
+   "Activa 2FA",
+   "Avisa a alguien de confianza",
+   "Revisa la actividad"
+  ]
+ },
+ {
+  "id": "cv-doxxing",
+  "pagina": "modulo16.html",
+  "antes_de": "quiz",
+  "tipo": "ordenar",
+  "titulo": "Si difunden tus datos",
+  "instruccion": "Ordena el plan de respuesta.",
+  "items": [
+   "Para: no respondas en caliente",
+   "Guarda pruebas: capturas, enlaces, fechas",
+   "Pide ayuda a un adulto de confianza",
+   "Denuncia y protege plataforma y cuentas"
+  ]
+ }
+]

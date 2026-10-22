@@ -42,11 +42,13 @@
 <div class="options" id="opt_e12b"><div class="option" onclick="pickc(this,'e12b',1)">Un asistente de recuperación de documentos, si había datos de recuperación automática</div><div class="option" onclick="pickc(this,'e12b',0)">El documento se pierde siempre sin remedio</div><div class="option" onclick="pickc(this,'e12b',0)">Un mensaje de error sin más opciones</div></div>
 <div id="fb_e12b" class="feedback-box" data-exp="Si la recuperación automática estaba activada, LibreOffice ofrece recuperar el documento al reabrir."></div></div>
 
-      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo11.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo13.html')">Siguiente ➡️</button></div>
+      <!--dd:lo-recuperar--><div class="dd" id="dd-lo-recuperar" data-config="{&quot;tipo&quot;:&quot;ordenar&quot;,&quot;titulo&quot;:&quot;Tras un cierre inesperado&quot;,&quot;instruccion&quot;:&quot;Ordena los pasos para recuperar tu trabajo.&quot;,&quot;items&quot;:[&quot;Vuelve a abrir LibreOffice (o la aplicación que usabas)&quot;,&quot;Si aparece el asistente de Recuperación de documentos, revisa la lista&quot;,&quot;Elige Iniciar la recuperación y comprueba el contenido&quot;,&quot;Guarda enseguida el archivo recuperado con Ctrl + S&quot;]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:lo-recuperar-->
+<div class="navigation"><button class="nav-btn" onclick="scormGo('modulo11.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo13.html')">Siguiente ➡️</button></div>
     </section>
   </div>
 </div>
 <footer class="footer-autor">LibreOffice: conceptos básicos comunes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

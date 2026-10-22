@@ -51,7 +51,8 @@
 <button class="btn" onclick="chk('e10b',200,'fb_e10b','2 furgonetas × 100 € = 200 €.')">Comprobar</button>
 <div id="fb_e10b" class="feedback-box"></div></div>
 
-      <div class="navigation">
+      <!--dd:esc-bebidas--><div class="dd" id="dd-esc-bebidas" data-config="{&quot;tipo&quot;:&quot;clasificar&quot;,&quot;titulo&quot;:&quot;Cuántas bebidas hacen falta&quot;,&quot;instruccion&quot;:&quot;Clasifica cada bebida según el criterio de consumo del curso.&quot;,&quot;categorias&quot;:[&quot;1 por comensal (=J1)&quot;,&quot;1 botella por cada 4 comensales&quot;],&quot;items&quot;:[[&quot;Refrescos&quot;,0],[&quot;Cerveza&quot;,0],[&quot;Agua&quot;,1],[&quot;Vino Blanco&quot;,1],[&quot;Vino Tinto&quot;,1],[&quot;Cava&quot;,1]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:esc-bebidas-->
+<div class="navigation">
         <button class="nav-btn" onclick="scormGo('modulo9.html')">⬅️ Anterior</button>
         <button class="nav-btn" onclick="scormGo('modulo11.html')">Siguiente ➡️</button>
       </div>
@@ -59,6 +60,7 @@
   </div>
 </div>
 <footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

@@ -35,7 +35,8 @@
         <input id="c3" class="num" placeholder="MB/s"> <button class="btn" onclick="checkNum('c3',37.5,'f3','Correcto: 300 ÷ 8 = 37,5 MB por segundo.')">Comprobar</button><p class="feedback" id="f3"></p>
       </div>
       <div class="quiz"><h4>🧩 ¿Qué es más grande?</h4><div class="options"><button class="option" onclick="checkAnswer(this,false,'m4a')">A. 500 MB</button><button class="option" onclick="checkAnswer(this,true,'m4a')">B. 1 GB</button><button class="option" onclick="checkAnswer(this,false,'m4a')">C. 900 KB</button></div><p class="feedback" id="fb-m4a" data-ok="1 GB son 1024 MB."></p></div>
-      <div class="summary-box"><b>Resumen:</b> bit → byte (×8) → KB → MB → GB → TB (cada uno ×1024). Internet se mide en bits por segundo.</div>
+      <!--dd:inf-unidades--><div class="dd" id="dd-inf-unidades" data-config="{&quot;tipo&quot;:&quot;ordenar&quot;,&quot;titulo&quot;:&quot;De la unidad más pequeña a la más grande&quot;,&quot;instruccion&quot;:&quot;Ordena las unidades de información de menor a mayor.&quot;,&quot;items&quot;:[&quot;Bit&quot;,&quot;Byte (8 bits)&quot;,&quot;Kilobyte (KB)&quot;,&quot;Megabyte (MB)&quot;,&quot;Gigabyte (GB)&quot;,&quot;Terabyte (TB)&quot;]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:inf-unidades-->
+<div class="summary-box"><b>Resumen:</b> bit → byte (×8) → KB → MB → GB → TB (cada uno ×1024). Internet se mide en bits por segundo.</div>
 
       <div class="navigation">
         <button class="nav-btn" onclick="scormGo('modulo3.html')">⬅️ Anterior</button>
@@ -45,6 +46,7 @@
   </div>
 </div>
 <footer class="footer-autor">Informática básica para jóvenes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function checkAnswer(btn,ok,id){var p=btn.parentElement;p.querySelectorAll('.option').forEach(function(b){b.classList.remove('correct','incorrect')});btn.classList.add(ok?'correct':'incorrect');var fb=document.getElementById('fb-'+id);fb.textContent=ok?'✅ ¡Correcto! '+fb.getAttribute('data-ok'):'❌ No es correcto. Vuelve a leer el apartado e inténtalo de nuevo.';}

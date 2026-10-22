@@ -1,0 +1,16 @@
+[
+ {"id":"cj-regla","pagina":"modulo1.html","antes_de":"quiz","tipo":"rellenar","titulo":"Tu regla de oro","instruccion":"Arrastra cada palabra a su hueco para completar la regla.",
+  "texto":"Antes de hacer clic, descargar o compartir algo, párate unos segundos: ¿{0} lo envía?, ¿qué quiere que {1}?, ¿es {2}?","huecos":["quién","haga","lógico"],"extra":["cuándo","pague"]},
+ {"id":"cj-claves","pagina":"modulo2.html","antes_de":"quiz","tipo":"clasificar","titulo":"Contraseñas: ¿bien o mal?","instruccion":"Arrastra cada ficha a la columna que le corresponde.","categorias":["Buena práctica","Mala práctica"],
+  "items":[["Contraseña larga y exclusiva para cada servicio",0],["Usar un gestor de contraseñas",0],["Activar 2FA con una app autenticadora",0],["Reutilizar la misma contraseña en varias cuentas",1],["Usar tu fecha de nacimiento o tu equipo favorito",1],["Compartir los códigos de verificación",1]]},
+ {"id":"cj-phishing","pagina":"modulo3.html","antes_de":"quiz","tipo":"clasificar","titulo":"Phishing: señales y reacción","instruccion":"Separa las señales de alerta de lo que debes hacer.","categorias":["Señal de alerta","Qué hacer"],
+  "items":[["Urgencia exagerada",0],["Premio inesperado",0],["Enlace extraño",0],["Petición de códigos",0],["No responder ni introducir datos",1],["Entrar por la app o web oficial que ya conoces",1],["Reportar el mensaje, si procede",1]]},
+ {"id":"cj-habitos","pagina":"modulo5.html","antes_de":"quiz","tipo":"emparejar","titulo":"Hábitos para tu móvil","instruccion":"Une cada hábito con lo que debes hacer.",
+  "pares":[["Actualizaciones","Mantener sistema y apps al día: corrigen fallos de seguridad"],["Bloqueo","PIN, contraseña o biometría, con bloqueo automático"],["Wi-Fi público","No asumir que es de confianza; evitar operaciones sensibles"],["Apps","Instalar desde fuentes oficiales y revisar permisos"]]},
+ {"id":"cj-malware","pagina":"modulo6.html","antes_de":"quiz","tipo":"clasificar","titulo":"Malware: vías de entrada y defensas","instruccion":"Clasifica cada ficha.","categorias":["Cómo llega el malware","Descarga segura"],
+  "items":[["Adjuntos de correo",0],["Cracks y mods de origen dudoso",0],["Memorias USB desconocidas",0],["Apps falsas",0],["Comprobar la fuente",1],["Evitar el software pirata",1],["No desactivar las protecciones del dispositivo",1]]},
+ {"id":"cj-emergencia","pagina":"modulo9.html","antes_de":"quiz","tipo":"ordenar","titulo":"Plan de emergencia","instruccion":"Una cuenta muestra un inicio de sesión que no reconoces. Ordena los pasos.",
+  "items":["Cambiar la contraseña","Cerrar sesiones abiertas","Activar 2FA","Avisar a alguien de confianza","Revisar la actividad"]},
+ {"id":"cj-semaforo","pagina":"modulo10.html","antes_de":"quiz","tipo":"emparejar","titulo":"El semáforo de la seguridad","instruccion":"Une cada color con su significado.",
+  "pares":[["Verde","Fuente conocida y petición lógica"],["Amarillo","Algo raro o inesperado"],["Rojo","Presión, contraseña, código o dinero"]]}
+]

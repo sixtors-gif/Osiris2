@@ -79,6 +79,7 @@ function tampering(){var d=document.getElementById('fdoc');d.value=d.value.repla
 frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
 <p class="figure-caption"><b>La firma electrónica de documentos</b> · canal oficial <b>INCIBE</b> en YouTube</p><p class="vid-desc">Un consultor explica, en pocos minutos, qué es la firma electrónica y qué ventajas tiene frente a la firma en papel.</p></div>
 
+<!--dd:fnmt-firmar--><div class="dd" id="dd-fnmt-firmar" data-config="{&quot;tipo&quot;:&quot;ordenar&quot;,&quot;titulo&quot;:&quot;Cómo se firma un documento&quot;,&quot;instruccion&quot;:&quot;Ordena los pasos de la firma digital.&quot;,&quot;items&quot;:[&quot;Se parte del documento original&quot;,&quot;Se calcula el hash (resumen) del documento&quot;,&quot;Se cifra el hash con la clave privada&quot;,&quot;La firma resultante se adjunta al documento&quot;]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:fnmt-firmar-->
 <div class="exercise"><h3>🧩 Qué se cifra</h3><p>En una firma digital real, ¿qué es exactamente lo que se cifra con la clave privada?</p>
 <div class="options" id="opt_e5a"><div class="option" onclick="pickc(this,'e5a',1)">El hash (resumen) del documento</div><div class="option" onclick="pickc(this,'e5a',0)">El documento completo, letra por letra</div><div class="option" onclick="pickc(this,'e5a',0)">La clave pública del firmante</div></div>
 <div id="fb_e5a" class="feedback-box" data-exp="Se firma el hash, mucho más corto que el documento, no el documento completo."></div></div>
@@ -94,6 +95,7 @@ frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-pic
   </div>
 </div>
 <footer class="footer-autor">Certificados digitales, firma electrónica y FNMT · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

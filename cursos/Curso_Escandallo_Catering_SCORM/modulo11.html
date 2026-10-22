@@ -82,7 +82,8 @@ window.addEventListener('load',simular);
 <div class="options" id="opt_e11c"><div class="option" onclick="pickc(this,'e11c',0,0)">25 %</div><div class="option" onclick="pickc(this,'e11c',1,1)">20 %</div><div class="option" onclick="pickc(this,'e11c',0,2)">30 %</div></div>
 <div id="fb_e11c" class="feedback-box" data-exp="0,25 ÷ 1,25 = 0,20 → 20 % del precio de venta."></div></div>
 
-      <div class="navigation">
+      <!--dd:esc-totales--><div class="dd" id="dd-esc-totales" data-config="{&quot;tipo&quot;:&quot;emparejar&quot;,&quot;titulo&quot;:&quot;Los cuatro resultados finales&quot;,&quot;instruccion&quot;:&quot;Une cada resultado de la fila 8 con su cálculo.&quot;,&quot;pares&quot;:[[&quot;Coste Total del Catering&quot;,&quot;Bebidas + materia prima + personal + varios + imprevistos&quot;],[&quot;Coste por Menú&quot;,&quot;Coste total repartido entre los comensales&quot;],[&quot;Precio de Venta&quot;,&quot;Coste por menú más el % de beneficio&quot;],[&quot;Ganancias&quot;,&quot;(Precio - coste) de cada menú por los comensales&quot;]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:esc-totales-->
+<div class="navigation">
         <button class="nav-btn" onclick="scormGo('modulo10.html')">⬅️ Anterior</button>
         <button class="nav-btn" onclick="scormGo('modulo12.html')">Siguiente ➡️</button>
       </div>
@@ -90,6 +91,7 @@ window.addEventListener('load',simular);
   </div>
 </div>
 <footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

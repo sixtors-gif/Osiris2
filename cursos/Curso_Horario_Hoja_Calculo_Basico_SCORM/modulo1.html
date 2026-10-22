@@ -99,11 +99,13 @@
 <button class="btn" onclick="chk('e1b',9,'fb_e1b','3 columnas × 3 filas = 9 celdas.')">Comprobar</button>
 <div id="fb_e1b" class="feedback-box"></div></div>
 
-      <div class="navigation"><button class="nav-btn" onclick="scormGo('index.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo2.html')">Siguiente ➡️</button></div>
+      <!--dd:hor-ventana--><div class="dd" id="dd-hor-ventana" data-config="{&quot;tipo&quot;:&quot;emparejar&quot;,&quot;titulo&quot;:&quot;Las partes de la ventana de Calc&quot;,&quot;instruccion&quot;:&quot;Une cada parte de la ventana con lo que contiene o muestra.&quot;,&quot;pares&quot;:[[&quot;Barra de menús&quot;,&quot;Archivo, Editar, Formato…&quot;],[&quot;Barra de herramientas&quot;,&quot;Fuente, tamaño, negrita, colores…&quot;],[&quot;Cuadro de nombre&quot;,&quot;Dice en qué celda estás (C5)&quot;],[&quot;Barra de fórmulas&quot;,&quot;Muestra el contenido de la celda&quot;],[&quot;Celda activa&quot;,&quot;La de borde naranja&quot;],[&quot;Pestañas de hojas&quot;,&quot;Una por hoja del libro&quot;]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:hor-ventana-->
+<div class="navigation"><button class="nav-btn" onclick="scormGo('index.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo2.html')">Siguiente ➡️</button></div>
     </section>
   </div>
 </div>
 <footer class="footer-autor">Hoja de cálculo básica: el horario del curso · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

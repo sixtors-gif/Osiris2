@@ -1,0 +1,18 @@
+[
+ {"id":"hor-ventana","pagina":"modulo1.html","antes_de":"nav","tipo":"emparejar","titulo":"Las partes de la ventana de Calc","instruccion":"Une cada parte de la ventana con lo que contiene o muestra.",
+  "pares":[["Barra de menús","Archivo, Editar, Formato…"],["Barra de herramientas","Fuente, tamaño, negrita, colores…"],["Cuadro de nombre","Dice en qué celda estás (C5)"],["Barra de fórmulas","Muestra el contenido de la celda"],["Celda activa","La de borde naranja"],["Pestañas de hojas","Una por hoja del libro"]]},
+ {"id":"hor-guardar","pagina":"modulo2.html","antes_de":"summary","tipo":"clasificar","titulo":"Guardar y Guardar como","instruccion":"Clasifica cada característica según la orden a la que corresponde.",
+  "categorias":["Guardar","Guardar como…"],
+  "items":[["Ctrl + S",0],["Actualiza el archivo con el mismo nombre y en el mismo sitio",0],["La primera vez te pregunta nombre y carpeta",0],["Ctrl + Mayús + S",1],["Crea otro archivo (otro nombre, carpeta o formato)",1],["El original queda como estaba",1]]},
+ {"id":"hor-formatos","pagina":"modulo3.html","antes_de":"summary","tipo":"emparejar","titulo":"¿Qué formato elijo?","instruccion":"Une cada situación con el formato de archivo adecuado.",
+  "pares":[["Sigo trabajando yo con Calc",".ods"],["Se lo mando a una compañera que usa Excel y debe modificarlo",".xlsx"],["Lo cuelgo en la web del centro para que lo lean",".pdf"],["Un programa de gestión solo importa datos en texto plano",".csv"],["Equipos muy antiguos (Excel 97-2003)",".xls"]]},
+ {"id":"hor-combinar","pagina":"modulo8.html","antes_de":"summary","tipo":"ordenar","titulo":"Combinar celdas paso a paso","instruccion":"Ordena los pasos para combinar celdas.",
+  "items":["Selecciona el rango, por ejemplo A1:O2","Menú Formato → Combinar y descombinar celdas → Combinar celdas","Si avisa de que se perderá contenido, elige Vaciar el contenido de las celdas ocultas","Repite con las cabeceras de día, la fecha, el grupo y los bloques largos"]},
+ {"id":"hor-colores","pagina":"modulo9.html","antes_de":"summary","tipo":"clasificar","titulo":"Color de letra según el fondo","instruccion":"Clasifica cada asignatura según el color de letra que lleva en la tabla del curso.",
+  "categorias":["Letra blanca","Letra negra"],
+  "items":[["INFORMÁTICA (#993300)",0],["INGLÉS (#008080)",0],["CALIDAD (#CCFFCC)",1],["ORIENTACIÓN LABORAL (#FF99CC)",1],["TEÓRICO COCINA / RECOGIDA (#FFCC99)",1],["TEÓRICO-PRÁCTICO COCINA (#FF6600)",1]]},
+ {"id":"hor-fechas","pagina":"modulo10.html","antes_de":"nav","tipo":"emparejar","titulo":"Códigos de formato de fecha","instruccion":"Une cada código del formato personalizado con lo que muestra.",
+  "pares":[["dddd","Día de la semana"],["d","Día"],["mmmm","Mes con letras"],["yyyy","Año"]]},
+ {"id":"hor-atajos","pagina":"modulo11.html","antes_de":"summary","tipo":"emparejar","titulo":"Atajos de copiar y pegar","instruccion":"Une cada acción con su atajo de teclado.",
+  "pares":[["Copiar","Ctrl + C"],["Cortar (mover)","Ctrl + X"],["Pegar","Ctrl + V"],["Pegado especial","Ctrl + Mayús + V"],["Rellenar hacia abajo","Ctrl + D"],["Rellenar a la derecha","Ctrl + R"]]}
+]

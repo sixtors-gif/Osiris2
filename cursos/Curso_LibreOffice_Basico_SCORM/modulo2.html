@@ -84,11 +84,13 @@
 <div class="options" id="opt_e2b"><div class="option" onclick="pickc(this,'e2b',1)">La barra de menús</div><div class="option" onclick="pickc(this,'e2b',0)">El área de trabajo (siempre es distinta)</div><div class="option" onclick="pickc(this,'e2b',0)">Nada es común entre aplicaciones</div></div>
 <div id="fb_e2b" class="feedback-box" data-exp="La barra de menús, la de herramientas, la barra lateral y la de estado se organizan igual en las tres aplicaciones."></div></div>
 
-      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo1.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo3.html')">Siguiente ➡️</button></div>
+      <!--dd:lo-ventana--><div class="dd" id="dd-lo-ventana" data-config="{&quot;tipo&quot;:&quot;emparejar&quot;,&quot;titulo&quot;:&quot;Las partes de la ventana&quot;,&quot;instruccion&quot;:&quot;Une cada parte de la ventana con su descripción.&quot;,&quot;pares&quot;:[[&quot;Barra de título&quot;,&quot;Nombre del archivo&quot;],[&quot;Barra de menús&quot;,&quot;Archivo, Editar, Formato…&quot;],[&quot;Barras de herramientas&quot;,&quot;Los botones más usados, a un clic&quot;],[&quot;Área de trabajo&quot;,&quot;La página, la cuadrícula o la diapositiva&quot;],[&quot;Barra lateral&quot;,&quot;Paneles como Propiedades, Estilos o Galería&quot;],[&quot;Barra de estado&quot;,&quot;Información rápida del documento&quot;]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:lo-ventana-->
+<div class="navigation"><button class="nav-btn" onclick="scormGo('modulo1.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo3.html')">Siguiente ➡️</button></div>
     </section>
   </div>
 </div>
 <footer class="footer-autor">LibreOffice: conceptos básicos comunes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

@@ -50,11 +50,13 @@
 <div class="options" id="opt_e5c"><div class="option" onclick="pickc(this,'e5c',1)">Pegado especial → Texto sin formato</div><div class="option" onclick="pickc(this,'e5c',0)">Copiar dos veces</div><div class="option" onclick="pickc(this,'e5c',0)">Deshacer antes de pegar</div></div>
 <div id="fb_e5c" class="feedback-box" data-exp="El pegado especial permite pegar solo el texto, sin el formato de origen."></div></div>
 
-      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo4.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo6.html')">Siguiente ➡️</button></div>
+      <!--dd:lo-portapapeles--><div class="dd" id="dd-lo-portapapeles" data-config="{&quot;tipo&quot;:&quot;rellenar&quot;,&quot;titulo&quot;:&quot;Deshacer y portapapeles&quot;,&quot;instruccion&quot;:&quot;Completa la frase con el atajo o la acción que corresponde.&quot;,&quot;texto&quot;:&quot;Deshacer es {0} y Rehacer es {1}. {2} guarda la selección en el portapapeles y la borra del sitio original; {3} la guarda sin borrarla.&quot;,&quot;huecos&quot;:[&quot;Ctrl + Z&quot;,&quot;Ctrl + Y&quot;,&quot;Cortar&quot;,&quot;Copiar&quot;],&quot;extra&quot;:[&quot;Pegar&quot;,&quot;Ctrl + S&quot;]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:lo-portapapeles-->
+<div class="navigation"><button class="nav-btn" onclick="scormGo('modulo4.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo6.html')">Siguiente ➡️</button></div>
     </section>
   </div>
 </div>
 <footer class="footer-autor">LibreOffice: conceptos básicos comunes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

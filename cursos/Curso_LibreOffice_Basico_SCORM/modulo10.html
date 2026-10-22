@@ -50,11 +50,13 @@
 <div class="options" id="opt_e10b"><div class="option" onclick="pickc(this,'e10b',1)">F7</div><div class="option" onclick="pickc(this,'e10b',0)">F1</div><div class="option" onclick="pickc(this,'e10b',0)">Ctrl+F</div></div>
 <div id="fb_e10b" class="feedback-box" data-exp="F7 abre la revisión de ortografía y gramática, igual en Writer, Calc e Impress."></div></div>
 
-      <div class="navigation"><button class="nav-btn" onclick="scormGo('modulo9.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo11.html')">Siguiente ➡️</button></div>
+      <!--dd:lo-atajos--><div class="dd" id="dd-lo-atajos" data-config="{&quot;tipo&quot;:&quot;emparejar&quot;,&quot;titulo&quot;:&quot;Atajos comunes&quot;,&quot;instruccion&quot;:&quot;Une cada acción con su atajo de teclado.&quot;,&quot;pares&quot;:[[&quot;Abrir&quot;,&quot;Ctrl + O&quot;],[&quot;Guardar como&quot;,&quot;Ctrl + Mayús + S&quot;],[&quot;Buscar&quot;,&quot;Ctrl + F&quot;],[&quot;Reemplazar&quot;,&quot;Ctrl + H&quot;],[&quot;Ortografía&quot;,&quot;F7&quot;],[&quot;Estilos&quot;,&quot;F11&quot;],[&quot;Imprimir&quot;,&quot;Ctrl + P&quot;],[&quot;Seleccionar todo&quot;,&quot;Ctrl + A&quot;]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:lo-atajos-->
+<div class="navigation"><button class="nav-btn" onclick="scormGo('modulo9.html')">⬅️ Anterior</button><button class="nav-btn" onclick="scormGo('modulo11.html')">Siguiente ➡️</button></div>
     </section>
   </div>
 </div>
 <footer class="footer-autor">LibreOffice: conceptos básicos comunes · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

@@ -49,60 +49,70 @@
       <file href="index.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_UNIDAD1" type="webcontent" adlcp:scormtype="sco" href="unidad1.html">
       <file href="unidad1.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_UNIDAD2" type="webcontent" adlcp:scormtype="sco" href="unidad2.html">
       <file href="unidad2.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_UNIDAD3" type="webcontent" adlcp:scormtype="sco" href="unidad3.html">
       <file href="unidad3.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_UNIDAD4" type="webcontent" adlcp:scormtype="sco" href="unidad4.html">
       <file href="unidad4.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_UNIDAD5" type="webcontent" adlcp:scormtype="sco" href="unidad5.html">
       <file href="unidad5.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_UNIDAD6" type="webcontent" adlcp:scormtype="sco" href="unidad6.html">
       <file href="unidad6.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_UNIDAD7" type="webcontent" adlcp:scormtype="sco" href="unidad7.html">
       <file href="unidad7.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_UNIDAD8" type="webcontent" adlcp:scormtype="sco" href="unidad8.html">
       <file href="unidad8.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_EXAMEN_FINAL" type="webcontent" adlcp:scormtype="sco" href="examen_final.html">
       <file href="examen_final.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
   </resources>

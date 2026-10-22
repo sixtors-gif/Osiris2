@@ -1,0 +1,16 @@
+[
+ {"id":"ub-equiv","pagina":"modulo1.html","antes_de":"summary","tipo":"emparejar","titulo":"De Windows a Ubuntu","instruccion":"Une cada elemento de Windows con su equivalente en Ubuntu.",
+  "pares":[["Menú Inicio","Actividades (tecla Super)"],["Explorador de archivos","Archivos"],["Microsoft Store","App Center"],["Windows Update","Actualizador de software"],["Símbolo del sistema / PowerShell","Terminal"],["Administrador de tareas","Resources"],["Word, Excel, PowerPoint","LibreOffice"]]},
+ {"id":"ub-usb","pagina":"modulo3.html","antes_de":"<div class=\"exercise\">","tipo":"ordenar","titulo":"Preparar la instalación","instruccion":"Ordena los pasos previos a instalar Ubuntu.",
+  "items":["Hacer la copia de seguridad","Descargar la ISO","Crear el USB con una herramienta que grabe la imagen","Arrancar desde el USB"]},
+ {"id":"ub-pantallas","pagina":"modulo4.html","antes_de":"<div class=\"exercise\">","tipo":"ordenar","titulo":"Pantallas del instalador","instruccion":"Ordena las pantallas del instalador tal como aparecen.",
+  "items":["Elegir el idioma","Accesibilidad","Distribución del teclado","Conectar a internet","Probar o instalar","Instalación interactiva o automatizada","Programas de partida","Software de terceros"]},
+ {"id":"ub-atajos","pagina":"modulo7.html","antes_de":"summary","tipo":"emparejar","titulo":"Atajos de teclado","instruccion":"Une cada atajo con lo que hace.",
+  "pares":[["Alt + Tab","Cambia entre aplicaciones abiertas"],["Super + D","Muestra el escritorio"],["Super + L","Bloquea la pantalla"],["Alt + F4","Cierra la ventana actual"],["Ctrl + Alt + T","Abre una terminal"],["ImprPant","Abre la herramienta de captura de pantalla"],["Super + Flecha izquierda","Ajusta la ventana a la mitad izquierda"]]},
+ {"id":"ub-papelera","pagina":"modulo10.html","antes_de":"summary","tipo":"clasificar","titulo":"¿Se puede recuperar?","instruccion":"Clasifica cada forma de borrar según si el archivo se puede recuperar.","categorias":["Se puede recuperar","No se puede recuperar"],
+  "items":[["Mandar a la Papelera con Supr",0],["Deshacer con Ctrl + Z justo después de borrar",0],["Restaurar desde la Papelera con clic derecho",0],["Vaciar la Papelera con el botón Vaciar",1],["Borrar con Mayús + Supr",1],["Borrar con la orden rm en la terminal",1]]},
+ {"id":"ub-actualizar","pagina":"modulo13.html","antes_de":"summary","tipo":"rellenar","titulo":"Actualizar con la terminal","instruccion":"Completa la frase con las órdenes correctas.",
+  "texto":"Desde la terminal, {0} consulta qué actualizaciones hay y {1} las aplica.","huecos":["sudo apt update","sudo apt upgrade"],"extra":["cd Documentos","sudo reboot"]},
+ {"id":"ub-ordenes","pagina":"modulo15.html","antes_de":"<div class=\"exercise\">","tipo":"emparejar","titulo":"Las órdenes de la terminal","instruccion":"Une cada orden con lo que hace.",
+  "pares":[["pwd","Muestra en qué carpeta estás"],["ls","Lista lo que hay en la carpeta"],["cd","Cambia de carpeta"],["mkdir","Crea una carpeta"],["cat","Muestra el contenido de un archivo de texto"],["cp","Copia un archivo"],["mv","Mueve o renombra"],["rm","Borra un archivo sin pasar por la Papelera"],["sudo","Ejecuta algo como administrador"]]}
+]

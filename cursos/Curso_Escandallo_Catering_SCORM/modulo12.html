@@ -53,7 +53,8 @@
 <div class="options" id="opt_e12b"><div class="option" onclick="pickc(this,'e12b',1,0)">El divisor de la fórmula (¿vale 0 o está vacío?)</div><div class="option" onclick="pickc(this,'e12b',0,1)">El color de la celda</div><div class="option" onclick="pickc(this,'e12b',0,2)">El nombre del archivo</div></div>
 <div id="fb_e12b" class="feedback-box" data-exp="Este error aparece cuando se divide entre 0 o entre una celda vacía."></div></div>
 
-      <div class="navigation">
+      <!--dd:esc-errores--><div class="dd" id="dd-esc-errores" data-config="{&quot;tipo&quot;:&quot;emparejar&quot;,&quot;titulo&quot;:&quot;Errores frecuentes en Calc&quot;,&quot;instruccion&quot;:&quot;Une cada error con su significado.&quot;,&quot;pares&quot;:[[&quot;#¡DIV/0!&quot;,&quot;Divides entre 0 o entre una celda vacía&quot;],[&quot;#¡REF!&quot;,&quot;La fórmula apunta a una celda u hoja que ya no existe&quot;],[&quot;#NOMBRE?&quot;,&quot;Función o nombre mal escrito (SUMAA)&quot;],[&quot;#¡VALOR!&quot;,&quot;Operas con texto donde hace falta un número&quot;],[&quot;###&quot;,&quot;La columna es demasiado estrecha&quot;]]}"><noscript>Esta actividad necesita JavaScript.</noscript></div><!--/dd:esc-errores-->
+<div class="navigation">
         <button class="nav-btn" onclick="scormGo('modulo11.html')">⬅️ Anterior</button>
         <button class="nav-btn" onclick="scormGo('modulo13.html')">Siguiente ➡️</button>
       </div>
@@ -61,6 +62,7 @@
   </div>
 </div>
 <footer class="footer-autor">Curso de Escandallo con Calc · Material educativo · Creado por: Sixto Rodríguez de Sepúlveda</footer>
+<script src="dragdrop.js"></script>
 <script src="scorm.js"></script>
 <script>
 function chk(id,exp,fb,msg){var v=parseFloat(String(document.getElementById(id).value).replace(',','.'));var e=document.getElementById(fb);

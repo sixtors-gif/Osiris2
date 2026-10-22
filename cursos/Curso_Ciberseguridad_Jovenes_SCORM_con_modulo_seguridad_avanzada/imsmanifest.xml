@@ -73,108 +73,126 @@
       <file href="index.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO1" type="webcontent" adlcp:scormtype="sco" href="modulo1.html">
       <file href="modulo1.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO2" type="webcontent" adlcp:scormtype="sco" href="modulo2.html">
       <file href="modulo2.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO3" type="webcontent" adlcp:scormtype="sco" href="modulo3.html">
       <file href="modulo3.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO4" type="webcontent" adlcp:scormtype="sco" href="modulo4.html">
       <file href="modulo4.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO5" type="webcontent" adlcp:scormtype="sco" href="modulo5.html">
       <file href="modulo5.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO6" type="webcontent" adlcp:scormtype="sco" href="modulo6.html">
       <file href="modulo6.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO7" type="webcontent" adlcp:scormtype="sco" href="modulo7.html">
       <file href="modulo7.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO8" type="webcontent" adlcp:scormtype="sco" href="modulo8.html">
       <file href="modulo8.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO9" type="webcontent" adlcp:scormtype="sco" href="modulo9.html">
       <file href="modulo9.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO10" type="webcontent" adlcp:scormtype="sco" href="modulo10.html">
       <file href="modulo10.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO11" type="webcontent" adlcp:scormtype="sco" href="modulo11.html">
       <file href="modulo11.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO12" type="webcontent" adlcp:scormtype="sco" href="modulo12.html">
       <file href="modulo12.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO13" type="webcontent" adlcp:scormtype="sco" href="modulo13.html">
       <file href="modulo13.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO14" type="webcontent" adlcp:scormtype="sco" href="modulo14.html">
       <file href="modulo14.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO15" type="webcontent" adlcp:scormtype="sco" href="modulo15.html">
       <file href="modulo15.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_MODULO16" type="webcontent" adlcp:scormtype="sco" href="modulo16.html">
       <file href="modulo16.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
     <resource identifier="RES_EXAMEN_FINAL" type="webcontent" adlcp:scormtype="sco" href="examen_final.html">
       <file href="examen_final.html"/>
       <file href="style.css"/>
       <file href="scorm.js"/>
+      <file href="dragdrop.js"/>
       <file href="img/logo-centro.png"/>
     </resource>
   </resources>
