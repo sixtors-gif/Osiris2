@@ -1,0 +1,399 @@
+[
+ {
+  "id": "l1-lenguaje",
+  "pagina": "modulo1.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "Mejor decir / mejor evitar",
+  "instruccion": "Clasifica cada expresión.",
+  "categorias": [
+   "Mejor decir",
+   "Mejor evitar"
+  ],
+  "items": [
+   [
+    "Persona sorda",
+    0
+   ],
+   [
+    "Sordomudo",
+    1
+   ],
+   [
+    "Persona oyente",
+    0
+   ],
+   [
+    "Normal (frente a sordo)",
+    1
+   ],
+   [
+    "Persona usuaria de la lengua de signos",
+    0
+   ],
+   [
+    "Habla por gestos",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "l2-hitos",
+  "pagina": "modulo2.html",
+  "antes_de": "summary",
+  "tipo": "ordenar",
+  "titulo": "Ordena la historia",
+  "instruccion": "Ordena estos hitos del más antiguo al más reciente.",
+  "items": [
+   "Ponce de León educa a sordos en Oña",
+   "Bonet publica su tratado",
+   "Congreso de Milán",
+   "Nace la CNSE",
+   "Ley 27/2007"
+  ]
+ },
+ {
+  "id": "l3-parametros",
+  "pagina": "modulo3.html",
+  "antes_de": "summary",
+  "tipo": "emparejar",
+  "titulo": "Los cinco parámetros",
+  "instruccion": "Une cada parámetro con su significado.",
+  "pares": [
+   [
+    "Configuración",
+    "La forma de la mano"
+   ],
+   [
+    "Orientación",
+    "Hacia dónde mira la palma"
+   ],
+   [
+    "Lugar de articulación",
+    "Dónde se hace el signo"
+   ],
+   [
+    "Movimiento",
+    "Cómo se mueven las manos"
+   ],
+   [
+    "Componentes no manuales",
+    "Cara, mirada y cuerpo"
+   ]
+  ]
+ },
+ {
+  "id": "l3-mitos",
+  "pagina": "modulo3.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "Verdadero o falso",
+  "instruccion": "¿Qué afirmaciones son ciertas sobre la LSE?",
+  "categorias": [
+   "Cierto",
+   "Falso"
+  ],
+  "items": [
+   [
+    "Tiene gramática propia",
+    0
+   ],
+   [
+    "Es universal",
+    1
+   ],
+   [
+    "La cara forma parte de la gramática",
+    0
+   ],
+   [
+    "Es español hecho con las manos",
+    1
+   ],
+   [
+    "Hay variantes regionales",
+    0
+   ],
+   [
+    "Se percibe con el oído",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "l4-uso",
+  "pagina": "modulo4.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "Cuándo usar la dactilología",
+  "instruccion": "¿Para qué sirve el alfabeto manual?",
+  "categorias": [
+   "Sí, para esto",
+   "No, para esto"
+  ],
+  "items": [
+   [
+    "Deletrear tu nombre",
+    0
+   ],
+   [
+    "Nombres de lugares sin signo",
+    0
+   ],
+   [
+    "Sustituir toda la lengua de signos",
+    1
+   ],
+   [
+    "Siglas y marcas",
+    0
+   ],
+   [
+    "Hablar muy rápido",
+    1
+   ],
+   [
+    "Aclarar una palabra",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "l5-atencion",
+  "pagina": "modulo5.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "Llamar la atención",
+  "instruccion": "¿Es un buen modo de llamar la atención de alguien que no te mira?",
+  "categorias": [
+   "Adecuado",
+   "Inadecuado"
+  ],
+  "items": [
+   [
+    "Gesto amplio en su campo de visión",
+    0
+   ],
+   [
+    "Toque suave en el hombro",
+    0
+   ],
+   [
+    "Gritar su nombre",
+    1
+   ],
+   [
+    "Golpe fuerte en la espalda",
+    1
+   ],
+   [
+    "Pedir a alguien que le avise",
+    0
+   ],
+   [
+    "Tirarle un objeto",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "l5-habla",
+  "pagina": "modulo5.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "Hablar con una persona sorda",
+  "instruccion": "¿Es una buena práctica?",
+  "categorias": [
+   "Buena práctica",
+   "Mala práctica"
+  ],
+  "items": [
+   [
+    "Hablar de frente con buena luz",
+    0
+   ],
+   [
+    "Gritar",
+    1
+   ],
+   [
+    "Frases cortas y claras",
+    0
+   ],
+   [
+    "Hablar de espaldas",
+    1
+   ],
+   [
+    "Escribir si no te entiende",
+    0
+   ],
+   [
+    "Exagerar la boca",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "l6-dialogo",
+  "pagina": "modulo6.html",
+  "antes_de": "summary",
+  "tipo": "ordenar",
+  "titulo": "Estructura de un encuentro",
+  "instruccion": "Ordena los pasos de una primera conversación.",
+  "items": [
+   "Llamar la atención",
+   "Saludar",
+   "Presentarse",
+   "Hacer una pregunta sencilla",
+   "Despedirse"
+  ]
+ },
+ {
+  "id": "l7-gramatica",
+  "pagina": "modulo7.html",
+  "antes_de": "summary",
+  "tipo": "emparejar",
+  "titulo": "Gramática de la LSE",
+  "instruccion": "Une cada recurso con su función.",
+  "pares": [
+   [
+    "Línea del tiempo",
+    "Marca pasado, presente y futuro"
+   ],
+   [
+    "Clasificador",
+    "Muestra cómo se mueve algo"
+   ],
+   [
+    "Cambio de rol",
+    "Contar lo que dijo otra persona"
+   ],
+   [
+    "Expresión facial",
+    "Distingue pregunta, negación o emoción"
+   ]
+  ],
+  "extra": [
+   "Conjugación verbal"
+  ]
+ },
+ {
+  "id": "l8-tipos",
+  "pagina": "modulo8.html",
+  "antes_de": "summary",
+  "tipo": "emparejar",
+  "titulo": "Tipos de signos",
+  "instruccion": "Une cada tipo con su idea.",
+  "pares": [
+   [
+    "Icónico",
+    "Se parece a lo que representa"
+   ],
+   [
+    "Deíctico",
+    "Se señala"
+   ],
+   [
+    "Dactilológico",
+    "Se forma con letras"
+   ],
+   [
+    "Arbitrario",
+    "Es una convención sin parecido"
+   ]
+  ]
+ },
+ {
+  "id": "l9-recursos",
+  "pagina": "modulo9.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "Local accesible",
+  "instruccion": "¿Qué ayuda a un cliente sordo?",
+  "categorias": [
+   "Ayuda",
+   "No ayuda"
+  ],
+  "items": [
+   [
+    "Carta con fotos",
+    0
+   ],
+   [
+    "Aviso luminoso de pedido listo",
+    0
+   ],
+   [
+    "Avisar a gritos desde la cocina",
+    1
+   ],
+   [
+    "Libreta para escribir",
+    0
+   ],
+   [
+    "Televisión sin subtítulos",
+    1
+   ],
+   [
+    "Confirmar alergias por escrito",
+    0
+   ]
+  ]
+ },
+ {
+  "id": "l9-protocolo",
+  "pagina": "modulo9.html",
+  "antes_de": "summary",
+  "tipo": "ordenar",
+  "titulo": "Atender a un cliente sordo",
+  "instruccion": "Ordena el protocolo de atención.",
+  "items": [
+   "Contacto visual y sonrisa",
+   "Acompañar a la mesa y mostrar la carta",
+   "Confirmar el pedido por escrito",
+   "Avisar visualmente cuando esté listo",
+   "Cobrar mostrando la cuenta",
+   "Despedirse"
+  ]
+ },
+ {
+  "id": "l10-etica",
+  "pagina": "modulo10.html",
+  "antes_de": "summary",
+  "tipo": "clasificar",
+  "titulo": "Respeto al aprender",
+  "instruccion": "¿Qué conviene hacer?",
+  "categorias": [
+   "Conviene",
+   "No conviene"
+  ],
+  "items": [
+   [
+    "Pedir permiso para grabar",
+    0
+   ],
+   [
+    "Aprender con personas sordas",
+    0
+   ],
+   [
+    "Presentarte como intérprete sin formación",
+    1
+   ],
+   [
+    "Inventarte una seña-nombre",
+    1
+   ],
+   [
+    "Aceptar correcciones con humildad",
+    0
+   ],
+   [
+    "Usar la lengua como espectáculo",
+    1
+   ]
+  ]
+ }
+]

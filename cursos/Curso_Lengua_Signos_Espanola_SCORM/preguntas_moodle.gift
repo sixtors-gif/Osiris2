@@ -1,0 +1,309 @@
+// Lengua de signos española (LSE): curso completo — Banco de preguntas GIFT para Moodle
+// Autor: Sixto Rodríguez de Sepúlveda. Una única respuesta correcta; una categoría por módulo.
+
+$CATEGORY: LSE/Módulo 01 - Personas sordas y comunidad sorda
+
+::IA01-1::¿Cuál es la forma más adecuada de referirse a una persona que no oye? {
+~Sordomudo
+=Persona sorda
+~Mudito
+~Minusválido
+}
+
+::IA01-2::¿Es universal la lengua de signos? {
+=No\: cada país o región tiene la suya
+~Sí, es igual en todo el mundo
+~Solo en Europa
+~Solo en España
+}
+
+::IA01-3::¿Qué conviene hacer al hablar con una persona sorda que lee labios? {
+~Exagerar mucho la boca
+~Gritar
+~Hablar de espaldas
+=Hablar de frente, con claridad y a ritmo normal
+}
+
+::IA01-4::¿Qué es la hipoacusia? {
+~Una enfermedad contagiosa
+~No oír nada desde nacimiento
+=Oír menos de lo habitual, con distintos grados
+~No poder hablar
+}
+
+$CATEGORY: LSE/Módulo 02 - Historia y derechos de la lengua de signos
+
+::IA02-1::¿Qué ley reconoce en España las lenguas de signos? {
+~La Constitución de 1812
+=La Ley 27/2007
+~El Estatuto de los Trabajadores
+~La Ley de Tráfico
+}
+
+::IA02-2::¿Qué decidió el Congreso de Milán de 1880? {
+=Priorizar la enseñanza oral y desaconsejar los signos
+~Crear una lengua de signos universal
+~Abrir escuelas de signos
+~Prohibir la lengua oral
+}
+
+::IA02-3::¿Quién fue Pedro Ponce de León? {
+~Un inventor del audífono
+~Un político del siglo XX
+~Un intérprete actual
+=Un monje benedictino que enseñó a personas sordas en el siglo XVI
+}
+
+::IA02-4::¿Cuándo se celebra el Día Internacional de las Lenguas de Signos? {
+~El 8 de marzo
+~El 1 de enero
+=El 23 de septiembre
+~El 12 de octubre
+}
+
+$CATEGORY: LSE/Módulo 03 - La LSE\: una lengua completa
+
+::IA03-1::¿Cuántos parámetros forman un signo? {
+~Dos
+=Cinco
+~Diez
+~Uno
+}
+
+::IA03-2::¿Es la LSE el español hecho con las manos? {
+=No\: es una lengua con gramática propia
+~Sí, igual que el español
+~Solo en la escuela
+~Solo en televisión
+}
+
+::IA03-3::¿Qué papel tiene la cara al signar? {
+~Solo importa al despedirse
+~Ninguno
+~Solo es decorativa
+=Forma parte de la gramática
+}
+
+::IA03-4::¿Qué es la LSC? {
+~Una ley
+~Un tipo de audífono
+=La lengua de signos catalana
+~Un alfabeto
+}
+
+::IA03-5::¿Qué parámetro indica la forma de la mano? {
+~Movimiento
+=Configuración
+~Orientación
+~Lugar de articulación
+}
+
+$CATEGORY: LSE/Módulo 04 - Dactilología\: el alfabeto manual
+
+::IA04-1::¿Para qué sirve sobre todo la dactilología? {
+=Para deletrear nombres y palabras sin signo
+~Para sustituir toda la lengua de signos
+~Para hablar rápido
+~Para escribir en el móvil
+}
+
+::IA04-2::¿Qué mano se suele usar para deletrear? {
+~Ninguna
+~Las dos siempre
+~Solo la izquierda
+=La dominante
+}
+
+::IA04-3::¿Cómo debe verse una letra al deletrear? {
+~Lo más rápida posible
+~Escondida
+=De frente, clara y estable
+~Detrás del cuerpo
+}
+
+::IA04-4::¿Cómo se recomienda comprobar el alfabeto manual? {
+~Fiarse solo de una descripción escrita
+=Contrastarlo en un vídeo o recurso oficial
+~No comprobarlo
+~Preguntárselo a un buscador
+}
+
+$CATEGORY: LSE/Módulo 05 - Comunicarse sin barreras
+
+::IA05-1::¿Cómo se llama la atención de una persona sorda? {
+=Con un toque suave en el hombro o un gesto amplio
+~Con un grito
+~Con un golpe fuerte
+~Tirando de la ropa
+}
+
+::IA05-2::Con un intérprete delante, ¿a quién se mira? {
+~Al móvil
+~Al intérprete
+~A la pared
+=A la persona sorda
+}
+
+::IA05-3::¿Qué hacer si no te entiende? {
+~Marcharte
+~Gritar más fuerte
+=Reformular con otras palabras o escribir
+~Repetir lo mismo igual
+}
+
+::IA05-4::¿Para qué sirve un bucle de inducción magnética? {
+~Traduce a signos
+=Envía el sonido directo a audífonos e implantes
+~Graba vídeo
+~Ilumina la sala
+}
+
+$CATEGORY: LSE/Módulo 06 - Primeras conversaciones
+
+::IA06-1::¿Cómo se indica «yo» en LSE? {
+=Señalando el propio pecho
+~Con un gesto de adiós
+~Tocándose la oreja
+~Con la mano en la frente
+}
+
+::IA06-2::¿Cómo se distingue una pregunta de sí/no de una con «qué» o «dónde»? {
+~Por el color
+~Por el volumen de la voz
+~Por la ropa
+=Por la expresión de la cara
+}
+
+::IA06-3::¿Qué es una seña-nombre? {
+~Un diploma
+~Un apellido
+=Un signo propio asignado por la comunidad sorda
+~Una marca
+}
+
+::IA06-4::¿Qué es lo más cortés si no entiendes algo? {
+~Fingir que sí
+=Pedir que lo repitan
+~Marcharte
+~Mirar el móvil
+}
+
+$CATEGORY: LSE/Módulo 07 - La gramática de la LSE
+
+::IA07-1::¿Cómo se marca el tiempo en LSE? {
+=Con una línea del tiempo en el espacio y signos de tiempo
+~Conjugando los verbos como en español
+~Nunca se marca
+~Con la voz
+}
+
+::IA07-2::¿Qué es un clasificador? {
+~Un diccionario
+~Un archivo
+~Un tipo de pregunta
+=Una forma de mano que representa una clase de cosas y su movimiento
+}
+
+::IA07-3::¿Qué es el cambio de rol? {
+~Cambiar de intérprete
+~Cambiar de mano
+=Signar «como si fueras» otra persona
+~Cambiar de tema
+}
+
+::IA07-4::¿Por qué no es buena idea traducir palabra por palabra? {
+~Porque es ilegal
+=Porque la LSE tiene su gramática propia
+~Porque no hay palabras
+~Porque es muy lento
+}
+
+$CATEGORY: LSE/Módulo 08 - Vocabulario básico y cómo aprenderlo
+
+::IA08-1::¿Qué es un signo icónico? {
+=Uno que se parece a lo que representa
+~Uno que se deletrea
+~Uno que se señala
+~Uno prohibido
+}
+
+::IA08-2::¿Cada cuánto conviene repasar un signo nuevo? {
+~Una vez al año
+~Una sola vez
+~Nunca
+=Al día siguiente, a los tres días y a la semana
+}
+
+::IA08-3::¿Cuántos signos nuevos es razonable aprender al día? {
+~Ninguno
+~Cincuenta
+=Unos cinco, con práctica
+~Mil
+}
+
+::IA08-4::¿Por qué conviene aprender vocabulario en vídeo y no solo escrito? {
+~Porque es más barato
+=Porque un signo es movimiento, forma y expresión
+~Porque es obligatorio
+~Porque así no se olvida nunca
+}
+
+$CATEGORY: LSE/Módulo 09 - Atención accesible en hostelería
+
+::IA09-1::¿Qué es lo más importante al confirmar una alergia con un cliente sordo? {
+=Confirmarlo por escrito y revisar con la cocina
+~Suponerlo
+~Preguntar solo al acompañante
+~No preguntar
+}
+
+::IA09-2::¿Qué ayuda al avisar de que un pedido está listo? {
+~Cerrar la puerta
+~Un grito desde la cocina
+~Ninguna
+=Un aviso luminoso o vibrante
+}
+
+::IA09-3::¿A quién hay que dirigirse en una mesa con una persona sorda? {
+~A nadie
+~Solo al acompañante oyente
+=A la persona sorda
+~Al camarero de al lado
+}
+
+::IA09-4::¿Qué recurso mejora la carta para clientes sordos? {
+~Letra diminuta
+=Fotos o pictogramas
+~Solo versión oral
+~Ninguno
+}
+
+$CATEGORY: LSE/Módulo 10 - Seguir aprendiendo y plan de práctica
+
+::IA10-1::¿Qué es lo más importante para aprender LSE de verdad? {
+=Practicar con personas sordas
+~Memorizar listas escritas
+~Ver solo televisión
+~Estudiar solo de noche
+}
+
+::IA10-2::Antes de grabar a una persona sorda signando... {
+~Debes pagarle
+~No hace falta
+~Basta con avisar al profesor
+=Debes pedirle permiso
+}
+
+::IA10-3::¿Cómo se debe actuar con las asociaciones de personas sordas? {
+~Copiar sin preguntar
+~Ignorarlas
+=Colaborar y aprender de ellas con respeto
+~Competir con ellas
+}
+
+::IA10-4::¿Cuánto tiempo diario plantea el plan de 12 semanas? {
+~Ninguno
+=Unos 20 minutos
+~Más de 5 horas
+~Solo fines de semana
+}
