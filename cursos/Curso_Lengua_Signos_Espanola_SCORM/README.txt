@@ -5,7 +5,8 @@ Autor: Sixto Rodríguez de Sepúlveda
 comunicarse sin barreras; primeras conversaciones; gramática; vocabulario; atención accesible en hostelería; seguir aprendiendo.
 
 Contenido:
-- Esquemas (parámetros, espacio de signado, configuraciones de la mano, línea de tiempo), actividades de arrastrar y soltar,
+- Dibujos de manos (alfabeto manual completo y configuraciones básicas, generados con lse_manos.py), esquemas (parámetros,
+  espacio de signado, línea de tiempo), actividades de arrastrar y soltar,
   cuadros «Cómo se hace» desplegables y glosario.
 - Entrenador de dactilología (descripciones del alfabeto manual, reproductor y juego) que funciona sin conexión.
 - Proyecto final y examen final de 29 preguntas (aprobado 70 %); preguntas_moodle.gift: 41 preguntas.

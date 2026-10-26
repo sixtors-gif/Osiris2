@@ -69,10 +69,14 @@ details.glos summary{cursor:pointer;font-weight:700;color:#0f766e;font-size:1.05
 .letra-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:12px}
 .letra-card{background:#fff;border:1px solid #b7dcd7;border-radius:12px;padding:8px 10px;font-size:.88em;line-height:1.4}
 .letra-card b{display:block;font-size:2em;color:#0f766e;line-height:1.1}
+.letra-card img{display:block;width:100%;max-width:150px;margin:0 auto 4px;background:#fff;border-radius:8px}
+.letra-grande img{width:150px;height:150px;background:#fff;border-radius:10px;flex:none}
+.jl-img img{width:200px;max-width:100%;background:#fff;border:1px solid #b7dcd7;border-radius:12px}
 .letra-grande{background:#0f766e;color:#fff;border-radius:14px;padding:12px 18px;margin:10px 0;min-height:70px;display:flex;align-items:center;gap:16px}
 .letra-grande b{font-size:3.4em;line-height:1}.letra-grande span{font-size:1.05em}
 .jl-desc{font-size:1.15em;background:#fff;border-left:5px solid #f97316;padding:10px 14px;border-radius:8px}
 .lect-btns button.ok{background:#4caf50;color:#fff;border-color:#4caf50}.lect-btns button.ko{background:#f44336;color:#fff;border-color:#f44336}
+.dl input[type=range]{width:200px;max-width:60%;vertical-align:middle}
 .dl input[type=text]{width:100%;max-width:340px;padding:8px;font-size:1.1em;border:1px solid #b7dcd7;border-radius:8px;text-transform:uppercase}
 .dl-box{background:#fff7ed;border:2px solid #f97316;border-radius:12px;padding:14px 18px;margin:18px 0}
 .lect-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
@@ -85,8 +89,13 @@ for a, b in TEMA:
 open(os.path.join(OUT, "style.css"), "w", encoding="utf-8").write(css)
 
 for nombre, svg in (("parametros.svg", sv.parametros()), ("espacio_signado.svg", sv.espacio_signado()),
-                    ("configuraciones.svg", sv.configuraciones()), ("linea_historia.svg", sv.linea_historia())):
+                    ("configuraciones.svg", sv.configuraciones()), ("linea_historia.svg", sv.linea_historia()),
+                    ("alfabeto.svg", sv.alfabeto())):
     open(os.path.join(OUT, "img", nombre), "w", encoding="utf-8").write(svg)
+import lse_manos as mn  # noqa: E402
+os.makedirs(os.path.join(OUT, "img", "letras"), exist_ok=True)
+for l in mn.LETRAS:   # una imagen por letra para el entrenador de dactilología
+    open(os.path.join(OUT, "img", "letras", mn.nombre_fichero(l) + ".svg"), "w", encoding="utf-8").write(mn.letra(l, 200, etiqueta=False))
 open(os.path.join(OUT, "lse.js"), "w", encoding="utf-8").write(IA_JS)
 
 
@@ -276,7 +285,8 @@ Autor: Sixto Rodríguez de Sepúlveda
 comunicarse sin barreras; primeras conversaciones; gramática; vocabulario; atención accesible en hostelería; seguir aprendiendo.
 
 Contenido:
-- Esquemas (parámetros, espacio de signado, configuraciones de la mano, línea de tiempo), actividades de arrastrar y soltar,
+- Dibujos de manos (alfabeto manual completo y configuraciones básicas, generados con lse_manos.py), esquemas (parámetros,
+  espacio de signado, línea de tiempo), actividades de arrastrar y soltar,
   cuadros «Cómo se hace» desplegables y glosario.
 - Entrenador de dactilología (descripciones del alfabeto manual, reproductor y juego) que funciona sin conexión.
 - Proyecto final y examen final de {len(EXAM)} preguntas (aprobado 70 %); preguntas_moodle.gift: {len(QQ)} preguntas.

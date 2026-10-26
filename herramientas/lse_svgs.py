@@ -55,39 +55,14 @@ def espacio_signado():
     return "".join(c)
 
 
-# Esquemas de configuraciones de la mano: estado de pulgar, índice, corazón, anular y meñique.
-# u = estirado, c = curvado, d = doblado (cerrado); el pulgar: u = hacia fuera, c = cruzado ante la palma, d = recogido.
-CONFIG = [("Mano plana", "uuuuu", "dedos juntos y estirados"), ("Puño", "dddddd"[:5], "todos los dedos cerrados"),
-          ("Índice", "duddd", "solo el índice estirado"), ("Mano en C", "ccccc", "dedos y pulgar curvados"),
-          ("Pinza o círculo", "cccuu", "pulgar e índice se tocan"), ("Mano en V", "duudd", "índice y corazón separados"),
-          ("Mano abierta", "uuuuu", "dedos separados"), ("Meñique", "ddddu", "solo el meñique"),
-          ("Pulgar", "udddd", "solo el pulgar"), ("Cuerno", "duddu", "índice y meñique")]
-
-
 def configuraciones():
-    c = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 330" width="960" height="330" role="img" aria-label="Esquemas de configuraciones de la mano" {F}>',
-         '<rect width="960" height="330" fill="#fff"/>',
-         _t(480, 26, "Algunas configuraciones básicas de la mano (esquema simplificado)", 17, VERDE, "middle", 700)]
-    for k, (nombre, st, desc) in enumerate(CONFIG):
-        col, fila = k % 5, k // 5
-        x0, y0 = 20 + col * 188, 50 + fila * 140
-        c.append(f'<rect x="{x0}" y="{y0}" width="172" height="128" rx="12" fill="{CLARO}" stroke="{VERDE}"/>')
-        c.append(f'<rect x="{x0+46}" y="{y0+62}" width="80" height="34" rx="8" fill="#fde6c8" stroke="#555"/>')
-        sep = 18 if nombre == "Mano abierta" else 0
-        for i, e in enumerate(st[1:]):
-            fx = x0 + 52 + i * 19 + (i - 1.5) * sep / 3
-            alto = {"u": 46, "c": 26, "d": 8}[e]
-            c.append(f'<rect x="{fx}" y="{y0+62-alto}" width="14" height="{alto+6}" rx="6" fill="#fde6c8" stroke="#555"/>')
-        e = st[0]
-        if e == "u":
-            c.append(f'<rect x="{x0+20}" y="{y0+66}" width="34" height="13" rx="6" fill="#fde6c8" stroke="#555" transform="rotate(-25 {x0+54} {y0+72})"/>')
-        elif e == "c":
-            c.append(f'<rect x="{x0+50}" y="{y0+72}" width="52" height="12" rx="6" fill="#fde6c8" stroke="#555"/>')
-        else:
-            c.append(f'<rect x="{x0+44}" y="{y0+74}" width="22" height="14" rx="6" fill="#fde6c8" stroke="#555"/>')
-        c.append(_t(x0 + 86, y0 + 112, nombre, 13, VERDE, "middle", 700))
-    c.append("</svg>")
-    return "".join(c)
+    import lse_manos as mn
+    return mn.rejilla([(n, mn.mano(p, 180, n)) for n, p in mn.CONFIGS], 5, 180, "Algunas configuraciones básicas de la mano")
+
+
+def alfabeto():
+    import lse_manos as mn
+    return mn.rejilla([(l, mn.letra(l, 180)) for l in mn.LETRAS], 7, 180, "Alfabeto manual de la LSE (dibujos orientativos, vistos por quien te mira)")
 
 
 def linea_historia():

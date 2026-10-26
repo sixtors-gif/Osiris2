@@ -119,7 +119,9 @@ MODULOS.append(("🔤", "Dactilología: el alfabeto manual", "Aprende a deletrea
     + """<h3>2. Cómo se hace</h3>"""
     + pasos(["Usa normalmente <b>una mano</b> (la dominante), delante del hombro, a la altura de la barbilla o del pecho.", "Muestra la letra <b>de forma clara y estable</b>, de modo que quien te mira la vea de frente.", "Deletrea <b>de forma continua</b>, sin parar entre letras, y con un pequeño ritmo; las letras repetidas se marcan con un pequeño rebote de la mano; «ch», «ll» y «rr» se suelen deletrear letra a letra.", "Cuando termines, <b>relaja la mano</b> y mira a tu interlocutor para ver si te entendió."])
     + cuidado("las descripciones de esta lección son <b>orientativas</b>. El alfabeto manual solo se aprende bien <b>viéndolo en vídeo o con una persona</b>, y puede haber pequeñas diferencias de estilo. Contrasta cada letra con un recurso oficial (módulo 10).")
-    + """<h3>3. Descripción de las letras</h3>
+    + """<h3>3. Las letras, una a una</h3>"""
+    + fig("alfabeto.svg", "Dibujos de la mano derecha formando las 27 letras del alfabeto manual", "El alfabeto manual tal como lo ve tu interlocutor (mano derecha). Las flechas de J, Ñ y Z indican el movimiento. Son dibujos orientativos: compáralos con un vídeo oficial.")
+    + """<h4>Practica con tu nombre</h4>
       <div class="activity dl">
         <p>Escribe una palabra (por ejemplo, tu nombre) y aparecerán las letras con su descripción. Pulsa «Reproducir» para verlas una a una.</p>
         <input type="text" id="dl-texto" value="HOLA" oninput="dlGenerar()" maxlength="20" aria-label="Palabra a deletrear">
@@ -129,7 +131,8 @@ MODULOS.append(("🔤", "Dactilología: el alfabeto manual", "Aprende a deletrea
         <div id="dl-tarjetas" class="letra-grid"></div>
       </div>
       <h3>4. Juego: ¿qué letra es?</h3>
-      <div class="activity"><p>Lee la descripción y elige la letra.</p><p id="jl-desc" class="jl-desc"></p><div class="lect-btns" id="jl-ops"></div><p id="jl-msg"></p><p>Aciertos: <b id="jl-pt">0 de 0</b></p></div>
+      <div class="activity"><p>Mira el dibujo y elige la letra. Si te atascas, pulsa «Pista» para leer la descripción.</p><div id="jl-img" class="jl-img"></div>
+        <p><button class="btn" onclick="document.getElementById('jl-desc').style.display='block'">💡 Pista</button></p><p id="jl-desc" class="jl-desc" style="display:none"></p><div class="lect-btns" id="jl-ops"></div><p id="jl-msg"></p><p>Aciertos: <b id="jl-pt">0 de 0</b></p></div>
       <h3>5. Consejos para memorizar</h3>"""
     + lista(["Aprende <b>5 letras al día</b> y repásalas con un amigo.", "Deletrea <b>cosas que ves</b>: carteles, etiquetas, nombres de calles.", "Deletrea tu nombre, el de tus amigos y el de tu local favorito.", "Mira tu mano en un espejo: lo que ves es lo que verá tu interlocutor.", "Ve despacio al principio; la velocidad llega sola con la práctica."], "🧠")
     + hosteleria("deletrear nombres es muy útil al tomar una reserva con un cliente sordo: pídele que lo escriba o deletréalo tú para confirmar «¿García, G-A-R-C-Í-A?». Y si un cliente deletrea el nombre de un plato, ¡ya sabes qué ha pedido!")

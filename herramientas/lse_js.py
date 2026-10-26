@@ -35,20 +35,21 @@ var LETRAS={
  Y:'Pulgar y meñique estirados; los demás dedos cerrados.',
  Z:'Índice que dibuja una Z en el aire.'
 };
+function imgLetra(l){return '<img src="img/letras/'+(l==='\u00d1'?'NN':l)+'.svg" alt="Mano: letra '+l+'">';}
 function limpiaPalabra(t){return t.toUpperCase().normalize('NFD').replace(/Ñ/g,'Ñ').replace(/[̀-ͯ]/g,'').replace(/[^A-ZÑ]/g,'');}
 var dl={tm:null};
 function dlGenerar(){
   var p=limpiaPalabra(document.getElementById('dl-texto').value||'');
   var c=document.getElementById('dl-tarjetas');c.innerHTML='';
   if(!p){c.innerHTML='<p class="small">Escribe una palabra o tu nombre (sin números ni signos).</p>';return;}
-  p.split('').forEach(function(l){var d=document.createElement('div');d.className='letra-card';d.innerHTML='<b>'+l+'</b><span>'+LETRAS[l]+'</span>';c.appendChild(d);});
+  p.split('').forEach(function(l){var d=document.createElement('div');d.className='letra-card';d.innerHTML=imgLetra(l)+'<b>'+l+'</b><span>'+LETRAS[l]+'</span>';c.appendChild(d);});
 }
 function dlReproducir(){
   clearTimeout(dl.tm);
   var p=limpiaPalabra(document.getElementById('dl-texto').value||''),v=parseInt(document.getElementById('dl-vel').value,10),g=document.getElementById('dl-grande');
   if(!p){g.innerHTML='';return;}
   var i=0;(function paso(){if(i>=p.length){g.innerHTML='<b>✔</b><span>Fin. ¿Has deletreado «'+p+'» siguiendo las descripciones?</span>';return;}
-    var l=p[i++];g.innerHTML='<b>'+l+'</b><span>'+LETRAS[l]+'</span>';dl.tm=setTimeout(paso,v);})();
+    var l=p[i++];g.innerHTML=imgLetra(l)+'<b>'+l+'</b><span>'+LETRAS[l]+'</span>';dl.tm=setTimeout(paso,v);})();
 }
 function dlVelTxt(){document.getElementById('dl-vel-t').textContent=(document.getElementById('dl-vel').value/1000).toFixed(1)+' s por letra';}
 // ---- Juego: ¿qué letra es? ----
@@ -57,7 +58,7 @@ function jlNueva(){
   var ks=Object.keys(LETRAS);var l=ks[Math.floor(Math.random()*ks.length)];jl.cur=l;
   var ops=[l];while(ops.length<4){var x=ks[Math.floor(Math.random()*ks.length)];if(ops.indexOf(x)<0)ops.push(x);}
   ops.sort(function(){return Math.random()-.5;});
-  document.getElementById('jl-desc').textContent=LETRAS[l];
+  document.getElementById('jl-img').innerHTML=imgLetra(l);document.getElementById('jl-desc').style.display='none';document.getElementById('jl-desc').textContent=LETRAS[l];
   var b=document.getElementById('jl-ops');b.innerHTML='';
   ops.forEach(function(o){var e=document.createElement('button');e.textContent=o;e.onclick=function(){jlResp(o,e);};b.appendChild(e);});
   document.getElementById('jl-msg').textContent='';
